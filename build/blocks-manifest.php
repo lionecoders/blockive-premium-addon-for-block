@@ -253,5 +253,92 @@ return array(
 		'editorStyle' => 'file:./index.css',
 		'style' => 'file:./style-index.css',
 		'viewScript' => 'file:./view.js'
+	),
+	'tabs' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'lc-block-widgets/tabs',
+		'version' => '0.1.0',
+		'title' => 'LC Tabs',
+		'category' => 'widgets',
+		'icon' => 'index-card',
+		'description' => 'A modern Tab block with premium segmented control styling.',
+		'attributes' => array(
+			'items' => array(
+				'type' => 'array',
+				'default' => array(
+					array(
+						'id' => '1',
+						'title' => 'First Tab',
+						'content' => 'This is the content for the first tab.'
+					),
+					array(
+						'id' => '2',
+						'title' => 'Second Tab',
+						'content' => 'This is the content for the second tab.'
+					),
+					array(
+						'id' => '3',
+						'title' => 'Third Tab',
+						'content' => 'This is the content for the third tab.'
+					)
+				)
+			),
+			'tabBgColor' => array(
+				'type' => 'string',
+				'default' => '#f1f5f9'
+			),
+			'tabActiveColor' => array(
+				'type' => 'string',
+				'default' => '#ffffff'
+			),
+			'textColor' => array(
+				'type' => 'string',
+				'default' => '#64748b'
+			),
+			'textActiveColor' => array(
+				'type' => 'string',
+				'default' => '#0f172a'
+			),
+			'contentBgColor' => array(
+				'type' => 'string',
+				'default' => '#ffffff'
+			),
+			'contentTextColor' => array(
+				'type' => 'string',
+				'default' => '#334155'
+			),
+			'tabBorderRadius' => array(
+				'type' => 'number',
+				'default' => 12
+			)
+		),
+		'supports' => array(
+			'align' => array(
+				'wide',
+				'full'
+			),
+			'html' => false,
+			'typography' => array(
+				'fontSize' => true,
+				'lineHeight' => true,
+				'__experimentalFontFamily' => true,
+				'__experimentalDefaultControls' => array(
+					'fontSize' => true
+				)
+			),
+			'spacing' => array(
+				'margin' => true,
+				'padding' => true,
+				'__experimentalDefaultControls' => array(
+					'margin' => true,
+					'padding' => true
+				)
+			)
+		),
+		'textdomain' => 'lc-block-widgets',
+		'editorScript' => 'file:./index.js',
+		'style' => 'file:./style-index.css',
+		'viewScript' => 'file:./view.js'
 	)
 );

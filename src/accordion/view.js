@@ -1,7 +1,8 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const accordions = document.querySelectorAll('.lc-accordion-wrapper');
+const initLcAccordion = () => {
+    const accordions = document.querySelectorAll('.lc-accordion-wrapper:not(.lc-accordion-initialized)');
 
     accordions.forEach(accordion => {
+        accordion.classList.add('lc-accordion-initialized'); // Prevent double binding
         const items = accordion.querySelectorAll('.lc-accordion-item');
 
         items.forEach(item => {
@@ -38,4 +39,10 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-});
+};
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initLcAccordion);
+} else {
+    initLcAccordion();
+}
