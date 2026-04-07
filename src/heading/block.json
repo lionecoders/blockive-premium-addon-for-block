@@ -1,0 +1,118 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "lc-block-widgets/heading",
+	"version": "0.1.0",
+	"title": "LC Heading",
+	"category": "widgets",
+	"icon": "heading",
+	"description": "Advanced heading block with Elementor and Divi like settings.",
+	"attributes": {
+		"content": {
+			"type": "string",
+			"default": "Stunning Default Heading"
+		},
+		"level": {
+			"type": "number",
+			"default": 2
+		},
+		"alignment": {
+			"type": "string",
+			"default": "center"
+		},
+		"link": {
+			"type": "string",
+			"default": ""
+		},
+		"linkTarget": {
+			"type": "string",
+			"default": "_self"
+		},
+		"textStrokeColor": {
+			"type": "string",
+			"default": ""
+		},
+		"textStrokeWidth": {
+			"type": "number",
+			"default": 0
+		},
+		"textShadowColor": {
+			"type": "string",
+			"default": "rgba(0,0,0,0.2)"
+		},
+		"textShadowBlur": {
+			"type": "number",
+			"default": 15
+		},
+		"textShadowX": {
+			"type": "number",
+			"default": 0
+		},
+		"textShadowY": {
+			"type": "number",
+			"default": 10
+		},
+		"blendMode": {
+			"type": "string",
+			"default": "normal"
+		},
+		"animationType": {
+			"type": "string",
+			"default": "none"
+		},
+		"animationDuration": {
+			"type": "string",
+			"default": "1s"
+		},
+		"animationDelay": {
+			"type": "string",
+			"default": "0s"
+		}
+	},
+	"supports": {
+		"align": ["wide", "full"],
+		"html": false,
+		"color": {
+			"text": true,
+			"background": true,
+			"gradients": true,
+			"link": true
+		},
+		"typography": {
+			"fontSize": true,
+			"lineHeight": true,
+			"__experimentalFontFamily": true,
+			"__experimentalFontWeight": true,
+			"__experimentalFontStyle": true,
+			"__experimentalTextTransform": true,
+			"__experimentalTextDecoration": true,
+			"__experimentalLetterSpacing": true,
+			"__experimentalDefaultControls": {
+				"fontSize": true
+			}
+		},
+		"spacing": {
+			"margin": true,
+			"padding": true,
+			"__experimentalDefaultControls": {
+				"margin": true,
+				"padding": true
+			}
+		},
+		"__experimentalBorder": {
+			"radius": true,
+			"color": true,
+			"width": true,
+			"style": true,
+			"__experimentalDefaultControls": {
+				"radius": true,
+				"color": true,
+				"width": true,
+				"style": true
+			}
+		}
+	},
+	"textdomain": "lc-block-widgets",
+	"editorScript": "file:./index.js",
+	"style": "file:./style-index.css"
+}
