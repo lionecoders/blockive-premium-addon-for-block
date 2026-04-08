@@ -4,7 +4,7 @@
 	"name": "create-block/lc-block-widgets",
 	"version": "0.1.0",
 	"title": "Lc Block Widgets",
-	"category": "widgets",
+	"category": "lc-widgets",
 	"icon": "smiley",
 	"description": "Example block scaffolded with Create Block tool.",
 	"example": {},

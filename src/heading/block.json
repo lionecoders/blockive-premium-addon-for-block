@@ -4,7 +4,7 @@
 	"name": "lc-block-widgets/heading",
 	"version": "0.1.0",
 	"title": "LC Heading",
-	"category": "widgets",
+	"category": "lc-widgets",
 	"icon": "heading",
 	"description": "Advanced heading block with Elementor and Divi like settings.",
 	"attributes": {
