@@ -1,0 +1,212 @@
+.wp-block-lc-block-widgets-pricing-table {
+	display: flex;
+}
+
+.wp-block-lc-block-widgets-pricing-table.alignleft { justify-content: flex-start; }
+.wp-block-lc-block-widgets-pricing-table.aligncenter { justify-content: center; }
+.wp-block-lc-block-widgets-pricing-table.alignright { justify-content: flex-end; }
+
+/* Better Typography and Smooth Transitions */
+.lc-pricing-table {
+	position: relative;
+	width: 100%;
+	max-width: 380px;
+	background-color: var(--lc-pt-box-bg, #ffffff);
+	border: var(--lc-pt-border-width, 1px) solid var(--lc-pt-border-color, #f1f5f9);
+	border-radius: var(--lc-pt-border-radius, 16px);
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+	box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
+}
+
+.lc-pricing-table:hover {
+	transform: translateY(-8px);
+	box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.12);
+}
+
+.lc-pricing-table.has-shadow {
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.lc-pricing-table.is-featured {
+	transform: scale(1.05);
+	border-width: 2px;
+	border-color: var(--lc-pt-header-bg, #4f46e5);
+	box-shadow: 0 20px 40px rgba(79, 70, 229, 0.15);
+	z-index: 10;
+}
+.lc-pricing-table.is-featured:hover {
+	transform: scale(1.05) translateY(-8px);
+}
+
+.lc-pricing-badge {
+	position: absolute;
+	top: 15px;
+	right: -35px;
+	background: linear-gradient(135deg, #ef4444, #b91c1c);
+	color: #ffffff;
+	font-size: 0.75rem;
+	font-weight: 800;
+	padding: 5px 40px;
+	transform: rotate(45deg);
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+	z-index: 2;
+	box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.lc-pricing-header {
+	background-color: var(--lc-pt-header-bg, #4f46e5);
+	padding: 40px 30px 20px;
+	text-align: inherit;
+	border-bottom-left-radius: 30px;
+	border-bottom-right-radius: 30px;
+	margin-bottom: 20px;
+	transition: all 0.3s ease;
+}
+
+.lc-pricing-title {
+	font-size: 1.7rem;
+	font-weight: 800;
+	margin: 0 0 8px 0;
+	color: var(--lc-pt-header-text, #ffffff);
+	letter-spacing: -0.5px;
+}
+
+.lc-pricing-subtitle {
+	font-size: 0.95rem;
+	margin: 0;
+	opacity: 0.9;
+	color: var(--lc-pt-header-text, #ffffff);
+}
+
+.lc-pricing-price-area {
+	padding: 10px 30px;
+	background-color: transparent;
+	text-align: inherit;
+}
+
+.lc-pricing-currency {
+	font-size: 1.8rem;
+	font-weight: 700;
+	vertical-align: top;
+	color: var(--lc-pt-price-color, #0f172a);
+	margin-right: 2px;
+}
+
+.lc-pricing-amount {
+	font-size: 4rem;
+	font-weight: 900;
+	line-height: 1;
+	color: var(--lc-pt-price-color, #0f172a);
+	letter-spacing: -2px;
+}
+
+.lc-pricing-period {
+	font-size: 1rem;
+	color: var(--lc-pt-feature-text, #64748b);
+	margin-left: 5px;
+	font-weight: 500;
+}
+
+.lc-pricing-features {
+	list-style: none;
+	margin: 0;
+	padding: 20px 40px 30px 40px;
+	flex-grow: 1;
+}
+
+.lc-pricing-features li {
+	padding: 14px 0;
+	color: var(--lc-pt-feature-text, #475569);
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	font-size: 1.05rem;
+	border-bottom: 1px dashed rgba(0,0,0,0.06);
+	transition: transform 0.2s ease;
+}
+.lc-pricing-features li:hover {
+	transform: translateX(4px);
+}
+.lc-pricing-features li:last-child {
+	border-bottom: none;
+}
+
+.lc-pricing-features li.inactive {
+	opacity: 0.4;
+	text-decoration: line-through;
+}
+
+.lc-pricing-features li i {
+	width: 24px;
+	height: 24px;
+	text-align: center;
+	flex-shrink: 0;
+	font-size: 0.95em;
+	background: rgba(0,0,0,0.05);
+	color: var(--lc-pt-feature-text, #475569);
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.lc-pricing-features li.active i {
+	background: rgba(37, 99, 235, 0.1);
+	color: var(--lc-pt-header-bg, #2563eb);
+}
+
+.lc-pricing-footer {
+	padding: 0 40px 40px 40px;
+	text-align: inherit;
+}
+
+.lc-pricing-button {
+	display: inline-block;
+	width: 100%;
+	padding: 18px 25px;
+	background: var(--lc-pt-button-bg, #4f46e5);
+	color: var(--lc-pt-button-text, #ffffff) !important;
+	text-align: center;
+	text-decoration: none;
+	font-weight: 700;
+	font-size: 1.1rem;
+	border-radius: 50px;
+	transition: all 0.3s ease;
+	box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.lc-pricing-button:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+	opacity: 0.95;
+}
+
+/* --- Layout Styles --- */
+
+/* Style 2: Clean Minimal */
+.lc-pricing-style2 .lc-pricing-header {
+	background-color: transparent;
+	border-bottom: 2px solid var(--lc-pt-border-color, #e2e8f0);
+	border-radius: 0;
+	margin-bottom: 0;
+	padding-bottom: 25px;
+}
+.lc-pricing-style2 .lc-pricing-title {
+	color: var(--lc-pt-header-text, #0f172a);
+}
+.lc-pricing-style2 .lc-pricing-subtitle {
+	color: var(--lc-pt-header-text, #475569);
+	opacity: 0.7;
+}
+
+/* Style 3: Floating Gradient Header */
+.lc-pricing-style3 .lc-pricing-header {
+	margin: 20px;
+	border-radius: 16px;
+	background-image: linear-gradient(135deg, var(--lc-pt-header-bg, #4f46e5) 0%, rgba(0,0,0,0.1) 100%);
+	box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
