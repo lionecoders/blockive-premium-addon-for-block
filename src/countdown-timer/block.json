@@ -1,55 +1,84 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
-	"name": "lc-block-widgets/accordion",
+	"name": "lc-block-widgets/countdown-timer",
 	"version": "0.1.0",
-	"title": "LC Accordion",
+	"title": "LC Countdown Timer",
 	"category": "lc-widgets",
-	"icon": "list-view",
-	"description": "Accordion block with advanced Elementor/Divi style settings.",
+	"icon": "clock",
+	"description": "A customizable countdown timer block with rich styling settings.",
 	"attributes": {
-		"items": {
-			"type": "array",
-			"default": [
-				{ "id": "1", "title": "Accordion Item #1", "content": "Click edit button to change this text. Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
-				{ "id": "2", "title": "Accordion Item #2", "content": "Click edit button to change this text. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo." }
-			]
-		},
-		"icon": {
+		"targetDate": {
 			"type": "string",
-			"default": "plus-minus"
+			"default": ""
 		},
-		"iconAlign": {
+		"showDays": {
+			"type": "boolean",
+			"default": true
+		},
+		"showHours": {
+			"type": "boolean",
+			"default": true
+		},
+		"showMinutes": {
+			"type": "boolean",
+			"default": true
+		},
+		"showSeconds": {
+			"type": "boolean",
+			"default": true
+		},
+		"labelDays": {
 			"type": "string",
-			"default": "right"
+			"default": "Days"
 		},
-		"titleColor": {
+		"labelHours": {
 			"type": "string",
-			"default": "#0f172a"
+			"default": "Hours"
 		},
-		"titleActiveColor": {
+		"labelMinutes": {
 			"type": "string",
-			"default": "#4f46e5"
+			"default": "Minutes"
 		},
-		"titleBgColor": {
+		"labelSeconds": {
 			"type": "string",
-			"default": "#ffffff"
+			"default": "Seconds"
 		},
-		"contentColor": {
+		"styleType": {
 			"type": "string",
-			"default": "#334155"
+			"default": "block"
 		},
-		"contentBgColor": {
+		"boxBgColor": {
 			"type": "string",
-			"default": "#ffffff"
+			"default": "#f1f5f9"
 		},
-		"borderColor": {
+		"boxBorderColor": {
 			"type": "string",
 			"default": "#e2e8f0"
 		},
-		"borderWidth": {
+		"boxBorderWidth": {
 			"type": "number",
 			"default": 1
+		},
+		"boxBorderRadius": {
+			"type": "number",
+			"default": 8
+		},
+		"numberColor": {
+			"type": "string",
+			"default": "#0f172a"
+		},
+		"labelColor": {
+			"type": "string",
+			"default": "#64748b"
+		},
+		"gap": {
+			"type": "number",
+			"default": 20
+		},
+		"alignment": {
+			"type": "string",
+			"default": "center"
 		},
 		"animationType": {
 			"type": "string",
@@ -81,15 +110,6 @@
 			"__experimentalDefaultControls": {
 				"margin": true,
 				"padding": true
-			}
-		},
-		"__experimentalBorder": {
-			"radius": true,
-			"color": true,
-			"width": true,
-			"style": true,
-			"__experimentalDefaultControls": {
-				"radius": true
 			}
 		}
 	},
