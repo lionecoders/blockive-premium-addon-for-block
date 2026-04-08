@@ -1,0 +1,60 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "lc-block-widgets/pie-chart",
+	"version": "0.1.0",
+	"title": "LC Pie Chart",
+	"category": "lc-widgets",
+	"icon": "chart-pie",
+	"description": "A dynamic pie and donut chart block using Chart.js.",
+	"attributes": {
+		"chartData": {
+			"type": "array",
+			"default": [
+				{ "id": "1", "label": "Red", "value": 300, "bg": "#ff6384" },
+				{ "id": "2", "label": "Blue", "value": 50, "bg": "#36a2eb" },
+				{ "id": "3", "label": "Yellow", "value": 100, "bg": "#ffce56" }
+			]
+		},
+		"legendPosition": {
+			"type": "string",
+			"default": "top"
+		},
+		"cutout": {
+			"type": "number",
+			"default": 0
+		},
+		"borderWidth": {
+			"type": "number",
+			"default": 2
+		},
+		"borderColor": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"animationSpeed": {
+			"type": "number",
+			"default": 1000
+		},
+		"alignment": {
+			"type": "string",
+			"default": "center"
+		}
+	},
+	"supports": {
+		"align": ["wide", "full"],
+		"html": false,
+		"spacing": {
+			"margin": true,
+			"padding": true,
+			"__experimentalDefaultControls": {
+				"margin": true,
+				"padding": true
+			}
+		}
+	},
+	"textdomain": "lc-block-widgets",
+	"editorScript": "file:./index.js",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js"
+}

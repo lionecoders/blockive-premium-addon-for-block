@@ -1,0 +1,34 @@
+.wp-block-lc-block-widgets-pie-chart {
+	display: flex;
+}
+
+.wp-block-lc-block-widgets-pie-chart.alignleft {
+    justify-content: flex-start;
+}
+.wp-block-lc-block-widgets-pie-chart.aligncenter {
+    justify-content: center;
+}
+.wp-block-lc-block-widgets-pie-chart.alignright {
+    justify-content: flex-end;
+}
+
+.lc-pie-chart-wrapper {
+	position: relative;
+	width: 100%;
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+/* Ensure canvas respects width and maintains aspect ratio naturally */
+.lc-pie-chart-wrapper canvas {
+	width: 100% !important;
+	height: auto !important;
+}
+
+/* Fallback for editor errors */
+.lc-chart-error {
+	padding: 20px;
+	border: 1px dashed #dc3232;
+	color: #dc3232;
+	text-align: center;
+}
