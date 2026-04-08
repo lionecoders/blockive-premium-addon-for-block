@@ -1,0 +1,123 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "lc-block-widgets/countdown-timer",
+  "version": "0.1.0",
+  "title": "LC Countdown Timer",
+  "category": "lc-widgets",
+  "icon": "clock",
+  "description": "A customizable countdown timer block with rich styling settings.",
+  "attributes": {
+    "targetDate": {
+      "type": "string",
+      "default": ""
+    },
+    "showDays": {
+      "type": "boolean",
+      "default": true
+    },
+    "showHours": {
+      "type": "boolean",
+      "default": true
+    },
+    "showMinutes": {
+      "type": "boolean",
+      "default": true
+    },
+    "showSeconds": {
+      "type": "boolean",
+      "default": true
+    },
+    "labelDays": {
+      "type": "string",
+      "default": "Days"
+    },
+    "labelHours": {
+      "type": "string",
+      "default": "Hours"
+    },
+    "labelMinutes": {
+      "type": "string",
+      "default": "Minutes"
+    },
+    "labelSeconds": {
+      "type": "string",
+      "default": "Seconds"
+    },
+    "styleType": {
+      "type": "string",
+      "default": "block"
+    },
+    "boxBgColor": {
+      "type": "string",
+      "default": "#f1f5f9"
+    },
+    "boxBorderColor": {
+      "type": "string",
+      "default": "#e2e8f0"
+    },
+    "boxBorderWidth": {
+      "type": "number",
+      "default": 1
+    },
+    "boxBorderRadius": {
+      "type": "number",
+      "default": 8
+    },
+    "numberColor": {
+      "type": "string",
+      "default": "#0f172a"
+    },
+    "labelColor": {
+      "type": "string",
+      "default": "#64748b"
+    },
+    "gap": {
+      "type": "number",
+      "default": 20
+    },
+    "alignment": {
+      "type": "string",
+      "default": "center"
+    },
+    "animationType": {
+      "type": "string",
+      "default": "none"
+    },
+    "animationDuration": {
+      "type": "string",
+      "default": "1s"
+    },
+    "animationDelay": {
+      "type": "string",
+      "default": "0s"
+    }
+  },
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ],
+    "html": false,
+    "typography": {
+      "fontSize": true,
+      "lineHeight": true,
+      "__experimentalFontFamily": true,
+      "__experimentalDefaultControls": {
+        "fontSize": true
+      }
+    },
+    "spacing": {
+      "margin": true,
+      "padding": true,
+      "__experimentalDefaultControls": {
+        "margin": true,
+        "padding": true
+      }
+    }
+  },
+  "textdomain": "lc-block-widgets",
+  "editorScript": "file:./index.js",
+  "style": "file:./style-index.css",
+  "viewScript": "file:./view.js"
+}

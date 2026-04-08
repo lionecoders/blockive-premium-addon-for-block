@@ -1,0 +1,153 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "lc-block-widgets/pricing-table",
+  "version": "0.1.0",
+  "title": "LC Pricing Table",
+  "category": "lc-widgets",
+  "icon": "money-alt",
+  "description": "A fully customizable pricing table block with features list and button.",
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Pro Plan"
+    },
+    "subtitle": {
+      "type": "string",
+      "default": "Best for growing businesses"
+    },
+    "isFeatured": {
+      "type": "boolean",
+      "default": false
+    },
+    "featuredBadge": {
+      "type": "string",
+      "default": "Most Popular"
+    },
+    "currency": {
+      "type": "string",
+      "default": "$"
+    },
+    "price": {
+      "type": "string",
+      "default": "99"
+    },
+    "period": {
+      "type": "string",
+      "default": "/ month"
+    },
+    "features": {
+      "type": "array",
+      "default": [
+        {
+          "id": "1",
+          "text": "50 Users",
+          "active": true,
+          "icon": "fas fa-check"
+        },
+        {
+          "id": "2",
+          "text": "100GB Storage",
+          "active": true,
+          "icon": "fas fa-check"
+        },
+        {
+          "id": "3",
+          "text": "24/7 Support",
+          "active": true,
+          "icon": "fas fa-check"
+        },
+        {
+          "id": "4",
+          "text": "Custom Domain",
+          "active": false,
+          "icon": "fas fa-times"
+        }
+      ]
+    },
+    "layoutStyle": {
+      "type": "string",
+      "default": "style1"
+    },
+    "buttonText": {
+      "type": "string",
+      "default": "Get Started"
+    },
+    "buttonUrl": {
+      "type": "string",
+      "default": "#"
+    },
+    "alignment": {
+      "type": "string",
+      "default": "center"
+    },
+    "headerBgColor": {
+      "type": "string",
+      "default": "#2563eb"
+    },
+    "headerTextColor": {
+      "type": "string",
+      "default": "#ffffff"
+    },
+    "priceColor": {
+      "type": "string",
+      "default": "#1e293b"
+    },
+    "featureTextColor": {
+      "type": "string",
+      "default": "#475569"
+    },
+    "buttonBgColor": {
+      "type": "string",
+      "default": "#2563eb"
+    },
+    "buttonTextColor": {
+      "type": "string",
+      "default": "#ffffff"
+    },
+    "boxBgColor": {
+      "type": "string",
+      "default": "#ffffff"
+    },
+    "borderColor": {
+      "type": "string",
+      "default": "#e2e8f0"
+    },
+    "borderWidth": {
+      "type": "number",
+      "default": 1
+    },
+    "borderRadius": {
+      "type": "number",
+      "default": 12
+    },
+    "boxShadow": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ],
+    "html": false,
+    "typography": {
+      "fontSize": true,
+      "lineHeight": true,
+      "__experimentalDefaultControls": {
+        "fontSize": true
+      }
+    },
+    "spacing": {
+      "margin": true,
+      "padding": true,
+      "__experimentalDefaultControls": {
+        "margin": true
+      }
+    }
+  },
+  "textdomain": "lc-block-widgets",
+  "editorScript": "file:./index.js",
+  "style": "file:./style-index.css"
+}

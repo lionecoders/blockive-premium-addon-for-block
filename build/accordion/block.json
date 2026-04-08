@@ -4,7 +4,7 @@
   "name": "lc-block-widgets/accordion",
   "version": "0.1.0",
   "title": "LC Accordion",
-  "category": "widgets",
+  "category": "lc-widgets",
   "icon": "list-view",
   "description": "Accordion block with advanced Elementor/Divi style settings.",
   "attributes": {

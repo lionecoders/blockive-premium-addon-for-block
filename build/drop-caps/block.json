@@ -1,0 +1,93 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "lc-block-widgets/drop-caps",
+  "version": "0.1.0",
+  "title": "LC Drop Caps",
+  "category": "lc-widgets",
+  "icon": "editor-textcolor",
+  "description": "Advanced drop caps block with customizable view, shape, and styling.",
+  "attributes": {
+    "content": {
+      "type": "string",
+      "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
+    },
+    "view": {
+      "type": "string",
+      "default": "default"
+    },
+    "shape": {
+      "type": "string",
+      "default": "square"
+    },
+    "primaryColor": {
+      "type": "string",
+      "default": ""
+    },
+    "secondaryColor": {
+      "type": "string",
+      "default": ""
+    },
+    "size": {
+      "type": "number",
+      "default": 50
+    },
+    "space": {
+      "type": "number",
+      "default": 10
+    },
+    "borderWidth": {
+      "type": "number",
+      "default": 1
+    },
+    "borderRadius": {
+      "type": "number",
+      "default": 0
+    },
+    "dropCapPadding": {
+      "type": "number",
+      "default": 10
+    },
+    "alignment": {
+      "type": "string",
+      "default": "left"
+    }
+  },
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ],
+    "html": false,
+    "color": {
+      "text": true,
+      "background": true,
+      "gradients": true,
+      "link": true
+    },
+    "typography": {
+      "fontSize": true,
+      "lineHeight": true,
+      "__experimentalFontFamily": true,
+      "__experimentalFontWeight": true,
+      "__experimentalFontStyle": true,
+      "__experimentalTextTransform": true,
+      "__experimentalTextDecoration": true,
+      "__experimentalLetterSpacing": true,
+      "__experimentalDefaultControls": {
+        "fontSize": true
+      }
+    },
+    "spacing": {
+      "margin": true,
+      "padding": true,
+      "__experimentalDefaultControls": {
+        "margin": true,
+        "padding": true
+      }
+    }
+  },
+  "textdomain": "lc-block-widgets",
+  "editorScript": "file:./index.js",
+  "style": "file:./style-index.css"
+}

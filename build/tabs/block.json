@@ -4,7 +4,7 @@
   "name": "lc-block-widgets/tabs",
   "version": "0.1.0",
   "title": "LC Tabs",
-  "category": "widgets",
+  "category": "lc-widgets",
   "icon": "index-card",
   "description": "A modern Tab block with premium segmented control styling.",
   "attributes": {
