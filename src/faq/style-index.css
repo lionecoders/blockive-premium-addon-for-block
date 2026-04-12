@@ -1,6 +1,5 @@
 .wp-block-lc-block-widgets-faq {
 	position: relative;
-	border-style: none;
 }
 
 .lc-faq-wrapper {
@@ -28,7 +27,7 @@
 	align-items: center;
 }
 
-.lc-faq-header:hover,
+.lc-faq-header:hover, 
 .lc-faq-item.active .lc-faq-header {
 	color: var(--lc-faq-title-active-color, #4f46e5);
 }
@@ -36,7 +35,6 @@
 .lc-faq-header.flex-align-left {
 	justify-content: flex-start;
 }
-
 .lc-faq-header.flex-align-right {
 	justify-content: space-between;
 }
@@ -44,7 +42,6 @@
 .lc-faq-title {
 	flex-grow: 1;
 }
-
 .lc-faq-header.flex-align-left .lc-faq-title {
 	margin-left: 10px;
 }
@@ -73,100 +70,17 @@
 }
 
 /* Animations */
-.lc-animate-none {
-	animation: none;
-}
+.lc-animate-none { animation: none; }
+.lc-animate-fadeIn { animation-name: fadeIn; }
+.lc-animate-fadeInUp { animation-name: fadeInUp; }
+.lc-animate-fadeInDown { animation-name: fadeInDown; }
+.lc-animate-zoomIn { animation-name: zoomIn; }
+.lc-animate-slideInLeft { animation-name: slideInLeft; }
+.lc-animate-slideInRight { animation-name: slideInRight; }
 
-.lc-animate-fadeIn {
-	animation-name: fadeIn;
-}
-
-.lc-animate-fadeInUp {
-	animation-name: fadeInUp;
-}
-
-.lc-animate-fadeInDown {
-	animation-name: fadeInDown;
-}
-
-.lc-animate-zoomIn {
-	animation-name: zoomIn;
-}
-
-.lc-animate-slideInLeft {
-	animation-name: slideInLeft;
-}
-
-.lc-animate-slideInRight {
-	animation-name: slideInRight;
-}
-
-@keyframes fadeIn {
-	from {
-		opacity: 0;
-	}
-
-	to {
-		opacity: 1;
-	}
-}
-
-@keyframes fadeInUp {
-	from {
-		opacity: 0;
-		transform: translate3d(0, 40px, 0);
-	}
-
-	to {
-		opacity: 1;
-		transform: translate3d(0, 0, 0);
-	}
-}
-
-@keyframes fadeInDown {
-	from {
-		opacity: 0;
-		transform: translate3d(0, -40px, 0);
-	}
-
-	to {
-		opacity: 1;
-		transform: translate3d(0, 0, 0);
-	}
-}
-
-@keyframes zoomIn {
-	from {
-		opacity: 0;
-		transform: scale3d(0.9, 0.9, 0.9);
-	}
-
-	to {
-		opacity: 1;
-		transform: scale3d(1, 1, 1);
-	}
-}
-
-@keyframes slideInLeft {
-	from {
-		opacity: 0;
-		transform: translate3d(-100px, 0, 0);
-	}
-
-	to {
-		opacity: 1;
-		transform: translate3d(0, 0, 0);
-	}
-}
-
-@keyframes slideInRight {
-	from {
-		opacity: 0;
-		transform: translate3d(100px, 0, 0);
-	}
-
-	to {
-		opacity: 1;
-		transform: translate3d(0, 0, 0);
-	}
-}
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes fadeInUp { from { opacity: 0; transform: translate3d(0, 40px, 0); } to { opacity: 1; transform: translate3d(0, 0, 0); } }
+@keyframes fadeInDown { from { opacity: 0; transform: translate3d(0, -40px, 0); } to { opacity: 1; transform: translate3d(0, 0, 0); } }
+@keyframes zoomIn { from { opacity: 0; transform: scale3d(0.9, 0.9, 0.9); } to { opacity: 1; transform: scale3d(1, 1, 1); } }
+@keyframes slideInLeft { from { opacity: 0; transform: translate3d(-100px, 0, 0); } to { opacity: 1; transform: translate3d(0, 0, 0); } }
+@keyframes slideInRight { from { opacity: 0; transform: translate3d(100px, 0, 0); } to { opacity: 1; transform: translate3d(0, 0, 0); } }
