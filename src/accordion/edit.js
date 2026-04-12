@@ -35,7 +35,7 @@ export default function Edit({ attributes, setAttributes }) {
 	const [activeIndex, setActiveIndex] = useState(0);
 
 	const customStyles = {
-		'--lc-accordion-borderWidth': `${borderWidth}px`,
+		'--lc-accordion-bw': `${borderWidth}px`,
 		'--lc-accordion-borderColor': borderColor,
 		'--lc-accordion-title-color': titleColor,
 		'--lc-accordion-title-active-color': titleActiveColor,

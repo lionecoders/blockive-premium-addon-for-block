@@ -18,7 +18,7 @@ export default function save({ attributes }) {
 	} = attributes;
 
 	const customStyles = {
-		'--lc-accordion-borderWidth': `${borderWidth}px`,
+		'--lc-accordion-bw': `${borderWidth}px`,
 		'--lc-accordion-borderColor': borderColor,
 		'--lc-accordion-title-color': titleColor,
 		'--lc-accordion-title-active-color': titleActiveColor,

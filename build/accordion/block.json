@@ -93,15 +93,6 @@
         "margin": true,
         "padding": true
       }
-    },
-    "__experimentalBorder": {
-      "radius": true,
-      "color": true,
-      "width": true,
-      "style": true,
-      "__experimentalDefaultControls": {
-        "radius": true
-      }
     }
   },
   "textdomain": "lc-block-widgets",

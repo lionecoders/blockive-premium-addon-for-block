@@ -96,15 +96,6 @@ return array(
 					'margin' => true,
 					'padding' => true
 				)
-			),
-			'__experimentalBorder' => array(
-				'radius' => true,
-				'color' => true,
-				'width' => true,
-				'style' => true,
-				'__experimentalDefaultControls' => array(
-					'radius' => true
-				)
 			)
 		),
 		'textdomain' => 'lc-block-widgets',
@@ -442,15 +433,6 @@ return array(
 				'__experimentalDefaultControls' => array(
 					'margin' => true,
 					'padding' => true
-				)
-			),
-			'__experimentalBorder' => array(
-				'radius' => true,
-				'color' => true,
-				'width' => true,
-				'style' => true,
-				'__experimentalDefaultControls' => array(
-					'radius' => true
 				)
 			)
 		),

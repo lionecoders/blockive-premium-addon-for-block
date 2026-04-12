@@ -10,7 +10,7 @@
 .lc-accordion-item {
 	position: relative;
 	z-index: 1;
-	border: var(--lc-accordion-borderWidth, 1px) solid var(--lc-accordion-borderColor, #e2e8f0);
+	border: var(--lc-accordion-bw, 1px) solid var(--lc-accordion-borderColor, #e2e8f0);
 	border-radius: 12px;
 	overflow: hidden;
 	background: var(--lc-accordion-content-bg, #ffffff);
