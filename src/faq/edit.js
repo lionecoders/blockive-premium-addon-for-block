@@ -42,8 +42,8 @@ export default function Edit({ attributes, setAttributes }) {
 	const [activeIndex, setActiveIndex] = useState(0);
 
 	const customStyles = {
-		'--lc-faq-border-width': `${borderWidth}px`,
-		'--lc-faq-border-color': borderColor,
+		'--lc-faq-borderWidth': `${borderWidth}px`,
+		'--lc-faq-borderColor': borderColor,
 		'--lc-faq-title-color': titleColor,
 		'--lc-faq-title-active-color': titleActiveColor,
 		'--lc-faq-title-bg': titleBgColor,

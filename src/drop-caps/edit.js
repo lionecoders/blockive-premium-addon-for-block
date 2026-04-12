@@ -33,11 +33,11 @@ export default function Edit({ attributes, setAttributes }) {
 		textAlign: alignment,
 		'--lc-dc-size': `${size}px`,
 		'--lc-dc-space': `${space}px`,
-		'--lc-dc-padding': `${dropCapPadding}px`,
+		'--lc-dc-pd': `${dropCapPadding}px`,
 		'--lc-dc-color': secondaryColor || 'inherit',
 		'--lc-dc-bg': view === 'stacked' ? (primaryColor || '#000') : 'transparent',
-		'--lc-dc-border-width': view === 'framed' ? `${borderWidth}px` : '0px',
-		'--lc-dc-border-color': primaryColor || '#000',
+		'--lc-dc-borderWidth': view === 'framed' ? `${borderWidth}px` : '0px',
+		'--lc-dc-borderColor': primaryColor || '#000',
 		'--lc-dc-radius': borderRadius > 0 ? `${borderRadius}px` : (shape === 'circle' ? '50%' : (shape === 'rounded' ? '5px' : '0')),
 	};
 

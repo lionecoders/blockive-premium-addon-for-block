@@ -13,12 +13,12 @@
 	font-size: var(--lc-dc-size, 50px);
 	margin-right: var(--lc-dc-space, 10px);
 	margin-bottom: calc(var(--lc-dc-space, 10px) / 4);
-	padding: var(--lc-dc-padding, 0px);
+	padding: var(--lc-dc-pd, 0px);
 	color: var(--lc-dc-color, inherit);
 	background-color: var(--lc-dc-bg, transparent);
-	border-width: var(--lc-dc-border-width, 0px);
+	border-width: var(--lc-dc-borderWidth, 0px);
 	border-style: solid;
-	border-color: var(--lc-dc-border-color, transparent);
+	border-color: var(--lc-dc-borderColor, transparent);
 	border-radius: var(--lc-dc-radius, 0px);
 	text-transform: uppercase;
 	transition: all 0.3s ease;

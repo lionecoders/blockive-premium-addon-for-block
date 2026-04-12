@@ -28,9 +28,9 @@ export default function save({ attributes }) {
 	const customStyles = {
 		'--lc-cd-gap': gap !== undefined ? `${gap}px` : '20px',
 		'--lc-cd-box-bg': styleType === 'block' ? (boxBgColor || 'transparent') : 'transparent',
-		'--lc-cd-border-width': styleType === 'block' ? `${boxBorderWidth || 0}px` : '0px',
-		'--lc-cd-border-color': styleType === 'block' ? (boxBorderColor || 'transparent') : 'transparent',
-		'--lc-cd-border-radius': styleType === 'block' ? `${boxBorderRadius || 0}px` : '0px',
+		'--lc-cd-borderWidth': styleType === 'block' ? `${boxBorderWidth || 0}px` : '0px',
+		'--lc-cd-borderColor': styleType === 'block' ? (boxBorderColor || 'transparent') : 'transparent',
+		'--lc-cd-borderRadius': styleType === 'block' ? `${boxBorderRadius || 0}px` : '0px',
 		'--lc-cd-number-color': numberColor || 'inherit',
 		'--lc-cd-label-color': labelColor || 'inherit',
 	};

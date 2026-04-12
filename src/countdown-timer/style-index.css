@@ -24,8 +24,8 @@
     align-items: center;
     justify-content: center;
     background-color: var(--lc-cd-box-bg, transparent);
-    border: var(--lc-cd-border-width, 0px) solid var(--lc-cd-border-color, transparent);
-    border-radius: var(--lc-cd-border-radius, 0px);
+    border: var(--lc-cd-borderWidth, 0px) solid var(--lc-cd-borderColor, transparent);
+    border-radius: var(--lc-cd-borderRadius, 0px);
     padding: 20px;
     min-width: 90px;
     transition: all 0.3s ease;

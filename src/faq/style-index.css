@@ -7,13 +7,13 @@
 }
 
 .lc-faq-item {
-	border-bottom: var(--lc-faq-border-width, 1px) solid var(--lc-faq-border-color, #e2e8f0);
+	border-bottom: var(--lc-faq-borderWidth, 1px) solid var(--lc-faq-borderColor, #e2e8f0);
 	margin-bottom: 0;
 	transition: all 0.3s ease;
 }
 
 .lc-faq-item:first-child {
-	border-top: var(--lc-faq-border-width, 1px) solid var(--lc-faq-border-color, #e2e8f0);
+	border-top: var(--lc-faq-borderWidth, 1px) solid var(--lc-faq-borderColor, #e2e8f0);
 }
 
 .lc-faq-header {
@@ -60,7 +60,7 @@
 	padding: 15px 20px;
 	background-color: var(--lc-faq-content-bg, #f8fafc);
 	color: var(--lc-faq-content-color, #334155);
-	border-top: var(--lc-faq-border-width, 1px) solid var(--lc-faq-border-color, #e2e8f0);
+	border-top: var(--lc-faq-borderWidth, 1px) solid var(--lc-faq-borderColor, #e2e8f0);
 	display: none;
 }
 

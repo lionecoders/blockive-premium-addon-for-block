@@ -35,9 +35,9 @@ export default function save({ attributes }) {
 		'--lc-pt-button-bg': buttonBgColor || '#4f46e5',
 		'--lc-pt-button-text': buttonTextColor || '#ffffff',
 		'--lc-pt-box-bg': boxBgColor || '#ffffff',
-		'--lc-pt-border-color': borderColor || '#f1f5f9',
-		'--lc-pt-border-width': `${borderWidth !== undefined ? borderWidth : 1}px`,
-		'--lc-pt-border-radius': `${borderRadius !== undefined ? borderRadius : 16}px`,
+		'--lc-pt-borderColor': borderColor || '#f1f5f9',
+		'--lc-pt-borderWidth': `${borderWidth !== undefined ? borderWidth : 1}px`,
+		'--lc-pt-borderRadius': `${borderRadius !== undefined ? borderRadius : 16}px`,
 	};
 
 	const blockProps = useBlockProps.save({
