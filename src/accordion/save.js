@@ -47,22 +47,22 @@ export default function save({ attributes }) {
 					if (icon === 'plus-minus') {
 						iconElement = (
 							<>
-								<span className="lc-accordion-icon lc-icon-open">+</span>
-								<span className="lc-accordion-icon lc-icon-close" style={{ display: 'none' }}>-</span>
+								<span className="lc-accordion-icon lc-icon-open"><i className="fas fa-plus"></i></span>
+								<span className="lc-accordion-icon lc-icon-close" style={{ display: 'none' }}><i className="fas fa-minus"></i></span>
 							</>
 						);
 					} else if (icon === 'chevron') {
 						iconElement = (
 							<>
-								<span className="lc-accordion-icon lc-icon-open">▼</span>
-								<span className="lc-accordion-icon lc-icon-close" style={{ display: 'none' }}>▲</span>
+								<span className="lc-accordion-icon lc-icon-open"><i className="fas fa-chevron-down"></i></span>
+								<span className="lc-accordion-icon lc-icon-close" style={{ display: 'none' }}><i className="fas fa-chevron-up"></i></span>
 							</>
 						);
 					} else if (icon === 'angle') {
 						iconElement = (
 							<>
-								<span className="lc-accordion-icon lc-icon-open">∨</span>
-								<span className="lc-accordion-icon lc-icon-close" style={{ display: 'none' }}>∧</span>
+								<span className="lc-accordion-icon lc-icon-open"><i className="fas fa-angle-down"></i></span>
+								<span className="lc-accordion-icon lc-icon-close" style={{ display: 'none' }}><i className="fas fa-angle-up"></i></span>
 							</>
 						);
 					}

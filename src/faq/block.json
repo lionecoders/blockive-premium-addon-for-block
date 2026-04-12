@@ -13,12 +13,12 @@
 			"default": [
 				{
 					"id": "1",
-					"title": "Frequently Asked Question #1",
+					"title": "Frequently Asked Question 1",
 					"content": "Click edit button to change this text. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
 				},
 				{
 					"id": "2",
-					"title": "Frequently Asked Question #2",
+					"title": "Frequently Asked Question 2",
 					"content": "Click edit button to change this text. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
 				}
 			]
@@ -74,6 +74,22 @@
 		"titleTag": {
 			"type": "string",
 			"default": "span"
+		},
+		"headingText": {
+			"type": "string",
+			"default": "Ask you question"
+		},
+		"headingTag": {
+			"type": "string",
+			"default": "h2"
+		},
+		"headingAlign": {
+			"type": "string",
+			"default": "center"
+		},
+		"headingColor": {
+			"type": "string",
+			"default": "#0f172a"
 		}
 	},
 	"supports": {
@@ -110,6 +126,6 @@
 	},
 	"textdomain": "lc-block-widgets",
 	"editorScript": "file:./index.js",
-	"style": "file:./style-index.css",
+	"style": "file:./index.css",
 	"viewScript": "file:./view.js"
 }

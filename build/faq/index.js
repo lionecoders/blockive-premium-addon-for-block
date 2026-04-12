@@ -371,17 +371,23 @@ function Edit({
           if (icon === 'plus-minus') {
             iconElement = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
               className: "lc-faq-icon",
-              children: isActive ? '-' : '+'
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("i", {
+                className: isActive ? 'fas fa-minus' : 'fas fa-plus'
+              })
             });
           } else if (icon === 'chevron') {
             iconElement = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
               className: "lc-faq-icon",
-              children: isActive ? '▲' : '▼'
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("i", {
+                className: isActive ? 'fas fa-chevron-up' : 'fas fa-chevron-down'
+              })
             });
           } else if (icon === 'angle') {
             iconElement = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
               className: "lc-faq-icon",
-              children: isActive ? '∧' : '∨'
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("i", {
+                className: isActive ? 'fas fa-angle-up' : 'fas fa-angle-down'
+              })
             });
           }
         }
@@ -509,39 +515,51 @@ function save({
           iconElement = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.Fragment, {
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
               className: "lc-faq-icon lc-icon-open",
-              children: "+"
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
+                className: "fas fa-plus"
+              })
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
               className: "lc-faq-icon lc-icon-close",
               style: {
                 display: 'none'
               },
-              children: "-"
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
+                className: "fas fa-minus"
+              })
             })]
           });
         } else if (icon === 'chevron') {
           iconElement = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.Fragment, {
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
               className: "lc-faq-icon lc-icon-open",
-              children: "\u25BC"
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
+                className: "fas fa-chevron-down"
+              })
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
               className: "lc-faq-icon lc-icon-close",
               style: {
                 display: 'none'
               },
-              children: "\u25B2"
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
+                className: "fas fa-chevron-up"
+              })
             })]
           });
         } else if (icon === 'angle') {
           iconElement = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.Fragment, {
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
               className: "lc-faq-icon lc-icon-open",
-              children: "\u2228"
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
+                className: "fas fa-angle-down"
+              })
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
               className: "lc-faq-icon lc-icon-close",
               style: {
                 display: 'none'
               },
-              children: "\u2227"
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
+                className: "fas fa-angle-up"
+              })
             })]
           });
         }
@@ -650,7 +668,7 @@ module.exports = window["wp"]["i18n"];
   \****************************/
 (module) {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"lc-block-widgets/faq","version":"0.1.0","title":"LC FAQ","category":"lc-widgets","icon":"editor-help","description":"FAQ block with rich schema.org markup for SEO, based on accordion behavior.","attributes":{"items":{"type":"array","default":[{"id":"1","title":"Frequently Asked Question #1","content":"Click edit button to change this text. Lorem ipsum dolor sit amet, consectetur adipiscing elit."},{"id":"2","title":"Frequently Asked Question #2","content":"Click edit button to change this text. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."}]},"icon":{"type":"string","default":"plus-minus"},"iconAlign":{"type":"string","default":"right"},"titleColor":{"type":"string","default":"#0f172a"},"titleActiveColor":{"type":"string","default":"#4f46e5"},"titleBgColor":{"type":"string","default":"#ffffff"},"contentColor":{"type":"string","default":"#334155"},"contentBgColor":{"type":"string","default":"#f8fafc"},"borderColor":{"type":"string","default":"#e2e8f0"},"borderWidth":{"type":"number","default":1},"animationType":{"type":"string","default":"none"},"animationDuration":{"type":"string","default":"1s"},"animationDelay":{"type":"string","default":"0s"},"titleTag":{"type":"string","default":"span"}},"supports":{"align":["wide","full"],"html":false,"typography":{"fontSize":true,"lineHeight":true,"__experimentalFontFamily":true,"__experimentalDefaultControls":{"fontSize":true}},"spacing":{"margin":true,"padding":true,"__experimentalDefaultControls":{"margin":true,"padding":true}},"__experimentalBorder":{"radius":true,"color":true,"width":true,"style":true,"__experimentalDefaultControls":{"radius":true}}},"textdomain":"lc-block-widgets","editorScript":"file:./index.js","style":"file:./style-index.css","viewScript":"file:./view.js"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"lc-block-widgets/faq","version":"0.1.0","title":"LC FAQ","category":"lc-widgets","icon":"editor-help","description":"FAQ block with rich schema.org markup for SEO, based on accordion behavior.","attributes":{"items":{"type":"array","default":[{"id":"1","title":"Frequently Asked Question 1","content":"Click edit button to change this text. Lorem ipsum dolor sit amet, consectetur adipiscing elit."},{"id":"2","title":"Frequently Asked Question 2","content":"Click edit button to change this text. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."}]},"icon":{"type":"string","default":"plus-minus"},"iconAlign":{"type":"string","default":"right"},"titleColor":{"type":"string","default":"#0f172a"},"titleActiveColor":{"type":"string","default":"#4f46e5"},"titleBgColor":{"type":"string","default":"#ffffff"},"contentColor":{"type":"string","default":"#334155"},"contentBgColor":{"type":"string","default":"#f8fafc"},"borderColor":{"type":"string","default":"#e2e8f0"},"borderWidth":{"type":"number","default":1},"animationType":{"type":"string","default":"none"},"animationDuration":{"type":"string","default":"1s"},"animationDelay":{"type":"string","default":"0s"},"titleTag":{"type":"string","default":"span"},"headingText":{"type":"string","default":"Ask you question"},"headingTag":{"type":"string","default":"h2"},"headingAlign":{"type":"string","default":"center"},"headingColor":{"type":"string","default":"#0f172a"}},"supports":{"align":["wide","full"],"html":false,"typography":{"fontSize":true,"lineHeight":true,"__experimentalFontFamily":true,"__experimentalDefaultControls":{"fontSize":true}},"spacing":{"margin":true,"padding":true,"__experimentalDefaultControls":{"margin":true,"padding":true}},"__experimentalBorder":{"radius":true,"color":true,"width":true,"style":true,"__experimentalDefaultControls":{"radius":true}}},"textdomain":"lc-block-widgets","editorScript":"file:./index.js","style":"file:./index.css","viewScript":"file:./view.js"}');
 
 /***/ }
 

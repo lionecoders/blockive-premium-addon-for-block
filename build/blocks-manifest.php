@@ -16,12 +16,12 @@ return array(
 				'default' => array(
 					array(
 						'id' => '1',
-						'title' => 'Accordion Item #1',
+						'title' => 'Accordion Item 1',
 						'content' => 'Click edit button to change this text. Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
 					),
 					array(
 						'id' => '2',
-						'title' => 'Accordion Item #2',
+						'title' => 'Accordion Item 2',
 						'content' => 'Click edit button to change this text. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.'
 					)
 				)
@@ -109,7 +109,7 @@ return array(
 		),
 		'textdomain' => 'lc-block-widgets',
 		'editorScript' => 'file:./index.js',
-		'style' => 'file:./style-index.css',
+		'style' => 'file:./index.css',
 		'viewScript' => 'file:./view.js'
 	),
 	'countdown-timer' => array(
@@ -232,7 +232,7 @@ return array(
 		),
 		'textdomain' => 'lc-block-widgets',
 		'editorScript' => 'file:./index.js',
-		'style' => 'file:./style-index.css',
+		'style' => 'file:./index.css',
 		'viewScript' => 'file:./view.js'
 	),
 	'drop-caps' => array(
@@ -326,7 +326,7 @@ return array(
 		),
 		'textdomain' => 'lc-block-widgets',
 		'editorScript' => 'file:./index.js',
-		'style' => 'file:./style-index.css'
+		'style' => 'file:./index.css'
 	),
 	'faq' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
@@ -343,12 +343,12 @@ return array(
 				'default' => array(
 					array(
 						'id' => '1',
-						'title' => 'Frequently Asked Question #1',
+						'title' => 'Frequently Asked Question 1',
 						'content' => 'Click edit button to change this text. Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
 					),
 					array(
 						'id' => '2',
-						'title' => 'Frequently Asked Question #2',
+						'title' => 'Frequently Asked Question 2',
 						'content' => 'Click edit button to change this text. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.'
 					)
 				)
@@ -404,6 +404,22 @@ return array(
 			'titleTag' => array(
 				'type' => 'string',
 				'default' => 'span'
+			),
+			'headingText' => array(
+				'type' => 'string',
+				'default' => 'Ask you question'
+			),
+			'headingTag' => array(
+				'type' => 'string',
+				'default' => 'h2'
+			),
+			'headingAlign' => array(
+				'type' => 'string',
+				'default' => 'center'
+			),
+			'headingColor' => array(
+				'type' => 'string',
+				'default' => '#0f172a'
 			)
 		),
 		'supports' => array(
@@ -440,7 +456,7 @@ return array(
 		),
 		'textdomain' => 'lc-block-widgets',
 		'editorScript' => 'file:./index.js',
-		'style' => 'file:./style-index.css',
+		'style' => 'file:./index.css',
 		'viewScript' => 'file:./view.js'
 	),
 	'heading' => array(
@@ -562,7 +578,7 @@ return array(
 		),
 		'textdomain' => 'lc-block-widgets',
 		'editorScript' => 'file:./index.js',
-		'style' => 'file:./style-index.css'
+		'style' => 'file:./index.css'
 	),
 	'lc-block-widgets' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
@@ -582,7 +598,7 @@ return array(
 		'textdomain' => 'lc-block-widgets',
 		'editorScript' => 'file:./index.js',
 		'editorStyle' => 'file:./index.css',
-		'style' => 'file:./style-index.css',
+		'style' => 'file:./index.css',
 		'viewScript' => 'file:./view.js'
 	),
 	'pie-chart' => array(
@@ -660,7 +676,7 @@ return array(
 		),
 		'textdomain' => 'lc-block-widgets',
 		'editorScript' => 'file:./index.js',
-		'style' => 'file:./style-index.css',
+		'style' => 'file:./index.css',
 		'viewScript' => 'file:./view.js'
 	),
 	'pricing-table' => array(
@@ -814,7 +830,186 @@ return array(
 		),
 		'textdomain' => 'lc-block-widgets',
 		'editorScript' => 'file:./index.js',
-		'style' => 'file:./style-index.css'
+		'style' => 'file:./index.css'
+	),
+	'progress-bar' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'lc-block-widgets/progress-bar',
+		'version' => '0.1.0',
+		'title' => 'LC Progress Bar',
+		'category' => 'lc-widgets',
+		'icon' => 'performance',
+		'description' => 'A premium animated progress bar widget.',
+		'attributes' => array(
+			'title' => array(
+				'type' => 'string',
+				'default' => 'Web Development'
+			),
+			'percentage' => array(
+				'type' => 'number',
+				'default' => 85
+			),
+			'displayPercentage' => array(
+				'type' => 'boolean',
+				'default' => true
+			),
+			'layoutStyle' => array(
+				'type' => 'string',
+				'default' => 'standard'
+			),
+			'barHeight' => array(
+				'type' => 'number',
+				'default' => 18
+			),
+			'borderRadius' => array(
+				'type' => 'number',
+				'default' => 50
+			),
+			'isStriped' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'isAnimated' => array(
+				'type' => 'boolean',
+				'default' => true
+			),
+			'animationDuration' => array(
+				'type' => 'number',
+				'default' => 1500
+			),
+			'titleColor' => array(
+				'type' => 'string',
+				'default' => '#1e293b'
+			),
+			'percentageColor' => array(
+				'type' => 'string',
+				'default' => '#1e293b'
+			),
+			'barColor' => array(
+				'type' => 'string',
+				'default' => '#4f46e5'
+			),
+			'trackColor' => array(
+				'type' => 'string',
+				'default' => '#f1f5f9'
+			),
+			'innerTextColor' => array(
+				'type' => 'string',
+				'default' => '#ffffff'
+			),
+			'alignment' => array(
+				'type' => 'string',
+				'default' => 'left'
+			)
+		),
+		'supports' => array(
+			'align' => array(
+				'wide',
+				'full'
+			),
+			'html' => false,
+			'typography' => array(
+				'fontSize' => true,
+				'__experimentalFontWeight' => true
+			),
+			'spacing' => array(
+				'margin' => true,
+				'padding' => true
+			)
+		),
+		'textdomain' => 'lc-block-widgets',
+		'editorScript' => 'file:./index.js',
+		'viewScript' => 'file:./view.js',
+		'style' => 'file:./index.css'
+	),
+	'social-icons' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'lc-block-widgets/social-icons',
+		'version' => '0.1.0',
+		'title' => 'LC Social Icons',
+		'category' => 'lc-widgets',
+		'icon' => 'share',
+		'description' => 'A premium social icons block with Elementor-like controls.',
+		'attributes' => array(
+			'items' => array(
+				'type' => 'array',
+				'default' => array(
+					array(
+						'id' => '1',
+						'network' => 'facebook',
+						'icon' => 'fab fa-facebook-f',
+						'link' => '#',
+						'color' => '#1877F2'
+					),
+					array(
+						'id' => '2',
+						'network' => 'twitter',
+						'icon' => 'fab fa-twitter',
+						'link' => '#',
+						'color' => '#1DA1F2'
+					),
+					array(
+						'id' => '3',
+						'network' => 'youtube',
+						'icon' => 'fab fa-youtube',
+						'link' => '#',
+						'color' => '#FF0000'
+					)
+				)
+			),
+			'shape' => array(
+				'type' => 'string',
+				'default' => 'rounded'
+			),
+			'alignment' => array(
+				'type' => 'string',
+				'default' => 'center'
+			),
+			'iconSize' => array(
+				'type' => 'number',
+				'default' => 18
+			),
+			'iconPadding' => array(
+				'type' => 'number',
+				'default' => 10
+			),
+			'iconSpacing' => array(
+				'type' => 'number',
+				'default' => 10
+			),
+			'colorType' => array(
+				'type' => 'string',
+				'default' => 'official'
+			),
+			'customPrimaryColor' => array(
+				'type' => 'string',
+				'default' => '#000000'
+			),
+			'customSecondaryColor' => array(
+				'type' => 'string',
+				'default' => '#ffffff'
+			),
+			'hoverAnimation' => array(
+				'type' => 'string',
+				'default' => 'none'
+			)
+		),
+		'supports' => array(
+			'align' => array(
+				'wide',
+				'full'
+			),
+			'html' => false,
+			'spacing' => array(
+				'margin' => true,
+				'padding' => true
+			)
+		),
+		'textdomain' => 'lc-block-widgets',
+		'editorScript' => 'file:./index.js',
+		'style' => 'file:./index.css'
 	),
 	'tabs' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
@@ -900,7 +1095,7 @@ return array(
 		),
 		'textdomain' => 'lc-block-widgets',
 		'editorScript' => 'file:./index.js',
-		'style' => 'file:./style-index.css',
+		'style' => 'file:./index.css',
 		'viewScript' => 'file:./view.js'
 	)
 );

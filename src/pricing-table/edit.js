@@ -198,7 +198,7 @@ export default function Edit({ attributes, setAttributes }) {
 						checked={boxShadow !== undefined ? boxShadow : true}
 						onChange={(val) => setAttributes({ boxShadow: val })}
 					/>
-					
+
 					<BaseControl label={__('Header Background Color', 'lc-block-widgets')}>
 						<ColorPalette colors={themeColors} value={headerBgColor || '#4f46e5'} onChange={(val) => setAttributes({ headerBgColor: val })} />
 					</BaseControl>
@@ -227,14 +227,14 @@ export default function Edit({ attributes, setAttributes }) {
 			</InspectorControls>
 
 			<div {...blockProps}>
-				<div 
+				<div
 					className={`lc-pricing-table lc-pricing-${layoutStyle || 'style1'} ${isFeatured ? 'is-featured' : ''} ${boxShadow ? 'has-shadow' : ''}`}
 					style={{ ...customStyles, textAlign: alignment || 'center' }}
 				>
 					{isFeatured && (
 						<div className="lc-pricing-badge">{featuredBadge}</div>
 					)}
-					
+
 					<div className="lc-pricing-header">
 						<RichText
 							tagName="h3"

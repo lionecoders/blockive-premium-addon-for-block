@@ -1,0 +1,88 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "lc-block-widgets/social-icons",
+  "version": "0.1.0",
+  "title": "LC Social Icons",
+  "category": "lc-widgets",
+  "icon": "share",
+  "description": "A premium social icons block with Elementor-like controls.",
+  "attributes": {
+    "items": {
+      "type": "array",
+      "default": [
+        {
+          "id": "1",
+          "network": "facebook",
+          "icon": "fab fa-facebook-f",
+          "link": "#",
+          "color": "#1877F2"
+        },
+        {
+          "id": "2",
+          "network": "twitter",
+          "icon": "fab fa-twitter",
+          "link": "#",
+          "color": "#1DA1F2"
+        },
+        {
+          "id": "3",
+          "network": "youtube",
+          "icon": "fab fa-youtube",
+          "link": "#",
+          "color": "#FF0000"
+        }
+      ]
+    },
+    "shape": {
+      "type": "string",
+      "default": "rounded"
+    },
+    "alignment": {
+      "type": "string",
+      "default": "center"
+    },
+    "iconSize": {
+      "type": "number",
+      "default": 18
+    },
+    "iconPadding": {
+      "type": "number",
+      "default": 10
+    },
+    "iconSpacing": {
+      "type": "number",
+      "default": 10
+    },
+    "colorType": {
+      "type": "string",
+      "default": "official"
+    },
+    "customPrimaryColor": {
+      "type": "string",
+      "default": "#000000"
+    },
+    "customSecondaryColor": {
+      "type": "string",
+      "default": "#ffffff"
+    },
+    "hoverAnimation": {
+      "type": "string",
+      "default": "none"
+    }
+  },
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ],
+    "html": false,
+    "spacing": {
+      "margin": true,
+      "padding": true
+    }
+  },
+  "textdomain": "lc-block-widgets",
+  "editorScript": "file:./index.js",
+  "style": "file:./index.css"
+}

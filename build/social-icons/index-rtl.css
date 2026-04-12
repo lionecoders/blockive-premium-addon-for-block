@@ -1,0 +1,72 @@
+/*!**************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/social-icons/style-index.css ***!
+  \**************************************************************************************************************************************************************************************/
+/* Social Icons Container Wrapper */
+.wp-block-lc-block-widgets-social-icons {
+	display: flex;
+}
+.lc-social-icons-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+}
+/* Alignments */
+.lc-social-icons-wrapper.lc-align-center {
+	justify-content: center;
+}
+.lc-social-icons-wrapper.lc-align-right {
+	justify-content: flex-end;
+}
+.lc-social-icons-wrapper.lc-align-left {
+	justify-content: flex-start;
+}
+/* Individual Icon Link Container */
+.lc-social-icon-item {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none !important;
+	transition: all 0.3s ease;
+	line-height: 1;
+	box-sizing: border-box; /* Ensure padding doesn't compound on top of width/height */
+}
+/* Shapes */
+.lc-social-shape-square .lc-social-icon-item {
+	border-radius: 0;
+}
+.lc-social-shape-rounded .lc-social-icon-item {
+	border-radius: 6px;
+}
+.lc-social-shape-circle .lc-social-icon-item {
+	border-radius: 50%;
+}
+/* Hover Animations */
+.lc-social-hover-grow .lc-social-icon-item:hover {
+	transform: scale(1.15);
+}
+.lc-social-hover-shrink .lc-social-icon-item:hover {
+	transform: scale(0.85);
+}
+.lc-social-hover-pulse .lc-social-icon-item:hover {
+	animation: lc-social-pulse 1s linear infinite;
+}
+@keyframes lc-social-pulse {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.1);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+/* Ensure the `i` inside takes the color properly */
+.lc-social-icon-item i {
+	color: inherit;
+	transition: inherit;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+

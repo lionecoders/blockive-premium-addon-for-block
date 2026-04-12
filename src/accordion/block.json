@@ -11,8 +11,16 @@
 		"items": {
 			"type": "array",
 			"default": [
-				{ "id": "1", "title": "Accordion Item #1", "content": "Click edit button to change this text. Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
-				{ "id": "2", "title": "Accordion Item #2", "content": "Click edit button to change this text. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo." }
+				{
+					"id": "1",
+					"title": "Accordion Item 1",
+					"content": "Click edit button to change this text. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+				},
+				{
+					"id": "2",
+					"title": "Accordion Item 2",
+					"content": "Click edit button to change this text. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
+				}
 			]
 		},
 		"icon": {
@@ -65,7 +73,10 @@
 		}
 	},
 	"supports": {
-		"align": ["wide", "full"],
+		"align": [
+			"wide",
+			"full"
+		],
 		"html": false,
 		"typography": {
 			"fontSize": true,
@@ -95,6 +106,6 @@
 	},
 	"textdomain": "lc-block-widgets",
 	"editorScript": "file:./index.js",
-	"style": "file:./style-index.css",
+	"style": "file:./index.css",
 	"viewScript": "file:./view.js"
 }

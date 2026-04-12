@@ -193,11 +193,11 @@ export default function Edit({ attributes, setAttributes }) {
 					let iconElement = null;
 					if (icon !== 'none') {
 						if (icon === 'plus-minus') {
-							iconElement = <span className="lc-accordion-icon">{isActive ? '-' : '+'}</span>;
+							iconElement = <span className="lc-accordion-icon"><i className={isActive ? 'fas fa-minus' : 'fas fa-plus'}></i></span>;
 						} else if (icon === 'chevron') {
-							iconElement = <span className="lc-accordion-icon">{isActive ? '▲' : '▼'}</span>;
+							iconElement = <span className="lc-accordion-icon"><i className={isActive ? 'fas fa-chevron-up' : 'fas fa-chevron-down'}></i></span>;
 						} else if (icon === 'angle') {
-							iconElement = <span className="lc-accordion-icon">{isActive ? '∧' : '∨'}</span>;
+							iconElement = <span className="lc-accordion-icon"><i className={isActive ? 'fas fa-angle-up' : 'fas fa-angle-down'}></i></span>;
 						}
 					}
 
