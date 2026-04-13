@@ -13,40 +13,75 @@
  * @package CreateBlock
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
+if (!defined('ABSPATH')) {
 	exit; // Exit if accessed directly.
 }
 
-define('LCBW_PATH', plugin_dir_path( __FILE__ ) );
-define('LCBW_URL', plugin_dir_url( __FILE__ ) );
-define('LCBW_VERSION', '1.0.0' );
+define('LCBW_PATH', plugin_dir_path(__FILE__));
+define('LCBW_URL', plugin_dir_url(__FILE__));
+define('LCBW_VERSION', '1.0.0');
+
 /**
- * Registers the block(s) metadata from the `blocks-manifest.php` and registers the block type(s)
- * based on the registered block metadata. Behind the scenes, it registers also all assets so they can be enqueued
- * through the block editor in the corresponding context.
- *
- * @see https://make.wordpress.org/core/2025/03/13/more-efficient-block-type-registration-in-6-8/
- * @see https://make.wordpress.org/core/2024/10/17/new-block-type-registration-apis-to-improve-performance-in-wordpress-6-7/
+ * Main Class for LC Block Widgets
  */
-function create_block_lc_block_widgets_categories( $categories ) {
-	return array_merge(
-		array(
-			array(
-				'slug'  => 'lc-widgets',
-				'title' => esc_html__( 'LC Widgets', 'lc-block-widgets' ),
-			),
-		),
-		$categories
-	);
-}
-add_filter( 'block_categories_all', 'create_block_lc_block_widgets_categories', 10, 2 );
+class LC_Block_Widgets
+{
 
-function create_block_lc_block_widgets_block_init() {
-	wp_register_block_types_from_metadata_collection( __DIR__ . '/build', __DIR__ . '/build/blocks-manifest.php' );
-}
-add_action( 'init', 'create_block_lc_block_widgets_block_init' );
+	/**
+	 * Constructor.
+	 */
+	public function __construct()
+	{
+		$this->lcbw_setup_hooks();
+	}
 
-function create_block_lc_block_widgets_enqueue_assets() {
-	wp_enqueue_style( 'lc-font-awesome', LCBW_URL . 'assets/css/lc-block-webfonts.css', [], LCBW_VERSION );
+	/**
+	 * Setup WordPress hooks.
+	 */
+	public function lcbw_setup_hooks()
+	{
+		add_filter('block_categories_all', [$this, 'lcbw_register_block_categories'], 10, 2);
+		add_action('init', [$this, 'lcbw_register_blocks']);
+		add_action('enqueue_block_assets', [$this, 'lcbw_enqueue_global_assets']);
+	}
+
+	/**
+	 * Registers the block categories.
+	 *
+	 * @param array $categories Array of categories for blocks.
+	 * @return array
+	 */
+	public function lcbw_register_block_categories($categories)
+	{
+		return array_merge(
+			[
+				[
+					'slug' => 'lc-widgets',
+					'title' => esc_html__('LC Widgets', 'lc-block-widgets'),
+				],
+			],
+			$categories
+		);
+	}
+
+	/**
+	 * Registers the blocks based on the manifest.
+	 */
+	public function lcbw_register_blocks()
+	{
+		if (function_exists('wp_register_block_types_from_metadata_collection')) {
+			wp_register_block_types_from_metadata_collection(__DIR__ . '/build', __DIR__ . '/build/blocks-manifest.php');
+		}
+	}
+
+	/**
+	 * Enqueue global assets for blocks.
+	 */
+	public function lcbw_enqueue_global_assets()
+	{
+		wp_enqueue_style('lc-font-awesome', LCBW_URL . 'assets/css/lc-block-webfonts.css', [], LCBW_VERSION);
+	}
 }
-add_action( 'enqueue_block_assets', 'create_block_lc_block_widgets_enqueue_assets' );
+
+// Initialize the plugin class.
+new LC_Block_Widgets();
