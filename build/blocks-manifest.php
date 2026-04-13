@@ -562,27 +562,6 @@ return array(
 		'editorScript' => 'file:./index.js',
 		'style' => 'file:./index.css'
 	),
-	'lc-block-widgets' => array(
-		'$schema' => 'https://schemas.wp.org/trunk/block.json',
-		'apiVersion' => 3,
-		'name' => 'create-block/lc-block-widgets',
-		'version' => '0.1.0',
-		'title' => 'Lc Block Widgets',
-		'category' => 'lc-widgets',
-		'icon' => 'smiley',
-		'description' => 'Example block scaffolded with Create Block tool.',
-		'example' => array(
-			
-		),
-		'supports' => array(
-			'html' => false
-		),
-		'textdomain' => 'lc-block-widgets',
-		'editorScript' => 'file:./index.js',
-		'editorStyle' => 'file:./index.css',
-		'style' => 'file:./index.css',
-		'viewScript' => 'file:./view.js'
-	),
 	'pie-chart' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,

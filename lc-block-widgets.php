@@ -1,11 +1,11 @@
 <?php
 /**
  * Plugin Name:       Lc Block Widgets
- * Description:       Example block scaffolded with Create Block tool.
+ * Description:       Essential collection of premium Gutenberg blocks for WordPress.
  * Version:           0.1.0
  * Requires at least: 6.8
  * Requires PHP:      7.4
- * Author:            The WordPress Contributors
+ * Author:            Lionecoders
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       lc-block-widgets
@@ -16,6 +16,10 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
+
+define('LCBW_PATH', plugin_dir_path( __FILE__ ) );
+define('LCBW_URL', plugin_dir_url( __FILE__ ) );
+define('LCBW_VERSION', '1.0.0' );
 /**
  * Registers the block(s) metadata from the `blocks-manifest.php` and registers the block type(s)
  * based on the registered block metadata. Behind the scenes, it registers also all assets so they can be enqueued
@@ -43,6 +47,6 @@ function create_block_lc_block_widgets_block_init() {
 add_action( 'init', 'create_block_lc_block_widgets_block_init' );
 
 function create_block_lc_block_widgets_enqueue_assets() {
-	wp_enqueue_style( 'lc-font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css', array(), '6.4.0' );
+	wp_enqueue_style( 'lc-font-awesome', LCBW_URL . 'assets/css/lc-block-webfonts.css', [], LCBW_VERSION );
 }
 add_action( 'enqueue_block_assets', 'create_block_lc_block_widgets_enqueue_assets' );
