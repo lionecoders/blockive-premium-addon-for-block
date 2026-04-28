@@ -1,6 +1,6 @@
 /* LC Tabs Block Styles */
 
-.lc-tabs-wrapper {
+.lcibwc-tabs-wrapper {
 	background: transparent;
 	display: flex;
 	flex-direction: column;
@@ -8,26 +8,26 @@
 }
 
 /* The Segmented Control Track */
-.lc-tabs-nav-track {
+.lcibwc-tabs-nav-track {
 	display: flex;
 	align-items: center;
-	background: var(--lc-tab-bg, #f1f5f9);
-	border-radius: var(--lc-tab-radius, 12px);
+	background: var(--lcibwc-tab-bg, #f1f5f9);
+	border-radius: var(--lcibwc-tab-radius, 12px);
 	padding: 6px;
 	gap: 4px;
 	position: relative;
     box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.02);
 }
 
-.lc-tab-pill {
+.lcibwc-tab-pill {
 	flex: 1;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	padding: 12px 16px;
-	border-radius: calc(var(--lc-tab-radius, 12px) - 4px);
+	border-radius: calc(var(--lcibwc-tab-radius, 12px) - 4px);
 	cursor: pointer;
-	color: var(--lc-tab-text, #64748b);
+	color: var(--lcibwc-tab-text, #64748b);
 	font-weight: 600;
 	font-size: 1rem;
 	transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
@@ -36,32 +36,32 @@
     text-align: center;
 }
 
-.lc-tab-pill:hover {
-	color: var(--lc-tab-active-text, #0f172a);
+.lcibwc-tab-pill:hover {
+	color: var(--lcibwc-tab-active-text, #0f172a);
 }
 
-.lc-tab-pill.active {
-	background: var(--lc-tab-active-bg, #ffffff);
-	color: var(--lc-tab-active-text, #0f172a);
+.lcibwc-tab-pill.active {
+	background: var(--lcibwc-tab-active-bg, #ffffff);
+	color: var(--lcibwc-tab-active-text, #0f172a);
 	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 2px 8px rgba(0, 0, 0, 0.02);
 }
 
-.lc-tab-title {
+.lcibwc-tab-title {
 	margin: 0;
     pointer-events: auto;
 }
 
 /* Content Area */
-.lc-tabs-content-area {
-	background: var(--lc-tab-content-bg, #ffffff);
-    color: var(--lc-tab-content-text, #334155);
-	border-radius: var(--lc-tab-radius, 12px);
+.lcibwc-tabs-content-area {
+	background: var(--lcibwc-tab-content-bg, #ffffff);
+    color: var(--lcibwc-tab-content-text, #334155);
+	border-radius: var(--lcibwc-tab-radius, 12px);
     overflow: hidden;
     position: relative;
     border: 1px solid #e2e8f0;
 }
 
-.lc-tab-pane {
+.lcibwc-tab-pane {
 	display: none;
     padding: 32px;
     background: transparent;
@@ -69,17 +69,17 @@
     font-size: 1.05rem;
 }
 
-.lc-tab-pane.active {
+.lcibwc-tab-pane.active {
 	display: block;
 	animation: lcTabFadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-.lc-tab-content-text p {
+.lcibwc-tab-content-text p {
     margin-top: 0;
     margin-bottom: 1.25em;
 }
 
-.lc-tab-content-text p:last-child {
+.lcibwc-tab-content-text p:last-child {
     margin-bottom: 0;
 }
 

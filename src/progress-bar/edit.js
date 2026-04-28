@@ -47,12 +47,12 @@ export default function Edit({ attributes, setAttributes }) {
 	} = attributes;
 
 	const customStyles = {
-		'--lc-pb-height': `${barHeight !== undefined ? barHeight : 18}px`,
-		'--lc-pb-radius': `${borderRadius !== undefined ? borderRadius : 50}px`,
-		'--lc-pb-title-color': titleColor || '#1e293b',
-		'--lc-pb-percent-color': percentageColor || '#1e293b',
-		'--lc-pb-track-bg': trackColor || '#f1f5f9',
-		'--lc-pb-inner-text': innerTextColor || '#ffffff',
+		'--lcibwc-pb-height': `${barHeight !== undefined ? barHeight : 18}px`,
+		'--lcibwc-pb-radius': `${borderRadius !== undefined ? borderRadius : 50}px`,
+		'--lcibwc-pb-title-color': titleColor || '#1e293b',
+		'--lcibwc-pb-percent-color': percentageColor || '#1e293b',
+		'--lcibwc-pb-track-bg': trackColor || '#f1f5f9',
+		'--lcibwc-pb-inner-text': innerTextColor || '#ffffff',
 	};
 
 	let barBgStyle = {};
@@ -74,24 +74,24 @@ export default function Edit({ attributes, setAttributes }) {
 			</BlockControls>
 
 			<InspectorControls>
-				<PanelBody title={__('Content Settings', 'lc-block-widgets')} initialOpen={true}>
+				<PanelBody title={__('Content Settings', 'lc-immeasurable-block-widgets-collection')} initialOpen={true}>
 					<RangeControl
-						label={__('Percentage (%)', 'lc-block-widgets')}
+						label={__('Percentage (%)', 'lc-immeasurable-block-widgets-collection')}
 						value={percentage}
 						onChange={(val) => setAttributes({ percentage: val })}
 						min={0}
 						max={100}
 					/>
 					<ToggleControl
-						label={__('Display Percentage Label?', 'lc-block-widgets')}
+						label={__('Display Percentage Label?', 'lc-immeasurable-block-widgets-collectionblock-widgets-collection')}
 						checked={displayPercentage}
 						onChange={(val) => setAttributes({ displayPercentage: val })}
 					/>
 				</PanelBody>
 
-				<PanelBody title={__('Design Options', 'lc-block-widgets')} initialOpen={false}>
+				<PanelBody title={__('Design Options', 'lc-immeasurable-block-widgets-collection')} initialOpen={false}>
 					<SelectControl
-						label={__('Layout Style', 'lc-block-widgets')}
+						label={__('Layout Style', 'lc-immeasurable-block-widgets-collection')}
 						value={layoutStyle}
 						options={[
 							{ label: 'Standard (Top Info)', value: 'standard' },
@@ -100,60 +100,60 @@ export default function Edit({ attributes, setAttributes }) {
 						onChange={(val) => setAttributes({ layoutStyle: val })}
 					/>
 					<RangeControl
-						label={__('Bar Height (px)', 'lc-block-widgets')}
+						label={__('Bar Height (px)', 'lc-immeasurable-block-widgets-collection')}
 						value={barHeight}
 						onChange={(val) => setAttributes({ barHeight: val })}
 						min={5}
 						max={100}
 					/>
 					<RangeControl
-						label={__('Border Radius (px)', 'lc-block-widgets')}
+						label={__('Border Radius (px)', 'lc-immeasurable-block-widgets-collection')}
 						value={borderRadius}
 						onChange={(val) => setAttributes({ borderRadius: val })}
 						min={0}
 						max={50}
 					/>
 					<ToggleControl
-						label={__('Striped Bar?', 'lc-block-widgets')}
+						label={__('Striped Bar?', 'lc-immeasurable-block-widgets-collection')}
 						checked={isStriped}
 						onChange={(val) => setAttributes({ isStriped: val })}
 					/>
 					{isStriped && (
 						<ToggleControl
-							label={__('Animate Stripes? (Scrolling)', 'lc-block-widgets')}
+							label={__('Animate Stripes? (Scrolling)', 'lc-immeasurable-block-widgets-collection')}
 							checked={isAnimated}
 							onChange={(val) => setAttributes({ isAnimated: val })}
 						/>
 					)}
 					<RangeControl
-						label={__('Entrance Animation Speed (ms)', 'lc-block-widgets')}
+						label={__('Entrance Animation Speed (ms)', 'lc-immeasurable-block-widgets-collection')}
 						value={animationDuration}
 						onChange={(val) => setAttributes({ animationDuration: val })}
 						min={500}
 						max={5000}
 						step={100}
-						help={__('Controls how long the bar takes to fill up.', 'lc-block-widgets')}
+						help={__('Controls how long the bar takes to fill up.', 'lc-immeasurable-block-widgets-collection')}
 					/>
 				</PanelBody>
 			</InspectorControls>
 
 			<InspectorControls group="styles">
-				<PanelBody title={__('Colors', 'lc-block-widgets')} initialOpen={true}>
-					<BaseControl label={__('Bar Progress Color', 'lc-block-widgets')}>
+				<PanelBody title={__('Colors', 'lc-immeasurable-block-widgets-collection')} initialOpen={true}>
+					<BaseControl label={__('Bar Progress Color', 'lc-immeasurable-block-widgets-collection')}>
 						<ColorPalette colors={themeColors} value={barColor || '#4f46e5'} onChange={(val) => setAttributes({ barColor: val })} />
 					</BaseControl>
-					<BaseControl label={__('Track Background', 'lc-block-widgets')}>
+					<BaseControl label={__('Track Background', 'lc-immeasurable-block-widgets-collection')}>
 						<ColorPalette colors={themeColors} value={trackColor || '#f1f5f9'} onChange={(val) => setAttributes({ trackColor: val })} />
 					</BaseControl>
-					<BaseControl label={__('Title Color', 'lc-block-widgets')}>
+					<BaseControl label={__('Title Color', 'lc-immeasurable-block-widgets-collection')}>
 						<ColorPalette colors={themeColors} value={titleColor || '#1e293b'} onChange={(val) => setAttributes({ titleColor: val })} />
 					</BaseControl>
-					<BaseControl label={__('Percentage Color', 'lc-block-widgets')}>
+					<BaseControl label={__('Percentage Color', 'lc-immeasurable-block-widgets-collection')}>
 						<ColorPalette colors={themeColors} value={percentageColor || '#1e293b'} onChange={(val) => setAttributes({ percentageColor: val })} />
 					</BaseControl>
 					
 					{layoutStyle === 'inside' && (
-						<BaseControl label={__('Inner Text Color', 'lc-block-widgets')}>
+						<BaseControl label={__('Inner Text Color', 'lc-immeasurable-block-widgets-collection')}>
 							<ColorPalette colors={themeColors} value={innerTextColor || '#ffffff'} onChange={(val) => setAttributes({ innerTextColor: val })} />
 						</BaseControl>
 					)}
@@ -162,43 +162,43 @@ export default function Edit({ attributes, setAttributes }) {
 
 			<div {...blockProps}>
 				<div 
-					className={`lc-progress-bar-wrapper lc-pb-style-${layoutStyle || 'standard'}`}
+					className={`lcibwc-progress-bar-wrapper lcibwc-pb-style-${layoutStyle || 'standard'}`}
 					style={{ ...customStyles, textAlign: alignment || 'left' }}
 				>
 					{layoutStyle === 'standard' && (
-						<div className="lc-pb-header">
+						<div className="lcibwc-pb-header">
 							<RichText
 								tagName="span"
-								className="lc-pb-title"
+								className="lcibwc-pb-title"
 								value={title}
 								onChange={(val) => setAttributes({ title: val })}
-								placeholder={__('Skill or Metric', 'lc-block-widgets')}
+								placeholder={__('Skill or Metric', 'lc-immeasurable-block-widgets-collection')}
 							/>
 							{displayPercentage && (
-								<span className="lc-pb-percentage">{percentage}%</span>
+								<span className="lcibwc-pb-percentage">{percentage}%</span>
 							)}
 						</div>
 					)}
 
-					<div className="lc-pb-track">
+					<div className="lcibwc-pb-track">
 						<div 
-							className={`lc-pb-fill ${isStriped ? 'lc-pb-striped' : ''} ${isStriped && isAnimated ? 'lc-pb-striped-animated' : ''}`}
+							className={`lcibwc-pb-fill ${isStriped ? 'lcibwc-pb-striped' : ''} ${isStriped && isAnimated ? 'lcibwc-pb-striped-animated' : ''}`}
 							style={{ 
 								width: `${percentage}%`,
 								...barBgStyle
 							}}
 						>
 							{layoutStyle === 'inside' && (
-								<div className="lc-pb-inner-content">
+								<div className="lcibwc-pb-inner-content">
 									<RichText
 										tagName="span"
-										className="lc-pb-inner-title"
+										className="lcibwc-pb-inner-title"
 										value={title}
 										onChange={(val) => setAttributes({ title: val })}
-										placeholder={__('Label', 'lc-block-widgets')}
+										placeholder={__('Label', 'lc-immeasurable-block-widgets-collection')}
 									/>
 									{displayPercentage && (
-										<span className="lc-pb-inner-percent">{percentage}%</span>
+										<span className="lcibwc-pb-inner-percent">{percentage}%</span>
 									)}
 								</div>
 							)}

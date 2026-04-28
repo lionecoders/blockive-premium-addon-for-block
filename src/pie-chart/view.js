@@ -1,16 +1,16 @@
 import Chart from 'chart.js/auto';
 
 document.addEventListener('DOMContentLoaded', () => {
-    const canvases = document.querySelectorAll('.lc-chart-js-canvas');
-    
+    const canvases = document.querySelectorAll('.lcibwc-chart-js-canvas');
+
     canvases.forEach(canvas => {
         const configStr = canvas.getAttribute('data-chart-config');
         if (!configStr) return;
-        
+
         try {
             const attr = JSON.parse(configStr);
             const { chartData, legendPosition, cutout, borderWidth, borderColor, animationSpeed } = attr;
-            
+
             if (!chartData || chartData.length === 0) return;
 
             const data = {
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 }
             };
-            
+
             new Chart(canvas, config);
         } catch (e) {
             console.error('Failed to parse LC Pie Chart config:', e);

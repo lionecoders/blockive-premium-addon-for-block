@@ -4,10 +4,10 @@ return array(
 	'accordion' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
-		'name' => 'lc-block-widgets/accordion',
+		'name' => 'lc-immeasurable-block-widgets-collection/accordion',
 		'version' => '0.1.0',
 		'title' => 'LC Accordion',
-		'category' => 'lc-widgets',
+		'category' => 'lcibwc-widgets',
 		'icon' => 'list-view',
 		'description' => 'Accordion block with advanced Elementor/Divi style settings.',
 		'attributes' => array(
@@ -98,7 +98,7 @@ return array(
 				)
 			)
 		),
-		'textdomain' => 'lc-block-widgets',
+		'textdomain' => 'lc-immeasurable-block-widgets-collection',
 		'editorScript' => 'file:./index.js',
 		'style' => 'file:./index.css',
 		'viewScript' => 'file:./view.js'
@@ -106,10 +106,10 @@ return array(
 	'countdown-timer' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
-		'name' => 'lc-block-widgets/countdown-timer',
+		'name' => 'lc-immeasurable-block-widgets-collection/countdown-timer',
 		'version' => '0.1.0',
 		'title' => 'LC Countdown Timer',
-		'category' => 'lc-widgets',
+		'category' => 'lcibwc-widgetsgets',
 		'icon' => 'clock',
 		'description' => 'A customizable countdown timer block with rich styling settings.',
 		'attributes' => array(
@@ -221,7 +221,7 @@ return array(
 				)
 			)
 		),
-		'textdomain' => 'lc-block-widgets',
+		'textdomain' => 'lc-immeasurable-block-widgets-collection',
 		'editorScript' => 'file:./index.js',
 		'style' => 'file:./index.css',
 		'viewScript' => 'file:./view.js'
@@ -229,10 +229,10 @@ return array(
 	'drop-caps' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
-		'name' => 'lc-block-widgets/drop-caps',
+		'name' => 'lc-immeasurable-block-widgets-collectionblock-widgets-collection/drop-caps',
 		'version' => '0.1.0',
 		'title' => 'LC Drop Caps',
-		'category' => 'lc-widgets',
+		'category' => 'lcibwc-widgetsgets',
 		'icon' => 'editor-textcolor',
 		'description' => 'Advanced drop caps block with customizable view, shape, and styling.',
 		'attributes' => array(
@@ -315,17 +315,17 @@ return array(
 				)
 			)
 		),
-		'textdomain' => 'lc-block-widgets',
+		'textdomain' => 'lc-immeasurable-block-widgets-collection',
 		'editorScript' => 'file:./index.js',
 		'style' => 'file:./index.css'
 	),
 	'faq' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
-		'name' => 'lc-block-widgets/faq',
+		'name' => 'lc-immeasurable-block-widgets-collectionblock-widgets-collection/faq',
 		'version' => '0.1.0',
 		'title' => 'LC FAQ',
-		'category' => 'lc-widgets',
+		'category' => 'lcibwc-widgets',
 		'icon' => 'editor-help',
 		'description' => 'FAQ block with rich schema.org markup for SEO, based on accordion behavior.',
 		'attributes' => array(
@@ -436,7 +436,7 @@ return array(
 				)
 			)
 		),
-		'textdomain' => 'lc-block-widgets',
+		'textdomain' => 'lc-immeasurable-block-widgets-collection',
 		'editorScript' => 'file:./index.js',
 		'style' => 'file:./index.css',
 		'viewScript' => 'file:./view.js'
@@ -444,10 +444,10 @@ return array(
 	'heading' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
-		'name' => 'lc-block-widgets/heading',
+		'name' => 'lc-immeasurable-block-widgets-collection/heading',
 		'version' => '0.1.0',
 		'title' => 'LC Heading',
-		'category' => 'lc-widgets',
+		'category' => 'lcibwc-widgets',
 		'icon' => 'heading',
 		'description' => 'Advanced heading block with Elementor and Divi like settings.',
 		'attributes' => array(
@@ -558,17 +558,17 @@ return array(
 				)
 			)
 		),
-		'textdomain' => 'lc-block-widgets',
+		'textdomain' => 'lc-immeasurable-block-widgets-collection',
 		'editorScript' => 'file:./index.js',
 		'style' => 'file:./index.css'
 	),
 	'pie-chart' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
-		'name' => 'lc-block-widgets/pie-chart',
+		'name' => 'lc-immeasurable-block-widgets-collection/pie-chart',
 		'version' => '0.1.0',
 		'title' => 'LC Pie Chart',
-		'category' => 'lc-widgets',
+		'category' => 'lcibwc-widgets',
 		'icon' => 'chart-pie',
 		'description' => 'A dynamic pie and donut chart block using Chart.js.',
 		'attributes' => array(
@@ -635,7 +635,7 @@ return array(
 				)
 			)
 		),
-		'textdomain' => 'lc-block-widgets',
+		'textdomain' => 'lc-immeasurable-block-widgets-collection',
 		'editorScript' => 'file:./index.js',
 		'style' => 'file:./index.css',
 		'viewScript' => 'file:./view.js'
@@ -643,10 +643,10 @@ return array(
 	'pricing-table' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
-		'name' => 'lc-block-widgets/pricing-table',
+		'name' => 'lc-immeasurable-block-widgets-collectionblock-widgets-collection/pricing-table',
 		'version' => '0.1.0',
 		'title' => 'LC Pricing Table',
-		'category' => 'lc-widgets',
+		'category' => 'lcibwc-widgets',
 		'icon' => 'money-alt',
 		'description' => 'A fully customizable pricing table block with features list and button.',
 		'attributes' => array(
@@ -789,17 +789,17 @@ return array(
 				)
 			)
 		),
-		'textdomain' => 'lc-block-widgets',
+		'textdomain' => 'lc-immeasurable-block-widgets-collection',
 		'editorScript' => 'file:./index.js',
 		'style' => 'file:./index.css'
 	),
 	'progress-bar' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
-		'name' => 'lc-block-widgets/progress-bar',
+		'name' => 'lc-immeasurable-block-widgets-collection/progress-bar',
 		'version' => '0.1.0',
 		'title' => 'LC Progress Bar',
-		'category' => 'lc-widgets',
+		'category' => 'lcibwc-widgets',
 		'icon' => 'performance',
 		'description' => 'A premium animated progress bar widget.',
 		'attributes' => array(
@@ -879,7 +879,7 @@ return array(
 				'padding' => true
 			)
 		),
-		'textdomain' => 'lc-block-widgets',
+		'textdomain' => 'lc-immeasurable-block-widgets-collection',
 		'editorScript' => 'file:./index.js',
 		'viewScript' => 'file:./view.js',
 		'style' => 'file:./index.css'
@@ -887,10 +887,10 @@ return array(
 	'social-icons' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
-		'name' => 'lc-block-widgets/social-icons',
+		'name' => 'lc-immeasurable-block-widgets-collection/social-icons',
 		'version' => '0.1.0',
 		'title' => 'LC Social Icons',
-		'category' => 'lc-widgets',
+		'category' => 'lcibwc-widgets',
 		'icon' => 'share',
 		'description' => 'A premium social icons block with Elementor-like controls.',
 		'attributes' => array(
@@ -968,17 +968,17 @@ return array(
 				'padding' => true
 			)
 		),
-		'textdomain' => 'lc-block-widgets',
+		'textdomain' => 'lc-immeasurable-block-widgets-collection',
 		'editorScript' => 'file:./index.js',
 		'style' => 'file:./index.css'
 	),
 	'tabs' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
-		'name' => 'lc-block-widgets/tabs',
+		'name' => 'lc-immeasurable-block-widgets-collection/tabs',
 		'version' => '0.1.0',
 		'title' => 'LC Tabs',
-		'category' => 'lc-widgets',
+		'category' => 'lcibwc-widgets',
 		'icon' => 'index-card',
 		'description' => 'A modern Tab block with premium segmented control styling.',
 		'attributes' => array(
@@ -1054,7 +1054,7 @@ return array(
 				)
 			)
 		),
-		'textdomain' => 'lc-block-widgets',
+		'textdomain' => 'lc-immeasurable-block-widgets-collection',
 		'editorScript' => 'file:./index.js',
 		'style' => 'file:./index.css',
 		'viewScript' => 'file:./view.js'

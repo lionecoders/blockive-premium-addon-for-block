@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name:       Lc Block Widgets
+ * Plugin Name:       Lc immeasurable Block Widgets collection
  * Description:       Essential collection of premium Gutenberg blocks for WordPress.
  * Version:           1.0.0
  * Requires at least: 6.8
@@ -8,7 +8,7 @@
  * Author:            Lionecoders
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain:       lc-block-widgets
+ * Text Domain:       lc-immeasurable-block-widgets-collection
  *
  * @package CreateBlock
  */
@@ -17,9 +17,9 @@ if (!defined('ABSPATH')) {
 	exit; // Exit if accessed directly.
 }
 
-define('LCBW_PATH', plugin_dir_path(__FILE__));
-define('LCBW_URL', plugin_dir_url(__FILE__));
-define('LCBW_VERSION', '1.0.0');
+define('LCIBWC_PATH', plugin_dir_path(__FILE__));
+define('LCIBWC_URL', plugin_dir_url(__FILE__));
+define('LCIBWC_VERSION', '1.0.0');
 
 /**
  * Main Class for LC Block Widgets
@@ -32,17 +32,17 @@ class LC_Block_Widgets
 	 */
 	public function __construct()
 	{
-		$this->lcbw_setup_hooks();
+		$this->lcibwc_setup_hooks();
 	}
 
 	/**
 	 * Setup WordPress hooks.
 	 */
-	public function lcbw_setup_hooks()
+	public function lcibwc_setup_hooks()
 	{
-		add_filter('block_categories_all', [$this, 'lcbw_register_block_categories'], 10, 2);
-		add_action('init', [$this, 'lcbw_register_blocks']);
-		add_action('enqueue_block_assets', [$this, 'lcbw_enqueue_global_assets']);
+		add_filter('block_categories_all', [$this, 'lcibwc_register_block_categories'], 10, 2);
+		add_action('init', [$this, 'lcibwc_register_blocks']);
+		add_action('enqueue_block_assets', [$this, 'lcibwc_enqueue_global_assets']);
 	}
 
 	/**
@@ -51,13 +51,13 @@ class LC_Block_Widgets
 	 * @param array $categories Array of categories for blocks.
 	 * @return array
 	 */
-	public function lcbw_register_block_categories($categories)
+	public function lcibwc_register_block_categories($categories)
 	{
 		return array_merge(
 			[
 				[
-					'slug' => 'lc-widgets',
-					'title' => esc_html__('LC Widgets', 'lc-block-widgets'),
+					'slug' => 'lcibwc-widgets',
+					'title' => esc_html__('LC Widgets', 'lc-immeasurable-block-widgets-collection'),
 				],
 			],
 			$categories
@@ -67,7 +67,7 @@ class LC_Block_Widgets
 	/**
 	 * Registers the blocks based on the manifest.
 	 */
-	public function lcbw_register_blocks()
+	public function lcibwc_register_blocks()
 	{
 		if (function_exists('wp_register_block_types_from_metadata_collection')) {
 			wp_register_block_types_from_metadata_collection(__DIR__ . '/build', __DIR__ . '/build/blocks-manifest.php');
@@ -77,9 +77,9 @@ class LC_Block_Widgets
 	/**
 	 * Enqueue global assets for blocks.
 	 */
-	public function lcbw_enqueue_global_assets()
+	public function lcibwc_enqueue_global_assets()
 	{
-		wp_enqueue_style('lc-font-awesome', LCBW_URL . 'assets/css/lc-block-webfonts.css', [], LCBW_VERSION);
+		wp_enqueue_style('lcibwc-font-awesome', LCIBWC_URL . 'assets/css/lc-block-webfonts.css', [], LCIBWC_VERSION);
 	}
 }
 

@@ -37,7 +37,7 @@ export default function save({ attributes }) {
 	}
 
 	const blockProps = useBlockProps.save({
-		className: animationType !== 'none' ? `lc-animate-${animationType}` : '',
+		className: animationType !== 'none' ? `lcibwc-animate-${animationType}` : '',
 		style: customStyles,
 	});
 

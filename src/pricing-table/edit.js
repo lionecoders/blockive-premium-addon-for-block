@@ -56,16 +56,16 @@ export default function Edit({ attributes, setAttributes }) {
 	} = attributes;
 
 	const customStyles = {
-		'--lc-pt-header-bg': headerBgColor || '#4f46e5',
-		'--lc-pt-header-text': headerTextColor || '#ffffff',
-		'--lc-pt-price-color': priceColor || '#0f172a',
-		'--lc-pt-feature-text': featureTextColor || '#475569',
-		'--lc-pt-button-bg': buttonBgColor || '#4f46e5',
-		'--lc-pt-button-text': buttonTextColor || '#ffffff',
-		'--lc-pt-box-bg': boxBgColor || '#ffffff',
-		'--lc-pt-borderColor': borderColor || '#f1f5f9',
-		'--lc-pt-borderWidth': `${borderWidth !== undefined ? borderWidth : 1}px`,
-		'--lc-pt-borderRadius': `${borderRadius !== undefined ? borderRadius : 16}px`,
+		'--lcibwc-pt-header-bg': headerBgColor || '#4f46e5',
+		'--lcibwc-pt-header-text': headerTextColor || '#ffffff',
+		'--lcibwc-pt-price-color': priceColor || '#0f172a',
+		'--lcibwc-pt-feature-text': featureTextColor || '#475569',
+		'--lcibwc-pt-button-bg': buttonBgColor || '#4f46e5',
+		'--lcibwc-pt-button-text': buttonTextColor || '#ffffff',
+		'--lcibwc-pt-box-bg': boxBgColor || '#ffffff',
+		'--lcibwc-pt-borderColor': borderColor || '#f1f5f9',
+		'--lcibwc-pt-borderWidth': `${borderWidth !== undefined ? borderWidth : 1}px`,
+		'--lcibwc-pt-borderRadius': `${borderRadius !== undefined ? borderRadius : 16}px`,
 	};
 
 	const blockProps = useBlockProps({
@@ -102,62 +102,62 @@ export default function Edit({ attributes, setAttributes }) {
 			</BlockControls>
 
 			<InspectorControls>
-				<PanelBody title={__('Header & Price', 'lc-block-widgets')} initialOpen={true}>
+				<PanelBody title={__('Header & Price', 'lc-immeasurable-block-widgets-collection')} initialOpen={true}>
 					<ToggleControl
-						label={__('Highlight as Featured?', 'lc-block-widgets')}
+						label={__('Highlight as Featured?', 'lc-immeasurable-block-widgets-collection')}
 						checked={isFeatured}
 						onChange={(val) => setAttributes({ isFeatured: val })}
 					/>
 					{isFeatured && (
 						<TextControl
-							label={__('Featured Badge Text', 'lc-block-widgets')}
+							label={__('Featured Badge Text', 'lc-immeasurable-block-widgets-collection')}
 							value={featuredBadge}
 							onChange={(val) => setAttributes({ featuredBadge: val })}
 						/>
 					)}
 					<TextControl
-						label={__('Currency Symbol', 'lc-block-widgets')}
+						label={__('Currency Symbol', 'lc-immeasurable-block-widgets-collection')}
 						value={currency}
 						onChange={(val) => setAttributes({ currency: val })}
 					/>
 					<TextControl
-						label={__('Period Prefix/Suffix', 'lc-block-widgets')}
+						label={__('Period Prefix/Suffix', 'lc-immeasurable-block-widgets-collection')}
 						value={period}
 						onChange={(val) => setAttributes({ period: val })}
 					/>
 				</PanelBody>
 
-				<PanelBody title={__('Features List', 'lc-block-widgets')} initialOpen={false}>
+				<PanelBody title={__('Features List', 'lc-immeasurable-block-widgets-collection')} initialOpen={false}>
 					{features && features.map((feature, index) => (
 						<div key={feature.id} style={{ marginBottom: '15px', padding: '10px', border: '1px solid #e2e8f0', borderRadius: '4px' }}>
 							<TextControl
-								label={__('Feature Text', 'lc-block-widgets')}
+								label={__('Feature Text', 'lc-immeasurable-block-widgets-collection')}
 								value={feature.text}
 								onChange={(val) => updateFeature(index, 'text', val)}
 							/>
 							<ToggleControl
-								label={__('Is Active?', 'lc-block-widgets')}
+								label={__('Is Active?', 'lc-immeasurable-block-widgets-collection')}
 								checked={feature.active}
 								onChange={(val) => updateFeature(index, 'active', val)}
 							/>
 							<TextControl
-								label={__('FontAwesome Class', 'lc-block-widgets')}
+								label={__('FontAwesome Class', 'lc-immeasurable-block-widgets-collection')}
 								value={feature.icon || (feature.active ? 'fas fa-check' : 'fas fa-times')}
 								onChange={(val) => updateFeature(index, 'icon', val)}
 							/>
 							<Button isDestructive onClick={() => removeFeature(index)}>
-								{__('Remove', 'lc-block-widgets')}
+								{__('Remove', 'lc-immeasurable-block-widgets-collection')}
 							</Button>
 						</div>
 					))}
 					<Button isPrimary onClick={addFeature}>
-						{__('Add Feature', 'lc-block-widgets')}
+						{__('Add Feature', 'lc-immeasurable-block-widgets-collectionblock-widgets-collection')}
 					</Button>
 				</PanelBody>
 
-				<PanelBody title={__('Button Settings', 'lc-block-widgets')} initialOpen={false}>
+				<PanelBody title={__('Button Settings', 'lc-immeasurable-block-widgets-collection')} initialOpen={false}>
 					<TextControl
-						label={__('Button URL', 'lc-block-widgets')}
+						label={__('Button URL', 'lc-immeasurable-block-widgets-collection')}
 						value={buttonUrl}
 						onChange={(val) => setAttributes({ buttonUrl: val })}
 					/>
@@ -165,9 +165,9 @@ export default function Edit({ attributes, setAttributes }) {
 			</InspectorControls>
 
 			<InspectorControls group="styles">
-				<PanelBody title={__('Layout Style', 'lc-block-widgets')} initialOpen={true}>
+				<PanelBody title={__('Layout Style', 'lc-immeasurable-block-widgets-collection')} initialOpen={true}>
 					<SelectControl
-						label={__('Design Preset', 'lc-block-widgets')}
+						label={__('Design Preset', 'lc-immeasurable-block-widgets-collection')}
 						value={layoutStyle}
 						options={[
 							{ label: 'Style 1: Standard Card', value: 'style1' },
@@ -178,49 +178,49 @@ export default function Edit({ attributes, setAttributes }) {
 					/>
 				</PanelBody>
 
-				<PanelBody title={__('Style Settings', 'lc-block-widgets')} initialOpen={false}>
+				<PanelBody title={__('Style Settings', 'lc-immeasurable-block-widgets-collection')} initialOpen={false}>
 					<RangeControl
-						label={__('Border Width (px)', 'lc-block-widgets')}
+						label={__('Border Width (px)', 'lc-immeasurable-block-widgets-collection')}
 						value={borderWidth !== undefined ? borderWidth : 1}
 						onChange={(val) => setAttributes({ borderWidth: val })}
 						min={0}
 						max={10}
 					/>
 					<RangeControl
-						label={__('Border Radius (px)', 'lc-block-widgets')}
+						label={__('Border Radius (px)', 'lc-immeasurable-block-widgets-collection')}
 						value={borderRadius !== undefined ? borderRadius : 16}
 						onChange={(val) => setAttributes({ borderRadius: val })}
 						min={0}
 						max={50}
 					/>
 					<ToggleControl
-						label={__('Enable Box Shadow', 'lc-block-widgets')}
+						label={__('Enable Box Shadow', 'lc-immeasurable-block-widgets-collection')}
 						checked={boxShadow !== undefined ? boxShadow : true}
 						onChange={(val) => setAttributes({ boxShadow: val })}
 					/>
 
-					<BaseControl label={__('Header Background Color', 'lc-block-widgets')}>
+					<BaseControl label={__('Header Background Color', 'lc-immeasurable-block-widgets-collection')}>
 						<ColorPalette colors={themeColors} value={headerBgColor || '#4f46e5'} onChange={(val) => setAttributes({ headerBgColor: val })} />
 					</BaseControl>
-					<BaseControl label={__('Header Text Color', 'lc-block-widgets')}>
+					<BaseControl label={__('Header Text Color', 'lc-immeasurable-block-widgets-collection')}>
 						<ColorPalette colors={themeColors} value={headerTextColor || '#ffffff'} onChange={(val) => setAttributes({ headerTextColor: val })} />
 					</BaseControl>
-					<BaseControl label={__('Table Background Color', 'lc-block-widgets')}>
+					<BaseControl label={__('Table Background Color', 'lc-immeasurable-block-widgets-collection')}>
 						<ColorPalette colors={themeColors} value={boxBgColor || '#ffffff'} onChange={(val) => setAttributes({ boxBgColor: val })} />
 					</BaseControl>
-					<BaseControl label={__('Price Color', 'lc-block-widgets')}>
+					<BaseControl label={__('Price Color', 'lc-immeasurable-block-widgets-collection')}>
 						<ColorPalette colors={themeColors} value={priceColor || '#0f172a'} onChange={(val) => setAttributes({ priceColor: val })} />
 					</BaseControl>
-					<BaseControl label={__('Feature Text Color', 'lc-block-widgets')}>
+					<BaseControl label={__('Feature Text Color', 'lc-immeasurable-block-widgets-collection')}>
 						<ColorPalette colors={themeColors} value={featureTextColor || '#475569'} onChange={(val) => setAttributes({ featureTextColor: val })} />
 					</BaseControl>
-					<BaseControl label={__('Border Color', 'lc-block-widgets')}>
+					<BaseControl label={__('Border Color', 'lc-immeasurable-block-widgets-collection')}>
 						<ColorPalette colors={themeColors} value={borderColor || '#f1f5f9'} onChange={(val) => setAttributes({ borderColor: val })} />
 					</BaseControl>
-					<BaseControl label={__('Button Background Color', 'lc-block-widgets')}>
+					<BaseControl label={__('Button Background Color', 'lc-immeasurable-block-widgets-collection')}>
 						<ColorPalette colors={themeColors} value={buttonBgColor || '#4f46e5'} onChange={(val) => setAttributes({ buttonBgColor: val })} />
 					</BaseControl>
-					<BaseControl label={__('Button Text Color', 'lc-block-widgets')}>
+					<BaseControl label={__('Button Text Color', 'lc-immeasurable-block-widgets-collection')}>
 						<ColorPalette colors={themeColors} value={buttonTextColor || '#ffffff'} onChange={(val) => setAttributes({ buttonTextColor: val })} />
 					</BaseControl>
 				</PanelBody>
@@ -228,43 +228,43 @@ export default function Edit({ attributes, setAttributes }) {
 
 			<div {...blockProps}>
 				<div
-					className={`lc-pricing-table lc-pricing-${layoutStyle || 'style1'} ${isFeatured ? 'is-featured' : ''} ${boxShadow ? 'has-shadow' : ''}`}
+					className={`lcibwc-pricing-table lcibwc-pricing-${layoutStyle || 'style1'} ${isFeatured ? 'is-featured' : ''} ${boxShadow ? 'has-shadow' : ''}`}
 					style={{ ...customStyles, textAlign: alignment || 'center' }}
 				>
 					{isFeatured && (
-						<div className="lc-pricing-badge">{featuredBadge}</div>
+						<div className="lcibwc-pricing-badge">{featuredBadge}</div>
 					)}
 
-					<div className="lc-pricing-header">
+					<div className="lcibwc-pricing-header">
 						<RichText
 							tagName="h3"
-							className="lc-pricing-title"
+							className="lcibwc-pricing-title"
 							value={title}
 							onChange={(val) => setAttributes({ title: val })}
-							placeholder={__('Plan Title', 'lc-block-widgets')}
+							placeholder={__('Plan Title', 'lc-immeasurable-block-widgets-collection')}
 						/>
 						<RichText
 							tagName="p"
-							className="lc-pricing-subtitle"
+							className="lcibwc-pricing-subtitle"
 							value={subtitle}
 							onChange={(val) => setAttributes({ subtitle: val })}
-							placeholder={__('Plan description...', 'lc-block-widgets')}
+							placeholder={__('Plan description...', 'lc-immeasurable-block-widgets-collection')}
 						/>
 					</div>
 
-					<div className="lc-pricing-price-area">
-						<span className="lc-pricing-currency">{currency}</span>
+					<div className="lcibwc-pricing-price-area">
+						<span className="lcibwc-pricing-currency">{currency}</span>
 						<RichText
 							tagName="span"
-							className="lc-pricing-amount"
+							className="lcibwc-pricing-amount"
 							value={price}
 							onChange={(val) => setAttributes({ price: val })}
 							placeholder="99"
 						/>
-						<span className="lc-pricing-period">{period}</span>
+						<span className="lcibwc-pricing-period">{period}</span>
 					</div>
 
-					<ul className="lc-pricing-features">
+					<ul className="lcibwc-pricing-features">
 						{features && features.map((feature) => (
 							<li key={feature.id} className={feature.active ? 'active' : 'inactive'}>
 								<i className={feature.icon || (feature.active ? 'fas fa-check' : 'fas fa-times')}></i>
@@ -273,13 +273,13 @@ export default function Edit({ attributes, setAttributes }) {
 						))}
 					</ul>
 
-					<div className="lc-pricing-footer">
+					<div className="lcibwc-pricing-footer">
 						<RichText
 							tagName="a"
-							className="lc-pricing-button"
+							className="lcibwc-pricing-button"
 							value={buttonText}
 							onChange={(val) => setAttributes({ buttonText: val })}
-							placeholder={__('Button Text', 'lc-block-widgets')}
+							placeholder={__('Button Text', 'lc-immeasurable-block-widgets-collection')}
 							onClick={(e) => e.preventDefault()}
 						/>
 					</div>

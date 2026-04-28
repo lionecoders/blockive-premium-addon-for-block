@@ -1,37 +1,37 @@
-.wp-block-lc-block-widgets-countdown-timer {
+.wp-block-lc-immeasurable-block-widgets-collectionblock-widgets-collection-countdown-timer {
 	display: flex;
 }
 
-.wp-block-lc-block-widgets-countdown-timer.alignleft {
+.wp-block-lc-immeasurable-block-widgets-collection-countdown-timer.alignleft {
     justify-content: flex-start;
 }
-.wp-block-lc-block-widgets-countdown-timer.aligncenter {
+.wp-block-lc-immeasurable-block-widgets-collection-countdown-timer.aligncenter {
     justify-content: center;
 }
-.wp-block-lc-block-widgets-countdown-timer.alignright {
+.wp-block-lc-immeasurable-block-widgets-collection-countdown-timer.alignright {
     justify-content: flex-end;
 }
 
-.lc-countdown-wrapper {
+.lcibwc-countdown-wrapper {
 	display: flex;
 	flex-wrap: wrap;
-    gap: var(--lc-cd-gap, 20px);
+    gap: var(--lcibwc-cd-gap, 20px);
 }
 
-.lc-countdown-item {
+.lcibwc-countdown-item {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: var(--lc-cd-box-bg, transparent);
-    border: var(--lc-cd-borderWidth, 0px) solid var(--lc-cd-borderColor, transparent);
-    border-radius: var(--lc-cd-borderRadius, 0px);
+    background-color: var(--lcibwc-cd-box-bg, transparent);
+    border: var(--lcibwc-cd-borderWidth, 0px) solid var(--lcibwc-cd-borderColor, transparent);
+    border-radius: var(--lcibwc-cd-borderRadius, 0px);
     padding: 20px;
     min-width: 90px;
     transition: all 0.3s ease;
 }
 
-.lc-countdown-style-inline .lc-countdown-item {
+.lcibwc-countdown-style-inline .lcibwc-countdown-item {
     background-color: transparent !important;
     border: none !important;
     padding: 0 10px !important;
@@ -40,34 +40,34 @@
     align-items: baseline;
     gap: 8px;
 }
-.lc-countdown-style-inline .lc-countdown-number {
+.lcibwc-countdown-style-inline .lcibwc-countdown-number {
     margin-bottom: 0;
 }
 
-.lc-countdown-number {
+.lcibwc-countdown-number {
     font-size: 2.5em;
     font-weight: 700;
     line-height: 1;
-    color: var(--lc-cd-number-color, inherit);
+    color: var(--lcibwc-cd-number-color, inherit);
     margin-bottom: 5px;
 }
 
-.lc-countdown-label {
+.lcibwc-countdown-label {
     font-size: 0.85em;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: var(--lc-cd-label-color, inherit);
+    color: var(--lcibwc-cd-label-color, inherit);
 }
 
 /* Animations */
-.lc-animate-none { animation: none; }
-.lc-animate-fadeIn { animation-name: fadeIn; }
-.lc-animate-fadeInUp { animation-name: fadeInUp; }
-.lc-animate-fadeInDown { animation-name: fadeInDown; }
-.lc-animate-zoomIn { animation-name: zoomIn; }
-.lc-animate-slideInLeft { animation-name: slideInLeft; }
-.lc-animate-slideInRight { animation-name: slideInRight; }
+.lcibwc-animate-none { animation: none; }
+.lcibwc-animate-fadeIn { animation-name: fadeIn; }
+.lcibwc-animate-fadeInUp { animation-name: fadeInUp; }
+.lcibwc-animate-fadeInDown { animation-name: fadeInDown; }
+.lcibwc-animate-zoomIn { animation-name: zoomIn; }
+.lcibwc-animate-slideInLeft { animation-name: slideInLeft; }
+.lcibwc-animate-slideInRight { animation-name: slideInRight; }
 
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 @keyframes fadeInUp { from { opacity: 0; transform: translate3d(0, 40px, 0); } to { opacity: 1; transform: translate3d(0, 0, 0); } }

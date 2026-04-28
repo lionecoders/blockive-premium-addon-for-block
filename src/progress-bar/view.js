@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
 					}
 
 					// Mark as initialized and stop observing
-					wrapper.classList.add('lc-pb-initialized');
+					wrapper.classList.add('lcibwc-pb-initialized');
 					observerInstance.unobserve(wrapper);
 				}
 			});

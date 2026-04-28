@@ -53,7 +53,7 @@ export default function Edit({ attributes, setAttributes }) {
 	}
 
 	const blockProps = useBlockProps({
-		className: animationType !== 'none' ? `lc-animate-${animationType}` : '',
+		className: animationType !== 'none' ? `lcibwc-animate-${animationType}` : '',
 		style: customStyles,
 	});
 
@@ -69,9 +69,9 @@ export default function Edit({ attributes, setAttributes }) {
 			</BlockControls>
 
 			<InspectorControls>
-				<PanelBody title={__('Settings', 'lc-block-widgets')} initialOpen={true}>
+				<PanelBody title={__('Settings', 'lc-immeasurable-block-widgets-collectionblock-widgets-collection')} initialOpen={true}>
 					<SelectControl
-						label={__('HTML Tag', 'lc-block-widgets')}
+						label={__('HTML Tag', 'lc-immeasurable-block-widgets-collection')}
 						value={level}
 						options={[
 							{ label: 'H1', value: 1 },
@@ -84,13 +84,13 @@ export default function Edit({ attributes, setAttributes }) {
 						onChange={(newLevel) => setAttributes({ level: parseInt(newLevel) })}
 					/>
 					<TextControl
-						label={__('Link', 'lc-block-widgets')}
+						label={__('Link', 'lc-immeasurable-block-widgets-collection')}
 						value={link}
 						onChange={(val) => setAttributes({ link: val })}
 					/>
 					{link && (
 						<ToggleControl
-							label={__('Open in new tab', 'lc-block-widgets')}
+							label={__('Open in new tab', 'lc-immeasurable-block-widgets-collection')}
 							checked={linkTarget === '_blank'}
 							onChange={(val) => setAttributes({ linkTarget: val ? '_blank' : '_self' })}
 						/>
@@ -99,9 +99,9 @@ export default function Edit({ attributes, setAttributes }) {
 			</InspectorControls>
 
 			<InspectorControls group="styles">
-				<PanelBody title={__('Motion Effects', 'lc-block-widgets')} initialOpen={false}>
+				<PanelBody title={__('Motion Effects', 'lc-immeasurable-block-widgets-collection')} initialOpen={false}>
 					<SelectControl
-						label={__('Entrance Animation', 'lc-block-widgets')}
+						label={__('Entrance Animation', 'lc-immeasurable-block-widgets-collection')}
 						value={animationType}
 						options={[
 							{ label: 'None', value: 'none' },
@@ -117,12 +117,12 @@ export default function Edit({ attributes, setAttributes }) {
 					{animationType !== 'none' && (
 						<>
 							<TextControl
-								label={__('Animation Duration (e.g., 1s, 500ms)', 'lc-block-widgets')}
+								label={__('Animation Duration (e.g., 1s, 500ms)', 'lc-immeasurable-block-widgets-collection')}
 								value={animationDuration}
 								onChange={(val) => setAttributes({ animationDuration: val })}
 							/>
 							<TextControl
-								label={__('Animation Delay (e.g., 0s, 200ms)', 'lc-block-widgets')}
+								label={__('Animation Delay (e.g., 0s, 200ms)', 'lc-immeasurable-block-widgets-collection')}
 								value={animationDelay}
 								onChange={(val) => setAttributes({ animationDelay: val })}
 							/>
@@ -130,9 +130,9 @@ export default function Edit({ attributes, setAttributes }) {
 					)}
 				</PanelBody>
 
-				<PanelBody title={__('Advanced Effects', 'lc-block-widgets')} initialOpen={false}>
+				<PanelBody title={__('Advanced Effects', 'lc-immeasurable-block-widgets-collection')} initialOpen={false}>
 					<SelectControl
-						label={__('Blend Mode', 'lc-block-widgets')}
+						label={__('Blend Mode', 'lc-immeasurable-block-widgets-collection')}
 						value={blendMode}
 						options={[
 							{ label: 'Normal', value: 'normal' },
@@ -153,7 +153,7 @@ export default function Edit({ attributes, setAttributes }) {
 						onChange={(val) => setAttributes({ blendMode: val })}
 					/>
 
-					<BaseControl label={__('Text Shadow Color', 'lc-block-widgets')}>
+					<BaseControl label={__('Text Shadow Color', 'lc-immeasurable-block-widgets-collection')}>
 						<ColorPalette
 							value={textShadowColor}
 							onChange={(val) => setAttributes({ textShadowColor: val })}
@@ -161,35 +161,35 @@ export default function Edit({ attributes, setAttributes }) {
 					</BaseControl>
 
 					<RangeControl
-						label={__('Text Shadow Blur', 'lc-block-widgets')}
+						label={__('Text Shadow Blur', 'lc-immeasurable-block-widgets-collection')}
 						value={textShadowBlur}
 						onChange={(val) => setAttributes({ textShadowBlur: val })}
 						min={0}
 						max={100}
 					/>
 					<RangeControl
-						label={__('Text Shadow X', 'lc-block-widgets')}
+						label={__('Text Shadow X', 'lc-immeasurable-block-widgets-collection')}
 						value={textShadowX}
 						onChange={(val) => setAttributes({ textShadowX: val })}
 						min={-100}
 						max={100}
 					/>
 					<RangeControl
-						label={__('Text Shadow Y', 'lc-block-widgets')}
+						label={__('Text Shadow Y', 'lc-immeasurable-block-widgets-collection')}
 						value={textShadowY}
 						onChange={(val) => setAttributes({ textShadowY: val })}
 						min={-100}
 						max={100}
 					/>
 
-					<BaseControl label={__('Text Stroke Color', 'lc-block-widgets')}>
+					<BaseControl label={__('Text Stroke Color', 'lc-immeasurable-block-widgets-collection')}>
 						<ColorPalette
 							value={textStrokeColor}
 							onChange={(val) => setAttributes({ textStrokeColor: val })}
 						/>
 					</BaseControl>
 					<RangeControl
-						label={__('Text Stroke Width (px)', 'lc-block-widgets')}
+						label={__('Text Stroke Width (px)', 'lc-immeasurable-block-widgets-collection')}
 						value={textStrokeWidth}
 						onChange={(val) => setAttributes({ textStrokeWidth: val })}
 						min={0}
@@ -203,7 +203,7 @@ export default function Edit({ attributes, setAttributes }) {
 				tagName={TagName}
 				value={content}
 				onChange={(val) => setAttributes({ content: val })}
-				placeholder={__('Enter heading...', 'lc-block-widgets')}
+				placeholder={__('Enter heading...', 'lc-immeasurable-block-widgets-collection')}
 				allowedFormats={['core/bold', 'core/italic', 'core/link']}
 			/>
 		</>

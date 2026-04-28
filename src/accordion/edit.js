@@ -35,13 +35,13 @@ export default function Edit({ attributes, setAttributes }) {
 	const [activeIndex, setActiveIndex] = useState(0);
 
 	const customStyles = {
-		'--lc-accordion-bw': `${borderWidth}px`,
-		'--lc-accordion-borderColor': borderColor,
-		'--lc-accordion-title-color': titleColor,
-		'--lc-accordion-title-active-color': titleActiveColor,
-		'--lc-accordion-title-bg': titleBgColor,
-		'--lc-accordion-content-color': contentColor,
-		'--lc-accordion-content-bg': contentBgColor,
+		'--lcibwc-accordion-bw': `${borderWidth}px`,
+		'--lcibwc-accordion-borderColor': borderColor,
+		'--lcibwc-accordion-title-color': titleColor,
+		'--lcibwc-accordion-title-active-color': titleActiveColor,
+		'--lcibwc-accordion-title-bg': titleBgColor,
+		'--lcibwc-accordion-content-color': contentColor,
+		'--lcibwc-accordion-content-bg': contentBgColor,
 	};
 
 	if (animationType !== 'none') {
@@ -50,7 +50,7 @@ export default function Edit({ attributes, setAttributes }) {
 	}
 
 	const blockProps = useBlockProps({
-		className: `lc-accordion-wrapper ${animationType !== 'none' ? `lc-animate-${animationType}` : ''}`,
+		className: `lcibwc-accordion-wrapper ${animationType !== 'none' ? `lcibwc-animate-${animationType}` : ''}`,
 		style: customStyles,
 	});
 
@@ -83,27 +83,27 @@ export default function Edit({ attributes, setAttributes }) {
 	return (
 		<>
 			<InspectorControls>
-				<PanelBody title={__('Accordion Items', 'lc-block-widgets')} initialOpen={true}>
+				<PanelBody title={__('Accordion Items', 'lc-immeasurable-block-widgets-collection')} initialOpen={true}>
 					{items.map((item, index) => (
 						<div key={item.id} style={{ marginBottom: '15px', border: '1px solid #ddd', padding: '10px' }}>
 							<TextControl
-								label={__('Title', 'lc-block-widgets')}
+								label={__('Title', 'lc-immeasurable-block-widgets-collection')}
 								value={item.title}
 								onChange={(val) => updateItem(index, 'title', val)}
 							/>
 							<Button isDestructive onClick={() => removeItem(index)}>
-								{__('Remove Item', 'lc-block-widgets')}
+								{__('Remove Item', 'lc-immeasurable-block-widgets-collection')}
 							</Button>
 						</div>
 					))}
 					<Button isPrimary onClick={addItem}>
-						{__('Add Item', 'lc-block-widgets')}
+						{__('Add Item', 'lc-immeasurable-block-widgets-collection')}
 					</Button>
 				</PanelBody>
 
-				<PanelBody title={__('Settings', 'lc-block-widgets')} initialOpen={false}>
+				<PanelBody title={__('Settings', 'lc-immeasurable-block-widgets-collection')} initialOpen={false}>
 					<SelectControl
-						label={__('Icon', 'lc-block-widgets')}
+						label={__('Icon', 'lc-immeasurable-block-widgets-collection')}
 						value={icon}
 						options={[
 							{ label: 'Plus / Minus', value: 'plus-minus' },
@@ -114,7 +114,7 @@ export default function Edit({ attributes, setAttributes }) {
 						onChange={(val) => setAttributes({ icon: val })}
 					/>
 					<SelectControl
-						label={__('Icon Alignment', 'lc-block-widgets')}
+						label={__('Icon Alignment', 'lc-immeasurable-block-widgets-collection')}
 						value={iconAlign}
 						options={[
 							{ label: 'Left', value: 'left' },
@@ -126,9 +126,9 @@ export default function Edit({ attributes, setAttributes }) {
 			</InspectorControls>
 
 			<InspectorControls group="styles">
-				<PanelBody title={__('Motion Effects', 'lc-block-widgets')} initialOpen={false}>
+				<PanelBody title={__('Motion Effects', 'lc-immeasurable-block-widgets-collection')} initialOpen={false}>
 					<SelectControl
-						label={__('Entrance Animation', 'lc-block-widgets')}
+						label={__('Entrance Animation', 'lc-immeasurable-block-widgets-collection')}
 						value={animationType}
 						options={[
 							{ label: 'None', value: 'none' },
@@ -144,12 +144,12 @@ export default function Edit({ attributes, setAttributes }) {
 					{animationType !== 'none' && (
 						<>
 							<TextControl
-								label={__('Animation Duration', 'lc-block-widgets')}
+								label={__('Animation Duration', 'lc-immeasurable-block-widgets-collection')}
 								value={animationDuration}
 								onChange={(val) => setAttributes({ animationDuration: val })}
 							/>
 							<TextControl
-								label={__('Animation Delay', 'lc-block-widgets')}
+								label={__('Animation Delay', 'lc-immeasurable-block-widgets-collection')}
 								value={animationDelay}
 								onChange={(val) => setAttributes({ animationDelay: val })}
 							/>
@@ -157,30 +157,30 @@ export default function Edit({ attributes, setAttributes }) {
 					)}
 				</PanelBody>
 
-				<PanelBody title={__('Colors & Borders', 'lc-block-widgets')} initialOpen={false}>
+				<PanelBody title={__('Colors & Borders', 'lc-immeasurable-block-widgets-collection')} initialOpen={false}>
 					<RangeControl
-						label={__('Border Width (px)', 'lc-block-widgets')}
+						label={__('Border Width (px)', 'lc-immeasurable-block-widgets-collection')}
 						value={borderWidth}
 						onChange={(val) => setAttributes({ borderWidth: val })}
 						min={0}
 						max={10}
 					/>
-					<BaseControl label={__('Border Color', 'lc-block-widgets')}>
+					<BaseControl label={__('Border Color', 'lc-immeasurable-block-widgets-collection')}>
 						<ColorPalette value={borderColor} onChange={(val) => setAttributes({ borderColor: val })} />
 					</BaseControl>
-					<BaseControl label={__('Title Color', 'lc-block-widgets')}>
+					<BaseControl label={__('Title Color', 'lc-immeasurable-block-widgets-collection')}>
 						<ColorPalette value={titleColor} onChange={(val) => setAttributes({ titleColor: val })} />
 					</BaseControl>
-					<BaseControl label={__('Title Active Color', 'lc-block-widgets')}>
+					<BaseControl label={__('Title Active Color', 'lc-immeasurable-block-widgets-collection')}>
 						<ColorPalette value={titleActiveColor} onChange={(val) => setAttributes({ titleActiveColor: val })} />
 					</BaseControl>
-					<BaseControl label={__('Title Background', 'lc-block-widgets')}>
+					<BaseControl label={__('Title Background', 'lc-immeasurable-block-widgets-collection')}>
 						<ColorPalette value={titleBgColor} onChange={(val) => setAttributes({ titleBgColor: val })} />
 					</BaseControl>
-					<BaseControl label={__('Content Color', 'lc-block-widgets')}>
+					<BaseControl label={__('Content Color', 'lc-immeasurable-block-widgets-collection')}>
 						<ColorPalette value={contentColor} onChange={(val) => setAttributes({ contentColor: val })} />
 					</BaseControl>
-					<BaseControl label={__('Content Background', 'lc-block-widgets')}>
+					<BaseControl label={__('Content Background', 'lc-immeasurable-block-widgets-collection')}>
 						<ColorPalette value={contentBgColor} onChange={(val) => setAttributes({ contentBgColor: val })} />
 					</BaseControl>
 				</PanelBody>
@@ -193,37 +193,37 @@ export default function Edit({ attributes, setAttributes }) {
 					let iconElement = null;
 					if (icon !== 'none') {
 						if (icon === 'plus-minus') {
-							iconElement = <span className="lc-accordion-icon"><i className={isActive ? 'fas fa-minus' : 'fas fa-plus'}></i></span>;
+							iconElement = <span className="lcibwc-accordion-icon"><i className={isActive ? 'fas fa-minus' : 'fas fa-plus'}></i></span>;
 						} else if (icon === 'chevron') {
-							iconElement = <span className="lc-accordion-icon"><i className={isActive ? 'fas fa-chevron-up' : 'fas fa-chevron-down'}></i></span>;
+							iconElement = <span className="lcibwc-accordion-icon"><i className={isActive ? 'fas fa-chevron-up' : 'fas fa-chevron-down'}></i></span>;
 						} else if (icon === 'angle') {
-							iconElement = <span className="lc-accordion-icon"><i className={isActive ? 'fas fa-angle-up' : 'fas fa-angle-down'}></i></span>;
+							iconElement = <span className="lcibwc-accordion-icon"><i className={isActive ? 'fas fa-angle-up' : 'fas fa-angle-down'}></i></span>;
 						}
 					}
 
 					return (
-						<div key={item.id} className={`lc-accordion-item ${isActive ? 'active' : ''}`}>
+						<div key={item.id} className={`lcibwc-accordion-item ${isActive ? 'active' : ''}`}>
 							<div 
-								className={`lc-accordion-header flex-align-${iconAlign}`}
+								className={`lcibwc-accordion-header flex-align-${iconAlign}`}
 								onClick={() => setActiveIndex(isActive ? -1 : index)}
 							>
 								{iconAlign === 'left' && iconElement}
 								<RichText
 									tagName="span"
-									className="lc-accordion-title"
+									className="lcibwc-accordion-title"
 									value={item.title}
 									onChange={(val) => updateItem(index, 'title', val)}
-									placeholder={__('Title...', 'lc-block-widgets')}
+									placeholder={__('Title...', 'lc-immeasurable-block-widgets-collection')}
 								/>
 								{iconAlign === 'right' && iconElement}
 							</div>
 							{isActive && (
-								<div className="lc-accordion-content">
+								<div className="lcibwc-accordion-content">
 									<RichText
 										tagName="p"
 										value={item.content}
 										onChange={(val) => updateItem(index, 'content', val)}
-										placeholder={__('Content...', 'lc-block-widgets')}
+										placeholder={__('Content...', 'lc-immeasurable-block-widgets-collection')}
 									/>
 								</div>
 							)}

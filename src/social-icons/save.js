@@ -15,7 +15,7 @@ export default function save({ attributes }) {
 	} = attributes;
 
 	const blockProps = useBlockProps.save({
-		className: `lc-social-icons-wrapper lc-align-${alignment} lc-social-shape-${shape} lc-social-hover-${hoverAnimation}`
+		className: `lcibwc-social-icons-wrapper lcibwc-align-${alignment} lcibwc-social-shape-${shape} lcibwc-social-hover-${hoverAnimation}`
 	});
 
 	return (
@@ -28,7 +28,7 @@ export default function save({ attributes }) {
 					<a 
 						key={item.id} 
 						href={item.link || '#'} 
-						className="lc-social-icon-item" 
+						className="lcibwc-social-icon-item" 
 						target="_blank" 
 						rel="noopener noreferrer"
 						style={{ 

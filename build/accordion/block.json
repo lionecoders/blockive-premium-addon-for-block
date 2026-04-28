@@ -1,10 +1,10 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
-  "name": "lc-block-widgets/accordion",
+  "name": "lc-immeasurable-block-widgets-collection/accordion",
   "version": "0.1.0",
   "title": "LC Accordion",
-  "category": "lc-widgets",
+  "category": "lcibwc-widgets",
   "icon": "list-view",
   "description": "Accordion block with advanced Elementor/Divi style settings.",
   "attributes": {
@@ -95,7 +95,7 @@
       }
     }
   },
-  "textdomain": "lc-block-widgets",
+  "textdomain": "lc-immeasurable-block-widgets-collection",
   "editorScript": "file:./index.js",
   "style": "file:./index.css",
   "viewScript": "file:./view.js"

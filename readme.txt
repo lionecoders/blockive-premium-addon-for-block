@@ -1,5 +1,5 @@
-=== Lc Block Widgets ===
-Contributors:      lionecoders
+=== lc-immeasurable-block-widgets-collection ===
+Contributors:      deep7197
 Tags:              block, blocks, gutenberg, widgets, lc-blocks, addon, elements
 Requires at least: 6.0
 Tested up to:      6.9
@@ -11,7 +11,7 @@ Essential collection of premium Gutenberg blocks for WordPress. Supercharge your
 
 == Description ==
 
-**Lc Block Widgets** is a premium collection of Gutenberg blocks designed to help you create stunning websites without any coding knowledge. Whether you are building a landing page, a portfolio, or a business website, these blocks provide the flexibility and styling options you need to stand out.
+**lc-immeasurable-block-widgets-collection** is a premium collection of Gutenberg blocks designed to help you create stunning websites without any coding knowledge. Whether you are building a landing page, a portfolio, or a business website, these blocks provide the flexibility and styling options you need to stand out.
 
 Built with performance in mind, our blocks are lightweight and load only the necessary assets, ensuring your site remains fast and responsive.
 
@@ -43,7 +43,7 @@ Yes, all blocks are designed to be fully responsive and look great on mobile, ta
 Absolutely! Each block comes with extensive styling options in the sidebar, allowing you to match your brand's look and feel perfectly.
 
 = Does it work with any theme? =
-Yes, Lc Block Widgets is designed to work seamlessly with any standard WordPress theme that supports the Gutenberg editor.
+Yes, lc-immeasurable-block-widgets-collection is designed to work seamlessly with any standard WordPress theme that supports the Gutenberg editor.
 
 == Screenshots ==
 

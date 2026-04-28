@@ -1,45 +1,45 @@
 /* LC Accordion Block Styles */
 
-.lc-accordion-wrapper {
+.lcibwc-accordion-wrapper {
 	background: transparent;
 	display: flex;
 	flex-direction: column;
 	gap: 16px;
 }
 
-.lc-accordion-item {
+.lcibwc-accordion-item {
 	position: relative;
 	z-index: 1;
-	border: var(--lc-accordion-bw, 1px) solid var(--lc-accordion-borderColor, #e2e8f0);
+	border: var(--lcibwc-accordion-bw, 1px) solid var(--lcibwc-accordion-borderColor, #e2e8f0);
 	border-radius: 12px;
 	overflow: hidden;
-	background: var(--lc-accordion-content-bg, #ffffff);
+	background: var(--lcibwc-accordion-content-bg, #ffffff);
 	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
 	transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 	will-change: transform, box-shadow;
 }
 
-.lc-accordion-item:hover {
+.lcibwc-accordion-item:hover {
 	z-index: 2;
 	border-color: #cbd5e1;
 	box-shadow: 0 12px 20px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
 	transform: translateY(-2px);
 }
 
-.lc-accordion-item.active {
+.lcibwc-accordion-item.active {
 	z-index: 3;
-	border-color: var(--lc-accordion-title-active-color, #4f46e5);
+	border-color: var(--lcibwc-accordion-title-active-color, #4f46e5);
 	box-shadow: 0 12px 20px -5px rgba(79, 70, 229, 0.1), 0 8px 10px -6px rgba(79, 70, 229, 0.05);
-	background-color: var(--lc-accordion-title-bg, #ffffff);
+	background-color: var(--lcibwc-accordion-title-bg, #ffffff);
 }
 
-.lc-accordion-header {
+.lcibwc-accordion-header {
 	display: flex;
 	align-items: center;
 	padding: 20px 24px;
 	cursor: pointer;
-	background-color: var(--lc-accordion-title-bg, #ffffff);
-	color: var(--lc-accordion-title-color, #0f172a);
+	background-color: var(--lcibwc-accordion-title-bg, #ffffff);
+	color: var(--lcibwc-accordion-title-color, #0f172a);
 	font-weight: 600;
 	font-size: 1.15rem;
 	letter-spacing: -0.015em;
@@ -49,14 +49,14 @@
 	user-select: none;
 }
 
-.lc-accordion-item.active .lc-accordion-header {
-	color: var(--lc-accordion-title-active-color, #4f46e5);
+.lcibwc-accordion-item.active .lcibwc-accordion-header {
+	color: var(--lcibwc-accordion-title-active-color, #4f46e5);
 	padding-bottom: 12px;
 	/* Smoother transition to content */
 }
 
 /* Icon Container - Pure CSS approach replacing inline span */
-.lc-accordion-icon {
+.lcibwc-accordion-icon {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
@@ -72,70 +72,70 @@
 	font-weight: bold;
 }
 
-.lc-accordion-item:hover .lc-accordion-icon {
+.lcibwc-accordion-item:hover .lcibwc-accordion-icon {
 	background: #e2e8f0;
 	color: #334155;
 }
 
-.lc-accordion-item.active .lc-accordion-icon {
-	background: var(--lc-accordion-title-active-color, #4f46e5);
+.lcibwc-accordion-item.active .lcibwc-accordion-icon {
+	background: var(--lcibwc-accordion-title-active-color, #4f46e5);
 	color: #ffffff;
 	box-shadow: 0 4px 10px 0 rgba(79, 70, 229, 0.25);
 }
 
 /* CSS-only Icon Toggling to override view.js inline styles */
-.lc-accordion-wrapper .lc-icon-close {
+.lcibwc-accordion-wrapper .lcibwc-icon-close {
 	display: none !important;
 }
 
-.lc-accordion-wrapper .lc-accordion-item.active .lc-icon-open {
+.lcibwc-accordion-wrapper .lcibwc-accordion-item.active .lcibwc-icon-open {
 	display: none !important;
 }
 
-.lc-accordion-wrapper .lc-accordion-item.active .lc-icon-close {
+.lcibwc-accordion-wrapper .lcibwc-accordion-item.active .lcibwc-icon-close {
 	display: inline-flex !important;
 }
 
-.lc-accordion-wrapper .lc-icon-open {
+.lcibwc-accordion-wrapper .lcibwc-icon-open {
 	display: inline-flex !important;
 }
 
 /* Margins for flex aligned layout */
-.lc-accordion-header.flex-align-left .lc-accordion-icon {
+.lcibwc-accordion-header.flex-align-left .lcibwc-accordion-icon {
 	margin-right: 16px;
 }
 
-.lc-accordion-header.flex-align-right .lc-accordion-icon {
+.lcibwc-accordion-header.flex-align-right .lcibwc-accordion-icon {
 	margin-left: 16px;
 }
 
-.lc-accordion-title {
+.lcibwc-accordion-title {
 	flex: 1;
 	margin: 0;
 	font-family: inherit;
 }
 
 /* Content Area */
-.lc-accordion-content {
+.lcibwc-accordion-content {
 	padding: 0 24px 24px;
-	background-color: var(--lc-accordion-content-bg, #ffffff);
-	color: var(--lc-accordion-content-color, #475569);
+	background-color: var(--lcibwc-accordion-content-bg, #ffffff);
+	color: var(--lcibwc-accordion-content-color, #475569);
 	line-height: 1.7;
 	font-size: 1.05rem;
 	display: none;
 	border-top: none;
 }
 
-.lc-accordion-content p {
+.lcibwc-accordion-content p {
 	margin-top: 0;
 	margin-bottom: 1.2em;
 }
 
-.lc-accordion-content p:last-child {
+.lcibwc-accordion-content p:last-child {
 	margin-bottom: 0;
 }
 
-.lc-accordion-item.active .lc-accordion-content {
+.lcibwc-accordion-item.active .lcibwc-accordion-content {
 	display: block !important;
 	/* override inline style if necessary */
 	animation: lcAccordionPremiumFadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
@@ -224,32 +224,32 @@
 	}
 }
 
-.lc-animate-fadeIn {
+.lcibwc-animate-fadeIn {
 	animation-name: lcFadeIn;
 	animation-fill-mode: both;
 }
 
-.lc-animate-fadeInUp {
+.lcibwc-animate-fadeInUp {
 	animation-name: lcFadeInUp;
 	animation-fill-mode: both;
 }
 
-.lc-animate-fadeInDown {
+.lcibwc-animate-fadeInDown {
 	animation-name: lcFadeInDown;
 	animation-fill-mode: both;
 }
 
-.lc-animate-zoomIn {
+.lcibwc-animate-zoomIn {
 	animation-name: lcZoomIn;
 	animation-fill-mode: both;
 }
 
-.lc-animate-slideInLeft {
+.lcibwc-animate-slideInLeft {
 	animation-name: lcSlideInLeft;
 	animation-fill-mode: both;
 }
 
-.lc-animate-slideInRight {
+.lcibwc-animate-slideInRight {
 	animation-name: lcSlideInRight;
 	animation-fill-mode: both;
 }

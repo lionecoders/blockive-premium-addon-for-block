@@ -1,10 +1,10 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
-  "name": "lc-block-widgets/social-icons",
+  "name": "lc-immeasurable-block-widgets-collection/social-icons",
   "version": "0.1.0",
   "title": "LC Social Icons",
-  "category": "lc-widgets",
+  "category": "lcibwc-widgets",
   "icon": "share",
   "description": "A premium social icons block with Elementor-like controls.",
   "attributes": {
@@ -82,7 +82,7 @@
       "padding": true
     }
   },
-  "textdomain": "lc-block-widgets",
+  "textdomain": "lc-immeasurable-block-widgets-collection",
   "editorScript": "file:./index.js",
   "style": "file:./index.css"
 }

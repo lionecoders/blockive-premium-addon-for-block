@@ -42,13 +42,13 @@ export default function Edit({ attributes, setAttributes }) {
 	const [activeIndex, setActiveIndex] = useState(0);
 
 	const customStyles = {
-		'--lc-faq-borderWidth': `${borderWidth}px`,
-		'--lc-faq-borderColor': borderColor,
-		'--lc-faq-title-color': titleColor,
-		'--lc-faq-title-active-color': titleActiveColor,
-		'--lc-faq-title-bg': titleBgColor,
-		'--lc-faq-content-color': contentColor,
-		'--lc-faq-content-bg': contentBgColor,
+		'--lcibwc-faq-borderWidth': `${borderWidth}px`,
+		'--lcibwc-faq-borderColor': borderColor,
+		'--lcibwc-faq-title-color': titleColor,
+		'--lcibwc-faq-title-active-color': titleActiveColor,
+		'--lcibwc-faq-title-bg': titleBgColor,
+		'--lcibwc-faq-content-color': contentColor,
+		'--lcibwc-faq-content-bg': contentBgColor,
 	};
 
 	if (animationType !== 'none') {
@@ -57,7 +57,7 @@ export default function Edit({ attributes, setAttributes }) {
 	}
 
 	const blockProps = useBlockProps({
-		className: `lc-faq-wrapper ${animationType !== 'none' ? `lc-animate-${animationType}` : ''}`,
+		className: `lcibwc-faq-wrapper ${animationType !== 'none' ? `lcibwc-animate-${animationType}` : ''}`,
 		style: customStyles,
 	});
 
@@ -90,27 +90,27 @@ export default function Edit({ attributes, setAttributes }) {
 	return (
 		<>
 			<InspectorControls>
-				<PanelBody title={__('FAQ Items', 'lc-block-widgets')} initialOpen={true}>
+				<PanelBody title={__('FAQ Items', 'lc-immeasurable-block-widgets-collectionblock-widgets-collection')} initialOpen={true}>
 					{items.map((item, index) => (
 						<div key={item.id} style={{ marginBottom: '15px', border: '1px solid #ddd', padding: '10px' }}>
 							<TextControl
-								label={__('Question', 'lc-block-widgets')}
+								label={__('Question', 'lc-immeasurable-block-widgets-collection')}
 								value={item.title}
 								onChange={(val) => updateItem(index, 'title', val)}
 							/>
 							<Button isDestructive onClick={() => removeItem(index)}>
-								{__('Remove Item', 'lc-block-widgets')}
+								{__('Remove Item', 'lc-immeasurable-block-widgets-collection')}
 							</Button>
 						</div>
 					))}
 					<Button isPrimary onClick={addItem}>
-						{__('Add Item', 'lc-block-widgets')}
+						{__('Add Item', 'lc-immeasurable-block-widgets-collection')}
 					</Button>
 				</PanelBody>
 
-				<PanelBody title={__('Main Heading Settings', 'lc-block-widgets')} initialOpen={false}>
+				<PanelBody title={__('Main Heading Settings', 'lc-immeasurable-block-widgets-collection')} initialOpen={false}>
 					<SelectControl
-						label={__('Heading Tag', 'lc-block-widgets')}
+						label={__('Heading Tag', 'lc-immeasurable-block-widgets-collection')}
 						value={headingTag}
 						options={[
 							{ label: 'H2', value: 'h2' },
@@ -122,15 +122,15 @@ export default function Edit({ attributes, setAttributes }) {
 						]}
 						onChange={(val) => setAttributes({ headingTag: val })}
 					/>
-					<BaseControl label={__('Heading Color', 'lc-block-widgets')}>
+					<BaseControl label={__('Heading Color', 'lc-immeasurable-block-widgets-collection')}>
 						<ColorPalette value={headingColor} onChange={(val) => setAttributes({ headingColor: val })} />
 					</BaseControl>
 				</PanelBody>
 
-				<PanelBody title={__('Settings', 'lc-block-widgets')} initialOpen={false}>
-					<p style={{marginBottom: '15px'}}><em>{__('Note: FAQ Schema payload is automatically generated and added to the page.', 'lc-block-widgets')}</em></p>
+				<PanelBody title={__('Settings', 'lc-immeasurable-block-widgets-collection')} initialOpen={false}>
+					<p style={{marginBottom: '15px'}}><em>{__('Note: FAQ Schema payload is automatically generated and added to the page.', 'lc-immeasurable-block-widgets-collection')}</em></p>
 					<SelectControl
-						label={__('Title HTML Tag', 'lc-block-widgets')}
+						label={__('Title HTML Tag', 'lc-immeasurable-block-widgets-collection')}
 						value={titleTag}
 						options={[
 							{ label: 'H2', value: 'h2' },
@@ -145,7 +145,7 @@ export default function Edit({ attributes, setAttributes }) {
 						onChange={(val) => setAttributes({ titleTag: val })}
 					/>
 					<SelectControl
-						label={__('Icon', 'lc-block-widgets')}
+						label={__('Icon', 'lc-immeasurable-block-widgets-collection')}
 						value={icon}
 						options={[
 							{ label: 'Plus / Minus', value: 'plus-minus' },
@@ -156,7 +156,7 @@ export default function Edit({ attributes, setAttributes }) {
 						onChange={(val) => setAttributes({ icon: val })}
 					/>
 					<SelectControl
-						label={__('Icon Alignment', 'lc-block-widgets')}
+						label={__('Icon Alignment', 'lc-immeasurable-block-widgets-collection')}
 						value={iconAlign}
 						options={[
 							{ label: 'Left', value: 'left' },
@@ -168,9 +168,9 @@ export default function Edit({ attributes, setAttributes }) {
 			</InspectorControls>
 
 			<InspectorControls group="styles">
-				<PanelBody title={__('Motion Effects', 'lc-block-widgets')} initialOpen={false}>
+				<PanelBody title={__('Motion Effects', 'lc-immeasurable-block-widgets-collection')} initialOpen={false}>
 					<SelectControl
-						label={__('Entrance Animation', 'lc-block-widgets')}
+						label={__('Entrance Animation', 'lc-immeasurable-block-widgets-collection')}
 						value={animationType}
 						options={[
 							{ label: 'None', value: 'none' },
@@ -186,12 +186,12 @@ export default function Edit({ attributes, setAttributes }) {
 					{animationType !== 'none' && (
 						<>
 							<TextControl
-								label={__('Animation Duration', 'lc-block-widgets')}
+								label={__('Animation Duration', 'lc-immeasurable-block-widgets-collection')}
 								value={animationDuration}
 								onChange={(val) => setAttributes({ animationDuration: val })}
 							/>
 							<TextControl
-								label={__('Animation Delay', 'lc-block-widgets')}
+								label={__('Animation Delay', 'lc-immeasurable-block-widgets-collection')}
 								value={animationDelay}
 								onChange={(val) => setAttributes({ animationDelay: val })}
 							/>
@@ -199,30 +199,30 @@ export default function Edit({ attributes, setAttributes }) {
 					)}
 				</PanelBody>
 
-				<PanelBody title={__('Colors & Borders', 'lc-block-widgets')} initialOpen={false}>
+				<PanelBody title={__('Colors & Borders', 'lc-immeasurable-block-widgets-collection')} initialOpen={false}>
 					<RangeControl
-						label={__('Border Width (px)', 'lc-block-widgets')}
+						label={__('Border Width (px)', 'lc-immeasurable-block-widgets-collection')}
 						value={borderWidth}
 						onChange={(val) => setAttributes({ borderWidth: val })}
 						min={0}
 						max={10}
 					/>
-					<BaseControl label={__('Border Color', 'lc-block-widgets')}>
+					<BaseControl label={__('Border Color', 'lc-immeasurable-block-widgets-collection')}>
 						<ColorPalette value={borderColor} onChange={(val) => setAttributes({ borderColor: val })} />
 					</BaseControl>
-					<BaseControl label={__('Question Color', 'lc-block-widgets')}>
+					<BaseControl label={__('Question Color', 'lc-immeasurable-block-widgets-collection')}>
 						<ColorPalette value={titleColor} onChange={(val) => setAttributes({ titleColor: val })} />
 					</BaseControl>
-					<BaseControl label={__('Question Active Color', 'lc-block-widgets')}>
+					<BaseControl label={__('Question Active Color', 'lc-immeasurable-block-widgets-collection')}>
 						<ColorPalette value={titleActiveColor} onChange={(val) => setAttributes({ titleActiveColor: val })} />
 					</BaseControl>
-					<BaseControl label={__('Question Background', 'lc-block-widgets')}>
+					<BaseControl label={__('Question Background', 'lc-immeasurable-block-widgets-collection')}>
 						<ColorPalette value={titleBgColor} onChange={(val) => setAttributes({ titleBgColor: val })} />
 					</BaseControl>
-					<BaseControl label={__('Answer Color', 'lc-block-widgets')}>
+					<BaseControl label={__('Answer Color', 'lc-immeasurable-block-widgets-collection')}>
 						<ColorPalette value={contentColor} onChange={(val) => setAttributes({ contentColor: val })} />
 					</BaseControl>
-					<BaseControl label={__('Answer Background', 'lc-block-widgets')}>
+					<BaseControl label={__('Answer Background', 'lc-immeasurable-block-widgets-collection')}>
 						<ColorPalette value={contentBgColor} onChange={(val) => setAttributes({ contentBgColor: val })} />
 					</BaseControl>
 				</PanelBody>
@@ -238,11 +238,11 @@ export default function Edit({ attributes, setAttributes }) {
 			<div {...blockProps}>
 				<RichText
 					tagName={headingTag}
-					className="lc-faq-main-heading"
+					className="lcibwc-faq-main-heading"
 					style={{ textAlign: headingAlign, color: headingColor, marginBottom: '20px' }}
 					value={headingText}
 					onChange={(val) => setAttributes({ headingText: val })}
-					placeholder={__('Enter FAQ Heading...', 'lc-block-widgets')}
+					placeholder={__('Enter FAQ Heading...', 'lc-immeasurable-block-widgets-collection')}
 				/>
 				{items.map((item, index) => {
 					const isActive = activeIndex === index;
@@ -250,37 +250,37 @@ export default function Edit({ attributes, setAttributes }) {
 					let iconElement = null;
 					if (icon !== 'none') {
 						if (icon === 'plus-minus') {
-							iconElement = <span className="lc-faq-icon"><i className={isActive ? 'fas fa-minus' : 'fas fa-plus'}></i></span>;
+							iconElement = <span className="lcibwc-faq-icon"><i className={isActive ? 'fas fa-minus' : 'fas fa-plus'}></i></span>;
 						} else if (icon === 'chevron') {
-							iconElement = <span className="lc-faq-icon"><i className={isActive ? 'fas fa-chevron-up' : 'fas fa-chevron-down'}></i></span>;
+							iconElement = <span className="lcibwc-faq-icon"><i className={isActive ? 'fas fa-chevron-up' : 'fas fa-chevron-down'}></i></span>;
 						} else if (icon === 'angle') {
-							iconElement = <span className="lc-faq-icon"><i className={isActive ? 'fas fa-angle-up' : 'fas fa-angle-down'}></i></span>;
+							iconElement = <span className="lcibwc-faq-icon"><i className={isActive ? 'fas fa-angle-up' : 'fas fa-angle-down'}></i></span>;
 						}
 					}
 
 					return (
-						<div key={item.id} className={`lc-faq-item ${isActive ? 'active' : ''}`}>
+						<div key={item.id} className={`lcibwc-faq-item ${isActive ? 'active' : ''}`}>
 							<div 
-								className={`lc-faq-header flex-align-${iconAlign}`}
+								className={`lcibwc-faq-header flex-align-${iconAlign}`}
 								onClick={() => setActiveIndex(isActive ? -1 : index)}
 							>
 								{iconAlign === 'left' && iconElement}
 								<RichText
 									tagName={titleTag}
-									className="lc-faq-title"
+									className="lcibwc-faq-title"
 									value={item.title}
 									onChange={(val) => updateItem(index, 'title', val)}
-									placeholder={__('Question...', 'lc-block-widgets')}
+									placeholder={__('Question...', 'lc-immeasurable-block-widgets-collection')}
 								/>
 								{iconAlign === 'right' && iconElement}
 							</div>
 							{isActive && (
-								<div className="lc-faq-content">
+								<div className="lcibwc-faq-content">
 									<RichText
 										tagName="p"
 										value={item.content}
 										onChange={(val) => updateItem(index, 'content', val)}
-										placeholder={__('Answer...', 'lc-block-widgets')}
+										placeholder={__('Answer...', 'lc-immeasurable-block-widgets-collection')}
 									/>
 								</div>
 							)}

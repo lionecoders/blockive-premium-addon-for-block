@@ -30,32 +30,32 @@
 	to { opacity: 1; transform: translateX(0); }
 }
 
-.lc-animate-fadeIn {
+.lcibwc-animate-fadeIn {
 	animation-name: lcFadeIn;
 	animation-fill-mode: both;
 }
 
-.lc-animate-fadeInUp {
+.lcibwc-animate-fadeInUp {
 	animation-name: lcFadeInUp;
 	animation-fill-mode: both;
 }
 
-.lc-animate-fadeInDown {
+.lcibwc-animate-fadeInDown {
 	animation-name: lcFadeInDown;
 	animation-fill-mode: both;
 }
 
-.lc-animate-zoomIn {
+.lcibwc-animate-zoomIn {
 	animation-name: lcZoomIn;
 	animation-fill-mode: both;
 }
 
-.lc-animate-slideInLeft {
+.lcibwc-animate-slideInLeft {
 	animation-name: lcSlideInLeft;
 	animation-fill-mode: both;
 }
 
-.lc-animate-slideInRight {
+.lcibwc-animate-slideInRight {
 	animation-name: lcSlideInRight;
 	animation-fill-mode: both;
 }

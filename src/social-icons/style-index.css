@@ -1,27 +1,27 @@
 /* Social Icons Container Wrapper */
-.wp-block-lc-block-widgets-social-icons {
+.wp-block-lc-immeasurable-block-widgets-collection-social-icons {
 	display: flex;
 }
 
-.lc-social-icons-wrapper {
+.lcibwc-social-icons-wrapper {
 	display: flex;
 	flex-wrap: wrap;
 	width: 100%;
 }
 
 /* Alignments */
-.lc-social-icons-wrapper.lc-align-center {
+.lcibwc-social-icons-wrapper.lcibwc-align-center {
 	justify-content: center;
 }
-.lc-social-icons-wrapper.lc-align-right {
+.lcibwc-social-icons-wrapper.lcibwc-align-right {
 	justify-content: flex-end;
 }
-.lc-social-icons-wrapper.lc-align-left {
+.lcibwc-social-icons-wrapper.lcibwc-align-left {
 	justify-content: flex-start;
 }
 
 /* Individual Icon Link Container */
-.lc-social-icon-item {
+.lcibwc-social-icon-item {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
@@ -32,24 +32,24 @@
 }
 
 /* Shapes */
-.lc-social-shape-square .lc-social-icon-item {
+.lcibwc-social-shape-square .lcibwc-social-icon-item {
 	border-radius: 0;
 }
-.lc-social-shape-rounded .lc-social-icon-item {
+.lcibwc-social-shape-rounded .lcibwc-social-icon-item {
 	border-radius: 6px;
 }
-.lc-social-shape-circle .lc-social-icon-item {
+.lcibwc-social-shape-circle .lcibwc-social-icon-item {
 	border-radius: 50%;
 }
 
 /* Hover Animations */
-.lc-social-hover-grow .lc-social-icon-item:hover {
+.lcibwc-social-hover-grow .lcibwc-social-icon-item:hover {
 	transform: scale(1.15);
 }
-.lc-social-hover-shrink .lc-social-icon-item:hover {
+.lcibwc-social-hover-shrink .lcibwc-social-icon-item:hover {
 	transform: scale(0.85);
 }
-.lc-social-hover-pulse .lc-social-icon-item:hover {
+.lcibwc-social-hover-pulse .lcibwc-social-icon-item:hover {
 	animation: lc-social-pulse 1s linear infinite;
 }
 
@@ -66,7 +66,7 @@
 }
 
 /* Ensure the `i` inside takes the color properly */
-.lc-social-icon-item i {
+.lcibwc-social-icon-item i {
 	color: inherit;
 	transition: inherit;
 	display: flex;

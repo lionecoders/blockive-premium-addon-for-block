@@ -23,13 +23,13 @@ export default function save({ attributes }) {
 	} = attributes;
 
 	const customStyles = {
-		'--lc-faq-borderWidth': `${borderWidth}px`,
-		'--lc-faq-borderColor': borderColor,
-		'--lc-faq-title-color': titleColor,
-		'--lc-faq-title-active-color': titleActiveColor,
-		'--lc-faq-title-bg': titleBgColor,
-		'--lc-faq-content-color': contentColor,
-		'--lc-faq-content-bg': contentBgColor,
+		'--lcibwc-faq-borderWidth': `${borderWidth}px`,
+		'--lcibwc-faq-borderColor': borderColor,
+		'--lcibwc-faq-title-color': titleColor,
+		'--lcibwc-faq-title-active-color': titleActiveColor,
+		'--lcibwc-faq-title-bg': titleBgColor,
+		'--lcibwc-faq-content-color': contentColor,
+		'--lcibwc-faq-content-bg': contentBgColor,
 	};
 
 	if (animationType !== 'none') {
@@ -38,7 +38,7 @@ export default function save({ attributes }) {
 	}
 
 	const blockProps = useBlockProps.save({
-		className: `lc-faq-wrapper ${animationType !== 'none' ? `lc-animate-${animationType}` : ''}`,
+		className: `lcibwc-faq-wrapper ${animationType !== 'none' ? `lcibwc-animate-${animationType}` : ''}`,
 		style: customStyles,
 	});
 
@@ -67,7 +67,7 @@ export default function save({ attributes }) {
 			{headingText && (
 				<RichText.Content
 					tagName={headingTag}
-					className="lc-faq-main-heading"
+					className="lcibwc-faq-main-heading"
 					style={{ textAlign: headingAlign, color: headingColor, marginBottom: '20px' }}
 					value={headingText}
 				/>
@@ -80,39 +80,39 @@ export default function save({ attributes }) {
 					if (icon === 'plus-minus') {
 						iconElement = (
 							<>
-								<span className="lc-faq-icon lc-icon-open"><i className="fas fa-plus"></i></span>
-								<span className="lc-faq-icon lc-icon-close" style={{ display: 'none' }}><i className="fas fa-minus"></i></span>
+								<span className="lcibwc-faq-icon lcibwc-icon-open"><i className="fas fa-plus"></i></span>
+								<span className="lcibwc-faq-icon lcibwc-icon-close" style={{ display: 'none' }}><i className="fas fa-minus"></i></span>
 							</>
 						);
 					} else if (icon === 'chevron') {
 						iconElement = (
 							<>
-								<span className="lc-faq-icon lc-icon-open"><i className="fas fa-chevron-down"></i></span>
-								<span className="lc-faq-icon lc-icon-close" style={{ display: 'none' }}><i className="fas fa-chevron-up"></i></span>
+								<span className="lcibwc-faq-icon lcibwc-icon-open"><i className="fas fa-chevron-down"></i></span>
+								<span className="lcibwc-faq-icon lcibwc-icon-close" style={{ display: 'none' }}><i className="fas fa-chevron-up"></i></span>
 							</>
 						);
 					} else if (icon === 'angle') {
 						iconElement = (
 							<>
-								<span className="lc-faq-icon lc-icon-open"><i className="fas fa-angle-down"></i></span>
-								<span className="lc-faq-icon lc-icon-close" style={{ display: 'none' }}><i className="fas fa-angle-up"></i></span>
+								<span className="lcibwc-faq-icon lcibwc-icon-open"><i className="fas fa-angle-down"></i></span>
+								<span className="lcibwc-faq-icon lcibwc-icon-close" style={{ display: 'none' }}><i className="fas fa-angle-up"></i></span>
 							</>
 						);
 					}
 				}
 
 				return (
-					<div key={item.id || index} className={`lc-faq-item ${isFirst ? 'active' : ''}`}>
-						<div className={`lc-faq-header flex-align-${iconAlign}`}>
+					<div key={item.id || index} className={`lcibwc-faq-item ${isFirst ? 'active' : ''}`}>
+						<div className={`lcibwc-faq-header flex-align-${iconAlign}`}>
 							{iconAlign === 'left' && iconElement}
 							<RichText.Content
 								tagName={titleTag}
-								className="lc-faq-title"
+								className="lcibwc-faq-title"
 								value={item.title}
 							/>
 							{iconAlign === 'right' && iconElement}
 						</div>
-						<div className="lc-faq-content" style={{ display: isFirst ? 'block' : 'none' }}>
+						<div className="lcibwc-faq-content" style={{ display: isFirst ? 'block' : 'none' }}>
 							<RichText.Content
 								tagName="p"
 								value={item.content}

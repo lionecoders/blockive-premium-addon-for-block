@@ -13,31 +13,31 @@ export default function save({ attributes }) {
 	} = attributes;
 
 	const customStyles = {
-		'--lc-tab-bg': tabBgColor,
-		'--lc-tab-active-bg': tabActiveColor,
-		'--lc-tab-text': textColor,
-		'--lc-tab-active-text': textActiveColor,
-		'--lc-tab-content-bg': contentBgColor,
-		'--lc-tab-content-text': contentTextColor,
-		'--lc-tab-radius': `${tabBorderRadius}px`,
+		'--lcibwc-tab-bg': tabBgColor,
+		'--lcibwc-tab-active-bg': tabActiveColor,
+		'--lcibwc-tab-text': textColor,
+		'--lcibwc-tab-active-text': textActiveColor,
+		'--lcibwc-tab-content-bg': contentBgColor,
+		'--lcibwc-tab-content-text': contentTextColor,
+		'--lcibwc-tab-radius': `${tabBorderRadius}px`,
 	};
 
 	const blockProps = useBlockProps.save({
-		className: 'lc-tabs-wrapper',
+		className: 'lcibwc-tabs-wrapper',
 		style: customStyles,
 	});
 
 	return (
 		<div {...blockProps}>
-			<div className="lc-tabs-nav-track" role="tablist">
+			<div className="lcibwc-tabs-nav-track" role="tablist">
 				{items.map((item, index) => {
 					const isFirst = index === 0;
 					return (
-						<div key={item.id || index} className={`lc-tab-pill ${isFirst ? 'active' : ''}`} role="tab" tabIndex={0}>
+						<div key={item.id || index} className={`lcibwc-tab-pill ${isFirst ? 'active' : ''}`} role="tab" tabIndex={0}>
 							<div style={{ flex: 1, textAlign: 'center' }}>
 								<RichText.Content
 									tagName="span"
-									className="lc-tab-title"
+									className="lcibwc-tab-title"
 									value={item.title}
 								/>
 							</div>
@@ -46,14 +46,14 @@ export default function save({ attributes }) {
 				})}
 			</div>
 
-			<div className="lc-tabs-content-area">
+			<div className="lcibwc-tabs-content-area">
 				{items.map((item, index) => {
 					const isFirst = index === 0;
 					return (
-						<div key={item.id || index} className={`lc-tab-pane ${isFirst ? 'active' : ''}`}>
+						<div key={item.id || index} className={`lcibwc-tab-pane ${isFirst ? 'active' : ''}`}>
 							<RichText.Content
 								tagName="div"
-								className="lc-tab-content-text"
+								className="lcibwc-tab-content-text"
 								value={item.content}
 							/>
 						</div>

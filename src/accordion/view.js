@@ -2,7 +2,7 @@ const initLcAccordion = () => {
     const accordions = document.querySelectorAll('.lc-accordion-wrapper:not(.lc-accordion-initialized)');
 
     accordions.forEach(accordion => {
-        accordion.classList.add('lc-accordion-initialized'); // Prevent double binding
+        accordion.classList.add('lcibwc-accordion-initialized'); // Prevent double binding
         const items = accordion.querySelectorAll('.lc-accordion-item');
 
         items.forEach(item => {

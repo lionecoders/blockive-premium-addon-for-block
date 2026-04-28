@@ -1,32 +1,79 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
-	"name": "lc-block-widgets/progress-bar",
+	"name": "lc-immeasurable-block-widgets-collection/progress-bar",
 	"version": "0.1.0",
 	"title": "LC Progress Bar",
-	"category": "lc-widgets",
+	"category": "lcibwc-widgets",
 	"icon": "performance",
 	"description": "A premium animated progress bar widget.",
 	"attributes": {
-		"title": { "type": "string", "default": "Web Development" },
-		"percentage": { "type": "number", "default": 85 },
-		"displayPercentage": { "type": "boolean", "default": true },
-		"layoutStyle": { "type": "string", "default": "standard" },
-		"barHeight": { "type": "number", "default": 18 },
-		"borderRadius": { "type": "number", "default": 50 },
-		"isStriped": { "type": "boolean", "default": false },
-		"isAnimated": { "type": "boolean", "default": true },
-		"animationDuration": { "type": "number", "default": 1500 },
-		
-		"titleColor": { "type": "string", "default": "#1e293b" },
-		"percentageColor": { "type": "string", "default": "#1e293b" },
-		"barColor": { "type": "string", "default": "#4f46e5" },
-		"trackColor": { "type": "string", "default": "#f1f5f9" },
-		"innerTextColor": { "type": "string", "default": "#ffffff" },
-		"alignment": { "type": "string", "default": "left" }
+		"title": {
+			"type": "string",
+			"default": "Web Development"
+		},
+		"percentage": {
+			"type": "number",
+			"default": 85
+		},
+		"displayPercentage": {
+			"type": "boolean",
+			"default": true
+		},
+		"layoutStyle": {
+			"type": "string",
+			"default": "standard"
+		},
+		"barHeight": {
+			"type": "number",
+			"default": 18
+		},
+		"borderRadius": {
+			"type": "number",
+			"default": 50
+		},
+		"isStriped": {
+			"type": "boolean",
+			"default": false
+		},
+		"isAnimated": {
+			"type": "boolean",
+			"default": true
+		},
+		"animationDuration": {
+			"type": "number",
+			"default": 1500
+		},
+		"titleColor": {
+			"type": "string",
+			"default": "#1e293b"
+		},
+		"percentageColor": {
+			"type": "string",
+			"default": "#1e293b"
+		},
+		"barColor": {
+			"type": "string",
+			"default": "#4f46e5"
+		},
+		"trackColor": {
+			"type": "string",
+			"default": "#f1f5f9"
+		},
+		"innerTextColor": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"alignment": {
+			"type": "string",
+			"default": "left"
+		}
 	},
 	"supports": {
-		"align": ["wide", "full"],
+		"align": [
+			"wide",
+			"full"
+		],
 		"html": false,
 		"typography": {
 			"fontSize": true,
@@ -37,7 +84,7 @@
 			"padding": true
 		}
 	},
-	"textdomain": "lc-block-widgets",
+	"textdomain": "lc-immeasurable-block-widgets-collection",
 	"editorScript": "file:./index.js",
 	"viewScript": "file:./view.js",
 	"style": "file:./index.css"

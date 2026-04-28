@@ -2,7 +2,7 @@ const initLcTabs = () => {
     const tabsWrappers = document.querySelectorAll('.lc-tabs-wrapper:not(.lc-tabs-initialized)');
     
     tabsWrappers.forEach(wrapper => {
-        wrapper.classList.add('lc-tabs-initialized'); // Prevent double binding
+        wrapper.classList.add('lcibwc-tabs-initialized'); // Prevent double binding
         const pills = wrapper.querySelectorAll('.lc-tab-pill');
         const panes = wrapper.querySelectorAll('.lc-tab-pane');
         

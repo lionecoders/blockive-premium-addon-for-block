@@ -1,10 +1,10 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
-  "name": "lc-block-widgets/pie-chart",
+  "name": "lc-immeasurable-block-widgets-collection/pie-chart",
   "version": "0.1.0",
   "title": "LC Pie Chart",
-  "category": "lc-widgets",
+  "category": "lcibwc-widgets",
   "icon": "chart-pie",
   "description": "A dynamic pie and donut chart block using Chart.js.",
   "attributes": {
@@ -71,7 +71,7 @@
       }
     }
   },
-  "textdomain": "lc-block-widgets",
+  "textdomain": "lc-immeasurable-block-widgets-collection",
   "editorScript": "file:./index.js",
   "style": "file:./index.css",
   "viewScript": "file:./view.js"

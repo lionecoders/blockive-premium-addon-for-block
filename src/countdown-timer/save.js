@@ -26,13 +26,13 @@ export default function save({ attributes }) {
 	} = attributes;
 
 	const customStyles = {
-		'--lc-cd-gap': gap !== undefined ? `${gap}px` : '20px',
-		'--lc-cd-box-bg': styleType === 'block' ? (boxBgColor || 'transparent') : 'transparent',
-		'--lc-cd-borderWidth': styleType === 'block' ? `${boxBorderWidth || 0}px` : '0px',
-		'--lc-cd-borderColor': styleType === 'block' ? (boxBorderColor || 'transparent') : 'transparent',
-		'--lc-cd-borderRadius': styleType === 'block' ? `${boxBorderRadius || 0}px` : '0px',
-		'--lc-cd-number-color': numberColor || 'inherit',
-		'--lc-cd-label-color': labelColor || 'inherit',
+		'--lcibwc-cd-gap': gap !== undefined ? `${gap}px` : '20px',
+		'--lcibwc-cd-box-bg': styleType === 'block' ? (boxBgColor || 'transparent') : 'transparent',
+		'--lcibwc-cd-borderWidth': styleType === 'block' ? `${boxBorderWidth || 0}px` : '0px',
+		'--lcibwc-cd-borderColor': styleType === 'block' ? (boxBorderColor || 'transparent') : 'transparent',
+		'--lcibwc-cd-borderRadius': styleType === 'block' ? `${boxBorderRadius || 0}px` : '0px',
+		'--lcibwc-cd-number-color': numberColor || 'inherit',
+		'--lcibwc-cd-label-color': labelColor || 'inherit',
 	};
 
 	if (animationType !== 'none') {
@@ -41,7 +41,7 @@ export default function save({ attributes }) {
 	}
 
 	const blockProps = useBlockProps.save({
-		className: `lc-countdown-style-${styleType} align${alignment} ${animationType !== 'none' ? `lc-animate-${animationType}` : ''}`,
+		className: `lcibwc-countdown-style-${styleType} align${alignment} ${animationType !== 'none' ? `lcibwc-animate-${animationType}` : ''}`,
 		style: customStyles,
 	});
 
@@ -49,29 +49,29 @@ export default function save({ attributes }) {
 
 	return (
 		<div {...blockProps}>
-			<div className="lc-countdown-wrapper" data-target-date={targetDate}>
+			<div className="lcibwc-countdown-wrapper" data-target-date={targetDate}>
 				{showDays && (
-					<div className="lc-countdown-item lc-cd-days">
-						<div className="lc-countdown-number">00</div>
-						<div className="lc-countdown-label">{labelDays}</div>
+					<div className="lcibwc-countdown-item lcibwc-cd-days">
+						<div className="lcibwc-countdown-number">00</div>
+						<div className="lcibwc-countdown-label">{labelDays}</div>
 					</div>
 				)}
 				{showHours && (
-					<div className="lc-countdown-item lc-cd-hours">
-						<div className="lc-countdown-number">00</div>
-						<div className="lc-countdown-label">{labelHours}</div>
+					<div className="lcibwc-countdown-item lcibwc-cd-hours">
+						<div className="lcibwc-countdown-number">00</div>
+						<div className="lcibwc-countdown-label">{labelHours}</div>
 					</div>
 				)}
 				{showMinutes && (
-					<div className="lc-countdown-item lc-cd-minutes">
-						<div className="lc-countdown-number">00</div>
-						<div className="lc-countdown-label">{labelMinutes}</div>
+					<div className="lcibwc-countdown-item lcibwc-cd-minutes">
+						<div className="lcibwc-countdown-number">00</div>
+						<div className="lcibwc-countdown-label">{labelMinutes}</div>
 					</div>
 				)}
 				{showSeconds && (
-					<div className="lc-countdown-item lc-cd-seconds">
-						<div className="lc-countdown-number">00</div>
-						<div className="lc-countdown-label">{labelSeconds}</div>
+					<div className="lcibwc-countdown-item lcibwc-cd-seconds">
+						<div className="lcibwc-countdown-number">00</div>
+						<div className="lcibwc-countdown-label">{labelSeconds}</div>
 					</div>
 				)}
 			</div>

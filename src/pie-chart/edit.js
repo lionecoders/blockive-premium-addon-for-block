@@ -111,47 +111,47 @@ export default function Edit({ attributes, setAttributes }) {
 			</BlockControls>
 
 			<InspectorControls>
-				<PanelBody title={__('Chart Data', 'lc-block-widgets')} initialOpen={true}>
+				<PanelBody title={__('Chart Data', 'lc-immeasurable-block-widgets-collectionblock-widgets-collectionblock-widgets-collection')} initialOpen={true}>
 					{chartData.map((item, index) => (
 						<div key={item.id} style={{ marginBottom: '15px', padding: '10px', border: '1px solid #e2e8f0', borderRadius: '4px' }}>
 							<TextControl
-								label={__('Label', 'lc-block-widgets')}
+								label={__('Label', 'lc-immeasurable-block-widgets-collection')}
 								value={item.label}
 								onChange={(val) => updateItem(index, 'label', val)}
 							/>
 							<TextControl
-								label={__('Value', 'lc-block-widgets')}
+								label={__('Value', 'lc-immeasurable-block-widgets-collection')}
 								type="number"
 								value={item.value}
 								onChange={(val) => updateItem(index, 'value', val)}
 							/>
-							<BaseControl label={__('Slice Color', 'lc-block-widgets')}>
+							<BaseControl label={__('Slice Color', 'lc-immeasurable-block-widgets-collection')}>
 								<ColorPalette
 									value={item.bg}
 									onChange={(val) => updateItem(index, 'bg', val || '#000')}
 								/>
 							</BaseControl>
 							<Button isDestructive onClick={() => removeItem(index)} style={{ marginTop: '10px' }}>
-								{__('Remove Item', 'lc-block-widgets')}
+								{__('Remove Item', 'lc-immeasurable-block-widgets-collection')}
 							</Button>
 						</div>
 					))}
 					<Button isPrimary onClick={addItem}>
-						{__('Add Slice', 'lc-block-widgets')}
+						{__('Add Slice', 'lc-immeasurable-block-widgets-collection')}
 					</Button>
 				</PanelBody>
 
-				<PanelBody title={__('Chart Settings', 'lc-block-widgets')} initialOpen={false}>
+				<PanelBody title={__('Chart Settings', 'lc-immeasurable-block-widgets-collection')} initialOpen={false}>
 					<RangeControl
-						label={__('Cutout % (Make it a Donut)', 'lc-block-widgets')}
+						label={__('Cutout % (Make it a Donut)', 'lc-immeasurable-block-widgets-collection')}
 						value={cutout}
 						onChange={(val) => setAttributes({ cutout: val })}
 						min={0}
 						max={90}
-						help={__('Set > 0 to create a Donut Chart.', 'lc-block-widgets')}
+						help={__('Set > 0 to create a Donut Chart.', 'lc-immeasurable-block-widgets-collection')}
 					/>
 					<SelectControl
-						label={__('Legend Position', 'lc-block-widgets')}
+						label={__('Legend Position', 'lc-immeasurable-block-widgets-collection')}
 						value={legendPosition}
 						options={[
 							{ label: 'Top', value: 'top' },
@@ -164,35 +164,35 @@ export default function Edit({ attributes, setAttributes }) {
 					/>
 				</PanelBody>
 
-				<PanelBody title={__('Styling', 'lc-block-widgets')} initialOpen={false}>
+				<PanelBody title={__('Styling', 'lc-immeasurable-block-widgets-collection')} initialOpen={false}>
 					<RangeControl
-						label={__('Border Width (px)', 'lc-block-widgets')}
+						label={__('Border Width (px)', 'lc-immeasurable-block-widgets-collection')}
 						value={borderWidth}
 						onChange={(val) => setAttributes({ borderWidth: val })}
 						min={0}
 						max={10}
 					/>
-					<BaseControl label={__('Border Color', 'lc-block-widgets')}>
+					<BaseControl label={__('Border Color', 'lc-immeasurable-block-widgets-collection')}>
 						<ColorPalette value={borderColor} onChange={(val) => setAttributes({ borderColor: val || 'transparent' })} />
 					</BaseControl>
 					<RangeControl
-						label={__('Animation Speed (ms)', 'lc-block-widgets')}
+						label={__('Animation Speed (ms)', 'lc-immeasurable-block-widgets-collection')}
 						value={animationSpeed}
 						onChange={(val) => setAttributes({ animationSpeed: val })}
 						min={0}
 						max={5000}
 						step={100}
-						help={__('Only applies to the live site frontend.', 'lc-block-widgets')}
+						help={__('Only applies to the live site frontend.', 'lc-immeasurable-block-widgets-collection')}
 					/>
 				</PanelBody>
 			</InspectorControls>
 
 			<div {...blockProps}>
-				<div className="lc-pie-chart-wrapper">
+				<div className="lcibwc-pie-chart-wrapper">
 					{chartData && chartData.length > 0 ? (
 						<canvas ref={chartRef}></canvas>
 					) : (
-						<div className="lc-chart-error">{__('Please add data to show the chart.', 'lc-block-widgets')}</div>
+						<div className="lcibwc-chart-error">{__('Please add data to show the chart.', 'lc-immeasurable-block-widgets-collection')}</div>
 					)}
 				</div>
 			</div>

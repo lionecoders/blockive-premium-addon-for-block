@@ -41,7 +41,7 @@ export default function Edit({ attributes, setAttributes }) {
 	} = attributes;
 
 	const blockProps = useBlockProps({
-		className: `lc-social-icons-wrapper lc-align-${alignment} lc-social-shape-${shape} lc-social-hover-${hoverAnimation}`
+		className: `lcibwc-social-icons-wrapper lcibwc-align-${alignment} lcibwc-social-shape-${shape} lcibwc-social-hover-${hoverAnimation}`
 	});
 
 	// Handle Repeater Item Add
@@ -99,11 +99,11 @@ export default function Edit({ attributes, setAttributes }) {
 			</BlockControls>
 
 			<InspectorControls>
-				<PanelBody title={__('Social Icons', 'lc-block-widgets')} initialOpen={true}>
+				<PanelBody title={__('Social Icons', 'lc-immeasurable-block-widgets-collection')} initialOpen={true}>
 					{items.map((item, index) => (
 						<div key={item.id} style={{ border: '1px solid #ccc', padding: '10px', marginBottom: '10px', borderRadius: '4px', backgroundColor: '#f9f9f9' }}>
 							<div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '10px' }}>
-								<strong>{__('Icon', 'lc-block-widgets')} {index + 1}</strong>
+								<strong>{__('Icon', 'lc-immeasurable-block-widgets-collection')} {index + 1}</strong>
 								<div>
 									<Button isSmall onClick={() => moveItem(index, -1)} disabled={index === 0}>↑</Button>
 									<Button isSmall onClick={() => moveItem(index, 1)} disabled={index === items.length - 1}>↓</Button>
@@ -112,7 +112,7 @@ export default function Edit({ attributes, setAttributes }) {
 							</div>
 							
 							<SelectControl
-								label={__('Network', 'lc-block-widgets')}
+								label={__('Network', 'lc-immeasurable-block-widgets-collection')}
 								value={item.network}
 								options={PREDEFINED_NETWORKS}
 								onChange={(val) => updateItem(index, 'network', val)}
@@ -120,7 +120,7 @@ export default function Edit({ attributes, setAttributes }) {
 
 							{item.network === 'custom' && (
 								<TextControl
-									label={__('Custom Icon Class (FontAwesome)', 'lc-block-widgets')}
+									label={__('Custom Icon Class (FontAwesome)', 'lc-immeasurable-block-widgets-collection')}
 									value={item.icon}
 									onChange={(val) => updateItem(index, 'icon', val)}
 									help="e.g. fab fa-github"
@@ -128,20 +128,20 @@ export default function Edit({ attributes, setAttributes }) {
 							)}
 
 							<TextControl
-								label={__('Link URL', 'lc-block-widgets')}
+								label={__('Link URL', 'lc-immeasurable-block-widgets-collection')}
 								value={item.link}
 								onChange={(val) => updateItem(index, 'link', val)}
 							/>
 						</div>
 					))}
 					<Button isPrimary onClick={addItem} style={{ width: '100%', justifyContent: 'center' }}>
-						{__('Add New Icon', 'lc-block-widgets')}
+						{__('Add New Icon', 'lc-immeasurable-block-widgets-collection')}
 					</Button>
 				</PanelBody>
 
-				<PanelBody title={__('Settings', 'lc-block-widgets')} initialOpen={false}>
+				<PanelBody title={__('Settings', 'lc-immeasurable-block-widgets-collection')} initialOpen={false}>
 					<SelectControl
-						label={__('Shape', 'lc-block-widgets')}
+						label={__('Shape', 'lc-immeasurable-block-widgets-collection')}
 						value={shape}
 						options={[
 							{ label: 'Rounded', value: 'rounded' },
@@ -151,7 +151,7 @@ export default function Edit({ attributes, setAttributes }) {
 						onChange={(val) => setAttributes({ shape: val })}
 					/>
 					<SelectControl
-						label={__('Hover Animation', 'lc-block-widgets')}
+						label={__('Hover Animation', 'lc-immeasurable-block-widgets-collection')}
 						value={hoverAnimation}
 						options={[
 							{ label: 'None', value: 'none' },
@@ -162,21 +162,21 @@ export default function Edit({ attributes, setAttributes }) {
 						onChange={(val) => setAttributes({ hoverAnimation: val })}
 					/>
 					<RangeControl
-						label={__('Icon Size', 'lc-block-widgets')}
+						label={__('Icon Size', 'lc-immeasurable-block-widgets-collection')}
 						value={iconSize}
 						onChange={(val) => setAttributes({ iconSize: val })}
 						min={10}
 						max={100}
 					/>
 					<RangeControl
-						label={__('Padding', 'lc-block-widgets')}
+						label={__('Padding', 'lc-immeasurable-block-widgets-collection')}
 						value={iconPadding}
 						onChange={(val) => setAttributes({ iconPadding: val })}
 						min={0}
 						max={50}
 					/>
 					<RangeControl
-						label={__('Spacing', 'lc-block-widgets')}
+						label={__('Spacing', 'lc-immeasurable-block-widgets-collection')}
 						value={iconSpacing}
 						onChange={(val) => setAttributes({ iconSpacing: val })}
 						min={0}
@@ -186,9 +186,9 @@ export default function Edit({ attributes, setAttributes }) {
 			</InspectorControls>
 
 			<InspectorControls group="styles">
-				<PanelBody title={__('Colors', 'lc-block-widgets')} initialOpen={true}>
+				<PanelBody title={__('Colors', 'lc-immeasurable-block-widgets-collection')} initialOpen={true}>
 					<SelectControl
-						label={__('Color Type', 'lc-block-widgets')}
+						label={__('Color Type', 'lc-immeasurable-block-widgets-collection')}
 						value={colorType}
 						options={[
 							{ label: 'Official Color', value: 'official' },
@@ -198,13 +198,13 @@ export default function Edit({ attributes, setAttributes }) {
 					/>
 					{colorType === 'custom' && (
 						<>
-							<BaseControl label={__('Primary Color (Background)', 'lc-block-widgets')}>
+							<BaseControl label={__('Primary Color (Background)', 'lc-immeasurable-block-widgets-collection')}>
 								<ColorPalette
 									value={customPrimaryColor}
 									onChange={(val) => setAttributes({ customPrimaryColor: val })}
 								/>
 							</BaseControl>
-							<BaseControl label={__('Secondary Color (Icon)', 'lc-block-widgets')}>
+							<BaseControl label={__('Secondary Color (Icon)', 'lc-immeasurable-block-widgets-collection')}>
 								<ColorPalette
 									value={customSecondaryColor}
 									onChange={(val) => setAttributes({ customSecondaryColor: val })}
@@ -225,7 +225,7 @@ export default function Edit({ attributes, setAttributes }) {
 						<a 
 							key={item.id} 
 							href={item.link || '#'} 
-							className="lc-social-icon-item" 
+							className="lcibwc-social-icon-item" 
 							style={{ 
 								backgroundColor: bg,
 								color: color,
@@ -244,7 +244,7 @@ export default function Edit({ attributes, setAttributes }) {
 					);
 				})}
 				{items.length === 0 && (
-					<p>{__('Click "Add New Icon" in the sidebar to add social links.', 'lc-block-widgets')}</p>
+					<p>{__('Click "Add New Icon" in the sidebar to add social links.', 'lc-immeasurable-block-widgets-collection')}</p>
 				)}
 			</div>
 		</>

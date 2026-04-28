@@ -29,17 +29,17 @@ export default function Edit({ attributes, setAttributes }) {
 	const [activeIndex, setActiveIndex] = useState(0);
 
 	const customStyles = {
-		'--lc-tab-bg': tabBgColor,
-		'--lc-tab-active-bg': tabActiveColor,
-		'--lc-tab-text': textColor,
-		'--lc-tab-active-text': textActiveColor,
-		'--lc-tab-content-bg': contentBgColor,
-		'--lc-tab-content-text': contentTextColor,
-		'--lc-tab-radius': `${tabBorderRadius}px`,
+		'--lcibwc-tab-bg': tabBgColor,
+		'--lcibwc-tab-active-bg': tabActiveColor,
+		'--lcibwc-tab-text': textColor,
+		'--lcibwc-tab-active-text': textActiveColor,
+		'--lcibwc-tab-content-bg': contentBgColor,
+		'--lcibwc-tab-content-text': contentTextColor,
+		'--lcibwc-tab-radius': `${tabBorderRadius}px`,
 	};
 
 	const blockProps = useBlockProps({
-		className: 'lc-tabs-wrapper',
+		className: 'lcibwc-tabs-wrapper',
 		style: customStyles,
 	});
 
@@ -73,70 +73,70 @@ export default function Edit({ attributes, setAttributes }) {
 	return (
 		<>
 			<InspectorControls>
-				<PanelBody title={__('Tabs Items', 'lc-block-widgets')} initialOpen={true}>
+				<PanelBody title={__('Tabs Items', 'lc-immeasurable-block-widgets-collection')} initialOpen={true}>
 					{items.map((item, index) => (
 						<div key={item.id} style={{ marginBottom: '15px', border: '1px solid #ddd', padding: '10px' }}>
 							<TextControl
-								label={__('Title', 'lc-block-widgets')}
+								label={__('Title', 'lc-immeasurable-block-widgets-collection')}
 								value={item.title}
 								onChange={(val) => updateItem(index, 'title', val)}
 							/>
 							<Button isDestructive onClick={() => removeItem(index)} disabled={items.length <= 1}>
-								{__('Remove Item', 'lc-block-widgets')}
+								{__('Remove Item', 'lc-immeasurable-block-widgets-collection')}
 							</Button>
 						</div>
 					))}
 					<Button isPrimary onClick={addItem}>
-						{__('Add Tab', 'lc-block-widgets')}
+						{__('Add Tab', 'lc-immeasurable-block-widgets-collection')}
 					</Button>
 				</PanelBody>
 
-				<PanelBody title={__('Colors & Styles', 'lc-block-widgets')} initialOpen={false}>
+				<PanelBody title={__('Colors & Styles', 'lc-immeasurable-block-widgets-collection')} initialOpen={false}>
 					<RangeControl
-						label={__('Tab Border Radius', 'lc-block-widgets')}
+						label={__('Tab Border Radius', 'lc-immeasurable-block-widgets-collection')}
 						value={tabBorderRadius}
 						onChange={(val) => setAttributes({ tabBorderRadius: val })}
 						min={0}
 						max={30}
 					/>
-					<BaseControl label={__('Tabs Track Background', 'lc-block-widgets')}>
+					<BaseControl label={__('Tabs Track Background', 'lc-immeasurable-block-widgets-collection')}>
 						<ColorPalette value={tabBgColor} onChange={(val) => setAttributes({ tabBgColor: val })} />
 					</BaseControl>
-					<BaseControl label={__('Active Tab Background', 'lc-block-widgets')}>
+					<BaseControl label={__('Active Tab Background', 'lc-immeasurable-block-widgets-collection')}>
 						<ColorPalette value={tabActiveColor} onChange={(val) => setAttributes({ tabActiveColor: val })} />
 					</BaseControl>
-					<BaseControl label={__('Tab Text Color', 'lc-block-widgets')}>
+					<BaseControl label={__('Tab Text Color', 'lc-immeasurable-block-widgets-collection')}>
 						<ColorPalette value={textColor} onChange={(val) => setAttributes({ textColor: val })} />
 					</BaseControl>
-					<BaseControl label={__('Active Tab Text Color', 'lc-block-widgets')}>
+					<BaseControl label={__('Active Tab Text Color', 'lc-immeasurable-block-widgets-collection')}>
 						<ColorPalette value={textActiveColor} onChange={(val) => setAttributes({ textActiveColor: val })} />
 					</BaseControl>
-					<BaseControl label={__('Content Background', 'lc-block-widgets')}>
+					<BaseControl label={__('Content Background', 'lc-immeasurable-block-widgets-collection')}>
 						<ColorPalette value={contentBgColor} onChange={(val) => setAttributes({ contentBgColor: val })} />
 					</BaseControl>
-					<BaseControl label={__('Content Text Color', 'lc-block-widgets')}>
+					<BaseControl label={__('Content Text Color', 'lc-immeasurable-block-widgets-collection')}>
 						<ColorPalette value={contentTextColor} onChange={(val) => setAttributes({ contentTextColor: val })} />
 					</BaseControl>
 				</PanelBody>
 			</InspectorControls>
 
 			<div {...blockProps}>
-				<div className="lc-tabs-nav-track">
+				<div className="lcibwc-tabs-nav-track">
 					{items.map((item, index) => {
 						const isActive = activeIndex === index;
 						return (
 							<div 
 								key={item.id} 
-								className={`lc-tab-pill ${isActive ? 'active' : ''}`}
+								className={`lcibwc-tab-pill ${isActive ? 'active' : ''}`}
 								onClick={(e) => setActiveIndex(index)}
 							>
 								<div style={{ flex: 1, textAlign: 'center' }}>
 									<RichText
 										tagName="span"
-										className="lc-tab-title"
+										className="lcibwc-tab-title"
 										value={item.title}
 										onChange={(val) => updateItem(index, 'title', val)}
-										placeholder={__('Tab Title...', 'lc-block-widgets')}
+										placeholder={__('Tab Title...', 'lc-immeasurable-block-widgets-collection')}
 									/>
 								</div>
 							</div>
@@ -144,18 +144,18 @@ export default function Edit({ attributes, setAttributes }) {
 					})}
 				</div>
 
-				<div className="lc-tabs-content-area">
+				<div className="lcibwc-tabs-content-area">
 					{items.map((item, index) => {
 						const isActive = activeIndex === index;
 						if (!isActive) return null;
 						return (
-							<div key={item.id} className="lc-tab-pane active">
+							<div key={item.id} className="lcibwc-tab-pane active">
 								<RichText
 									tagName="div"
-									className="lc-tab-content-text"
+									className="lcibwc-tab-content-text"
 									value={item.content}
 									onChange={(val) => updateItem(index, 'content', val)}
-									placeholder={__('Enter content here...', 'lc-block-widgets')}
+									placeholder={__('Enter content here...', 'lc-immeasurable-block-widgets-collection')}
 								/>
 							</div>
 						);

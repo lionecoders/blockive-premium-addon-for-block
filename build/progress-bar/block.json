@@ -1,10 +1,10 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
-  "name": "lc-block-widgets/progress-bar",
+  "name": "lc-immeasurable-block-widgets-collection/progress-bar",
   "version": "0.1.0",
   "title": "LC Progress Bar",
-  "category": "lc-widgets",
+  "category": "lcibwc-widgets",
   "icon": "performance",
   "description": "A premium animated progress bar widget.",
   "attributes": {
@@ -84,7 +84,7 @@
       "padding": true
     }
   },
-  "textdomain": "lc-block-widgets",
+  "textdomain": "lc-immeasurable-block-widgets-collection",
   "editorScript": "file:./index.js",
   "viewScript": "file:./view.js",
   "style": "file:./index.css"

@@ -28,16 +28,16 @@ export default function save({ attributes }) {
 	} = attributes;
 
 	const customStyles = {
-		'--lc-pt-header-bg': headerBgColor || '#4f46e5',
-		'--lc-pt-header-text': headerTextColor || '#ffffff',
-		'--lc-pt-price-color': priceColor || '#0f172a',
-		'--lc-pt-feature-text': featureTextColor || '#475569',
-		'--lc-pt-button-bg': buttonBgColor || '#4f46e5',
-		'--lc-pt-button-text': buttonTextColor || '#ffffff',
-		'--lc-pt-box-bg': boxBgColor || '#ffffff',
-		'--lc-pt-borderColor': borderColor || '#f1f5f9',
-		'--lc-pt-borderWidth': `${borderWidth !== undefined ? borderWidth : 1}px`,
-		'--lc-pt-borderRadius': `${borderRadius !== undefined ? borderRadius : 16}px`,
+		'--lcibwc-pt-header-bg': headerBgColor || '#4f46e5',
+		'--lcibwc-pt-header-text': headerTextColor || '#ffffff',
+		'--lcibwc-pt-price-color': priceColor || '#0f172a',
+		'--lcibwc-pt-feature-text': featureTextColor || '#475569',
+		'--lcibwc-pt-button-bg': buttonBgColor || '#4f46e5',
+		'--lcibwc-pt-button-text': buttonTextColor || '#ffffff',
+		'--lcibwc-pt-box-bg': boxBgColor || '#ffffff',
+		'--lcibwc-pt-borderColor': borderColor || '#f1f5f9',
+		'--lcibwc-pt-borderWidth': `${borderWidth !== undefined ? borderWidth : 1}px`,
+		'--lcibwc-pt-borderRadius': `${borderRadius !== undefined ? borderRadius : 16}px`,
 	};
 
 	const blockProps = useBlockProps.save({
@@ -47,37 +47,37 @@ export default function save({ attributes }) {
 	return (
 		<div {...blockProps}>
 			<div 
-				className={`lc-pricing-table lc-pricing-${layoutStyle || 'style1'} ${isFeatured ? 'is-featured' : ''} ${boxShadow ? 'has-shadow' : ''}`}
+				className={`lcibwc-pricing-table lcibwc-pricing-${layoutStyle || 'style1'} ${isFeatured ? 'is-featured' : ''} ${boxShadow ? 'has-shadow' : ''}`}
 				style={{ ...customStyles, textAlign: alignment || 'center' }}
 			>
 				{isFeatured && (
-					<div className="lc-pricing-badge">{featuredBadge}</div>
+					<div className="lcibwc-pricing-badge">{featuredBadge}</div>
 				)}
 				
-				<div className="lc-pricing-header">
+				<div className="lcibwc-pricing-header">
 					<RichText.Content
 						tagName="h3"
-						className="lc-pricing-title"
+						className="lcibwc-pricing-title"
 						value={title}
 					/>
 					<RichText.Content
 						tagName="p"
-						className="lc-pricing-subtitle"
+						className="lcibwc-pricing-subtitle"
 						value={subtitle}
 					/>
 				</div>
 
-				<div className="lc-pricing-price-area">
-					<span className="lc-pricing-currency">{currency}</span>
+				<div className="lcibwc-pricing-price-area">
+					<span className="lcibwc-pricing-currency">{currency}</span>
 					<RichText.Content
 						tagName="span"
-						className="lc-pricing-amount"
+						className="lcibwc-pricing-amount"
 						value={price}
 					/>
-					<span className="lc-pricing-period">{period}</span>
+					<span className="lcibwc-pricing-period">{period}</span>
 				</div>
 
-				<ul className="lc-pricing-features">
+				<ul className="lcibwc-pricing-features">
 					{features && features.map((feature) => (
 						<li key={feature.id} className={feature.active ? 'active' : 'inactive'}>
 							<i className={feature.icon || (feature.active ? 'fas fa-check' : 'fas fa-times')}></i>
@@ -86,8 +86,8 @@ export default function save({ attributes }) {
 					))}
 				</ul>
 
-				<div className="lc-pricing-footer">
-					<a href={buttonUrl || '#'} className="lc-pricing-button">
+				<div className="lcibwc-pricing-footer">
+					<a href={buttonUrl || '#'} className="lcibwc-pricing-button">
 						<RichText.Content value={buttonText} />
 					</a>
 				</div>

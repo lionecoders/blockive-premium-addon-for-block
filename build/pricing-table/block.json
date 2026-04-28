@@ -1,10 +1,10 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
-  "name": "lc-block-widgets/pricing-table",
+  "name": "lc-immeasurable-block-widgets-collectionblock-widgets-collection/pricing-table",
   "version": "0.1.0",
   "title": "LC Pricing Table",
-  "category": "lc-widgets",
+  "category": "lcibwc-widgets",
   "icon": "money-alt",
   "description": "A fully customizable pricing table block with features list and button.",
   "attributes": {
@@ -147,7 +147,7 @@
       }
     }
   },
-  "textdomain": "lc-block-widgets",
+  "textdomain": "lc-immeasurable-block-widgets-collection",
   "editorScript": "file:./index.js",
   "style": "file:./index.css"
 }

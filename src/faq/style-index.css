@@ -1,52 +1,52 @@
-.wp-block-lc-block-widgets-faq {
+.wp-block-lc-immeasurable-block-widgets-collection-faq {
 	position: relative;
 }
 
-.lc-faq-wrapper {
+.lcibwc-faq-wrapper {
 	width: 100%;
 }
 
-.lc-faq-item {
-	border-bottom: var(--lc-faq-borderWidth, 1px) solid var(--lc-faq-borderColor, #e2e8f0);
+.lcibwc-faq-item {
+	border-bottom: var(--lcibwc-faq-borderWidth, 1px) solid var(--lcibwc-faq-borderColor, #e2e8f0);
 	margin-bottom: 0;
 	transition: all 0.3s ease;
 }
 
-.lc-faq-item:first-child {
-	border-top: var(--lc-faq-borderWidth, 1px) solid var(--lc-faq-borderColor, #e2e8f0);
+.lcibwc-faq-item:first-child {
+	border-top: var(--lcibwc-faq-borderWidth, 1px) solid var(--lcibwc-faq-borderColor, #e2e8f0);
 }
 
-.lc-faq-header {
+.lcibwc-faq-header {
 	display: flex;
 	padding: 15px 20px;
 	cursor: pointer;
-	background-color: var(--lc-faq-title-bg, #ffffff);
-	color: var(--lc-faq-title-color, #0f172a);
+	background-color: var(--lcibwc-faq-title-bg, #ffffff);
+	color: var(--lcibwc-faq-title-color, #0f172a);
 	font-weight: 600;
 	transition: background-color 0.3s, color 0.3s;
 	align-items: center;
 }
 
-.lc-faq-header:hover, 
-.lc-faq-item.active .lc-faq-header {
-	color: var(--lc-faq-title-active-color, #4f46e5);
+.lcibwc-faq-header:hover, 
+.lcibwc-faq-item.active .lcibwc-faq-header {
+	color: var(--lcibwc-faq-title-active-color, #4f46e5);
 }
 
-.lc-faq-header.flex-align-left {
+.lcibwc-faq-header.flex-align-left {
 	justify-content: flex-start;
 }
-.lc-faq-header.flex-align-right {
+.lcibwc-faq-header.flex-align-right {
 	justify-content: space-between;
 }
 
-.lc-faq-title {
+.lcibwc-faq-title {
 	flex-grow: 1;
 }
-.lc-faq-header.flex-align-left .lc-faq-title {
+.lcibwc-faq-header.flex-align-left .lcibwc-faq-title {
 	margin-left: 10px;
 }
 
-.lc-faq-icon {
+.lcibwc-faq-icon {
 	font-weight: bold;
 	font-size: 1.1em;
 	display: inline-flex;
@@ -56,27 +56,27 @@
 	height: 24px;
 }
 
-.lc-faq-content {
+.lcibwc-faq-content {
 	padding: 15px 20px;
-	background-color: var(--lc-faq-content-bg, #f8fafc);
-	color: var(--lc-faq-content-color, #334155);
-	border-top: var(--lc-faq-borderWidth, 1px) solid var(--lc-faq-borderColor, #e2e8f0);
+	background-color: var(--lcibwc-faq-content-bg, #f8fafc);
+	color: var(--lcibwc-faq-content-color, #334155);
+	border-top: var(--lcibwc-faq-borderWidth, 1px) solid var(--lcibwc-faq-borderColor, #e2e8f0);
 	display: none;
 }
 
 /* Base states for editor where view.js doesn't trigger */
-.lc-faq-item.active .lc-faq-content {
+.lcibwc-faq-item.active .lcibwc-faq-content {
 	display: block;
 }
 
 /* Animations */
-.lc-animate-none { animation: none; }
-.lc-animate-fadeIn { animation-name: fadeIn; }
-.lc-animate-fadeInUp { animation-name: fadeInUp; }
-.lc-animate-fadeInDown { animation-name: fadeInDown; }
-.lc-animate-zoomIn { animation-name: zoomIn; }
-.lc-animate-slideInLeft { animation-name: slideInLeft; }
-.lc-animate-slideInRight { animation-name: slideInRight; }
+.lcibwc-animate-none { animation: none; }
+.lcibwc-animate-fadeIn { animation-name: fadeIn; }
+.lcibwc-animate-fadeInUp { animation-name: fadeInUp; }
+.lcibwc-animate-fadeInDown { animation-name: fadeInDown; }
+.lcibwc-animate-zoomIn { animation-name: zoomIn; }
+.lcibwc-animate-slideInLeft { animation-name: slideInLeft; }
+.lcibwc-animate-slideInRight { animation-name: slideInRight; }
 
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 @keyframes fadeInUp { from { opacity: 0; transform: translate3d(0, 40px, 0); } to { opacity: 1; transform: translate3d(0, 0, 0); } }
