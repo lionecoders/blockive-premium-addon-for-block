@@ -1,0 +1,121 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "lc-immeasurable-block-widgets-collection/button",
+	"version": "0.1.0",
+	"title": "LC Button",
+	"category": "lcibwc-widgets",
+	"icon": "button",
+	"description": "A highly customizable button with icon and badge support.",
+	"attributes": {
+		"text": {
+			"type": "string",
+			"default": "Click Here"
+		},
+		"url": {
+			"type": "string",
+			"default": ""
+		},
+		"linkTarget": {
+			"type": "boolean",
+			"default": false
+		},
+		"showIcon": {
+			"type": "boolean",
+			"default": false
+		},
+		"icon": {
+			"type": "string",
+			"default": "fas fa-arrow-right"
+		},
+		"iconPosition": {
+			"type": "string",
+			"default": "right"
+		},
+		"badgeText": {
+			"type": "string",
+			"default": ""
+		},
+		"alignment": {
+			"type": "string",
+			"default": "center"
+		},
+		"buttonWidth": {
+			"type": "string",
+			"default": "auto"
+		},
+		"textColor": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"bgColor": {
+			"type": "string",
+			"default": "#3b82f6"
+		},
+		"textColorHover": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"bgColorHover": {
+			"type": "string",
+			"default": "#2563eb"
+		},
+		"borderColor": {
+			"type": "string",
+			"default": "transparent"
+		},
+		"borderColorHover": {
+			"type": "string",
+			"default": "transparent"
+		},
+		"badgeTextColor": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"badgeBgColor": {
+			"type": "string",
+			"default": "#ef4444"
+		},
+		"iconSpacing": {
+			"type": "number",
+			"default": 8
+		}
+	},
+	"supports": {
+		"align": [
+			"wide",
+			"full"
+		],
+		"html": false,
+		"typography": {
+			"fontSize": true,
+			"lineHeight": true,
+			"__experimentalFontFamily": true,
+			"__experimentalDefaultControls": {
+				"fontSize": true
+			}
+		},
+		"spacing": {
+			"margin": true,
+			"padding": true,
+			"__experimentalDefaultControls": {
+				"margin": true,
+				"padding": true
+			}
+		},
+		"borders": {
+			"radius": true,
+			"color": false,
+			"width": true,
+			"style": true,
+			"__experimentalDefaultControls": {
+				"radius": true,
+				"width": true,
+				"style": true
+			}
+		}
+	},
+	"textdomain": "lc-immeasurable-block-widgets-collection",
+	"editorScript": "file:./index.js",
+	"style": "file:./index.css"
+}

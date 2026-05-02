@@ -1,0 +1,131 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "lc-immeasurable-block-widgets-collection/image-box",
+	"version": "0.1.0",
+	"title": "LC Image Box",
+	"category": "lcibwc-widgets",
+	"icon": "format-image",
+	"description": "An image box that displays an image, title, description, and link.",
+	"attributes": {
+		"imageUrl": {
+			"type": "string",
+			"default": ""
+		},
+		"imageId": {
+			"type": "number",
+			"default": 0
+		},
+		"imageAlt": {
+			"type": "string",
+			"default": ""
+		},
+		"title": {
+			"type": "string",
+			"default": "Image Box Title"
+		},
+		"titleTag": {
+			"type": "string",
+			"default": "h3"
+		},
+		"description": {
+			"type": "string",
+			"default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+		},
+		"linkUrl": {
+			"type": "string",
+			"default": ""
+		},
+		"linkText": {
+			"type": "string",
+			"default": "Read More"
+		},
+		"linkTarget": {
+			"type": "boolean",
+			"default": false
+		},
+		"imagePosition": {
+			"type": "string",
+			"default": "top"
+		},
+		"contentAlign": {
+			"type": "string",
+			"default": "center"
+		},
+		"verticalAlign": {
+			"type": "string",
+			"default": "top"
+		},
+		"imageSize": {
+			"type": "string",
+			"default": "100%"
+		},
+		"imageRadius": {
+			"type": "number",
+			"default": 0
+		},
+		"titleColor": {
+			"type": "string",
+			"default": ""
+		},
+		"descColor": {
+			"type": "string",
+			"default": ""
+		},
+		"linkColor": {
+			"type": "string",
+			"default": "#3b82f6"
+		},
+		"boxBgColor": {
+			"type": "string",
+			"default": ""
+		},
+		"imageSpacing": {
+			"type": "number",
+			"default": 20
+		}
+	},
+	"supports": {
+		"align": [
+			"wide",
+			"full"
+		],
+		"html": false,
+		"typography": {
+			"fontSize": true,
+			"lineHeight": true,
+			"__experimentalFontFamily": true,
+			"__experimentalDefaultControls": {
+				"fontSize": true
+			}
+		},
+		"spacing": {
+			"margin": true,
+			"padding": true,
+			"__experimentalDefaultControls": {
+				"margin": true,
+				"padding": true
+			}
+		},
+		"color": {
+			"background": true,
+			"text": true,
+			"gradients": true
+		},
+		"borders": {
+			"radius": true,
+			"color": true,
+			"width": true,
+			"style": true,
+			"__experimentalDefaultControls": {
+				"radius": true,
+				"color": true,
+				"width": true,
+				"style": true
+			}
+		}
+	},
+	"textdomain": "lc-immeasurable-block-widgets-collection",
+	"editorScript": "file:./index.js",
+	"style": "file:./index.css"
+}

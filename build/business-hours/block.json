@@ -1,0 +1,146 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "lc-immeasurable-block-widgets-collection/business-hours",
+  "version": "0.1.0",
+  "title": "LC Business Hours",
+  "category": "lcibwc-widgets",
+  "icon": "clock",
+  "description": "Business Hours block to display opening and closing times.",
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Business Hours"
+    },
+    "hours": {
+      "type": "array",
+      "default": [
+        {
+          "day": "monday",
+          "openTime": "09:00",
+          "closeTime": "18:00",
+          "isClosed": false,
+          "closedText": "Closed"
+        },
+        {
+          "day": "tuesday",
+          "openTime": "09:00",
+          "closeTime": "18:00",
+          "isClosed": false,
+          "closedText": "Closed"
+        },
+        {
+          "day": "wednesday",
+          "openTime": "09:00",
+          "closeTime": "18:00",
+          "isClosed": false,
+          "closedText": "Closed"
+        },
+        {
+          "day": "thursday",
+          "openTime": "09:00",
+          "closeTime": "18:00",
+          "isClosed": false,
+          "closedText": "Closed"
+        },
+        {
+          "day": "friday",
+          "openTime": "09:00",
+          "closeTime": "18:00",
+          "isClosed": false,
+          "closedText": "Closed"
+        },
+        {
+          "day": "saturday",
+          "openTime": "10:00",
+          "closeTime": "16:00",
+          "isClosed": false,
+          "closedText": "Closed"
+        },
+        {
+          "day": "sunday",
+          "openTime": "",
+          "closeTime": "",
+          "isClosed": true,
+          "closedText": "Closed"
+        }
+      ]
+    },
+    "highlightToday": {
+      "type": "boolean",
+      "default": true
+    },
+    "timeFormat": {
+      "type": "string",
+      "default": "24"
+    },
+    "titleColor": {
+      "type": "string",
+      "default": ""
+    },
+    "containerBgColor": {
+      "type": "string",
+      "default": ""
+    },
+    "itemBgColor": {
+      "type": "string",
+      "default": ""
+    },
+    "itemTextColor": {
+      "type": "string",
+      "default": ""
+    },
+    "todayBgColor": {
+      "type": "string",
+      "default": ""
+    },
+    "todayTextColor": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ],
+    "html": false,
+    "typography": {
+      "fontSize": true,
+      "lineHeight": true,
+      "__experimentalFontFamily": true,
+      "__experimentalDefaultControls": {
+        "fontSize": true
+      }
+    },
+    "spacing": {
+      "margin": true,
+      "padding": true,
+      "__experimentalDefaultControls": {
+        "margin": true,
+        "padding": true
+      }
+    },
+    "color": {
+      "background": true,
+      "text": true,
+      "gradients": true
+    },
+    "borders": {
+      "radius": true,
+      "color": true,
+      "width": true,
+      "style": true,
+      "__experimentalDefaultControls": {
+        "radius": true,
+        "color": true,
+        "width": true,
+        "style": true
+      }
+    }
+  },
+  "textdomain": "lc-immeasurable-block-widgets-collection",
+  "editorScript": "file:./index.js",
+  "style": "file:./index.css",
+  "viewScript": "file:./view.js"
+}

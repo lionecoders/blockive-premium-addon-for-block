@@ -1,0 +1,35 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "lc-immeasurable-block-widgets-collection/category-list",
+	"version": "0.1.0",
+	"title": "LC Category List",
+	"category": "lcibwc-widgets",
+	"icon": "list-view",
+	"description": "WordPress category browser/list block.",
+	"attributes": {
+		"columns": {
+			"type": "number",
+			"default": 3
+		},
+		"showCount": {
+			"type": "boolean",
+			"default": true
+		},
+		"showDescription": {
+			"type": "boolean",
+			"default": false
+		},
+		"hideEmpty": {
+			"type": "boolean",
+			"default": true
+		},
+		"limit": {
+			"type": "number",
+			"default": 10
+		}
+	},
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./style-index.css",
+	"style": "file:./style-index.css"
+}

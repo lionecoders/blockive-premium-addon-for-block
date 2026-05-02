@@ -1,0 +1,40 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "lc-immeasurable-block-widgets-collection/team",
+	"version": "0.1.0",
+	"title": "LC Team",
+	"category": "lcibwc-widgets",
+	"icon": "groups",
+	"description": "Team members showcase block.",
+	"attributes": {
+		"members": {
+			"type": "array",
+			"default": [
+				{
+					"id": "1",
+					"name": "John Smith",
+					"role": "Team Lead",
+					"image": "",
+					"bio": "Experienced team lead with expertise in project management.",
+					"socialLinks": []
+				}
+			]
+		},
+		"columns": {
+			"type": "number",
+			"default": 3
+		},
+		"textColor": {
+			"type": "string",
+			"default": "#333333"
+		},
+		"bgColor": {
+			"type": "string",
+			"default": "#ffffff"
+		}
+	},
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./style-index.css",
+	"style": "file:./style-index.css"
+}

@@ -1,0 +1,68 @@
+.lcibwc-funfact-wrapper {
+	width: 100%;
+	margin: 20px 0;
+	padding: 30px;
+	background: #f9f9f9;
+	border-radius: 8px;
+	text-align: center;
+}
+
+.lcibwc-funfact-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.lcibwc-funfact-number {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 5px;
+	margin-bottom: 15px;
+}
+
+.lcibwc-funfact-prefix {
+	font-size: 36px;
+	font-weight: 700;
+	color: var(--lcibwc-funfact-number-color, #4f46e5);
+}
+
+.lcibwc-funfact-counter {
+	font-size: 48px;
+	font-weight: 700;
+	color: var(--lcibwc-funfact-number-color, #4f46e5);
+	display: inline-block;
+	min-width: 100px;
+	text-align: right;
+}
+
+.lcibwc-funfact-suffix {
+	font-size: 36px;
+	font-weight: 700;
+	color: var(--lcibwc-funfact-number-color, #4f46e5);
+}
+
+.lcibwc-funfact-title {
+	font-size: 18px;
+	font-weight: 600;
+	color: var(--lcibwc-funfact-text-color, #333333);
+	margin: 0;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+@media (max-width: 480px) {
+	.lcibwc-funfact-counter {
+		font-size: 36px;
+	}
+
+	.lcibwc-funfact-prefix,
+	.lcibwc-funfact-suffix {
+		font-size: 28px;
+	}
+
+	.lcibwc-funfact-title {
+		font-size: 14px;
+	}
+}

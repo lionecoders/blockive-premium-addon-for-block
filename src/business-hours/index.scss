@@ -1,0 +1,56 @@
+.lcibwc-business-hours-wrapper {
+	--lcibwc-bh-title-color: inherit;
+	--lcibwc-bh-container-bg: transparent;
+	--lcibwc-bh-item-bg: transparent;
+	--lcibwc-bh-item-text-color: inherit;
+	--lcibwc-bh-today-bg: rgba(0, 0, 0, 0.05);
+	--lcibwc-bh-today-text-color: inherit;
+
+	background-color: var(--lcibwc-bh-container-bg);
+	padding: 15px;
+	border-radius: 8px;
+	box-sizing: border-box;
+
+	.lcibwc-business-hours-title {
+		color: var(--lcibwc-bh-title-color);
+		margin-top: 0;
+		margin-bottom: 20px;
+		font-weight: 600;
+	}
+
+	.lcibwc-business-hours-list {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	.lcibwc-business-hours-item {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 12px 15px;
+		background-color: var(--lcibwc-bh-item-bg);
+		color: var(--lcibwc-bh-item-text-color);
+		border-radius: 4px;
+		transition: all 0.3s ease;
+
+		&.today {
+			background-color: var(--lcibwc-bh-today-bg);
+			color: var(--lcibwc-bh-today-text-color);
+			font-weight: 600;
+		}
+
+		.lcibwc-business-hours-day {
+			flex: 1;
+		}
+
+		.lcibwc-business-hours-time {
+			flex: 1;
+			text-align: right;
+
+			&.closed {
+				color: #e53e3e; /* Standard red for closed, can be overridden */
+			}
+		}
+	}
+}

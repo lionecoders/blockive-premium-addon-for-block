@@ -1,0 +1,40 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "lc-immeasurable-block-widgets-collection/lottie",
+	"version": "0.1.0",
+	"title": "LC Lottie",
+	"category": "lcibwc-widgets",
+	"icon": "format-image",
+	"description": "Lottie animation player block.",
+	"attributes": {
+		"animationUrl": {
+			"type": "string",
+			"default": ""
+		},
+		"width": {
+			"type": "string",
+			"default": "200px"
+		},
+		"height": {
+			"type": "string",
+			"default": "200px"
+		},
+		"loop": {
+			"type": "boolean",
+			"default": true
+		},
+		"autoplay": {
+			"type": "boolean",
+			"default": true
+		},
+		"align": {
+			"type": "string",
+			"default": "center"
+		}
+	},
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./style-index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js"
+}

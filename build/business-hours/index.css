@@ -1,0 +1,53 @@
+/*!******************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/business-hours/index.scss ***!
+  \******************************************************************************************************************************************************************************************************************************************************/
+.lcibwc-business-hours-wrapper {
+  --lcibwc-bh-title-color: inherit;
+  --lcibwc-bh-container-bg: transparent;
+  --lcibwc-bh-item-bg: transparent;
+  --lcibwc-bh-item-text-color: inherit;
+  --lcibwc-bh-today-bg: rgba(0, 0, 0, 0.05);
+  --lcibwc-bh-today-text-color: inherit;
+  background-color: var(--lcibwc-bh-container-bg);
+  padding: 15px;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+.lcibwc-business-hours-wrapper .lcibwc-business-hours-title {
+  color: var(--lcibwc-bh-title-color);
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+.lcibwc-business-hours-wrapper .lcibwc-business-hours-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.lcibwc-business-hours-wrapper .lcibwc-business-hours-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 15px;
+  background-color: var(--lcibwc-bh-item-bg);
+  color: var(--lcibwc-bh-item-text-color);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+.lcibwc-business-hours-wrapper .lcibwc-business-hours-item.today {
+  background-color: var(--lcibwc-bh-today-bg);
+  color: var(--lcibwc-bh-today-text-color);
+  font-weight: 600;
+}
+.lcibwc-business-hours-wrapper .lcibwc-business-hours-item .lcibwc-business-hours-day {
+  flex: 1;
+}
+.lcibwc-business-hours-wrapper .lcibwc-business-hours-item .lcibwc-business-hours-time {
+  flex: 1;
+  text-align: right;
+}
+.lcibwc-business-hours-wrapper .lcibwc-business-hours-item .lcibwc-business-hours-time.closed {
+  color: #e53e3e; /* Standard red for closed, can be overridden */
+}
+
+/*# sourceMappingURL=index.css.map*/

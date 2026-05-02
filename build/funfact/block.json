@@ -1,0 +1,48 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "lc-immeasurable-block-widgets-collection/funfact",
+  "version": "0.1.0",
+  "title": "LC Fun Fact",
+  "category": "lcibwc-widgets",
+  "icon": "chart-bar",
+  "description": "Animated statistics/counter block.",
+  "attributes": {
+    "number": {
+      "type": "string",
+      "default": "1000"
+    },
+    "suffix": {
+      "type": "string",
+      "default": "+"
+    },
+    "prefix": {
+      "type": "string",
+      "default": ""
+    },
+    "title": {
+      "type": "string",
+      "default": "Happy Clients"
+    },
+    "icon": {
+      "type": "string",
+      "default": ""
+    },
+    "numberColor": {
+      "type": "string",
+      "default": "#4f46e5"
+    },
+    "textColor": {
+      "type": "string",
+      "default": "#333333"
+    },
+    "duration": {
+      "type": "number",
+      "default": 1000
+    }
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./style-index.css",
+  "style": "file:./style-index.css",
+  "viewScript": "file:./view.js"
+}

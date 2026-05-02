@@ -1,0 +1,49 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "lc-immeasurable-block-widgets-collection/image-accordion",
+	"version": "0.1.0",
+	"title": "LC Image Accordion",
+	"category": "lcibwc-widgets",
+	"icon": "image",
+	"description": "Image accordion block with advanced styling options.",
+	"attributes": {
+		"items": {
+			"type": "array",
+			"default": [
+				{
+					"id": "1",
+					"title": "Image Accordion Item 1",
+					"imageUrl": "",
+					"content": "Content goes here..."
+				},
+				{
+					"id": "2",
+					"title": "Image Accordion Item 2",
+					"imageUrl": "",
+					"content": "Content goes here..."
+				}
+			]
+		},
+		"titleColor": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"contentColor": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"overlayOpacity": {
+			"type": "number",
+			"default": 0.7
+		},
+		"animationDuration": {
+			"type": "string",
+			"default": "0.3s"
+		}
+	},
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./style-index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js"
+}

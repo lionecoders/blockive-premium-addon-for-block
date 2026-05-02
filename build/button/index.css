@@ -1,0 +1,77 @@
+/*!**********************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/button/index.scss ***!
+  \**********************************************************************************************************************************************************************************************************************************************/
+.lcibwc-button-wrapper {
+  --lcibwc-btn-text-color: #ffffff;
+  --lcibwc-btn-bg-color: #3b82f6;
+  --lcibwc-btn-border-color: transparent;
+  --lcibwc-btn-text-color-hover: #ffffff;
+  --lcibwc-btn-bg-color-hover: #2563eb;
+  --lcibwc-btn-border-color-hover: transparent;
+  --lcibwc-btn-badge-text-color: #ffffff;
+  --lcibwc-btn-badge-bg-color: #ef4444;
+  --lcibwc-btn-icon-spacing: 8px;
+  --lcibwc-btn-width: auto;
+  --lcibwc-btn-justify: center;
+  display: flex;
+  justify-content: var(--lcibwc-btn-justify);
+  width: 100%;
+}
+.lcibwc-button-wrapper .lcibwc-button-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  background-color: var(--lcibwc-btn-bg-color);
+  color: var(--lcibwc-btn-text-color);
+  border: 1px solid var(--lcibwc-btn-border-color);
+  padding: 12px 24px;
+  border-radius: 4px; /* overridden by block supports if set */
+  transition: all 0.3s ease;
+  position: relative;
+  width: var(--lcibwc-btn-width);
+  cursor: pointer;
+}
+.lcibwc-button-wrapper .lcibwc-button-link:hover {
+  background-color: var(--lcibwc-btn-bg-color-hover);
+  color: var(--lcibwc-btn-text-color-hover);
+  border-color: var(--lcibwc-btn-border-color-hover);
+}
+.lcibwc-button-wrapper .lcibwc-button-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+}
+.lcibwc-button-wrapper .lcibwc-button-inner .lcibwc-button-icon {
+  display: flex;
+  align-items: center;
+}
+.lcibwc-button-wrapper .lcibwc-button-inner .lcibwc-button-icon--left {
+  margin-right: var(--lcibwc-btn-icon-spacing);
+}
+.lcibwc-button-wrapper .lcibwc-button-inner .lcibwc-button-icon--right {
+  margin-left: var(--lcibwc-btn-icon-spacing);
+}
+.lcibwc-button-wrapper .lcibwc-button-inner .lcibwc-button-text {
+  font-weight: 500;
+}
+.lcibwc-button-wrapper .lcibwc-button-inner .lcibwc-button-badge {
+  position: absolute;
+  top: -24px;
+  right: -10px;
+  background-color: var(--lcibwc-btn-badge-bg-color);
+  color: var(--lcibwc-btn-badge-text-color);
+  font-size: 11px;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 12px;
+  white-space: nowrap;
+  line-height: 1.2;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+  transform: translateX(50%);
+}
+
+/*# sourceMappingURL=index.css.map*/

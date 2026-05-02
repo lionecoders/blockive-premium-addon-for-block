@@ -1,1 +1,65 @@
-@keyframes lcFadeIn{0%{opacity:0}to{opacity:1}}@keyframes lcFadeInUp{0%{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}@keyframes lcFadeInDown{0%{opacity:0;transform:translateY(-30px)}to{opacity:1;transform:translateY(0)}}@keyframes lcZoomIn{0%{opacity:0;transform:scale(.8)}to{opacity:1;transform:scale(1)}}@keyframes lcSlideInLeft{0%{opacity:0;transform:translateX(50px)}to{opacity:1;transform:translateX(0)}}@keyframes lcSlideInRight{0%{opacity:0;transform:translateX(-50px)}to{opacity:1;transform:translateX(0)}}.lcibwc-animate-fadeIn{animation-fill-mode:both;animation-name:lcFadeIn}.lcibwc-animate-fadeInUp{animation-fill-mode:both;animation-name:lcFadeInUp}.lcibwc-animate-fadeInDown{animation-fill-mode:both;animation-name:lcFadeInDown}.lcibwc-animate-zoomIn{animation-fill-mode:both;animation-name:lcZoomIn}.lcibwc-animate-slideInLeft{animation-fill-mode:both;animation-name:lcSlideInLeft}.lcibwc-animate-slideInRight{animation-fill-mode:both;animation-name:lcSlideInRight}
+/*!*********************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/heading/style-index.css ***!
+  \*********************************************************************************************************************************************************************************/
+/* LC Heading Block Styles */
+
+@keyframes lcFadeIn {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+
+@keyframes lcFadeInUp {
+	from { opacity: 0; transform: translateY(30px); }
+	to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes lcFadeInDown {
+	from { opacity: 0; transform: translateY(-30px); }
+	to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes lcZoomIn {
+	from { opacity: 0; transform: scale(0.8); }
+	to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes lcSlideInLeft {
+	from { opacity: 0; transform: translateX(50px); }
+	to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes lcSlideInRight {
+	from { opacity: 0; transform: translateX(-50px); }
+	to { opacity: 1; transform: translateX(0); }
+}
+
+.lcibwc-animate-fadeIn {
+	animation-name: lcFadeIn;
+	animation-fill-mode: both;
+}
+
+.lcibwc-animate-fadeInUp {
+	animation-name: lcFadeInUp;
+	animation-fill-mode: both;
+}
+
+.lcibwc-animate-fadeInDown {
+	animation-name: lcFadeInDown;
+	animation-fill-mode: both;
+}
+
+.lcibwc-animate-zoomIn {
+	animation-name: lcZoomIn;
+	animation-fill-mode: both;
+}
+
+.lcibwc-animate-slideInLeft {
+	animation-name: lcSlideInLeft;
+	animation-fill-mode: both;
+}
+
+.lcibwc-animate-slideInRight {
+	animation-name: lcSlideInRight;
+	animation-fill-mode: both;
+}
+

@@ -1,0 +1,44 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "lc-immeasurable-block-widgets-collection/image-comparison",
+  "version": "0.1.0",
+  "title": "LC Image Comparison",
+  "category": "lcibwc-widgets",
+  "icon": "format-image",
+  "description": "Before/after image comparison slider block.",
+  "attributes": {
+    "beforeImage": {
+      "type": "string",
+      "default": ""
+    },
+    "afterImage": {
+      "type": "string",
+      "default": ""
+    },
+    "beforeLabel": {
+      "type": "string",
+      "default": "Before"
+    },
+    "afterLabel": {
+      "type": "string",
+      "default": "After"
+    },
+    "showLabels": {
+      "type": "boolean",
+      "default": true
+    },
+    "sliderPosition": {
+      "type": "number",
+      "default": 50
+    },
+    "height": {
+      "type": "string",
+      "default": "400px"
+    }
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./style-index.css",
+  "style": "file:./style-index.css",
+  "viewScript": "file:./view.js"
+}

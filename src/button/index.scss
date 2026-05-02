@@ -1,0 +1,81 @@
+.lcibwc-button-wrapper {
+	--lcibwc-btn-text-color: #ffffff;
+	--lcibwc-btn-bg-color: #3b82f6;
+	--lcibwc-btn-border-color: transparent;
+	--lcibwc-btn-text-color-hover: #ffffff;
+	--lcibwc-btn-bg-color-hover: #2563eb;
+	--lcibwc-btn-border-color-hover: transparent;
+	--lcibwc-btn-badge-text-color: #ffffff;
+	--lcibwc-btn-badge-bg-color: #ef4444;
+	--lcibwc-btn-icon-spacing: 8px;
+	--lcibwc-btn-width: auto;
+	--lcibwc-btn-justify: center;
+
+	display: flex;
+	justify-content: var(--lcibwc-btn-justify);
+	width: 100%;
+
+	.lcibwc-button-link {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		text-decoration: none;
+		background-color: var(--lcibwc-btn-bg-color);
+		color: var(--lcibwc-btn-text-color);
+		border: 1px solid var(--lcibwc-btn-border-color);
+		padding: 12px 24px;
+		border-radius: 4px; /* overridden by block supports if set */
+		transition: all 0.3s ease;
+		position: relative;
+		width: var(--lcibwc-btn-width);
+		cursor: pointer;
+
+		&:hover {
+			background-color: var(--lcibwc-btn-bg-color-hover);
+			color: var(--lcibwc-btn-text-color-hover);
+			border-color: var(--lcibwc-btn-border-color-hover);
+		}
+	}
+
+	.lcibwc-button-inner {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		position: relative;
+
+		.lcibwc-button-icon {
+			display: flex;
+			align-items: center;
+
+			&--left {
+				margin-right: var(--lcibwc-btn-icon-spacing);
+			}
+
+			&--right {
+				margin-left: var(--lcibwc-btn-icon-spacing);
+			}
+		}
+
+		.lcibwc-button-text {
+			font-weight: 500;
+		}
+
+		.lcibwc-button-badge {
+			position: absolute;
+			top: -24px;
+			right: -10px;
+			background-color: var(--lcibwc-btn-badge-bg-color);
+			color: var(--lcibwc-btn-badge-text-color);
+			font-size: 11px;
+			font-weight: bold;
+			padding: 2px 6px;
+			border-radius: 12px;
+			white-space: nowrap;
+			line-height: 1.2;
+			box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+			z-index: 2;
+			transform: translateX(50%);
+		}
+	}
+}

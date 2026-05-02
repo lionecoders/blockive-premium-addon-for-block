@@ -1,0 +1,39 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "lc-immeasurable-block-widgets-collection/mailchimp",
+  "version": "0.1.0",
+  "title": "LC MailChimp",
+  "category": "lcibwc-widgets",
+  "icon": "email",
+  "description": "MailChimp newsletter subscription block.",
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Subscribe to Our Newsletter"
+    },
+    "subtitle": {
+      "type": "string",
+      "default": "Get the latest updates delivered to your inbox"
+    },
+    "placeholderText": {
+      "type": "string",
+      "default": "Enter your email"
+    },
+    "buttonText": {
+      "type": "string",
+      "default": "Subscribe"
+    },
+    "bgColor": {
+      "type": "string",
+      "default": "#4f46e5"
+    },
+    "textColor": {
+      "type": "string",
+      "default": "#ffffff"
+    }
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./style-index.css",
+  "style": "file:./style-index.css"
+}

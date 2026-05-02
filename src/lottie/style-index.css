@@ -1,0 +1,25 @@
+.lcibwc-lottie-wrapper {
+	width: 100%;
+	margin: 20px 0;
+}
+
+.lcibwc-lottie-container {
+	display: inline-block;
+	margin: 0 auto;
+}
+
+.lcibwc-lottie-wrapper[style*="text-align: center"] .lcibwc-lottie-container {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+
+.lcibwc-lottie-wrapper[style*="text-align: right"] .lcibwc-lottie-container {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.lcibwc-lottie-wrapper[style*="text-align: left"] .lcibwc-lottie-container {
+	display: flex;
+	justify-content: flex-start;
+}

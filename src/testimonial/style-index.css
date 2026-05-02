@@ -1,0 +1,117 @@
+.lcibwc-testimonial-wrapper {
+	width: 100%;
+	margin: 20px 0;
+	background: var(--lcibwc-testimonial-bg-color, #ffffff);
+	padding: 30px;
+	border-radius: 8px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.lcibwc-testimonial-slider {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+}
+
+.lcibwc-testimonial-item {
+	display: none;
+	opacity: 0;
+	transition: opacity 0.5s ease-in-out;
+	text-align: center;
+	padding: 20px;
+}
+
+.lcibwc-testimonial-item.active,
+.lcibwc-testimonial-item[data-index="0"] {
+	display: block;
+	opacity: 1;
+}
+
+.lcibwc-testimonial-image {
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	object-fit: cover;
+	margin: 0 auto 15px;
+	border: 3px solid #4f46e5;
+}
+
+.lcibwc-testimonial-content {
+	font-size: 16px;
+	color: var(--lcibwc-testimonial-text-color, #333333);
+	font-style: italic;
+	margin: 15px 0;
+	line-height: 1.6;
+}
+
+.lcibwc-testimonial-rating {
+	margin: 10px 0;
+	letter-spacing: 2px;
+	color: #ffc107;
+	font-size: 18px;
+}
+
+.lcibwc-testimonial-name {
+	font-weight: 600;
+	font-size: 16px;
+	color: var(--lcibwc-testimonial-text-color, #333333);
+	margin: 10px 0 5px 0;
+}
+
+.lcibwc-testimonial-designation {
+	font-size: 14px;
+	color: #999999;
+	margin: 0;
+}
+
+.lcibwc-arrow {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background: rgba(79, 70, 229, 0.8);
+	color: white;
+	border: none;
+	font-size: 24px;
+	padding: 10px 15px;
+	cursor: pointer;
+	border-radius: 4px;
+	transition: background 0.3s;
+	z-index: 10;
+}
+
+.lcibwc-arrow:hover {
+	background: rgba(79, 70, 229, 1);
+}
+
+.lcibwc-arrow.lcibwc-prev {
+	left: 10px;
+}
+
+.lcibwc-arrow.lcibwc-next {
+	right: 10px;
+}
+
+.lcibwc-testimonial-dots {
+	text-align: center;
+	padding: 20px 0 0 0;
+	margin-top: 20px;
+}
+
+.lcibwc-dot {
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background: #ddd;
+	border: none;
+	cursor: pointer;
+	margin: 0 5px;
+	transition: background 0.3s;
+}
+
+.lcibwc-dot.active {
+	background: #4f46e5;
+}
+
+.lcibwc-dot:hover {
+	background: #999;
+}

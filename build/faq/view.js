@@ -1,1 +1,43 @@
-document.addEventListener("DOMContentLoaded",()=>{document.querySelectorAll(".lc-faq-wrapper").forEach(e=>{const c=e.querySelectorAll(".lc-faq-item");c.forEach(e=>{const l=e.querySelector(".lc-faq-header");l&&l.addEventListener("click",()=>{const l=e.classList.contains("active");if(c.forEach(e=>{e.classList.remove("active");const c=e.querySelector(".lc-faq-content");c&&(c.style.display="none");const l=e.querySelector(".lc-icon-open"),t=e.querySelector(".lc-icon-close");l&&(l.style.display="inline-block"),t&&(t.style.display="none")}),!l){e.classList.add("active");const c=e.querySelector(".lc-faq-content");c&&(c.style.display="block");const l=e.querySelector(".lc-icon-open"),t=e.querySelector(".lc-icon-close");l&&(l.style.display="none"),t&&(t.style.display="inline-block")}})})})});
+/******/ (() => { // webpackBootstrap
+/*!*************************!*\
+  !*** ./src/faq/view.js ***!
+  \*************************/
+document.addEventListener('DOMContentLoaded', () => {
+  const wrappers = document.querySelectorAll('.lc-faq-wrapper');
+  wrappers.forEach(wrapper => {
+    const items = wrapper.querySelectorAll('.lc-faq-item');
+    items.forEach(item => {
+      const header = item.querySelector('.lc-faq-header');
+      if (header) {
+        header.addEventListener('click', () => {
+          const isActive = item.classList.contains('active');
+
+          // Close all others
+          items.forEach(i => {
+            i.classList.remove('active');
+            const content = i.querySelector('.lc-faq-content');
+            if (content) content.style.display = 'none';
+            const iconOpen = i.querySelector('.lc-icon-open');
+            const iconClose = i.querySelector('.lc-icon-close');
+            if (iconOpen) iconOpen.style.display = 'inline-block';
+            if (iconClose) iconClose.style.display = 'none';
+          });
+
+          // Toggle current
+          if (!isActive) {
+            item.classList.add('active');
+            const content = item.querySelector('.lc-faq-content');
+            if (content) content.style.display = 'block';
+            const iconOpen = item.querySelector('.lc-icon-open');
+            const iconClose = item.querySelector('.lc-icon-close');
+            if (iconOpen) iconOpen.style.display = 'none';
+            if (iconClose) iconClose.style.display = 'inline-block';
+          }
+        });
+      }
+    });
+  });
+});
+/******/ })()
+;
+//# sourceMappingURL=view.js.map

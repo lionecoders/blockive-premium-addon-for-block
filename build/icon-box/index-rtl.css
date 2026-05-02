@@ -1,0 +1,104 @@
+/*!************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/icon-box/index.scss ***!
+  \************************************************************************************************************************************************************************************************************************************************/
+.lcibwc-icon-box-wrapper {
+  --lcibwc-ib-icon-size: 40px;
+  --lcibwc-ib-icon-color: #3b82f6;
+  --lcibwc-ib-icon-bg: rgba(59, 130, 246, 0.1);
+  --lcibwc-ib-icon-padding: 20px;
+  --lcibwc-ib-icon-radius: 20px;
+  --lcibwc-ib-title-color: inherit;
+  --lcibwc-ib-desc-color: inherit;
+  --lcibwc-ib-box-bg: transparent;
+  --lcibwc-ib-alignment: center;
+  background-color: var(--lcibwc-ib-box-bg);
+  text-align: var(--lcibwc-ib-alignment);
+  display: flex;
+  transition: all 0.3s ease;
+}
+.lcibwc-icon-box-wrapper .lcibwc-icon-box-link {
+  display: flex;
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+}
+.lcibwc-icon-box-wrapper.lcibwc-icon-box--top {
+  flex-direction: column;
+  align-items: var(--lcibwc-ib-alignment);
+}
+.lcibwc-icon-box-wrapper.lcibwc-icon-box--top .lcibwc-icon-box-link {
+  flex-direction: column;
+  align-items: var(--lcibwc-ib-alignment);
+}
+.lcibwc-icon-box-wrapper.lcibwc-icon-box--top .lcibwc-icon-box-icon-wrapper {
+  margin-bottom: 20px;
+}
+.lcibwc-icon-box-wrapper.lcibwc-icon-box--top {
+  /* Align items fix for flex column */
+}
+.lcibwc-icon-box-wrapper.lcibwc-icon-box--top[style*="--lcibwc-ib-alignment: left"] {
+  align-items: flex-start;
+}
+.lcibwc-icon-box-wrapper.lcibwc-icon-box--top[style*="--lcibwc-ib-alignment: center"] {
+  align-items: center;
+}
+.lcibwc-icon-box-wrapper.lcibwc-icon-box--top[style*="--lcibwc-ib-alignment: right"] {
+  align-items: flex-end;
+}
+.lcibwc-icon-box-wrapper.lcibwc-icon-box--left {
+  flex-direction: row;
+  text-align: right;
+  align-items: flex-start;
+}
+.lcibwc-icon-box-wrapper.lcibwc-icon-box--left .lcibwc-icon-box-link {
+  flex-direction: row;
+  text-align: right;
+  align-items: flex-start;
+}
+.lcibwc-icon-box-wrapper.lcibwc-icon-box--left .lcibwc-icon-box-icon-wrapper {
+  margin-left: 20px;
+  flex-shrink: 0;
+}
+.lcibwc-icon-box-wrapper.lcibwc-icon-box--right {
+  flex-direction: row-reverse;
+  text-align: left;
+  align-items: flex-start;
+}
+.lcibwc-icon-box-wrapper.lcibwc-icon-box--right .lcibwc-icon-box-link {
+  flex-direction: row-reverse;
+  text-align: left;
+  align-items: flex-start;
+}
+.lcibwc-icon-box-wrapper.lcibwc-icon-box--right .lcibwc-icon-box-icon-wrapper {
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+.lcibwc-icon-box-wrapper .lcibwc-icon-box-icon-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--lcibwc-ib-icon-bg);
+  padding: var(--lcibwc-ib-icon-padding);
+  border-radius: var(--lcibwc-ib-icon-radius);
+  transition: all 0.3s ease;
+}
+.lcibwc-icon-box-wrapper .lcibwc-icon-box-icon-wrapper .lcibwc-icon-box-icon {
+  font-size: var(--lcibwc-ib-icon-size);
+  color: var(--lcibwc-ib-icon-color);
+  line-height: 1;
+  transition: all 0.3s ease;
+}
+.lcibwc-icon-box-wrapper .lcibwc-icon-box-content {
+  flex: 1;
+}
+.lcibwc-icon-box-wrapper .lcibwc-icon-box-content .lcibwc-icon-box-title {
+  color: var(--lcibwc-ib-title-color);
+  margin-top: 0;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+.lcibwc-icon-box-wrapper .lcibwc-icon-box-content .lcibwc-icon-box-description {
+  color: var(--lcibwc-ib-desc-color);
+  margin: 0;
+  line-height: 1.6;
+}

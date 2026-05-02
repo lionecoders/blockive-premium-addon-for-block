@@ -103,6 +103,339 @@ return array(
 		'style' => 'file:./index.css',
 		'viewScript' => 'file:./view.js'
 	),
+	'business-hours' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'lc-immeasurable-block-widgets-collection/business-hours',
+		'version' => '0.1.0',
+		'title' => 'LC Business Hours',
+		'category' => 'lcibwc-widgets',
+		'icon' => 'clock',
+		'description' => 'Business Hours block to display opening and closing times.',
+		'attributes' => array(
+			'title' => array(
+				'type' => 'string',
+				'default' => 'Business Hours'
+			),
+			'hours' => array(
+				'type' => 'array',
+				'default' => array(
+					array(
+						'day' => 'monday',
+						'openTime' => '09:00',
+						'closeTime' => '18:00',
+						'isClosed' => false,
+						'closedText' => 'Closed'
+					),
+					array(
+						'day' => 'tuesday',
+						'openTime' => '09:00',
+						'closeTime' => '18:00',
+						'isClosed' => false,
+						'closedText' => 'Closed'
+					),
+					array(
+						'day' => 'wednesday',
+						'openTime' => '09:00',
+						'closeTime' => '18:00',
+						'isClosed' => false,
+						'closedText' => 'Closed'
+					),
+					array(
+						'day' => 'thursday',
+						'openTime' => '09:00',
+						'closeTime' => '18:00',
+						'isClosed' => false,
+						'closedText' => 'Closed'
+					),
+					array(
+						'day' => 'friday',
+						'openTime' => '09:00',
+						'closeTime' => '18:00',
+						'isClosed' => false,
+						'closedText' => 'Closed'
+					),
+					array(
+						'day' => 'saturday',
+						'openTime' => '10:00',
+						'closeTime' => '16:00',
+						'isClosed' => false,
+						'closedText' => 'Closed'
+					),
+					array(
+						'day' => 'sunday',
+						'openTime' => '',
+						'closeTime' => '',
+						'isClosed' => true,
+						'closedText' => 'Closed'
+					)
+				)
+			),
+			'highlightToday' => array(
+				'type' => 'boolean',
+				'default' => true
+			),
+			'timeFormat' => array(
+				'type' => 'string',
+				'default' => '24'
+			),
+			'titleColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'containerBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'itemBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'itemTextColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'todayBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'todayTextColor' => array(
+				'type' => 'string',
+				'default' => ''
+			)
+		),
+		'supports' => array(
+			'align' => array(
+				'wide',
+				'full'
+			),
+			'html' => false,
+			'typography' => array(
+				'fontSize' => true,
+				'lineHeight' => true,
+				'__experimentalFontFamily' => true,
+				'__experimentalDefaultControls' => array(
+					'fontSize' => true
+				)
+			),
+			'spacing' => array(
+				'margin' => true,
+				'padding' => true,
+				'__experimentalDefaultControls' => array(
+					'margin' => true,
+					'padding' => true
+				)
+			),
+			'color' => array(
+				'background' => true,
+				'text' => true,
+				'gradients' => true
+			),
+			'borders' => array(
+				'radius' => true,
+				'color' => true,
+				'width' => true,
+				'style' => true,
+				'__experimentalDefaultControls' => array(
+					'radius' => true,
+					'color' => true,
+					'width' => true,
+					'style' => true
+				)
+			)
+		),
+		'textdomain' => 'lc-immeasurable-block-widgets-collection',
+		'editorScript' => 'file:./index.js',
+		'style' => 'file:./index.css',
+		'viewScript' => 'file:./view.js'
+	),
+	'button' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'lc-immeasurable-block-widgets-collection/button',
+		'version' => '0.1.0',
+		'title' => 'LC Button',
+		'category' => 'lcibwc-widgets',
+		'icon' => 'button',
+		'description' => 'A highly customizable button with icon and badge support.',
+		'attributes' => array(
+			'text' => array(
+				'type' => 'string',
+				'default' => 'Click Here'
+			),
+			'url' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'linkTarget' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'showIcon' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'icon' => array(
+				'type' => 'string',
+				'default' => 'fas fa-arrow-right'
+			),
+			'iconPosition' => array(
+				'type' => 'string',
+				'default' => 'right'
+			),
+			'badgeText' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'alignment' => array(
+				'type' => 'string',
+				'default' => 'center'
+			),
+			'buttonWidth' => array(
+				'type' => 'string',
+				'default' => 'auto'
+			),
+			'textColor' => array(
+				'type' => 'string',
+				'default' => '#ffffff'
+			),
+			'bgColor' => array(
+				'type' => 'string',
+				'default' => '#3b82f6'
+			),
+			'textColorHover' => array(
+				'type' => 'string',
+				'default' => '#ffffff'
+			),
+			'bgColorHover' => array(
+				'type' => 'string',
+				'default' => '#2563eb'
+			),
+			'borderColor' => array(
+				'type' => 'string',
+				'default' => 'transparent'
+			),
+			'borderColorHover' => array(
+				'type' => 'string',
+				'default' => 'transparent'
+			),
+			'badgeTextColor' => array(
+				'type' => 'string',
+				'default' => '#ffffff'
+			),
+			'badgeBgColor' => array(
+				'type' => 'string',
+				'default' => '#ef4444'
+			),
+			'iconSpacing' => array(
+				'type' => 'number',
+				'default' => 8
+			)
+		),
+		'supports' => array(
+			'align' => array(
+				'wide',
+				'full'
+			),
+			'html' => false,
+			'typography' => array(
+				'fontSize' => true,
+				'lineHeight' => true,
+				'__experimentalFontFamily' => true,
+				'__experimentalDefaultControls' => array(
+					'fontSize' => true
+				)
+			),
+			'spacing' => array(
+				'margin' => true,
+				'padding' => true,
+				'__experimentalDefaultControls' => array(
+					'margin' => true,
+					'padding' => true
+				)
+			),
+			'borders' => array(
+				'radius' => true,
+				'color' => false,
+				'width' => true,
+				'style' => true,
+				'__experimentalDefaultControls' => array(
+					'radius' => true,
+					'width' => true,
+					'style' => true
+				)
+			)
+		),
+		'textdomain' => 'lc-immeasurable-block-widgets-collection',
+		'editorScript' => 'file:./index.js',
+		'style' => 'file:./index.css'
+	),
+	'category-list' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'lc-immeasurable-block-widgets-collection/category-list',
+		'version' => '0.1.0',
+		'title' => 'LC Category List',
+		'category' => 'lcibwc-widgets',
+		'icon' => 'list-view',
+		'description' => 'WordPress category browser/list block.',
+		'attributes' => array(
+			'columns' => array(
+				'type' => 'number',
+				'default' => 3
+			),
+			'showCount' => array(
+				'type' => 'boolean',
+				'default' => true
+			),
+			'showDescription' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'hideEmpty' => array(
+				'type' => 'boolean',
+				'default' => true
+			),
+			'limit' => array(
+				'type' => 'number',
+				'default' => 10
+			)
+		),
+		'editorScript' => 'file:./index.js',
+		'editorStyle' => 'file:./style-index.css',
+		'style' => 'file:./style-index.css'
+	),
+	'contact-form-7' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'lc-immeasurable-block-widgets-collection/contact-form-7',
+		'version' => '0.1.0',
+		'title' => 'LC Contact Form 7',
+		'category' => 'lcibwc-widgets',
+		'icon' => 'email-alt',
+		'description' => 'Contact Form 7 integration block.',
+		'attributes' => array(
+			'formId' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'showTitle' => array(
+				'type' => 'boolean',
+				'default' => true
+			),
+			'title' => array(
+				'type' => 'string',
+				'default' => 'Contact Us'
+			),
+			'description' => array(
+				'type' => 'string',
+				'default' => 'Send us a message'
+			)
+		),
+		'editorScript' => 'file:./index.js',
+		'editorStyle' => 'file:./style-index.css',
+		'style' => 'file:./style-index.css'
+	),
 	'countdown-timer' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
@@ -441,6 +774,54 @@ return array(
 		'style' => 'file:./index.css',
 		'viewScript' => 'file:./view.js'
 	),
+	'funfact' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'lc-immeasurable-block-widgets-collection/funfact',
+		'version' => '0.1.0',
+		'title' => 'LC Fun Fact',
+		'category' => 'lcibwc-widgets',
+		'icon' => 'chart-bar',
+		'description' => 'Animated statistics/counter block.',
+		'attributes' => array(
+			'number' => array(
+				'type' => 'string',
+				'default' => '1000'
+			),
+			'suffix' => array(
+				'type' => 'string',
+				'default' => '+'
+			),
+			'prefix' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'title' => array(
+				'type' => 'string',
+				'default' => 'Happy Clients'
+			),
+			'icon' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'numberColor' => array(
+				'type' => 'string',
+				'default' => '#4f46e5'
+			),
+			'textColor' => array(
+				'type' => 'string',
+				'default' => '#333333'
+			),
+			'duration' => array(
+				'type' => 'number',
+				'default' => 1000
+			)
+		),
+		'editorScript' => 'file:./index.js',
+		'editorStyle' => 'file:./style-index.css',
+		'style' => 'file:./style-index.css',
+		'viewScript' => 'file:./view.js'
+	),
 	'heading' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
@@ -562,6 +943,428 @@ return array(
 		'editorScript' => 'file:./index.js',
 		'style' => 'file:./index.css'
 	),
+	'icon-box' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'lc-immeasurable-block-widgets-collection/icon-box',
+		'version' => '0.1.0',
+		'title' => 'LC Icon Box',
+		'category' => 'lcibwc-widgets',
+		'icon' => 'info',
+		'description' => 'An icon box that displays an icon, title, description, and link.',
+		'attributes' => array(
+			'icon' => array(
+				'type' => 'string',
+				'default' => 'fas fa-star'
+			),
+			'title' => array(
+				'type' => 'string',
+				'default' => 'Icon Box Title'
+			),
+			'titleTag' => array(
+				'type' => 'string',
+				'default' => 'h3'
+			),
+			'description' => array(
+				'type' => 'string',
+				'default' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+			),
+			'url' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'linkTarget' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'iconPosition' => array(
+				'type' => 'string',
+				'default' => 'top'
+			),
+			'iconSize' => array(
+				'type' => 'number',
+				'default' => 40
+			),
+			'iconColor' => array(
+				'type' => 'string',
+				'default' => '#3b82f6'
+			),
+			'iconBgColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(59, 130, 246, 0.1)'
+			),
+			'titleColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'descColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'boxBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'iconPadding' => array(
+				'type' => 'number',
+				'default' => 20
+			),
+			'iconBorderRadius' => array(
+				'type' => 'number',
+				'default' => 20
+			),
+			'boxAlignment' => array(
+				'type' => 'string',
+				'default' => 'center'
+			)
+		),
+		'supports' => array(
+			'align' => array(
+				'wide',
+				'full'
+			),
+			'html' => false,
+			'typography' => array(
+				'fontSize' => true,
+				'lineHeight' => true,
+				'__experimentalFontFamily' => true,
+				'__experimentalDefaultControls' => array(
+					'fontSize' => true
+				)
+			),
+			'spacing' => array(
+				'margin' => true,
+				'padding' => true,
+				'__experimentalDefaultControls' => array(
+					'margin' => true,
+					'padding' => true
+				)
+			),
+			'color' => array(
+				'background' => true,
+				'text' => true,
+				'gradients' => true
+			),
+			'borders' => array(
+				'radius' => true,
+				'color' => true,
+				'width' => true,
+				'style' => true,
+				'__experimentalDefaultControls' => array(
+					'radius' => true,
+					'color' => true,
+					'width' => true,
+					'style' => true
+				)
+			)
+		),
+		'textdomain' => 'lc-immeasurable-block-widgets-collection',
+		'editorScript' => 'file:./index.js',
+		'style' => 'file:./index.css'
+	),
+	'image-accordion' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'lc-immeasurable-block-widgets-collection/image-accordion',
+		'version' => '0.1.0',
+		'title' => 'LC Image Accordion',
+		'category' => 'lcibwc-widgets',
+		'icon' => 'image',
+		'description' => 'Image accordion block with advanced styling options.',
+		'attributes' => array(
+			'items' => array(
+				'type' => 'array',
+				'default' => array(
+					array(
+						'id' => '1',
+						'title' => 'Image Accordion Item 1',
+						'imageUrl' => '',
+						'content' => 'Content goes here...'
+					),
+					array(
+						'id' => '2',
+						'title' => 'Image Accordion Item 2',
+						'imageUrl' => '',
+						'content' => 'Content goes here...'
+					)
+				)
+			),
+			'titleColor' => array(
+				'type' => 'string',
+				'default' => '#ffffff'
+			),
+			'contentColor' => array(
+				'type' => 'string',
+				'default' => '#ffffff'
+			),
+			'overlayOpacity' => array(
+				'type' => 'number',
+				'default' => 0.7
+			),
+			'animationDuration' => array(
+				'type' => 'string',
+				'default' => '0.3s'
+			)
+		),
+		'editorScript' => 'file:./index.js',
+		'editorStyle' => 'file:./style-index.css',
+		'style' => 'file:./style-index.css',
+		'viewScript' => 'file:./view.js'
+	),
+	'image-box' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'lc-immeasurable-block-widgets-collection/image-box',
+		'version' => '0.1.0',
+		'title' => 'LC Image Box',
+		'category' => 'lcibwc-widgets',
+		'icon' => 'format-image',
+		'description' => 'An image box that displays an image, title, description, and link.',
+		'attributes' => array(
+			'imageUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'imageId' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'imageAlt' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'title' => array(
+				'type' => 'string',
+				'default' => 'Image Box Title'
+			),
+			'titleTag' => array(
+				'type' => 'string',
+				'default' => 'h3'
+			),
+			'description' => array(
+				'type' => 'string',
+				'default' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+			),
+			'linkUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'linkText' => array(
+				'type' => 'string',
+				'default' => 'Read More'
+			),
+			'linkTarget' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'imagePosition' => array(
+				'type' => 'string',
+				'default' => 'top'
+			),
+			'contentAlign' => array(
+				'type' => 'string',
+				'default' => 'center'
+			),
+			'verticalAlign' => array(
+				'type' => 'string',
+				'default' => 'top'
+			),
+			'imageSize' => array(
+				'type' => 'string',
+				'default' => '100%'
+			),
+			'imageRadius' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'titleColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'descColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'linkColor' => array(
+				'type' => 'string',
+				'default' => '#3b82f6'
+			),
+			'boxBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'imageSpacing' => array(
+				'type' => 'number',
+				'default' => 20
+			)
+		),
+		'supports' => array(
+			'align' => array(
+				'wide',
+				'full'
+			),
+			'html' => false,
+			'typography' => array(
+				'fontSize' => true,
+				'lineHeight' => true,
+				'__experimentalFontFamily' => true,
+				'__experimentalDefaultControls' => array(
+					'fontSize' => true
+				)
+			),
+			'spacing' => array(
+				'margin' => true,
+				'padding' => true,
+				'__experimentalDefaultControls' => array(
+					'margin' => true,
+					'padding' => true
+				)
+			),
+			'color' => array(
+				'background' => true,
+				'text' => true,
+				'gradients' => true
+			),
+			'borders' => array(
+				'radius' => true,
+				'color' => true,
+				'width' => true,
+				'style' => true,
+				'__experimentalDefaultControls' => array(
+					'radius' => true,
+					'color' => true,
+					'width' => true,
+					'style' => true
+				)
+			)
+		),
+		'textdomain' => 'lc-immeasurable-block-widgets-collection',
+		'editorScript' => 'file:./index.js',
+		'style' => 'file:./index.css'
+	),
+	'image-comparison' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'lc-immeasurable-block-widgets-collection/image-comparison',
+		'version' => '0.1.0',
+		'title' => 'LC Image Comparison',
+		'category' => 'lcibwc-widgets',
+		'icon' => 'format-image',
+		'description' => 'Before/after image comparison slider block.',
+		'attributes' => array(
+			'beforeImage' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'afterImage' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'beforeLabel' => array(
+				'type' => 'string',
+				'default' => 'Before'
+			),
+			'afterLabel' => array(
+				'type' => 'string',
+				'default' => 'After'
+			),
+			'showLabels' => array(
+				'type' => 'boolean',
+				'default' => true
+			),
+			'sliderPosition' => array(
+				'type' => 'number',
+				'default' => 50
+			),
+			'height' => array(
+				'type' => 'string',
+				'default' => '400px'
+			)
+		),
+		'editorScript' => 'file:./index.js',
+		'editorStyle' => 'file:./style-index.css',
+		'style' => 'file:./style-index.css',
+		'viewScript' => 'file:./view.js'
+	),
+	'lottie' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'lc-immeasurable-block-widgets-collection/lottie',
+		'version' => '0.1.0',
+		'title' => 'LC Lottie',
+		'category' => 'lcibwc-widgets',
+		'icon' => 'format-image',
+		'description' => 'Lottie animation player block.',
+		'attributes' => array(
+			'animationUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'width' => array(
+				'type' => 'string',
+				'default' => '200px'
+			),
+			'height' => array(
+				'type' => 'string',
+				'default' => '200px'
+			),
+			'loop' => array(
+				'type' => 'boolean',
+				'default' => true
+			),
+			'autoplay' => array(
+				'type' => 'boolean',
+				'default' => true
+			),
+			'align' => array(
+				'type' => 'string',
+				'default' => 'center'
+			)
+		),
+		'editorScript' => 'file:./index.js',
+		'editorStyle' => 'file:./style-index.css',
+		'style' => 'file:./style-index.css',
+		'viewScript' => 'file:./view.js'
+	),
+	'mailchimp' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'lc-immeasurable-block-widgets-collection/mailchimp',
+		'version' => '0.1.0',
+		'title' => 'LC MailChimp',
+		'category' => 'lcibwc-widgets',
+		'icon' => 'email',
+		'description' => 'MailChimp newsletter subscription block.',
+		'attributes' => array(
+			'title' => array(
+				'type' => 'string',
+				'default' => 'Subscribe to Our Newsletter'
+			),
+			'subtitle' => array(
+				'type' => 'string',
+				'default' => 'Get the latest updates delivered to your inbox'
+			),
+			'placeholderText' => array(
+				'type' => 'string',
+				'default' => 'Enter your email'
+			),
+			'buttonText' => array(
+				'type' => 'string',
+				'default' => 'Subscribe'
+			),
+			'bgColor' => array(
+				'type' => 'string',
+				'default' => '#4f46e5'
+			),
+			'textColor' => array(
+				'type' => 'string',
+				'default' => '#ffffff'
+			)
+		),
+		'editorScript' => 'file:./index.js',
+		'editorStyle' => 'file:./style-index.css',
+		'style' => 'file:./style-index.css'
+	),
 	'pie-chart' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
@@ -639,6 +1442,53 @@ return array(
 		'editorScript' => 'file:./index.js',
 		'style' => 'file:./index.css',
 		'viewScript' => 'file:./view.js'
+	),
+	'post-grid' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'lc-immeasurable-block-widgets-collection/post-grid',
+		'version' => '0.1.0',
+		'title' => 'LC Post Grid',
+		'category' => 'lcibwc-widgets',
+		'icon' => 'grid-view',
+		'description' => 'Dynamic post grid/listing block.',
+		'attributes' => array(
+			'columns' => array(
+				'type' => 'number',
+				'default' => 3
+			),
+			'postsPerPage' => array(
+				'type' => 'number',
+				'default' => 9
+			),
+			'orderBy' => array(
+				'type' => 'string',
+				'default' => 'date'
+			),
+			'order' => array(
+				'type' => 'string',
+				'default' => 'desc'
+			),
+			'showImage' => array(
+				'type' => 'boolean',
+				'default' => true
+			),
+			'showExcerpt' => array(
+				'type' => 'boolean',
+				'default' => true
+			),
+			'showDate' => array(
+				'type' => 'boolean',
+				'default' => true
+			),
+			'showAuthor' => array(
+				'type' => 'boolean',
+				'default' => true
+			)
+		),
+		'editorScript' => 'file:./index.js',
+		'editorStyle' => 'file:./style-index.css',
+		'style' => 'file:./style-index.css'
 	),
 	'pricing-table' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
@@ -1058,5 +1908,139 @@ return array(
 		'editorScript' => 'file:./index.js',
 		'style' => 'file:./index.css',
 		'viewScript' => 'file:./view.js'
+	),
+	'team' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'lc-immeasurable-block-widgets-collection/team',
+		'version' => '0.1.0',
+		'title' => 'LC Team',
+		'category' => 'lcibwc-widgets',
+		'icon' => 'groups',
+		'description' => 'Team members showcase block.',
+		'attributes' => array(
+			'members' => array(
+				'type' => 'array',
+				'default' => array(
+					array(
+						'id' => '1',
+						'name' => 'John Smith',
+						'role' => 'Team Lead',
+						'image' => '',
+						'bio' => 'Experienced team lead with expertise in project management.',
+						'socialLinks' => array(
+							
+						)
+					)
+				)
+			),
+			'columns' => array(
+				'type' => 'number',
+				'default' => 3
+			),
+			'textColor' => array(
+				'type' => 'string',
+				'default' => '#333333'
+			),
+			'bgColor' => array(
+				'type' => 'string',
+				'default' => '#ffffff'
+			)
+		),
+		'editorScript' => 'file:./index.js',
+		'editorStyle' => 'file:./style-index.css',
+		'style' => 'file:./style-index.css'
+	),
+	'testimonial' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'lc-immeasurable-block-widgets-collection/testimonial',
+		'version' => '0.1.0',
+		'title' => 'LC Testimonial',
+		'category' => 'lcibwc-widgets',
+		'icon' => 'format-quote',
+		'description' => 'Customer testimonials slider block.',
+		'attributes' => array(
+			'testimonials' => array(
+				'type' => 'array',
+				'default' => array(
+					array(
+						'id' => '1',
+						'name' => 'John Doe',
+						'designation' => 'CEO',
+						'image' => '',
+						'content' => 'This is an amazing product! Highly recommended.',
+						'rating' => 5
+					)
+				)
+			),
+			'style' => array(
+				'type' => 'string',
+				'default' => 'style1'
+			),
+			'showRating' => array(
+				'type' => 'boolean',
+				'default' => true
+			),
+			'showDots' => array(
+				'type' => 'boolean',
+				'default' => true
+			),
+			'showArrows' => array(
+				'type' => 'boolean',
+				'default' => true
+			),
+			'textColor' => array(
+				'type' => 'string',
+				'default' => '#333333'
+			),
+			'bgColor' => array(
+				'type' => 'string',
+				'default' => '#ffffff'
+			)
+		),
+		'editorScript' => 'file:./index.js',
+		'editorStyle' => 'file:./style-index.css',
+		'style' => 'file:./style-index.css',
+		'viewScript' => 'file:./view.js'
+	),
+	'video' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'lc-immeasurable-block-widgets-collection/video',
+		'version' => '0.1.0',
+		'title' => 'LC Video',
+		'category' => 'lcibwc-widgets',
+		'icon' => 'video-alt',
+		'description' => 'Video embedding block with customization options.',
+		'attributes' => array(
+			'videoUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'width' => array(
+				'type' => 'string',
+				'default' => '100%'
+			),
+			'height' => array(
+				'type' => 'string',
+				'default' => '400px'
+			),
+			'autoplay' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'controls' => array(
+				'type' => 'boolean',
+				'default' => true
+			),
+			'loop' => array(
+				'type' => 'boolean',
+				'default' => false
+			)
+		),
+		'editorScript' => 'file:./index.js',
+		'editorStyle' => 'file:./style-index.css',
+		'style' => 'file:./style-index.css'
 	)
 );
