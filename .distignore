@@ -1,0 +1,11 @@
+.git
+.gitignore
+.editorconfig
+.FullName
+.distignore
+node_modules
+src
+package.json
+package-lock.json
+*.zip
+.wp-org
