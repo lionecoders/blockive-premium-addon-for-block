@@ -4,61 +4,61 @@ export default function Save({ attributes }) {
 	const { testimonials, style, showRating, showDots, showArrows, textColor, bgColor } = attributes;
 
 	const customStyles = {
-		'--lcibwc-testimonial-text-color': textColor,
-		'--lcibwc-testimonial-bg-color': bgColor,
+		'--bpafb-testimonial-text-color': textColor,
+		'--bpafb-testimonial-bg-color': bgColor,
 	};
 
 	const blockProps = useBlockProps.save({
-		className: `lcibwc-testimonial-wrapper lcibwc-testimonial-${style}`,
+		className: `bpafb-testimonial-wrapper bpafb-testimonial-${style}`,
 		style: customStyles,
 	});
 
 	return (
 		<div {...blockProps}>
-			<div className="lcibwc-testimonial-slider" data-show-dots={showDots} data-show-arrows={showArrows}>
+			<div className="bpafb-testimonial-slider" data-show-dots={showDots} data-show-arrows={showArrows}>
 				{testimonials.map((testimonial, index) => (
 					<div
 						key={testimonial.id}
-						className="lcibwc-testimonial-item"
+						className="bpafb-testimonial-item"
 						data-index={index}
 					>
 						{testimonial.image && (
 							<img
 								src={testimonial.image}
 								alt={testimonial.name}
-								className="lcibwc-testimonial-image"
+								className="bpafb-testimonial-image"
 							/>
 						)}
-						<p className="lcibwc-testimonial-content">{testimonial.content}</p>
+						<p className="bpafb-testimonial-content">{testimonial.content}</p>
 						{showRating && (
-							<div className="lcibwc-testimonial-rating">
+							<div className="bpafb-testimonial-rating">
 								{[...Array(testimonial.rating)].map((_, i) => (
-									<span key={i} className="lcibwc-star">★</span>
+									<span key={i} className="bpafb-star">★</span>
 								))}
 							</div>
 						)}
-						<p className="lcibwc-testimonial-name">{testimonial.name}</p>
-						<p className="lcibwc-testimonial-designation">{testimonial.designation}</p>
+						<p className="bpafb-testimonial-name">{testimonial.name}</p>
+						<p className="bpafb-testimonial-designation">{testimonial.designation}</p>
 					</div>
 				))}
 
 				{showArrows && (
 					<>
-						<button className="lcibwc-arrow lcibwc-prev" type="button">
+						<button className="bpafb-arrow bpafb-prev" type="button">
 							❮
 						</button>
-						<button className="lcibwc-arrow lcibwc-next" type="button">
+						<button className="bpafb-arrow bpafb-next" type="button">
 							❯
 						</button>
 					</>
 				)}
 
 				{showDots && (
-					<div className="lcibwc-testimonial-dots">
+					<div className="bpafb-testimonial-dots">
 						{testimonials.map((_, index) => (
 							<button
 								key={index}
-								className={`lcibwc-dot ${index === 0 ? 'active' : ''}`}
+								className={`bpafb-dot ${index === 0 ? 'active' : ''}`}
 								type="button"
 								data-index={index}
 							/>

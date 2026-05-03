@@ -1,6 +1,6 @@
 function animateCounter(counter) {
 	const target = parseInt(counter.getAttribute('data-count'));
-	const duration = parseInt(getComputedStyle(counter.closest('.lcibwc-funfact-wrapper')).getPropertyValue('--lcibwc-funfact-duration')) || 1000;
+	const duration = parseInt(getComputedStyle(counter.closest('.bpafb-funfact-wrapper')).getPropertyValue('--bpafb-funfact-duration')) || 1000;
 	const increment = target / (duration / 16);
 	let current = 0;
 
@@ -18,7 +18,7 @@ function animateCounter(counter) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-	const counters = document.querySelectorAll('.lcibwc-funfact-counter');
+	const counters = document.querySelectorAll('.bpafb-funfact-counter');
 
 	const observerOptions = {
 		threshold: 0.5,

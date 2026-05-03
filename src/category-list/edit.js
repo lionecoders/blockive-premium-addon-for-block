@@ -10,20 +10,20 @@ export default function Edit({ attributes, setAttributes }) {
 	const { columns, showCount, showDescription, hideEmpty, limit } = attributes;
 
 	const customStyles = {
-		'--lcibwc-category-columns': columns,
+		'--bpafb-category-columns': columns,
 	};
 
 	const blockProps = useBlockProps({
-		className: 'lcibwc-category-list-wrapper',
+		className: 'bpafb-category-list-wrapper',
 		style: customStyles,
 	});
 
 	return (
 		<>
 			<InspectorControls>
-				<PanelBody title={__('Settings', 'lc-immeasurable-block-widgets-collection')} initialOpen={true}>
+				<PanelBody title={__('Settings', 'blockive-premium-addon-for-block')} initialOpen={true}>
 					<RangeControl
-						label={__('Columns', 'lc-immeasurable-block-widgets-collection')}
+						label={__('Columns', 'blockive-premium-addon-for-block')}
 						value={columns}
 						onChange={(val) => setAttributes({ columns: val })}
 						min={1}
@@ -31,7 +31,7 @@ export default function Edit({ attributes, setAttributes }) {
 					/>
 
 					<RangeControl
-						label={__('Limit', 'lc-immeasurable-block-widgets-collection')}
+						label={__('Limit', 'blockive-premium-addon-for-block')}
 						value={limit}
 						onChange={(val) => setAttributes({ limit: val })}
 						min={1}
@@ -39,19 +39,19 @@ export default function Edit({ attributes, setAttributes }) {
 					/>
 
 					<ToggleControl
-						label={__('Show Count', 'lc-immeasurable-block-widgets-collection')}
+						label={__('Show Count', 'blockive-premium-addon-for-block')}
 						checked={showCount}
 						onChange={(val) => setAttributes({ showCount: val })}
 					/>
 
 					<ToggleControl
-						label={__('Show Description', 'lc-immeasurable-block-widgets-collection')}
+						label={__('Show Description', 'blockive-premium-addon-for-block')}
 						checked={showDescription}
 						onChange={(val) => setAttributes({ showDescription: val })}
 					/>
 
 					<ToggleControl
-						label={__('Hide Empty Categories', 'lc-immeasurable-block-widgets-collection')}
+						label={__('Hide Empty Categories', 'blockive-premium-addon-for-block')}
 						checked={hideEmpty}
 						onChange={(val) => setAttributes({ hideEmpty: val })}
 					/>
@@ -59,19 +59,19 @@ export default function Edit({ attributes, setAttributes }) {
 			</InspectorControls>
 
 			<div {...blockProps}>
-				<div className="lcibwc-category-grid">
-					<div className="lcibwc-category-item">
-						<h3 className="lcibwc-category-name">
+				<div className="bpafb-category-grid">
+					<div className="bpafb-category-item">
+						<h3 className="bpafb-category-name">
 							<a href="#" onClick={(e) => e.preventDefault()}>
-								{__('Category Name', 'lc-immeasurable-block-widgets-collection')}
+								{__('Category Name', 'blockive-premium-addon-for-block')}
 							</a>
 						</h3>
-						{showCount && <span className="lcibwc-category-count">(12)</span>}
-						{showDescription && <p className="lcibwc-category-description">Category description goes here...</p>}
+						{showCount && <span className="bpafb-category-count">(12)</span>}
+						{showDescription && <p className="bpafb-category-description">Category description goes here...</p>}
 					</div>
 				</div>
 				<p style={{ color: '#666', fontStyle: 'italic', marginTop: '15px' }}>
-					{__('Categories will display here on the frontend', 'lc-immeasurable-block-widgets-collection')}
+					{__('Categories will display here on the frontend', 'blockive-premium-addon-for-block')}
 				</p>
 			</div>
 		</>

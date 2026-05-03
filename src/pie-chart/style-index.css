@@ -1,18 +1,18 @@
-.wp-block-lc-immeasurable-block-widgets-collection-pie-chart {
+.wp-block-blockive-premium-addon-for-block-pie-chart {
 	display: flex;
 }
 
-.wp-block-lc-immeasurable-block-widgets-collection-pie-chart.alignleft {
+.wp-block-blockive-premium-addon-for-block-pie-chart.alignleft {
     justify-content: flex-start;
 }
-.wp-block-lc-immeasurable-block-widgets-collection-pie-chart.aligncenter {
+.wp-block-blockive-premium-addon-for-block-pie-chart.aligncenter {
     justify-content: center;
 }
-.wp-block-lc-immeasurable-block-widgets-collection-pie-chart.alignright {
+.wp-block-blockive-premium-addon-for-block-pie-chart.alignright {
     justify-content: flex-end;
 }
 
-.lcibwc-pie-chart-wrapper {
+.bpafb-pie-chart-wrapper {
 	position: relative;
 	width: 100%;
 	max-width: 600px;
@@ -20,13 +20,13 @@
 }
 
 /* Ensure canvas respects width and maintains aspect ratio naturally */
-.lcibwc-pie-chart-wrapper canvas {
+.bpafb-pie-chart-wrapper canvas {
 	width: 100% !important;
 	height: auto !important;
 }
 
 /* Fallback for editor errors */
-.lcibwc-chart-error {
+.bpafb-chart-error {
 	padding: 20px;
 	border: 1px dashed #dc3232;
 	color: #dc3232;

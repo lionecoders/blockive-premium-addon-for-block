@@ -47,12 +47,12 @@ export default function Edit({ attributes, setAttributes }) {
 	} = attributes;
 
 	const customStyles = {
-		'--lcibwc-pb-height': `${barHeight !== undefined ? barHeight : 18}px`,
-		'--lcibwc-pb-radius': `${borderRadius !== undefined ? borderRadius : 50}px`,
-		'--lcibwc-pb-title-color': titleColor || '#1e293b',
-		'--lcibwc-pb-percent-color': percentageColor || '#1e293b',
-		'--lcibwc-pb-track-bg': trackColor || '#f1f5f9',
-		'--lcibwc-pb-inner-text': innerTextColor || '#ffffff',
+		'--bpafb-pb-height': `${barHeight !== undefined ? barHeight : 18}px`,
+		'--bpafb-pb-radius': `${borderRadius !== undefined ? borderRadius : 50}px`,
+		'--bpafb-pb-title-color': titleColor || '#1e293b',
+		'--bpafb-pb-percent-color': percentageColor || '#1e293b',
+		'--bpafb-pb-track-bg': trackColor || '#f1f5f9',
+		'--bpafb-pb-inner-text': innerTextColor || '#ffffff',
 	};
 
 	let barBgStyle = {};
@@ -74,24 +74,24 @@ export default function Edit({ attributes, setAttributes }) {
 			</BlockControls>
 
 			<InspectorControls>
-				<PanelBody title={__('Content Settings', 'lc-immeasurable-block-widgets-collection')} initialOpen={true}>
+				<PanelBody title={__('Content Settings', 'blockive-premium-addon-for-block')} initialOpen={true}>
 					<RangeControl
-						label={__('Percentage (%)', 'lc-immeasurable-block-widgets-collection')}
+						label={__('Percentage (%)', 'blockive-premium-addon-for-block')}
 						value={percentage}
 						onChange={(val) => setAttributes({ percentage: val })}
 						min={0}
 						max={100}
 					/>
 					<ToggleControl
-						label={__('Display Percentage Label?', 'lc-immeasurable-block-widgets-collectionblock-widgets-collection')}
+						label={__('Display Percentage Label?', 'blockive-premium-addon-for-block')}
 						checked={displayPercentage}
 						onChange={(val) => setAttributes({ displayPercentage: val })}
 					/>
 				</PanelBody>
 
-				<PanelBody title={__('Design Options', 'lc-immeasurable-block-widgets-collection')} initialOpen={false}>
+				<PanelBody title={__('Design Options', 'blockive-premium-addon-for-block')} initialOpen={false}>
 					<SelectControl
-						label={__('Layout Style', 'lc-immeasurable-block-widgets-collection')}
+						label={__('Layout Style', 'blockive-premium-addon-for-block')}
 						value={layoutStyle}
 						options={[
 							{ label: 'Standard (Top Info)', value: 'standard' },
@@ -100,60 +100,60 @@ export default function Edit({ attributes, setAttributes }) {
 						onChange={(val) => setAttributes({ layoutStyle: val })}
 					/>
 					<RangeControl
-						label={__('Bar Height (px)', 'lc-immeasurable-block-widgets-collection')}
+						label={__('Bar Height (px)', 'blockive-premium-addon-for-block')}
 						value={barHeight}
 						onChange={(val) => setAttributes({ barHeight: val })}
 						min={5}
 						max={100}
 					/>
 					<RangeControl
-						label={__('Border Radius (px)', 'lc-immeasurable-block-widgets-collection')}
+						label={__('Border Radius (px)', 'blockive-premium-addon-for-block')}
 						value={borderRadius}
 						onChange={(val) => setAttributes({ borderRadius: val })}
 						min={0}
 						max={50}
 					/>
 					<ToggleControl
-						label={__('Striped Bar?', 'lc-immeasurable-block-widgets-collection')}
+						label={__('Striped Bar?', 'blockive-premium-addon-for-block')}
 						checked={isStriped}
 						onChange={(val) => setAttributes({ isStriped: val })}
 					/>
 					{isStriped && (
 						<ToggleControl
-							label={__('Animate Stripes? (Scrolling)', 'lc-immeasurable-block-widgets-collection')}
+							label={__('Animate Stripes? (Scrolling)', 'blockive-premium-addon-for-block')}
 							checked={isAnimated}
 							onChange={(val) => setAttributes({ isAnimated: val })}
 						/>
 					)}
 					<RangeControl
-						label={__('Entrance Animation Speed (ms)', 'lc-immeasurable-block-widgets-collection')}
+						label={__('Entrance Animation Speed (ms)', 'blockive-premium-addon-for-block')}
 						value={animationDuration}
 						onChange={(val) => setAttributes({ animationDuration: val })}
 						min={500}
 						max={5000}
 						step={100}
-						help={__('Controls how long the bar takes to fill up.', 'lc-immeasurable-block-widgets-collection')}
+						help={__('Controls how long the bar takes to fill up.', 'blockive-premium-addon-for-block')}
 					/>
 				</PanelBody>
 			</InspectorControls>
 
 			<InspectorControls group="styles">
-				<PanelBody title={__('Colors', 'lc-immeasurable-block-widgets-collection')} initialOpen={true}>
-					<BaseControl label={__('Bar Progress Color', 'lc-immeasurable-block-widgets-collection')}>
+				<PanelBody title={__('Colors', 'blockive-premium-addon-for-block')} initialOpen={true}>
+					<BaseControl label={__('Bar Progress Color', 'blockive-premium-addon-for-block')}>
 						<ColorPalette colors={themeColors} value={barColor || '#4f46e5'} onChange={(val) => setAttributes({ barColor: val })} />
 					</BaseControl>
-					<BaseControl label={__('Track Background', 'lc-immeasurable-block-widgets-collection')}>
+					<BaseControl label={__('Track Background', 'blockive-premium-addon-for-block')}>
 						<ColorPalette colors={themeColors} value={trackColor || '#f1f5f9'} onChange={(val) => setAttributes({ trackColor: val })} />
 					</BaseControl>
-					<BaseControl label={__('Title Color', 'lc-immeasurable-block-widgets-collection')}>
+					<BaseControl label={__('Title Color', 'blockive-premium-addon-for-block')}>
 						<ColorPalette colors={themeColors} value={titleColor || '#1e293b'} onChange={(val) => setAttributes({ titleColor: val })} />
 					</BaseControl>
-					<BaseControl label={__('Percentage Color', 'lc-immeasurable-block-widgets-collection')}>
+					<BaseControl label={__('Percentage Color', 'blockive-premium-addon-for-block')}>
 						<ColorPalette colors={themeColors} value={percentageColor || '#1e293b'} onChange={(val) => setAttributes({ percentageColor: val })} />
 					</BaseControl>
 					
 					{layoutStyle === 'inside' && (
-						<BaseControl label={__('Inner Text Color', 'lc-immeasurable-block-widgets-collection')}>
+						<BaseControl label={__('Inner Text Color', 'blockive-premium-addon-for-block')}>
 							<ColorPalette colors={themeColors} value={innerTextColor || '#ffffff'} onChange={(val) => setAttributes({ innerTextColor: val })} />
 						</BaseControl>
 					)}
@@ -162,43 +162,43 @@ export default function Edit({ attributes, setAttributes }) {
 
 			<div {...blockProps}>
 				<div 
-					className={`lcibwc-progress-bar-wrapper lcibwc-pb-style-${layoutStyle || 'standard'}`}
+					className={`bpafb-progress-bar-wrapper bpafb-pb-style-${layoutStyle || 'standard'}`}
 					style={{ ...customStyles, textAlign: alignment || 'left' }}
 				>
 					{layoutStyle === 'standard' && (
-						<div className="lcibwc-pb-header">
+						<div className="bpafb-pb-header">
 							<RichText
 								tagName="span"
-								className="lcibwc-pb-title"
+								className="bpafb-pb-title"
 								value={title}
 								onChange={(val) => setAttributes({ title: val })}
-								placeholder={__('Skill or Metric', 'lc-immeasurable-block-widgets-collection')}
+								placeholder={__('Skill or Metric', 'blockive-premium-addon-for-block')}
 							/>
 							{displayPercentage && (
-								<span className="lcibwc-pb-percentage">{percentage}%</span>
+								<span className="bpafb-pb-percentage">{percentage}%</span>
 							)}
 						</div>
 					)}
 
-					<div className="lcibwc-pb-track">
+					<div className="bpafb-pb-track">
 						<div 
-							className={`lcibwc-pb-fill ${isStriped ? 'lcibwc-pb-striped' : ''} ${isStriped && isAnimated ? 'lcibwc-pb-striped-animated' : ''}`}
+							className={`bpafb-pb-fill ${isStriped ? 'bpafb-pb-striped' : ''} ${isStriped && isAnimated ? 'bpafb-pb-striped-animated' : ''}`}
 							style={{ 
 								width: `${percentage}%`,
 								...barBgStyle
 							}}
 						>
 							{layoutStyle === 'inside' && (
-								<div className="lcibwc-pb-inner-content">
+								<div className="bpafb-pb-inner-content">
 									<RichText
 										tagName="span"
-										className="lcibwc-pb-inner-title"
+										className="bpafb-pb-inner-title"
 										value={title}
 										onChange={(val) => setAttributes({ title: val })}
-										placeholder={__('Label', 'lc-immeasurable-block-widgets-collection')}
+										placeholder={__('Label', 'blockive-premium-addon-for-block')}
 									/>
 									{displayPercentage && (
-										<span className="lcibwc-pb-inner-percent">{percentage}%</span>
+										<span className="bpafb-pb-inner-percent">{percentage}%</span>
 									)}
 								</div>
 							)}

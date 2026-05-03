@@ -1,10 +1,10 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
-  "name": "lc-immeasurable-block-widgets-collection/heading",
+  "name": "blockive-premium-addon-for-block/heading",
   "version": "0.1.0",
-  "title": "LC Heading",
-  "category": "lcibwc-widgets",
+  "title": "Blockive Heading",
+  "category": "bpafb-widgets",
   "icon": "heading",
   "description": "Advanced heading block with Elementor and Divi like settings.",
   "attributes": {
@@ -115,7 +115,7 @@
       }
     }
   },
-  "textdomain": "lc-immeasurable-block-widgets-collection",
+  "textdomain": "blockive-premium-addon-for-block",
   "editorScript": "file:./index.js",
   "style": "file:./index.css"
 }

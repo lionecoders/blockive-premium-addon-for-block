@@ -1,72 +1,72 @@
-.lcibwc-button-wrapper {
-	--lcibwc-btn-text-color: #ffffff;
-	--lcibwc-btn-bg-color: #3b82f6;
-	--lcibwc-btn-border-color: transparent;
-	--lcibwc-btn-text-color-hover: #ffffff;
-	--lcibwc-btn-bg-color-hover: #2563eb;
-	--lcibwc-btn-border-color-hover: transparent;
-	--lcibwc-btn-badge-text-color: #ffffff;
-	--lcibwc-btn-badge-bg-color: #ef4444;
-	--lcibwc-btn-icon-spacing: 8px;
-	--lcibwc-btn-width: auto;
-	--lcibwc-btn-justify: center;
+.bpafb-button-wrapper {
+	--bpafb-btn-text-color: #ffffff;
+	--bpafb-btn-bg-color: #3b82f6;
+	--bpafb-btn-border-color: transparent;
+	--bpafb-btn-text-color-hover: #ffffff;
+	--bpafb-btn-bg-color-hover: #2563eb;
+	--bpafb-btn-border-color-hover: transparent;
+	--bpafb-btn-badge-text-color: #ffffff;
+	--bpafb-btn-badge-bg-color: #ef4444;
+	--bpafb-btn-icon-spacing: 8px;
+	--bpafb-btn-width: auto;
+	--bpafb-btn-justify: center;
 
 	display: flex;
-	justify-content: var(--lcibwc-btn-justify);
+	justify-content: var(--bpafb-btn-justify);
 	width: 100%;
 
-	.lcibwc-button-link {
+	.bpafb-button-link {
 		display: inline-flex;
 		align-items: center;
 		justify-content: center;
 		text-decoration: none;
-		background-color: var(--lcibwc-btn-bg-color);
-		color: var(--lcibwc-btn-text-color);
-		border: 1px solid var(--lcibwc-btn-border-color);
+		background-color: var(--bpafb-btn-bg-color);
+		color: var(--bpafb-btn-text-color);
+		border: 1px solid var(--bpafb-btn-border-color);
 		padding: 12px 24px;
 		border-radius: 4px; /* overridden by block supports if set */
 		transition: all 0.3s ease;
 		position: relative;
-		width: var(--lcibwc-btn-width);
+		width: var(--bpafb-btn-width);
 		cursor: pointer;
 
 		&:hover {
-			background-color: var(--lcibwc-btn-bg-color-hover);
-			color: var(--lcibwc-btn-text-color-hover);
-			border-color: var(--lcibwc-btn-border-color-hover);
+			background-color: var(--bpafb-btn-bg-color-hover);
+			color: var(--bpafb-btn-text-color-hover);
+			border-color: var(--bpafb-btn-border-color-hover);
 		}
 	}
 
-	.lcibwc-button-inner {
+	.bpafb-button-inner {
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		width: 100%;
 		position: relative;
 
-		.lcibwc-button-icon {
+		.bpafb-button-icon {
 			display: flex;
 			align-items: center;
 
 			&--left {
-				margin-right: var(--lcibwc-btn-icon-spacing);
+				margin-right: var(--bpafb-btn-icon-spacing);
 			}
 
 			&--right {
-				margin-left: var(--lcibwc-btn-icon-spacing);
+				margin-left: var(--bpafb-btn-icon-spacing);
 			}
 		}
 
-		.lcibwc-button-text {
+		.bpafb-button-text {
 			font-weight: 500;
 		}
 
-		.lcibwc-button-badge {
+		.bpafb-button-badge {
 			position: absolute;
 			top: -24px;
 			right: -10px;
-			background-color: var(--lcibwc-btn-badge-bg-color);
-			color: var(--lcibwc-btn-badge-text-color);
+			background-color: var(--bpafb-btn-badge-bg-color);
+			color: var(--bpafb-btn-badge-text-color);
 			font-size: 11px;
 			font-weight: bold;
 			padding: 2px 6px;

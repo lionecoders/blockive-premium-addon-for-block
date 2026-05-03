@@ -26,13 +26,13 @@ export default function save({ attributes }) {
 	} = attributes;
 
 	const customStyles = {
-		'--lcibwc-cd-gap': gap !== undefined ? `${gap}px` : '20px',
-		'--lcibwc-cd-box-bg': styleType === 'block' ? (boxBgColor || 'transparent') : 'transparent',
-		'--lcibwc-cd-borderWidth': styleType === 'block' ? `${boxBorderWidth || 0}px` : '0px',
-		'--lcibwc-cd-borderColor': styleType === 'block' ? (boxBorderColor || 'transparent') : 'transparent',
-		'--lcibwc-cd-borderRadius': styleType === 'block' ? `${boxBorderRadius || 0}px` : '0px',
-		'--lcibwc-cd-number-color': numberColor || 'inherit',
-		'--lcibwc-cd-label-color': labelColor || 'inherit',
+		'--bpafb-cd-gap': gap !== undefined ? `${gap}px` : '20px',
+		'--bpafb-cd-box-bg': styleType === 'block' ? (boxBgColor || 'transparent') : 'transparent',
+		'--bpafb-cd-borderWidth': styleType === 'block' ? `${boxBorderWidth || 0}px` : '0px',
+		'--bpafb-cd-borderColor': styleType === 'block' ? (boxBorderColor || 'transparent') : 'transparent',
+		'--bpafb-cd-borderRadius': styleType === 'block' ? `${boxBorderRadius || 0}px` : '0px',
+		'--bpafb-cd-number-color': numberColor || 'inherit',
+		'--bpafb-cd-label-color': labelColor || 'inherit',
 	};
 
 	if (animationType !== 'none') {
@@ -41,7 +41,7 @@ export default function save({ attributes }) {
 	}
 
 	const blockProps = useBlockProps.save({
-		className: `lcibwc-countdown-style-${styleType} align${alignment} ${animationType !== 'none' ? `lcibwc-animate-${animationType}` : ''}`,
+		className: `bpafb-countdown-style-${styleType} align${alignment} ${animationType !== 'none' ? `bpafb-animate-${animationType}` : ''}`,
 		style: customStyles,
 	});
 
@@ -49,29 +49,29 @@ export default function save({ attributes }) {
 
 	return (
 		<div {...blockProps}>
-			<div className="lcibwc-countdown-wrapper" data-target-date={targetDate}>
+			<div className="bpafb-countdown-wrapper" data-target-date={targetDate}>
 				{showDays && (
-					<div className="lcibwc-countdown-item lcibwc-cd-days">
-						<div className="lcibwc-countdown-number">00</div>
-						<div className="lcibwc-countdown-label">{labelDays}</div>
+					<div className="bpafb-countdown-item bpafb-cd-days">
+						<div className="bpafb-countdown-number">00</div>
+						<div className="bpafb-countdown-label">{labelDays}</div>
 					</div>
 				)}
 				{showHours && (
-					<div className="lcibwc-countdown-item lcibwc-cd-hours">
-						<div className="lcibwc-countdown-number">00</div>
-						<div className="lcibwc-countdown-label">{labelHours}</div>
+					<div className="bpafb-countdown-item bpafb-cd-hours">
+						<div className="bpafb-countdown-number">00</div>
+						<div className="bpafb-countdown-label">{labelHours}</div>
 					</div>
 				)}
 				{showMinutes && (
-					<div className="lcibwc-countdown-item lcibwc-cd-minutes">
-						<div className="lcibwc-countdown-number">00</div>
-						<div className="lcibwc-countdown-label">{labelMinutes}</div>
+					<div className="bpafb-countdown-item bpafb-cd-minutes">
+						<div className="bpafb-countdown-number">00</div>
+						<div className="bpafb-countdown-label">{labelMinutes}</div>
 					</div>
 				)}
 				{showSeconds && (
-					<div className="lcibwc-countdown-item lcibwc-cd-seconds">
-						<div className="lcibwc-countdown-number">00</div>
-						<div className="lcibwc-countdown-label">{labelSeconds}</div>
+					<div className="bpafb-countdown-item bpafb-cd-seconds">
+						<div className="bpafb-countdown-number">00</div>
+						<div className="bpafb-countdown-label">{labelSeconds}</div>
 					</div>
 				)}
 			</div>

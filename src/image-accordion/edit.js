@@ -28,14 +28,14 @@ export default function Edit({ attributes, setAttributes }) {
 	const [activeIndex, setActiveIndex] = useState(0);
 
 	const customStyles = {
-		'--lcibwc-image-accordion-title-color': titleColor,
-		'--lcibwc-image-accordion-content-color': contentColor,
-		'--lcibwc-image-accordion-overlay-opacity': overlayOpacity,
-		'--lcibwc-image-accordion-animation': animationDuration,
+		'--bpafb-image-accordion-title-color': titleColor,
+		'--bpafb-image-accordion-content-color': contentColor,
+		'--bpafb-image-accordion-overlay-opacity': overlayOpacity,
+		'--bpafb-image-accordion-animation': animationDuration,
 	};
 
 	const blockProps = useBlockProps({
-		className: 'lcibwc-image-accordion-wrapper',
+		className: 'bpafb-image-accordion-wrapper',
 		style: customStyles,
 	});
 
@@ -69,11 +69,11 @@ export default function Edit({ attributes, setAttributes }) {
 	return (
 		<>
 			<InspectorControls>
-				<PanelBody title={__('Image Accordion Items', 'lc-immeasurable-block-widgets-collection')} initialOpen={true}>
+				<PanelBody title={__('Image Accordion Items', 'blockive-premium-addon-for-block')} initialOpen={true}>
 					{items.map((item, index) => (
 						<div key={item.id} style={{ marginBottom: '15px', border: '1px solid #ddd', padding: '10px' }}>
 							<TextControl
-								label={__('Title', 'lc-immeasurable-block-widgets-collection')}
+								label={__('Title', 'blockive-premium-addon-for-block')}
 								value={item.title}
 								onChange={(val) => updateItem(index, 'title', val)}
 							/>
@@ -85,39 +85,39 @@ export default function Edit({ attributes, setAttributes }) {
 										value={item.imageUrl}
 										render={({ open }) => (
 											<Button onClick={open} isPrimary>
-												{item.imageUrl ? __('Change Image', 'lc-immeasurable-block-widgets-collection') : __('Select Image', 'lc-immeasurable-block-widgets-collection')}
+												{item.imageUrl ? __('Change Image', 'blockive-premium-addon-for-block') : __('Select Image', 'blockive-premium-addon-for-block')}
 											</Button>
 										)}
 									/>
 								</MediaUploadCheck>
 							</div>
 							<Button isDestructive onClick={() => removeItem(index)}>
-								{__('Remove Item', 'lc-immeasurable-block-widgets-collection')}
+								{__('Remove Item', 'blockive-premium-addon-for-block')}
 							</Button>
 						</div>
 					))}
 					<Button isPrimary onClick={addItem}>
-						{__('Add Item', 'lc-immeasurable-block-widgets-collection')}
+						{__('Add Item', 'blockive-premium-addon-for-block')}
 					</Button>
 				</PanelBody>
 
-				<PanelBody title={__('Styling', 'lc-immeasurable-block-widgets-collection')}>
+				<PanelBody title={__('Styling', 'blockive-premium-addon-for-block')}>
 					<div style={{ marginBottom: '15px' }}>
-						<label>{__('Title Color', 'lc-immeasurable-block-widgets-collection')}</label>
+						<label>{__('Title Color', 'blockive-premium-addon-for-block')}</label>
 						<ColorPalette
 							value={titleColor}
 							onChange={(val) => setAttributes({ titleColor: val })}
 						/>
 					</div>
 					<div style={{ marginBottom: '15px' }}>
-						<label>{__('Content Color', 'lc-immeasurable-block-widgets-collection')}</label>
+						<label>{__('Content Color', 'blockive-premium-addon-for-block')}</label>
 						<ColorPalette
 							value={contentColor}
 							onChange={(val) => setAttributes({ contentColor: val })}
 						/>
 					</div>
 					<RangeControl
-						label={__('Overlay Opacity', 'lc-immeasurable-block-widgets-collection')}
+						label={__('Overlay Opacity', 'blockive-premium-addon-for-block')}
 						value={overlayOpacity}
 						onChange={(val) => setAttributes({ overlayOpacity: val })}
 						min={0}
@@ -128,17 +128,17 @@ export default function Edit({ attributes, setAttributes }) {
 			</InspectorControls>
 
 			<div {...blockProps}>
-				<div className="lcibwc-image-accordion">
+				<div className="bpafb-image-accordion">
 					{items.map((item, index) => (
 						<div
 							key={item.id}
-							className={`lcibwc-image-accordion-item ${activeIndex === index ? 'active' : ''}`}
+							className={`bpafb-image-accordion-item ${activeIndex === index ? 'active' : ''}`}
 							onClick={() => setActiveIndex(index)}
 							style={{
 								backgroundImage: item.imageUrl ? `url(${item.imageUrl})` : 'none',
 							}}
 						>
-							<div className="lcibwc-image-accordion-content">
+							<div className="bpafb-image-accordion-content">
 								<h3>{item.title}</h3>
 								<p>{item.content}</p>
 							</div>

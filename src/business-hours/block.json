@@ -1,10 +1,10 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
-	"name": "lc-immeasurable-block-widgets-collection/business-hours",
+	"name": "blockive-premium-addon-for-block/business-hours",
 	"version": "0.1.0",
-	"title": "LC Business Hours",
-	"category": "lcibwc-widgets",
+	"title": "Blockive Business Hours",
+	"category": "bpafb-widgets",
 	"icon": "clock",
 	"description": "Business Hours block to display opening and closing times.",
 	"attributes": {
@@ -97,7 +97,7 @@
 			}
 		}
 	},
-	"textdomain": "lc-immeasurable-block-widgets-collection",
+	"textdomain": "blockive-premium-addon-for-block",
 	"editorScript": "file:./index.js",
 	"style": "file:./index.css",
 	"viewScript": "file:./view.js"

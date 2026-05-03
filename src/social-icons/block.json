@@ -1,10 +1,10 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
-	"name": "lc-immeasurable-block-widgets-collection/social-icons",
+	"name": "blockive-premium-addon-for-block/social-icons",
 	"version": "0.1.0",
-	"title": "LC Social Icons",
-	"category": "lcibwc-widgets",
+	"title": "Blockive Social Icons",
+	"category": "bpafb-widgets",
 	"icon": "share",
 	"description": "A premium social icons block with Elementor-like controls.",
 	"attributes": {
@@ -82,7 +82,7 @@
 			"padding": true
 		}
 	},
-	"textdomain": "lc-immeasurable-block-widgets-collection",
+	"textdomain": "blockive-premium-addon-for-block",
 	"editorScript": "file:./index.js",
 	"style": "file:./index.css"
 }

@@ -22,18 +22,18 @@ export default function save({ attributes }) {
 	} = attributes;
 
 	const customStyles = {
-		'--lcibwc-imgbox-img-radius': `${imageRadius}px`,
-		'--lcibwc-imgbox-title-color': titleColor,
-		'--lcibwc-imgbox-desc-color': descColor,
-		'--lcibwc-imgbox-link-color': linkColor,
-		'--lcibwc-imgbox-box-bg': boxBgColor,
-		'--lcibwc-imgbox-spacing': `${imageSpacing}px`,
-		'--lcibwc-imgbox-align': contentAlign,
-		'--lcibwc-imgbox-valign': verticalAlign === 'top' ? 'flex-start' : (verticalAlign === 'bottom' ? 'flex-end' : 'center'),
+		'--bpafb-imgbox-img-radius': `${imageRadius}px`,
+		'--bpafb-imgbox-title-color': titleColor,
+		'--bpafb-imgbox-desc-color': descColor,
+		'--bpafb-imgbox-link-color': linkColor,
+		'--bpafb-imgbox-box-bg': boxBgColor,
+		'--bpafb-imgbox-spacing': `${imageSpacing}px`,
+		'--bpafb-imgbox-align': contentAlign,
+		'--bpafb-imgbox-valign': verticalAlign === 'top' ? 'flex-start' : (verticalAlign === 'bottom' ? 'flex-end' : 'center'),
 	};
 
 	const blockProps = useBlockProps.save({
-		className: `lcibwc-image-box-wrapper lcibwc-image-box--${imagePosition}`,
+		className: `bpafb-image-box-wrapper bpafb-image-box--${imagePosition}`,
 		style: customStyles,
 	});
 
@@ -42,16 +42,16 @@ export default function save({ attributes }) {
 	const ContentElement = () => (
 		<>
 			{imageUrl && (
-				<div className="lcibwc-image-box-img-wrapper">
-					<img src={imageUrl} alt={imageAlt} className="lcibwc-image-box-img" />
+				<div className="bpafb-image-box-img-wrapper">
+					<img src={imageUrl} alt={imageAlt} className="bpafb-image-box-img" />
 				</div>
 			)}
 
-			<div className="lcibwc-image-box-content">
+			<div className="bpafb-image-box-content">
 				{title && (
 					<RichText.Content
 						tagName={TitleTag}
-						className="lcibwc-image-box-title"
+						className="bpafb-image-box-title"
 						value={title}
 					/>
 				)}
@@ -59,13 +59,13 @@ export default function save({ attributes }) {
 				{description && (
 					<RichText.Content
 						tagName="div"
-						className="lcibwc-image-box-description"
+						className="bpafb-image-box-description"
 						value={description}
 					/>
 				)}
 
 				{linkUrl && linkText && (
-					<div className="lcibwc-image-box-link">
+					<div className="bpafb-image-box-link">
 						{linkText}
 					</div>
 				)}
@@ -78,7 +78,7 @@ export default function save({ attributes }) {
 			{linkUrl ? (
 				<a
 					href={linkUrl}
-					className="lcibwc-image-box-link-wrapper"
+					className="bpafb-image-box-link-wrapper"
 					target={linkTarget ? '_blank' : undefined}
 					rel={linkTarget ? 'noopener noreferrer' : undefined}
 				>

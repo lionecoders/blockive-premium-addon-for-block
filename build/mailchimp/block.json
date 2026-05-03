@@ -1,10 +1,10 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
-  "name": "lc-immeasurable-block-widgets-collection/mailchimp",
+  "name": "blockive-premium-addon-for-block/mailchimp",
   "version": "0.1.0",
-  "title": "LC MailChimp",
-  "category": "lcibwc-widgets",
+  "title": "Blockive MailChimp",
+  "category": "bpafb-widgets",
   "icon": "email",
   "description": "MailChimp newsletter subscription block.",
   "attributes": {

@@ -31,14 +31,14 @@ export default function Edit({ attributes, setAttributes }) {
 
 	const customStyles = {
 		textAlign: alignment,
-		'--lcibwc-dc-size': `${size}px`,
-		'--lcibwc-dc-space': `${space}px`,
-		'--lcibwc-dc-pd': `${dropCapPadding}px`,
-		'--lcibwc-dc-color': secondaryColor || 'inherit',
-		'--lcibwc-dc-bg': view === 'stacked' ? (primaryColor || '#000') : 'transparent',
-		'--lcibwc-dc-borderWidth': view === 'framed' ? `${borderWidth}px` : '0px',
-		'--lcibwc-dc-borderColor': primaryColor || '#000',
-		'--lcibwc-dc-radius': borderRadius > 0 ? `${borderRadius}px` : (shape === 'circle' ? '50%' : (shape === 'rounded' ? '5px' : '0')),
+		'--bpafb-dc-size': `${size}px`,
+		'--bpafb-dc-space': `${space}px`,
+		'--bpafb-dc-pd': `${dropCapPadding}px`,
+		'--bpafb-dc-color': secondaryColor || 'inherit',
+		'--bpafb-dc-bg': view === 'stacked' ? (primaryColor || '#000') : 'transparent',
+		'--bpafb-dc-borderWidth': view === 'framed' ? `${borderWidth}px` : '0px',
+		'--bpafb-dc-borderColor': primaryColor || '#000',
+		'--bpafb-dc-radius': borderRadius > 0 ? `${borderRadius}px` : (shape === 'circle' ? '50%' : (shape === 'rounded' ? '5px' : '0')),
 	};
 
 	const blockProps = useBlockProps({
@@ -56,9 +56,9 @@ export default function Edit({ attributes, setAttributes }) {
 			</BlockControls>
 
 			<InspectorControls>
-				<PanelBody title={__('Drop Cap Settings', 'lc-immeasurable-block-widgets-collectionblock-widgets-collection')} initialOpen={true}>
+				<PanelBody title={__('Drop Cap Settings', 'blockive-premium-addon-for-block')} initialOpen={true}>
 					<SelectControl
-						label={__('View', 'lc-immeasurable-block-widgets-collection')}
+						label={__('View', 'blockive-premium-addon-for-block')}
 						value={view}
 						options={[
 							{ label: 'Default', value: 'default' },
@@ -70,7 +70,7 @@ export default function Edit({ attributes, setAttributes }) {
 					
 					{view !== 'default' && (
 						<SelectControl
-							label={__('Shape', 'lc-immeasurable-block-widgets-collection')}
+							label={__('Shape', 'blockive-premium-addon-for-block')}
 							value={shape}
 							options={[
 								{ label: 'Square', value: 'square' },
@@ -82,14 +82,14 @@ export default function Edit({ attributes, setAttributes }) {
 					)}
 
 					<RangeControl
-						label={__('Size', 'lc-immeasurable-block-widgets-collection')}
+						label={__('Size', 'blockive-premium-addon-for-block')}
 						value={size}
 						onChange={(val) => setAttributes({ size: val })}
 						min={10}
 						max={200}
 					/>
 					<RangeControl
-						label={__('Space', 'lc-immeasurable-block-widgets-collection')}
+						label={__('Space', 'blockive-premium-addon-for-block')}
 						value={space}
 						onChange={(val) => setAttributes({ space: val })}
 						min={0}
@@ -98,7 +98,7 @@ export default function Edit({ attributes, setAttributes }) {
 					
 					{view !== 'default' && (
 						<RangeControl
-							label={__('Padding', 'lc-immeasurable-block-widgets-collection')}
+							label={__('Padding', 'blockive-premium-addon-for-block')}
 							value={dropCapPadding}
 							onChange={(val) => setAttributes({ dropCapPadding: val })}
 							min={0}
@@ -108,7 +108,7 @@ export default function Edit({ attributes, setAttributes }) {
 					
 					{view === 'framed' && (
 						<RangeControl
-							label={__('Border Width', 'lc-immeasurable-block-widgets-collection')}
+							label={__('Border Width', 'blockive-premium-addon-for-block')}
 							value={borderWidth}
 							onChange={(val) => setAttributes({ borderWidth: val })}
 							min={1}
@@ -118,28 +118,28 @@ export default function Edit({ attributes, setAttributes }) {
 
 					{view !== 'default' && (
 						<RangeControl
-							label={__('Border Radius', 'lc-immeasurable-block-widgets-collection')}
+							label={__('Border Radius', 'blockive-premium-addon-for-block')}
 							value={borderRadius}
 							onChange={(val) => setAttributes({ borderRadius: val })}
 							min={0}
 							max={100}
-							help={__('Leave at 0 to use Shape setting.', 'lc-immeasurable-block-widgets-collection')}
+							help={__('Leave at 0 to use Shape setting.', 'blockive-premium-addon-for-block')}
 						/>
 					)}
 				</PanelBody>
 			</InspectorControls>
 
 			<InspectorControls group="styles">
-				<PanelBody title={__('Drop Cap Colors', 'lc-immeasurable-block-widgets-collection')} initialOpen={true}>
+				<PanelBody title={__('Drop Cap Colors', 'blockive-premium-addon-for-block')} initialOpen={true}>
 					{view !== 'default' && (
-						<BaseControl label={__('Primary Color (Background/Border)', 'lc-immeasurable-block-widgets-collection')}>
+						<BaseControl label={__('Primary Color (Background/Border)', 'blockive-premium-addon-for-block')}>
 							<ColorPalette
 								value={primaryColor}
 								onChange={(val) => setAttributes({ primaryColor: val })}
 							/>
 						</BaseControl>
 					)}
-					<BaseControl label={__('Secondary Color (Text)', 'lc-immeasurable-block-widgets-collection')}>
+					<BaseControl label={__('Secondary Color (Text)', 'blockive-premium-addon-for-block')}>
 						<ColorPalette
 							value={secondaryColor}
 							onChange={(val) => setAttributes({ secondaryColor: val })}
@@ -153,7 +153,7 @@ export default function Edit({ attributes, setAttributes }) {
 				tagName="p"
 				value={content}
 				onChange={(val) => setAttributes({ content: val })}
-				placeholder={__('Enter text here...', 'lc-immeasurable-block-widgets-collection')}
+				placeholder={__('Enter text here...', 'blockive-premium-addon-for-block')}
 			/>
 		</>
 	);

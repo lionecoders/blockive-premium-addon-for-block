@@ -1,11 +1,11 @@
 /**
- * Frontend script for LC Progress Bar.
+ * Frontend script for Blockive Progress Bar.
  * Handles Intersection Observer to animate the bar and counter on scroll.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
 	const initProgressBars = () => {
-		const progressBars = document.querySelectorAll('.lc-progress-bar-wrapper[data-lc-progress]:not(.lc-pb-initialized)');
+		const progressBars = document.querySelectorAll('.blockive-progress-bar-wrapper[data-blockive-progress]:not(.blockive-pb-initialized)');
 		
 		if (!progressBars.length) return;
 
@@ -13,8 +13,8 @@ document.addEventListener('DOMContentLoaded', () => {
 			entries.forEach(entry => {
 				if (entry.isIntersecting) {
 					const wrapper = entry.target;
-					const fillArea = wrapper.querySelector('.lc-pb-fill');
-					const numberElements = wrapper.querySelectorAll('.lc-pb-number');
+					const fillArea = wrapper.querySelector('.blockive-pb-fill');
+					const numberElements = wrapper.querySelectorAll('.blockive-pb-number');
 					
 					const targetPercentage = parseFloat(wrapper.getAttribute('data-percentage')) || 0;
 					const duration = parseInt(wrapper.getAttribute('data-duration'), 10) || 1500;
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
 					}
 
 					// Mark as initialized and stop observing
-					wrapper.classList.add('lcibwc-pb-initialized');
+					wrapper.classList.add('bpafb-pb-initialized');
 					observerInstance.unobserve(wrapper);
 				}
 			});

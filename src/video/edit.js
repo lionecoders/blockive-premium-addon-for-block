@@ -16,16 +16,16 @@ export default function Edit({ attributes, setAttributes }) {
 	};
 
 	const blockProps = useBlockProps({
-		className: 'lcibwc-video-wrapper',
+		className: 'bpafb-video-wrapper',
 		style: customStyles,
 	});
 
 	return (
 		<>
 			<InspectorControls>
-				<PanelBody title={__('Video Settings', 'lc-immeasurable-block-widgets-collection')} initialOpen={true}>
+				<PanelBody title={__('Video Settings', 'blockive-premium-addon-for-block')} initialOpen={true}>
 					<div style={{ marginBottom: '15px' }}>
-						<label>{__('Video URL or File', 'lc-immeasurable-block-widgets-collection')}</label>
+						<label>{__('Video URL or File', 'blockive-premium-addon-for-block')}</label>
 						<MediaUploadCheck>
 							<MediaUpload
 								onSelect={(media) => setAttributes({ videoUrl: media.url })}
@@ -33,7 +33,7 @@ export default function Edit({ attributes, setAttributes }) {
 								value={videoUrl}
 								render={({ open }) => (
 									<Button onClick={open} isPrimary>
-										{videoUrl ? __('Change Video', 'lc-immeasurable-block-widgets-collection') : __('Select Video', 'lc-immeasurable-block-widgets-collection')}
+										{videoUrl ? __('Change Video', 'blockive-premium-addon-for-block') : __('Select Video', 'blockive-premium-addon-for-block')}
 									</Button>
 								)}
 							/>
@@ -41,31 +41,31 @@ export default function Edit({ attributes, setAttributes }) {
 					</div>
 
 					<TextControl
-						label={__('Width (e.g., 100%, 600px)', 'lc-immeasurable-block-widgets-collection')}
+						label={__('Width (e.g., 100%, 600px)', 'blockive-premium-addon-for-block')}
 						value={width}
 						onChange={(val) => setAttributes({ width: val })}
 					/>
 
 					<TextControl
-						label={__('Height (e.g., 400px)', 'lc-immeasurable-block-widgets-collection')}
+						label={__('Height (e.g., 400px)', 'blockive-premium-addon-for-block')}
 						value={height}
 						onChange={(val) => setAttributes({ height: val })}
 					/>
 
 					<ToggleControl
-						label={__('Autoplay', 'lc-immeasurable-block-widgets-collection')}
+						label={__('Autoplay', 'blockive-premium-addon-for-block')}
 						checked={autoplay}
 						onChange={(val) => setAttributes({ autoplay: val })}
 					/>
 
 					<ToggleControl
-						label={__('Show Controls', 'lc-immeasurable-block-widgets-collection')}
+						label={__('Show Controls', 'blockive-premium-addon-for-block')}
 						checked={controls}
 						onChange={(val) => setAttributes({ controls: val })}
 					/>
 
 					<ToggleControl
-						label={__('Loop', 'lc-immeasurable-block-widgets-collection')}
+						label={__('Loop', 'blockive-premium-addon-for-block')}
 						checked={loop}
 						onChange={(val) => setAttributes({ loop: val })}
 					/>
@@ -73,15 +73,15 @@ export default function Edit({ attributes, setAttributes }) {
 			</InspectorControls>
 
 			<div {...blockProps}>
-				<div className="lcibwc-video-container">
+				<div className="bpafb-video-container">
 					{videoUrl ? (
 						<video controls={controls} autoPlay={autoplay} loop={loop} style={{ width: '100%', height: '100%', objectFit: 'contain' }}>
 							<source src={videoUrl} />
-							{__('Your browser does not support the video tag.', 'lc-immeasurable-block-widgets-collection')}
+							{__('Your browser does not support the video tag.', 'blockive-premium-addon-for-block')}
 						</video>
 					) : (
 						<div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%', background: '#f0f0f0', color: '#999' }}>
-							{__('Select a video to display', 'lc-immeasurable-block-widgets-collection')}
+							{__('Select a video to display', 'blockive-premium-addon-for-block')}
 						</div>
 					)}
 				</div>

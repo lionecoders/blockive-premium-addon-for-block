@@ -31,12 +31,12 @@ export default function Edit({ attributes, setAttributes }) {
 	const [activeIndex, setActiveIndex] = useState(0);
 
 	const customStyles = {
-		'--lcibwc-testimonial-text-color': textColor,
-		'--lcibwc-testimonial-bg-color': bgColor,
+		'--bpafb-testimonial-text-color': textColor,
+		'--bpafb-testimonial-bg-color': bgColor,
 	};
 
 	const blockProps = useBlockProps({
-		className: `lcibwc-testimonial-wrapper lcibwc-testimonial-${style}`,
+		className: `bpafb-testimonial-wrapper bpafb-testimonial-${style}`,
 		style: customStyles,
 	});
 
@@ -72,16 +72,16 @@ export default function Edit({ attributes, setAttributes }) {
 	return (
 		<>
 			<InspectorControls>
-				<PanelBody title={__('Testimonials', 'lc-immeasurable-block-widgets-collection')} initialOpen={true}>
+				<PanelBody title={__('Testimonials', 'blockive-premium-addon-for-block')} initialOpen={true}>
 					{testimonials.map((testimonial, index) => (
 						<div key={testimonial.id} style={{ marginBottom: '15px', border: '1px solid #ddd', padding: '10px' }}>
 							<TextControl
-								label={__('Name', 'lc-immeasurable-block-widgets-collection')}
+								label={__('Name', 'blockive-premium-addon-for-block')}
 								value={testimonial.name}
 								onChange={(val) => updateTestimonial(index, 'name', val)}
 							/>
 							<TextControl
-								label={__('Designation', 'lc-immeasurable-block-widgets-collection')}
+								label={__('Designation', 'blockive-premium-addon-for-block')}
 								value={testimonial.designation}
 								onChange={(val) => updateTestimonial(index, 'designation', val)}
 							/>
@@ -93,25 +93,25 @@ export default function Edit({ attributes, setAttributes }) {
 										value={testimonial.image}
 										render={({ open }) => (
 											<Button onClick={open} isPrimary size="small">
-												{testimonial.image ? __('Change Image', 'lc-immeasurable-block-widgets-collection') : __('Select Image', 'lc-immeasurable-block-widgets-collection')}
+												{testimonial.image ? __('Change Image', 'blockive-premium-addon-for-block') : __('Select Image', 'blockive-premium-addon-for-block')}
 											</Button>
 										)}
 									/>
 								</MediaUploadCheck>
 							</div>
 							<Button isDestructive onClick={() => removeTestimonial(index)} size="small">
-								{__('Remove', 'lc-immeasurable-block-widgets-collection')}
+								{__('Remove', 'blockive-premium-addon-for-block')}
 							</Button>
 						</div>
 					))}
 					<Button isPrimary onClick={addTestimonial}>
-						{__('Add Testimonial', 'lc-immeasurable-block-widgets-collection')}
+						{__('Add Testimonial', 'blockive-premium-addon-for-block')}
 					</Button>
 				</PanelBody>
 
-				<PanelBody title={__('Settings', 'lc-immeasurable-block-widgets-collection')}>
+				<PanelBody title={__('Settings', 'blockive-premium-addon-for-block')}>
 					<SelectControl
-						label={__('Style', 'lc-immeasurable-block-widgets-collection')}
+						label={__('Style', 'blockive-premium-addon-for-block')}
 						value={style}
 						options={[
 							{ label: 'Style 1', value: 'style1' },
@@ -121,32 +121,32 @@ export default function Edit({ attributes, setAttributes }) {
 						onChange={(val) => setAttributes({ style: val })}
 					/>
 					<ToggleControl
-						label={__('Show Rating', 'lc-immeasurable-block-widgets-collection')}
+						label={__('Show Rating', 'blockive-premium-addon-for-block')}
 						checked={showRating}
 						onChange={(val) => setAttributes({ showRating: val })}
 					/>
 					<ToggleControl
-						label={__('Show Dots', 'lc-immeasurable-block-widgets-collection')}
+						label={__('Show Dots', 'blockive-premium-addon-for-block')}
 						checked={showDots}
 						onChange={(val) => setAttributes({ showDots: val })}
 					/>
 					<ToggleControl
-						label={__('Show Arrows', 'lc-immeasurable-block-widgets-collection')}
+						label={__('Show Arrows', 'blockive-premium-addon-for-block')}
 						checked={showArrows}
 						onChange={(val) => setAttributes({ showArrows: val })}
 					/>
 				</PanelBody>
 
-				<PanelBody title={__('Colors', 'lc-immeasurable-block-widgets-collection')}>
+				<PanelBody title={__('Colors', 'blockive-premium-addon-for-block')}>
 					<div style={{ marginBottom: '15px' }}>
-						<label>{__('Text Color', 'lc-immeasurable-block-widgets-collection')}</label>
+						<label>{__('Text Color', 'blockive-premium-addon-for-block')}</label>
 						<ColorPalette
 							value={textColor}
 							onChange={(val) => setAttributes({ textColor: val })}
 						/>
 					</div>
 					<div>
-						<label>{__('Background Color', 'lc-immeasurable-block-widgets-collection')}</label>
+						<label>{__('Background Color', 'blockive-premium-addon-for-block')}</label>
 						<ColorPalette
 							value={bgColor}
 							onChange={(val) => setAttributes({ bgColor: val })}
@@ -156,49 +156,49 @@ export default function Edit({ attributes, setAttributes }) {
 			</InspectorControls>
 
 			<div {...blockProps}>
-				<div className="lcibwc-testimonial-slider">
+				<div className="bpafb-testimonial-slider">
 					{testimonials.map((testimonial, index) => (
 						<div
 							key={testimonial.id}
-							className={`lcibwc-testimonial-item ${activeIndex === index ? 'active' : ''}`}
+							className={`bpafb-testimonial-item ${activeIndex === index ? 'active' : ''}`}
 						>
 							{testimonial.image && (
 								<img
 									src={testimonial.image}
 									alt={testimonial.name}
-									className="lcibwc-testimonial-image"
+									className="bpafb-testimonial-image"
 								/>
 							)}
-							<p className="lcibwc-testimonial-content">{testimonial.content}</p>
+							<p className="bpafb-testimonial-content">{testimonial.content}</p>
 							{showRating && (
-								<div className="lcibwc-testimonial-rating">
+								<div className="bpafb-testimonial-rating">
 									{[...Array(testimonial.rating)].map((_, i) => (
-										<span key={i} className="lcibwc-star">★</span>
+										<span key={i} className="bpafb-star">★</span>
 									))}
 								</div>
 							)}
-							<p className="lcibwc-testimonial-name">{testimonial.name}</p>
-							<p className="lcibwc-testimonial-designation">{testimonial.designation}</p>
+							<p className="bpafb-testimonial-name">{testimonial.name}</p>
+							<p className="bpafb-testimonial-designation">{testimonial.designation}</p>
 						</div>
 					))}
 
 					{showArrows && (
 						<>
-							<button className="lcibwc-arrow lcibwc-prev" onClick={() => setActiveIndex((activeIndex - 1 + testimonials.length) % testimonials.length)}>
+							<button className="bpafb-arrow bpafb-prev" onClick={() => setActiveIndex((activeIndex - 1 + testimonials.length) % testimonials.length)}>
 								❮
 							</button>
-							<button className="lcibwc-arrow lcibwc-next" onClick={() => setActiveIndex((activeIndex + 1) % testimonials.length)}>
+							<button className="bpafb-arrow bpafb-next" onClick={() => setActiveIndex((activeIndex + 1) % testimonials.length)}>
 								❯
 							</button>
 						</>
 					)}
 
 					{showDots && (
-						<div className="lcibwc-testimonial-dots">
+						<div className="bpafb-testimonial-dots">
 							{testimonials.map((_, index) => (
 								<button
 									key={index}
-									className={`lcibwc-dot ${activeIndex === index ? 'active' : ''}`}
+									className={`bpafb-dot ${activeIndex === index ? 'active' : ''}`}
 									onClick={() => setActiveIndex(index)}
 								/>
 							))}

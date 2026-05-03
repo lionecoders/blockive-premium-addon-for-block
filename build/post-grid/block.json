@@ -1,10 +1,10 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
-  "name": "lc-immeasurable-block-widgets-collection/post-grid",
+  "name": "blockive-premium-addon-for-block/post-grid",
   "version": "0.1.0",
-  "title": "LC Post Grid",
-  "category": "lcibwc-widgets",
+  "title": "Blockive Post Grid",
+  "category": "bpafb-widgets",
   "icon": "grid-view",
   "description": "Dynamic post grid/listing block.",
   "attributes": {

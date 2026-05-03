@@ -111,47 +111,47 @@ export default function Edit({ attributes, setAttributes }) {
 			</BlockControls>
 
 			<InspectorControls>
-				<PanelBody title={__('Chart Data', 'lc-immeasurable-block-widgets-collectionblock-widgets-collectionblock-widgets-collection')} initialOpen={true}>
+				<PanelBody title={__('Chart Data', 'blockive-premium-addon-for-block')} initialOpen={true}>
 					{chartData.map((item, index) => (
 						<div key={item.id} style={{ marginBottom: '15px', padding: '10px', border: '1px solid #e2e8f0', borderRadius: '4px' }}>
 							<TextControl
-								label={__('Label', 'lc-immeasurable-block-widgets-collection')}
+								label={__('Label', 'blockive-premium-addon-for-block')}
 								value={item.label}
 								onChange={(val) => updateItem(index, 'label', val)}
 							/>
 							<TextControl
-								label={__('Value', 'lc-immeasurable-block-widgets-collection')}
+								label={__('Value', 'blockive-premium-addon-for-block')}
 								type="number"
 								value={item.value}
 								onChange={(val) => updateItem(index, 'value', val)}
 							/>
-							<BaseControl label={__('Slice Color', 'lc-immeasurable-block-widgets-collection')}>
+							<BaseControl label={__('Slice Color', 'blockive-premium-addon-for-block')}>
 								<ColorPalette
 									value={item.bg}
 									onChange={(val) => updateItem(index, 'bg', val || '#000')}
 								/>
 							</BaseControl>
 							<Button isDestructive onClick={() => removeItem(index)} style={{ marginTop: '10px' }}>
-								{__('Remove Item', 'lc-immeasurable-block-widgets-collection')}
+								{__('Remove Item', 'blockive-premium-addon-for-block')}
 							</Button>
 						</div>
 					))}
 					<Button isPrimary onClick={addItem}>
-						{__('Add Slice', 'lc-immeasurable-block-widgets-collection')}
+						{__('Add Slice', 'blockive-premium-addon-for-block')}
 					</Button>
 				</PanelBody>
 
-				<PanelBody title={__('Chart Settings', 'lc-immeasurable-block-widgets-collection')} initialOpen={false}>
+				<PanelBody title={__('Chart Settings', 'blockive-premium-addon-for-block')} initialOpen={false}>
 					<RangeControl
-						label={__('Cutout % (Make it a Donut)', 'lc-immeasurable-block-widgets-collection')}
+						label={__('Cutout % (Make it a Donut)', 'blockive-premium-addon-for-block')}
 						value={cutout}
 						onChange={(val) => setAttributes({ cutout: val })}
 						min={0}
 						max={90}
-						help={__('Set > 0 to create a Donut Chart.', 'lc-immeasurable-block-widgets-collection')}
+						help={__('Set > 0 to create a Donut Chart.', 'blockive-premium-addon-for-block')}
 					/>
 					<SelectControl
-						label={__('Legend Position', 'lc-immeasurable-block-widgets-collection')}
+						label={__('Legend Position', 'blockive-premium-addon-for-block')}
 						value={legendPosition}
 						options={[
 							{ label: 'Top', value: 'top' },
@@ -164,35 +164,35 @@ export default function Edit({ attributes, setAttributes }) {
 					/>
 				</PanelBody>
 
-				<PanelBody title={__('Styling', 'lc-immeasurable-block-widgets-collection')} initialOpen={false}>
+				<PanelBody title={__('Styling', 'blockive-premium-addon-for-block')} initialOpen={false}>
 					<RangeControl
-						label={__('Border Width (px)', 'lc-immeasurable-block-widgets-collection')}
+						label={__('Border Width (px)', 'blockive-premium-addon-for-block')}
 						value={borderWidth}
 						onChange={(val) => setAttributes({ borderWidth: val })}
 						min={0}
 						max={10}
 					/>
-					<BaseControl label={__('Border Color', 'lc-immeasurable-block-widgets-collection')}>
+					<BaseControl label={__('Border Color', 'blockive-premium-addon-for-block')}>
 						<ColorPalette value={borderColor} onChange={(val) => setAttributes({ borderColor: val || 'transparent' })} />
 					</BaseControl>
 					<RangeControl
-						label={__('Animation Speed (ms)', 'lc-immeasurable-block-widgets-collection')}
+						label={__('Animation Speed (ms)', 'blockive-premium-addon-for-block')}
 						value={animationSpeed}
 						onChange={(val) => setAttributes({ animationSpeed: val })}
 						min={0}
 						max={5000}
 						step={100}
-						help={__('Only applies to the live site frontend.', 'lc-immeasurable-block-widgets-collection')}
+						help={__('Only applies to the live site frontend.', 'blockive-premium-addon-for-block')}
 					/>
 				</PanelBody>
 			</InspectorControls>
 
 			<div {...blockProps}>
-				<div className="lcibwc-pie-chart-wrapper">
+				<div className="bpafb-pie-chart-wrapper">
 					{chartData && chartData.length > 0 ? (
 						<canvas ref={chartRef}></canvas>
 					) : (
-						<div className="lcibwc-chart-error">{__('Please add data to show the chart.', 'lc-immeasurable-block-widgets-collection')}</div>
+						<div className="bpafb-chart-error">{__('Please add data to show the chart.', 'blockive-premium-addon-for-block')}</div>
 					)}
 				</div>
 			</div>

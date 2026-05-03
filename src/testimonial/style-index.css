@@ -1,19 +1,19 @@
-.lcibwc-testimonial-wrapper {
+.bpafb-testimonial-wrapper {
 	width: 100%;
 	margin: 20px 0;
-	background: var(--lcibwc-testimonial-bg-color, #ffffff);
+	background: var(--bpafb-testimonial-bg-color, #ffffff);
 	padding: 30px;
 	border-radius: 8px;
 	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.lcibwc-testimonial-slider {
+.bpafb-testimonial-slider {
 	position: relative;
 	width: 100%;
 	overflow: hidden;
 }
 
-.lcibwc-testimonial-item {
+.bpafb-testimonial-item {
 	display: none;
 	opacity: 0;
 	transition: opacity 0.5s ease-in-out;
@@ -21,13 +21,13 @@
 	padding: 20px;
 }
 
-.lcibwc-testimonial-item.active,
-.lcibwc-testimonial-item[data-index="0"] {
+.bpafb-testimonial-item.active,
+.bpafb-testimonial-item[data-index="0"] {
 	display: block;
 	opacity: 1;
 }
 
-.lcibwc-testimonial-image {
+.bpafb-testimonial-image {
 	width: 80px;
 	height: 80px;
 	border-radius: 50%;
@@ -36,35 +36,35 @@
 	border: 3px solid #4f46e5;
 }
 
-.lcibwc-testimonial-content {
+.bpafb-testimonial-content {
 	font-size: 16px;
-	color: var(--lcibwc-testimonial-text-color, #333333);
+	color: var(--bpafb-testimonial-text-color, #333333);
 	font-style: italic;
 	margin: 15px 0;
 	line-height: 1.6;
 }
 
-.lcibwc-testimonial-rating {
+.bpafb-testimonial-rating {
 	margin: 10px 0;
 	letter-spacing: 2px;
 	color: #ffc107;
 	font-size: 18px;
 }
 
-.lcibwc-testimonial-name {
+.bpafb-testimonial-name {
 	font-weight: 600;
 	font-size: 16px;
-	color: var(--lcibwc-testimonial-text-color, #333333);
+	color: var(--bpafb-testimonial-text-color, #333333);
 	margin: 10px 0 5px 0;
 }
 
-.lcibwc-testimonial-designation {
+.bpafb-testimonial-designation {
 	font-size: 14px;
 	color: #999999;
 	margin: 0;
 }
 
-.lcibwc-arrow {
+.bpafb-arrow {
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
@@ -79,25 +79,25 @@
 	z-index: 10;
 }
 
-.lcibwc-arrow:hover {
+.bpafb-arrow:hover {
 	background: rgba(79, 70, 229, 1);
 }
 
-.lcibwc-arrow.lcibwc-prev {
+.bpafb-arrow.bpafb-prev {
 	left: 10px;
 }
 
-.lcibwc-arrow.lcibwc-next {
+.bpafb-arrow.bpafb-next {
 	right: 10px;
 }
 
-.lcibwc-testimonial-dots {
+.bpafb-testimonial-dots {
 	text-align: center;
 	padding: 20px 0 0 0;
 	margin-top: 20px;
 }
 
-.lcibwc-dot {
+.bpafb-dot {
 	width: 12px;
 	height: 12px;
 	border-radius: 50%;
@@ -108,10 +108,10 @@
 	transition: background 0.3s;
 }
 
-.lcibwc-dot.active {
+.bpafb-dot.active {
 	background: #4f46e5;
 }
 
-.lcibwc-dot:hover {
+.bpafb-dot:hover {
 	background: #999;
 }

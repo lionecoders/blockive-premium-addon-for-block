@@ -1,10 +1,10 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
-	"name": "lc-immeasurable-block-widgets-collectionblock-widgets-collection/faq",
+	"name": "blockive-premium-addon-for-block/faq",
 	"version": "0.1.0",
-	"title": "LC FAQ",
-	"category": "lcibwc-widgets",
+	"title": "Blockive FAQ",
+	"category": "bpafb-widgets",
 	"icon": "editor-help",
 	"description": "FAQ block with rich schema.org markup for SEO, based on accordion behavior.",
 	"attributes": {
@@ -115,7 +115,7 @@
 			}
 		}
 	},
-	"textdomain": "lc-immeasurable-block-widgets-collection",
+	"textdomain": "blockive-premium-addon-for-block",
 	"editorScript": "file:./index.js",
 	"style": "file:./index.css",
 	"viewScript": "file:./view.js"

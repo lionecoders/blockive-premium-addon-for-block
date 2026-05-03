@@ -15,16 +15,16 @@ export default function save({ attributes }) {
 	} = attributes;
 
 	const customStyles = {
-		'--lcibwc-bh-title-color': titleColor,
-		'--lcibwc-bh-container-bg': containerBgColor,
-		'--lcibwc-bh-item-bg': itemBgColor,
-		'--lcibwc-bh-item-text-color': itemTextColor,
-		'--lcibwc-bh-today-bg': todayBgColor,
-		'--lcibwc-bh-today-text-color': todayTextColor,
+		'--bpafb-bh-title-color': titleColor,
+		'--bpafb-bh-container-bg': containerBgColor,
+		'--bpafb-bh-item-bg': itemBgColor,
+		'--bpafb-bh-item-text-color': itemTextColor,
+		'--bpafb-bh-today-bg': todayBgColor,
+		'--bpafb-bh-today-text-color': todayTextColor,
 	};
 
 	const blockProps = useBlockProps.save({
-		className: 'lcibwc-business-hours-wrapper',
+		className: 'bpafb-business-hours-wrapper',
 		style: customStyles,
 		'data-highlight-today': highlightToday ? 'true' : 'false',
 	});
@@ -65,25 +65,25 @@ export default function save({ attributes }) {
 
 	return (
 		<div {...blockProps}>
-			<div className="lcibwc-business-hours-container">
+			<div className="bpafb-business-hours-container">
 				{title && (
 					<RichText.Content
 						tagName="h3"
-						className="lcibwc-business-hours-title"
+						className="bpafb-business-hours-title"
 						value={title}
 					/>
 				)}
 				
-				<div className="lcibwc-business-hours-list">
+				<div className="bpafb-business-hours-list">
 					{hours.map((hour, index) => {
 						return (
-							<div key={index} className="lcibwc-business-hours-item" data-day={hour.day}>
-								<span className="lcibwc-business-hours-day">{getDayLabel(hour.day)}</span>
+							<div key={index} className="bpafb-business-hours-item" data-day={hour.day}>
+								<span className="bpafb-business-hours-day">{getDayLabel(hour.day)}</span>
 								
 								{hour.isClosed ? (
-									<span className="lcibwc-business-hours-time closed">{hour.closedText}</span>
+									<span className="bpafb-business-hours-time closed">{hour.closedText}</span>
 								) : (
-									<span className="lcibwc-business-hours-time">
+									<span className="bpafb-business-hours-time">
 										{formatTime(hour.openTime)} - {formatTime(hour.closeTime)}
 									</span>
 								)}

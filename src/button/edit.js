@@ -38,30 +38,30 @@ export default function Edit({ attributes, setAttributes }) {
 	} = attributes;
 
 	const customStyles = {
-		'--lcibwc-btn-text-color': textColor,
-		'--lcibwc-btn-bg-color': bgColor,
-		'--lcibwc-btn-border-color': borderColor,
-		'--lcibwc-btn-text-color-hover': textColorHover,
-		'--lcibwc-btn-bg-color-hover': bgColorHover,
-		'--lcibwc-btn-border-color-hover': borderColorHover,
-		'--lcibwc-btn-badge-text-color': badgeTextColor,
-		'--lcibwc-btn-badge-bg-color': badgeBgColor,
-		'--lcibwc-btn-icon-spacing': `${iconSpacing}px`,
-		'--lcibwc-btn-width': buttonWidth === 'full' ? '100%' : 'auto',
-		'--lcibwc-btn-justify': alignment === 'left' ? 'flex-start' : (alignment === 'right' ? 'flex-end' : (alignment === 'justify' ? 'stretch' : 'center')),
+		'--bpafb-btn-text-color': textColor,
+		'--bpafb-btn-bg-color': bgColor,
+		'--bpafb-btn-border-color': borderColor,
+		'--bpafb-btn-text-color-hover': textColorHover,
+		'--bpafb-btn-bg-color-hover': bgColorHover,
+		'--bpafb-btn-border-color-hover': borderColorHover,
+		'--bpafb-btn-badge-text-color': badgeTextColor,
+		'--bpafb-btn-badge-bg-color': badgeBgColor,
+		'--bpafb-btn-icon-spacing': `${iconSpacing}px`,
+		'--bpafb-btn-width': buttonWidth === 'full' ? '100%' : 'auto',
+		'--bpafb-btn-justify': alignment === 'left' ? 'flex-start' : (alignment === 'right' ? 'flex-end' : (alignment === 'justify' ? 'stretch' : 'center')),
 	};
 
 	const blockProps = useBlockProps({
-		className: `lcibwc-button-wrapper lcibwc-button-align-${alignment}`,
+		className: `bpafb-button-wrapper bpafb-button-align-${alignment}`,
 		style: customStyles,
 	});
 
 	return (
 		<>
 			<InspectorControls>
-				<PanelBody title={__('Content', 'lc-immeasurable-block-widgets-collection')} initialOpen={true}>
+				<PanelBody title={__('Content', 'blockive-premium-addon-for-block')} initialOpen={true}>
 					<TextControl
-						label={__('Link URL', 'lc-immeasurable-block-widgets-collection')}
+						label={__('Link URL', 'blockive-premium-addon-for-block')}
 						value={url}
 						onChange={(val) => setAttributes({ url: val })}
 						type="url"
@@ -69,21 +69,21 @@ export default function Edit({ attributes, setAttributes }) {
 					
 					{url && (
 						<ToggleControl
-							label={__('Open in new tab', 'lc-immeasurable-block-widgets-collection')}
+							label={__('Open in new tab', 'blockive-premium-addon-for-block')}
 							checked={linkTarget}
 							onChange={(val) => setAttributes({ linkTarget: val })}
 						/>
 					)}
 
 					<TextControl
-						label={__('Badge Text (Optional)', 'lc-immeasurable-block-widgets-collection')}
+						label={__('Badge Text (Optional)', 'blockive-premium-addon-for-block')}
 						value={badgeText}
 						onChange={(val) => setAttributes({ badgeText: val })}
-						help={__('Leave empty to hide badge', 'lc-immeasurable-block-widgets-collection')}
+						help={__('Leave empty to hide badge', 'blockive-premium-addon-for-block')}
 					/>
 
 					<ToggleControl
-						label={__('Show Icon', 'lc-immeasurable-block-widgets-collection')}
+						label={__('Show Icon', 'blockive-premium-addon-for-block')}
 						checked={showIcon}
 						onChange={(val) => setAttributes({ showIcon: val })}
 					/>
@@ -91,13 +91,13 @@ export default function Edit({ attributes, setAttributes }) {
 					{showIcon && (
 						<>
 							<TextControl
-								label={__('FontAwesome Icon Class', 'lc-immeasurable-block-widgets-collection')}
+								label={__('FontAwesome Icon Class', 'blockive-premium-addon-for-block')}
 								value={icon}
 								onChange={(val) => setAttributes({ icon: val })}
 								help="e.g., 'fas fa-arrow-right'"
 							/>
 							<SelectControl
-								label={__('Icon Position', 'lc-immeasurable-block-widgets-collection')}
+								label={__('Icon Position', 'blockive-premium-addon-for-block')}
 								value={iconPosition}
 								options={[
 									{ label: 'Left (Before Text)', value: 'left' },
@@ -106,7 +106,7 @@ export default function Edit({ attributes, setAttributes }) {
 								onChange={(val) => setAttributes({ iconPosition: val })}
 							/>
 							<RangeControl
-								label={__('Icon Spacing', 'lc-immeasurable-block-widgets-collection')}
+								label={__('Icon Spacing', 'blockive-premium-addon-for-block')}
 								value={iconSpacing}
 								onChange={(val) => setAttributes({ iconSpacing: val })}
 								min={0}
@@ -116,7 +116,7 @@ export default function Edit({ attributes, setAttributes }) {
 					)}
 
 					<SelectControl
-						label={__('Alignment', 'lc-immeasurable-block-widgets-collection')}
+						label={__('Alignment', 'blockive-premium-addon-for-block')}
 						value={alignment}
 						options={[
 							{ label: 'Left', value: 'left' },
@@ -137,19 +137,19 @@ export default function Edit({ attributes, setAttributes }) {
 			</InspectorControls>
 
 			<InspectorControls group="styles">
-				<PanelBody title={__('Button Colors', 'lc-immeasurable-block-widgets-collection')} initialOpen={true}>
+				<PanelBody title={__('Button Colors', 'blockive-premium-addon-for-block')} initialOpen={true}>
 					<TabPanel
-						className="lcibwc-color-tabs"
+						className="bpafb-color-tabs"
 						activeClass="is-active"
 						tabs={[
 							{
 								name: 'normal',
-								title: __('Normal', 'lc-immeasurable-block-widgets-collection'),
+								title: __('Normal', 'blockive-premium-addon-for-block'),
 								className: 'tab-normal',
 							},
 							{
 								name: 'hover',
-								title: __('Hover', 'lc-immeasurable-block-widgets-collection'),
+								title: __('Hover', 'blockive-premium-addon-for-block'),
 								className: 'tab-hover',
 							},
 						]}
@@ -158,13 +158,13 @@ export default function Edit({ attributes, setAttributes }) {
 							if (tab.name === 'normal') {
 								return (
 									<div style={{ marginTop: '15px' }}>
-										<BaseControl label={__('Text Color', 'lc-immeasurable-block-widgets-collection')}>
+										<BaseControl label={__('Text Color', 'blockive-premium-addon-for-block')}>
 											<ColorPalette value={textColor} onChange={(val) => setAttributes({ textColor: val })} />
 										</BaseControl>
-										<BaseControl label={__('Background Color', 'lc-immeasurable-block-widgets-collection')}>
+										<BaseControl label={__('Background Color', 'blockive-premium-addon-for-block')}>
 											<ColorPalette value={bgColor} onChange={(val) => setAttributes({ bgColor: val })} />
 										</BaseControl>
-										<BaseControl label={__('Border Color', 'lc-immeasurable-block-widgets-collection')}>
+										<BaseControl label={__('Border Color', 'blockive-premium-addon-for-block')}>
 											<ColorPalette value={borderColor} onChange={(val) => setAttributes({ borderColor: val })} />
 										</BaseControl>
 									</div>
@@ -172,13 +172,13 @@ export default function Edit({ attributes, setAttributes }) {
 							}
 							return (
 								<div style={{ marginTop: '15px' }}>
-									<BaseControl label={__('Hover Text Color', 'lc-immeasurable-block-widgets-collection')}>
+									<BaseControl label={__('Hover Text Color', 'blockive-premium-addon-for-block')}>
 										<ColorPalette value={textColorHover} onChange={(val) => setAttributes({ textColorHover: val })} />
 									</BaseControl>
-									<BaseControl label={__('Hover Background Color', 'lc-immeasurable-block-widgets-collection')}>
+									<BaseControl label={__('Hover Background Color', 'blockive-premium-addon-for-block')}>
 										<ColorPalette value={bgColorHover} onChange={(val) => setAttributes({ bgColorHover: val })} />
 									</BaseControl>
-									<BaseControl label={__('Hover Border Color', 'lc-immeasurable-block-widgets-collection')}>
+									<BaseControl label={__('Hover Border Color', 'blockive-premium-addon-for-block')}>
 										<ColorPalette value={borderColorHover} onChange={(val) => setAttributes({ borderColorHover: val })} />
 									</BaseControl>
 								</div>
@@ -188,11 +188,11 @@ export default function Edit({ attributes, setAttributes }) {
 				</PanelBody>
 
 				{badgeText && (
-					<PanelBody title={__('Badge Colors', 'lc-immeasurable-block-widgets-collection')} initialOpen={false}>
-						<BaseControl label={__('Badge Text Color', 'lc-immeasurable-block-widgets-collection')}>
+					<PanelBody title={__('Badge Colors', 'blockive-premium-addon-for-block')} initialOpen={false}>
+						<BaseControl label={__('Badge Text Color', 'blockive-premium-addon-for-block')}>
 							<ColorPalette value={badgeTextColor} onChange={(val) => setAttributes({ badgeTextColor: val })} />
 						</BaseControl>
-						<BaseControl label={__('Badge Background', 'lc-immeasurable-block-widgets-collection')}>
+						<BaseControl label={__('Badge Background', 'blockive-premium-addon-for-block')}>
 							<ColorPalette value={badgeBgColor} onChange={(val) => setAttributes({ badgeBgColor: val })} />
 						</BaseControl>
 					</PanelBody>
@@ -200,26 +200,26 @@ export default function Edit({ attributes, setAttributes }) {
 			</InspectorControls>
 
 			<div {...blockProps}>
-				<div className="lcibwc-button-inner">
+				<div className="bpafb-button-inner">
 					{badgeText && (
-						<span className="lcibwc-button-badge">{badgeText}</span>
+						<span className="bpafb-button-badge">{badgeText}</span>
 					)}
 					
 					{showIcon && iconPosition === 'left' && icon && (
-						<i className={`${icon} lcibwc-button-icon lcibwc-button-icon--left`}></i>
+						<i className={`${icon} bpafb-button-icon bpafb-button-icon--left`}></i>
 					)}
 
 					<RichText
 						tagName="span"
-						className="lcibwc-button-text"
+						className="bpafb-button-text"
 						value={text}
 						onChange={(val) => setAttributes({ text: val })}
-						placeholder={__('Button Text...', 'lc-immeasurable-block-widgets-collection')}
+						placeholder={__('Button Text...', 'blockive-premium-addon-for-block')}
 						allowedFormats={['core/bold', 'core/italic']}
 					/>
 
 					{showIcon && iconPosition === 'right' && icon && (
-						<i className={`${icon} lcibwc-button-icon lcibwc-button-icon--right`}></i>
+						<i className={`${icon} bpafb-button-icon bpafb-button-icon--right`}></i>
 					)}
 				</div>
 			</div>

@@ -4,10 +4,10 @@ return array(
 	'accordion' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
-		'name' => 'lc-immeasurable-block-widgets-collection/accordion',
+		'name' => 'blockive-premium-addon-for-block/accordion',
 		'version' => '0.1.0',
-		'title' => 'LC Accordion',
-		'category' => 'lcibwc-widgets',
+		'title' => 'Blockive Accordion',
+		'category' => 'bpafb-widgets',
 		'icon' => 'list-view',
 		'description' => 'Accordion block with advanced Elementor/Divi style settings.',
 		'attributes' => array(
@@ -98,7 +98,7 @@ return array(
 				)
 			)
 		),
-		'textdomain' => 'lc-immeasurable-block-widgets-collection',
+		'textdomain' => 'blockive-premium-addon-for-block',
 		'editorScript' => 'file:./index.js',
 		'style' => 'file:./index.css',
 		'viewScript' => 'file:./view.js'
@@ -106,10 +106,10 @@ return array(
 	'business-hours' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
-		'name' => 'lc-immeasurable-block-widgets-collection/business-hours',
+		'name' => 'blockive-premium-addon-for-block/business-hours',
 		'version' => '0.1.0',
-		'title' => 'LC Business Hours',
-		'category' => 'lcibwc-widgets',
+		'title' => 'Blockive Business Hours',
+		'category' => 'bpafb-widgets',
 		'icon' => 'clock',
 		'description' => 'Business Hours block to display opening and closing times.',
 		'attributes' => array(
@@ -244,7 +244,7 @@ return array(
 				)
 			)
 		),
-		'textdomain' => 'lc-immeasurable-block-widgets-collection',
+		'textdomain' => 'blockive-premium-addon-for-block',
 		'editorScript' => 'file:./index.js',
 		'style' => 'file:./index.css',
 		'viewScript' => 'file:./view.js'
@@ -252,10 +252,10 @@ return array(
 	'button' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
-		'name' => 'lc-immeasurable-block-widgets-collection/button',
+		'name' => 'blockive-premium-addon-for-block/button',
 		'version' => '0.1.0',
-		'title' => 'LC Button',
-		'category' => 'lcibwc-widgets',
+		'title' => 'Blockive Button',
+		'category' => 'bpafb-widgets',
 		'icon' => 'button',
 		'description' => 'A highly customizable button with icon and badge support.',
 		'attributes' => array(
@@ -366,17 +366,17 @@ return array(
 				)
 			)
 		),
-		'textdomain' => 'lc-immeasurable-block-widgets-collection',
+		'textdomain' => 'blockive-premium-addon-for-block',
 		'editorScript' => 'file:./index.js',
 		'style' => 'file:./index.css'
 	),
 	'category-list' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
-		'name' => 'lc-immeasurable-block-widgets-collection/category-list',
+		'name' => 'blockive-premium-addon-for-block/category-list',
 		'version' => '0.1.0',
-		'title' => 'LC Category List',
-		'category' => 'lcibwc-widgets',
+		'title' => 'Blockive Category List',
+		'category' => 'bpafb-widgets',
 		'icon' => 'list-view',
 		'description' => 'WordPress category browser/list block.',
 		'attributes' => array(
@@ -408,10 +408,10 @@ return array(
 	'contact-form-7' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
-		'name' => 'lc-immeasurable-block-widgets-collection/contact-form-7',
+		'name' => 'blockive-premium-addon-for-block/contact-form-7',
 		'version' => '0.1.0',
-		'title' => 'LC Contact Form 7',
-		'category' => 'lcibwc-widgets',
+		'title' => 'Blockive Contact Form 7',
+		'category' => 'bpafb-widgets',
 		'icon' => 'email-alt',
 		'description' => 'Contact Form 7 integration block.',
 		'attributes' => array(
@@ -439,10 +439,10 @@ return array(
 	'countdown-timer' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
-		'name' => 'lc-immeasurable-block-widgets-collection/countdown-timer',
+		'name' => 'blockive-premium-addon-for-block/countdown-timer',
 		'version' => '0.1.0',
-		'title' => 'LC Countdown Timer',
-		'category' => 'lcibwc-widgetsgets',
+		'title' => 'Blockive Countdown Timer',
+		'category' => 'bpafb-widgetsgets',
 		'icon' => 'clock',
 		'description' => 'A customizable countdown timer block with rich styling settings.',
 		'attributes' => array(
@@ -554,7 +554,7 @@ return array(
 				)
 			)
 		),
-		'textdomain' => 'lc-immeasurable-block-widgets-collection',
+		'textdomain' => 'blockive-premium-addon-for-block',
 		'editorScript' => 'file:./index.js',
 		'style' => 'file:./index.css',
 		'viewScript' => 'file:./view.js'
@@ -562,10 +562,10 @@ return array(
 	'drop-caps' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
-		'name' => 'lc-immeasurable-block-widgets-collectionblock-widgets-collection/drop-caps',
+		'name' => 'blockive-premium-addon-for-block/drop-caps',
 		'version' => '0.1.0',
-		'title' => 'LC Drop Caps',
-		'category' => 'lcibwc-widgetsgets',
+		'title' => 'Blockive Drop Caps',
+		'category' => 'bpafb-widgets',
 		'icon' => 'editor-textcolor',
 		'description' => 'Advanced drop caps block with customizable view, shape, and styling.',
 		'attributes' => array(
@@ -648,17 +648,17 @@ return array(
 				)
 			)
 		),
-		'textdomain' => 'lc-immeasurable-block-widgets-collection',
+		'textdomain' => 'blockive-premium-addon-for-block',
 		'editorScript' => 'file:./index.js',
 		'style' => 'file:./index.css'
 	),
 	'faq' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
-		'name' => 'lc-immeasurable-block-widgets-collectionblock-widgets-collection/faq',
+		'name' => 'blockive-premium-addon-for-block/faq',
 		'version' => '0.1.0',
-		'title' => 'LC FAQ',
-		'category' => 'lcibwc-widgets',
+		'title' => 'Blockive FAQ',
+		'category' => 'bpafb-widgets',
 		'icon' => 'editor-help',
 		'description' => 'FAQ block with rich schema.org markup for SEO, based on accordion behavior.',
 		'attributes' => array(
@@ -769,7 +769,7 @@ return array(
 				)
 			)
 		),
-		'textdomain' => 'lc-immeasurable-block-widgets-collection',
+		'textdomain' => 'blockive-premium-addon-for-block',
 		'editorScript' => 'file:./index.js',
 		'style' => 'file:./index.css',
 		'viewScript' => 'file:./view.js'
@@ -777,10 +777,10 @@ return array(
 	'funfact' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
-		'name' => 'lc-immeasurable-block-widgets-collection/funfact',
+		'name' => 'blockive-premium-addon-for-block/funfact',
 		'version' => '0.1.0',
-		'title' => 'LC Fun Fact',
-		'category' => 'lcibwc-widgets',
+		'title' => 'Blockive Fun Fact',
+		'category' => 'bpafb-widgets',
 		'icon' => 'chart-bar',
 		'description' => 'Animated statistics/counter block.',
 		'attributes' => array(
@@ -825,10 +825,10 @@ return array(
 	'heading' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
-		'name' => 'lc-immeasurable-block-widgets-collection/heading',
+		'name' => 'blockive-premium-addon-for-block/heading',
 		'version' => '0.1.0',
-		'title' => 'LC Heading',
-		'category' => 'lcibwc-widgets',
+		'title' => 'Blockive Heading',
+		'category' => 'bpafb-widgets',
 		'icon' => 'heading',
 		'description' => 'Advanced heading block with Elementor and Divi like settings.',
 		'attributes' => array(
@@ -939,17 +939,17 @@ return array(
 				)
 			)
 		),
-		'textdomain' => 'lc-immeasurable-block-widgets-collection',
+		'textdomain' => 'blockive-premium-addon-for-block',
 		'editorScript' => 'file:./index.js',
 		'style' => 'file:./index.css'
 	),
 	'icon-box' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
-		'name' => 'lc-immeasurable-block-widgets-collection/icon-box',
+		'name' => 'blockive-premium-addon-for-block/icon-box',
 		'version' => '0.1.0',
-		'title' => 'LC Icon Box',
-		'category' => 'lcibwc-widgets',
+		'title' => 'Blockive Icon Box',
+		'category' => 'bpafb-widgets',
 		'icon' => 'info',
 		'description' => 'An icon box that displays an icon, title, description, and link.',
 		'attributes' => array(
@@ -1058,17 +1058,17 @@ return array(
 				)
 			)
 		),
-		'textdomain' => 'lc-immeasurable-block-widgets-collection',
+		'textdomain' => 'blockive-premium-addon-for-block',
 		'editorScript' => 'file:./index.js',
 		'style' => 'file:./index.css'
 	),
 	'image-accordion' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
-		'name' => 'lc-immeasurable-block-widgets-collection/image-accordion',
+		'name' => 'blockive-premium-addon-for-block/image-accordion',
 		'version' => '0.1.0',
-		'title' => 'LC Image Accordion',
-		'category' => 'lcibwc-widgets',
+		'title' => 'Blockive Image Accordion',
+		'category' => 'bpafb-widgets',
 		'icon' => 'image',
 		'description' => 'Image accordion block with advanced styling options.',
 		'attributes' => array(
@@ -1114,10 +1114,10 @@ return array(
 	'image-box' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
-		'name' => 'lc-immeasurable-block-widgets-collection/image-box',
+		'name' => 'blockive-premium-addon-for-block/image-box',
 		'version' => '0.1.0',
-		'title' => 'LC Image Box',
-		'category' => 'lcibwc-widgets',
+		'title' => 'Blockive Image Box',
+		'category' => 'bpafb-widgets',
 		'icon' => 'format-image',
 		'description' => 'An image box that displays an image, title, description, and link.',
 		'attributes' => array(
@@ -1238,17 +1238,17 @@ return array(
 				)
 			)
 		),
-		'textdomain' => 'lc-immeasurable-block-widgets-collection',
+		'textdomain' => 'blockive-premium-addon-for-block',
 		'editorScript' => 'file:./index.js',
 		'style' => 'file:./index.css'
 	),
 	'image-comparison' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
-		'name' => 'lc-immeasurable-block-widgets-collection/image-comparison',
+		'name' => 'blockive-premium-addon-for-block/image-comparison',
 		'version' => '0.1.0',
-		'title' => 'LC Image Comparison',
-		'category' => 'lcibwc-widgets',
+		'title' => 'Blockive Image Comparison',
+		'category' => 'bpafb-widgets',
 		'icon' => 'format-image',
 		'description' => 'Before/after image comparison slider block.',
 		'attributes' => array(
@@ -1289,10 +1289,10 @@ return array(
 	'lottie' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
-		'name' => 'lc-immeasurable-block-widgets-collection/lottie',
+		'name' => 'blockive-premium-addon-for-block/lottie',
 		'version' => '0.1.0',
-		'title' => 'LC Lottie',
-		'category' => 'lcibwc-widgets',
+		'title' => 'Blockive Lottie',
+		'category' => 'bpafb-widgets',
 		'icon' => 'format-image',
 		'description' => 'Lottie animation player block.',
 		'attributes' => array(
@@ -1329,10 +1329,10 @@ return array(
 	'mailchimp' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
-		'name' => 'lc-immeasurable-block-widgets-collection/mailchimp',
+		'name' => 'blockive-premium-addon-for-block/mailchimp',
 		'version' => '0.1.0',
-		'title' => 'LC MailChimp',
-		'category' => 'lcibwc-widgets',
+		'title' => 'Blockive MailChimp',
+		'category' => 'bpafb-widgets',
 		'icon' => 'email',
 		'description' => 'MailChimp newsletter subscription block.',
 		'attributes' => array(
@@ -1368,10 +1368,10 @@ return array(
 	'pie-chart' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
-		'name' => 'lc-immeasurable-block-widgets-collection/pie-chart',
+		'name' => 'blockive-premium-addon-for-block/pie-chart',
 		'version' => '0.1.0',
-		'title' => 'LC Pie Chart',
-		'category' => 'lcibwc-widgets',
+		'title' => 'Blockive Pie Chart',
+		'category' => 'bpafb-widgets',
 		'icon' => 'chart-pie',
 		'description' => 'A dynamic pie and donut chart block using Chart.js.',
 		'attributes' => array(
@@ -1438,7 +1438,7 @@ return array(
 				)
 			)
 		),
-		'textdomain' => 'lc-immeasurable-block-widgets-collection',
+		'textdomain' => 'blockive-premium-addon-for-block',
 		'editorScript' => 'file:./index.js',
 		'style' => 'file:./index.css',
 		'viewScript' => 'file:./view.js'
@@ -1446,10 +1446,10 @@ return array(
 	'post-grid' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
-		'name' => 'lc-immeasurable-block-widgets-collection/post-grid',
+		'name' => 'blockive-premium-addon-for-block/post-grid',
 		'version' => '0.1.0',
-		'title' => 'LC Post Grid',
-		'category' => 'lcibwc-widgets',
+		'title' => 'Blockive Post Grid',
+		'category' => 'bpafb-widgets',
 		'icon' => 'grid-view',
 		'description' => 'Dynamic post grid/listing block.',
 		'attributes' => array(
@@ -1493,10 +1493,10 @@ return array(
 	'pricing-table' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
-		'name' => 'lc-immeasurable-block-widgets-collectionblock-widgets-collection/pricing-table',
+		'name' => 'blockive-premium-addon-for-block/pricing-table',
 		'version' => '0.1.0',
-		'title' => 'LC Pricing Table',
-		'category' => 'lcibwc-widgets',
+		'title' => 'Blockive Pricing Table',
+		'category' => 'bpafb-widgets',
 		'icon' => 'money-alt',
 		'description' => 'A fully customizable pricing table block with features list and button.',
 		'attributes' => array(
@@ -1639,17 +1639,17 @@ return array(
 				)
 			)
 		),
-		'textdomain' => 'lc-immeasurable-block-widgets-collection',
+		'textdomain' => 'blockive-premium-addon-for-block',
 		'editorScript' => 'file:./index.js',
 		'style' => 'file:./index.css'
 	),
 	'progress-bar' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
-		'name' => 'lc-immeasurable-block-widgets-collection/progress-bar',
+		'name' => 'blockive-premium-addon-for-block/progress-bar',
 		'version' => '0.1.0',
-		'title' => 'LC Progress Bar',
-		'category' => 'lcibwc-widgets',
+		'title' => 'Blockive Progress Bar',
+		'category' => 'bpafb-widgets',
 		'icon' => 'performance',
 		'description' => 'A premium animated progress bar widget.',
 		'attributes' => array(
@@ -1729,7 +1729,7 @@ return array(
 				'padding' => true
 			)
 		),
-		'textdomain' => 'lc-immeasurable-block-widgets-collection',
+		'textdomain' => 'blockive-premium-addon-for-block',
 		'editorScript' => 'file:./index.js',
 		'viewScript' => 'file:./view.js',
 		'style' => 'file:./index.css'
@@ -1737,10 +1737,10 @@ return array(
 	'social-icons' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
-		'name' => 'lc-immeasurable-block-widgets-collection/social-icons',
+		'name' => 'blockive-premium-addon-for-block/social-icons',
 		'version' => '0.1.0',
-		'title' => 'LC Social Icons',
-		'category' => 'lcibwc-widgets',
+		'title' => 'Blockive Social Icons',
+		'category' => 'bpafb-widgets',
 		'icon' => 'share',
 		'description' => 'A premium social icons block with Elementor-like controls.',
 		'attributes' => array(
@@ -1818,17 +1818,17 @@ return array(
 				'padding' => true
 			)
 		),
-		'textdomain' => 'lc-immeasurable-block-widgets-collection',
+		'textdomain' => 'blockive-premium-addon-for-block',
 		'editorScript' => 'file:./index.js',
 		'style' => 'file:./index.css'
 	),
 	'tabs' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
-		'name' => 'lc-immeasurable-block-widgets-collection/tabs',
+		'name' => 'blockive-premium-addon-for-block/tabs',
 		'version' => '0.1.0',
-		'title' => 'LC Tabs',
-		'category' => 'lcibwc-widgets',
+		'title' => 'Blockive Tabs',
+		'category' => 'bpafb-widgets',
 		'icon' => 'index-card',
 		'description' => 'A modern Tab block with premium segmented control styling.',
 		'attributes' => array(
@@ -1904,7 +1904,7 @@ return array(
 				)
 			)
 		),
-		'textdomain' => 'lc-immeasurable-block-widgets-collection',
+		'textdomain' => 'blockive-premium-addon-for-block',
 		'editorScript' => 'file:./index.js',
 		'style' => 'file:./index.css',
 		'viewScript' => 'file:./view.js'
@@ -1912,10 +1912,10 @@ return array(
 	'team' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
-		'name' => 'lc-immeasurable-block-widgets-collection/team',
+		'name' => 'blockive-premium-addon-for-block/team',
 		'version' => '0.1.0',
-		'title' => 'LC Team',
-		'category' => 'lcibwc-widgets',
+		'title' => 'Blockive Team',
+		'category' => 'bpafb-widgets',
 		'icon' => 'groups',
 		'description' => 'Team members showcase block.',
 		'attributes' => array(
@@ -1954,10 +1954,10 @@ return array(
 	'testimonial' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
-		'name' => 'lc-immeasurable-block-widgets-collection/testimonial',
+		'name' => 'blockive-premium-addon-for-block/testimonial',
 		'version' => '0.1.0',
-		'title' => 'LC Testimonial',
-		'category' => 'lcibwc-widgets',
+		'title' => 'Blockive Testimonial',
+		'category' => 'bpafb-widgets',
 		'icon' => 'format-quote',
 		'description' => 'Customer testimonials slider block.',
 		'attributes' => array(
@@ -2007,10 +2007,10 @@ return array(
 	'video' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
-		'name' => 'lc-immeasurable-block-widgets-collection/video',
+		'name' => 'blockive-premium-addon-for-block/video',
 		'version' => '0.1.0',
-		'title' => 'LC Video',
-		'category' => 'lcibwc-widgets',
+		'title' => 'Blockive Video',
+		'category' => 'bpafb-widgets',
 		'icon' => 'video-alt',
 		'description' => 'Video embedding block with customization options.',
 		'attributes' => array(

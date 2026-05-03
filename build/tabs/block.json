@@ -1,10 +1,10 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
-  "name": "lc-immeasurable-block-widgets-collection/tabs",
+  "name": "blockive-premium-addon-for-block/tabs",
   "version": "0.1.0",
-  "title": "LC Tabs",
-  "category": "lcibwc-widgets",
+  "title": "Blockive Tabs",
+  "category": "bpafb-widgets",
   "icon": "index-card",
   "description": "A modern Tab block with premium segmented control styling.",
   "attributes": {
@@ -80,7 +80,7 @@
       }
     }
   },
-  "textdomain": "lc-immeasurable-block-widgets-collection",
+  "textdomain": "blockive-premium-addon-for-block",
   "editorScript": "file:./index.js",
   "style": "file:./index.css",
   "viewScript": "file:./view.js"

@@ -1,10 +1,10 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
-	"name": "lc-immeasurable-block-widgets-collection/video",
+	"name": "blockive-premium-addon-for-block/video",
 	"version": "0.1.0",
-	"title": "LC Video",
-	"category": "lcibwc-widgets",
+	"title": "Blockive Video",
+	"category": "bpafb-widgets",
 	"icon": "video-alt",
 	"description": "Video embedding block with customization options.",
 	"attributes": {
