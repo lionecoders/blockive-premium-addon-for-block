@@ -1,17 +1,17 @@
-=== blockive-premium-addon-for-block ===
-Contributors:      deep7197
-Tags:              block, blocks, gutenberg, widgets, blockive, addon, elements
-Requires at least: 6.0
+=== Blockive - Premium Addon For Block ===
+Contributors:      deep7197, lionecoders
+Tags:              block, blocks, gutenberg, blockive, widgets
+Requires at least: 6.8
 Tested up to:      6.9
 Stable tag:        1.0.0
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
-Essential collection of premium Gutenberg blocks for WordPress. Supercharge your website with beautifully designed, highly customizable, and performance-optimized blocks.
+Essential collection of premium Gutenberg blocks. Supercharge your WordPress site with highly customizable and performance-optimized blocks.
 
 == Description ==
 
-**blockive-premium-addon-for-block** is a premium collection of Gutenberg blocks designed to help you create stunning websites without any coding knowledge. Whether you are building a landing page, a portfolio, or a business website, these blocks provide the flexibility and styling options you need to stand out.
+**Blockive - Premium Addon For Block** is a premium collection of Gutenberg blocks for WordPress designed to help you create stunning websites without any coding knowledge. Whether you are building a landing page, a portfolio, or a business website, these blocks provide the flexibility and styling options you need to stand out.
 
 Built with performance in mind, our blocks are lightweight and load only the necessary assets, ensuring your site remains fast and responsive.
 

@@ -1,6 +1,8 @@
 <?php
 /**
  * Plugin Name:       Blockive - Premium Addon For Block
+ * Description: A powerful Blockive addon plugin that offers a wide range of Blocks
+ * Plugin URI: https://lionecoders.com
  * Version:           1.0.0
  * Requires at least: 6.8
  * Requires PHP:      7.4
