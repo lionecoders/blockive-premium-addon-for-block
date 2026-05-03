@@ -30,16 +30,16 @@ export default function Edit({ attributes, setAttributes }) {
 	};
 
 	const blockProps = useBlockProps({
-		className: 'lcibwc-image-comparison-wrapper',
+		className: 'bpafb-image-comparison-wrapper',
 		style: customStyles,
 	});
 
 	return (
 		<>
 			<InspectorControls>
-				<PanelBody title={__('Images', 'lc-immeasurable-block-widgets-collection')} initialOpen={true}>
+				<PanelBody title={__('Images', 'blockive-premium-addon-for-block')} initialOpen={true}>
 					<div style={{ marginBottom: '15px' }}>
-						<label>{__('Before Image', 'lc-immeasurable-block-widgets-collection')}</label>
+						<label>{__('Before Image', 'blockive-premium-addon-for-block')}</label>
 						<MediaUploadCheck>
 							<MediaUpload
 								onSelect={(media) => setAttributes({ beforeImage: media.url })}
@@ -47,7 +47,7 @@ export default function Edit({ attributes, setAttributes }) {
 								value={beforeImage}
 								render={({ open }) => (
 									<Button onClick={open} isPrimary>
-										{beforeImage ? __('Change Image', 'lc-immeasurable-block-widgets-collection') : __('Select Image', 'lc-immeasurable-block-widgets-collection')}
+										{beforeImage ? __('Change Image', 'blockive-premium-addon-for-block') : __('Select Image', 'blockive-premium-addon-for-block')}
 									</Button>
 								)}
 							/>
@@ -55,7 +55,7 @@ export default function Edit({ attributes, setAttributes }) {
 					</div>
 
 					<div style={{ marginBottom: '15px' }}>
-						<label>{__('After Image', 'lc-immeasurable-block-widgets-collection')}</label>
+						<label>{__('After Image', 'blockive-premium-addon-for-block')}</label>
 						<MediaUploadCheck>
 							<MediaUpload
 								onSelect={(media) => setAttributes({ afterImage: media.url })}
@@ -63,7 +63,7 @@ export default function Edit({ attributes, setAttributes }) {
 								value={afterImage}
 								render={({ open }) => (
 									<Button onClick={open} isPrimary>
-										{afterImage ? __('Change Image', 'lc-immeasurable-block-widgets-collection') : __('Select Image', 'lc-immeasurable-block-widgets-collection')}
+										{afterImage ? __('Change Image', 'blockive-premium-addon-for-block') : __('Select Image', 'blockive-premium-addon-for-block')}
 									</Button>
 								)}
 							/>
@@ -71,9 +71,9 @@ export default function Edit({ attributes, setAttributes }) {
 					</div>
 				</PanelBody>
 
-				<PanelBody title={__('Settings', 'lc-immeasurable-block-widgets-collection')}>
+				<PanelBody title={__('Settings', 'blockive-premium-addon-for-block')}>
 					<ToggleControl
-						label={__('Show Labels', 'lc-immeasurable-block-widgets-collection')}
+						label={__('Show Labels', 'blockive-premium-addon-for-block')}
 						checked={showLabels}
 						onChange={(val) => setAttributes({ showLabels: val })}
 					/>
@@ -81,12 +81,12 @@ export default function Edit({ attributes, setAttributes }) {
 					{showLabels && (
 						<>
 							<TextControl
-								label={__('Before Label', 'lc-immeasurable-block-widgets-collection')}
+								label={__('Before Label', 'blockive-premium-addon-for-block')}
 								value={beforeLabel}
 								onChange={(val) => setAttributes({ beforeLabel: val })}
 							/>
 							<TextControl
-								label={__('After Label', 'lc-immeasurable-block-widgets-collection')}
+								label={__('After Label', 'blockive-premium-addon-for-block')}
 								value={afterLabel}
 								onChange={(val) => setAttributes({ afterLabel: val })}
 							/>
@@ -94,7 +94,7 @@ export default function Edit({ attributes, setAttributes }) {
 					)}
 
 					<RangeControl
-						label={__('Initial Slider Position (%)', 'lc-immeasurable-block-widgets-collection')}
+						label={__('Initial Slider Position (%)', 'blockive-premium-addon-for-block')}
 						value={sliderPosition}
 						onChange={(val) => setAttributes({ sliderPosition: val })}
 						min={0}
@@ -103,7 +103,7 @@ export default function Edit({ attributes, setAttributes }) {
 					/>
 
 					<TextControl
-						label={__('Height (e.g., 400px)', 'lc-immeasurable-block-widgets-collection')}
+						label={__('Height (e.g., 400px)', 'blockive-premium-addon-for-block')}
 						value={height}
 						onChange={(val) => setAttributes({ height: val })}
 					/>
@@ -111,15 +111,15 @@ export default function Edit({ attributes, setAttributes }) {
 			</InspectorControls>
 
 			<div {...blockProps}>
-				<div className="lcibwc-image-comparison" data-position={sliderPosition}>
-					<div className="lcibwc-comparison-image before-image" style={{ backgroundImage: beforeImage ? `url(${beforeImage})` : 'none' }}>
-						{showLabels && <span className="lcibwc-label before-label">{beforeLabel}</span>}
+				<div className="bpafb-image-comparison" data-position={sliderPosition}>
+					<div className="bpafb-comparison-image before-image" style={{ backgroundImage: beforeImage ? `url(${beforeImage})` : 'none' }}>
+						{showLabels && <span className="bpafb-label before-label">{beforeLabel}</span>}
 					</div>
-					<div className="lcibwc-comparison-image after-image" style={{ backgroundImage: afterImage ? `url(${afterImage})` : 'none', clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}>
-						{showLabels && <span className="lcibwc-label after-label">{afterLabel}</span>}
+					<div className="bpafb-comparison-image after-image" style={{ backgroundImage: afterImage ? `url(${afterImage})` : 'none', clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}>
+						{showLabels && <span className="bpafb-label after-label">{afterLabel}</span>}
 					</div>
-					<div className="lcibwc-comparison-handle" style={{ left: `${sliderPosition}%` }}>
-						<span className="lcibwc-handle-icon"></span>
+					<div className="bpafb-comparison-handle" style={{ left: `${sliderPosition}%` }}>
+						<span className="bpafb-handle-icon"></span>
 					</div>
 				</div>
 			</div>

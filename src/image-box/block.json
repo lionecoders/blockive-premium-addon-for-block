@@ -1,10 +1,10 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
-	"name": "lc-immeasurable-block-widgets-collection/image-box",
+	"name": "blockive-premium-addon-for-block/image-box",
 	"version": "0.1.0",
-	"title": "LC Image Box",
-	"category": "lcibwc-widgets",
+	"title": "Blockive Image Box",
+	"category": "bpafb-widgets",
 	"icon": "format-image",
 	"description": "An image box that displays an image, title, description, and link.",
 	"attributes": {
@@ -125,7 +125,7 @@
 			}
 		}
 	},
-	"textdomain": "lc-immeasurable-block-widgets-collection",
+	"textdomain": "blockive-premium-addon-for-block",
 	"editorScript": "file:./index.js",
 	"style": "file:./index.css"
 }

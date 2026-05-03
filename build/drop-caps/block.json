@@ -1,10 +1,10 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
-  "name": "lc-immeasurable-block-widgets-collectionblock-widgets-collection/drop-caps",
+  "name": "blockive-premium-addon-for-block/drop-caps",
   "version": "0.1.0",
-  "title": "LC Drop Caps",
-  "category": "lcibwc-widgetsgets",
+  "title": "Blockive Drop Caps",
+  "category": "bpafb-widgets",
   "icon": "editor-textcolor",
   "description": "Advanced drop caps block with customizable view, shape, and styling.",
   "attributes": {
@@ -87,7 +87,7 @@
       }
     }
   },
-  "textdomain": "lc-immeasurable-block-widgets-collection",
+  "textdomain": "blockive-premium-addon-for-block",
   "editorScript": "file:./index.js",
   "style": "file:./index.css"
 }

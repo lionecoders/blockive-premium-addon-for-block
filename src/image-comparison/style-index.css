@@ -1,9 +1,9 @@
-.lcibwc-image-comparison-wrapper {
+.bpafb-image-comparison-wrapper {
 	width: 100%;
 	margin: 20px 0;
 }
 
-.lcibwc-image-comparison {
+.bpafb-image-comparison {
 	position: relative;
 	width: 100%;
 	height: 400px;
@@ -12,7 +12,7 @@
 	user-select: none;
 }
 
-.lcibwc-comparison-image {
+.bpafb-comparison-image {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -23,11 +23,11 @@
 	background-repeat: no-repeat;
 }
 
-.lcibwc-comparison-image.after-image {
+.bpafb-comparison-image.after-image {
 	clip-path: inset(0 50% 0 0);
 }
 
-.lcibwc-label {
+.bpafb-label {
 	position: absolute;
 	top: 10px;
 	padding: 5px 10px;
@@ -39,15 +39,15 @@
 	border-radius: 3px;
 }
 
-.lcibwc-label.before-label {
+.bpafb-label.before-label {
 	left: 10px;
 }
 
-.lcibwc-label.after-label {
+.bpafb-label.after-label {
 	right: 10px;
 }
 
-.lcibwc-comparison-handle {
+.bpafb-comparison-handle {
 	position: absolute;
 	top: 0;
 	left: 50%;
@@ -59,7 +59,7 @@
 	z-index: 10;
 }
 
-.lcibwc-handle-icon {
+.bpafb-handle-icon {
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -75,8 +75,8 @@
 	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
-.lcibwc-handle-icon::before,
-.lcibwc-handle-icon::after {
+.bpafb-handle-icon::before,
+.bpafb-handle-icon::after {
 	content: '';
 	position: absolute;
 	width: 0;
@@ -84,13 +84,13 @@
 	border-style: solid;
 }
 
-.lcibwc-handle-icon::before {
+.bpafb-handle-icon::before {
 	left: 12px;
 	border-width: 8px 10px 8px 0;
 	border-color: transparent #999 transparent transparent;
 }
 
-.lcibwc-handle-icon::after {
+.bpafb-handle-icon::after {
 	right: 12px;
 	border-width: 8px 0 8px 10px;
 	border-color: transparent transparent transparent #999;

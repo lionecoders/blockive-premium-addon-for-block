@@ -8,13 +8,13 @@ export default function Save({ attributes }) {
 	};
 
 	const blockProps = useBlockProps.save({
-		className: 'lcibwc-lottie-wrapper',
+		className: 'bpafb-lottie-wrapper',
 		style: customStyles,
 	});
 
 	return (
 		<div {...blockProps}>
-			<div className="lcibwc-lottie-container" style={{ width: width, height: height }}>
+			<div className="bpafb-lottie-container" style={{ width: width, height: height }}>
 				{animationUrl && (
 					<lottie-player
 						src={animationUrl}

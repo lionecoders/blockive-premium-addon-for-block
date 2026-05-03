@@ -1,10 +1,10 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
-  "name": "lc-immeasurable-block-widgets-collection/button",
+  "name": "blockive-premium-addon-for-block/button",
   "version": "0.1.0",
-  "title": "LC Button",
-  "category": "lcibwc-widgets",
+  "title": "Blockive Button",
+  "category": "bpafb-widgets",
   "icon": "button",
   "description": "A highly customizable button with icon and badge support.",
   "attributes": {
@@ -115,7 +115,7 @@
       }
     }
   },
-  "textdomain": "lc-immeasurable-block-widgets-collection",
+  "textdomain": "blockive-premium-addon-for-block",
   "editorScript": "file:./index.js",
   "style": "file:./index.css"
 }

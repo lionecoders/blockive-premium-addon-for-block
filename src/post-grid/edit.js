@@ -20,20 +20,20 @@ export default function Edit({ attributes, setAttributes }) {
 	} = attributes;
 
 	const customStyles = {
-		'--lcibwc-post-grid-columns': columns,
+		'--bpafb-post-grid-columns': columns,
 	};
 
 	const blockProps = useBlockProps({
-		className: 'lcibwc-post-grid-wrapper',
+		className: 'bpafb-post-grid-wrapper',
 		style: customStyles,
 	});
 
 	return (
 		<>
 			<InspectorControls>
-				<PanelBody title={__('Layout', 'lc-immeasurable-block-widgets-collection')} initialOpen={true}>
+				<PanelBody title={__('Layout', 'blockive-premium-addon-for-block')} initialOpen={true}>
 					<RangeControl
-						label={__('Columns', 'lc-immeasurable-block-widgets-collection')}
+						label={__('Columns', 'blockive-premium-addon-for-block')}
 						value={columns}
 						onChange={(val) => setAttributes({ columns: val })}
 						min={1}
@@ -41,7 +41,7 @@ export default function Edit({ attributes, setAttributes }) {
 					/>
 
 					<RangeControl
-						label={__('Posts Per Page', 'lc-immeasurable-block-widgets-collection')}
+						label={__('Posts Per Page', 'blockive-premium-addon-for-block')}
 						value={postsPerPage}
 						onChange={(val) => setAttributes({ postsPerPage: val })}
 						min={1}
@@ -49,9 +49,9 @@ export default function Edit({ attributes, setAttributes }) {
 					/>
 				</PanelBody>
 
-				<PanelBody title={__('Query', 'lc-immeasurable-block-widgets-collection')}>
+				<PanelBody title={__('Query', 'blockive-premium-addon-for-block')}>
 					<SelectControl
-						label={__('Order By', 'lc-immeasurable-block-widgets-collection')}
+						label={__('Order By', 'blockive-premium-addon-for-block')}
 						value={orderBy}
 						options={[
 							{ label: 'Date', value: 'date' },
@@ -62,7 +62,7 @@ export default function Edit({ attributes, setAttributes }) {
 					/>
 
 					<SelectControl
-						label={__('Order', 'lc-immeasurable-block-widgets-collection')}
+						label={__('Order', 'blockive-premium-addon-for-block')}
 						value={order}
 						options={[
 							{ label: 'Descending', value: 'desc' },
@@ -72,27 +72,27 @@ export default function Edit({ attributes, setAttributes }) {
 					/>
 				</PanelBody>
 
-				<PanelBody title={__('Display', 'lc-immeasurable-block-widgets-collection')}>
+				<PanelBody title={__('Display', 'blockive-premium-addon-for-block')}>
 					<ToggleControl
-						label={__('Show Image', 'lc-immeasurable-block-widgets-collection')}
+						label={__('Show Image', 'blockive-premium-addon-for-block')}
 						checked={showImage}
 						onChange={(val) => setAttributes({ showImage: val })}
 					/>
 
 					<ToggleControl
-						label={__('Show Excerpt', 'lc-immeasurable-block-widgets-collection')}
+						label={__('Show Excerpt', 'blockive-premium-addon-for-block')}
 						checked={showExcerpt}
 						onChange={(val) => setAttributes({ showExcerpt: val })}
 					/>
 
 					<ToggleControl
-						label={__('Show Date', 'lc-immeasurable-block-widgets-collection')}
+						label={__('Show Date', 'blockive-premium-addon-for-block')}
 						checked={showDate}
 						onChange={(val) => setAttributes({ showDate: val })}
 					/>
 
 					<ToggleControl
-						label={__('Show Author', 'lc-immeasurable-block-widgets-collection')}
+						label={__('Show Author', 'blockive-premium-addon-for-block')}
 						checked={showAuthor}
 						onChange={(val) => setAttributes({ showAuthor: val })}
 					/>
@@ -100,21 +100,21 @@ export default function Edit({ attributes, setAttributes }) {
 			</InspectorControls>
 
 			<div {...blockProps}>
-				<div className="lcibwc-post-grid">
-					<article className="lcibwc-post-card">
+				<div className="bpafb-post-grid">
+					<article className="bpafb-post-card">
 						{showImage && (
-							<div className="lcibwc-post-image">
+							<div className="bpafb-post-image">
 								<img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%23f0f0f0' width='400' height='300'/%3E%3C/svg%3E" alt="Post" />
 							</div>
 						)}
-						<div className="lcibwc-post-content">
-							{showDate && <span className="lcibwc-post-date">January 1, 2024</span>}
-							<h3 className="lcibwc-post-title">
+						<div className="bpafb-post-content">
+							{showDate && <span className="bpafb-post-date">January 1, 2024</span>}
+							<h3 className="bpafb-post-title">
 								<a href="#">Sample Post Title</a>
 							</h3>
-							{showAuthor && <span className="lcibwc-post-author">By Admin</span>}
+							{showAuthor && <span className="bpafb-post-author">By Admin</span>}
 							{showExcerpt && (
-								<p className="lcibwc-post-excerpt">
+								<p className="bpafb-post-excerpt">
 									This is a sample post excerpt. Posts will be displayed here on the frontend.
 								</p>
 							)}
@@ -122,7 +122,7 @@ export default function Edit({ attributes, setAttributes }) {
 					</article>
 				</div>
 				<p style={{ color: '#666', fontStyle: 'italic', marginTop: '15px' }}>
-					{__('Posts will be loaded dynamically on the frontend', 'lc-immeasurable-block-widgets-collection')}
+					{__('Posts will be loaded dynamically on the frontend', 'blockive-premium-addon-for-block')}
 				</p>
 			</div>
 		</>

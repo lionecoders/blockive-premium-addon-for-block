@@ -13,31 +13,31 @@ export default function save({ attributes }) {
 	} = attributes;
 
 	const customStyles = {
-		'--lcibwc-tab-bg': tabBgColor,
-		'--lcibwc-tab-active-bg': tabActiveColor,
-		'--lcibwc-tab-text': textColor,
-		'--lcibwc-tab-active-text': textActiveColor,
-		'--lcibwc-tab-content-bg': contentBgColor,
-		'--lcibwc-tab-content-text': contentTextColor,
-		'--lcibwc-tab-radius': `${tabBorderRadius}px`,
+		'--bpafb-tab-bg': tabBgColor,
+		'--bpafb-tab-active-bg': tabActiveColor,
+		'--bpafb-tab-text': textColor,
+		'--bpafb-tab-active-text': textActiveColor,
+		'--bpafb-tab-content-bg': contentBgColor,
+		'--bpafb-tab-content-text': contentTextColor,
+		'--bpafb-tab-radius': `${tabBorderRadius}px`,
 	};
 
 	const blockProps = useBlockProps.save({
-		className: 'lcibwc-tabs-wrapper',
+		className: 'bpafb-tabs-wrapper',
 		style: customStyles,
 	});
 
 	return (
 		<div {...blockProps}>
-			<div className="lcibwc-tabs-nav-track" role="tablist">
+			<div className="bpafb-tabs-nav-track" role="tablist">
 				{items.map((item, index) => {
 					const isFirst = index === 0;
 					return (
-						<div key={item.id || index} className={`lcibwc-tab-pill ${isFirst ? 'active' : ''}`} role="tab" tabIndex={0}>
+						<div key={item.id || index} className={`bpafb-tab-pill ${isFirst ? 'active' : ''}`} role="tab" tabIndex={0}>
 							<div style={{ flex: 1, textAlign: 'center' }}>
 								<RichText.Content
 									tagName="span"
-									className="lcibwc-tab-title"
+									className="bpafb-tab-title"
 									value={item.title}
 								/>
 							</div>
@@ -46,14 +46,14 @@ export default function save({ attributes }) {
 				})}
 			</div>
 
-			<div className="lcibwc-tabs-content-area">
+			<div className="bpafb-tabs-content-area">
 				{items.map((item, index) => {
 					const isFirst = index === 0;
 					return (
-						<div key={item.id || index} className={`lcibwc-tab-pane ${isFirst ? 'active' : ''}`}>
+						<div key={item.id || index} className={`bpafb-tab-pane ${isFirst ? 'active' : ''}`}>
 							<RichText.Content
 								tagName="div"
-								className="lcibwc-tab-content-text"
+								className="bpafb-tab-content-text"
 								value={item.content}
 							/>
 						</div>

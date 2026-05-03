@@ -28,16 +28,16 @@ export default function save({ attributes }) {
 	} = attributes;
 
 	const customStyles = {
-		'--lcibwc-pt-header-bg': headerBgColor || '#4f46e5',
-		'--lcibwc-pt-header-text': headerTextColor || '#ffffff',
-		'--lcibwc-pt-price-color': priceColor || '#0f172a',
-		'--lcibwc-pt-feature-text': featureTextColor || '#475569',
-		'--lcibwc-pt-button-bg': buttonBgColor || '#4f46e5',
-		'--lcibwc-pt-button-text': buttonTextColor || '#ffffff',
-		'--lcibwc-pt-box-bg': boxBgColor || '#ffffff',
-		'--lcibwc-pt-borderColor': borderColor || '#f1f5f9',
-		'--lcibwc-pt-borderWidth': `${borderWidth !== undefined ? borderWidth : 1}px`,
-		'--lcibwc-pt-borderRadius': `${borderRadius !== undefined ? borderRadius : 16}px`,
+		'--bpafb-pt-header-bg': headerBgColor || '#4f46e5',
+		'--bpafb-pt-header-text': headerTextColor || '#ffffff',
+		'--bpafb-pt-price-color': priceColor || '#0f172a',
+		'--bpafb-pt-feature-text': featureTextColor || '#475569',
+		'--bpafb-pt-button-bg': buttonBgColor || '#4f46e5',
+		'--bpafb-pt-button-text': buttonTextColor || '#ffffff',
+		'--bpafb-pt-box-bg': boxBgColor || '#ffffff',
+		'--bpafb-pt-borderColor': borderColor || '#f1f5f9',
+		'--bpafb-pt-borderWidth': `${borderWidth !== undefined ? borderWidth : 1}px`,
+		'--bpafb-pt-borderRadius': `${borderRadius !== undefined ? borderRadius : 16}px`,
 	};
 
 	const blockProps = useBlockProps.save({
@@ -47,37 +47,37 @@ export default function save({ attributes }) {
 	return (
 		<div {...blockProps}>
 			<div 
-				className={`lcibwc-pricing-table lcibwc-pricing-${layoutStyle || 'style1'} ${isFeatured ? 'is-featured' : ''} ${boxShadow ? 'has-shadow' : ''}`}
+				className={`bpafb-pricing-table bpafb-pricing-${layoutStyle || 'style1'} ${isFeatured ? 'is-featured' : ''} ${boxShadow ? 'has-shadow' : ''}`}
 				style={{ ...customStyles, textAlign: alignment || 'center' }}
 			>
 				{isFeatured && (
-					<div className="lcibwc-pricing-badge">{featuredBadge}</div>
+					<div className="bpafb-pricing-badge">{featuredBadge}</div>
 				)}
 				
-				<div className="lcibwc-pricing-header">
+				<div className="bpafb-pricing-header">
 					<RichText.Content
 						tagName="h3"
-						className="lcibwc-pricing-title"
+						className="bpafb-pricing-title"
 						value={title}
 					/>
 					<RichText.Content
 						tagName="p"
-						className="lcibwc-pricing-subtitle"
+						className="bpafb-pricing-subtitle"
 						value={subtitle}
 					/>
 				</div>
 
-				<div className="lcibwc-pricing-price-area">
-					<span className="lcibwc-pricing-currency">{currency}</span>
+				<div className="bpafb-pricing-price-area">
+					<span className="bpafb-pricing-currency">{currency}</span>
 					<RichText.Content
 						tagName="span"
-						className="lcibwc-pricing-amount"
+						className="bpafb-pricing-amount"
 						value={price}
 					/>
-					<span className="lcibwc-pricing-period">{period}</span>
+					<span className="bpafb-pricing-period">{period}</span>
 				</div>
 
-				<ul className="lcibwc-pricing-features">
+				<ul className="bpafb-pricing-features">
 					{features && features.map((feature) => (
 						<li key={feature.id} className={feature.active ? 'active' : 'inactive'}>
 							<i className={feature.icon || (feature.active ? 'fas fa-check' : 'fas fa-times')}></i>
@@ -86,8 +86,8 @@ export default function save({ attributes }) {
 					))}
 				</ul>
 
-				<div className="lcibwc-pricing-footer">
-					<a href={buttonUrl || '#'} className="lcibwc-pricing-button">
+				<div className="bpafb-pricing-footer">
+					<a href={buttonUrl || '#'} className="bpafb-pricing-button">
 						<RichText.Content value={buttonText} />
 					</a>
 				</div>

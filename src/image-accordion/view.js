@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
-	const accordions = document.querySelectorAll('.lcibwc-image-accordion');
+	const accordions = document.querySelectorAll('.bpafb-image-accordion');
 
 	accordions.forEach((accordion) => {
-		const items = accordion.querySelectorAll('.lcibwc-image-accordion-item');
+		const items = accordion.querySelectorAll('.bpafb-image-accordion-item');
 
 		items.forEach((item) => {
 			item.addEventListener('click', () => {

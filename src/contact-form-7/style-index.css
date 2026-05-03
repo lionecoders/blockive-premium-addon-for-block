@@ -1,4 +1,4 @@
-.lcibwc-contact-form-7-wrapper {
+.bpafb-contact-form-7-wrapper {
 	width: 100%;
 	margin: 20px 0;
 	padding: 20px;
@@ -6,23 +6,23 @@
 	border-radius: 8px;
 }
 
-.lcibwc-cf7-title {
+.bpafb-cf7-title {
 	font-size: 24px;
 	font-weight: 600;
 	color: #333333;
 	margin: 0 0 10px 0;
 }
 
-.lcibwc-cf7-description {
+.bpafb-cf7-description {
 	color: #666666;
 	font-size: 14px;
 	margin: 0 0 20px 0;
 }
 
-.lcibwc-cf7-form-wrapper {
+.bpafb-cf7-form-wrapper {
 	margin-top: 20px;
 }
 
-.lcibwc-cf7-form-wrapper .wpcf7-form {
+.bpafb-cf7-form-wrapper .wpcf7-form {
 	max-width: 100%;
 }

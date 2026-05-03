@@ -1,61 +1,61 @@
-/* LC Heading Block Styles */
+/* Blockive Heading Block Styles */
 
-@keyframes lcFadeIn {
+@keyframes blockiveFadeIn {
 	from { opacity: 0; }
 	to { opacity: 1; }
 }
 
-@keyframes lcFadeInUp {
+@keyframes blockiveFadeInUp {
 	from { opacity: 0; transform: translateY(30px); }
 	to { opacity: 1; transform: translateY(0); }
 }
 
-@keyframes lcFadeInDown {
+@keyframes blockiveFadeInDown {
 	from { opacity: 0; transform: translateY(-30px); }
 	to { opacity: 1; transform: translateY(0); }
 }
 
-@keyframes lcZoomIn {
+@keyframes blockiveZoomIn {
 	from { opacity: 0; transform: scale(0.8); }
 	to { opacity: 1; transform: scale(1); }
 }
 
-@keyframes lcSlideInLeft {
+@keyframes blockiveSlideInLeft {
 	from { opacity: 0; transform: translateX(-50px); }
 	to { opacity: 1; transform: translateX(0); }
 }
 
-@keyframes lcSlideInRight {
+@keyframes blockiveSlideInRight {
 	from { opacity: 0; transform: translateX(50px); }
 	to { opacity: 1; transform: translateX(0); }
 }
 
-.lcibwc-animate-fadeIn {
-	animation-name: lcFadeIn;
+.bpafb-animate-fadeIn {
+	animation-name: blockiveFadeIn;
 	animation-fill-mode: both;
 }
 
-.lcibwc-animate-fadeInUp {
-	animation-name: lcFadeInUp;
+.bpafb-animate-fadeInUp {
+	animation-name: blockiveFadeInUp;
 	animation-fill-mode: both;
 }
 
-.lcibwc-animate-fadeInDown {
-	animation-name: lcFadeInDown;
+.bpafb-animate-fadeInDown {
+	animation-name: blockiveFadeInDown;
 	animation-fill-mode: both;
 }
 
-.lcibwc-animate-zoomIn {
-	animation-name: lcZoomIn;
+.bpafb-animate-zoomIn {
+	animation-name: blockiveZoomIn;
 	animation-fill-mode: both;
 }
 
-.lcibwc-animate-slideInLeft {
-	animation-name: lcSlideInLeft;
+.bpafb-animate-slideInLeft {
+	animation-name: blockiveSlideInLeft;
 	animation-fill-mode: both;
 }
 
-.lcibwc-animate-slideInRight {
-	animation-name: lcSlideInRight;
+.bpafb-animate-slideInRight {
+	animation-name: blockiveSlideInRight;
 	animation-fill-mode: both;
 }

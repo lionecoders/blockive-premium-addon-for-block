@@ -41,7 +41,7 @@ export default function Edit({ attributes, setAttributes }) {
 	} = attributes;
 
 	const blockProps = useBlockProps({
-		className: `lcibwc-social-icons-wrapper lcibwc-align-${alignment} lcibwc-social-shape-${shape} lcibwc-social-hover-${hoverAnimation}`
+		className: `bpafb-social-icons-wrapper bpafb-align-${alignment} bpafb-social-shape-${shape} bpafb-social-hover-${hoverAnimation}`
 	});
 
 	// Handle Repeater Item Add
@@ -99,11 +99,11 @@ export default function Edit({ attributes, setAttributes }) {
 			</BlockControls>
 
 			<InspectorControls>
-				<PanelBody title={__('Social Icons', 'lc-immeasurable-block-widgets-collection')} initialOpen={true}>
+				<PanelBody title={__('Social Icons', 'blockive-premium-addon-for-block')} initialOpen={true}>
 					{items.map((item, index) => (
 						<div key={item.id} style={{ border: '1px solid #ccc', padding: '10px', marginBottom: '10px', borderRadius: '4px', backgroundColor: '#f9f9f9' }}>
 							<div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '10px' }}>
-								<strong>{__('Icon', 'lc-immeasurable-block-widgets-collection')} {index + 1}</strong>
+								<strong>{__('Icon', 'blockive-premium-addon-for-block')} {index + 1}</strong>
 								<div>
 									<Button isSmall onClick={() => moveItem(index, -1)} disabled={index === 0}>↑</Button>
 									<Button isSmall onClick={() => moveItem(index, 1)} disabled={index === items.length - 1}>↓</Button>
@@ -112,7 +112,7 @@ export default function Edit({ attributes, setAttributes }) {
 							</div>
 							
 							<SelectControl
-								label={__('Network', 'lc-immeasurable-block-widgets-collection')}
+								label={__('Network', 'blockive-premium-addon-for-block')}
 								value={item.network}
 								options={PREDEFINED_NETWORKS}
 								onChange={(val) => updateItem(index, 'network', val)}
@@ -120,7 +120,7 @@ export default function Edit({ attributes, setAttributes }) {
 
 							{item.network === 'custom' && (
 								<TextControl
-									label={__('Custom Icon Class (FontAwesome)', 'lc-immeasurable-block-widgets-collection')}
+									label={__('Custom Icon Class (FontAwesome)', 'blockive-premium-addon-for-block')}
 									value={item.icon}
 									onChange={(val) => updateItem(index, 'icon', val)}
 									help="e.g. fab fa-github"
@@ -128,20 +128,20 @@ export default function Edit({ attributes, setAttributes }) {
 							)}
 
 							<TextControl
-								label={__('Link URL', 'lc-immeasurable-block-widgets-collection')}
+								label={__('Link URL', 'blockive-premium-addon-for-block')}
 								value={item.link}
 								onChange={(val) => updateItem(index, 'link', val)}
 							/>
 						</div>
 					))}
 					<Button isPrimary onClick={addItem} style={{ width: '100%', justifyContent: 'center' }}>
-						{__('Add New Icon', 'lc-immeasurable-block-widgets-collection')}
+						{__('Add New Icon', 'blockive-premium-addon-for-block')}
 					</Button>
 				</PanelBody>
 
-				<PanelBody title={__('Settings', 'lc-immeasurable-block-widgets-collection')} initialOpen={false}>
+				<PanelBody title={__('Settings', 'blockive-premium-addon-for-block')} initialOpen={false}>
 					<SelectControl
-						label={__('Shape', 'lc-immeasurable-block-widgets-collection')}
+						label={__('Shape', 'blockive-premium-addon-for-block')}
 						value={shape}
 						options={[
 							{ label: 'Rounded', value: 'rounded' },
@@ -151,7 +151,7 @@ export default function Edit({ attributes, setAttributes }) {
 						onChange={(val) => setAttributes({ shape: val })}
 					/>
 					<SelectControl
-						label={__('Hover Animation', 'lc-immeasurable-block-widgets-collection')}
+						label={__('Hover Animation', 'blockive-premium-addon-for-block')}
 						value={hoverAnimation}
 						options={[
 							{ label: 'None', value: 'none' },
@@ -162,21 +162,21 @@ export default function Edit({ attributes, setAttributes }) {
 						onChange={(val) => setAttributes({ hoverAnimation: val })}
 					/>
 					<RangeControl
-						label={__('Icon Size', 'lc-immeasurable-block-widgets-collection')}
+						label={__('Icon Size', 'blockive-premium-addon-for-block')}
 						value={iconSize}
 						onChange={(val) => setAttributes({ iconSize: val })}
 						min={10}
 						max={100}
 					/>
 					<RangeControl
-						label={__('Padding', 'lc-immeasurable-block-widgets-collection')}
+						label={__('Padding', 'blockive-premium-addon-for-block')}
 						value={iconPadding}
 						onChange={(val) => setAttributes({ iconPadding: val })}
 						min={0}
 						max={50}
 					/>
 					<RangeControl
-						label={__('Spacing', 'lc-immeasurable-block-widgets-collection')}
+						label={__('Spacing', 'blockive-premium-addon-for-block')}
 						value={iconSpacing}
 						onChange={(val) => setAttributes({ iconSpacing: val })}
 						min={0}
@@ -186,9 +186,9 @@ export default function Edit({ attributes, setAttributes }) {
 			</InspectorControls>
 
 			<InspectorControls group="styles">
-				<PanelBody title={__('Colors', 'lc-immeasurable-block-widgets-collection')} initialOpen={true}>
+				<PanelBody title={__('Colors', 'blockive-premium-addon-for-block')} initialOpen={true}>
 					<SelectControl
-						label={__('Color Type', 'lc-immeasurable-block-widgets-collection')}
+						label={__('Color Type', 'blockive-premium-addon-for-block')}
 						value={colorType}
 						options={[
 							{ label: 'Official Color', value: 'official' },
@@ -198,13 +198,13 @@ export default function Edit({ attributes, setAttributes }) {
 					/>
 					{colorType === 'custom' && (
 						<>
-							<BaseControl label={__('Primary Color (Background)', 'lc-immeasurable-block-widgets-collection')}>
+							<BaseControl label={__('Primary Color (Background)', 'blockive-premium-addon-for-block')}>
 								<ColorPalette
 									value={customPrimaryColor}
 									onChange={(val) => setAttributes({ customPrimaryColor: val })}
 								/>
 							</BaseControl>
-							<BaseControl label={__('Secondary Color (Icon)', 'lc-immeasurable-block-widgets-collection')}>
+							<BaseControl label={__('Secondary Color (Icon)', 'blockive-premium-addon-for-block')}>
 								<ColorPalette
 									value={customSecondaryColor}
 									onChange={(val) => setAttributes({ customSecondaryColor: val })}
@@ -225,7 +225,7 @@ export default function Edit({ attributes, setAttributes }) {
 						<a 
 							key={item.id} 
 							href={item.link || '#'} 
-							className="lcibwc-social-icon-item" 
+							className="bpafb-social-icon-item" 
 							style={{ 
 								backgroundColor: bg,
 								color: color,
@@ -244,7 +244,7 @@ export default function Edit({ attributes, setAttributes }) {
 					);
 				})}
 				{items.length === 0 && (
-					<p>{__('Click "Add New Icon" in the sidebar to add social links.', 'lc-immeasurable-block-widgets-collection')}</p>
+					<p>{__('Click "Add New Icon" in the sidebar to add social links.', 'blockive-premium-addon-for-block')}</p>
 				)}
 			</div>
 		</>

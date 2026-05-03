@@ -1,10 +1,10 @@
-const initLcTabs = () => {
-    const tabsWrappers = document.querySelectorAll('.lc-tabs-wrapper:not(.lc-tabs-initialized)');
+const initBlockiveTabs = () => {
+    const tabsWrappers = document.querySelectorAll('.blockive-tabs-wrapper:not(.blockive-tabs-initialized)');
     
     tabsWrappers.forEach(wrapper => {
-        wrapper.classList.add('lcibwc-tabs-initialized'); // Prevent double binding
-        const pills = wrapper.querySelectorAll('.lc-tab-pill');
-        const panes = wrapper.querySelectorAll('.lc-tab-pane');
+        wrapper.classList.add('bpafb-tabs-initialized'); // Prevent double binding
+        const pills = wrapper.querySelectorAll('.blockive-tab-pill');
+        const panes = wrapper.querySelectorAll('.blockive-tab-pane');
         
         pills.forEach((pill, index) => {
             pill.addEventListener('click', () => {
@@ -31,7 +31,7 @@ const initLcTabs = () => {
 };
 
 if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initLcTabs);
+    document.addEventListener('DOMContentLoaded', initBlockiveTabs);
 } else {
-    initLcTabs();
+    initBlockiveTabs();
 }

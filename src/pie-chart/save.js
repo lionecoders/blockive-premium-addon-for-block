@@ -9,8 +9,8 @@ export default function save({ attributes }) {
 
 	return (
 		<div {...blockProps}>
-			<div className="lcibwc-pie-chart-wrapper">
-				<canvas className="lcibwc-chart-js-canvas" data-chart-config={JSON.stringify(attributes)}></canvas>
+			<div className="bpafb-pie-chart-wrapper">
+				<canvas className="bpafb-chart-js-canvas" data-chart-config={JSON.stringify(attributes)}></canvas>
 			</div>
 		</div>
 	);

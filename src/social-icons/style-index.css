@@ -1,27 +1,27 @@
 /* Social Icons Container Wrapper */
-.wp-block-lc-immeasurable-block-widgets-collection-social-icons {
+.wp-block-blockive-premium-addon-for-block-social-icons {
 	display: flex;
 }
 
-.lcibwc-social-icons-wrapper {
+.bpafb-social-icons-wrapper {
 	display: flex;
 	flex-wrap: wrap;
 	width: 100%;
 }
 
 /* Alignments */
-.lcibwc-social-icons-wrapper.lcibwc-align-center {
+.bpafb-social-icons-wrapper.bpafb-align-center {
 	justify-content: center;
 }
-.lcibwc-social-icons-wrapper.lcibwc-align-right {
+.bpafb-social-icons-wrapper.bpafb-align-right {
 	justify-content: flex-end;
 }
-.lcibwc-social-icons-wrapper.lcibwc-align-left {
+.bpafb-social-icons-wrapper.bpafb-align-left {
 	justify-content: flex-start;
 }
 
 /* Individual Icon Link Container */
-.lcibwc-social-icon-item {
+.bpafb-social-icon-item {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
@@ -32,28 +32,28 @@
 }
 
 /* Shapes */
-.lcibwc-social-shape-square .lcibwc-social-icon-item {
+.bpafb-social-shape-square .bpafb-social-icon-item {
 	border-radius: 0;
 }
-.lcibwc-social-shape-rounded .lcibwc-social-icon-item {
+.bpafb-social-shape-rounded .bpafb-social-icon-item {
 	border-radius: 6px;
 }
-.lcibwc-social-shape-circle .lcibwc-social-icon-item {
+.bpafb-social-shape-circle .bpafb-social-icon-item {
 	border-radius: 50%;
 }
 
 /* Hover Animations */
-.lcibwc-social-hover-grow .lcibwc-social-icon-item:hover {
+.bpafb-social-hover-grow .bpafb-social-icon-item:hover {
 	transform: scale(1.15);
 }
-.lcibwc-social-hover-shrink .lcibwc-social-icon-item:hover {
+.bpafb-social-hover-shrink .bpafb-social-icon-item:hover {
 	transform: scale(0.85);
 }
-.lcibwc-social-hover-pulse .lcibwc-social-icon-item:hover {
-	animation: lc-social-pulse 1s linear infinite;
+.bpafb-social-hover-pulse .bpafb-social-icon-item:hover {
+	animation: blockive-social-pulse 1s linear infinite;
 }
 
-@keyframes lc-social-pulse {
+@keyframes blockive-social-pulse {
 	0% {
 		transform: scale(1);
 	}
@@ -66,7 +66,7 @@
 }
 
 /* Ensure the `i` inside takes the color properly */
-.lcibwc-social-icon-item i {
+.bpafb-social-icon-item i {
 	color: inherit;
 	transition: inherit;
 	display: flex;

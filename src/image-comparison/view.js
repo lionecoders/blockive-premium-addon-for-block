@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
-	const comparisons = document.querySelectorAll('.lcibwc-image-comparison');
+	const comparisons = document.querySelectorAll('.bpafb-image-comparison');
 
 	comparisons.forEach((comparison) => {
-		const handle = comparison.querySelector('.lcibwc-comparison-handle');
-		const afterImage = comparison.querySelector('.lcibwc-comparison-image.after-image');
+		const handle = comparison.querySelector('.bpafb-comparison-handle');
+		const afterImage = comparison.querySelector('.bpafb-comparison-image.after-image');
 		let isActive = false;
 
 		const updatePosition = (x) => {

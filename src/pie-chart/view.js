@@ -1,7 +1,7 @@
 import Chart from 'chart.js/auto';
 
 document.addEventListener('DOMContentLoaded', () => {
-    const canvases = document.querySelectorAll('.lcibwc-chart-js-canvas');
+    const canvases = document.querySelectorAll('.bpafb-chart-js-canvas');
 
     canvases.forEach(canvas => {
         const configStr = canvas.getAttribute('data-chart-config');
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             new Chart(canvas, config);
         } catch (e) {
-            console.error('Failed to parse LC Pie Chart config:', e);
+            console.error('Failed to parse Blockive Pie Chart config:', e);
         }
     });
 });

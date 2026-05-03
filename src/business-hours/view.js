@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-	const wrappers = document.querySelectorAll('.lcibwc-business-hours-wrapper[data-highlight-today="true"]');
+	const wrappers = document.querySelectorAll('.bpafb-business-hours-wrapper[data-highlight-today="true"]');
 	if (!wrappers.length) return;
 
 	const currentDayIndex = new Date().getDay();
@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	const todayString = dayMap[currentDayIndex];
 
 	wrappers.forEach(wrapper => {
-		const items = wrapper.querySelectorAll('.lcibwc-business-hours-item');
+		const items = wrapper.querySelectorAll('.bpafb-business-hours-item');
 		items.forEach(item => {
 			if (item.getAttribute('data-day') === todayString) {
 				item.classList.add('today');

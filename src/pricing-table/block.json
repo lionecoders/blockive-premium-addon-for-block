@@ -1,10 +1,10 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
-	"name": "lc-immeasurable-block-widgets-collectionblock-widgets-collection/pricing-table",
+	"name": "blockive-premium-addon-for-block/pricing-table",
 	"version": "0.1.0",
-	"title": "LC Pricing Table",
-	"category": "lcibwc-widgets",
+	"title": "Blockive Pricing Table",
+	"category": "bpafb-widgets",
 	"icon": "money-alt",
 	"description": "A fully customizable pricing table block with features list and button.",
 	"attributes": {
@@ -147,7 +147,7 @@
 			}
 		}
 	},
-	"textdomain": "lc-immeasurable-block-widgets-collection",
+	"textdomain": "blockive-premium-addon-for-block",
 	"editorScript": "file:./index.js",
 	"style": "file:./index.css"
 }

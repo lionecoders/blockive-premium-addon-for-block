@@ -9,13 +9,13 @@ export default function Save({ attributes }) {
 	};
 
 	const blockProps = useBlockProps.save({
-		className: 'lcibwc-video-wrapper',
+		className: 'bpafb-video-wrapper',
 		style: customStyles,
 	});
 
 	return (
 		<div {...blockProps}>
-			<div className="lcibwc-video-container">
+			<div className="bpafb-video-container">
 				<video
 					controls={controls}
 					autoPlay={autoplay}

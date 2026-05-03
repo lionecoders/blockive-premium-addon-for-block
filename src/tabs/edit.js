@@ -29,17 +29,17 @@ export default function Edit({ attributes, setAttributes }) {
 	const [activeIndex, setActiveIndex] = useState(0);
 
 	const customStyles = {
-		'--lcibwc-tab-bg': tabBgColor,
-		'--lcibwc-tab-active-bg': tabActiveColor,
-		'--lcibwc-tab-text': textColor,
-		'--lcibwc-tab-active-text': textActiveColor,
-		'--lcibwc-tab-content-bg': contentBgColor,
-		'--lcibwc-tab-content-text': contentTextColor,
-		'--lcibwc-tab-radius': `${tabBorderRadius}px`,
+		'--bpafb-tab-bg': tabBgColor,
+		'--bpafb-tab-active-bg': tabActiveColor,
+		'--bpafb-tab-text': textColor,
+		'--bpafb-tab-active-text': textActiveColor,
+		'--bpafb-tab-content-bg': contentBgColor,
+		'--bpafb-tab-content-text': contentTextColor,
+		'--bpafb-tab-radius': `${tabBorderRadius}px`,
 	};
 
 	const blockProps = useBlockProps({
-		className: 'lcibwc-tabs-wrapper',
+		className: 'bpafb-tabs-wrapper',
 		style: customStyles,
 	});
 
@@ -73,70 +73,70 @@ export default function Edit({ attributes, setAttributes }) {
 	return (
 		<>
 			<InspectorControls>
-				<PanelBody title={__('Tabs Items', 'lc-immeasurable-block-widgets-collection')} initialOpen={true}>
+				<PanelBody title={__('Tabs Items', 'blockive-premium-addon-for-block')} initialOpen={true}>
 					{items.map((item, index) => (
 						<div key={item.id} style={{ marginBottom: '15px', border: '1px solid #ddd', padding: '10px' }}>
 							<TextControl
-								label={__('Title', 'lc-immeasurable-block-widgets-collection')}
+								label={__('Title', 'blockive-premium-addon-for-block')}
 								value={item.title}
 								onChange={(val) => updateItem(index, 'title', val)}
 							/>
 							<Button isDestructive onClick={() => removeItem(index)} disabled={items.length <= 1}>
-								{__('Remove Item', 'lc-immeasurable-block-widgets-collection')}
+								{__('Remove Item', 'blockive-premium-addon-for-block')}
 							</Button>
 						</div>
 					))}
 					<Button isPrimary onClick={addItem}>
-						{__('Add Tab', 'lc-immeasurable-block-widgets-collection')}
+						{__('Add Tab', 'blockive-premium-addon-for-block')}
 					</Button>
 				</PanelBody>
 
-				<PanelBody title={__('Colors & Styles', 'lc-immeasurable-block-widgets-collection')} initialOpen={false}>
+				<PanelBody title={__('Colors & Styles', 'blockive-premium-addon-for-block')} initialOpen={false}>
 					<RangeControl
-						label={__('Tab Border Radius', 'lc-immeasurable-block-widgets-collection')}
+						label={__('Tab Border Radius', 'blockive-premium-addon-for-block')}
 						value={tabBorderRadius}
 						onChange={(val) => setAttributes({ tabBorderRadius: val })}
 						min={0}
 						max={30}
 					/>
-					<BaseControl label={__('Tabs Track Background', 'lc-immeasurable-block-widgets-collection')}>
+					<BaseControl label={__('Tabs Track Background', 'blockive-premium-addon-for-block')}>
 						<ColorPalette value={tabBgColor} onChange={(val) => setAttributes({ tabBgColor: val })} />
 					</BaseControl>
-					<BaseControl label={__('Active Tab Background', 'lc-immeasurable-block-widgets-collection')}>
+					<BaseControl label={__('Active Tab Background', 'blockive-premium-addon-for-block')}>
 						<ColorPalette value={tabActiveColor} onChange={(val) => setAttributes({ tabActiveColor: val })} />
 					</BaseControl>
-					<BaseControl label={__('Tab Text Color', 'lc-immeasurable-block-widgets-collection')}>
+					<BaseControl label={__('Tab Text Color', 'blockive-premium-addon-for-block')}>
 						<ColorPalette value={textColor} onChange={(val) => setAttributes({ textColor: val })} />
 					</BaseControl>
-					<BaseControl label={__('Active Tab Text Color', 'lc-immeasurable-block-widgets-collection')}>
+					<BaseControl label={__('Active Tab Text Color', 'blockive-premium-addon-for-block')}>
 						<ColorPalette value={textActiveColor} onChange={(val) => setAttributes({ textActiveColor: val })} />
 					</BaseControl>
-					<BaseControl label={__('Content Background', 'lc-immeasurable-block-widgets-collection')}>
+					<BaseControl label={__('Content Background', 'blockive-premium-addon-for-block')}>
 						<ColorPalette value={contentBgColor} onChange={(val) => setAttributes({ contentBgColor: val })} />
 					</BaseControl>
-					<BaseControl label={__('Content Text Color', 'lc-immeasurable-block-widgets-collection')}>
+					<BaseControl label={__('Content Text Color', 'blockive-premium-addon-for-block')}>
 						<ColorPalette value={contentTextColor} onChange={(val) => setAttributes({ contentTextColor: val })} />
 					</BaseControl>
 				</PanelBody>
 			</InspectorControls>
 
 			<div {...blockProps}>
-				<div className="lcibwc-tabs-nav-track">
+				<div className="bpafb-tabs-nav-track">
 					{items.map((item, index) => {
 						const isActive = activeIndex === index;
 						return (
 							<div 
 								key={item.id} 
-								className={`lcibwc-tab-pill ${isActive ? 'active' : ''}`}
+								className={`bpafb-tab-pill ${isActive ? 'active' : ''}`}
 								onClick={(e) => setActiveIndex(index)}
 							>
 								<div style={{ flex: 1, textAlign: 'center' }}>
 									<RichText
 										tagName="span"
-										className="lcibwc-tab-title"
+										className="bpafb-tab-title"
 										value={item.title}
 										onChange={(val) => updateItem(index, 'title', val)}
-										placeholder={__('Tab Title...', 'lc-immeasurable-block-widgets-collection')}
+										placeholder={__('Tab Title...', 'blockive-premium-addon-for-block')}
 									/>
 								</div>
 							</div>
@@ -144,18 +144,18 @@ export default function Edit({ attributes, setAttributes }) {
 					})}
 				</div>
 
-				<div className="lcibwc-tabs-content-area">
+				<div className="bpafb-tabs-content-area">
 					{items.map((item, index) => {
 						const isActive = activeIndex === index;
 						if (!isActive) return null;
 						return (
-							<div key={item.id} className="lcibwc-tab-pane active">
+							<div key={item.id} className="bpafb-tab-pane active">
 								<RichText
 									tagName="div"
-									className="lcibwc-tab-content-text"
+									className="bpafb-tab-content-text"
 									value={item.content}
 									onChange={(val) => updateItem(index, 'content', val)}
-									placeholder={__('Enter content here...', 'lc-immeasurable-block-widgets-collection')}
+									placeholder={__('Enter content here...', 'blockive-premium-addon-for-block')}
 								/>
 							</div>
 						);

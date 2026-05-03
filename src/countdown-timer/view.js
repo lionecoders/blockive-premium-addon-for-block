@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const wrappers = document.querySelectorAll('.lc-countdown-wrapper');
+    const wrappers = document.querySelectorAll('.blockive-countdown-wrapper');
     
     wrappers.forEach(timer => {
         const targetDateStr = timer.getAttribute('data-target-date');
@@ -7,10 +7,10 @@ document.addEventListener('DOMContentLoaded', () => {
         
         const targetDate = new Date(targetDateStr).getTime();
         
-        const daysEl = timer.querySelector('.lc-cd-days .lc-countdown-number');
-        const hoursEl = timer.querySelector('.lc-cd-hours .lc-countdown-number');
-        const minsEl = timer.querySelector('.lc-cd-minutes .lc-countdown-number');
-        const secsEl = timer.querySelector('.lc-cd-seconds .lc-countdown-number');
+        const daysEl = timer.querySelector('.blockive-cd-days .blockive-countdown-number');
+        const hoursEl = timer.querySelector('.blockive-cd-hours .blockive-countdown-number');
+        const minsEl = timer.querySelector('.blockive-cd-minutes .blockive-countdown-number');
+        const secsEl = timer.querySelector('.blockive-cd-seconds .blockive-countdown-number');
         
         const updateTimer = () => {
             const now = new Date().getTime();

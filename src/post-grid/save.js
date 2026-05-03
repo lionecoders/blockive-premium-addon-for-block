@@ -13,18 +13,18 @@ export default function Save({ attributes }) {
 	} = attributes;
 
 	const customStyles = {
-		'--lcibwc-post-grid-columns': columns,
+		'--bpafb-post-grid-columns': columns,
 	};
 
 	const blockProps = useBlockProps.save({
-		className: 'lcibwc-post-grid-wrapper',
+		className: 'bpafb-post-grid-wrapper',
 		style: customStyles,
 	});
 
 	return (
 		<div {...blockProps}>
 			<div
-				className="lcibwc-post-grid"
+				className="bpafb-post-grid"
 				data-posts-per-page={postsPerPage}
 				data-order-by={orderBy}
 				data-order={order}
@@ -34,9 +34,9 @@ export default function Save({ attributes }) {
 				data-show-author={showAuthor}
 			>
 				{/* Posts will be rendered via PHP/dynamic block */}
-				<article className="lcibwc-post-card">
-					<div className="lcibwc-post-content">
-						<h3 className="lcibwc-post-title">
+				<article className="bpafb-post-card">
+					<div className="bpafb-post-content">
+						<h3 className="bpafb-post-title">
 							<a href="#">Sample Post</a>
 						</h3>
 					</div>

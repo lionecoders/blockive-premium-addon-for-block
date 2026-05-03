@@ -21,19 +21,19 @@ export default function save({ attributes }) {
 	} = attributes;
 
 	const customStyles = {
-		'--lcibwc-ib-icon-size': `${iconSize}px`,
-		'--lcibwc-ib-icon-color': iconColor,
-		'--lcibwc-ib-icon-bg': iconBgColor,
-		'--lcibwc-ib-icon-padding': `${iconPadding}px`,
-		'--lcibwc-ib-icon-radius': `${iconBorderRadius}px`,
-		'--lcibwc-ib-title-color': titleColor,
-		'--lcibwc-ib-desc-color': descColor,
-		'--lcibwc-ib-box-bg': boxBgColor,
-		'--lcibwc-ib-alignment': boxAlignment,
+		'--bpafb-ib-icon-size': `${iconSize}px`,
+		'--bpafb-ib-icon-color': iconColor,
+		'--bpafb-ib-icon-bg': iconBgColor,
+		'--bpafb-ib-icon-padding': `${iconPadding}px`,
+		'--bpafb-ib-icon-radius': `${iconBorderRadius}px`,
+		'--bpafb-ib-title-color': titleColor,
+		'--bpafb-ib-desc-color': descColor,
+		'--bpafb-ib-box-bg': boxBgColor,
+		'--bpafb-ib-alignment': boxAlignment,
 	};
 
 	const blockProps = useBlockProps.save({
-		className: `lcibwc-icon-box-wrapper lcibwc-icon-box--${iconPosition}`,
+		className: `bpafb-icon-box-wrapper bpafb-icon-box--${iconPosition}`,
 		style: customStyles,
 	});
 
@@ -42,16 +42,16 @@ export default function save({ attributes }) {
 	const ContentElement = () => (
 		<>
 			{icon && (
-				<div className="lcibwc-icon-box-icon-wrapper">
-					<i className={`${icon} lcibwc-icon-box-icon`}></i>
+				<div className="bpafb-icon-box-icon-wrapper">
+					<i className={`${icon} bpafb-icon-box-icon`}></i>
 				</div>
 			)}
 
-			<div className="lcibwc-icon-box-content">
+			<div className="bpafb-icon-box-content">
 				{title && (
 					<RichText.Content
 						tagName={TitleTag}
-						className="lcibwc-icon-box-title"
+						className="bpafb-icon-box-title"
 						value={title}
 					/>
 				)}
@@ -59,7 +59,7 @@ export default function save({ attributes }) {
 				{description && (
 					<RichText.Content
 						tagName="div"
-						className="lcibwc-icon-box-description"
+						className="bpafb-icon-box-description"
 						value={description}
 					/>
 				)}
@@ -72,7 +72,7 @@ export default function save({ attributes }) {
 			{url ? (
 				<a
 					href={url}
-					className="lcibwc-icon-box-link"
+					className="bpafb-icon-box-link"
 					target={linkTarget ? '_blank' : undefined}
 					rel={linkTarget ? 'noopener noreferrer' : undefined}
 				>

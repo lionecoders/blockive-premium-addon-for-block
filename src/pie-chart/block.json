@@ -1,10 +1,10 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
-	"name": "lc-immeasurable-block-widgets-collection/pie-chart",
+	"name": "blockive-premium-addon-for-block/pie-chart",
 	"version": "0.1.0",
-	"title": "LC Pie Chart",
-	"category": "lcibwc-widgets",
+	"title": "Blockive Pie Chart",
+	"category": "bpafb-widgets",
 	"icon": "chart-pie",
 	"description": "A dynamic pie and donut chart block using Chart.js.",
 	"attributes": {
@@ -71,7 +71,7 @@
 			}
 		}
 	},
-	"textdomain": "lc-immeasurable-block-widgets-collection",
+	"textdomain": "blockive-premium-addon-for-block",
 	"editorScript": "file:./index.js",
 	"style": "file:./index.css",
 	"viewScript": "file:./view.js"

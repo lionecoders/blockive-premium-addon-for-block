@@ -35,35 +35,35 @@ export default function Edit({ attributes, setAttributes }) {
 	} = attributes;
 
 	const customStyles = {
-		'--lcibwc-ib-icon-size': `${iconSize}px`,
-		'--lcibwc-ib-icon-color': iconColor,
-		'--lcibwc-ib-icon-bg': iconBgColor,
-		'--lcibwc-ib-icon-padding': `${iconPadding}px`,
-		'--lcibwc-ib-icon-radius': `${iconBorderRadius}px`,
-		'--lcibwc-ib-title-color': titleColor,
-		'--lcibwc-ib-desc-color': descColor,
-		'--lcibwc-ib-box-bg': boxBgColor,
-		'--lcibwc-ib-alignment': boxAlignment,
+		'--bpafb-ib-icon-size': `${iconSize}px`,
+		'--bpafb-ib-icon-color': iconColor,
+		'--bpafb-ib-icon-bg': iconBgColor,
+		'--bpafb-ib-icon-padding': `${iconPadding}px`,
+		'--bpafb-ib-icon-radius': `${iconBorderRadius}px`,
+		'--bpafb-ib-title-color': titleColor,
+		'--bpafb-ib-desc-color': descColor,
+		'--bpafb-ib-box-bg': boxBgColor,
+		'--bpafb-ib-alignment': boxAlignment,
 	};
 
 	const blockProps = useBlockProps({
-		className: `lcibwc-icon-box-wrapper lcibwc-icon-box--${iconPosition}`,
+		className: `bpafb-icon-box-wrapper bpafb-icon-box--${iconPosition}`,
 		style: customStyles,
 	});
 
 	return (
 		<>
 			<InspectorControls>
-				<PanelBody title={__('Content', 'lc-immeasurable-block-widgets-collection')} initialOpen={true}>
+				<PanelBody title={__('Content', 'blockive-premium-addon-for-block')} initialOpen={true}>
 					<TextControl
-						label={__('FontAwesome Icon Class', 'lc-immeasurable-block-widgets-collection')}
+						label={__('FontAwesome Icon Class', 'blockive-premium-addon-for-block')}
 						value={icon}
 						onChange={(val) => setAttributes({ icon: val })}
 						help="e.g., 'fas fa-star', 'fab fa-facebook'"
 					/>
 					
 					<SelectControl
-						label={__('Title HTML Tag', 'lc-immeasurable-block-widgets-collection')}
+						label={__('Title HTML Tag', 'blockive-premium-addon-for-block')}
 						value={titleTag}
 						options={[
 							{ label: 'H2', value: 'h2' },
@@ -78,7 +78,7 @@ export default function Edit({ attributes, setAttributes }) {
 					/>
 
 					<TextControl
-						label={__('Link URL', 'lc-immeasurable-block-widgets-collection')}
+						label={__('Link URL', 'blockive-premium-addon-for-block')}
 						value={url}
 						onChange={(val) => setAttributes({ url: val })}
 						type="url"
@@ -86,14 +86,14 @@ export default function Edit({ attributes, setAttributes }) {
 					
 					{url && (
 						<ToggleControl
-							label={__('Open in new tab', 'lc-immeasurable-block-widgets-collection')}
+							label={__('Open in new tab', 'blockive-premium-addon-for-block')}
 							checked={linkTarget}
 							onChange={(val) => setAttributes({ linkTarget: val })}
 						/>
 					)}
 
 					<SelectControl
-						label={__('Icon Position', 'lc-immeasurable-block-widgets-collection')}
+						label={__('Icon Position', 'blockive-premium-addon-for-block')}
 						value={iconPosition}
 						options={[
 							{ label: 'Top', value: 'top' },
@@ -104,7 +104,7 @@ export default function Edit({ attributes, setAttributes }) {
 					/>
 
 					<SelectControl
-						label={__('Text Alignment', 'lc-immeasurable-block-widgets-collection')}
+						label={__('Text Alignment', 'blockive-premium-addon-for-block')}
 						value={boxAlignment}
 						options={[
 							{ label: 'Left', value: 'left' },
@@ -117,44 +117,44 @@ export default function Edit({ attributes, setAttributes }) {
 			</InspectorControls>
 
 			<InspectorControls group="styles">
-				<PanelBody title={__('Icon Styles', 'lc-immeasurable-block-widgets-collection')} initialOpen={true}>
+				<PanelBody title={__('Icon Styles', 'blockive-premium-addon-for-block')} initialOpen={true}>
 					<RangeControl
-						label={__('Icon Size', 'lc-immeasurable-block-widgets-collection')}
+						label={__('Icon Size', 'blockive-premium-addon-for-block')}
 						value={iconSize}
 						onChange={(val) => setAttributes({ iconSize: val })}
 						min={10}
 						max={200}
 					/>
 					<RangeControl
-						label={__('Icon Padding', 'lc-immeasurable-block-widgets-collection')}
+						label={__('Icon Padding', 'blockive-premium-addon-for-block')}
 						value={iconPadding}
 						onChange={(val) => setAttributes({ iconPadding: val })}
 						min={0}
 						max={100}
 					/>
 					<RangeControl
-						label={__('Icon Border Radius', 'lc-immeasurable-block-widgets-collection')}
+						label={__('Icon Border Radius', 'blockive-premium-addon-for-block')}
 						value={iconBorderRadius}
 						onChange={(val) => setAttributes({ iconBorderRadius: val })}
 						min={0}
 						max={100}
 					/>
-					<BaseControl label={__('Icon Color', 'lc-immeasurable-block-widgets-collection')}>
+					<BaseControl label={__('Icon Color', 'blockive-premium-addon-for-block')}>
 						<ColorPalette value={iconColor} onChange={(val) => setAttributes({ iconColor: val })} />
 					</BaseControl>
-					<BaseControl label={__('Icon Background', 'lc-immeasurable-block-widgets-collection')}>
+					<BaseControl label={__('Icon Background', 'blockive-premium-addon-for-block')}>
 						<ColorPalette value={iconBgColor} onChange={(val) => setAttributes({ iconBgColor: val })} />
 					</BaseControl>
 				</PanelBody>
 
-				<PanelBody title={__('Colors', 'lc-immeasurable-block-widgets-collection')} initialOpen={false}>
-					<BaseControl label={__('Box Background', 'lc-immeasurable-block-widgets-collection')}>
+				<PanelBody title={__('Colors', 'blockive-premium-addon-for-block')} initialOpen={false}>
+					<BaseControl label={__('Box Background', 'blockive-premium-addon-for-block')}>
 						<ColorPalette value={boxBgColor} onChange={(val) => setAttributes({ boxBgColor: val })} />
 					</BaseControl>
-					<BaseControl label={__('Title Color', 'lc-immeasurable-block-widgets-collection')}>
+					<BaseControl label={__('Title Color', 'blockive-premium-addon-for-block')}>
 						<ColorPalette value={titleColor} onChange={(val) => setAttributes({ titleColor: val })} />
 					</BaseControl>
-					<BaseControl label={__('Description Color', 'lc-immeasurable-block-widgets-collection')}>
+					<BaseControl label={__('Description Color', 'blockive-premium-addon-for-block')}>
 						<ColorPalette value={descColor} onChange={(val) => setAttributes({ descColor: val })} />
 					</BaseControl>
 				</PanelBody>
@@ -162,26 +162,26 @@ export default function Edit({ attributes, setAttributes }) {
 
 			<div {...blockProps}>
 				{icon && (
-					<div className="lcibwc-icon-box-icon-wrapper">
-						<i className={`${icon} lcibwc-icon-box-icon`}></i>
+					<div className="bpafb-icon-box-icon-wrapper">
+						<i className={`${icon} bpafb-icon-box-icon`}></i>
 					</div>
 				)}
 
-				<div className="lcibwc-icon-box-content">
+				<div className="bpafb-icon-box-content">
 					<RichText
 						tagName={titleTag}
-						className="lcibwc-icon-box-title"
+						className="bpafb-icon-box-title"
 						value={title}
 						onChange={(val) => setAttributes({ title: val })}
-						placeholder={__('Enter title...', 'lc-immeasurable-block-widgets-collection')}
+						placeholder={__('Enter title...', 'blockive-premium-addon-for-block')}
 					/>
 
 					<RichText
 						tagName="div"
-						className="lcibwc-icon-box-description"
+						className="bpafb-icon-box-description"
 						value={description}
 						onChange={(val) => setAttributes({ description: val })}
-						placeholder={__('Enter description...', 'lc-immeasurable-block-widgets-collection')}
+						placeholder={__('Enter description...', 'blockive-premium-addon-for-block')}
 					/>
 				</div>
 			</div>

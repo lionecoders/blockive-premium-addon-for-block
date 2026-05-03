@@ -20,12 +20,12 @@ export default function save({ attributes }) {
 	} = attributes;
 
 	const customStyles = {
-		'--lcibwc-pb-height': `${barHeight !== undefined ? barHeight : 18}px`,
-		'--lcibwc-pb-radius': `${borderRadius !== undefined ? borderRadius : 50}px`,
-		'--lcibwc-pb-title-color': titleColor || '#1e293b',
-		'--lcibwc-pb-percent-color': percentageColor || '#1e293b',
-		'--lcibwc-pb-track-bg': trackColor || '#f1f5f9',
-		'--lcibwc-pb-inner-text': innerTextColor || '#ffffff',
+		'--bpafb-pb-height': `${barHeight !== undefined ? barHeight : 18}px`,
+		'--bpafb-pb-radius': `${borderRadius !== undefined ? borderRadius : 50}px`,
+		'--bpafb-pb-title-color': titleColor || '#1e293b',
+		'--bpafb-pb-percent-color': percentageColor || '#1e293b',
+		'--bpafb-pb-track-bg': trackColor || '#f1f5f9',
+		'--bpafb-pb-inner-text': innerTextColor || '#ffffff',
 	};
 
 	let barBgStyle = {};
@@ -40,45 +40,45 @@ export default function save({ attributes }) {
 	return (
 		<div {...blockProps}>
 			<div 
-				className={`lcibwc-progress-bar-wrapper lcibwc-pb-style-${layoutStyle || 'standard'}`}
+				className={`bpafb-progress-bar-wrapper bpafb-pb-style-${layoutStyle || 'standard'}`}
 				style={{ ...customStyles, textAlign: alignment || 'left' }}
-				data-lc-progress
+				data-blockive-progress
 				data-percentage={percentage}
 				data-duration={animationDuration || 1500}
 			>
 				{layoutStyle === 'standard' && (
-					<div className="lcibwc-pb-header">
+					<div className="bpafb-pb-header">
 						<RichText.Content
 							tagName="span"
-							className="lcibwc-pb-title"
+							className="bpafb-pb-title"
 							value={title}
 						/>
 						{displayPercentage && (
-							<span className="lcibwc-pb-percentage">
-								<span className="lcibwc-pb-number">0</span>%
+							<span className="bpafb-pb-percentage">
+								<span className="bpafb-pb-number">0</span>%
 							</span>
 						)}
 					</div>
 				)}
 
-				<div className="lcibwc-pb-track">
+				<div className="bpafb-pb-track">
 					<div 
-						className={`lcibwc-pb-fill ${isStriped ? 'lcibwc-pb-striped' : ''} ${isStriped && isAnimated ? 'lcibwc-pb-striped-animated' : ''}`}
+						className={`bpafb-pb-fill ${isStriped ? 'bpafb-pb-striped' : ''} ${isStriped && isAnimated ? 'bpafb-pb-striped-animated' : ''}`}
 						style={{ 
 							width: '0%', // Initially 0% for frontend animation!
 							...barBgStyle
 						}}
 					>
 						{layoutStyle === 'inside' && (
-							<div className="lcibwc-pb-inner-content">
+							<div className="bpafb-pb-inner-content">
 								<RichText.Content
 									tagName="span"
-									className="lcibwc-pb-inner-title"
+									className="bpafb-pb-inner-title"
 									value={title}
 								/>
 								{displayPercentage && (
-									<span className="lcibwc-pb-inner-percent">
-										<span className="lcibwc-pb-number" style={{ opacity: isAnimated ? 0 : 1 }}>{percentage}</span>%
+									<span className="bpafb-pb-inner-percent">
+										<span className="bpafb-pb-number" style={{ opacity: isAnimated ? 0 : 1 }}>{percentage}</span>%
 									</span>
 								)}
 							</div>

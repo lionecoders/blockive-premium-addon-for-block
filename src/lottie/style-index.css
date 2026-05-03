@@ -1,25 +1,25 @@
-.lcibwc-lottie-wrapper {
+.bpafb-lottie-wrapper {
 	width: 100%;
 	margin: 20px 0;
 }
 
-.lcibwc-lottie-container {
+.bpafb-lottie-container {
 	display: inline-block;
 	margin: 0 auto;
 }
 
-.lcibwc-lottie-wrapper[style*="text-align: center"] .lcibwc-lottie-container {
+.bpafb-lottie-wrapper[style*="text-align: center"] .bpafb-lottie-container {
 	display: flex;
 	justify-content: center;
 	width: 100%;
 }
 
-.lcibwc-lottie-wrapper[style*="text-align: right"] .lcibwc-lottie-container {
+.bpafb-lottie-wrapper[style*="text-align: right"] .bpafb-lottie-container {
 	display: flex;
 	justify-content: flex-end;
 }
 
-.lcibwc-lottie-wrapper[style*="text-align: left"] .lcibwc-lottie-container {
+.bpafb-lottie-wrapper[style*="text-align: left"] .bpafb-lottie-container {
 	display: flex;
 	justify-content: flex-start;
 }

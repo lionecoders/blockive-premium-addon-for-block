@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
-	const testimonialSliders = document.querySelectorAll('.lcibwc-testimonial-slider');
+	const testimonialSliders = document.querySelectorAll('.bpafb-testimonial-slider');
 
 	testimonialSliders.forEach((slider) => {
-		const items = slider.querySelectorAll('.lcibwc-testimonial-item');
-		const arrows = slider.querySelectorAll('.lcibwc-arrow');
-		const dots = slider.querySelectorAll('.lcibwc-dot');
+		const items = slider.querySelectorAll('.bpafb-testimonial-item');
+		const arrows = slider.querySelectorAll('.bpafb-arrow');
+		const dots = slider.querySelectorAll('.bpafb-dot');
 		let currentIndex = 0;
 
 		const showSlide = (index) => {
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		arrows.forEach((arrow) => {
 			arrow.addEventListener('click', () => {
-				if (arrow.classList.contains('lcibwc-prev')) {
+				if (arrow.classList.contains('bpafb-prev')) {
 					currentIndex = (currentIndex - 1 + items.length) % items.length;
 				} else {
 					currentIndex = (currentIndex + 1) % items.length;

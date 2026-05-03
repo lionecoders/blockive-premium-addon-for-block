@@ -16,16 +16,16 @@ export default function Edit({ attributes, setAttributes }) {
 	};
 
 	const blockProps = useBlockProps({
-		className: 'lcibwc-lottie-wrapper',
+		className: 'bpafb-lottie-wrapper',
 		style: customStyles,
 	});
 
 	return (
 		<>
 			<InspectorControls>
-				<PanelBody title={__('Lottie Animation', 'lc-immeasurable-block-widgets-collection')} initialOpen={true}>
+				<PanelBody title={__('Lottie Animation', 'blockive-premium-addon-for-block')} initialOpen={true}>
 					<div style={{ marginBottom: '15px' }}>
-						<label>{__('Animation File (JSON)', 'lc-immeasurable-block-widgets-collection')}</label>
+						<label>{__('Animation File (JSON)', 'blockive-premium-addon-for-block')}</label>
 						<MediaUploadCheck>
 							<MediaUpload
 								onSelect={(media) => setAttributes({ animationUrl: media.url })}
@@ -33,7 +33,7 @@ export default function Edit({ attributes, setAttributes }) {
 								value={animationUrl}
 								render={({ open }) => (
 									<Button onClick={open} isPrimary>
-										{animationUrl ? __('Change Animation', 'lc-immeasurable-block-widgets-collection') : __('Select Animation', 'lc-immeasurable-block-widgets-collection')}
+										{animationUrl ? __('Change Animation', 'blockive-premium-addon-for-block') : __('Select Animation', 'blockive-premium-addon-for-block')}
 									</Button>
 								)}
 							/>
@@ -41,31 +41,31 @@ export default function Edit({ attributes, setAttributes }) {
 					</div>
 
 					<TextControl
-						label={__('Width (e.g., 200px, 100%)', 'lc-immeasurable-block-widgets-collection')}
+						label={__('Width (e.g., 200px, 100%)', 'blockive-premium-addon-for-block')}
 						value={width}
 						onChange={(val) => setAttributes({ width: val })}
 					/>
 
 					<TextControl
-						label={__('Height (e.g., 200px)', 'lc-immeasurable-block-widgets-collection')}
+						label={__('Height (e.g., 200px)', 'blockive-premium-addon-for-block')}
 						value={height}
 						onChange={(val) => setAttributes({ height: val })}
 					/>
 
 					<ToggleControl
-						label={__('Autoplay', 'lc-immeasurable-block-widgets-collection')}
+						label={__('Autoplay', 'blockive-premium-addon-for-block')}
 						checked={autoplay}
 						onChange={(val) => setAttributes({ autoplay: val })}
 					/>
 
 					<ToggleControl
-						label={__('Loop', 'lc-immeasurable-block-widgets-collection')}
+						label={__('Loop', 'blockive-premium-addon-for-block')}
 						checked={loop}
 						onChange={(val) => setAttributes({ loop: val })}
 					/>
 
 					<SelectControl
-						label={__('Alignment', 'lc-immeasurable-block-widgets-collection')}
+						label={__('Alignment', 'blockive-premium-addon-for-block')}
 						value={align}
 						options={[
 							{ label: 'Left', value: 'left' },
@@ -78,7 +78,7 @@ export default function Edit({ attributes, setAttributes }) {
 			</InspectorControls>
 
 			<div {...blockProps}>
-				<div className="lcibwc-lottie-container" style={{ width: width, height: height }}>
+				<div className="bpafb-lottie-container" style={{ width: width, height: height }}>
 					{animationUrl ? (
 						<lottie-player
 							src={animationUrl}
@@ -88,7 +88,7 @@ export default function Edit({ attributes, setAttributes }) {
 						/>
 					) : (
 						<div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%', background: '#f0f0f0', color: '#999', borderRadius: '8px' }}>
-							{__('Select a Lottie animation file', 'lc-immeasurable-block-widgets-collection')}
+							{__('Select a Lottie animation file', 'blockive-premium-addon-for-block')}
 						</div>
 					)}
 				</div>

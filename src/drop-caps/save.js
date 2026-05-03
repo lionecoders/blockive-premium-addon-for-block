@@ -17,14 +17,14 @@ export default function save({ attributes }) {
 
 	const customStyles = {
 		textAlign: alignment,
-		'--lcibwc-dc-size': `${size}px`,
-		'--lcibwc-dc-space': `${space}px`,
-		'--lcibwc-dc-pd': `${dropCapPadding}px`,
-		'--lcibwc-dc-color': secondaryColor || 'inherit',
-		'--lcibwc-dc-bg': view === 'stacked' ? (primaryColor || '#000') : 'transparent',
-		'--lcibwc-dc-borderWidth': view === 'framed' ? `${borderWidth}px` : '0px',
-		'--lcibwc-dc-borderColor': primaryColor || '#000',
-		'--lcibwc-dc-radius': borderRadius > 0 ? `${borderRadius}px` : (shape === 'circle' ? '50%' : (shape === 'rounded' ? '5px' : '0')),
+		'--bpafb-dc-size': `${size}px`,
+		'--bpafb-dc-space': `${space}px`,
+		'--bpafb-dc-pd': `${dropCapPadding}px`,
+		'--bpafb-dc-color': secondaryColor || 'inherit',
+		'--bpafb-dc-bg': view === 'stacked' ? (primaryColor || '#000') : 'transparent',
+		'--bpafb-dc-borderWidth': view === 'framed' ? `${borderWidth}px` : '0px',
+		'--bpafb-dc-borderColor': primaryColor || '#000',
+		'--bpafb-dc-radius': borderRadius > 0 ? `${borderRadius}px` : (shape === 'circle' ? '50%' : (shape === 'rounded' ? '5px' : '0')),
 	};
 
 	const blockProps = useBlockProps.save({
