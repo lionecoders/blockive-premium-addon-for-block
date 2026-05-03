@@ -1,1 +1,41 @@
-document.addEventListener("DOMContentLoaded",()=>{document.querySelectorAll(".blockive-countdown-wrapper").forEach(e=>{const t=e.getAttribute("data-target-date");if(!t)return;const n=new Date(t).getTime(),o=e.querySelector(".blockive-cd-days .blockive-countdown-number"),r=e.querySelector(".blockive-cd-hours .blockive-countdown-number"),c=e.querySelector(".blockive-cd-minutes .blockive-countdown-number"),i=e.querySelector(".blockive-cd-seconds .blockive-countdown-number"),l=()=>{const e=(new Date).getTime(),t=n-e;if(t<0)return o&&(o.innerText="00"),r&&(r.innerText="00"),c&&(c.innerText="00"),i&&(i.innerText="00"),void(u&&clearInterval(u));const l=Math.floor(t/864e5),d=Math.floor(t%864e5/36e5),a=Math.floor(t%36e5/6e4),b=Math.floor(t%6e4/1e3);o&&(o.innerText=l<10?"0"+l:l),r&&(r.innerText=d<10?"0"+d:d),c&&(c.innerText=a<10?"0"+a:a),i&&(i.innerText=b<10?"0"+b:b)};l();const u=setInterval(l,1e3)})});
+/******/ (() => { // webpackBootstrap
+/*!*************************************!*\
+  !*** ./src/countdown-timer/view.js ***!
+  \*************************************/
+document.addEventListener('DOMContentLoaded', () => {
+  const wrappers = document.querySelectorAll('.bpafb-countdown-wrapper');
+  wrappers.forEach(timer => {
+    const targetDateStr = timer.getAttribute('data-target-date');
+    if (!targetDateStr) return;
+    const targetDate = new Date(targetDateStr).getTime();
+    const daysEl = timer.querySelector('.bpafb-cd-days .bpafb-countdown-number');
+    const hoursEl = timer.querySelector('.bpafb-cd-hours .bpafb-countdown-number');
+    const minsEl = timer.querySelector('.bpafb-cd-minutes .bpafb-countdown-number');
+    const secsEl = timer.querySelector('.bpafb-cd-seconds .bpafb-countdown-number');
+    const updateTimer = () => {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+      if (distance < 0) {
+        if (daysEl) daysEl.innerText = '00';
+        if (hoursEl) hoursEl.innerText = '00';
+        if (minsEl) minsEl.innerText = '00';
+        if (secsEl) secsEl.innerText = '00';
+        if (interval) clearInterval(interval);
+        return;
+      }
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor(distance % (1000 * 60 * 60 * 24) / (1000 * 60 * 60));
+      const minutes = Math.floor(distance % (1000 * 60 * 60) / (1000 * 60));
+      const seconds = Math.floor(distance % (1000 * 60) / 1000);
+      if (daysEl) daysEl.innerText = days < 10 ? '0' + days : days;
+      if (hoursEl) hoursEl.innerText = hours < 10 ? '0' + hours : hours;
+      if (minsEl) minsEl.innerText = minutes < 10 ? '0' + minutes : minutes;
+      if (secsEl) secsEl.innerText = seconds < 10 ? '0' + seconds : seconds;
+    };
+    updateTimer();
+    const interval = setInterval(updateTimer, 1000);
+  });
+});
+/******/ })()
+;
+//# sourceMappingURL=view.js.map

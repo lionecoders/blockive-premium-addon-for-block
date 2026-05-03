@@ -1,1 +1,49 @@
-(()=>{const e=()=>{document.querySelectorAll(".blockive-accordion-wrapper:not(.blockive-accordion-initialized)").forEach(e=>{e.classList.add("bpafb-accordion-initialized");const o=e.querySelectorAll(".blockive-accordion-item");o.forEach(e=>{const c=e.querySelector(".blockive-accordion-header"),i=e.querySelector(".blockive-accordion-content");c&&i&&c.addEventListener("click",()=>{const c=e.classList.contains("active");if(o.forEach(e=>{e.classList.remove("active");const o=e.querySelector(".blockive-accordion-content");o&&(o.style.display="none");const c=e.querySelector(".blockive-icon-open"),i=e.querySelector(".blockive-icon-close");c&&(c.style.display="inline"),i&&(i.style.display="none")}),!c){e.classList.add("active"),i.style.display="block";const o=e.querySelector(".blockive-icon-open"),c=e.querySelector(".blockive-icon-close");o&&(o.style.display="none"),c&&(c.style.display="inline")}})})})};"loading"===document.readyState?document.addEventListener("DOMContentLoaded",e):e()})();
+/******/ (() => { // webpackBootstrap
+/*!*******************************!*\
+  !*** ./src/accordion/view.js ***!
+  \*******************************/
+const initBlockiveAccordion = () => {
+  const accordions = document.querySelectorAll('.bpafb-accordion-wrapper:not(.bpafb-accordion-initialized)');
+  accordions.forEach(accordion => {
+    accordion.classList.add('bpafb-accordion-initialized'); // Prevent double binding
+    const items = accordion.querySelectorAll('.bpafb-accordion-item');
+    items.forEach(item => {
+      const header = item.querySelector('.bpafb-accordion-header');
+      const content = item.querySelector('.bpafb-accordion-content');
+      if (header && content) {
+        header.addEventListener('click', () => {
+          const isActive = item.classList.contains('active');
+
+          // Close all others
+          items.forEach(otherItem => {
+            otherItem.classList.remove('active');
+            const otherContent = otherItem.querySelector('.bpafb-accordion-content');
+            if (otherContent) otherContent.style.display = 'none';
+            const openIcon = otherItem.querySelector('.bpafb-icon-open');
+            const closeIcon = otherItem.querySelector('.bpafb-icon-close');
+            if (openIcon) openIcon.style.display = 'inline';
+            if (closeIcon) closeIcon.style.display = 'none';
+          });
+
+          // Toggle current
+          if (!isActive) {
+            item.classList.add('active');
+            content.style.display = 'block';
+            const openIcon = item.querySelector('.bpafb-icon-open');
+            const closeIcon = item.querySelector('.bpafb-icon-close');
+            if (openIcon) openIcon.style.display = 'none';
+            if (closeIcon) closeIcon.style.display = 'inline';
+          }
+        });
+      }
+    });
+  });
+};
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initBlockiveAccordion);
+} else {
+  initBlockiveAccordion();
+}
+/******/ })()
+;
+//# sourceMappingURL=view.js.map

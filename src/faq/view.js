@@ -1,11 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const wrappers = document.querySelectorAll('.blockive-faq-wrapper');
+    const wrappers = document.querySelectorAll('.bpafb-faq-wrapper');
     
     wrappers.forEach(wrapper => {
-        const items = wrapper.querySelectorAll('.blockive-faq-item');
+        const items = wrapper.querySelectorAll('.bpafb-faq-item');
         
         items.forEach(item => {
-            const header = item.querySelector('.blockive-faq-header');
+            const header = item.querySelector('.bpafb-faq-header');
             if (header) {
                 header.addEventListener('click', () => {
                     const isActive = item.classList.contains('active');
@@ -13,11 +13,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     // Close all others
                     items.forEach(i => {
                         i.classList.remove('active');
-                        const content = i.querySelector('.blockive-faq-content');
+                        const content = i.querySelector('.bpafb-faq-content');
                         if (content) content.style.display = 'none';
                         
-                        const iconOpen = i.querySelector('.blockive-icon-open');
-                        const iconClose = i.querySelector('.blockive-icon-close');
+                        const iconOpen = i.querySelector('.bpafb-icon-open');
+                        const iconClose = i.querySelector('.bpafb-icon-close');
                         if (iconOpen) iconOpen.style.display = 'inline-block';
                         if (iconClose) iconClose.style.display = 'none';
                     });
@@ -25,11 +25,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     // Toggle current
                     if (!isActive) {
                         item.classList.add('active');
-                        const content = item.querySelector('.blockive-faq-content');
+                        const content = item.querySelector('.bpafb-faq-content');
                         if (content) content.style.display = 'block';
                         
-                        const iconOpen = item.querySelector('.blockive-icon-open');
-                        const iconClose = item.querySelector('.blockive-icon-close');
+                        const iconOpen = item.querySelector('.bpafb-icon-open');
+                        const iconClose = item.querySelector('.bpafb-icon-close');
                         if (iconOpen) iconOpen.style.display = 'none';
                         if (iconClose) iconClose.style.display = 'inline-block';
                     }

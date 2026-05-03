@@ -1,1 +1,70 @@
-document.addEventListener("DOMContentLoaded",()=>{(()=>{const e=document.querySelectorAll(".blockive-progress-bar-wrapper[data-blockive-progress]:not(.blockive-pb-initialized)");if(!e.length)return;const t=new IntersectionObserver((e,t)=>{e.forEach(e=>{if(e.isIntersecting){const r=e.target,n=r.querySelector(".blockive-pb-fill"),o=r.querySelectorAll(".blockive-pb-number"),i=parseFloat(r.getAttribute("data-percentage"))||0,a=parseInt(r.getAttribute("data-duration"),10)||1500;if(n&&(n.style.transition=`width ${a}ms cubic-bezier(0.165, 0.84, 0.44, 1)`,n.style.width=`${i}%`),o.length>0){let e=null;const t=r=>{e||(e=r);const n=Math.min((r-e)/a,1),s=1-Math.pow(1-n,4),l=Math.floor(s*i);o.forEach(e=>{e.textContent=l}),n<1?window.requestAnimationFrame(t):o.forEach(e=>{e.textContent=i})};window.requestAnimationFrame(t)}r.classList.add("bpafb-pb-initialized"),t.unobserve(r)}})},{rootMargin:"0px 0px -50px 0px",threshold:.1});e.forEach(e=>{t.observe(e)})})()});
+/******/ (() => { // webpackBootstrap
+/*!**********************************!*\
+  !*** ./src/progress-bar/view.js ***!
+  \**********************************/
+/**
+ * Frontend script for Blockive Progress Bar.
+ * Handles Intersection Observer to animate the bar and counter on scroll.
+ */
+
+document.addEventListener('DOMContentLoaded', () => {
+  const initProgressBars = () => {
+    const progressBars = document.querySelectorAll('.bpafb-progress-bar-wrapper[data-blockive-progress]:not(.bpafb-pb-initialized)');
+    if (!progressBars.length) return;
+    const observer = new IntersectionObserver((entries, observerInstance) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const wrapper = entry.target;
+          const fillArea = wrapper.querySelector('.bpafb-pb-fill');
+          const numberElements = wrapper.querySelectorAll('.bpafb-pb-number');
+          const targetPercentage = parseFloat(wrapper.getAttribute('data-percentage')) || 0;
+          const duration = parseInt(wrapper.getAttribute('data-duration'), 10) || 1500;
+
+          // 1. Animate Width
+          if (fillArea) {
+            fillArea.style.transition = `width ${duration}ms cubic-bezier(0.165, 0.84, 0.44, 1)`;
+            fillArea.style.width = `${targetPercentage}%`;
+          }
+
+          // 2. Animate Numbers
+          if (numberElements.length > 0) {
+            let startTimestamp = null;
+            const step = timestamp => {
+              if (!startTimestamp) startTimestamp = timestamp;
+              const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+
+              // Ease Out Quart function for standard smooth deceleration
+              const easeOut = 1 - Math.pow(1 - progress, 4);
+              const currentVal = Math.floor(easeOut * targetPercentage);
+              numberElements.forEach(el => {
+                el.textContent = currentVal;
+              });
+              if (progress < 1) {
+                window.requestAnimationFrame(step);
+              } else {
+                numberElements.forEach(el => {
+                  el.textContent = targetPercentage;
+                });
+              }
+            };
+            window.requestAnimationFrame(step);
+          }
+
+          // Mark as initialized and stop observing
+          wrapper.classList.add('bpafb-pb-initialized');
+          observerInstance.unobserve(wrapper);
+        }
+      });
+    }, {
+      rootMargin: '0px 0px -50px 0px',
+      threshold: 0.1
+    });
+    progressBars.forEach(bar => {
+      observer.observe(bar);
+    });
+  };
+  initProgressBars();
+});
+/******/ })()
+;
+//# sourceMappingURL=view.js.map

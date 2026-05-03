@@ -1,1 +1,41 @@
-(()=>{const e=()=>{document.querySelectorAll(".blockive-tabs-wrapper:not(.blockive-tabs-initialized)").forEach(e=>{e.classList.add("bpafb-tabs-initialized");const t=e.querySelectorAll(".blockive-tab-pill"),a=e.querySelectorAll(".blockive-tab-pane");t.forEach((e,c)=>{e.addEventListener("click",()=>{t.forEach(e=>e.classList.remove("active")),a.forEach(e=>e.classList.remove("active")),e.classList.add("active"),a[c]&&a[c].classList.add("active")}),e.addEventListener("keydown",t=>{"Enter"!==t.key&&" "!==t.key||(t.preventDefault(),e.click())})})})};"loading"===document.readyState?document.addEventListener("DOMContentLoaded",e):e()})();
+/******/ (() => { // webpackBootstrap
+/*!**************************!*\
+  !*** ./src/tabs/view.js ***!
+  \**************************/
+const initBlockiveTabs = () => {
+  const tabsWrappers = document.querySelectorAll('.bpafb-tabs-wrapper:not(.bpafb-tabs-initialized)');
+  tabsWrappers.forEach(wrapper => {
+    wrapper.classList.add('bpafb-tabs-initialized'); // Prevent double binding
+    const pills = wrapper.querySelectorAll('.bpafb-tab-pill');
+    const panes = wrapper.querySelectorAll('.bpafb-tab-pane');
+    pills.forEach((pill, index) => {
+      pill.addEventListener('click', () => {
+        // Remove active class from all pills and panes
+        pills.forEach(p => p.classList.remove('active'));
+        panes.forEach(p => p.classList.remove('active'));
+
+        // Add active class to clicked pill and corresponding pane
+        pill.classList.add('active');
+        if (panes[index]) {
+          panes[index].classList.add('active');
+        }
+      });
+
+      // Add keyboard accessibility
+      pill.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          pill.click();
+        }
+      });
+    });
+  });
+};
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initBlockiveTabs);
+} else {
+  initBlockiveTabs();
+}
+/******/ })()
+;
+//# sourceMappingURL=view.js.map

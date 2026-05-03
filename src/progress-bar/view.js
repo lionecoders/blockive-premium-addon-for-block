@@ -5,7 +5,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 	const initProgressBars = () => {
-		const progressBars = document.querySelectorAll('.blockive-progress-bar-wrapper[data-blockive-progress]:not(.blockive-pb-initialized)');
+		const progressBars = document.querySelectorAll('.bpafb-progress-bar-wrapper[data-blockive-progress]:not(.bpafb-pb-initialized)');
 		
 		if (!progressBars.length) return;
 
@@ -13,8 +13,8 @@ document.addEventListener('DOMContentLoaded', () => {
 			entries.forEach(entry => {
 				if (entry.isIntersecting) {
 					const wrapper = entry.target;
-					const fillArea = wrapper.querySelector('.blockive-pb-fill');
-					const numberElements = wrapper.querySelectorAll('.blockive-pb-number');
+					const fillArea = wrapper.querySelector('.bpafb-pb-fill');
+					const numberElements = wrapper.querySelectorAll('.bpafb-pb-number');
 					
 					const targetPercentage = parseFloat(wrapper.getAttribute('data-percentage')) || 0;
 					const duration = parseInt(wrapper.getAttribute('data-duration'), 10) || 1500;

@@ -1,10 +1,10 @@
 const initBlockiveTabs = () => {
-    const tabsWrappers = document.querySelectorAll('.blockive-tabs-wrapper:not(.blockive-tabs-initialized)');
-    
+    const tabsWrappers = document.querySelectorAll('.bpafb-tabs-wrapper:not(.bpafb-tabs-initialized)');
+
     tabsWrappers.forEach(wrapper => {
         wrapper.classList.add('bpafb-tabs-initialized'); // Prevent double binding
-        const pills = wrapper.querySelectorAll('.blockive-tab-pill');
-        const panes = wrapper.querySelectorAll('.blockive-tab-pane');
+        const pills = wrapper.querySelectorAll('.bpafb-tab-pill');
+        const panes = wrapper.querySelectorAll('.bpafb-tab-pane');
         
         pills.forEach((pill, index) => {
             pill.addEventListener('click', () => {
