@@ -1,0 +1,41 @@
+/**
+ * Theme Builder — Frontend Styles.
+ *
+ * Minimal reset and layout styles for rendered templates.
+ * Designed to not conflict with any active WordPress theme.
+ *
+ * @package Blockive\ThemeBuilder\Rendering
+ * @since   1.1.0
+ */
+
+/* ── Template Wrappers ──────────────────────────── */
+
+.blockive-tb-header-template,
+.blockive-tb-footer-template {
+	width: 100%;
+}
+
+/* ── Canvas (full-page override) ────────────────── */
+
+.blockive-tb-canvas .blockive-tb-canvas__content {
+	min-height: 100vh;
+}
+
+/* ── Block alignment support ────────────────────── */
+
+.blockive-tb-header-template .alignfull,
+.blockive-tb-footer-template .alignfull,
+.blockive-tb-canvas__content .alignfull {
+	width: 100%;
+	max-width: 100%;
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.blockive-tb-header-template .alignwide,
+.blockive-tb-footer-template .alignwide,
+.blockive-tb-canvas__content .alignwide {
+	max-width: var(--wp--style--global--wide-size, 1200px);
+	margin-left: auto;
+	margin-right: auto;
+}

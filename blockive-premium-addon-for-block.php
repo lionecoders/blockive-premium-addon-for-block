@@ -23,6 +23,11 @@ define('BPAFB_URL', plugin_dir_url(__FILE__));
 define('BPAFB_VERSION', '1.0.0');
 
 /**
+ * Theme Builder constants & bootstrap.
+ */
+require_once BPAFB_PATH . 'includes/constants.php';
+
+/**
  * Main Class for Blockive Premium Addon For Block.
  */
 class Blockive_Premium_Addon_For_Block
@@ -34,6 +39,18 @@ class Blockive_Premium_Addon_For_Block
 	public function __construct()
 	{
 		$this->bpafb_setup_hooks();
+		$this->bpafb_load_theme_builder();
+	}
+
+	/**
+	 * Bootstrap the Theme Builder module.
+	 *
+	 * @return void
+	 */
+	private function bpafb_load_theme_builder()
+	{
+		require_once BPAFB_PATH . 'includes/class-theme-builder.php';
+		\Blockive\ThemeBuilder\Theme_Builder::instance();
 	}
 
 	/**
