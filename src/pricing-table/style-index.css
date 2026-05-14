@@ -167,6 +167,7 @@
 .bpafb-pricing-button {
 	display: inline-block;
 	width: 100%;
+	box-sizing: border-box;
 	padding: 18px 25px;
 	background: var(--bpafb-pt-button-bg, #4f46e5);
 	color: var(--bpafb-pt-button-text, #ffffff) !important;
