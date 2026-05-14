@@ -10,14 +10,8 @@ import {
 export default function Edit({ attributes, setAttributes }) {
 	const { number, suffix, prefix, title, icon, numberColor, textColor, duration } = attributes;
 
-	const customStyles = {
-		'--bpafb-funfact-number-color': numberColor,
-		'--bpafb-funfact-text-color': textColor,
-	};
-
 	const blockProps = useBlockProps({
 		className: 'bpafb-funfact-wrapper',
-		style: customStyles,
 	});
 
 	return (
@@ -78,11 +72,11 @@ export default function Edit({ attributes, setAttributes }) {
 			<div {...blockProps}>
 				<div className="bpafb-funfact-content">
 					<div className="bpafb-funfact-number">
-						<span className="bpafb-funfact-prefix">{prefix}</span>
-						<span className="bpafb-funfact-counter" data-count={number}>0</span>
-						<span className="bpafb-funfact-suffix">{suffix}</span>
+						<span className="bpafb-funfact-prefix" style={{ color: numberColor }}>{prefix}</span>
+						<span className="bpafb-funfact-counter" data-count={number} style={{ color: numberColor }}>0</span>
+						<span className="bpafb-funfact-suffix" style={{ color: numberColor }}>{suffix}</span>
 					</div>
-					<h3 className="bpafb-funfact-title">{title}</h3>
+					<h3 className="bpafb-funfact-title" style={{ color: textColor }}>{title}</h3>
 				</div>
 			</div>
 		</>
