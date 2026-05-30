@@ -79,6 +79,10 @@
     "iconSpacing": {
       "type": "number",
       "default": 8
+    },
+    "borderWidth": {
+      "type": "number",
+      "default": 1
     }
   },
   "supports": {
@@ -105,14 +109,9 @@
     },
     "borders": {
       "radius": true,
-      "color": false,
+      "color": true,
       "width": true,
-      "style": true,
-      "__experimentalDefaultControls": {
-        "radius": true,
-        "width": true,
-        "style": true
-      }
+      "style": true
     }
   },
   "textdomain": "blockive-premium-addon-for-block",

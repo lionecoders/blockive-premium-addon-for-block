@@ -334,6 +334,10 @@ return array(
 			'iconSpacing' => array(
 				'type' => 'number',
 				'default' => 8
+			),
+			'borderWidth' => array(
+				'type' => 'number',
+				'default' => 1
 			)
 		),
 		'supports' => array(
@@ -360,14 +364,9 @@ return array(
 			),
 			'borders' => array(
 				'radius' => true,
-				'color' => false,
+				'color' => true,
 				'width' => true,
-				'style' => true,
-				'__experimentalDefaultControls' => array(
-					'radius' => true,
-					'width' => true,
-					'style' => true
-				)
+				'style' => true
 			)
 		),
 		'textdomain' => 'blockive-premium-addon-for-block',

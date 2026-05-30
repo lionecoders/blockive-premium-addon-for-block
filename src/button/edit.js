@@ -35,6 +35,7 @@ export default function Edit({ attributes, setAttributes }) {
 		badgeTextColor,
 		badgeBgColor,
 		iconSpacing,
+		borderWidth,
 	} = attributes;
 
 	const customStyles = {
@@ -47,6 +48,7 @@ export default function Edit({ attributes, setAttributes }) {
 		'--bpafb-btn-badge-text-color': badgeTextColor,
 		'--bpafb-btn-badge-bg-color': badgeBgColor,
 		'--bpafb-btn-icon-spacing': `${iconSpacing}px`,
+		'--bpafb-btn-bw': `${borderWidth}px`,
 		'--bpafb-btn-width': buttonWidth === 'full' ? '100%' : 'auto',
 		'--bpafb-btn-justify': alignment === 'left' ? 'flex-start' : (alignment === 'right' ? 'flex-end' : (alignment === 'justify' ? 'stretch' : 'center')),
 	};
@@ -197,30 +199,42 @@ export default function Edit({ attributes, setAttributes }) {
 						</BaseControl>
 					</PanelBody>
 				)}
+
+				<PanelBody title={__('Borders', 'blockive-premium-addon-for-block')} initialOpen={false}>
+					<RangeControl
+						label={__('Border Width (px)', 'blockive-premium-addon-for-block')}
+						value={borderWidth}
+						onChange={(val) => setAttributes({ borderWidth: val })}
+						min={0}
+						max={15}
+					/>
+				</PanelBody>
 			</InspectorControls>
 
 			<div {...blockProps}>
-				<div className="bpafb-button-inner">
-					{badgeText && (
-						<span className="bpafb-button-badge">{badgeText}</span>
-					)}
-					
-					{showIcon && iconPosition === 'left' && icon && (
-						<i className={`${icon} bpafb-button-icon bpafb-button-icon--left`}></i>
-					)}
+				<div className="bpafb-button-link">
+					<div className="bpafb-button-inner">
+						{badgeText && (
+							<span className="bpafb-button-badge">{badgeText}</span>
+						)}
+						
+						{showIcon && iconPosition === 'left' && icon && (
+							<i className={`${icon} bpafb-button-icon bpafb-button-icon--left`}></i>
+						)}
 
-					<RichText
-						tagName="span"
-						className="bpafb-button-text"
-						value={text}
-						onChange={(val) => setAttributes({ text: val })}
-						placeholder={__('Button Text...', 'blockive-premium-addon-for-block')}
-						allowedFormats={['core/bold', 'core/italic']}
-					/>
+						<RichText
+							tagName="span"
+							className="bpafb-button-text"
+							value={text}
+							onChange={(val) => setAttributes({ text: val })}
+							placeholder={__('Button Text...', 'blockive-premium-addon-for-block')}
+							allowedFormats={['core/bold', 'core/italic']}
+						/>
 
-					{showIcon && iconPosition === 'right' && icon && (
-						<i className={`${icon} bpafb-button-icon bpafb-button-icon--right`}></i>
-					)}
+						{showIcon && iconPosition === 'right' && icon && (
+							<i className={`${icon} bpafb-button-icon bpafb-button-icon--right`}></i>
+						)}
+					</div>
 				</div>
 			</div>
 		</>

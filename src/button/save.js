@@ -20,6 +20,7 @@ export default function save({ attributes }) {
 		badgeTextColor,
 		badgeBgColor,
 		iconSpacing,
+		borderWidth,
 	} = attributes;
 
 	const customStyles = {
@@ -32,6 +33,7 @@ export default function save({ attributes }) {
 		'--bpafb-btn-badge-text-color': badgeTextColor,
 		'--bpafb-btn-badge-bg-color': badgeBgColor,
 		'--bpafb-btn-icon-spacing': `${iconSpacing}px`,
+		'--bpafb-btn-bw': `${borderWidth}px`,
 		'--bpafb-btn-width': buttonWidth === 'full' ? '100%' : 'auto',
 		'--bpafb-btn-justify': alignment === 'left' ? 'flex-start' : (alignment === 'right' ? 'flex-end' : (alignment === 'justify' ? 'stretch' : 'center')),
 	};

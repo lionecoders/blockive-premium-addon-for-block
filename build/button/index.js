@@ -46,7 +46,8 @@ function Edit({
     borderColorHover,
     badgeTextColor,
     badgeBgColor,
-    iconSpacing
+    iconSpacing,
+    borderWidth
   } = attributes;
   const customStyles = {
     '--bpafb-btn-text-color': textColor,
@@ -58,6 +59,7 @@ function Edit({
     '--bpafb-btn-badge-text-color': badgeTextColor,
     '--bpafb-btn-badge-bg-color': badgeBgColor,
     '--bpafb-btn-icon-spacing': `${iconSpacing}px`,
+    '--bpafb-btn-bw': `${borderWidth}px`,
     '--bpafb-btn-width': buttonWidth === 'full' ? '100%' : 'auto',
     '--bpafb-btn-justify': alignment === 'left' ? 'flex-start' : alignment === 'right' ? 'flex-end' : alignment === 'justify' ? 'stretch' : 'center'
   };
@@ -260,28 +262,43 @@ function Edit({
             })
           })
         })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
+        title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Borders', 'blockive-premium-addon-for-block'),
+        initialOpen: false,
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.RangeControl, {
+          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Border Width (px)', 'blockive-premium-addon-for-block'),
+          value: borderWidth,
+          onChange: val => setAttributes({
+            borderWidth: val
+          }),
+          min: 0,
+          max: 15
+        })
       })]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
       ...blockProps,
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-        className: "bpafb-button-inner",
-        children: [badgeText && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
-          className: "bpafb-button-badge",
-          children: badgeText
-        }), showIcon && iconPosition === 'left' && icon && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("i", {
-          className: `${icon} bpafb-button-icon bpafb-button-icon--left`
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
-          tagName: "span",
-          className: "bpafb-button-text",
-          value: text,
-          onChange: val => setAttributes({
-            text: val
-          }),
-          placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Button Text...', 'blockive-premium-addon-for-block'),
-          allowedFormats: ['core/bold', 'core/italic']
-        }), showIcon && iconPosition === 'right' && icon && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("i", {
-          className: `${icon} bpafb-button-icon bpafb-button-icon--right`
-        })]
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+        className: "bpafb-button-link",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+          className: "bpafb-button-inner",
+          children: [badgeText && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
+            className: "bpafb-button-badge",
+            children: badgeText
+          }), showIcon && iconPosition === 'left' && icon && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("i", {
+            className: `${icon} bpafb-button-icon bpafb-button-icon--left`
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
+            tagName: "span",
+            className: "bpafb-button-text",
+            value: text,
+            onChange: val => setAttributes({
+              text: val
+            }),
+            placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Button Text...', 'blockive-premium-addon-for-block'),
+            allowedFormats: ['core/bold', 'core/italic']
+          }), showIcon && iconPosition === 'right' && icon && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("i", {
+            className: `${icon} bpafb-button-icon bpafb-button-icon--right`
+          })]
+        })
       })
     })]
   });
@@ -326,7 +343,8 @@ function save({
     borderColorHover,
     badgeTextColor,
     badgeBgColor,
-    iconSpacing
+    iconSpacing,
+    borderWidth
   } = attributes;
   const customStyles = {
     '--bpafb-btn-text-color': textColor,
@@ -338,6 +356,7 @@ function save({
     '--bpafb-btn-badge-text-color': badgeTextColor,
     '--bpafb-btn-badge-bg-color': badgeBgColor,
     '--bpafb-btn-icon-spacing': `${iconSpacing}px`,
+    '--bpafb-btn-bw': `${borderWidth}px`,
     '--bpafb-btn-width': buttonWidth === 'full' ? '100%' : 'auto',
     '--bpafb-btn-justify': alignment === 'left' ? 'flex-start' : alignment === 'right' ? 'flex-end' : alignment === 'justify' ? 'stretch' : 'center'
   };
@@ -445,7 +464,7 @@ module.exports = window["wp"]["i18n"];
   \*******************************/
 (module) {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"blockive-premium-addon-for-block/button","version":"0.1.0","title":"Blockive Button","category":"bpafb-widgets","icon":"button","description":"A highly customizable button with icon and badge support.","attributes":{"text":{"type":"string","default":"Click Here"},"url":{"type":"string","default":""},"linkTarget":{"type":"boolean","default":false},"showIcon":{"type":"boolean","default":false},"icon":{"type":"string","default":"fas fa-arrow-right"},"iconPosition":{"type":"string","default":"right"},"badgeText":{"type":"string","default":""},"alignment":{"type":"string","default":"center"},"buttonWidth":{"type":"string","default":"auto"},"textColor":{"type":"string","default":"#ffffff"},"bgColor":{"type":"string","default":"#3b82f6"},"textColorHover":{"type":"string","default":"#ffffff"},"bgColorHover":{"type":"string","default":"#2563eb"},"borderColor":{"type":"string","default":"transparent"},"borderColorHover":{"type":"string","default":"transparent"},"badgeTextColor":{"type":"string","default":"#ffffff"},"badgeBgColor":{"type":"string","default":"#ef4444"},"iconSpacing":{"type":"number","default":8}},"supports":{"align":["wide","full"],"html":false,"typography":{"fontSize":true,"lineHeight":true,"__experimentalFontFamily":true,"__experimentalDefaultControls":{"fontSize":true}},"spacing":{"margin":true,"padding":true,"__experimentalDefaultControls":{"margin":true,"padding":true}},"borders":{"radius":true,"color":false,"width":true,"style":true,"__experimentalDefaultControls":{"radius":true,"width":true,"style":true}}},"textdomain":"blockive-premium-addon-for-block","editorScript":"file:./index.js","style":"file:./index.css"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"blockive-premium-addon-for-block/button","version":"0.1.0","title":"Blockive Button","category":"bpafb-widgets","icon":"button","description":"A highly customizable button with icon and badge support.","attributes":{"text":{"type":"string","default":"Click Here"},"url":{"type":"string","default":""},"linkTarget":{"type":"boolean","default":false},"showIcon":{"type":"boolean","default":false},"icon":{"type":"string","default":"fas fa-arrow-right"},"iconPosition":{"type":"string","default":"right"},"badgeText":{"type":"string","default":""},"alignment":{"type":"string","default":"center"},"buttonWidth":{"type":"string","default":"auto"},"textColor":{"type":"string","default":"#ffffff"},"bgColor":{"type":"string","default":"#3b82f6"},"textColorHover":{"type":"string","default":"#ffffff"},"bgColorHover":{"type":"string","default":"#2563eb"},"borderColor":{"type":"string","default":"transparent"},"borderColorHover":{"type":"string","default":"transparent"},"badgeTextColor":{"type":"string","default":"#ffffff"},"badgeBgColor":{"type":"string","default":"#ef4444"},"iconSpacing":{"type":"number","default":8},"borderWidth":{"type":"number","default":1}},"supports":{"align":["wide","full"],"html":false,"typography":{"fontSize":true,"lineHeight":true,"__experimentalFontFamily":true,"__experimentalDefaultControls":{"fontSize":true}},"spacing":{"margin":true,"padding":true,"__experimentalDefaultControls":{"margin":true,"padding":true}},"borders":{"radius":true,"color":true,"width":true,"style":true}},"textdomain":"blockive-premium-addon-for-block","editorScript":"file:./index.js","style":"file:./index.css"}');
 
 /***/ }
 
