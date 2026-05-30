@@ -217,7 +217,7 @@ export default function Edit({ attributes, setAttributes }) {
 
 			<div {...blockProps}>
 				{items.map((item, index) => {
-					// Pre-calculate styles mapping Elementor logic
+					// Pre-calculate styles mapping customization logic
 					const bg = colorType === 'custom' ? customPrimaryColor : item.color;
 					const color = colorType === 'custom' ? customSecondaryColor : '#ffffff';
 					

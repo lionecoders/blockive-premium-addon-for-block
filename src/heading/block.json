@@ -6,7 +6,7 @@
 	"title": "Blockive Heading",
 	"category": "bpafb-widgets",
 	"icon": "heading",
-	"description": "Advanced heading block with Elementor and Divi like settings.",
+	"description": "Advanced heading block with rich customized settings.",
 	"attributes": {
 		"content": {
 			"type": "string",

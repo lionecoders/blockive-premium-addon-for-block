@@ -6,7 +6,7 @@
   "title": "Blockive Social Icons",
   "category": "bpafb-widgets",
   "icon": "share",
-  "description": "A premium social icons block with Elementor-like controls.",
+  "description": "A premium social icons block with customizable controls.",
   "attributes": {
     "items": {
       "type": "array",

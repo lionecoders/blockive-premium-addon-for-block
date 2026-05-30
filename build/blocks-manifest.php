@@ -9,7 +9,7 @@ return array(
 		'title' => 'Blockive Accordion',
 		'category' => 'bpafb-widgets',
 		'icon' => 'list-view',
-		'description' => 'Accordion block with advanced Elementor/Divi style settings.',
+		'description' => 'Accordion block with advanced layout and style settings.',
 		'attributes' => array(
 			'items' => array(
 				'type' => 'array',
@@ -830,7 +830,7 @@ return array(
 		'title' => 'Blockive Heading',
 		'category' => 'bpafb-widgets',
 		'icon' => 'heading',
-		'description' => 'Advanced heading block with Elementor and Divi like settings.',
+		'description' => 'Advanced heading block with rich customized settings.',
 		'attributes' => array(
 			'content' => array(
 				'type' => 'string',
@@ -1742,7 +1742,7 @@ return array(
 		'title' => 'Blockive Social Icons',
 		'category' => 'bpafb-widgets',
 		'icon' => 'share',
-		'description' => 'A premium social icons block with Elementor-like controls.',
+		'description' => 'A premium social icons block with customizable controls.',
 		'attributes' => array(
 			'items' => array(
 				'type' => 'array',

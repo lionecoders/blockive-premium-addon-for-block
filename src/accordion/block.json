@@ -6,7 +6,7 @@
 	"title": "Blockive Accordion",
 	"category": "bpafb-widgets",
 	"icon": "list-view",
-	"description": "Accordion block with advanced Elementor/Divi style settings.",
+	"description": "Accordion block with advanced layout and style settings.",
 	"attributes": {
 		"items": {
 			"type": "array",
