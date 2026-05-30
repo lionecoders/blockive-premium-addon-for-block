@@ -12,6 +12,7 @@ export default function save({ attributes }) {
 		itemTextColor,
 		todayBgColor,
 		todayTextColor,
+		closedColor,
 	} = attributes;
 
 	const customStyles = {
@@ -21,6 +22,7 @@ export default function save({ attributes }) {
 		'--bpafb-bh-item-text-color': itemTextColor,
 		'--bpafb-bh-today-bg': todayBgColor,
 		'--bpafb-bh-today-text-color': todayTextColor,
+		'--bpafb-bh-closed-color': closedColor,
 	};
 
 	const blockProps = useBlockProps.save({

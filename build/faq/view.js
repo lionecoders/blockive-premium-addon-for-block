@@ -1,1 +1,43 @@
-document.addEventListener("DOMContentLoaded",()=>{document.querySelectorAll(".bpafb-faq-wrapper").forEach(e=>{const t=e.querySelectorAll(".bpafb-faq-item");t.forEach(e=>{const c=e.querySelector(".bpafb-faq-header");c&&c.addEventListener("click",()=>{const c=e.classList.contains("active");if(t.forEach(e=>{e.classList.remove("active");const t=e.querySelector(".bpafb-faq-content");t&&(t.style.display="none");const c=e.querySelector(".bpafb-icon-open"),o=e.querySelector(".bpafb-icon-close");c&&(c.style.display="inline-block"),o&&(o.style.display="none")}),!c){e.classList.add("active");const t=e.querySelector(".bpafb-faq-content");t&&(t.style.display="block");const c=e.querySelector(".bpafb-icon-open"),o=e.querySelector(".bpafb-icon-close");c&&(c.style.display="none"),o&&(o.style.display="inline-block")}})})})});
+/******/ (() => { // webpackBootstrap
+/*!*************************!*\
+  !*** ./src/faq/view.js ***!
+  \*************************/
+document.addEventListener('DOMContentLoaded', () => {
+  const wrappers = document.querySelectorAll('.bpafb-faq-wrapper');
+  wrappers.forEach(wrapper => {
+    const items = wrapper.querySelectorAll('.bpafb-faq-item');
+    items.forEach(item => {
+      const header = item.querySelector('.bpafb-faq-header');
+      if (header) {
+        header.addEventListener('click', () => {
+          const isActive = item.classList.contains('active');
+
+          // Close all others
+          items.forEach(i => {
+            i.classList.remove('active');
+            const content = i.querySelector('.bpafb-faq-content');
+            if (content) content.style.display = 'none';
+            const iconOpen = i.querySelector('.bpafb-icon-open');
+            const iconClose = i.querySelector('.bpafb-icon-close');
+            if (iconOpen) iconOpen.style.display = 'inline-block';
+            if (iconClose) iconClose.style.display = 'none';
+          });
+
+          // Toggle current
+          if (!isActive) {
+            item.classList.add('active');
+            const content = item.querySelector('.bpafb-faq-content');
+            if (content) content.style.display = 'block';
+            const iconOpen = item.querySelector('.bpafb-icon-open');
+            const iconClose = item.querySelector('.bpafb-icon-close');
+            if (iconOpen) iconOpen.style.display = 'none';
+            if (iconClose) iconClose.style.display = 'inline-block';
+          }
+        });
+      }
+    });
+  });
+});
+/******/ })()
+;
+//# sourceMappingURL=view.js.map

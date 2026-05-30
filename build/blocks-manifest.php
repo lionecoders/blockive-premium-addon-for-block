@@ -202,6 +202,10 @@ return array(
 			'todayTextColor' => array(
 				'type' => 'string',
 				'default' => ''
+			),
+			'closedColor' => array(
+				'type' => 'string',
+				'default' => ''
 			)
 		),
 		'supports' => array(
@@ -227,9 +231,9 @@ return array(
 				)
 			),
 			'color' => array(
-				'background' => true,
-				'text' => true,
-				'gradients' => true
+				'background' => false,
+				'text' => false,
+				'gradients' => false
 			),
 			'borders' => array(
 				'radius' => true,

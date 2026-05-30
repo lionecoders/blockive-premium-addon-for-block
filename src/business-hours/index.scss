@@ -5,6 +5,7 @@
 	--bpafb-bh-item-text-color: inherit;
 	--bpafb-bh-today-bg: rgba(0, 0, 0, 0.05);
 	--bpafb-bh-today-text-color: inherit;
+	--bpafb-bh-closed-color: #e53e3e;
 
 	background-color: var(--bpafb-bh-container-bg);
 	padding: 15px;
@@ -49,7 +50,7 @@
 			text-align: right;
 
 			&.closed {
-				color: #e53e3e; /* Standard red for closed, can be overridden */
+				color: var(--bpafb-bh-closed-color);
 			}
 		}
 	}

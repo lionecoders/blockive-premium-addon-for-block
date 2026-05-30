@@ -26,6 +26,7 @@ export default function Edit({ attributes, setAttributes }) {
 		itemTextColor,
 		todayBgColor,
 		todayTextColor,
+		closedColor,
 	} = attributes;
 
 	const customStyles = {
@@ -35,6 +36,7 @@ export default function Edit({ attributes, setAttributes }) {
 		'--bpafb-bh-item-text-color': itemTextColor,
 		'--bpafb-bh-today-bg': todayBgColor,
 		'--bpafb-bh-today-text-color': todayTextColor,
+		'--bpafb-bh-closed-color': closedColor,
 	};
 
 	const blockProps = useBlockProps({
@@ -178,6 +180,9 @@ export default function Edit({ attributes, setAttributes }) {
 					</BaseControl>
 					<BaseControl label={__('Item Text Color', 'blockive-premium-addon-for-block')}>
 						<ColorPalette value={itemTextColor} onChange={(val) => setAttributes({ itemTextColor: val })} />
+					</BaseControl>
+					<BaseControl label={__('Closed Tag Color', 'blockive-premium-addon-for-block')}>
+						<ColorPalette value={closedColor} onChange={(val) => setAttributes({ closedColor: val })} />
 					</BaseControl>
 					
 					{highlightToday && (

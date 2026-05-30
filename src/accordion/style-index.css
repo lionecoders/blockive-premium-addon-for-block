@@ -40,10 +40,11 @@
 	cursor: pointer;
 	background-color: var(--bpafb-accordion-title-bg, #ffffff);
 	color: var(--bpafb-accordion-title-color, #0f172a);
+	font-family: inherit;
 	font-weight: 600;
-	font-size: 1.15rem;
+	font-size: 1.15em;
 	letter-spacing: -0.015em;
-	line-height: 1.3;
+	line-height: inherit;
 	transition: all 0.4s ease;
 	position: relative;
 	user-select: none;
@@ -120,8 +121,9 @@
 	padding: 0 24px 24px;
 	background-color: var(--bpafb-accordion-content-bg, #ffffff);
 	color: var(--bpafb-accordion-content-color, #475569);
-	line-height: 1.7;
-	font-size: 1.05rem;
+	font-family: inherit;
+	line-height: inherit;
+	font-size: 1em;
 	display: none;
 	border-top: none;
 }

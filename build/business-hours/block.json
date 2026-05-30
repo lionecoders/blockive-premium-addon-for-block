@@ -97,6 +97,10 @@
     "todayTextColor": {
       "type": "string",
       "default": ""
+    },
+    "closedColor": {
+      "type": "string",
+      "default": ""
     }
   },
   "supports": {
@@ -122,9 +126,9 @@
       }
     },
     "color": {
-      "background": true,
-      "text": true,
-      "gradients": true
+      "background": false,
+      "text": false,
+      "gradients": false
     },
     "borders": {
       "radius": true,
