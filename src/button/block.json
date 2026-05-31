@@ -107,11 +107,17 @@
 				"padding": true
 			}
 		},
-		"borders": {
+		"__experimentalBorder": {
 			"radius": true,
 			"color": true,
 			"width": true,
-			"style": true
+			"style": true,
+			"__experimentalDefaultControls": {
+				"radius": true,
+				"color": true,
+				"width": true,
+				"style": true
+			}
 		}
 	},
 	"textdomain": "blockive-premium-addon-for-block",

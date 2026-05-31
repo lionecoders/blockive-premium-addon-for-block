@@ -34,8 +34,6 @@ function Edit({
     alignment,
     link,
     linkTarget,
-    textStrokeColor,
-    textStrokeWidth,
     textShadowColor,
     textShadowBlur,
     textShadowX,
@@ -47,10 +45,6 @@ function Edit({
   } = attributes;
   const customStyles = {};
   if (alignment) customStyles.textAlign = alignment;
-  if (textStrokeWidth) {
-    customStyles.WebkitTextStrokeWidth = `${textStrokeWidth}px`;
-    if (textStrokeColor) customStyles.WebkitTextStrokeColor = textStrokeColor;
-  }
   if (textShadowX || textShadowY || textShadowBlur) {
     customStyles.textShadow = `${textShadowX || 0}px ${textShadowY || 0}px ${textShadowBlur || 0}px ${textShadowColor || '#000'}`;
   }
@@ -249,22 +243,6 @@ function Edit({
           }),
           min: -100,
           max: 100
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.BaseControl, {
-          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Text Stroke Color', 'blockive-premium-addon-for-block'),
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ColorPalette, {
-            value: textStrokeColor,
-            onChange: val => setAttributes({
-              textStrokeColor: val
-            })
-          })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.RangeControl, {
-          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Text Stroke Width (px)', 'blockive-premium-addon-for-block'),
-          value: textStrokeWidth,
-          onChange: val => setAttributes({
-            textStrokeWidth: val
-          }),
-          min: 0,
-          max: 20
         })]
       })]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
@@ -307,8 +285,6 @@ function save({
     alignment,
     link,
     linkTarget,
-    textStrokeColor,
-    textStrokeWidth,
     textShadowColor,
     textShadowBlur,
     textShadowX,
@@ -320,10 +296,6 @@ function save({
   } = attributes;
   const customStyles = {};
   if (alignment) customStyles.textAlign = alignment;
-  if (textStrokeWidth) {
-    customStyles.WebkitTextStrokeWidth = `${textStrokeWidth}px`;
-    if (textStrokeColor) customStyles.WebkitTextStrokeColor = textStrokeColor;
-  }
   if (textShadowX || textShadowY || textShadowBlur) {
     customStyles.textShadow = `${textShadowX || 0}px ${textShadowY || 0}px ${textShadowBlur || 0}px ${textShadowColor || '#000'}`;
   }
@@ -428,7 +400,7 @@ module.exports = window["wp"]["i18n"];
   \********************************/
 (module) {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"blockive-premium-addon-for-block/heading","version":"0.1.0","title":"Blockive Heading","category":"bpafb-widgets","icon":"heading","description":"Advanced heading block with rich customized settings.","attributes":{"content":{"type":"string","default":"Stunning Default Heading"},"level":{"type":"number","default":2},"alignment":{"type":"string","default":"center"},"link":{"type":"string","default":""},"linkTarget":{"type":"string","default":"_self"},"textStrokeColor":{"type":"string","default":""},"textStrokeWidth":{"type":"number","default":0},"textShadowColor":{"type":"string","default":"rgba(0,0,0,0.2)"},"textShadowBlur":{"type":"number","default":15},"textShadowX":{"type":"number","default":0},"textShadowY":{"type":"number","default":10},"blendMode":{"type":"string","default":"normal"},"animationType":{"type":"string","default":"none"},"animationDuration":{"type":"string","default":"1s"},"animationDelay":{"type":"string","default":"0s"}},"supports":{"align":["wide","full"],"html":false,"color":{"text":true,"background":true,"gradients":true,"link":true},"typography":{"fontSize":true,"lineHeight":true,"__experimentalFontFamily":true,"__experimentalFontWeight":true,"__experimentalFontStyle":true,"__experimentalTextTransform":true,"__experimentalTextDecoration":true,"__experimentalLetterSpacing":true,"__experimentalDefaultControls":{"fontSize":true}},"spacing":{"margin":true,"padding":true,"__experimentalDefaultControls":{"margin":true,"padding":true}},"__experimentalBorder":{"radius":true,"color":true,"width":true,"style":true,"__experimentalDefaultControls":{"radius":true,"color":true,"width":true,"style":true}}},"textdomain":"blockive-premium-addon-for-block","editorScript":"file:./index.js","style":"file:./index.css"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"blockive-premium-addon-for-block/heading","version":"0.1.0","title":"Blockive Heading","category":"bpafb-widgets","icon":"heading","description":"Advanced heading block with rich customized settings.","attributes":{"content":{"type":"string","default":"Stunning Default Heading"},"level":{"type":"number","default":2},"link":{"type":"string","default":""},"linkTarget":{"type":"string","default":"_self"},"textShadowColor":{"type":"string","default":"rgba(0,0,0,0.2)"},"textShadowBlur":{"type":"number","default":15},"textShadowX":{"type":"number","default":0},"textShadowY":{"type":"number","default":10},"blendMode":{"type":"string","default":"normal"},"animationType":{"type":"string","default":"none"},"animationDuration":{"type":"string","default":"1s"},"animationDelay":{"type":"string","default":"0s"}},"supports":{"align":["wide","full"],"html":false,"color":{"text":true,"background":true,"gradients":true,"link":true},"typography":{"fontSize":true,"lineHeight":true,"__experimentalFontFamily":true,"__experimentalFontWeight":true,"__experimentalFontStyle":true,"__experimentalTextTransform":true,"__experimentalTextDecoration":true,"__experimentalLetterSpacing":true,"__experimentalDefaultControls":{"fontSize":true}},"spacing":{"margin":true,"padding":true,"__experimentalDefaultControls":{"margin":true,"padding":true}},"__experimentalBorder":{"radius":true,"color":true,"width":true,"style":true,"__experimentalDefaultControls":{"radius":true,"color":true,"width":true,"style":true}}},"textdomain":"blockive-premium-addon-for-block","editorScript":"file:./index.js","style":"file:./index.css"}');
 
 /***/ }
 

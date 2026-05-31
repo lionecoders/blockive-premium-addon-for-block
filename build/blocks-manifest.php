@@ -235,7 +235,7 @@ return array(
 				'text' => false,
 				'gradients' => false
 			),
-			'borders' => array(
+			'__experimentalBorder' => array(
 				'radius' => true,
 				'color' => true,
 				'width' => true,
@@ -362,11 +362,17 @@ return array(
 					'padding' => true
 				)
 			),
-			'borders' => array(
+			'__experimentalBorder' => array(
 				'radius' => true,
 				'color' => true,
 				'width' => true,
-				'style' => true
+				'style' => true,
+				'__experimentalDefaultControls' => array(
+					'radius' => true,
+					'color' => true,
+					'width' => true,
+					'style' => true
+				)
 			)
 		),
 		'textdomain' => 'blockive-premium-addon-for-block',
@@ -843,10 +849,6 @@ return array(
 				'type' => 'number',
 				'default' => 2
 			),
-			'alignment' => array(
-				'type' => 'string',
-				'default' => 'center'
-			),
 			'link' => array(
 				'type' => 'string',
 				'default' => ''
@@ -854,14 +856,6 @@ return array(
 			'linkTarget' => array(
 				'type' => 'string',
 				'default' => '_self'
-			),
-			'textStrokeColor' => array(
-				'type' => 'string',
-				'default' => ''
-			),
-			'textStrokeWidth' => array(
-				'type' => 'number',
-				'default' => 0
 			),
 			'textShadowColor' => array(
 				'type' => 'string',
@@ -1048,7 +1042,7 @@ return array(
 				'text' => true,
 				'gradients' => true
 			),
-			'borders' => array(
+			'__experimentalBorder' => array(
 				'radius' => true,
 				'color' => true,
 				'width' => true,
@@ -1228,7 +1222,7 @@ return array(
 				'text' => true,
 				'gradients' => true
 			),
-			'borders' => array(
+			'__experimentalBorder' => array(
 				'radius' => true,
 				'color' => true,
 				'width' => true,

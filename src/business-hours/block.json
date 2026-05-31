@@ -130,7 +130,7 @@
 			"text": false,
 			"gradients": false
 		},
-		"borders": {
+		"__experimentalBorder": {
 			"radius": true,
 			"color": true,
 			"width": true,

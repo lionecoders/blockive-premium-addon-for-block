@@ -23,8 +23,6 @@ export default function Edit({ attributes, setAttributes }) {
 		alignment,
 		link,
 		linkTarget,
-		textStrokeColor,
-		textStrokeWidth,
 		textShadowColor,
 		textShadowBlur,
 		textShadowX,
@@ -37,10 +35,7 @@ export default function Edit({ attributes, setAttributes }) {
 
 	const customStyles = {};
 	if (alignment) customStyles.textAlign = alignment;
-	if (textStrokeWidth) {
-		customStyles.WebkitTextStrokeWidth = `${textStrokeWidth}px`;
-		if (textStrokeColor) customStyles.WebkitTextStrokeColor = textStrokeColor;
-	}
+
 	if (textShadowX || textShadowY || textShadowBlur) {
 		customStyles.textShadow = `${textShadowX || 0}px ${textShadowY || 0}px ${textShadowBlur || 0}px ${textShadowColor || '#000'}`;
 	}
@@ -180,20 +175,6 @@ export default function Edit({ attributes, setAttributes }) {
 						onChange={(val) => setAttributes({ textShadowY: val })}
 						min={-100}
 						max={100}
-					/>
-
-					<BaseControl label={__('Text Stroke Color', 'blockive-premium-addon-for-block')}>
-						<ColorPalette
-							value={textStrokeColor}
-							onChange={(val) => setAttributes({ textStrokeColor: val })}
-						/>
-					</BaseControl>
-					<RangeControl
-						label={__('Text Stroke Width (px)', 'blockive-premium-addon-for-block')}
-						value={textStrokeWidth}
-						onChange={(val) => setAttributes({ textStrokeWidth: val })}
-						min={0}
-						max={20}
 					/>
 				</PanelBody>
 			</InspectorControls>

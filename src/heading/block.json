@@ -16,10 +16,6 @@
 			"type": "number",
 			"default": 2
 		},
-		"alignment": {
-			"type": "string",
-			"default": "center"
-		},
 		"link": {
 			"type": "string",
 			"default": ""
@@ -27,14 +23,6 @@
 		"linkTarget": {
 			"type": "string",
 			"default": "_self"
-		},
-		"textStrokeColor": {
-			"type": "string",
-			"default": ""
-		},
-		"textStrokeWidth": {
-			"type": "number",
-			"default": 0
 		},
 		"textShadowColor": {
 			"type": "string",

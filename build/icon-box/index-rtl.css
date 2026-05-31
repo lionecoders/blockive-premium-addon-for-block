@@ -15,6 +15,9 @@
   text-align: var(--bpafb-ib-alignment);
   display: flex;
   transition: all 0.3s ease;
+  border-width: var(--bpafb-ib-box-border-width, 0px);
+  border-style: var(--bpafb-ib-box-border-style, solid);
+  border-color: var(--bpafb-ib-box-border-color, transparent);
 }
 .bpafb-icon-box-wrapper .bpafb-icon-box-link {
   display: flex;
@@ -81,6 +84,9 @@
   padding: var(--bpafb-ib-icon-padding);
   border-radius: var(--bpafb-ib-icon-radius);
   transition: all 0.3s ease;
+  border-width: var(--bpafb-ib-icon-border-width, 0px);
+  border-style: var(--bpafb-ib-icon-border-style, solid);
+  border-color: var(--bpafb-ib-icon-border-color, transparent);
 }
 .bpafb-icon-box-wrapper .bpafb-icon-box-icon-wrapper .bpafb-icon-box-icon {
   font-size: var(--bpafb-ib-icon-size);

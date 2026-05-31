@@ -7,8 +7,6 @@ export default function save({ attributes }) {
 		alignment,
 		link,
 		linkTarget,
-		textStrokeColor,
-		textStrokeWidth,
 		textShadowColor,
 		textShadowBlur,
 		textShadowX,
@@ -21,10 +19,7 @@ export default function save({ attributes }) {
 
 	const customStyles = {};
 	if (alignment) customStyles.textAlign = alignment;
-	if (textStrokeWidth) {
-		customStyles.WebkitTextStrokeWidth = `${textStrokeWidth}px`;
-		if (textStrokeColor) customStyles.WebkitTextStrokeColor = textStrokeColor;
-	}
+
 	if (textShadowX || textShadowY || textShadowBlur) {
 		customStyles.textShadow = `${textShadowX || 0}px ${textShadowY || 0}px ${textShadowBlur || 0}px ${textShadowColor || '#000'}`;
 	}
