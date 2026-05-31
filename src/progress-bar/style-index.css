@@ -2,6 +2,7 @@
 .wp-block-blockive-premium-addon-for-block-progress-bar {
 	width: 100%;
 	display: block;
+	font-weight: 600;
 }
 
 .bpafb-progress-bar-wrapper {
@@ -20,15 +21,15 @@
 }
 
 .bpafb-pb-title {
-	font-weight: 600;
-	font-size: 1rem;
+	font-weight: inherit;
+	font-size: 1em;
 	color: var(--bpafb-pb-title-color, #1e293b);
 	letter-spacing: -0.3px;
 }
 
 .bpafb-pb-percentage {
-	font-weight: 700;
-	font-size: 0.95rem;
+	font-weight: inherit;
+	font-size: 0.95em;
 	color: var(--bpafb-pb-percent-color, #1e293b);
 }
 
@@ -39,7 +40,7 @@
 	height: var(--bpafb-pb-height, 18px);
 	border-radius: var(--bpafb-pb-radius, 50px);
 	overflow: hidden;
-	box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+	box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
 	position: relative;
 }
 
@@ -49,10 +50,10 @@
 	border-radius: var(--bpafb-pb-radius, 50px);
 	display: flex;
 	align-items: center;
-	justify-content: flex-end; /* Push text to right side inside fill */
+	justify-content: flex-end;
 	position: relative;
-	background-color: #4f46e5; /* fallback */
-	transition: width 0.1s ease-out; /* fallback transition */
+	background-color: #4f46e5;
+	transition: width 0.1s ease-out;
 	box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
@@ -67,25 +68,24 @@
 	justify-content: space-between;
 	width: 100%;
 	color: var(--bpafb-pb-inner-text, #ffffff);
-	font-size: 0.85rem;
-	font-weight: 600;
+	font-size: 0.85em;
+	font-weight: inherit;
 	line-height: var(--bpafb-pb-height, 18px);
 	white-space: nowrap;
-	opacity: 1; /* Keep visible in editor, animated in frontend */
+	opacity: 1;
+	/* Keep visible in editor, animated in frontend */
 }
 
 /* Stripes Styling */
 .bpafb-pb-striped {
-	background-image: linear-gradient(
-		45deg,
-		rgba(255, 255, 255, 0.15) 25%,
-		transparent 25%,
-		transparent 50%,
-		rgba(255, 255, 255, 0.15) 50%,
-		rgba(255, 255, 255, 0.15) 75%,
-		transparent 75%,
-		transparent
-	) !important;
+	background-image: linear-gradient(45deg,
+			rgba(255, 255, 255, 0.15) 25%,
+			transparent 25%,
+			transparent 50%,
+			rgba(255, 255, 255, 0.15) 50%,
+			rgba(255, 255, 255, 0.15) 75%,
+			transparent 75%,
+			transparent) !important;
 	background-size: 1rem 1rem !important;
 }
 
@@ -97,6 +97,7 @@
 	from {
 		background-position: 1rem 0;
 	}
+
 	to {
 		background-position: 0 0;
 	}
