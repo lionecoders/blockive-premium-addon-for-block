@@ -15,9 +15,6 @@
   text-align: var(--bpafb-ib-alignment);
   display: flex;
   transition: all 0.3s ease;
-  border-width: var(--bpafb-ib-box-border-width, 0px);
-  border-style: var(--bpafb-ib-box-border-style, solid);
-  border-color: var(--bpafb-ib-box-border-color, transparent);
 }
 .bpafb-icon-box-wrapper .bpafb-icon-box-link {
   display: flex;

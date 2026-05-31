@@ -49,6 +49,7 @@ export default function Edit({ attributes, setAttributes }) {
 		'--bpafb-imgbox-spacing': `${imageSpacing}px`,
 		'--bpafb-imgbox-align': contentAlign,
 		'--bpafb-imgbox-valign': verticalAlign === 'top' ? 'flex-start' : (verticalAlign === 'bottom' ? 'flex-end' : 'center'),
+		'--bpafb-imgbox-img-width': imageSize,
 	};
 
 	const blockProps = useBlockProps({
@@ -170,6 +171,11 @@ export default function Edit({ attributes, setAttributes }) {
 
 			<InspectorControls group="styles">
 				<PanelBody title={__('Image Styles', 'blockive-premium-addon-for-block')} initialOpen={true}>
+					<TextControl
+						label={__('Image Width (e.g., 100%, 200px)', 'blockive-premium-addon-for-block')}
+						value={imageSize}
+						onChange={(val) => setAttributes({ imageSize: val })}
+					/>
 					<RangeControl
 						label={__('Image Spacing', 'blockive-premium-addon-for-block')}
 						value={imageSpacing}

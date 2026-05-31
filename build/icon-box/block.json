@@ -71,6 +71,18 @@
     "boxAlignment": {
       "type": "string",
       "default": "center"
+    },
+    "iconBorderColor": {
+      "type": "string",
+      "default": ""
+    },
+    "iconBorderWidth": {
+      "type": "number",
+      "default": 0
+    },
+    "iconBorderStyle": {
+      "type": "string",
+      "default": "solid"
     }
   },
   "supports": {

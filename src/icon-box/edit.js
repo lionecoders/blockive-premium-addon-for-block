@@ -32,6 +32,9 @@ export default function Edit({ attributes, setAttributes }) {
 		iconPadding,
 		iconBorderRadius,
 		boxAlignment,
+		iconBorderColor,
+		iconBorderWidth,
+		iconBorderStyle,
 	} = attributes;
 
 	const customStyles = {
@@ -44,6 +47,9 @@ export default function Edit({ attributes, setAttributes }) {
 		'--bpafb-ib-desc-color': descColor,
 		'--bpafb-ib-box-bg': boxBgColor,
 		'--bpafb-ib-alignment': boxAlignment,
+		'--bpafb-ib-icon-border-color': iconBorderColor,
+		'--bpafb-ib-icon-border-width': iconBorderWidth ? `${iconBorderWidth}px` : undefined,
+		'--bpafb-ib-icon-border-style': iconBorderStyle,
 	};
 
 	const blockProps = useBlockProps({
@@ -139,6 +145,32 @@ export default function Edit({ attributes, setAttributes }) {
 						min={0}
 						max={100}
 					/>
+					<RangeControl
+						label={__('Icon Border Width (px)', 'blockive-premium-addon-for-block')}
+						value={iconBorderWidth}
+						onChange={(val) => setAttributes({ iconBorderWidth: val })}
+						min={0}
+						max={20}
+					/>
+					<SelectControl
+						label={__('Icon Border Style', 'blockive-premium-addon-for-block')}
+						value={iconBorderStyle}
+						options={[
+							{ label: 'Solid', value: 'solid' },
+							{ label: 'Dashed', value: 'dashed' },
+							{ label: 'Dotted', value: 'dotted' },
+							{ label: 'Double', value: 'double' },
+							{ label: 'Groove', value: 'groove' },
+							{ label: 'Ridge', value: 'ridge' },
+							{ label: 'Inset', value: 'inset' },
+							{ label: 'Outset', value: 'outset' },
+							{ label: 'None', value: 'none' },
+						]}
+						onChange={(val) => setAttributes({ iconBorderStyle: val })}
+					/>
+					<BaseControl label={__('Icon Border Color', 'blockive-premium-addon-for-block')}>
+						<ColorPalette value={iconBorderColor} onChange={(val) => setAttributes({ iconBorderColor: val })} />
+					</BaseControl>
 					<BaseControl label={__('Icon Color', 'blockive-premium-addon-for-block')}>
 						<ColorPalette value={iconColor} onChange={(val) => setAttributes({ iconColor: val })} />
 					</BaseControl>

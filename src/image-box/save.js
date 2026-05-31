@@ -19,6 +19,7 @@ export default function save({ attributes }) {
 		linkColor,
 		boxBgColor,
 		imageSpacing,
+		imageSize,
 	} = attributes;
 
 	const customStyles = {
@@ -30,6 +31,7 @@ export default function save({ attributes }) {
 		'--bpafb-imgbox-spacing': `${imageSpacing}px`,
 		'--bpafb-imgbox-align': contentAlign,
 		'--bpafb-imgbox-valign': verticalAlign === 'top' ? 'flex-start' : (verticalAlign === 'bottom' ? 'flex-end' : 'center'),
+		'--bpafb-imgbox-img-width': imageSize,
 	};
 
 	const blockProps = useBlockProps.save({

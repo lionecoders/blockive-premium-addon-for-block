@@ -21,9 +21,6 @@ export default function save({ attributes }) {
 		iconBorderColor,
 		iconBorderWidth,
 		iconBorderStyle,
-		boxBorderColor,
-		boxBorderWidth,
-		boxBorderStyle,
 	} = attributes;
 
 	const customStyles = {
@@ -39,9 +36,6 @@ export default function save({ attributes }) {
 		'--bpafb-ib-icon-border-color': iconBorderColor,
 		'--bpafb-ib-icon-border-width': iconBorderWidth ? `${iconBorderWidth}px` : undefined,
 		'--bpafb-ib-icon-border-style': iconBorderStyle,
-		'--bpafb-ib-box-border-color': boxBorderColor,
-		'--bpafb-ib-box-border-width': boxBorderWidth ? `${boxBorderWidth}px` : undefined,
-		'--bpafb-ib-box-border-style': boxBorderStyle,
 	};
 
 	const blockProps = useBlockProps.save({

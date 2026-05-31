@@ -922,18 +922,6 @@ return array(
 					'margin' => true,
 					'padding' => true
 				)
-			),
-			'__experimentalBorder' => array(
-				'radius' => true,
-				'color' => true,
-				'width' => true,
-				'style' => true,
-				'__experimentalDefaultControls' => array(
-					'radius' => true,
-					'color' => true,
-					'width' => true,
-					'style' => true
-				)
 			)
 		),
 		'textdomain' => 'blockive-premium-addon-for-block',
@@ -1013,6 +1001,18 @@ return array(
 			'boxAlignment' => array(
 				'type' => 'string',
 				'default' => 'center'
+			),
+			'iconBorderColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'iconBorderWidth' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'iconBorderStyle' => array(
+				'type' => 'string',
+				'default' => 'solid'
 			)
 		),
 		'supports' => array(
