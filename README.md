@@ -23,7 +23,6 @@ A powerful, high-performance, and elegant collection of premium blocks for the W
 | ❓ | **Blockive FAQ** | SEO/Schema-ready accordion style FAQ lists. | Structured data auto-generation, schema support toggle. |
 | ✍️ | **Blockive Heading** | Eye-catching titles with gradients, stroke highlights, and text shadows. | Stroke width/color, blend modes, text-shadow offset/blur. |
 | 📊 | **Blockive Pie Chart** | High-performance interactive data visualizations. | Custom legend placement, donut/pie toggle, Chart.js backend. |
-| 🏷️ | **Blockive Pricing Table** | Professional conversion-oriented product or plan grids. | Ribbon markers, button actions, badge highlights. |
 | 📈 | **Blockive Progress Bar** | Dynamic animated bar and line indicators to show project/skill levels. | Animated steps, custom height, percentage toggle. |
 | 🔗 | **Blockive Social Icons** | Premium links to social profiles with custom shapes and hover animations. | Shape variants (round/circle/square), custom SVG color mapping, animations. |
 | 📑 | **Blockive Tabs** | Sleek content switchers to organize large amounts of tabular content. | Tab pills alignment, keyboard focus/arrow-key transitions. |
@@ -78,7 +77,11 @@ blockive-premium-addon-for-block/
 │   ├── button/                   # Block: Premium Buttons
 │   ├── countdown-timer/          # Block: Countdown Timer
 │   ├── drop-caps/                # Block: Drop Caps
+│   ├── faq/                      # Block: Schema FAQ
+│   ├── funfact/                  # Block: Animated Counter
 │   ├── heading/                  # Block: Advanced Heading
+│   ├── icon-box/                 # Block: Icon Box
+│   ├── image-box/                # Block: Image Box
 │   ├── pie-chart/                # Block: Interactive Pie Charts
 │   ├── progress-bar/             # Block: Progress Bar
 │   ├── social-icons/             # Block: Premium Social Icons

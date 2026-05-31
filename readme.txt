@@ -23,10 +23,9 @@ Built with performance in mind, our blocks are lightweight and load only the nec
 4.  **Blockive FAQ**: Schema-ready FAQ block that helps with SEO while providing a clean way to answer common customer questions.
 5.  **Blockive Heading**: Design eye-catching headings with custom gradients, unique fonts, and modern typography settings.
 6.  **Blockive Pie Chart**: Visualize your data beautifully with dynamic pie and donut charts powered by Chart.js.
-7.  **Blockive Pricing Table**: Display your service plans or products in a clean, high-conversion pricing comparison table.
-8.  **Blockive Progress Bar**: Show off your skills or project progress with animated and highly customizable progress bars.
-9.  **Blockive Social Icons**: Add stylish social media links to your pages with custom colors, shapes, and hover effects.
-10. **Blockive Tabs**: Organize large amounts of content into sleek, responsive tab systems to improve user experience.
+7.  **Blockive Progress Bar**: Show off your skills or project progress with animated and highly customizable progress bars.
+8.  **Blockive Social Icons**: Add stylish social media links to your pages with custom colors, shapes, and hover effects.
+9.  **Blockive Tabs**: Organize large amounts of content into sleek, responsive tab systems to improve user experience.
 
 == Installation ==
 
@@ -55,5 +54,5 @@ Yes, blockive-premium-addon-for-block is designed to work seamlessly with any st
 
 = 1.0.0 =
 * Initial release.
-* Includes 10 core blocks: Accordion, Countdown Timer, Drop Caps, FAQ, Heading, Pie Chart, Pricing Table, Progress Bar, Social Icons, and Tabs.
+* Includes 9 core blocks: Accordion, Countdown Timer, Drop Caps, FAQ, Heading, Pie Chart, Progress Bar, Social Icons, and Tabs.
 
