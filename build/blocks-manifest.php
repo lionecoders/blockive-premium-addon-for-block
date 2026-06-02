@@ -315,14 +315,6 @@ return array(
 				'type' => 'string',
 				'default' => '#2563eb'
 			),
-			'borderColor' => array(
-				'type' => 'string',
-				'default' => 'transparent'
-			),
-			'borderColorHover' => array(
-				'type' => 'string',
-				'default' => 'transparent'
-			),
 			'badgeTextColor' => array(
 				'type' => 'string',
 				'default' => '#ffffff'
@@ -334,10 +326,6 @@ return array(
 			'iconSpacing' => array(
 				'type' => 'number',
 				'default' => 8
-			),
-			'borderWidth' => array(
-				'type' => 'number',
-				'default' => 1
 			)
 		),
 		'supports' => array(
@@ -373,6 +361,9 @@ return array(
 					'width' => true,
 					'style' => true
 				)
+			),
+			'__experimentalSkipSerialization' => array(
+				'border'
 			)
 		),
 		'textdomain' => 'blockive-premium-addon-for-block',
@@ -972,9 +963,9 @@ return array(
 				)
 			),
 			'color' => array(
-				'background' => true,
-				'text' => true,
-				'gradients' => true
+				'background' => false,
+				'text' => false,
+				'gradients' => false
 			),
 			'__experimentalBorder' => array(
 				'radius' => true,
@@ -1053,7 +1044,7 @@ return array(
 			),
 			'imageSize' => array(
 				'type' => 'string',
-				'default' => '100%'
+				'default' => '100px'
 			),
 			'imageRadius' => array(
 				'type' => 'number',
@@ -1103,9 +1094,9 @@ return array(
 				)
 			),
 			'color' => array(
-				'background' => true,
-				'text' => true,
-				'gradients' => true
+				'background' => false,
+				'text' => false,
+				'gradients' => false
 			),
 			'__experimentalBorder' => array(
 				'radius' => true,

@@ -108,9 +108,9 @@
       }
     },
     "color": {
-      "background": true,
-      "text": true,
-      "gradients": true
+      "background": false,
+      "text": false,
+      "gradients": false
     },
     "__experimentalBorder": {
       "radius": true,

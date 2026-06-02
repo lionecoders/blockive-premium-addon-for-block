@@ -1,16 +1,13 @@
 .bpafb-button-wrapper {
 	--bpafb-btn-text-color: #ffffff;
 	--bpafb-btn-bg-color: #3b82f6;
-	--bpafb-btn-border-color: transparent;
 	--bpafb-btn-text-color-hover: #ffffff;
 	--bpafb-btn-bg-color-hover: #2563eb;
-	--bpafb-btn-border-color-hover: transparent;
 	--bpafb-btn-badge-text-color: #ffffff;
 	--bpafb-btn-badge-bg-color: #ef4444;
 	--bpafb-btn-icon-spacing: 8px;
 	--bpafb-btn-width: auto;
 	--bpafb-btn-justify: center;
-	--bpafb-btn-bw: 1px;
 
 	display: flex;
 	justify-content: var(--bpafb-btn-justify);
@@ -37,7 +34,7 @@
 		text-decoration: none;
 		background-color: var(--bpafb-btn-bg-color);
 		color: var(--bpafb-btn-text-color);
-		border: var(--bpafb-btn-bw) solid var(--bpafb-btn-border-color);
+		border: 1px solid transparent;
 		padding: 12px 24px;
 		border-radius: 4px; /* overridden by block supports if set */
 		transition: all 0.3s ease;
@@ -48,7 +45,6 @@
 		&:hover {
 			background-color: var(--bpafb-btn-bg-color-hover);
 			color: var(--bpafb-btn-text-color-hover);
-			border-color: var(--bpafb-btn-border-color-hover);
 		}
 	}
 

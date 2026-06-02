@@ -58,7 +58,7 @@
 		},
 		"imageSize": {
 			"type": "string",
-			"default": "100%"
+			"default": "100px"
 		},
 		"imageRadius": {
 			"type": "number",
@@ -108,9 +108,9 @@
 			}
 		},
 		"color": {
-			"background": true,
-			"text": true,
-			"gradients": true
+			"background": false,
+			"text": false,
+			"gradients": false
 		},
 		"__experimentalBorder": {
 			"radius": true,

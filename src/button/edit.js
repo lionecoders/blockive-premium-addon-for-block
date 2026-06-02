@@ -3,6 +3,7 @@ import {
 	useBlockProps,
 	InspectorControls,
 	RichText,
+	__experimentalGetBorderClassesAndStyles,
 } from '@wordpress/block-editor';
 import {
 	PanelBody,
@@ -30,28 +31,24 @@ export default function Edit({ attributes, setAttributes }) {
 		bgColor,
 		textColorHover,
 		bgColorHover,
-		borderColor,
-		borderColorHover,
 		badgeTextColor,
 		badgeBgColor,
 		iconSpacing,
-		borderWidth,
 	} = attributes;
 
 	const customStyles = {
 		'--bpafb-btn-text-color': textColor,
 		'--bpafb-btn-bg-color': bgColor,
-		'--bpafb-btn-border-color': borderColor,
 		'--bpafb-btn-text-color-hover': textColorHover,
 		'--bpafb-btn-bg-color-hover': bgColorHover,
-		'--bpafb-btn-border-color-hover': borderColorHover,
 		'--bpafb-btn-badge-text-color': badgeTextColor,
 		'--bpafb-btn-badge-bg-color': badgeBgColor,
 		'--bpafb-btn-icon-spacing': `${iconSpacing}px`,
-		'--bpafb-btn-bw': `${borderWidth}px`,
 		'--bpafb-btn-width': buttonWidth === 'full' ? '100%' : 'auto',
 		'--bpafb-btn-justify': alignment === 'left' ? 'flex-start' : (alignment === 'right' ? 'flex-end' : (alignment === 'justify' ? 'stretch' : 'center')),
 	};
+
+	const borderProps = __experimentalGetBorderClassesAndStyles( attributes );
 
 	const blockProps = useBlockProps({
 		className: `bpafb-button-wrapper bpafb-button-align-${alignment}`,
@@ -166,9 +163,6 @@ export default function Edit({ attributes, setAttributes }) {
 										<BaseControl label={__('Background Color', 'blockive-premium-addon-for-block')}>
 											<ColorPalette value={bgColor} onChange={(val) => setAttributes({ bgColor: val })} />
 										</BaseControl>
-										<BaseControl label={__('Border Color', 'blockive-premium-addon-for-block')}>
-											<ColorPalette value={borderColor} onChange={(val) => setAttributes({ borderColor: val })} />
-										</BaseControl>
 									</div>
 								);
 							}
@@ -179,9 +173,6 @@ export default function Edit({ attributes, setAttributes }) {
 									</BaseControl>
 									<BaseControl label={__('Hover Background Color', 'blockive-premium-addon-for-block')}>
 										<ColorPalette value={bgColorHover} onChange={(val) => setAttributes({ bgColorHover: val })} />
-									</BaseControl>
-									<BaseControl label={__('Hover Border Color', 'blockive-premium-addon-for-block')}>
-										<ColorPalette value={borderColorHover} onChange={(val) => setAttributes({ borderColorHover: val })} />
 									</BaseControl>
 								</div>
 							);
@@ -200,19 +191,13 @@ export default function Edit({ attributes, setAttributes }) {
 					</PanelBody>
 				)}
 
-				<PanelBody title={__('Borders', 'blockive-premium-addon-for-block')} initialOpen={false}>
-					<RangeControl
-						label={__('Border Width (px)', 'blockive-premium-addon-for-block')}
-						value={borderWidth}
-						onChange={(val) => setAttributes({ borderWidth: val })}
-						min={0}
-						max={15}
-					/>
-				</PanelBody>
 			</InspectorControls>
 
 			<div {...blockProps}>
-				<div className="bpafb-button-link">
+				<div
+					className={`bpafb-button-link ${borderProps.className || ''}`}
+					style={borderProps.style}
+				>
 					<div className="bpafb-button-inner">
 						{badgeText && (
 							<span className="bpafb-button-badge">{badgeText}</span>

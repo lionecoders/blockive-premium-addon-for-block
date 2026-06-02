@@ -60,14 +60,6 @@
 			"type": "string",
 			"default": "#2563eb"
 		},
-		"borderColor": {
-			"type": "string",
-			"default": "transparent"
-		},
-		"borderColorHover": {
-			"type": "string",
-			"default": "transparent"
-		},
 		"badgeTextColor": {
 			"type": "string",
 			"default": "#ffffff"
@@ -79,10 +71,6 @@
 		"iconSpacing": {
 			"type": "number",
 			"default": 8
-		},
-		"borderWidth": {
-			"type": "number",
-			"default": 1
 		}
 	},
 	"supports": {
@@ -118,7 +106,10 @@
 				"width": true,
 				"style": true
 			}
-		}
+		},
+		"__experimentalSkipSerialization": [
+			"border"
+		]
 	},
 	"textdomain": "blockive-premium-addon-for-block",
 	"editorScript": "file:./index.js",
