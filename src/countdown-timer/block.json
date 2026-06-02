@@ -4,7 +4,7 @@
 	"name": "blockive-premium-addon-for-block/countdown-timer",
 	"version": "0.1.0",
 	"title": "Blockive Countdown Timer",
-	"category": "bpafb-widgetsgets",
+	"category": "bpafb-widgets",
 	"icon": "clock",
 	"description": "A customizable countdown timer block with rich styling settings.",
 	"attributes": {
