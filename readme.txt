@@ -51,9 +51,8 @@ Yes, blockive-premium-addon-for-block is designed to work seamlessly with any st
 
 == Screenshots ==
 
-1. The Blockive category in the editor.
+1. The Blockive category Blocks in the editor.
 2. Example of the Blockive Accordion block in action.
-3. Beautifully styled Blockive Pie Chart displaying data.
 
 == Changelog ==
 

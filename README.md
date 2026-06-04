@@ -18,10 +18,15 @@ A powerful, high-performance, and elegant collection of premium blocks for the W
 | Icon | Block Name | Description | Key Customization Features |
 |:---:|:---|:---|:---|
 | 📋 | **Blockive Accordion** | Beautiful, collapsible content sections ideal for FAQs or structured info. | Icon alignments, active state colors, expand/collapse speed. |
+| 🕒 | **Blockive Business Hours** | Display your business opening and closing times with custom styling and current-day highlighting. | Current-day highlight, row typography, border options. |
+| 🔘 | **Blockive Button** | A highly customizable button with icon and badge support. | Hover animations, custom badges, icon position, styling. |
 | ⏱️ | **Blockive Countdown Timer** | Urgency-inducing timers for sales, promotions, and events. | Labels, border styling, color mapping. |
 | 🔠 | **Blockive Drop Caps** | Editorial-style typographic enhancements for standard paragraphs. | First-letter custom padding, custom margins, colored initials. |
-| ❓ | **Blockive FAQ** | SEO/Schema-ready accordion style FAQ lists. | Structured data auto-generation, schema support toggle. |
+| ❓ | **Blockive FAQ** | Schema-ready accordion style FAQ lists. | Structured data auto-generation, schema support toggle. |
+| 🔢 | **Blockive Fun Fact** | Show off your achievements with an animated statistics/counter block. | Prefix/suffix options, animation speed, layouts, typography. |
 | ✍️ | **Blockive Heading** | Eye-catching titles with gradients, stroke highlights, and text shadows. | Stroke width/color, blend modes, text-shadow offset/blur. |
+| 📦 | **Blockive Icon Box** | A stylish box displaying an icon, title, description, and custom link. | Icon styling, custom animations, border/background options. |
+| 🖼️ | **Blockive Image Box** | An image box that displays an image, title, description, and link. | Image layout modes, hover effects, styling controls. |
 | 📊 | **Blockive Pie Chart** | High-performance interactive data visualizations. | Custom legend placement, donut/pie toggle, Chart.js backend. |
 | 📈 | **Blockive Progress Bar** | Dynamic animated bar and line indicators to show project/skill levels. | Animated steps, custom height, percentage toggle. |
 | 🔗 | **Blockive Social Icons** | Premium links to social profiles with custom shapes and hover animations. | Shape variants (round/circle/square), custom SVG color mapping, animations. |
