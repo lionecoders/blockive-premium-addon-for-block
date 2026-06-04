@@ -2,7 +2,7 @@
 Contributors:      deep7197, lionecoders
 Tags:              block, blocks, gutenberg, blockive, widgets
 Requires at least: 6.8
-Tested up to:      6.9
+Tested up to:      7.0
 Stable tag:        1.0.0
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
@@ -18,14 +18,19 @@ Built with performance in mind, our blocks are lightweight and load only the nec
 ### Included Blocks:
 
 1.  **Blockive Accordion**: Create beautiful, collapsible content sections with advanced styling options for titles, icons, and animations.
-2.  **Blockive Countdown Timer**: Drive urgency and increase conversions with fully customizable countdown timers for sales and events.
-3.  **Blockive Drop Caps**: Elevate your typography with elegant drop caps that make your articles look professional and polished.
-4.  **Blockive FAQ**: Schema-ready FAQ block that helps with SEO while providing a clean way to answer common customer questions.
-5.  **Blockive Heading**: Design eye-catching headings with custom gradients, unique fonts, and modern typography settings.
-6.  **Blockive Pie Chart**: Visualize your data beautifully with dynamic pie and donut charts powered by Chart.js.
-7.  **Blockive Progress Bar**: Show off your skills or project progress with animated and highly customizable progress bars.
-8.  **Blockive Social Icons**: Add stylish social media links to your pages with custom colors, shapes, and hover effects.
-9.  **Blockive Tabs**: Organize large amounts of content into sleek, responsive tab systems to improve user experience.
+2.  **Blockive Business Hours**: Display your business opening and closing times with custom styling and current-day highlighting.
+3.  **Blockive Button**: A highly customizable button with icon and badge support.
+4.  **Blockive Countdown Timer**: Drive urgency and increase conversions with fully customizable countdown timers for sales and events.
+5.  **Blockive Drop Caps**: Elevate your typography with elegant drop caps that make your articles look professional and polished.
+6.  **Blockive FAQ**: Schema-ready FAQ block that helps with SEO while providing a clean way to answer common customer questions.
+7.  **Blockive Fun Fact**: Show off your achievements with an animated statistics/counter block.
+8.  **Blockive Heading**: Design eye-catching headings with custom gradients, unique fonts, and modern typography settings.
+9.  **Blockive Icon Box**: A stylish box displaying an icon, title, description, and custom link.
+10. **Blockive Image Box**: An image box that displays an image, title, description, and link.
+11. **Blockive Pie Chart**: Visualize your data beautifully with dynamic pie and donut charts powered by Chart.js.
+12. **Blockive Progress Bar**: Show off your skills or project progress with animated and highly customizable progress bars.
+13. **Blockive Social Icons**: Add stylish social media links to your pages with custom colors, shapes, and hover effects.
+14. **Blockive Tabs**: Organize large amounts of content into sleek, responsive tab systems to improve user experience.
 
 == Installation ==
 
@@ -54,5 +59,4 @@ Yes, blockive-premium-addon-for-block is designed to work seamlessly with any st
 
 = 1.0.0 =
 * Initial release.
-* Includes 9 core blocks: Accordion, Countdown Timer, Drop Caps, FAQ, Heading, Pie Chart, Progress Bar, Social Icons, and Tabs.
 
