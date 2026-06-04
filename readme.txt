@@ -2,6 +2,7 @@
 Contributors:      deep7197, lionecoders
 Tags:              block, blocks, gutenberg, blockive, widgets
 Requires at least: 6.8
+Requires PHP:      7.4
 Tested up to:      7.0
 Stable tag:        1.0.0
 License:           GPL-2.0-or-later
