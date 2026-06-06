@@ -72,28 +72,52 @@ The plugin uses the official `@wordpress/scripts` toolchain for bundling, lintin
 ## 📂 Project Directory Structure
 
 ```text
-blockive-premium-addon-for-block/
+lc-block-widgets/
+├── .distignore
+├── .editorconfig
+├── .gitignore
+├── .wp-org/
 ├── assets/                       # Shared global assets
-│   └── css/                      # Webfonts (Font Awesome) and style helpers
+│   ├── css/                      # Webfonts and style helpers
+│   └── webfonts/                 # Font files
 ├── build/                        # Compiled production-ready assets (auto-generated)
-├── src/                          # Raw Gutenberg block components
-│   ├── accordion/                # Block: Accordion (edit, save, view, style)
-│   ├── business-hours/           # Block: Business Hours
-│   ├── button/                   # Block: Premium Buttons
-│   ├── countdown-timer/          # Block: Countdown Timer
-│   ├── drop-caps/                # Block: Drop Caps
-│   ├── faq/                      # Block: Schema FAQ
-│   ├── funfact/                  # Block: Animated Counter
-│   ├── heading/                  # Block: Advanced Heading
-│   ├── icon-box/                 # Block: Icon Box
-│   ├── image-box/                # Block: Image Box
-│   ├── pie-chart/                # Block: Interactive Pie Charts
-│   ├── progress-bar/             # Block: Progress Bar
-│   ├── social-icons/             # Block: Premium Social Icons
-│   └── tabs/                     # Block: Sleek Tabs
-├── blockive-premium-addon-for-block.php # Main entry-point class
-├── readme.txt                    # WordPress.org plugin directory description
-└── package.json                  # Dependencies, scripts, and package metadata
+│   ├── blocks-manifest.php
+│   ├── accordion/
+│   ├── business-hours/
+│   ├── button/
+│   ├── countdown-timer/
+│   ├── drop-caps/
+│   ├── faq/
+│   ├── funfact/
+│   ├── heading/
+│   ├── icon-box/
+│   ├── image-box/
+│   ├── pie-chart/
+│   ├── progress-bar/
+│   ├── social-icons/
+│   └── tabs/
+├── node_modules/                # Development dependency packages (not committed)
+├── package-lock.json
+├── package.json                 # Dependencies, scripts, and metadata
+├── README.md                    # Project documentation
+├── blockive-premium-addon-for-block.php # Main plugin entry point
+├── readme.txt                   # WordPress.org plugin directory description
+└── src/                         # Raw Gutenberg block source files
+    ├── accordion/
+    ├── business-hours/
+    ├── button/
+    ├── components/
+    ├── countdown-timer/
+    ├── drop-caps/
+    ├── faq/
+    ├── funfact/
+    ├── heading/
+    ├── icon-box/
+    ├── image-box/
+    ├── pie-chart/
+    ├── progress-bar/
+    ├── social-icons/
+    └── tabs/
 ```
 
 ---

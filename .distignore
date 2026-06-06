@@ -9,4 +9,3 @@ src
 package.json
 package-lock.json
 *.zip
-.wp-org
