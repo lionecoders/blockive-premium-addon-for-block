@@ -59,4 +59,3 @@ Yes, blockive-premium-addon-for-block is designed to work seamlessly with any st
 
 = 1.0.0 =
 * Initial release.
-

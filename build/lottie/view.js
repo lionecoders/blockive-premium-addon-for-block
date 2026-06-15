@@ -1,0 +1,1 @@
+(()=>{if(!window.lottie&&!document.querySelector('script[src*="lottie"]')){const t=document.createElement("script");t.src="https://unpkg.com/@dotlottie/player-web@latest",t.type="module",document.head.appendChild(t)}})();
