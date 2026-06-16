@@ -1,5 +1,5 @@
 import { __ } from '@wordpress/i18n';
-import { useBlockProps, InspectorControls } from '@wordpress/block-editor';
+import { useBlockProps, InspectorControls, PanelColorSettings } from '@wordpress/block-editor';
 import {
 	PanelBody,
 	TextControl,
@@ -7,7 +7,7 @@ import {
 } from '@wordpress/components';
 
 export default function Edit({ attributes, setAttributes }) {
-	const { formId, showTitle, title, description } = attributes;
+	const { formId, showTitle, title, description, titleColor, descriptionColor } = attributes;
 
 	const blockProps = useBlockProps({
 		className: 'bpafb-contact-form-7-wrapper',
@@ -44,13 +44,31 @@ export default function Edit({ attributes, setAttributes }) {
 						</>
 					)}
 				</PanelBody>
+				{showTitle && (
+					<PanelColorSettings
+						title={__('Color Settings', 'blockive-premium-addon-for-block')}
+						initialOpen={false}
+						colorSettings={[
+							{
+								value: titleColor,
+								onChange: (val) => setAttributes({ titleColor: val }),
+								label: __('Title Color', 'blockive-premium-addon-for-block'),
+							},
+							{
+								value: descriptionColor,
+								onChange: (val) => setAttributes({ descriptionColor: val }),
+								label: __('Description Color', 'blockive-premium-addon-for-block'),
+							},
+						]}
+					/>
+				)}
 			</InspectorControls>
 
 			<div {...blockProps}>
 				{showTitle && (
 					<>
-						<h2 className="bpafb-cf7-title">{title}</h2>
-						{description && <p className="bpafb-cf7-description">{description}</p>}
+						<h2 className="bpafb-cf7-title" style={{ color: titleColor }}>{title}</h2>
+						{description && <p className="bpafb-cf7-description" style={{ color: descriptionColor }}>{description}</p>}
 					</>
 				)}
 				<div className="bpafb-cf7-form-wrapper">

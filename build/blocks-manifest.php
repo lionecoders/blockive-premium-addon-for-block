@@ -494,6 +494,33 @@ return array(
 		'category' => 'bpafb-widgets',
 		'icon' => 'email-alt',
 		'description' => 'Contact Form 7 integration block.',
+		'supports' => array(
+			'color' => array(
+				'text' => false,
+				'background' => true,
+				'link' => false
+			),
+			'typography' => array(
+				'fontSize' => true,
+				'lineHeight' => true
+			),
+			'spacing' => array(
+				'margin' => true,
+				'padding' => true
+			),
+			'__experimentalBorder' => array(
+				'radius' => true,
+				'color' => true,
+				'width' => true,
+				'style' => true,
+				'__experimentalDefaultControls' => array(
+					'radius' => true,
+					'color' => true,
+					'width' => true,
+					'style' => true
+				)
+			)
+		),
 		'attributes' => array(
 			'formId' => array(
 				'type' => 'string',
@@ -510,6 +537,12 @@ return array(
 			'description' => array(
 				'type' => 'string',
 				'default' => 'Send us a message'
+			),
+			'titleColor' => array(
+				'type' => 'string'
+			),
+			'descriptionColor' => array(
+				'type' => 'string'
 			)
 		),
 		'editorScript' => 'file:./index.js',
