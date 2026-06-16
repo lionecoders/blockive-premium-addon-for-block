@@ -1,3 +1,4 @@
+import './style-index.css';
 import { registerBlockType } from '@wordpress/blocks';
 import Edit from './edit';
 import Save from './save';

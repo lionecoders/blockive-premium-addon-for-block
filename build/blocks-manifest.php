@@ -379,11 +379,22 @@ return array(
 		'category' => 'bpafb-widgets',
 		'icon' => 'list-view',
 		'description' => 'WordPress category browser/list block.',
-		'attributes' => array(
-			'columns' => array(
-				'type' => 'number',
-				'default' => 3
+		'supports' => array(
+			'color' => array(
+				'text' => true,
+				'background' => false,
+				'link' => true
 			),
+			'typography' => array(
+				'fontSize' => true,
+				'lineHeight' => true
+			),
+			'spacing' => array(
+				'margin' => true,
+				'padding' => true
+			)
+		),
+		'attributes' => array(
 			'showCount' => array(
 				'type' => 'boolean',
 				'default' => true
@@ -399,11 +410,80 @@ return array(
 			'limit' => array(
 				'type' => 'number',
 				'default' => 10
+			),
+			'orderBy' => array(
+				'type' => 'string',
+				'default' => 'name'
+			),
+			'order' => array(
+				'type' => 'string',
+				'default' => 'asc'
+			),
+			'exclude' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'layoutType' => array(
+				'type' => 'string',
+				'default' => 'vertical'
+			),
+			'showHierarchy' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'gap' => array(
+				'type' => 'number',
+				'default' => 20
+			),
+			'enableLink' => array(
+				'type' => 'boolean',
+				'default' => true
+			),
+			'itemBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'itemBorderColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'itemBorderWidth' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'itemBorderRadius' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'columns' => array(
+				'type' => 'number',
+				'default' => 3
+			),
+			'itemPadding' => array(
+				'type' => 'number',
+				'default' => 10
+			),
+			'textAlign' => array(
+				'type' => 'string',
+				'default' => 'left'
+			),
+			'enableBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'removeChildBorder' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'taxonomy' => array(
+				'type' => 'string',
+				'default' => 'category'
 			)
 		),
+		'render' => 'file:./render.php',
 		'editorScript' => 'file:./index.js',
-		'editorStyle' => 'file:./style-index.css',
-		'style' => 'file:./style-index.css'
+		'editorStyle' => 'file:./index.css',
+		'style' => 'file:./index.css'
 	),
 	'contact-form-7' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',

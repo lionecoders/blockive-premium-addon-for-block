@@ -7,11 +7,22 @@
 	"category": "bpafb-widgets",
 	"icon": "list-view",
 	"description": "WordPress category browser/list block.",
-	"attributes": {
-		"columns": {
-			"type": "number",
-			"default": 3
+	"supports": {
+		"color": {
+			"text": true,
+			"background": false,
+			"link": true
 		},
+		"typography": {
+			"fontSize": true,
+			"lineHeight": true
+		},
+		"spacing": {
+			"margin": true,
+			"padding": true
+		}
+	},
+	"attributes": {
 		"showCount": {
 			"type": "boolean",
 			"default": true
@@ -27,9 +38,78 @@
 		"limit": {
 			"type": "number",
 			"default": 10
+		},
+		"orderBy": {
+			"type": "string",
+			"default": "name"
+		},
+		"order": {
+			"type": "string",
+			"default": "asc"
+		},
+		"exclude": {
+			"type": "string",
+			"default": ""
+		},
+		"layoutType": {
+			"type": "string",
+			"default": "vertical"
+		},
+		"showHierarchy": {
+			"type": "boolean",
+			"default": false
+		},
+		"gap": {
+			"type": "number",
+			"default": 20
+		},
+		"enableLink": {
+			"type": "boolean",
+			"default": true
+		},
+		"itemBgColor": {
+			"type": "string",
+			"default": ""
+		},
+		"itemBorderColor": {
+			"type": "string",
+			"default": ""
+		},
+		"itemBorderWidth": {
+			"type": "number",
+			"default": 0
+		},
+		"itemBorderRadius": {
+			"type": "number",
+			"default": 0
+		},
+		"columns": {
+			"type": "number",
+			"default": 3
+		},
+		"itemPadding": {
+			"type": "number",
+			"default": 10
+		},
+		"textAlign": {
+			"type": "string",
+			"default": "left"
+		},
+		"enableBoxShadow": {
+			"type": "boolean",
+			"default": false
+		},
+		"removeChildBorder": {
+			"type": "boolean",
+			"default": false
+		},
+		"taxonomy": {
+			"type": "string",
+			"default": "category"
 		}
 	},
+	"render": "file:./render.php",
 	"editorScript": "file:./index.js",
-	"editorStyle": "file:./style-index.css",
-	"style": "file:./style-index.css"
+	"editorStyle": "file:./index.css",
+	"style": "file:./index.css"
 }
