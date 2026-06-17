@@ -9,11 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
 				items.forEach((i) => i.classList.remove('active'));
 				item.classList.add('active');
 			});
-
-			item.addEventListener('mouseover', () => {
-				items.forEach((i) => i.classList.remove('hovered'));
-				item.classList.add('hovered');
-			});
 		});
 	});
 });

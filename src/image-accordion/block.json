@@ -5,7 +5,7 @@
 	"version": "0.1.0",
 	"title": "Blockive Image Accordion",
 	"category": "bpafb-widgets",
-	"icon": "image",
+	"icon": "format-image",
 	"description": "Image accordion block with advanced styling options.",
 	"attributes": {
 		"items": {
@@ -40,10 +40,30 @@
 		"animationDuration": {
 			"type": "string",
 			"default": "0.3s"
+		},
+		"height": {
+			"type": "string",
+			"default": "400px"
+		},
+		"imageSize": {
+			"type": "string",
+			"default": "cover"
+		},
+		"imagePosition": {
+			"type": "string",
+			"default": "center center"
+		},
+		"showTitle": {
+			"type": "boolean",
+			"default": true
+		},
+		"showContent": {
+			"type": "boolean",
+			"default": true
 		}
 	},
 	"editorScript": "file:./index.js",
-	"editorStyle": "file:./style-index.css",
-	"style": "file:./style-index.css",
+	"editorStyle": "file:./index.css",
+	"style": "file:./index.css",
 	"viewScript": "file:./view.js"
 }
