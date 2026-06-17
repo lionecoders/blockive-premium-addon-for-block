@@ -1553,6 +1553,16 @@ return array(
 		'category' => 'bpafb-widgets',
 		'icon' => 'grid-view',
 		'description' => 'Dynamic post grid/listing block.',
+		'supports' => array(
+			'typography' => array(
+				'fontSize' => true,
+				'lineHeight' => true
+			),
+			'spacing' => array(
+				'margin' => true,
+				'padding' => true
+			)
+		),
 		'attributes' => array(
 			'columns' => array(
 				'type' => 'number',
@@ -1585,11 +1595,56 @@ return array(
 			'showAuthor' => array(
 				'type' => 'boolean',
 				'default' => true
+			),
+			'postType' => array(
+				'type' => 'string',
+				'default' => 'post'
+			),
+			'dateFormat' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'titleColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'dateColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'authorColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'excerptColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'cardBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'cardBorderRadius' => array(
+				'type' => 'number',
+				'default' => 8
+			),
+			'cardBorderColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'cardBorderWidth' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'cardBorderStyle' => array(
+				'type' => 'string',
+				'default' => 'solid'
 			)
 		),
+		'render' => 'file:./render.php',
 		'editorScript' => 'file:./index.js',
-		'editorStyle' => 'file:./style-index.css',
-		'style' => 'file:./style-index.css'
+		'editorStyle' => 'file:./index.css',
+		'style' => 'file:./index.css'
 	),
 	'pricing-table' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',

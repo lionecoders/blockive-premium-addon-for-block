@@ -5,7 +5,6 @@
 
 .bpafb-post-grid {
 	display: grid;
-	grid-template-columns: repeat(var(--bpafb-post-grid-columns, 3), 1fr);
 	gap: 25px;
 }
 
@@ -91,12 +90,12 @@
 
 @media (max-width: 768px) {
 	.bpafb-post-grid {
-		grid-template-columns: repeat(2, 1fr);
+		grid-template-columns: repeat(2, 1fr) !important;
 	}
 }
 
 @media (max-width: 480px) {
 	.bpafb-post-grid {
-		grid-template-columns: 1fr;
+		grid-template-columns: 1fr !important;
 	}
 }

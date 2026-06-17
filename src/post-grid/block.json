@@ -7,6 +7,16 @@
 	"category": "bpafb-widgets",
 	"icon": "grid-view",
 	"description": "Dynamic post grid/listing block.",
+	"supports": {
+		"typography": {
+			"fontSize": true,
+			"lineHeight": true
+		},
+		"spacing": {
+			"margin": true,
+			"padding": true
+		}
+	},
 	"attributes": {
 		"columns": {
 			"type": "number",
@@ -39,9 +49,54 @@
 		"showAuthor": {
 			"type": "boolean",
 			"default": true
+		},
+		"postType": {
+			"type": "string",
+			"default": "post"
+		},
+		"dateFormat": {
+			"type": "string",
+			"default": ""
+		},
+		"titleColor": {
+			"type": "string",
+			"default": ""
+		},
+		"dateColor": {
+			"type": "string",
+			"default": ""
+		},
+		"authorColor": {
+			"type": "string",
+			"default": ""
+		},
+		"excerptColor": {
+			"type": "string",
+			"default": ""
+		},
+		"cardBgColor": {
+			"type": "string",
+			"default": ""
+		},
+		"cardBorderRadius": {
+			"type": "number",
+			"default": 8
+		},
+		"cardBorderColor": {
+			"type": "string",
+			"default": ""
+		},
+		"cardBorderWidth": {
+			"type": "number",
+			"default": 0
+		},
+		"cardBorderStyle": {
+			"type": "string",
+			"default": "solid"
 		}
 	},
+	"render": "file:./render.php",
 	"editorScript": "file:./index.js",
-	"editorStyle": "file:./style-index.css",
-	"style": "file:./style-index.css"
+	"editorStyle": "file:./index.css",
+	"style": "file:./index.css"
 }
