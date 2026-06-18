@@ -28,17 +28,37 @@
       "type": "boolean",
       "default": true
     },
+    "labelColor": {
+      "type": "string",
+      "default": "#ffffff"
+    },
+    "labelBackgroundColor": {
+      "type": "string",
+      "default": "rgba(0, 0, 0, 0.65)"
+    },
+    "labelPosition": {
+      "type": "string",
+      "default": "top"
+    },
+    "separatorColor": {
+      "type": "string",
+      "default": "#ffffff"
+    },
+    "arrowColor": {
+      "type": "string",
+      "default": "#555555"
+    },
     "sliderPosition": {
       "type": "number",
       "default": 50
     },
     "height": {
       "type": "string",
-      "default": "400px"
+      "default": ""
     }
   },
   "editorScript": "file:./index.js",
-  "editorStyle": "file:./style-index.css",
-  "style": "file:./style-index.css",
+  "editorStyle": "file:./index.css",
+  "style": "file:./index.css",
   "viewScript": "file:./view.js"
 }

@@ -1393,18 +1393,38 @@ return array(
 				'type' => 'boolean',
 				'default' => true
 			),
+			'labelColor' => array(
+				'type' => 'string',
+				'default' => '#ffffff'
+			),
+			'labelBackgroundColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0, 0, 0, 0.65)'
+			),
+			'labelPosition' => array(
+				'type' => 'string',
+				'default' => 'top'
+			),
+			'separatorColor' => array(
+				'type' => 'string',
+				'default' => '#ffffff'
+			),
+			'arrowColor' => array(
+				'type' => 'string',
+				'default' => '#555555'
+			),
 			'sliderPosition' => array(
 				'type' => 'number',
 				'default' => 50
 			),
 			'height' => array(
 				'type' => 'string',
-				'default' => '400px'
+				'default' => ''
 			)
 		),
 		'editorScript' => 'file:./index.js',
-		'editorStyle' => 'file:./style-index.css',
-		'style' => 'file:./style-index.css',
+		'editorStyle' => 'file:./index.css',
+		'style' => 'file:./index.css',
 		'viewScript' => 'file:./view.js'
 	),
 	'lottie' => array(

@@ -11,8 +11,9 @@ import {
 	Button,
 	RangeControl,
 	ToggleControl,
+	ColorPalette,
+	SelectControl,
 } from '@wordpress/components';
-import { useState } from '@wordpress/element';
 
 export default function Edit({ attributes, setAttributes }) {
 	const {
@@ -21,16 +22,25 @@ export default function Edit({ attributes, setAttributes }) {
 		beforeLabel,
 		afterLabel,
 		showLabels,
+		labelColor,
+		labelBackgroundColor,
+		labelPosition,
+		separatorColor,
+		arrowColor,
 		sliderPosition,
 		height,
 	} = attributes;
 
 	const customStyles = {
 		height: height,
+		'--bpafb-label-color': labelColor,
+		'--bpafb-label-bg': labelBackgroundColor,
+		'--bpafb-separator-color': separatorColor,
+		'--bpafb-arrow-color': arrowColor,
 	};
 
 	const blockProps = useBlockProps({
-		className: 'bpafb-image-comparison-wrapper',
+		className: 'bpafb-image-comparison',
 		style: customStyles,
 	});
 
@@ -90,6 +100,16 @@ export default function Edit({ attributes, setAttributes }) {
 								value={afterLabel}
 								onChange={(val) => setAttributes({ afterLabel: val })}
 							/>
+							<SelectControl
+								label={__('Label Position', 'blockive-premium-addon-for-block')}
+								value={labelPosition}
+								options={[
+									{ label: __('Top', 'blockive-premium-addon-for-block'), value: 'top' },
+									{ label: __('Center', 'blockive-premium-addon-for-block'), value: 'center' },
+									{ label: __('Bottom', 'blockive-premium-addon-for-block'), value: 'bottom' },
+								]}
+								onChange={(val) => setAttributes({ labelPosition: val })}
+							/>
 						</>
 					)}
 
@@ -110,17 +130,59 @@ export default function Edit({ attributes, setAttributes }) {
 				</PanelBody>
 			</InspectorControls>
 
-			<div {...blockProps}>
-				<div className="bpafb-image-comparison" data-position={sliderPosition}>
-					<div className="bpafb-comparison-image before-image" style={{ backgroundImage: beforeImage ? `url(${beforeImage})` : 'none' }}>
-						{showLabels && <span className="bpafb-label before-label">{beforeLabel}</span>}
+			<InspectorControls group="styles">
+				<PanelBody title={__('Colors', 'blockive-premium-addon-for-block')} initialOpen={true}>
+					<div style={{ marginBottom: '15px' }}>
+						<label>{__('Separator Color', 'blockive-premium-addon-for-block')}</label>
+						<ColorPalette
+							value={separatorColor}
+							onChange={(val) => setAttributes({ separatorColor: val })}
+						/>
 					</div>
-					<div className="bpafb-comparison-image after-image" style={{ backgroundImage: afterImage ? `url(${afterImage})` : 'none', clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}>
-						{showLabels && <span className="bpafb-label after-label">{afterLabel}</span>}
+					<div style={{ marginBottom: '15px' }}>
+						<label>{__('Arrow Color', 'blockive-premium-addon-for-block')}</label>
+						<ColorPalette
+							value={arrowColor}
+							onChange={(val) => setAttributes({ arrowColor: val })}
+						/>
 					</div>
-					<div className="bpafb-comparison-handle" style={{ left: `${sliderPosition}%` }}>
-						<span className="bpafb-handle-icon"></span>
-					</div>
+					{showLabels && (
+						<>
+							<div style={{ marginBottom: '15px' }}>
+								<label>{__('Label Text Color', 'blockive-premium-addon-for-block')}</label>
+								<ColorPalette
+									value={labelColor}
+									onChange={(val) => setAttributes({ labelColor: val })}
+								/>
+							</div>
+							<div style={{ marginBottom: '15px' }}>
+								<label>{__('Label Background Color', 'blockive-premium-addon-for-block')}</label>
+								<ColorPalette
+									value={labelBackgroundColor}
+									onChange={(val) => setAttributes({ labelBackgroundColor: val })}
+								/>
+							</div>
+						</>
+					)}
+				</PanelBody>
+			</InspectorControls>
+
+			<div 
+				{...blockProps}
+				data-position={sliderPosition}
+				data-label-position={labelPosition}
+			>
+				<div className="bpafb-comparison-image after-image" style={{ backgroundImage: afterImage ? `url(${afterImage})` : 'none' }}>
+					{showLabels && <span className="bpafb-label after-label">{afterLabel}</span>}
+				</div>
+				<div className="bpafb-comparison-image before-image" style={{ backgroundImage: beforeImage ? `url(${beforeImage})` : 'none', clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}>
+					{showLabels && <span className="bpafb-label before-label">{beforeLabel}</span>}
+				</div>
+				{beforeImage && (
+					<img src={beforeImage} alt="" style={{ visibility: 'hidden', display: 'block', width: '100%', height: 'auto', pointerEvents: 'none' }} />
+				)}
+				<div className="bpafb-comparison-handle" style={{ left: `${sliderPosition}%` }}>
+					<span className="bpafb-handle-icon"></span>
 				</div>
 			</div>
 		</>

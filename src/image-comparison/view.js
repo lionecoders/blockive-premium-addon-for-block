@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	comparisons.forEach((comparison) => {
 		const handle = comparison.querySelector('.bpafb-comparison-handle');
-		const afterImage = comparison.querySelector('.bpafb-comparison-image.after-image');
+		const beforeImage = comparison.querySelector('.bpafb-comparison-image.before-image');
 		let isActive = false;
 
 		const updatePosition = (x) => {
@@ -14,35 +14,46 @@ document.addEventListener('DOMContentLoaded', () => {
 			if (position > 100) position = 100;
 
 			handle.style.left = position + '%';
-			afterImage.style.clipPath = `inset(0 ${100 - position}% 0 0)`;
+			if (beforeImage) {
+				beforeImage.style.clipPath = `inset(0 ${100 - position}% 0 0)`;
+			}
 		};
 
-		handle.addEventListener('mousedown', () => {
+		const startInteraction = (x) => {
 			isActive = true;
+			updatePosition(x);
+		};
+
+		const endInteraction = () => {
+			isActive = false;
+		};
+
+		// Mouse events
+		comparison.addEventListener('mousedown', (e) => {
+			startInteraction(e.clientX);
 		});
 
-		document.addEventListener('mousemove', (e) => {
+		window.addEventListener('mousemove', (e) => {
 			if (!isActive) return;
 			updatePosition(e.clientX);
 		});
 
-		document.addEventListener('mouseup', () => {
-			isActive = false;
+		window.addEventListener('mouseup', endInteraction);
+
+		// Touch events
+		comparison.addEventListener('touchstart', (e) => {
+			if (e.touches.length > 0) {
+				startInteraction(e.touches[0].clientX);
+			}
 		});
 
-		comparison.addEventListener('touchstart', () => {
-			isActive = true;
-		});
-
-		document.addEventListener('touchmove', (e) => {
+		window.addEventListener('touchmove', (e) => {
 			if (!isActive) return;
 			if (e.touches.length > 0) {
 				updatePosition(e.touches[0].clientX);
 			}
 		});
 
-		document.addEventListener('touchend', () => {
-			isActive = false;
-		});
+		window.addEventListener('touchend', endInteraction);
 	});
 });
