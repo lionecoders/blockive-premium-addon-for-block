@@ -16,7 +16,7 @@ export default function Edit({ attributes, setAttributes }) {
 	};
 
 	const blockProps = useBlockProps({
-		className: 'bpafb-video-wrapper',
+		className: 'bpafb-video-container',
 		style: customStyles,
 	});
 
@@ -25,7 +25,7 @@ export default function Edit({ attributes, setAttributes }) {
 			<InspectorControls>
 				<PanelBody title={__('Video Settings', 'blockive-premium-addon-for-block')} initialOpen={true}>
 					<div style={{ marginBottom: '15px' }}>
-						<label>{__('Video URL or File', 'blockive-premium-addon-for-block')}</label>
+						<label style={{ display: 'block', marginBottom: '8px' }}>{__('Video File', 'blockive-premium-addon-for-block')}</label>
 						<MediaUploadCheck>
 							<MediaUpload
 								onSelect={(media) => setAttributes({ videoUrl: media.url })}
@@ -73,18 +73,23 @@ export default function Edit({ attributes, setAttributes }) {
 			</InspectorControls>
 
 			<div {...blockProps}>
-				<div className="bpafb-video-container">
-					{videoUrl ? (
-						<video controls={controls} autoPlay={autoplay} loop={loop} style={{ width: '100%', height: '100%', objectFit: 'contain' }}>
-							<source src={videoUrl} />
-							{__('Your browser does not support the video tag.', 'blockive-premium-addon-for-block')}
-						</video>
-					) : (
-						<div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%', background: '#f0f0f0', color: '#999' }}>
-							{__('Select a video to display', 'blockive-premium-addon-for-block')}
-						</div>
-					)}
-				</div>
+				{videoUrl ? (
+					<video 
+						key={`${videoUrl}-${controls}-${autoplay}-${loop}`}
+						controls={controls ? true : undefined} 
+						autoPlay={autoplay ? true : undefined} 
+						loop={loop ? true : undefined} 
+						muted={autoplay ? true : undefined}
+						style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+					>
+						<source src={videoUrl} />
+						{__('Your browser does not support the video tag.', 'blockive-premium-addon-for-block')}
+					</video>
+				) : (
+					<div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%', minHeight: '200px', width: '100%', background: '#f0f0f0', color: '#999' }}>
+						{__('Select a video to display', 'blockive-premium-addon-for-block')}
+					</div>
+				)}
 			</div>
 		</>
 	);

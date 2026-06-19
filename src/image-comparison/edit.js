@@ -49,7 +49,7 @@ export default function Edit({ attributes, setAttributes }) {
 			<InspectorControls>
 				<PanelBody title={__('Images', 'blockive-premium-addon-for-block')} initialOpen={true}>
 					<div style={{ marginBottom: '15px' }}>
-						<label>{__('Before Image', 'blockive-premium-addon-for-block')}</label>
+						<label style={{ display: 'block', marginBottom: '8px' }}>{__('Before Image', 'blockive-premium-addon-for-block')}</label>
 						<MediaUploadCheck>
 							<MediaUpload
 								onSelect={(media) => setAttributes({ beforeImage: media.url })}
@@ -65,7 +65,7 @@ export default function Edit({ attributes, setAttributes }) {
 					</div>
 
 					<div style={{ marginBottom: '15px' }}>
-						<label>{__('After Image', 'blockive-premium-addon-for-block')}</label>
+						<label style={{ display: 'block', marginBottom: '8px' }}>{__('After Image', 'blockive-premium-addon-for-block')}</label>
 						<MediaUploadCheck>
 							<MediaUpload
 								onSelect={(media) => setAttributes({ afterImage: media.url })}

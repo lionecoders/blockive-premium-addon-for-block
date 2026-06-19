@@ -9,23 +9,22 @@ export default function Save({ attributes }) {
 	};
 
 	const blockProps = useBlockProps.save({
-		className: 'bpafb-video-wrapper',
+		className: 'bpafb-video-container',
 		style: customStyles,
 	});
 
 	return (
 		<div {...blockProps}>
-			<div className="bpafb-video-container">
-				<video
-					controls={controls}
-					autoPlay={autoplay}
-					loop={loop}
-					style={{ width: '100%', height: '100%', objectFit: 'contain' }}
-				>
-					<source src={videoUrl} />
-					Your browser does not support the video tag.
-				</video>
-			</div>
+			<video
+				controls={controls ? true : undefined}
+				autoPlay={autoplay ? true : undefined}
+				loop={loop ? true : undefined}
+				muted={autoplay ? true : undefined}
+				style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+			>
+				<source src={videoUrl} />
+				Your browser does not support the video tag.
+			</video>
 		</div>
 	);
 }
