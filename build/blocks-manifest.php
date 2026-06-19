@@ -2193,11 +2193,47 @@ return array(
 			'bgColor' => array(
 				'type' => 'string',
 				'default' => '#ffffff'
+			),
+			'arrowIcon' => array(
+				'type' => 'string',
+				'default' => 'angle'
+			),
+			'imagePosition' => array(
+				'type' => 'string',
+				'default' => 'top'
+			),
+			'imageStyle' => array(
+				'type' => 'string',
+				'default' => 'circle'
+			),
+			'textAlign' => array(
+				'type' => 'string',
+				'default' => 'center'
+			),
+			'autoPlay' => array(
+				'type' => 'boolean',
+				'default' => true
+			),
+			'autoPlaySpeed' => array(
+				'type' => 'number',
+				'default' => 3000
+			),
+			'arrowColor' => array(
+				'type' => 'string',
+				'default' => '#333333'
+			),
+			'arrowBgColor' => array(
+				'type' => 'string',
+				'default' => 'transparent'
+			),
+			'infiniteLoop' => array(
+				'type' => 'boolean',
+				'default' => true
 			)
 		),
 		'editorScript' => 'file:./index.js',
-		'editorStyle' => 'file:./style-index.css',
-		'style' => 'file:./style-index.css',
+		'editorStyle' => 'file:./index.css',
+		'style' => 'file:./index.css',
 		'viewScript' => 'file:./view.js'
 	),
 	'video' => array(

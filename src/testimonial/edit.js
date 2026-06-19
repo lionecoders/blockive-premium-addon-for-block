@@ -26,6 +26,15 @@ export default function Edit({ attributes, setAttributes }) {
 		showArrows,
 		textColor,
 		bgColor,
+		arrowIcon,
+		imagePosition,
+		imageStyle,
+		textAlign,
+		autoPlay,
+		autoPlaySpeed,
+		arrowColor,
+		arrowBgColor,
+		infiniteLoop,
 	} = attributes;
 
 	const [activeIndex, setActiveIndex] = useState(0);
@@ -33,10 +42,12 @@ export default function Edit({ attributes, setAttributes }) {
 	const customStyles = {
 		'--bpafb-testimonial-text-color': textColor,
 		'--bpafb-testimonial-bg-color': bgColor,
+		'--bpafb-arrow-color': arrowColor,
+		'--bpafb-arrow-bg-color': arrowBgColor,
 	};
 
 	const blockProps = useBlockProps({
-		className: `bpafb-testimonial-wrapper bpafb-testimonial-${style}`,
+		className: `bpafb-testimonial-wrapper bpafb-testimonial-${style} bpafb-image-pos-${imagePosition} bpafb-image-style-${imageStyle} bpafb-text-align-${textAlign}`,
 		style: customStyles,
 	});
 
@@ -92,13 +103,27 @@ export default function Edit({ attributes, setAttributes }) {
 										allowedTypes={['image']}
 										value={testimonial.image}
 										render={({ open }) => (
-											<Button onClick={open} isPrimary size="small">
-												{testimonial.image ? __('Change Image', 'blockive-premium-addon-for-block') : __('Select Image', 'blockive-premium-addon-for-block')}
-											</Button>
+											<div style={{ display: 'flex', gap: '10px' }}>
+												<Button onClick={open} isPrimary size="small">
+													{testimonial.image ? __('Change Image', 'blockive-premium-addon-for-block') : __('Select Image', 'blockive-premium-addon-for-block')}
+												</Button>
+												{testimonial.image && (
+													<Button isDestructive size="small" onClick={() => updateTestimonial(index, 'image', '')}>
+														{__('Remove Image', 'blockive-premium-addon-for-block')}
+													</Button>
+												)}
+											</div>
 										)}
 									/>
 								</MediaUploadCheck>
 							</div>
+							<RangeControl
+								label={__('Rating', 'blockive-premium-addon-for-block')}
+								value={testimonial.rating}
+								onChange={(val) => updateTestimonial(index, 'rating', val)}
+								min={1}
+								max={5}
+							/>
 							<Button isDestructive onClick={() => removeTestimonial(index)} size="small">
 								{__('Remove', 'blockive-premium-addon-for-block')}
 							</Button>
@@ -135,6 +160,67 @@ export default function Edit({ attributes, setAttributes }) {
 						checked={showArrows}
 						onChange={(val) => setAttributes({ showArrows: val })}
 					/>
+					<SelectControl
+						label={__('Arrow Icon', 'blockive-premium-addon-for-block')}
+						value={arrowIcon}
+						options={[
+							{ label: __('Angle (❮ ❯)', 'blockive-premium-addon-for-block'), value: 'angle' },
+							{ label: __('Chevron (‹ ›)', 'blockive-premium-addon-for-block'), value: 'chevron' },
+							{ label: __('Long Arrow (← →)', 'blockive-premium-addon-for-block'), value: 'long-arrow' },
+						]}
+						onChange={(val) => setAttributes({ arrowIcon: val })}
+					/>
+					<SelectControl
+						label={__('Image Position', 'blockive-premium-addon-for-block')}
+						value={imagePosition}
+						options={[
+							{ label: __('Top', 'blockive-premium-addon-for-block'), value: 'top' },
+							{ label: __('Bottom', 'blockive-premium-addon-for-block'), value: 'bottom' },
+							{ label: __('Left', 'blockive-premium-addon-for-block'), value: 'left' },
+							{ label: __('Right', 'blockive-premium-addon-for-block'), value: 'right' },
+						]}
+						onChange={(val) => setAttributes({ imagePosition: val })}
+					/>
+					<SelectControl
+						label={__('Image Style', 'blockive-premium-addon-for-block')}
+						value={imageStyle}
+						options={[
+							{ label: __('Circle', 'blockive-premium-addon-for-block'), value: 'circle' },
+							{ label: __('Rounded', 'blockive-premium-addon-for-block'), value: 'rounded' },
+							{ label: __('Square', 'blockive-premium-addon-for-block'), value: 'square' },
+						]}
+						onChange={(val) => setAttributes({ imageStyle: val })}
+					/>
+					<SelectControl
+						label={__('Text Alignment', 'blockive-premium-addon-for-block')}
+						value={textAlign}
+						options={[
+							{ label: __('Left', 'blockive-premium-addon-for-block'), value: 'left' },
+							{ label: __('Center', 'blockive-premium-addon-for-block'), value: 'center' },
+							{ label: __('Right', 'blockive-premium-addon-for-block'), value: 'right' },
+						]}
+						onChange={(val) => setAttributes({ textAlign: val })}
+					/>
+					<ToggleControl
+						label={__('Auto Play', 'blockive-premium-addon-for-block')}
+						checked={autoPlay}
+						onChange={(val) => setAttributes({ autoPlay: val })}
+					/>
+					{autoPlay && (
+						<RangeControl
+							label={__('Auto Play Speed (ms)', 'blockive-premium-addon-for-block')}
+							value={autoPlaySpeed}
+							onChange={(val) => setAttributes({ autoPlaySpeed: val })}
+							min={1000}
+							max={10000}
+							step={500}
+						/>
+					)}
+					<ToggleControl
+						label={__('Infinite Loop', 'blockive-premium-addon-for-block')}
+						checked={infiniteLoop}
+						onChange={(val) => setAttributes({ infiniteLoop: val })}
+					/>
 				</PanelBody>
 
 				<PanelBody title={__('Colors', 'blockive-premium-addon-for-block')}>
@@ -150,6 +236,20 @@ export default function Edit({ attributes, setAttributes }) {
 						<ColorPalette
 							value={bgColor}
 							onChange={(val) => setAttributes({ bgColor: val })}
+						/>
+					</div>
+					<div style={{ marginBottom: '15px' }}>
+						<label>{__('Arrow Color', 'blockive-premium-addon-for-block')}</label>
+						<ColorPalette
+							value={arrowColor}
+							onChange={(val) => setAttributes({ arrowColor: val })}
+						/>
+					</div>
+					<div>
+						<label>{__('Arrow Background Color', 'blockive-premium-addon-for-block')}</label>
+						<ColorPalette
+							value={arrowBgColor}
+							onChange={(val) => setAttributes({ arrowBgColor: val })}
 						/>
 					</div>
 				</PanelBody>
@@ -169,26 +269,42 @@ export default function Edit({ attributes, setAttributes }) {
 									className="bpafb-testimonial-image"
 								/>
 							)}
-							<p className="bpafb-testimonial-content">{testimonial.content}</p>
-							{showRating && (
-								<div className="bpafb-testimonial-rating">
-									{[...Array(testimonial.rating)].map((_, i) => (
-										<span key={i} className="bpafb-star">★</span>
-									))}
-								</div>
-							)}
-							<p className="bpafb-testimonial-name">{testimonial.name}</p>
-							<p className="bpafb-testimonial-designation">{testimonial.designation}</p>
+							<div className="bpafb-testimonial-text-wrap">
+								<p className="bpafb-testimonial-content">{testimonial.content}</p>
+								{showRating && (
+									<div className="bpafb-testimonial-rating">
+										{[...Array(testimonial.rating)].map((_, i) => (
+											<span key={i} className="bpafb-star">★</span>
+										))}
+									</div>
+								)}
+								<p className="bpafb-testimonial-name">{testimonial.name}</p>
+								<p className="bpafb-testimonial-designation">{testimonial.designation}</p>
+							</div>
 						</div>
 					))}
 
 					{showArrows && (
 						<>
-							<button className="bpafb-arrow bpafb-prev" onClick={() => setActiveIndex((activeIndex - 1 + testimonials.length) % testimonials.length)}>
-								❮
+							<button 
+								className="bpafb-arrow bpafb-prev" 
+								onClick={() => {
+									if (!infiniteLoop && activeIndex === 0) return;
+									setActiveIndex((activeIndex - 1 + testimonials.length) % testimonials.length);
+								}}
+								style={{ opacity: (!infiniteLoop && activeIndex === 0) ? 0.5 : 1, cursor: (!infiniteLoop && activeIndex === 0) ? 'not-allowed' : 'pointer' }}
+							>
+								{arrowIcon === 'chevron' ? '‹' : arrowIcon === 'long-arrow' ? '←' : '❮'}
 							</button>
-							<button className="bpafb-arrow bpafb-next" onClick={() => setActiveIndex((activeIndex + 1) % testimonials.length)}>
-								❯
+							<button 
+								className="bpafb-arrow bpafb-next" 
+								onClick={() => {
+									if (!infiniteLoop && activeIndex === testimonials.length - 1) return;
+									setActiveIndex((activeIndex + 1) % testimonials.length);
+								}}
+								style={{ opacity: (!infiniteLoop && activeIndex === testimonials.length - 1) ? 0.5 : 1, cursor: (!infiniteLoop && activeIndex === testimonials.length - 1) ? 'not-allowed' : 'pointer' }}
+							>
+								{arrowIcon === 'chevron' ? '›' : arrowIcon === 'long-arrow' ? '→' : '❯'}
 							</button>
 						</>
 					)}

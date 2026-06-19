@@ -44,10 +44,46 @@
 		"bgColor": {
 			"type": "string",
 			"default": "#ffffff"
+		},
+		"arrowIcon": {
+			"type": "string",
+			"default": "angle"
+		},
+		"imagePosition": {
+			"type": "string",
+			"default": "top"
+		},
+		"imageStyle": {
+			"type": "string",
+			"default": "circle"
+		},
+		"textAlign": {
+			"type": "string",
+			"default": "center"
+		},
+		"autoPlay": {
+			"type": "boolean",
+			"default": true
+		},
+		"autoPlaySpeed": {
+			"type": "number",
+			"default": 3000
+		},
+		"arrowColor": {
+			"type": "string",
+			"default": "#333333"
+		},
+		"arrowBgColor": {
+			"type": "string",
+			"default": "transparent"
+		},
+		"infiniteLoop": {
+			"type": "boolean",
+			"default": true
 		}
 	},
 	"editorScript": "file:./index.js",
-	"editorStyle": "file:./style-index.css",
-	"style": "file:./style-index.css",
+	"editorStyle": "file:./index.css",
+	"style": "file:./index.css",
 	"viewScript": "file:./view.js"
 }

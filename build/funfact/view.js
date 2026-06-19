@@ -1,1 +1,41 @@
-document.addEventListener("DOMContentLoaded",()=>{const t=document.querySelectorAll(".bpafb-funfact-counter"),e=new IntersectionObserver(t=>{t.forEach(t=>{t.isIntersecting&&"0"===t.target.textContent&&(function(t){const e=parseInt(t.getAttribute("data-count")),n=t.closest(".bpafb-funfact-wrapper"),r=parseInt(n.getAttribute("data-duration"))||1e3,o=e/(r/16);let a=0;const c=()=>{a+=o,a<e?(t.textContent=Math.floor(a),requestAnimationFrame(c)):t.textContent=e};c()}(t.target),e.unobserve(t.target))})},{threshold:.5});t.forEach(t=>{e.observe(t)})});
+/******/ (() => { // webpackBootstrap
+/*!*****************************!*\
+  !*** ./src/funfact/view.js ***!
+  \*****************************/
+function animateCounter(counter) {
+  const target = parseInt(counter.getAttribute('data-count'));
+  const wrapper = counter.closest('.bpafb-funfact-wrapper');
+  const duration = parseInt(wrapper.getAttribute('data-duration')) || 1000;
+  const increment = target / (duration / 16);
+  let current = 0;
+  const updateCounter = () => {
+    current += increment;
+    if (current < target) {
+      counter.textContent = Math.floor(current);
+      requestAnimationFrame(updateCounter);
+    } else {
+      counter.textContent = target;
+    }
+  };
+  updateCounter();
+}
+document.addEventListener('DOMContentLoaded', () => {
+  const counters = document.querySelectorAll('.bpafb-funfact-counter');
+  const observerOptions = {
+    threshold: 0.5
+  };
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && entry.target.textContent === '0') {
+        animateCounter(entry.target);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+  counters.forEach(counter => {
+    observer.observe(counter);
+  });
+});
+/******/ })()
+;
+//# sourceMappingURL=view.js.map

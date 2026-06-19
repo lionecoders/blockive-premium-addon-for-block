@@ -1,1 +1,72 @@
-.wp-block-blockive-premium-addon-for-block-social-icons{display:flex}.bpafb-social-icons-wrapper{display:flex;flex-wrap:wrap;width:100%}.bpafb-social-icons-wrapper.bpafb-align-center{justify-content:center}.bpafb-social-icons-wrapper.bpafb-align-right{justify-content:flex-end}.bpafb-social-icons-wrapper.bpafb-align-left{justify-content:flex-start}.bpafb-social-icon-item{align-items:center;box-sizing:border-box;display:inline-flex;justify-content:center;line-height:1;text-decoration:none!important;transition:all .3s ease}.bpafb-social-shape-square .bpafb-social-icon-item{border-radius:0}.bpafb-social-shape-rounded .bpafb-social-icon-item{border-radius:6px}.bpafb-social-shape-circle .bpafb-social-icon-item{border-radius:50%}.bpafb-social-hover-grow .bpafb-social-icon-item:hover{transform:scale(1.15)}.bpafb-social-hover-shrink .bpafb-social-icon-item:hover{transform:scale(.85)}.bpafb-social-hover-pulse .bpafb-social-icon-item:hover{animation:blockive-social-pulse 1s linear infinite}@keyframes blockive-social-pulse{0%{transform:scale(1)}50%{transform:scale(1.1)}to{transform:scale(1)}}.bpafb-social-icon-item i{align-items:center;color:inherit;display:flex;justify-content:center;transition:inherit}
+/*!**************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/social-icons/style-index.css ***!
+  \**************************************************************************************************************************************************************************************/
+/* Social Icons Container Wrapper */
+.wp-block-blockive-premium-addon-for-block-social-icons {
+	display: flex;
+}
+.bpafb-social-icons-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+}
+/* Alignments */
+.bpafb-social-icons-wrapper.bpafb-align-center {
+	justify-content: center;
+}
+.bpafb-social-icons-wrapper.bpafb-align-right {
+	justify-content: flex-end;
+}
+.bpafb-social-icons-wrapper.bpafb-align-left {
+	justify-content: flex-start;
+}
+/* Individual Icon Link Container */
+.bpafb-social-icon-item {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none !important;
+	transition: all 0.3s ease;
+	line-height: 1;
+	box-sizing: border-box; /* Ensure padding doesn't compound on top of width/height */
+}
+/* Shapes */
+.bpafb-social-shape-square .bpafb-social-icon-item {
+	border-radius: 0;
+}
+.bpafb-social-shape-rounded .bpafb-social-icon-item {
+	border-radius: 6px;
+}
+.bpafb-social-shape-circle .bpafb-social-icon-item {
+	border-radius: 50%;
+}
+/* Hover Animations */
+.bpafb-social-hover-grow .bpafb-social-icon-item:hover {
+	transform: scale(1.15);
+}
+.bpafb-social-hover-shrink .bpafb-social-icon-item:hover {
+	transform: scale(0.85);
+}
+.bpafb-social-hover-pulse .bpafb-social-icon-item:hover {
+	animation: blockive-social-pulse 1s linear infinite;
+}
+@keyframes blockive-social-pulse {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.1);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+/* Ensure the `i` inside takes the color properly */
+.bpafb-social-icon-item i {
+	color: inherit;
+	transition: inherit;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+

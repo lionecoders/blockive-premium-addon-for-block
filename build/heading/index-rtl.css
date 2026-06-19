@@ -1,1 +1,65 @@
-@keyframes blockiveFadeIn{0%{opacity:0}to{opacity:1}}@keyframes blockiveFadeInUp{0%{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}@keyframes blockiveFadeInDown{0%{opacity:0;transform:translateY(-30px)}to{opacity:1;transform:translateY(0)}}@keyframes blockiveZoomIn{0%{opacity:0;transform:scale(.8)}to{opacity:1;transform:scale(1)}}@keyframes blockiveSlideInLeft{0%{opacity:0;transform:translateX(50px)}to{opacity:1;transform:translateX(0)}}@keyframes blockiveSlideInRight{0%{opacity:0;transform:translateX(-50px)}to{opacity:1;transform:translateX(0)}}.bpafb-animate-fadeIn{animation-fill-mode:both;animation-name:blockiveFadeIn}.bpafb-animate-fadeInUp{animation-fill-mode:both;animation-name:blockiveFadeInUp}.bpafb-animate-fadeInDown{animation-fill-mode:both;animation-name:blockiveFadeInDown}.bpafb-animate-zoomIn{animation-fill-mode:both;animation-name:blockiveZoomIn}.bpafb-animate-slideInLeft{animation-fill-mode:both;animation-name:blockiveSlideInLeft}.bpafb-animate-slideInRight{animation-fill-mode:both;animation-name:blockiveSlideInRight}
+/*!*********************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/heading/style-index.css ***!
+  \*********************************************************************************************************************************************************************************/
+/* Blockive Heading Block Styles */
+
+@keyframes blockiveFadeIn {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+
+@keyframes blockiveFadeInUp {
+	from { opacity: 0; transform: translateY(30px); }
+	to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes blockiveFadeInDown {
+	from { opacity: 0; transform: translateY(-30px); }
+	to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes blockiveZoomIn {
+	from { opacity: 0; transform: scale(0.8); }
+	to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes blockiveSlideInLeft {
+	from { opacity: 0; transform: translateX(50px); }
+	to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes blockiveSlideInRight {
+	from { opacity: 0; transform: translateX(-50px); }
+	to { opacity: 1; transform: translateX(0); }
+}
+
+.bpafb-animate-fadeIn {
+	animation-name: blockiveFadeIn;
+	animation-fill-mode: both;
+}
+
+.bpafb-animate-fadeInUp {
+	animation-name: blockiveFadeInUp;
+	animation-fill-mode: both;
+}
+
+.bpafb-animate-fadeInDown {
+	animation-name: blockiveFadeInDown;
+	animation-fill-mode: both;
+}
+
+.bpafb-animate-zoomIn {
+	animation-name: blockiveZoomIn;
+	animation-fill-mode: both;
+}
+
+.bpafb-animate-slideInLeft {
+	animation-name: blockiveSlideInLeft;
+	animation-fill-mode: both;
+}
+
+.bpafb-animate-slideInRight {
+	animation-name: blockiveSlideInRight;
+	animation-fill-mode: both;
+}
+

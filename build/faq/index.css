@@ -1,1 +1,107 @@
-.wp-block-blockive-premium-addon-for-block-faq{position:relative}.bpafb-faq-wrapper{width:100%}.bpafb-faq-item{border-bottom:var(--bpafb-faq-borderWidth,1px) solid var(--bpafb-faq-borderColor,#e2e8f0);margin-bottom:0;transition:all .3s ease}.bpafb-faq-item:first-child{border-top:var(--bpafb-faq-borderWidth,1px) solid var(--bpafb-faq-borderColor,#e2e8f0)}.bpafb-faq-header{align-items:center;background-color:var(--bpafb-faq-title-bg,#fff);color:var(--bpafb-faq-title-color,#0f172a);cursor:pointer;display:flex;font-weight:600;padding:15px 20px;transition:background-color .3s,color .3s}.bpafb-faq-header:hover,.bpafb-faq-item.active .bpafb-faq-header{color:var(--bpafb-faq-title-active-color,#4f46e5)}.bpafb-faq-header.flex-align-left{justify-content:flex-start}.bpafb-faq-header.flex-align-right{justify-content:space-between}.bpafb-faq-title{flex-grow:1}.bpafb-faq-header.flex-align-left .bpafb-faq-title{margin-left:10px}.bpafb-faq-icon{align-items:center;display:inline-flex;font-size:1.1em;font-weight:700;height:24px;justify-content:center;width:24px}.bpafb-faq-content{background-color:var(--bpafb-faq-content-bg,#f8fafc);border-top:var(--bpafb-faq-borderWidth,1px) solid var(--bpafb-faq-borderColor,#e2e8f0);color:var(--bpafb-faq-content-color,#334155);display:none;padding:15px 20px}.bpafb-faq-item.active .bpafb-faq-content{display:block}.bpafb-animate-none{animation:none}.bpafb-animate-fadeIn{animation-name:fadeIn}.bpafb-animate-fadeInUp{animation-name:fadeInUp}.bpafb-animate-fadeInDown{animation-name:fadeInDown}.bpafb-animate-zoomIn{animation-name:zoomIn}.bpafb-animate-slideInLeft{animation-name:slideInLeft}.bpafb-animate-slideInRight{animation-name:slideInRight}@keyframes fadeIn{0%{opacity:0}to{opacity:1}}@keyframes fadeInUp{0%{opacity:0;transform:translate3d(0,40px,0)}to{opacity:1;transform:translateZ(0)}}@keyframes fadeInDown{0%{opacity:0;transform:translate3d(0,-40px,0)}to{opacity:1;transform:translateZ(0)}}@keyframes zoomIn{0%{opacity:0;transform:scale3d(.9,.9,.9)}to{opacity:1;transform:scaleX(1)}}@keyframes slideInLeft{0%{opacity:0;transform:translate3d(-100px,0,0)}to{opacity:1;transform:translateZ(0)}}@keyframes slideInRight{0%{opacity:0;transform:translate3d(100px,0,0)}to{opacity:1;transform:translateZ(0)}}
+/*!*****************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/faq/style-index.css ***!
+  \*****************************************************************************************************************************************************************************/
+.wp-block-blockive-premium-addon-for-block-faq {
+	position: relative;
+}
+
+.bpafb-faq-wrapper {
+	width: 100%;
+}
+
+.bpafb-faq-item {
+	border-bottom: var(--bpafb-faq-borderWidth, 1px) solid var(--bpafb-faq-borderColor, #e2e8f0);
+	margin-bottom: 0;
+	transition: all 0.3s ease;
+}
+
+.bpafb-faq-item:first-child {
+	border-top: var(--bpafb-faq-borderWidth, 1px) solid var(--bpafb-faq-borderColor, #e2e8f0);
+}
+
+.bpafb-faq-header {
+	display: flex;
+	padding: 15px 20px;
+	cursor: pointer;
+	background-color: var(--bpafb-faq-title-bg, #ffffff);
+	color: var(--bpafb-faq-title-color, #0f172a);
+	font-weight: 600;
+	transition: background-color 0.3s, color 0.3s;
+	align-items: center;
+}
+
+.bpafb-faq-header:hover, 
+.bpafb-faq-item.active .bpafb-faq-header {
+	color: var(--bpafb-faq-title-active-color, #4f46e5);
+}
+
+.bpafb-faq-header.flex-align-left {
+	justify-content: flex-start;
+}
+
+.bpafb-faq-header.flex-align-right {
+	justify-content: space-between;
+}
+
+.bpafb-faq-title {
+	flex-grow: 1;
+}
+
+.bpafb-faq-header.flex-align-left .bpafb-faq-title {
+	margin-left: 10px;
+}
+
+.bpafb-faq-icon {
+	font-weight: bold;
+	font-size: 1.1em;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 24px;
+	height: 24px;
+}
+
+.bpafb-faq-content {
+	padding: 15px 20px;
+	background-color: var(--bpafb-faq-content-bg, #f8fafc);
+	color: var(--bpafb-faq-content-color, #334155);
+	border-top: var(--bpafb-faq-borderWidth, 1px) solid var(--bpafb-faq-borderColor, #e2e8f0);
+	display: none;
+}
+
+/* Base states for editor where view.js doesn't trigger */
+
+.bpafb-faq-item.active .bpafb-faq-content {
+	display: block;
+}
+
+/* Animations */
+
+.bpafb-animate-none { animation: none; }
+
+.bpafb-animate-fadeIn { animation-name: fadeIn; }
+
+.bpafb-animate-fadeInUp { animation-name: fadeInUp; }
+
+.bpafb-animate-fadeInDown { animation-name: fadeInDown; }
+
+.bpafb-animate-zoomIn { animation-name: zoomIn; }
+
+.bpafb-animate-slideInLeft { animation-name: slideInLeft; }
+
+.bpafb-animate-slideInRight { animation-name: slideInRight; }
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+@keyframes fadeInUp { from { opacity: 0; transform: translate3d(0, 40px, 0); } to { opacity: 1; transform: translate3d(0, 0, 0); } }
+
+@keyframes fadeInDown { from { opacity: 0; transform: translate3d(0, -40px, 0); } to { opacity: 1; transform: translate3d(0, 0, 0); } }
+
+@keyframes zoomIn { from { opacity: 0; transform: scale3d(0.9, 0.9, 0.9); } to { opacity: 1; transform: scale3d(1, 1, 1); } }
+
+@keyframes slideInLeft { from { opacity: 0; transform: translate3d(-100px, 0, 0); } to { opacity: 1; transform: translate3d(0, 0, 0); } }
+
+@keyframes slideInRight { from { opacity: 0; transform: translate3d(100px, 0, 0); } to { opacity: 1; transform: translate3d(0, 0, 0); } }
+
+
+/*# sourceMappingURL=index.css.map*/

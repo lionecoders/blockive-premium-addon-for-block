@@ -1,1 +1,41 @@
-document.addEventListener("DOMContentLoaded",()=>{document.querySelectorAll(".bpafb-countdown-wrapper").forEach(e=>{const t=e.getAttribute("data-target-date");if(!t)return;const n=new Date(t).getTime(),r=e.querySelector(".bpafb-cd-days .bpafb-countdown-number"),o=e.querySelector(".bpafb-cd-hours .bpafb-countdown-number"),a=e.querySelector(".bpafb-cd-minutes .bpafb-countdown-number"),c=e.querySelector(".bpafb-cd-seconds .bpafb-countdown-number"),b=()=>{const e=(new Date).getTime(),t=n-e;if(t<0)return r&&(r.innerText="00"),o&&(o.innerText="00"),a&&(a.innerText="00"),c&&(c.innerText="00"),void(u&&clearInterval(u));const b=Math.floor(t/864e5),d=Math.floor(t%864e5/36e5),f=Math.floor(t%36e5/6e4),i=Math.floor(t%6e4/1e3);r&&(r.innerText=b<10?"0"+b:b),o&&(o.innerText=d<10?"0"+d:d),a&&(a.innerText=f<10?"0"+f:f),c&&(c.innerText=i<10?"0"+i:i)};b();const u=setInterval(b,1e3)})});
+/******/ (() => { // webpackBootstrap
+/*!*************************************!*\
+  !*** ./src/countdown-timer/view.js ***!
+  \*************************************/
+document.addEventListener('DOMContentLoaded', () => {
+  const wrappers = document.querySelectorAll('.bpafb-countdown-wrapper');
+  wrappers.forEach(timer => {
+    const targetDateStr = timer.getAttribute('data-target-date');
+    if (!targetDateStr) return;
+    const targetDate = new Date(targetDateStr).getTime();
+    const daysEl = timer.querySelector('.bpafb-cd-days .bpafb-countdown-number');
+    const hoursEl = timer.querySelector('.bpafb-cd-hours .bpafb-countdown-number');
+    const minsEl = timer.querySelector('.bpafb-cd-minutes .bpafb-countdown-number');
+    const secsEl = timer.querySelector('.bpafb-cd-seconds .bpafb-countdown-number');
+    const updateTimer = () => {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+      if (distance < 0) {
+        if (daysEl) daysEl.innerText = '00';
+        if (hoursEl) hoursEl.innerText = '00';
+        if (minsEl) minsEl.innerText = '00';
+        if (secsEl) secsEl.innerText = '00';
+        if (interval) clearInterval(interval);
+        return;
+      }
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor(distance % (1000 * 60 * 60 * 24) / (1000 * 60 * 60));
+      const minutes = Math.floor(distance % (1000 * 60 * 60) / (1000 * 60));
+      const seconds = Math.floor(distance % (1000 * 60) / 1000);
+      if (daysEl) daysEl.innerText = days < 10 ? '0' + days : days;
+      if (hoursEl) hoursEl.innerText = hours < 10 ? '0' + hours : hours;
+      if (minsEl) minsEl.innerText = minutes < 10 ? '0' + minutes : minutes;
+      if (secsEl) secsEl.innerText = seconds < 10 ? '0' + seconds : seconds;
+    };
+    updateTimer();
+    const interval = setInterval(updateTimer, 1000);
+  });
+});
+/******/ })()
+;
+//# sourceMappingURL=view.js.map
