@@ -1,5 +1,7 @@
 .wp-block-blockive-premium-addon-for-block-pricing-table {
 	display: flex;
+	border: none !important;
+	outline: none !important;
 }
 
 .wp-block-blockive-premium-addon-for-block-pricing-table.alignleft { justify-content: flex-start; }
@@ -8,6 +10,8 @@
 
 .bpafb-pricing-wrapper {
 	width: 100%;
+	border: none !important;
+	outline: none !important;
 }
 
 .bpafb-pricing-grid {
@@ -15,6 +19,8 @@
 	grid-template-columns: repeat(var(--bpafb-pt-columns, 3), 1fr);
 	gap: var(--bpafb-pt-column-gap, 25px);
 	align-items: stretch;
+	border: none !important;
+	outline: none !important;
 }
 
 /* Better Typography and Smooth Transitions */
