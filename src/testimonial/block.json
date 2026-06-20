@@ -80,6 +80,50 @@
 		"infiniteLoop": {
 			"type": "boolean",
 			"default": true
+		},
+		"cardBorderWidth": {
+			"type": "number",
+			"default": 0
+		},
+		"cardBorderRadius": {
+			"type": "number",
+			"default": 8
+		},
+		"cardBorderColor": {
+			"type": "string",
+			"default": "#dddddd"
+		},
+		"enableBoxShadow": {
+			"type": "boolean",
+			"default": true
+		},
+		"dotColor": {
+			"type": "string",
+			"default": "#dddddd"
+		},
+		"activeDotColor": {
+			"type": "string",
+			"default": "#4f46e5"
+		},
+		"boxShadowHOffset": {
+			"type": "number",
+			"default": 0
+		},
+		"boxShadowVOffset": {
+			"type": "number",
+			"default": 2
+		},
+		"boxShadowBlur": {
+			"type": "number",
+			"default": 8
+		},
+		"boxShadowSpread": {
+			"type": "number",
+			"default": 0
+		},
+		"boxShadowColor": {
+			"type": "string",
+			"default": "rgba(0, 0, 0, 0.1)"
 		}
 	},
 	"editorScript": "file:./index.js",

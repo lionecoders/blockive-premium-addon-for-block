@@ -18,6 +18,17 @@ export default function Save({ attributes }) {
 		arrowColor,
 		arrowBgColor,
 		infiniteLoop,
+		cardBorderWidth,
+		cardBorderRadius,
+		cardBorderColor,
+		enableBoxShadow,
+		dotColor,
+		activeDotColor,
+		boxShadowHOffset,
+		boxShadowVOffset,
+		boxShadowBlur,
+		boxShadowSpread,
+		boxShadowColor,
 	} = attributes;
 
 	const customStyles = {
@@ -25,6 +36,12 @@ export default function Save({ attributes }) {
 		'--bpafb-testimonial-bg-color': bgColor,
 		'--bpafb-arrow-color': arrowColor,
 		'--bpafb-arrow-bg-color': arrowBgColor,
+		'--bpafb-card-border-width': `${cardBorderWidth}px`,
+		'--bpafb-card-border-radius': `${cardBorderRadius}px`,
+		'--bpafb-card-border-color': cardBorderColor,
+		'--bpafb-card-box-shadow': enableBoxShadow ? `${boxShadowHOffset}px ${boxShadowVOffset}px ${boxShadowBlur}px ${boxShadowSpread}px ${boxShadowColor}` : 'none',
+		'--bpafb-dot-color': dotColor,
+		'--bpafb-active-dot-color': activeDotColor,
 	};
 
 	const blockProps = useBlockProps.save({

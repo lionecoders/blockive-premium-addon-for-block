@@ -14,6 +14,7 @@ import {
 	ToggleControl,
 	RangeControl,
 	ColorPalette,
+	ColorPicker,
 } from '@wordpress/components';
 import { useState } from '@wordpress/element';
 
@@ -35,6 +36,17 @@ export default function Edit({ attributes, setAttributes }) {
 		arrowColor,
 		arrowBgColor,
 		infiniteLoop,
+		cardBorderWidth,
+		cardBorderRadius,
+		cardBorderColor,
+		enableBoxShadow,
+		dotColor,
+		activeDotColor,
+		boxShadowHOffset,
+		boxShadowVOffset,
+		boxShadowBlur,
+		boxShadowSpread,
+		boxShadowColor,
 	} = attributes;
 
 	const [activeIndex, setActiveIndex] = useState(0);
@@ -44,6 +56,12 @@ export default function Edit({ attributes, setAttributes }) {
 		'--bpafb-testimonial-bg-color': bgColor,
 		'--bpafb-arrow-color': arrowColor,
 		'--bpafb-arrow-bg-color': arrowBgColor,
+		'--bpafb-card-border-width': `${cardBorderWidth}px`,
+		'--bpafb-card-border-radius': `${cardBorderRadius}px`,
+		'--bpafb-card-border-color': cardBorderColor,
+		'--bpafb-card-box-shadow': enableBoxShadow ? `${boxShadowHOffset}px ${boxShadowVOffset}px ${boxShadowBlur}px ${boxShadowSpread}px ${boxShadowColor}` : 'none',
+		'--bpafb-dot-color': dotColor,
+		'--bpafb-active-dot-color': activeDotColor,
 	};
 
 	const blockProps = useBlockProps({
@@ -135,16 +153,6 @@ export default function Edit({ attributes, setAttributes }) {
 				</PanelBody>
 
 				<PanelBody title={__('Settings', 'blockive-premium-addon-for-block')}>
-					<SelectControl
-						label={__('Style', 'blockive-premium-addon-for-block')}
-						value={style}
-						options={[
-							{ label: 'Style 1', value: 'style1' },
-							{ label: 'Style 2', value: 'style2' },
-							{ label: 'Style 3', value: 'style3' },
-						]}
-						onChange={(val) => setAttributes({ style: val })}
-					/>
 					<ToggleControl
 						label={__('Show Rating', 'blockive-premium-addon-for-block')}
 						checked={showRating}
@@ -170,6 +178,31 @@ export default function Edit({ attributes, setAttributes }) {
 						]}
 						onChange={(val) => setAttributes({ arrowIcon: val })}
 					/>
+					<ToggleControl
+						label={__('Auto Play', 'blockive-premium-addon-for-block')}
+						checked={autoPlay}
+						onChange={(val) => setAttributes({ autoPlay: val })}
+					/>
+					{autoPlay && (
+						<RangeControl
+							label={__('Auto Play Speed (ms)', 'blockive-premium-addon-for-block')}
+							value={autoPlaySpeed}
+							onChange={(val) => setAttributes({ autoPlaySpeed: val })}
+							min={1000}
+							max={10000}
+							step={500}
+						/>
+					)}
+					<ToggleControl
+						label={__('Infinite Loop', 'blockive-premium-addon-for-block')}
+						checked={infiniteLoop}
+						onChange={(val) => setAttributes({ infiniteLoop: val })}
+					/>
+				</PanelBody>
+			</InspectorControls>
+
+			<InspectorControls group="styles">
+				<PanelBody title={__('Card Styles', 'blockive-premium-addon-for-block')}>
 					<SelectControl
 						label={__('Image Position', 'blockive-premium-addon-for-block')}
 						value={imagePosition}
@@ -202,28 +235,77 @@ export default function Edit({ attributes, setAttributes }) {
 						onChange={(val) => setAttributes({ textAlign: val })}
 					/>
 					<ToggleControl
-						label={__('Auto Play', 'blockive-premium-addon-for-block')}
-						checked={autoPlay}
-						onChange={(val) => setAttributes({ autoPlay: val })}
+						label={__('Enable Box Shadow', 'blockive-premium-addon-for-block')}
+						checked={enableBoxShadow}
+						onChange={(val) => setAttributes({ enableBoxShadow: val })}
 					/>
-					{autoPlay && (
-						<RangeControl
-							label={__('Auto Play Speed (ms)', 'blockive-premium-addon-for-block')}
-							value={autoPlaySpeed}
-							onChange={(val) => setAttributes({ autoPlaySpeed: val })}
-							min={1000}
-							max={10000}
-							step={500}
-						/>
+					{enableBoxShadow && (
+						<div style={{ marginLeft: '10px', paddingLeft: '10px', borderLeft: '2px solid #ddd', marginBottom: '15px' }}>
+							<RangeControl
+								label={__('Horizontal Offset', 'blockive-premium-addon-for-block')}
+								value={boxShadowHOffset}
+								onChange={(val) => setAttributes({ boxShadowHOffset: val })}
+								min={-50}
+								max={50}
+							/>
+							<RangeControl
+								label={__('Vertical Offset', 'blockive-premium-addon-for-block')}
+								value={boxShadowVOffset}
+								onChange={(val) => setAttributes({ boxShadowVOffset: val })}
+								min={-50}
+								max={50}
+							/>
+							<RangeControl
+								label={__('Blur Radius', 'blockive-premium-addon-for-block')}
+								value={boxShadowBlur}
+								onChange={(val) => setAttributes({ boxShadowBlur: val })}
+								min={0}
+								max={100}
+							/>
+							<RangeControl
+								label={__('Spread Radius', 'blockive-premium-addon-for-block')}
+								value={boxShadowSpread}
+								onChange={(val) => setAttributes({ boxShadowSpread: val })}
+								min={-50}
+								max={50}
+							/>
+						</div>
 					)}
-					<ToggleControl
-						label={__('Infinite Loop', 'blockive-premium-addon-for-block')}
-						checked={infiniteLoop}
-						onChange={(val) => setAttributes({ infiniteLoop: val })}
+					<RangeControl
+						label={__('Border Width (px)', 'blockive-premium-addon-for-block')}
+						value={cardBorderWidth}
+						onChange={(val) => setAttributes({ cardBorderWidth: val })}
+						min={0}
+						max={20}
+					/>
+					<RangeControl
+						label={__('Border Radius (px)', 'blockive-premium-addon-for-block')}
+						value={cardBorderRadius}
+						onChange={(val) => setAttributes({ cardBorderRadius: val })}
+						min={0}
+						max={100}
 					/>
 				</PanelBody>
 
 				<PanelBody title={__('Colors', 'blockive-premium-addon-for-block')}>
+					{enableBoxShadow && (
+						<div style={{ marginBottom: '15px' }}>
+							<label>{__('Box Shadow Color', 'blockive-premium-addon-for-block')}</label>
+							<ColorPicker
+								color={boxShadowColor}
+								onChange={(val) => setAttributes({ boxShadowColor: val })}
+								enableAlpha
+								defaultValue="rgba(0, 0, 0, 0.1)"
+							/>
+						</div>
+					)}
+					<div style={{ marginBottom: '15px' }}>
+						<label>{__('Card Border Color', 'blockive-premium-addon-for-block')}</label>
+						<ColorPalette
+							value={cardBorderColor}
+							onChange={(val) => setAttributes({ cardBorderColor: val })}
+						/>
+					</div>
 					<div style={{ marginBottom: '15px' }}>
 						<label>{__('Text Color', 'blockive-premium-addon-for-block')}</label>
 						<ColorPalette
@@ -252,6 +334,24 @@ export default function Edit({ attributes, setAttributes }) {
 							onChange={(val) => setAttributes({ arrowBgColor: val })}
 						/>
 					</div>
+					{showDots && (
+						<>
+							<div style={{ marginBottom: '15px', marginTop: '15px' }}>
+								<label>{__('Dot Color', 'blockive-premium-addon-for-block')}</label>
+								<ColorPalette
+									value={dotColor}
+									onChange={(val) => setAttributes({ dotColor: val })}
+								/>
+							</div>
+							<div>
+								<label>{__('Active Dot Color', 'blockive-premium-addon-for-block')}</label>
+								<ColorPalette
+									value={activeDotColor}
+									onChange={(val) => setAttributes({ activeDotColor: val })}
+								/>
+							</div>
+						</>
+					)}
 				</PanelBody>
 			</InspectorControls>
 

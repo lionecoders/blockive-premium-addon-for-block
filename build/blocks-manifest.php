@@ -2229,6 +2229,50 @@ return array(
 			'infiniteLoop' => array(
 				'type' => 'boolean',
 				'default' => true
+			),
+			'cardBorderWidth' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'cardBorderRadius' => array(
+				'type' => 'number',
+				'default' => 8
+			),
+			'cardBorderColor' => array(
+				'type' => 'string',
+				'default' => '#dddddd'
+			),
+			'enableBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => true
+			),
+			'dotColor' => array(
+				'type' => 'string',
+				'default' => '#dddddd'
+			),
+			'activeDotColor' => array(
+				'type' => 'string',
+				'default' => '#4f46e5'
+			),
+			'boxShadowHOffset' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'boxShadowVOffset' => array(
+				'type' => 'number',
+				'default' => 2
+			),
+			'boxShadowBlur' => array(
+				'type' => 'number',
+				'default' => 8
+			),
+			'boxShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'boxShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0, 0, 0, 0.1)'
 			)
 		),
 		'editorScript' => 'file:./index.js',

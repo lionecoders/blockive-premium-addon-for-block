@@ -3,8 +3,9 @@
 	margin: 20px 0;
 	background: var(--bpafb-testimonial-bg-color, #ffffff);
 	padding: 30px;
-	border-radius: 8px;
-	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+	border-radius: var(--bpafb-card-border-radius, 8px);
+	border: var(--bpafb-card-border-width, 0px) solid var(--bpafb-card-border-color, #dddddd);
+	box-shadow: var(--bpafb-card-box-shadow, 0 2px 8px rgba(0, 0, 0, 0.1));
 }
 
 .bpafb-testimonial-slider {
@@ -34,7 +35,6 @@
 	border-radius: 50%;
 	object-fit: cover;
 	margin: 0 auto 15px;
-	border: 3px solid #4f46e5;
 	flex-shrink: 0;
 }
 
@@ -105,23 +105,24 @@
 	margin-top: 20px;
 }
 
-.bpafb-dot {
+.bpafb-testimonial-dots .bpafb-dot {
 	width: 12px;
 	height: 12px;
 	border-radius: 50%;
-	background: #ddd;
+	background-color: var(--bpafb-dot-color, #dddddd);
 	border: none;
 	cursor: pointer;
 	margin: 0 5px;
-	transition: background 0.3s;
+	transition: background-color 0.3s;
+	padding: 0;
 }
 
-.bpafb-dot.active {
-	background: #4f46e5;
+.bpafb-testimonial-dots .bpafb-dot.active {
+	background-color: var(--bpafb-active-dot-color, #4f46e5);
 }
 
-.bpafb-dot:hover {
-	background: #999;
+.bpafb-testimonial-dots .bpafb-dot:hover {
+	background-color: #999999;
 }
 
 /* Text Alignment */
