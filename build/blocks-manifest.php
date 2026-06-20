@@ -1696,74 +1696,61 @@ return array(
 		'icon' => 'money-alt',
 		'description' => 'A fully customizable pricing table block with features list and button.',
 		'attributes' => array(
-			'title' => array(
-				'type' => 'string',
-				'default' => 'Pro Plan'
-			),
-			'subtitle' => array(
-				'type' => 'string',
-				'default' => 'Best for growing businesses'
-			),
-			'isFeatured' => array(
-				'type' => 'boolean',
-				'default' => false
-			),
-			'featuredBadge' => array(
-				'type' => 'string',
-				'default' => 'Most Popular'
-			),
-			'currency' => array(
-				'type' => 'string',
-				'default' => '$'
-			),
-			'price' => array(
-				'type' => 'string',
-				'default' => '99'
-			),
-			'period' => array(
-				'type' => 'string',
-				'default' => '/ month'
-			),
-			'features' => array(
+			'tables' => array(
 				'type' => 'array',
 				'default' => array(
 					array(
 						'id' => '1',
-						'text' => '50 Users',
-						'active' => true,
-						'icon' => 'fas fa-check'
-					),
-					array(
-						'id' => '2',
-						'text' => '100GB Storage',
-						'active' => true,
-						'icon' => 'fas fa-check'
-					),
-					array(
-						'id' => '3',
-						'text' => '24/7 Support',
-						'active' => true,
-						'icon' => 'fas fa-check'
-					),
-					array(
-						'id' => '4',
-						'text' => 'Custom Domain',
-						'active' => false,
-						'icon' => 'fas fa-times'
+						'title' => 'Pro Plan',
+						'subtitle' => 'Best for growing businesses',
+						'image' => '',
+						'isFeatured' => false,
+						'featuredBadge' => 'Most Popular',
+						'currency' => '$',
+						'price' => '99',
+						'period' => '/ month',
+						'buttonText' => 'Get Started',
+						'buttonUrl' => '#',
+						'features' => array(
+							array(
+								'id' => '1',
+								'text' => '50 Users',
+								'active' => true,
+								'icon' => 'fas fa-check'
+							),
+							array(
+								'id' => '2',
+								'text' => '100GB Storage',
+								'active' => true,
+								'icon' => 'fas fa-check'
+							),
+							array(
+								'id' => '3',
+								'text' => '24/7 Support',
+								'active' => true,
+								'icon' => 'fas fa-check'
+							),
+							array(
+								'id' => '4',
+								'text' => 'Custom Domain',
+								'active' => false,
+								'icon' => 'fas fa-times'
+							)
+						)
 					)
 				)
+			),
+			'columns' => array(
+				'type' => 'number',
+				'default' => 3
+			),
+			'columnGap' => array(
+				'type' => 'number',
+				'default' => 25
 			),
 			'layoutStyle' => array(
 				'type' => 'string',
 				'default' => 'style1'
-			),
-			'buttonText' => array(
-				'type' => 'string',
-				'default' => 'Get Started'
-			),
-			'buttonUrl' => array(
-				'type' => 'string',
-				'default' => '#'
 			),
 			'alignment' => array(
 				'type' => 'string',
@@ -1773,7 +1760,11 @@ return array(
 				'type' => 'string',
 				'default' => '#2563eb'
 			),
-			'headerTextColor' => array(
+			'headerTitleColor' => array(
+				'type' => 'string',
+				'default' => '#ffffff'
+			),
+			'headerSubtitleColor' => array(
 				'type' => 'string',
 				'default' => '#ffffff'
 			),
@@ -1792,6 +1783,24 @@ return array(
 			'buttonTextColor' => array(
 				'type' => 'string',
 				'default' => '#ffffff'
+			),
+			'badgeBgColor' => array(
+				'type' => 'string'
+			),
+			'badgeTextColor' => array(
+				'type' => 'string',
+				'default' => '#ffffff'
+			),
+			'buttonBorderColor' => array(
+				'type' => 'string'
+			),
+			'buttonBorderWidth' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'buttonBorderRadius' => array(
+				'type' => 'number',
+				'default' => 50
 			),
 			'boxBgColor' => array(
 				'type' => 'string',

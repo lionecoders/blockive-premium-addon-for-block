@@ -8,74 +8,61 @@
 	"icon": "money-alt",
 	"description": "A fully customizable pricing table block with features list and button.",
 	"attributes": {
-		"title": {
-			"type": "string",
-			"default": "Pro Plan"
-		},
-		"subtitle": {
-			"type": "string",
-			"default": "Best for growing businesses"
-		},
-		"isFeatured": {
-			"type": "boolean",
-			"default": false
-		},
-		"featuredBadge": {
-			"type": "string",
-			"default": "Most Popular"
-		},
-		"currency": {
-			"type": "string",
-			"default": "$"
-		},
-		"price": {
-			"type": "string",
-			"default": "99"
-		},
-		"period": {
-			"type": "string",
-			"default": "/ month"
-		},
-		"features": {
+		"tables": {
 			"type": "array",
 			"default": [
 				{
 					"id": "1",
-					"text": "50 Users",
-					"active": true,
-					"icon": "fas fa-check"
-				},
-				{
-					"id": "2",
-					"text": "100GB Storage",
-					"active": true,
-					"icon": "fas fa-check"
-				},
-				{
-					"id": "3",
-					"text": "24/7 Support",
-					"active": true,
-					"icon": "fas fa-check"
-				},
-				{
-					"id": "4",
-					"text": "Custom Domain",
-					"active": false,
-					"icon": "fas fa-times"
+					"title": "Pro Plan",
+					"subtitle": "Best for growing businesses",
+					"image": "",
+					"isFeatured": false,
+					"featuredBadge": "Most Popular",
+					"currency": "$",
+					"price": "99",
+					"period": "/ month",
+					"buttonText": "Get Started",
+					"buttonUrl": "#",
+					"features": [
+						{
+							"id": "1",
+							"text": "50 Users",
+							"active": true,
+							"icon": "fas fa-check"
+						},
+						{
+							"id": "2",
+							"text": "100GB Storage",
+							"active": true,
+							"icon": "fas fa-check"
+						},
+						{
+							"id": "3",
+							"text": "24/7 Support",
+							"active": true,
+							"icon": "fas fa-check"
+						},
+						{
+							"id": "4",
+							"text": "Custom Domain",
+							"active": false,
+							"icon": "fas fa-times"
+						}
+					]
 				}
 			]
+		},
+		"columns": {
+			"type": "number",
+			"default": 3
+		},
+		"columnGap": {
+			"type": "number",
+			"default": 25
 		},
 		"layoutStyle": {
 			"type": "string",
 			"default": "style1"
-		},
-		"buttonText": {
-			"type": "string",
-			"default": "Get Started"
-		},
-		"buttonUrl": {
-			"type": "string",
-			"default": "#"
 		},
 		"alignment": {
 			"type": "string",
@@ -85,7 +72,11 @@
 			"type": "string",
 			"default": "#2563eb"
 		},
-		"headerTextColor": {
+		"headerTitleColor": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"headerSubtitleColor": {
 			"type": "string",
 			"default": "#ffffff"
 		},
@@ -104,6 +95,24 @@
 		"buttonTextColor": {
 			"type": "string",
 			"default": "#ffffff"
+		},
+		"badgeBgColor": {
+			"type": "string"
+		},
+		"badgeTextColor": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"buttonBorderColor": {
+			"type": "string"
+		},
+		"buttonBorderWidth": {
+			"type": "number",
+			"default": 0
+		},
+		"buttonBorderRadius": {
+			"type": "number",
+			"default": 50
 		},
 		"boxBgColor": {
 			"type": "string",
