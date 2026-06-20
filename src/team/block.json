@@ -25,16 +25,80 @@
 			"type": "number",
 			"default": 3
 		},
+		"columnGap": {
+			"type": "number",
+			"default": 25
+		},
+		"showImage": {
+			"type": "boolean",
+			"default": true
+		},
+		"imageStyle": {
+			"type": "string",
+			"default": "circle"
+		},
+		"imageBorderWidth": {
+			"type": "number",
+			"default": 0
+		},
+		"imageBorderColor": {
+			"type": "string",
+			"default": "#dddddd"
+		},
 		"textColor": {
 			"type": "string",
 			"default": "#333333"
 		},
+		"descColor": {
+			"type": "string",
+			"default": "#666666"
+		},
+		"positionColor": {
+			"type": "string",
+			"default": "#4f46e5"
+		},
 		"bgColor": {
 			"type": "string",
 			"default": "#ffffff"
+		},
+		"cardBorderWidth": {
+			"type": "number",
+			"default": 0
+		},
+		"cardBorderRadius": {
+			"type": "number",
+			"default": 8
+		},
+		"cardBorderColor": {
+			"type": "string",
+			"default": "#dddddd"
+		},
+		"enableBoxShadow": {
+			"type": "boolean",
+			"default": true
+		},
+		"boxShadowHOffset": {
+			"type": "number",
+			"default": 0
+		},
+		"boxShadowVOffset": {
+			"type": "number",
+			"default": 2
+		},
+		"boxShadowBlur": {
+			"type": "number",
+			"default": 8
+		},
+		"boxShadowSpread": {
+			"type": "number",
+			"default": 0
+		},
+		"boxShadowColor": {
+			"type": "string",
+			"default": "rgba(0, 0, 0, 0.1)"
 		}
 	},
 	"editorScript": "file:./index.js",
-	"editorStyle": "file:./style-index.css",
-	"style": "file:./style-index.css"
+	"editorStyle": "file:./index.css",
+	"style": "file:./index.css"
 }

@@ -2134,18 +2134,82 @@ return array(
 				'type' => 'number',
 				'default' => 3
 			),
+			'columnGap' => array(
+				'type' => 'number',
+				'default' => 25
+			),
+			'showImage' => array(
+				'type' => 'boolean',
+				'default' => true
+			),
+			'imageStyle' => array(
+				'type' => 'string',
+				'default' => 'circle'
+			),
+			'imageBorderWidth' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'imageBorderColor' => array(
+				'type' => 'string',
+				'default' => '#dddddd'
+			),
 			'textColor' => array(
 				'type' => 'string',
 				'default' => '#333333'
 			),
+			'descColor' => array(
+				'type' => 'string',
+				'default' => '#666666'
+			),
+			'positionColor' => array(
+				'type' => 'string',
+				'default' => '#4f46e5'
+			),
 			'bgColor' => array(
 				'type' => 'string',
 				'default' => '#ffffff'
+			),
+			'cardBorderWidth' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'cardBorderRadius' => array(
+				'type' => 'number',
+				'default' => 8
+			),
+			'cardBorderColor' => array(
+				'type' => 'string',
+				'default' => '#dddddd'
+			),
+			'enableBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => true
+			),
+			'boxShadowHOffset' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'boxShadowVOffset' => array(
+				'type' => 'number',
+				'default' => 2
+			),
+			'boxShadowBlur' => array(
+				'type' => 'number',
+				'default' => 8
+			),
+			'boxShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'boxShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0, 0, 0, 0.1)'
 			)
 		),
 		'editorScript' => 'file:./index.js',
-		'editorStyle' => 'file:./style-index.css',
-		'style' => 'file:./style-index.css'
+		'editorStyle' => 'file:./index.css',
+		'style' => 'file:./index.css'
 	),
 	'testimonial' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
@@ -2174,6 +2238,10 @@ return array(
 				'type' => 'string',
 				'default' => 'style1'
 			),
+			'showImage' => array(
+				'type' => 'boolean',
+				'default' => true
+			),
 			'showRating' => array(
 				'type' => 'boolean',
 				'default' => true
@@ -2189,6 +2257,14 @@ return array(
 			'textColor' => array(
 				'type' => 'string',
 				'default' => '#333333'
+			),
+			'descColor' => array(
+				'type' => 'string',
+				'default' => '#333333'
+			),
+			'positionColor' => array(
+				'type' => 'string',
+				'default' => '#999999'
 			),
 			'bgColor' => array(
 				'type' => 'string',

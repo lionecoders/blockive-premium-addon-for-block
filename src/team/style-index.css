@@ -1,19 +1,24 @@
 .bpafb-team-wrapper {
 	width: 100%;
 	margin: 20px 0;
+	border: none !important;
+	outline: none !important;
 }
 
 .bpafb-team-grid {
 	display: grid;
 	grid-template-columns: repeat(var(--bpafb-team-columns, 3), 1fr);
-	gap: 25px;
+	gap: var(--bpafb-team-column-gap, 25px);
+	border: none !important;
+	outline: none !important;
 }
 
 .bpafb-team-card {
 	background: var(--bpafb-team-bg-color, #ffffff);
-	border-radius: 8px;
+	border-radius: var(--bpafb-card-border-radius, 8px);
+	border: var(--bpafb-card-border-width, 0px) solid var(--bpafb-card-border-color, #dddddd);
 	overflow: hidden;
-	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+	box-shadow: var(--bpafb-card-box-shadow, 0 2px 8px rgba(0, 0, 0, 0.1));
 	transition: transform 0.3s, box-shadow 0.3s;
 	padding: 20px;
 	text-align: center;
@@ -27,11 +32,15 @@
 .bpafb-team-image {
 	width: 120px;
 	height: 120px;
-	border-radius: 50%;
 	object-fit: cover;
 	margin: 0 auto 15px;
-	border: 3px solid #4f46e5;
+	border: var(--bpafb-image-border-width, 0px) solid var(--bpafb-image-border-color, #dddddd);
 }
+
+/* Image Styles */
+.bpafb-image-style-circle .bpafb-team-image { border-radius: 50%; }
+.bpafb-image-style-rounded .bpafb-team-image { border-radius: 10px; }
+.bpafb-image-style-square .bpafb-team-image { border-radius: 0; }
 
 .bpafb-team-name {
 	color: var(--bpafb-team-text-color, #333333);
@@ -41,7 +50,7 @@
 }
 
 .bpafb-team-role {
-	color: #4f46e5;
+	color: var(--bpafb-team-position-color, #4f46e5);
 	font-size: 14px;
 	font-weight: 500;
 	margin: 5px 0 10px 0;
@@ -49,7 +58,7 @@
 }
 
 .bpafb-team-bio {
-	color: #666666;
+	color: var(--bpafb-team-desc-color, #666666);
 	font-size: 13px;
 	line-height: 1.6;
 	margin: 10px 0 0 0;

@@ -22,10 +22,13 @@ export default function Edit({ attributes, setAttributes }) {
 	const {
 		testimonials,
 		style,
+		showImage,
 		showRating,
 		showDots,
 		showArrows,
 		textColor,
+		descColor,
+		positionColor,
 		bgColor,
 		arrowIcon,
 		imagePosition,
@@ -53,6 +56,8 @@ export default function Edit({ attributes, setAttributes }) {
 
 	const customStyles = {
 		'--bpafb-testimonial-text-color': textColor,
+		'--bpafb-testimonial-desc-color': descColor,
+		'--bpafb-testimonial-position-color': positionColor,
 		'--bpafb-testimonial-bg-color': bgColor,
 		'--bpafb-arrow-color': arrowColor,
 		'--bpafb-arrow-bg-color': arrowBgColor,
@@ -153,6 +158,11 @@ export default function Edit({ attributes, setAttributes }) {
 				</PanelBody>
 
 				<PanelBody title={__('Settings', 'blockive-premium-addon-for-block')}>
+					<ToggleControl
+						label={__('Show Image', 'blockive-premium-addon-for-block')}
+						checked={showImage}
+						onChange={(val) => setAttributes({ showImage: val })}
+					/>
 					<ToggleControl
 						label={__('Show Rating', 'blockive-premium-addon-for-block')}
 						checked={showRating}
@@ -313,6 +323,20 @@ export default function Edit({ attributes, setAttributes }) {
 							onChange={(val) => setAttributes({ textColor: val })}
 						/>
 					</div>
+					<div style={{ marginBottom: '15px' }}>
+						<label>{__('Description Color', 'blockive-premium-addon-for-block')}</label>
+						<ColorPalette
+							value={descColor}
+							onChange={(val) => setAttributes({ descColor: val })}
+						/>
+					</div>
+					<div style={{ marginBottom: '15px' }}>
+						<label>{__('Position Color', 'blockive-premium-addon-for-block')}</label>
+						<ColorPalette
+							value={positionColor}
+							onChange={(val) => setAttributes({ positionColor: val })}
+						/>
+					</div>
 					<div>
 						<label>{__('Background Color', 'blockive-premium-addon-for-block')}</label>
 						<ColorPalette
@@ -362,7 +386,7 @@ export default function Edit({ attributes, setAttributes }) {
 							key={testimonial.id}
 							className={`bpafb-testimonial-item ${activeIndex === index ? 'active' : ''}`}
 						>
-							{testimonial.image && (
+							{showImage && testimonial.image && (
 								<img
 									src={testimonial.image}
 									alt={testimonial.name}

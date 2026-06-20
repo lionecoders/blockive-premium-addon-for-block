@@ -72,6 +72,11 @@ class Blockive_Premium_Addon_For_Block
 	{
 		if (function_exists('wp_register_block_types_from_metadata_collection')) {
 			wp_register_block_types_from_metadata_collection(__DIR__ . '/build', __DIR__ . '/build/blocks-manifest.php');
+		} else {
+			$block_json_files = glob(__DIR__ . '/build/*/block.json');
+			foreach ($block_json_files as $file) {
+				register_block_type(dirname($file));
+			}
 		}
 	}
 

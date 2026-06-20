@@ -4,10 +4,13 @@ export default function Save({ attributes }) {
 	const {
 		testimonials,
 		style,
+		showImage,
 		showRating,
 		showDots,
 		showArrows,
 		textColor,
+		descColor,
+		positionColor,
 		bgColor,
 		arrowIcon,
 		imagePosition,
@@ -33,6 +36,8 @@ export default function Save({ attributes }) {
 
 	const customStyles = {
 		'--bpafb-testimonial-text-color': textColor,
+		'--bpafb-testimonial-desc-color': descColor,
+		'--bpafb-testimonial-position-color': positionColor,
 		'--bpafb-testimonial-bg-color': bgColor,
 		'--bpafb-arrow-color': arrowColor,
 		'--bpafb-arrow-bg-color': arrowBgColor,
@@ -65,7 +70,7 @@ export default function Save({ attributes }) {
 						className={`bpafb-testimonial-item ${index === 0 ? 'active' : ''}`}
 						data-index={index}
 					>
-						{testimonial.image && (
+						{showImage && testimonial.image && (
 							<img
 								src={testimonial.image}
 								alt={testimonial.name}

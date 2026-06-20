@@ -25,6 +25,10 @@
       "type": "string",
       "default": "style1"
     },
+    "showImage": {
+      "type": "boolean",
+      "default": true
+    },
     "showRating": {
       "type": "boolean",
       "default": true
@@ -40,6 +44,14 @@
     "textColor": {
       "type": "string",
       "default": "#333333"
+    },
+    "descColor": {
+      "type": "string",
+      "default": "#333333"
+    },
+    "positionColor": {
+      "type": "string",
+      "default": "#999999"
     },
     "bgColor": {
       "type": "string",

@@ -1,8 +1,6 @@
 .bpafb-testimonial-wrapper {
 	width: 100%;
-	margin: 20px 0;
 	background: var(--bpafb-testimonial-bg-color, #ffffff);
-	padding: 30px;
 	border-radius: var(--bpafb-card-border-radius, 8px);
 	border: var(--bpafb-card-border-width, 0px) solid var(--bpafb-card-border-color, #dddddd);
 	box-shadow: var(--bpafb-card-box-shadow, 0 2px 8px rgba(0, 0, 0, 0.1));
@@ -40,7 +38,7 @@
 
 .bpafb-testimonial-content {
 	font-size: 16px;
-	color: var(--bpafb-testimonial-text-color, #333333);
+	color: var(--bpafb-testimonial-desc-color, #333333);
 	font-style: italic;
 	margin: 15px 0;
 	line-height: 1.6;
@@ -62,7 +60,7 @@
 
 .bpafb-testimonial-designation {
 	font-size: 14px;
-	color: #999999;
+	color: var(--bpafb-testimonial-position-color, #999999);
 	margin: 0;
 }
 
