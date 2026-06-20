@@ -14,23 +14,22 @@
 		},
 		"width": {
 			"type": "string",
-			"default": "200px"
+			"default": "100px"
 		},
 		"height": {
 			"type": "string",
-			"default": "200px"
-		},
-		"loop": {
-			"type": "boolean",
-			"default": true
-		},
-		"autoplay": {
-			"type": "boolean",
-			"default": true
+			"default": "100px"
 		},
 		"align": {
 			"type": "string",
 			"default": "center"
+		},
+		"linkUrl": {
+			"type": "string"
+		},
+		"linkTarget": {
+			"type": "boolean",
+			"default": false
 		}
 	},
 	"editorScript": "file:./index.js",

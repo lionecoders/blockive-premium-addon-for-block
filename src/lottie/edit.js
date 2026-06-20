@@ -9,10 +9,17 @@ import {
 } from '@wordpress/components';
 
 export default function Edit({ attributes, setAttributes }) {
-	const { animationUrl, width, height, loop, autoplay, align } = attributes;
+	const { animationUrl, width, height, align, linkUrl, linkTarget } = attributes;
+
+	const alignmentMap = {
+		left: 'flex-start',
+		center: 'center',
+		right: 'flex-end',
+	};
 
 	const customStyles = {
-		textAlign: align,
+		display: 'flex',
+		justifyContent: alignmentMap[align] || 'center',
 	};
 
 	const blockProps = useBlockProps({
@@ -25,71 +32,78 @@ export default function Edit({ attributes, setAttributes }) {
 			<InspectorControls>
 				<PanelBody title={__('Lottie Animation', 'blockive-premium-addon-for-block')} initialOpen={true}>
 					<div style={{ marginBottom: '15px' }}>
-						<label>{__('Animation File (JSON)', 'blockive-premium-addon-for-block')}</label>
+						<label style={{ display: 'block', marginBottom: '8px' }}>{__('Animation Source (GIF/MP4)', 'blockive-premium-addon-for-block')}</label>
 						<MediaUploadCheck>
 							<MediaUpload
 								onSelect={(media) => setAttributes({ animationUrl: media.url })}
-								allowedTypes={['application/json']}
+								allowedTypes={['image/gif', 'video/mp4']}
 								value={animationUrl}
 								render={({ open }) => (
-									<Button onClick={open} isPrimary>
-										{animationUrl ? __('Change Animation', 'blockive-premium-addon-for-block') : __('Select Animation', 'blockive-premium-addon-for-block')}
-									</Button>
+									<div style={{ display: 'flex', gap: '10px' }}>
+										<Button onClick={open} isSecondary>
+											{__('Upload GIF / MP4', 'blockive-premium-addon-for-block')}
+										</Button>
+										{animationUrl && (
+											<Button isDestructive onClick={() => setAttributes({ animationUrl: '' })}>
+												{__('Remove', 'blockive-premium-addon-for-block')}
+											</Button>
+										)}
+									</div>
 								)}
 							/>
 						</MediaUploadCheck>
 					</div>
 
 					<TextControl
-						label={__('Width (e.g., 200px, 100%)', 'blockive-premium-addon-for-block')}
+						label={__('Width (e.g., 100px, 100%)', 'blockive-premium-addon-for-block')}
 						value={width}
 						onChange={(val) => setAttributes({ width: val })}
 					/>
 
 					<TextControl
-						label={__('Height (e.g., 200px)', 'blockive-premium-addon-for-block')}
+						label={__('Height (e.g., 100px)', 'blockive-premium-addon-for-block')}
 						value={height}
 						onChange={(val) => setAttributes({ height: val })}
-					/>
-
-					<ToggleControl
-						label={__('Autoplay', 'blockive-premium-addon-for-block')}
-						checked={autoplay}
-						onChange={(val) => setAttributes({ autoplay: val })}
-					/>
-
-					<ToggleControl
-						label={__('Loop', 'blockive-premium-addon-for-block')}
-						checked={loop}
-						onChange={(val) => setAttributes({ loop: val })}
 					/>
 
 					<SelectControl
 						label={__('Alignment', 'blockive-premium-addon-for-block')}
 						value={align}
 						options={[
-							{ label: 'Left', value: 'left' },
-							{ label: 'Center', value: 'center' },
-							{ label: 'Right', value: 'right' },
+							{ label: __('Left', 'blockive-premium-addon-for-block'), value: 'left' },
+							{ label: __('Center', 'blockive-premium-addon-for-block'), value: 'center' },
+							{ label: __('Right', 'blockive-premium-addon-for-block'), value: 'right' },
 						]}
 						onChange={(val) => setAttributes({ align: val })}
 					/>
+
+					<TextControl
+						label={__('Link URL', 'blockive-premium-addon-for-block')}
+						value={linkUrl}
+						onChange={(val) => setAttributes({ linkUrl: val })}
+						help={__('Add a link to the animation (optional)', 'blockive-premium-addon-for-block')}
+					/>
+
+					{linkUrl && (
+						<ToggleControl
+							label={__('Open in new tab', 'blockive-premium-addon-for-block')}
+							checked={linkTarget}
+							onChange={(val) => setAttributes({ linkTarget: val })}
+						/>
+					)}
 				</PanelBody>
 			</InspectorControls>
 
 			<div {...blockProps}>
 				<div className="bpafb-lottie-container" style={{ width: width, height: height }}>
 					{animationUrl ? (
-						<lottie-player
-							src={animationUrl}
-							autoplay={autoplay}
-							loop={loop}
-							style={{ width: '100%', height: '100%' }}
-						/>
+						animationUrl.includes('.mp4') ? (
+							<video src={animationUrl} autoPlay={true} loop={true} muted={true} playsInline={true} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+						) : (
+							<img src={animationUrl} alt="Animation" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+						)
 					) : (
-						<div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%', background: '#f0f0f0', color: '#999', borderRadius: '8px' }}>
-							{__('Select a Lottie animation file', 'blockive-premium-addon-for-block')}
-						</div>
+						<div style={{ width: '100%', height: '100%', minHeight: '50px' }} />
 					)}
 				</div>
 			</div>

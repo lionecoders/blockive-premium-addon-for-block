@@ -78,6 +78,18 @@ class Blockive_Premium_Addon_For_Block
 				register_block_type(dirname($file));
 			}
 		}
+
+		// Unregister blocks that require third-party plugins if those plugins are not active.
+		$registry = WP_Block_Type_Registry::get_instance();
+
+		// Contact Form 7
+		if (!function_exists('wpcf7') && !defined('WPCF7_PLUGIN')) {
+			if ($registry->is_registered('blockive-premium-addon-for-block/contact-form-7')) {
+				unregister_block_type('blockive-premium-addon-for-block/contact-form-7');
+			}
+		}
+
+
 	}
 
 	/**

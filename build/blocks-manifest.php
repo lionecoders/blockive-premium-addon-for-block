@@ -1443,23 +1443,22 @@ return array(
 			),
 			'width' => array(
 				'type' => 'string',
-				'default' => '200px'
+				'default' => '100px'
 			),
 			'height' => array(
 				'type' => 'string',
-				'default' => '200px'
-			),
-			'loop' => array(
-				'type' => 'boolean',
-				'default' => true
-			),
-			'autoplay' => array(
-				'type' => 'boolean',
-				'default' => true
+				'default' => '100px'
 			),
 			'align' => array(
 				'type' => 'string',
 				'default' => 'center'
+			),
+			'linkUrl' => array(
+				'type' => 'string'
+			),
+			'linkTarget' => array(
+				'type' => 'boolean',
+				'default' => false
 			)
 		),
 		'editorScript' => 'file:./index.js',
