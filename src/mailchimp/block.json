@@ -24,16 +24,84 @@
 			"type": "string",
 			"default": "Subscribe"
 		},
-		"bgColor": {
+		"titleColor": {
 			"type": "string",
-			"default": "#4f46e5"
+			"default": ""
 		},
-		"textColor": {
+		"subtitleColor": {
 			"type": "string",
-			"default": "#ffffff"
+			"default": ""
+		},
+		"inputBgColor": {
+			"type": "string",
+			"default": "#f8f9fa"
+		},
+		"buttonBgColor": {
+			"type": "string",
+			"default": "#f0f0f0"
+		},
+		"buttonTextColor": {
+			"type": "string",
+			"default": "#000000"
+		},
+		"inputBorderRadius": {
+			"type": "number",
+			"default": 0
+		},
+		"buttonBorderRadius": {
+			"type": "number",
+			"default": 2
+		},
+		"buttonHoverBgColor": {
+			"type": "string",
+			"default": "#e0e0e0"
+		},
+		"buttonHoverTextColor": {
+			"type": "string",
+			"default": "#000000"
+		},
+		"showInputIcon": {
+			"type": "boolean",
+			"default": false
+		},
+		"inputIconBgColor": {
+			"type": "string",
+			"default": "#e9ecef"
+		},
+		"inputIconColor": {
+			"type": "string",
+			"default": "#000000"
+		},
+		"showButtonIcon": {
+			"type": "boolean",
+			"default": false
+		},
+		"inputBorderWidth": {
+			"type": "number",
+			"default": 0
+		},
+		"inputBorderColor": {
+			"type": "string",
+			"default": "transparent"
+		},
+		"buttonBorderWidth": {
+			"type": "number",
+			"default": 1
+		},
+		"buttonBorderColor": {
+			"type": "string",
+			"default": "#767676"
+		},
+		"formAction": {
+			"type": "string",
+			"default": ""
+		},
+		"formGap": {
+			"type": "number",
+			"default": 0
 		}
 	},
 	"editorScript": "file:./index.js",
-	"editorStyle": "file:./style-index.css",
-	"style": "file:./style-index.css"
+	"editorStyle": "file:./index.css",
+	"style": "file:./index.css"
 }

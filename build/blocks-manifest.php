@@ -1492,18 +1492,86 @@ return array(
 				'type' => 'string',
 				'default' => 'Subscribe'
 			),
-			'bgColor' => array(
+			'titleColor' => array(
 				'type' => 'string',
-				'default' => '#4f46e5'
+				'default' => ''
 			),
-			'textColor' => array(
+			'subtitleColor' => array(
 				'type' => 'string',
-				'default' => '#ffffff'
+				'default' => ''
+			),
+			'inputBgColor' => array(
+				'type' => 'string',
+				'default' => '#f8f9fa'
+			),
+			'buttonBgColor' => array(
+				'type' => 'string',
+				'default' => '#f0f0f0'
+			),
+			'buttonTextColor' => array(
+				'type' => 'string',
+				'default' => '#000000'
+			),
+			'inputBorderRadius' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'buttonBorderRadius' => array(
+				'type' => 'number',
+				'default' => 2
+			),
+			'buttonHoverBgColor' => array(
+				'type' => 'string',
+				'default' => '#e0e0e0'
+			),
+			'buttonHoverTextColor' => array(
+				'type' => 'string',
+				'default' => '#000000'
+			),
+			'showInputIcon' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'inputIconBgColor' => array(
+				'type' => 'string',
+				'default' => '#e9ecef'
+			),
+			'inputIconColor' => array(
+				'type' => 'string',
+				'default' => '#000000'
+			),
+			'showButtonIcon' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'inputBorderWidth' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'inputBorderColor' => array(
+				'type' => 'string',
+				'default' => 'transparent'
+			),
+			'buttonBorderWidth' => array(
+				'type' => 'number',
+				'default' => 1
+			),
+			'buttonBorderColor' => array(
+				'type' => 'string',
+				'default' => '#767676'
+			),
+			'formAction' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'formGap' => array(
+				'type' => 'number',
+				'default' => 0
 			)
 		),
 		'editorScript' => 'file:./index.js',
-		'editorStyle' => 'file:./style-index.css',
-		'style' => 'file:./style-index.css'
+		'editorStyle' => 'file:./index.css',
+		'style' => 'file:./index.css'
 	),
 	'pie-chart' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
