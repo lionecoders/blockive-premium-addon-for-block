@@ -28,7 +28,7 @@ function buildCategoryTree(categories) {
 }
 
 export default function Edit({ attributes, setAttributes }) {
-	const { showCount, showDescription, hideEmpty, limit, orderBy, order, exclude, layoutType, showHierarchy, gap, enableLink, itemBgColor, itemBorderColor, itemBorderWidth, itemBorderRadius, columns, itemPadding, textAlign, enableBoxShadow, removeChildBorder, taxonomy } = attributes;
+	const { showCount, showDescription, hideEmpty, limit, orderBy, order, excludeTerms, layoutType, showHierarchy, gap, enableLink, itemBgColor, itemBorderColor, itemBorderWidth, itemBorderRadius, columns, itemPadding, textAlign, enableBoxShadow, removeChildBorder, taxonomy } = attributes;
 
 	const blockProps = useBlockProps({
 		className: `bpafb-category-list-wrapper bpafb-layout-${layoutType}`,
@@ -36,7 +36,7 @@ export default function Edit({ attributes, setAttributes }) {
 
 	const { categories, isResolving, taxonomies } = useSelect(
 		(select) => {
-			const parsedExclude = exclude ? exclude.split(',').map(id => parseInt(id.trim(), 10)).filter(id => !isNaN(id)) : [];
+			const parsedExclude = excludeTerms ? excludeTerms.split(',').map(id => parseInt(id.trim(), 10)).filter(id => !isNaN(id)) : [];
 			const query = {
 				per_page: limit,
 				hide_empty: hideEmpty,
@@ -50,7 +50,7 @@ export default function Edit({ attributes, setAttributes }) {
 				taxonomies: select('core').getTaxonomies({ per_page: -1 }),
 			};
 		},
-		[limit, hideEmpty, orderBy, order, exclude, taxonomy]
+		[limit, hideEmpty, orderBy, order, excludeTerms, taxonomy]
 	);
 
 	const taxonomyOptions = taxonomies 
@@ -185,8 +185,8 @@ export default function Edit({ attributes, setAttributes }) {
 					<TextControl
 						label={__('Exclude Categories (IDs)', 'blockive-premium-addon-for-block')}
 						help={__('Comma separated term IDs.', 'blockive-premium-addon-for-block')}
-						value={exclude}
-						onChange={(val) => setAttributes({ exclude: val })}
+						value={excludeTerms}
+						onChange={(val) => setAttributes({ excludeTerms: val })}
 					/>
 
 					<ToggleControl

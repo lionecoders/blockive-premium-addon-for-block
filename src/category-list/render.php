@@ -1,4 +1,7 @@
 <?php
+if (!defined('ABSPATH')) {
+	exit;
+}
 /**
  * Render category-list block.
  *
@@ -7,115 +10,130 @@
  * @param WP_Block $block      The block instance.
  */
 
-$showCount       = isset( $attributes['showCount'] ) ? $attributes['showCount'] : true;
-$showDescription = isset( $attributes['showDescription'] ) ? $attributes['showDescription'] : false;
-$hideEmpty       = isset( $attributes['hideEmpty'] ) ? $attributes['hideEmpty'] : true;
-$limit           = isset( $attributes['limit'] ) ? $attributes['limit'] : 10;
-$orderBy         = isset( $attributes['orderBy'] ) ? $attributes['orderBy'] : 'name';
-$order           = isset( $attributes['order'] ) ? $attributes['order'] : 'asc';
-$exclude         = isset( $attributes['exclude'] ) ? $attributes['exclude'] : '';
-$layoutType      = isset( $attributes['layoutType'] ) ? $attributes['layoutType'] : 'vertical';
-$showHierarchy   = isset( $attributes['showHierarchy'] ) ? $attributes['showHierarchy'] : false;
-$gap             = isset( $attributes['gap'] ) ? $attributes['gap'] : 20;
-$enableLink      = isset( $attributes['enableLink'] ) ? $attributes['enableLink'] : true;
-$itemBgColor     = isset( $attributes['itemBgColor'] ) ? $attributes['itemBgColor'] : '';
-$itemBorderColor = isset( $attributes['itemBorderColor'] ) ? $attributes['itemBorderColor'] : '';
-$itemBorderWidth = isset( $attributes['itemBorderWidth'] ) ? $attributes['itemBorderWidth'] : 0;
-$itemBorderRadius= isset( $attributes['itemBorderRadius'] ) ? $attributes['itemBorderRadius'] : 0;
-$columns         = isset( $attributes['columns'] ) ? $attributes['columns'] : 3;
-$itemPadding     = isset( $attributes['itemPadding'] ) ? $attributes['itemPadding'] : 10;
-$textAlign       = isset( $attributes['textAlign'] ) ? $attributes['textAlign'] : 'left';
-$enableBoxShadow = isset( $attributes['enableBoxShadow'] ) ? $attributes['enableBoxShadow'] : false;
-$removeChildBorder= isset( $attributes['removeChildBorder'] ) ? $attributes['removeChildBorder'] : false;
-$taxonomy        = isset( $attributes['taxonomy'] ) ? $attributes['taxonomy'] : 'category';
+$bpafb_showCount = isset($attributes['showCount']) ? $attributes['showCount'] : true;
+$bpafb_showDescription = isset($attributes['showDescription']) ? $attributes['showDescription'] : false;
+$bpafb_hideEmpty = isset($attributes['hideEmpty']) ? $attributes['hideEmpty'] : true;
+$bpafb_limit = isset($attributes['limit']) ? $attributes['limit'] : 10;
+$bpafb_orderBy = isset($attributes['orderBy']) ? $attributes['orderBy'] : 'name';
+$bpafb_order = isset($attributes['order']) ? $attributes['order'] : 'asc';
+$bpafb_excludeTerms = isset($attributes['excludeTerms']) ? $attributes['excludeTerms'] : '';
+$bpafb_layoutType = isset($attributes['layoutType']) ? $attributes['layoutType'] : 'vertical';
+$bpafb_showHierarchy = isset($attributes['showHierarchy']) ? $attributes['showHierarchy'] : false;
+$bpafb_gap = isset($attributes['gap']) ? $attributes['gap'] : 20;
+$bpafb_enableLink = isset($attributes['enableLink']) ? $attributes['enableLink'] : true;
+$bpafb_itemBgColor = isset($attributes['itemBgColor']) ? $attributes['itemBgColor'] : '';
+$bpafb_itemBorderColor = isset($attributes['itemBorderColor']) ? $attributes['itemBorderColor'] : '';
+$bpafb_itemBorderWidth = isset($attributes['itemBorderWidth']) ? $attributes['itemBorderWidth'] : 0;
+$bpafb_itemBorderRadius = isset($attributes['itemBorderRadius']) ? $attributes['itemBorderRadius'] : 0;
+$bpafb_columns = isset($attributes['columns']) ? $attributes['columns'] : 3;
+$bpafb_itemPadding = isset($attributes['itemPadding']) ? $attributes['itemPadding'] : 10;
+$bpafb_textAlign = isset($attributes['textAlign']) ? $attributes['textAlign'] : 'left';
+$bpafb_enableBoxShadow = isset($attributes['enableBoxShadow']) ? $attributes['enableBoxShadow'] : false;
+$bpafb_removeChildBorder = isset($attributes['removeChildBorder']) ? $attributes['removeChildBorder'] : false;
+$bpafb_taxonomy = isset($attributes['taxonomy']) ? $attributes['taxonomy'] : 'category';
 
-$item_style = '';
-if ( $itemBgColor ) {
-	$item_style .= 'background-color: ' . esc_attr( $itemBgColor ) . '; ';
+$bpafb_item_style = '';
+if ($bpafb_itemBgColor) {
+	$bpafb_item_style .= 'background-color: ' . esc_attr($bpafb_itemBgColor) . '; ';
 }
-if ( $itemBorderColor ) {
-	$item_style .= 'border-color: ' . esc_attr( $itemBorderColor ) . '; ';
+if ($bpafb_itemBorderColor) {
+	$bpafb_item_style .= 'border-color: ' . esc_attr($bpafb_itemBorderColor) . '; ';
 }
-if ( $itemBorderWidth > 0 ) {
-	$item_style .= 'border-width: ' . esc_attr( $itemBorderWidth ) . 'px; border-style: solid; ';
+if ($bpafb_itemBorderWidth > 0) {
+	$bpafb_item_style .= 'border-width: ' . esc_attr($bpafb_itemBorderWidth) . 'px; border-style: solid; ';
 }
-if ( $itemBorderRadius > 0 ) {
-	$item_style .= 'border-radius: ' . esc_attr( $itemBorderRadius ) . 'px; ';
+if ($bpafb_itemBorderRadius > 0) {
+	$bpafb_item_style .= 'border-radius: ' . esc_attr($bpafb_itemBorderRadius) . 'px; ';
 }
-$item_style .= 'padding: ' . esc_attr( $itemPadding ) . 'px; ';
-$item_style .= 'text-align: ' . esc_attr( $textAlign ) . '; ';
-if ( $enableBoxShadow ) {
-	$item_style .= 'box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06); ';
-}
-
-$grid_style = 'gap: ' . esc_attr( $gap ) . 'px;';
-if ( $layoutType === 'horizontal' && $columns ) {
-	$grid_style .= ' grid-template-columns: repeat(' . esc_attr( $columns ) . ', 1fr);';
+$bpafb_item_style .= 'padding: ' . esc_attr($bpafb_itemPadding) . 'px; ';
+$bpafb_item_style .= 'text-align: ' . esc_attr($bpafb_textAlign) . '; ';
+if ($bpafb_enableBoxShadow) {
+	$bpafb_item_style .= 'box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06); ';
 }
 
-$exclude_ids = ! empty( $exclude ) ? array_map( 'intval', array_filter( array_map( 'trim', explode( ',', $exclude ) ) ) ) : array();
+$bpafb_grid_style = 'gap: ' . esc_attr($bpafb_gap) . 'px;';
+if ($bpafb_layoutType === 'horizontal' && $bpafb_columns) {
+	$bpafb_grid_style .= ' grid-template-columns: repeat(' . esc_attr($bpafb_columns) . ', 1fr);';
+}
 
-$args = array(
-	'taxonomy'   => $taxonomy,
-	'hide_empty' => $hideEmpty,
-	'number'     => $limit,
-	'orderby'    => $orderBy === 'id' ? 'id' : ( $orderBy === 'count' ? 'count' : 'name' ),
-	'order'      => strtoupper( $order ),
-	'exclude'    => $exclude_ids,
+$bpafb_exclude_ids = !empty($bpafb_excludeTerms) ? array_map('intval', array_filter(array_map('trim', explode(',', $bpafb_excludeTerms)))) : array();
+
+$bpafb_args = array(
+	'taxonomy' => $bpafb_taxonomy,
+	'hide_empty' => $bpafb_hideEmpty,
+	'number' => 0, // Fetch all to filter in PHP
+	'orderby' => $bpafb_orderBy === 'id' ? 'id' : ($bpafb_orderBy === 'count' ? 'count' : 'name'),
+	'order' => strtoupper($bpafb_order),
 );
 
-$categories = get_terms( $args );
+$bpafb_raw_categories = get_terms($bpafb_args);
+$bpafb_categories = array();
 
-if ( ! is_wp_error( $categories ) && $showHierarchy ) {
-	$map = array();
-	$tree = array();
-	foreach ( $categories as $cat ) {
-		$cat->children = array();
-		$map[ $cat->term_id ] = $cat;
-	}
-	foreach ( $categories as $cat ) {
-		if ( $cat->parent && isset( $map[ $cat->parent ] ) ) {
-			$map[ $cat->parent ]->children[] = $map[ $cat->term_id ];
-		} else {
-			$tree[] = $map[ $cat->term_id ];
+if (!is_wp_error($bpafb_raw_categories)) {
+	foreach ($bpafb_raw_categories as $bpafb_cat) {
+		if (!empty($bpafb_exclude_ids) && in_array($bpafb_cat->term_id, $bpafb_exclude_ids, true)) {
+			continue;
 		}
+		$bpafb_categories[] = $bpafb_cat;
 	}
-	$categories = $tree;
+	if ($bpafb_limit > 0) {
+		$bpafb_categories = array_slice($bpafb_categories, 0, $bpafb_limit);
+	}
+} else {
+	$bpafb_categories = $bpafb_raw_categories;
 }
 
-$wrapper_attributes = get_block_wrapper_attributes(
+if (!is_wp_error($bpafb_categories) && $bpafb_showHierarchy) {
+	$bpafb_map = array();
+	$bpafb_tree = array();
+	foreach ($bpafb_categories as $bpafb_cat) {
+		$bpafb_cat->children = array();
+		$bpafb_map[$bpafb_cat->term_id] = $bpafb_cat;
+	}
+	foreach ($bpafb_categories as $bpafb_cat) {
+		if ($bpafb_cat->parent && isset($bpafb_map[$bpafb_cat->parent])) {
+			$bpafb_map[$bpafb_cat->parent]->children[] = $bpafb_map[$bpafb_cat->term_id];
+		} else {
+			$bpafb_tree[] = $bpafb_map[$bpafb_cat->term_id];
+		}
+	}
+	$bpafb_categories = $bpafb_tree;
+}
+
+$bpafb_wrapper_attributes = get_block_wrapper_attributes(
 	array(
-		'class' => 'bpafb-category-list-wrapper bpafb-layout-' . esc_attr( $layoutType ),
+		'class' => 'bpafb-category-list-wrapper bpafb-layout-' . esc_attr($bpafb_layoutType),
 	)
 );
 
-$render_category_item = function( $category, $depth = 0 ) use ( &$render_category_item, $showCount, $showDescription, $layoutType, $enableLink, $item_style, $removeChildBorder ) {
-	$current_item_style = $item_style;
-	if ( $depth > 0 && $removeChildBorder ) {
-		$current_item_style .= 'border-width: 0px; border-style: none; ';
+$bpafb_render_category_item = function ($bpafb_category, $bpafb_depth = 0) use (&$bpafb_render_category_item, $bpafb_showCount, $bpafb_showDescription, $bpafb_layoutType, $bpafb_enableLink, $bpafb_item_style, $bpafb_removeChildBorder) {
+	$bpafb_current_item_style = $bpafb_item_style;
+	if ($bpafb_depth > 0 && $bpafb_removeChildBorder) {
+		$bpafb_current_item_style .= 'border-width: 0px; border-style: none; ';
 	}
 	ob_start();
 	?>
-	<div class="bpafb-category-item bpafb-depth-<?php echo esc_attr( $depth ); ?>" style="<?php echo esc_attr( $current_item_style ); ?>">
+	<div class="bpafb-category-item bpafb-depth-<?php echo esc_attr($bpafb_depth); ?>"
+		style="<?php echo esc_attr($bpafb_current_item_style); ?>">
 		<h3 class="bpafb-category-name">
-			<?php if ( $enableLink ) : ?>
-				<a href="<?php echo esc_url( get_term_link( $category ) ); ?>">
-					<?php echo esc_html( $category->name ); ?>
+			<?php if ($bpafb_enableLink): ?>
+				<a href="<?php echo esc_url(get_term_link($bpafb_category)); ?>">
+					<?php echo esc_html($bpafb_category->name); ?>
 				</a>
-			<?php else : ?>
-				<span><?php echo esc_html( $category->name ); ?></span>
+			<?php else: ?>
+				<span><?php echo esc_html($bpafb_category->name); ?></span>
 			<?php endif; ?>
-			<?php if ( $showCount ) : ?>
-				<span class="bpafb-category-count"> (<?php echo esc_html( $category->count ); ?>)</span>
+			<?php if ($bpafb_showCount): ?>
+				<span class="bpafb-category-count"> (<?php echo esc_html($bpafb_category->count); ?>)</span>
 			<?php endif; ?>
 		</h3>
-		<?php if ( $showDescription && ! empty( $category->description ) && $layoutType !== 'horizontal' ) : ?>
-			<p class="bpafb-category-description"><?php echo esc_html( $category->description ); ?></p>
+		<?php if ($bpafb_showDescription && !empty($bpafb_category->description) && $bpafb_layoutType !== 'horizontal'): ?>
+			<p class="bpafb-category-description"><?php echo esc_html($bpafb_category->description); ?></p>
 		<?php endif; ?>
-		<?php if ( ! empty( $category->children ) ) : ?>
+		<?php if (!empty($bpafb_category->children)): ?>
 			<div class="bpafb-category-children">
-				<?php foreach ( $category->children as $child ) {
-					echo $render_category_item( $child, $depth + 1 ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				<?php foreach ($bpafb_category->children as $bpafb_child) {
+					echo $bpafb_render_category_item($bpafb_child, $bpafb_depth + 1); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 				} ?>
 			</div>
 		<?php endif; ?>
@@ -124,17 +142,25 @@ $render_category_item = function( $category, $depth = 0 ) use ( &$render_categor
 	return ob_get_clean();
 };
 ?>
-<div <?php echo $wrapper_attributes; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
-	<?php if ( ! empty( $categories ) && ! is_wp_error( $categories ) ) : ?>
-		<div class="bpafb-category-grid" style="<?php echo esc_attr( $grid_style ); ?>">
-			<?php foreach ( $categories as $category ) : ?>
-				<?php echo $render_category_item( $category ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+<div <?php
+// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+echo $bpafb_wrapper_attributes;
+?>>
+	<?php if (!empty($bpafb_categories) && !is_wp_error($bpafb_categories)): ?>
+		<div class="bpafb-category-grid" style="<?php echo esc_attr($bpafb_grid_style); ?>">
+			<?php foreach ($bpafb_categories as $bpafb_category): ?>
+				<?php echo $bpafb_render_category_item($bpafb_category); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 			<?php endforeach; ?>
 		</div>
-	<?php else : 
-		$tax_obj = get_taxonomy( $taxonomy );
-		$tax_label = $tax_obj ? strtolower( $tax_obj->labels->singular_name ) : 'category';
+	<?php else:
+		$bpafb_tax_obj = get_taxonomy($bpafb_taxonomy);
+		$bpafb_tax_label = $bpafb_tax_obj ? strtolower($bpafb_tax_obj->labels->singular_name) : 'category';
 		?>
-		<p><?php printf( esc_html__( 'No %s found.', 'blockive-premium-addon-for-block' ), esc_html( $tax_label ) ); ?></p>
+		<p>
+			<?php
+			/* translators: %s: Taxonomy label */
+			printf(esc_html__('No %s found.', 'blockive-premium-addon-for-block'), esc_html($bpafb_tax_label));
+			?>
+		</p>
 	<?php endif; ?>
 </div>

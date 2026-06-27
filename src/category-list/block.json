@@ -47,7 +47,7 @@
 			"type": "string",
 			"default": "asc"
 		},
-		"exclude": {
+		"excludeTerms": {
 			"type": "string",
 			"default": ""
 		},

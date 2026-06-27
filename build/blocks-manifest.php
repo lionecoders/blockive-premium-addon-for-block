@@ -419,7 +419,7 @@ return array(
 				'type' => 'string',
 				'default' => 'asc'
 			),
-			'exclude' => array(
+			'excludeTerms' => array(
 				'type' => 'string',
 				'default' => ''
 			),
