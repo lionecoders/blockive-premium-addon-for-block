@@ -897,25 +897,35 @@ return array(
 		'icon' => 'chart-bar',
 		'description' => 'Animated statistics/counter block.',
 		'attributes' => array(
-			'number' => array(
-				'type' => 'string',
-				'default' => '1000'
+			'items' => array(
+				'type' => 'array',
+				'default' => array(
+					array(
+						'id' => '1',
+						'number' => '1000',
+						'prefix' => '',
+						'suffix' => '+',
+						'title' => 'Happy Clients'
+					),
+					array(
+						'id' => '2',
+						'number' => '120',
+						'prefix' => '',
+						'suffix' => '',
+						'title' => 'Awards Won'
+					),
+					array(
+						'id' => '3',
+						'number' => '500',
+						'prefix' => '',
+						'suffix' => '+',
+						'title' => 'Projects Completed'
+					)
+				)
 			),
-			'suffix' => array(
-				'type' => 'string',
-				'default' => '+'
-			),
-			'prefix' => array(
-				'type' => 'string',
-				'default' => ''
-			),
-			'title' => array(
-				'type' => 'string',
-				'default' => 'Happy Clients'
-			),
-			'icon' => array(
-				'type' => 'string',
-				'default' => ''
+			'columns' => array(
+				'type' => 'number',
+				'default' => 3
 			),
 			'numberColor' => array(
 				'type' => 'string',
@@ -928,6 +938,10 @@ return array(
 			'duration' => array(
 				'type' => 'number',
 				'default' => 1000
+			),
+			'gap' => array(
+				'type' => 'number',
+				'default' => 20
 			)
 		),
 		'editorScript' => 'file:./index.js',
