@@ -18,6 +18,22 @@
 					"image": "",
 					"bio": "Experienced team lead with expertise in project management.",
 					"socialLinks": []
+				},
+				{
+					"id": "2",
+					"name": "Alina Doe",
+					"role": "CEO",
+					"image": "",
+					"bio": "A very good and experienced in this field",
+					"socialLinks": []
+				},
+				{
+					"id": "3",
+					"name": "Aria Smith",
+					"role": "Manager",
+					"image": "",
+					"bio": "Manager is very good at her job",
+					"socialLinks": []
 				}
 			]
 		},

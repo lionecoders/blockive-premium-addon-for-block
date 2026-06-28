@@ -17,7 +17,7 @@ import {
 
 const PREDEFINED_NETWORKS = [
 	{ label: 'Facebook', value: 'facebook', icon: 'fab fa-facebook-f', color: '#1877F2' },
-	{ label: 'Twitter (X)', value: 'twitter', icon: 'fab fa-x-twitter', color: '#000000' },
+	{ label: 'Twitter (X)', value: 'twitter', icon: 'fa-brands fa-x-twitter', color: '#000000' },
 	{ label: 'YouTube', value: 'youtube', icon: 'fab fa-youtube', color: '#FF0000' },
 	{ label: 'Instagram', value: 'instagram', icon: 'fab fa-instagram', color: '#E1306C' },
 	{ label: 'LinkedIn', value: 'linkedin', icon: 'fab fa-linkedin-in', color: '#0077B5' },

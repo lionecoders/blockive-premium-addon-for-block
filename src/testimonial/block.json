@@ -18,6 +18,22 @@
 					"image": "",
 					"content": "This is an amazing product! Highly recommended.",
 					"rating": 5
+				},
+				{
+					"id": "2",
+					"name": "Alina Doe",
+					"designation": "Designer",
+					"image": "",
+					"content": "The quality is good and the delivery was so fast.",
+					"rating": 4
+				},
+				{
+					"id": "3",
+					"name": "Aria Smith",
+					"designation": "Manager",
+					"image": "",
+					"content": "Excellent service and fast delivery. The product is exactly as described.",
+					"rating": 5
 				}
 			]
 		},

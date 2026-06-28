@@ -21,9 +21,9 @@
 				{
 					"id": "2",
 					"network": "twitter",
-					"icon": "fab fa-twitter",
+					"icon": "fa-brands fa-x-twitter",
 					"link": "#",
-					"color": "#1DA1F2"
+					"color": "#000000"
 				},
 				{
 					"id": "3",

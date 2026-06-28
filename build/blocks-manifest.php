@@ -2029,9 +2029,9 @@ return array(
 					array(
 						'id' => '2',
 						'network' => 'twitter',
-						'icon' => 'fab fa-twitter',
+						'icon' => 'fa-brands fa-x-twitter',
 						'link' => '#',
-						'color' => '#1DA1F2'
+						'color' => '#000000'
 					),
 					array(
 						'id' => '3',
@@ -2203,6 +2203,26 @@ return array(
 						'socialLinks' => array(
 							
 						)
+					),
+					array(
+						'id' => '2',
+						'name' => 'Alina Doe',
+						'role' => 'CEO',
+						'image' => '',
+						'bio' => 'A very good and experienced in this field',
+						'socialLinks' => array(
+							
+						)
+					),
+					array(
+						'id' => '3',
+						'name' => 'Aria Smith',
+						'role' => 'Manager',
+						'image' => '',
+						'bio' => 'Manager is very good at her job',
+						'socialLinks' => array(
+							
+						)
 					)
 				)
 			),
@@ -2306,6 +2326,22 @@ return array(
 						'designation' => 'CEO',
 						'image' => '',
 						'content' => 'This is an amazing product! Highly recommended.',
+						'rating' => 5
+					),
+					array(
+						'id' => '2',
+						'name' => 'Alina Doe',
+						'designation' => 'Designer',
+						'image' => '',
+						'content' => 'The quality is good and the delivery was so fast.',
+						'rating' => 4
+					),
+					array(
+						'id' => '3',
+						'name' => 'Aria Smith',
+						'designation' => 'Manager',
+						'image' => '',
+						'content' => 'Excellent service and fast delivery. The product is exactly as described.',
 						'rating' => 5
 					)
 				)
