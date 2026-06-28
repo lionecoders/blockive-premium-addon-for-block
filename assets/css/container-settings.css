@@ -1,0 +1,29 @@
+/* Container settings alignment helper classes */
+.bpafb-has-container-settings.bpafb-align-left {
+	margin-left: 0 !important;
+	margin-right: auto !important;
+	justify-content: flex-start !important;
+	justify-content: left !important;
+	text-align: left !important;
+}
+
+.bpafb-has-container-settings.bpafb-align-center {
+	margin-left: auto !important;
+	margin-right: auto !important;
+	justify-content: center !important;
+	text-align: center !important;
+}
+
+.bpafb-has-container-settings.bpafb-align-right {
+	margin-left: auto !important;
+	margin-right: 0 !important;
+	justify-content: flex-end !important;
+	justify-content: right !important;
+	text-align: right !important;
+}
+
+/* Ensure max-width works and is responsive */
+.bpafb-has-container-settings {
+	width: 100% !important;
+	box-sizing: border-box !important;
+}
