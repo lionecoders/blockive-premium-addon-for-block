@@ -62,6 +62,62 @@ return array(
 				'type' => 'number',
 				'default' => 1
 			),
+			'borderType' => array(
+				'type' => 'string',
+				'default' => 'solid'
+			),
+			'borderRadius' => array(
+				'type' => 'number',
+				'default' => 12
+			),
+			'titleFontFamily' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'titleFontSize' => array(
+				'type' => 'number',
+				'default' => null
+			),
+			'titleFontWeight' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'titleLineHeight' => array(
+				'type' => 'number',
+				'default' => null
+			),
+			'boxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'shadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'shadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'shadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'hoverBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'hoverShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'hoverShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'hoverShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
 			'animationType' => array(
 				'type' => 'string',
 				'default' => 'none'
@@ -80,23 +136,7 @@ return array(
 				'wide',
 				'full'
 			),
-			'html' => false,
-			'typography' => array(
-				'fontSize' => true,
-				'lineHeight' => true,
-				'__experimentalFontFamily' => true,
-				'__experimentalDefaultControls' => array(
-					'fontSize' => true
-				)
-			),
-			'spacing' => array(
-				'margin' => true,
-				'padding' => true,
-				'__experimentalDefaultControls' => array(
-					'margin' => true,
-					'padding' => true
-				)
-			)
+			'html' => false
 		),
 		'textdomain' => 'blockive-premium-addon-for-block',
 		'editorScript' => 'file:./index.js',
@@ -206,6 +246,94 @@ return array(
 			'closedColor' => array(
 				'type' => 'string',
 				'default' => ''
+			),
+			'itemBgColorHover' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'itemTextColorHover' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'dayFontFamily' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'dayFontSize' => array(
+				'type' => 'number',
+				'default' => null
+			),
+			'dayFontWeight' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'dayLineHeight' => array(
+				'type' => 'number',
+				'default' => null
+			),
+			'timeFontFamily' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'timeFontSize' => array(
+				'type' => 'number',
+				'default' => null
+			),
+			'timeFontWeight' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'timeLineHeight' => array(
+				'type' => 'number',
+				'default' => null
+			),
+			'borderType' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'borderWidth' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'borderRadius' => array(
+				'type' => 'number',
+				'default' => 8
+			),
+			'borderColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'boxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'shadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'shadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'shadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'hoverBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'hoverShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'hoverShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'hoverShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
 			)
 		),
 		'supports' => array(
@@ -213,40 +341,7 @@ return array(
 				'wide',
 				'full'
 			),
-			'html' => false,
-			'typography' => array(
-				'fontSize' => true,
-				'lineHeight' => true,
-				'__experimentalFontFamily' => true,
-				'__experimentalDefaultControls' => array(
-					'fontSize' => true
-				)
-			),
-			'spacing' => array(
-				'margin' => true,
-				'padding' => true,
-				'__experimentalDefaultControls' => array(
-					'margin' => true,
-					'padding' => true
-				)
-			),
-			'color' => array(
-				'background' => false,
-				'text' => false,
-				'gradients' => false
-			),
-			'__experimentalBorder' => array(
-				'radius' => true,
-				'color' => true,
-				'width' => true,
-				'style' => true,
-				'__experimentalDefaultControls' => array(
-					'radius' => true,
-					'color' => true,
-					'width' => true,
-					'style' => true
-				)
-			)
+			'html' => false
 		),
 		'textdomain' => 'blockive-premium-addon-for-block',
 		'editorScript' => 'file:./index.js',
@@ -326,6 +421,86 @@ return array(
 			'iconSpacing' => array(
 				'type' => 'number',
 				'default' => 8
+			),
+			'fontFamily' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'fontSize' => array(
+				'type' => 'number',
+				'default' => null
+			),
+			'fontWeight' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'lineHeight' => array(
+				'type' => 'number',
+				'default' => null
+			),
+			'letterSpacing' => array(
+				'type' => 'number',
+				'default' => null
+			),
+			'textTransform' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'textDecoration' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'borderType' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'borderWidth' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'borderRadius' => array(
+				'type' => 'number',
+				'default' => 4
+			),
+			'borderColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'borderColorHover' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'boxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'shadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'shadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'shadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'hoverBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'hoverShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'hoverShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'hoverShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
 			)
 		),
 		'supports' => array(
@@ -333,38 +508,7 @@ return array(
 				'wide',
 				'full'
 			),
-			'html' => false,
-			'typography' => array(
-				'fontSize' => true,
-				'lineHeight' => true,
-				'__experimentalFontFamily' => true,
-				'__experimentalDefaultControls' => array(
-					'fontSize' => true
-				)
-			),
-			'spacing' => array(
-				'margin' => true,
-				'padding' => true,
-				'__experimentalDefaultControls' => array(
-					'margin' => true,
-					'padding' => true
-				)
-			),
-			'__experimentalBorder' => array(
-				'radius' => true,
-				'color' => true,
-				'width' => true,
-				'style' => true,
-				'__experimentalDefaultControls' => array(
-					'radius' => true,
-					'color' => true,
-					'width' => true,
-					'style' => true
-				)
-			),
-			'__experimentalSkipSerialization' => array(
-				'border'
-			)
+			'html' => false
 		),
 		'textdomain' => 'blockive-premium-addon-for-block',
 		'editorScript' => 'file:./index.js',
@@ -725,6 +869,66 @@ return array(
 			'alignment' => array(
 				'type' => 'string',
 				'default' => 'left'
+			),
+			'fontFamily' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'fontWeight' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'lineHeight' => array(
+				'type' => 'number',
+				'default' => null
+			),
+			'letterSpacing' => array(
+				'type' => 'number',
+				'default' => null
+			),
+			'textTransform' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'textDecoration' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'borderType' => array(
+				'type' => 'string',
+				'default' => 'solid'
+			),
+			'boxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'shadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'shadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'shadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'hoverBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'hoverShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'hoverShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'hoverShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
 			)
 		),
 		'supports' => array(
@@ -732,34 +936,7 @@ return array(
 				'wide',
 				'full'
 			),
-			'html' => false,
-			'color' => array(
-				'text' => true,
-				'background' => true,
-				'gradients' => true,
-				'link' => true
-			),
-			'typography' => array(
-				'fontSize' => true,
-				'lineHeight' => true,
-				'__experimentalFontFamily' => true,
-				'__experimentalFontWeight' => true,
-				'__experimentalFontStyle' => true,
-				'__experimentalTextTransform' => true,
-				'__experimentalTextDecoration' => true,
-				'__experimentalLetterSpacing' => true,
-				'__experimentalDefaultControls' => array(
-					'fontSize' => true
-				)
-			),
-			'spacing' => array(
-				'margin' => true,
-				'padding' => true,
-				'__experimentalDefaultControls' => array(
-					'margin' => true,
-					'padding' => true
-				)
-			)
+			'html' => false
 		),
 		'textdomain' => 'blockive-premium-addon-for-block',
 		'editorScript' => 'file:./index.js',
@@ -826,6 +1003,82 @@ return array(
 				'type' => 'number',
 				'default' => 1
 			),
+			'borderType' => array(
+				'type' => 'string',
+				'default' => 'solid'
+			),
+			'borderRadius' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'titleColorHover' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'titleBgColorHover' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'questionFontFamily' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'questionFontSize' => array(
+				'type' => 'number',
+				'default' => null
+			),
+			'questionFontWeight' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'questionLineHeight' => array(
+				'type' => 'number',
+				'default' => null
+			),
+			'questionLetterSpacing' => array(
+				'type' => 'number',
+				'default' => null
+			),
+			'questionTextTransform' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'questionTextDecoration' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'boxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'shadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'shadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'shadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'hoverBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'hoverShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'hoverShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'hoverShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
 			'animationType' => array(
 				'type' => 'string',
 				'default' => 'none'
@@ -864,23 +1117,7 @@ return array(
 				'wide',
 				'full'
 			),
-			'html' => false,
-			'typography' => array(
-				'fontSize' => true,
-				'lineHeight' => true,
-				'__experimentalFontFamily' => true,
-				'__experimentalDefaultControls' => array(
-					'fontSize' => true
-				)
-			),
-			'spacing' => array(
-				'margin' => true,
-				'padding' => true,
-				'__experimentalDefaultControls' => array(
-					'margin' => true,
-					'padding' => true
-				)
-			)
+			'html' => false
 		),
 		'textdomain' => 'blockive-premium-addon-for-block',
 		'editorScript' => 'file:./index.js',
@@ -1092,11 +1329,23 @@ return array(
 				'type' => 'string',
 				'default' => '#3b82f6'
 			),
+			'iconColorHover' => array(
+				'type' => 'string',
+				'default' => ''
+			),
 			'iconBgColor' => array(
 				'type' => 'string',
 				'default' => 'rgba(59, 130, 246, 0.1)'
 			),
+			'iconBgColorHover' => array(
+				'type' => 'string',
+				'default' => ''
+			),
 			'titleColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'titleColorHover' => array(
 				'type' => 'string',
 				'default' => ''
 			),
@@ -1105,6 +1354,10 @@ return array(
 				'default' => ''
 			),
 			'boxBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'boxBgColorHover' => array(
 				'type' => 'string',
 				'default' => ''
 			),
@@ -1131,6 +1384,82 @@ return array(
 			'iconBorderStyle' => array(
 				'type' => 'string',
 				'default' => 'solid'
+			),
+			'titleFontFamily' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'titleFontSize' => array(
+				'type' => 'number',
+				'default' => null
+			),
+			'titleFontWeight' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'titleLineHeight' => array(
+				'type' => 'number',
+				'default' => null
+			),
+			'descFontFamily' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'descFontSize' => array(
+				'type' => 'number',
+				'default' => null
+			),
+			'descLineHeight' => array(
+				'type' => 'number',
+				'default' => null
+			),
+			'borderType' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'borderWidth' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'borderRadius' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'borderColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'boxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'shadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'shadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'shadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'hoverBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'hoverShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'hoverShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'hoverShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
 			)
 		),
 		'supports' => array(
@@ -1138,40 +1467,7 @@ return array(
 				'wide',
 				'full'
 			),
-			'html' => false,
-			'typography' => array(
-				'fontSize' => true,
-				'lineHeight' => true,
-				'__experimentalFontFamily' => true,
-				'__experimentalDefaultControls' => array(
-					'fontSize' => true
-				)
-			),
-			'spacing' => array(
-				'margin' => true,
-				'padding' => true,
-				'__experimentalDefaultControls' => array(
-					'margin' => true,
-					'padding' => true
-				)
-			),
-			'color' => array(
-				'background' => false,
-				'text' => false,
-				'gradients' => false
-			),
-			'__experimentalBorder' => array(
-				'radius' => true,
-				'color' => true,
-				'width' => true,
-				'style' => true,
-				'__experimentalDefaultControls' => array(
-					'radius' => true,
-					'color' => true,
-					'width' => true,
-					'style' => true
-				)
-			)
+			'html' => false
 		),
 		'textdomain' => 'blockive-premium-addon-for-block',
 		'editorScript' => 'file:./index.js',
@@ -1316,6 +1612,10 @@ return array(
 				'type' => 'string',
 				'default' => ''
 			),
+			'titleColorHover' => array(
+				'type' => 'string',
+				'default' => ''
+			),
 			'descColor' => array(
 				'type' => 'string',
 				'default' => ''
@@ -1324,7 +1624,15 @@ return array(
 				'type' => 'string',
 				'default' => '#3b82f6'
 			),
+			'linkColorHover' => array(
+				'type' => 'string',
+				'default' => ''
+			),
 			'boxBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'boxBgColorHover' => array(
 				'type' => 'string',
 				'default' => ''
 			),

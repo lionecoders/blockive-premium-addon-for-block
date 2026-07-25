@@ -10,6 +10,9 @@ import {
 	TextControl,
 } from '@wordpress/components';
 
+import InspectorTabs from '../components/inspector-tabs';
+import AdvancedTab from '../components/advanced-tab';
+
 export default function Edit({ attributes, setAttributes }) {
 	const {
 		columns,
@@ -61,6 +64,9 @@ export default function Edit({ attributes, setAttributes }) {
 	return (
 		<>
 			<InspectorControls>
+				<InspectorTabs
+					general={(
+						<>
 				<PanelBody title={__('Layout', 'blockive-premium-addon-for-block')} initialOpen={true}>
 					<RangeControl
 						label={__('Columns', 'blockive-premium-addon-for-block')}
@@ -142,10 +148,11 @@ export default function Edit({ attributes, setAttributes }) {
 						onChange={(val) => setAttributes({ showAuthor: val })}
 					/>
 				</PanelBody>
-			</InspectorControls>
-
-			<InspectorControls group="styles">
-				<PanelBody title={__('Card Style', 'blockive-premium-addon-for-block')} initialOpen={false}>
+						</>
+					)}
+					style={(
+						<>
+				<PanelBody title={__('Card Style', 'blockive-premium-addon-for-block')} initialOpen={true}>
 					<RangeControl
 						label={__('Border Radius', 'blockive-premium-addon-for-block')}
 						value={cardBorderRadius}
@@ -208,6 +215,10 @@ export default function Edit({ attributes, setAttributes }) {
 							label: __('Excerpt Color', 'blockive-premium-addon-for-block'),
 						},
 					]}
+				/>
+						</>
+					)}
+					advanced={<AdvancedTab attributes={attributes} setAttributes={setAttributes} />}
 				/>
 			</InspectorControls>
 

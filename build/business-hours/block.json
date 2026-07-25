@@ -101,6 +101,94 @@
     "closedColor": {
       "type": "string",
       "default": ""
+    },
+    "itemBgColorHover": {
+      "type": "string",
+      "default": ""
+    },
+    "itemTextColorHover": {
+      "type": "string",
+      "default": ""
+    },
+    "dayFontFamily": {
+      "type": "string",
+      "default": ""
+    },
+    "dayFontSize": {
+      "type": "number",
+      "default": null
+    },
+    "dayFontWeight": {
+      "type": "string",
+      "default": ""
+    },
+    "dayLineHeight": {
+      "type": "number",
+      "default": null
+    },
+    "timeFontFamily": {
+      "type": "string",
+      "default": ""
+    },
+    "timeFontSize": {
+      "type": "number",
+      "default": null
+    },
+    "timeFontWeight": {
+      "type": "string",
+      "default": ""
+    },
+    "timeLineHeight": {
+      "type": "number",
+      "default": null
+    },
+    "borderType": {
+      "type": "string",
+      "default": "none"
+    },
+    "borderWidth": {
+      "type": "number",
+      "default": 0
+    },
+    "borderRadius": {
+      "type": "number",
+      "default": 8
+    },
+    "borderColor": {
+      "type": "string",
+      "default": ""
+    },
+    "boxShadow": {
+      "type": "boolean",
+      "default": false
+    },
+    "shadowColor": {
+      "type": "string",
+      "default": "rgba(0,0,0,0.15)"
+    },
+    "shadowBlur": {
+      "type": "number",
+      "default": 15
+    },
+    "shadowSpread": {
+      "type": "number",
+      "default": 0
+    },
+    "hoverBoxShadow": {
+      "type": "boolean",
+      "default": false
+    },
+    "hoverShadowColor": {
+      "type": "string",
+      "default": "rgba(0,0,0,0.15)"
+    },
+    "hoverShadowBlur": {
+      "type": "number",
+      "default": 15
+    },
+    "hoverShadowSpread": {
+      "type": "number",
+      "default": 0
     }
   },
   "supports": {
@@ -108,40 +196,7 @@
       "wide",
       "full"
     ],
-    "html": false,
-    "typography": {
-      "fontSize": true,
-      "lineHeight": true,
-      "__experimentalFontFamily": true,
-      "__experimentalDefaultControls": {
-        "fontSize": true
-      }
-    },
-    "spacing": {
-      "margin": true,
-      "padding": true,
-      "__experimentalDefaultControls": {
-        "margin": true,
-        "padding": true
-      }
-    },
-    "color": {
-      "background": false,
-      "text": false,
-      "gradients": false
-    },
-    "__experimentalBorder": {
-      "radius": true,
-      "color": true,
-      "width": true,
-      "style": true,
-      "__experimentalDefaultControls": {
-        "radius": true,
-        "color": true,
-        "width": true,
-        "style": true
-      }
-    }
+    "html": false
   },
   "textdomain": "blockive-premium-addon-for-block",
   "editorScript": "file:./index.js",

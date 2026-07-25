@@ -16,6 +16,9 @@ import {
 } from '@wordpress/components';
 import { useEffect, useState } from '@wordpress/element';
 
+import InspectorTabs from '../components/inspector-tabs';
+import AdvancedTab from '../components/advanced-tab';
+
 export default function Edit({ attributes, setAttributes }) {
 	const {
 		targetDate,
@@ -101,6 +104,9 @@ export default function Edit({ attributes, setAttributes }) {
 			</BlockControls>
 
 			<InspectorControls>
+				<InspectorTabs
+					general={(
+						<>
 				<PanelBody title={__('Timer Settings', 'blockive-premium-addon-for-block')} initialOpen={true}>
 					<TextControl
 						label={__('Target Date & Time', 'blockive-premium-addon-for-block')}
@@ -156,7 +162,10 @@ export default function Edit({ attributes, setAttributes }) {
 						<TextControl label={__('Seconds Label', 'blockive-premium-addon-for-block')} value={labelSeconds} onChange={(val) => setAttributes({ labelSeconds: val })} />
 					)}
 				</PanelBody>
-
+						</>
+					)}
+					style={(
+						<>
 				<PanelBody title={__('Styling', 'blockive-premium-addon-for-block')} initialOpen={false}>
 					<RangeControl
 						label={__('Space Between (Gap)', 'blockive-premium-addon-for-block')}
@@ -229,6 +238,10 @@ export default function Edit({ attributes, setAttributes }) {
 						</>
 					)}
 				</PanelBody>
+						</>
+					)}
+					advanced={<AdvancedTab attributes={attributes} setAttributes={setAttributes} />}
+				/>
 			</InspectorControls>
 
 			<div {...blockProps}>

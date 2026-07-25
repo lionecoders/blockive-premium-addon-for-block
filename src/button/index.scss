@@ -8,6 +8,13 @@
 	--bpafb-btn-icon-spacing: 8px;
 	--bpafb-btn-width: auto;
 	--bpafb-btn-justify: center;
+	--bpafb-btn-border-style: none;
+	--bpafb-btn-border-width: 0px;
+	--bpafb-btn-border-radius: 4px;
+	--bpafb-btn-border-color: transparent;
+	--bpafb-btn-border-color-hover: transparent;
+	--bpafb-btn-shadow: none;
+	--bpafb-btn-shadow-hover: none;
 
 	display: flex;
 	justify-content: var(--bpafb-btn-justify);
@@ -34,9 +41,19 @@
 		text-decoration: none;
 		background-color: var(--bpafb-btn-bg-color);
 		color: var(--bpafb-btn-text-color);
-		border: 1px solid transparent;
+		font-family: var(--bpafb-btn-text-font-family, inherit);
+		font-size: var(--bpafb-btn-text-font-size, inherit);
+		font-weight: var(--bpafb-btn-text-font-weight, inherit);
+		line-height: var(--bpafb-btn-text-line-height, inherit);
+		letter-spacing: var(--bpafb-btn-text-letter-spacing, normal);
+		text-transform: var(--bpafb-btn-text-text-transform, none);
+		text-decoration: var(--bpafb-btn-text-text-decoration, none);
+		border-style: var(--bpafb-btn-border-style);
+		border-width: var(--bpafb-btn-border-width);
+		border-color: var(--bpafb-btn-border-color);
+		border-radius: var(--bpafb-btn-border-radius);
+		box-shadow: var(--bpafb-btn-shadow);
 		padding: 12px 24px;
-		border-radius: 4px; /* overridden by block supports if set */
 		transition: all 0.3s ease;
 		position: relative;
 		width: var(--bpafb-btn-width);
@@ -45,6 +62,8 @@
 		&:hover {
 			background-color: var(--bpafb-btn-bg-color-hover);
 			color: var(--bpafb-btn-text-color-hover);
+			border-color: var(--bpafb-btn-border-color-hover);
+			box-shadow: var(--bpafb-btn-shadow-hover);
 		}
 	}
 

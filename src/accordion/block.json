@@ -59,6 +59,26 @@
 			"type": "number",
 			"default": 1
 		},
+		"borderType": {
+			"type": "string",
+			"default": "solid"
+		},
+		"borderRadius": {
+			"type": "number",
+			"default": 12
+		},
+		"titleFontFamily": { "type": "string", "default": "" },
+		"titleFontSize": { "type": "number", "default": null },
+		"titleFontWeight": { "type": "string", "default": "" },
+		"titleLineHeight": { "type": "number", "default": null },
+		"boxShadow": { "type": "boolean", "default": false },
+		"shadowColor": { "type": "string", "default": "rgba(0,0,0,0.15)" },
+		"shadowBlur": { "type": "number", "default": 15 },
+		"shadowSpread": { "type": "number", "default": 0 },
+		"hoverBoxShadow": { "type": "boolean", "default": false },
+		"hoverShadowColor": { "type": "string", "default": "rgba(0,0,0,0.15)" },
+		"hoverShadowBlur": { "type": "number", "default": 15 },
+		"hoverShadowSpread": { "type": "number", "default": 0 },
 		"animationType": {
 			"type": "string",
 			"default": "none"
@@ -77,23 +97,7 @@
 			"wide",
 			"full"
 		],
-		"html": false,
-		"typography": {
-			"fontSize": true,
-			"lineHeight": true,
-			"__experimentalFontFamily": true,
-			"__experimentalDefaultControls": {
-				"fontSize": true
-			}
-		},
-		"spacing": {
-			"margin": true,
-			"padding": true,
-			"__experimentalDefaultControls": {
-				"margin": true,
-				"padding": true
-			}
-		}
+		"html": false
 	},
 	"textdomain": "blockive-premium-addon-for-block",
 	"editorScript": "file:./index.js",

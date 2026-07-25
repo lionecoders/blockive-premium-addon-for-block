@@ -15,6 +15,9 @@ import {
 	TextControl,
 } from '@wordpress/components';
 
+import InspectorTabs from '../components/inspector-tabs';
+import AdvancedTab from '../components/advanced-tab';
+
 const PREDEFINED_NETWORKS = [
 	{ label: 'Facebook', value: 'facebook', icon: 'fab fa-facebook-f', color: '#1877F2' },
 	{ label: 'Twitter (X)', value: 'twitter', icon: 'fa-brands fa-x-twitter', color: '#000000' },
@@ -99,6 +102,9 @@ export default function Edit({ attributes, setAttributes }) {
 			</BlockControls>
 
 			<InspectorControls>
+				<InspectorTabs
+					general={(
+						<>
 				<PanelBody title={__('Social Icons', 'blockive-premium-addon-for-block')} initialOpen={true}>
 					{items.map((item, index) => (
 						<div key={item.id} style={{ border: '1px solid #ccc', padding: '10px', marginBottom: '10px', borderRadius: '4px', backgroundColor: '#f9f9f9' }}>
@@ -183,9 +189,9 @@ export default function Edit({ attributes, setAttributes }) {
 						max={50}
 					/>
 				</PanelBody>
-			</InspectorControls>
-
-			<InspectorControls group="styles">
+						</>
+					)}
+					style={(
 				<PanelBody title={__('Colors', 'blockive-premium-addon-for-block')} initialOpen={true}>
 					<SelectControl
 						label={__('Color Type', 'blockive-premium-addon-for-block')}
@@ -213,6 +219,9 @@ export default function Edit({ attributes, setAttributes }) {
 						</>
 					)}
 				</PanelBody>
+					)}
+					advanced={<AdvancedTab attributes={attributes} setAttributes={setAttributes} />}
+				/>
 			</InspectorControls>
 
 			<div {...blockProps}>

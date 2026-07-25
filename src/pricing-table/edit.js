@@ -20,6 +20,9 @@ import {
 } from '@wordpress/components';
 import { useState } from '@wordpress/element';
 
+import InspectorTabs from '../components/inspector-tabs';
+import AdvancedTab from '../components/advanced-tab';
+
 const themeColors = [
 	{ name: 'Indigo', color: '#4f46e5' },
 	{ name: 'Blue', color: '#2563eb' },
@@ -159,6 +162,9 @@ export default function Edit({ attributes, setAttributes }) {
 			</BlockControls>
 
 			<InspectorControls>
+				<InspectorTabs
+					general={(
+						<>
 				<PanelBody title={__('Pricing Tables', 'blockive-premium-addon-for-block')} initialOpen={true}>
 					{tables && tables.length > 0 ? (
 						<>
@@ -320,9 +326,10 @@ export default function Edit({ attributes, setAttributes }) {
 						max={100}
 					/>
 				</PanelBody>
-			</InspectorControls>
-
-			<InspectorControls group="styles">
+						</>
+					)}
+					style={(
+						<>
 				<PanelBody title={__('Layout Style', 'blockive-premium-addon-for-block')} initialOpen={true}>
 					<SelectControl
 						label={__('Design Preset', 'blockive-premium-addon-for-block')}
@@ -408,6 +415,10 @@ export default function Edit({ attributes, setAttributes }) {
 						max={100}
 					/>
 				</PanelBody>
+						</>
+					)}
+					advanced={<AdvancedTab attributes={attributes} setAttributes={setAttributes} />}
+				/>
 			</InspectorControls>
 
 			<div {...blockProps}>

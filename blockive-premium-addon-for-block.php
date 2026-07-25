@@ -101,6 +101,13 @@ class Blockive_Premium_Addon_For_Block
 	{
 		wp_enqueue_style('bpafb-font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css', [], '6.5.1');
 		wp_enqueue_style('bpafb-container-settings', BPAFB_URL . 'assets/css/container-settings.css', [], BPAFB_VERSION);
+		wp_enqueue_script(
+			'bpafb-frontend-animations',
+			BPAFB_URL . 'assets/js/frontend-animations.js',
+			[],
+			BPAFB_VERSION,
+			true
+		);
 	}
 
 	/**
@@ -108,17 +115,19 @@ class Blockive_Premium_Addon_For_Block
 	 */
 	public function bpafb_enqueue_editor_assets()
 	{
+		wp_enqueue_style(
+			'bpafb-editor-shared-controls',
+			BPAFB_URL . 'assets/css/editor-shared-controls.css',
+			[ 'wp-components' ],
+			BPAFB_VERSION
+		);
 		wp_enqueue_script(
 			'bpafb-editor-container-settings',
 			BPAFB_URL . 'assets/js/editor-container-settings.js',
 			[
-				'wp-blocks',
 				'wp-element',
-				'wp-block-editor',
-				'wp-components',
 				'wp-compose',
 				'wp-hooks',
-				'wp-i18n',
 			],
 			BPAFB_VERSION,
 			true
@@ -141,33 +150,10 @@ class Blockive_Premium_Addon_For_Block
 
 		$attrs = isset($block['attrs']) ? $block['attrs'] : [];
 
-		// Check if any container attributes are set
+		// Check if any Advanced-tab attributes are set at all (see src/components/advanced-tab).
 		$has_container_settings = false;
-		$container_keys = [
-			'bpafbContainerBgColor',
-			'bpafbContainerPaddingTop',
-			'bpafbContainerPaddingRight',
-			'bpafbContainerPaddingBottom',
-			'bpafbContainerPaddingLeft',
-			'bpafbContainerMarginTop',
-			'bpafbContainerMarginRight',
-			'bpafbContainerMarginBottom',
-			'bpafbContainerMarginLeft',
-			'bpafbContainerBorderColor',
-			'bpafbContainerBorderStyle',
-			'bpafbContainerBorderWidth',
-			'bpafbContainerBorderRadius',
-			'bpafbContainerBoxShadow',
-			'bpafbContainerShadowColor',
-			'bpafbContainerShadowBlur',
-			'bpafbContainerShadowSpread',
-			'bpafbContainerWidth',
-			'bpafbContainerWidthUnit',
-			'bpafbContainerAlign',
-		];
-
-		foreach ($container_keys as $key) {
-			if (isset($attrs[$key])) {
+		foreach ($attrs as $key => $value) {
+			if (strpos($key, 'bpafb') === 0 && $value !== null && $value !== '' && $value !== false) {
 				$has_container_settings = true;
 				break;
 			}
@@ -223,8 +209,19 @@ class Blockive_Premium_Addon_For_Block
 			$styles[] = 'margin-left: ' . intval($attrs['bpafbContainerMarginLeft']) . 'px;';
 		}
 
-		// Background Color
-		if (!empty($attrs['bpafbContainerBgColor'])) {
+		// Background
+		$bg_type = isset($attrs['bpafbContainerBgType']) ? $attrs['bpafbContainerBgType'] : 'color';
+		if ($bg_type === 'gradient' && !empty($attrs['bpafbContainerBgGradient'])) {
+			$styles[] = 'background-image: ' . esc_attr($attrs['bpafbContainerBgGradient']) . ';';
+		} elseif ($bg_type === 'image' && !empty($attrs['bpafbContainerBgImageUrl'])) {
+			$styles[] = 'background-image: url(' . esc_url($attrs['bpafbContainerBgImageUrl']) . ');';
+			$size = isset($attrs['bpafbContainerBgImageSize']) ? $attrs['bpafbContainerBgImageSize'] : 'cover';
+			$styles[] = 'background-size: ' . esc_attr($size) . ';';
+			$styles[] = 'background-position: center center;';
+			if (!empty($attrs['bpafbContainerOverlayColor'])) {
+				$classes[] = 'bpafb-has-bg-overlay';
+			}
+		} elseif (!empty($attrs['bpafbContainerBgColor'])) {
 			$styles[] = 'background-color: ' . esc_attr($attrs['bpafbContainerBgColor']) . ';';
 		}
 
@@ -256,52 +253,218 @@ class Blockive_Premium_Addon_For_Block
 			$styles[] = 'border-radius: ' . intval($attrs['bpafbContainerBorderRadius']) . 'px;';
 		}
 
-		// Shadow
+		// Shadow (normal + hover, hover applied via CSS class since PHP can't do :hover)
 		if (!empty($attrs['bpafbContainerBoxShadow'])) {
 			$color = !empty($attrs['bpafbContainerShadowColor']) ? $attrs['bpafbContainerShadowColor'] : 'rgba(0,0,0,0.1)';
 			$blur = isset($attrs['bpafbContainerShadowBlur']) ? intval($attrs['bpafbContainerShadowBlur']) : 10;
 			$spread = isset($attrs['bpafbContainerShadowSpread']) ? intval($attrs['bpafbContainerShadowSpread']) : 0;
 			$styles[] = 'box-shadow: 0 4px ' . $blur . 'px ' . $spread . 'px ' . esc_attr($color) . ';';
 		}
+		if (!empty($attrs['bpafbContainerHoverBoxShadow'])) {
+			$hcolor = !empty($attrs['bpafbContainerHoverShadowColor']) ? $attrs['bpafbContainerHoverShadowColor'] : 'rgba(0,0,0,0.15)';
+			$hblur = isset($attrs['bpafbContainerHoverShadowBlur']) ? intval($attrs['bpafbContainerHoverShadowBlur']) : 15;
+			$hspread = isset($attrs['bpafbContainerHoverShadowSpread']) ? intval($attrs['bpafbContainerHoverShadowSpread']) : 0;
+			$styles[] = '--bpafb-hover-shadow: 0 4px ' . $hblur . 'px ' . $hspread . 'px ' . esc_attr($hcolor) . ';';
+			$classes[] = 'bpafb-has-hover-shadow';
+		}
 
-		if (empty($styles) && count($classes) === 1) {
+		// Layout
+		if (!empty($attrs['bpafbDisplay'])) {
+			$styles[] = 'display: ' . esc_attr($attrs['bpafbDisplay']) . ';';
+		}
+		if (!empty($attrs['bpafbOverflow'])) {
+			$styles[] = 'overflow: ' . esc_attr($attrs['bpafbOverflow']) . ';';
+		}
+		if (!empty($attrs['bpafbPosition'])) {
+			$styles[] = 'position: ' . esc_attr($attrs['bpafbPosition']) . ';';
+		}
+		if (isset($attrs['bpafbContainerMinHeight'])) {
+			$styles[] = 'min-height: ' . intval($attrs['bpafbContainerMinHeight']) . 'px;';
+		}
+		if (isset($attrs['bpafbContainerMaxHeight'])) {
+			$styles[] = 'max-height: ' . intval($attrs['bpafbContainerMaxHeight']) . 'px;';
+		}
+		if (isset($attrs['bpafbZIndex'])) {
+			$styles[] = 'z-index: ' . intval($attrs['bpafbZIndex']) . ';';
+		}
+
+		// Transform
+		$transforms = [];
+		if (!empty($attrs['bpafbTransformRotate'])) {
+			$transforms[] = 'rotate(' . floatval($attrs['bpafbTransformRotate']) . 'deg)';
+		}
+		if (isset($attrs['bpafbTransformScale']) && floatval($attrs['bpafbTransformScale']) !== 100.0) {
+			$transforms[] = 'scale(' . (floatval($attrs['bpafbTransformScale']) / 100) . ')';
+		}
+		if (!empty($attrs['bpafbTransformTranslateX'])) {
+			$transforms[] = 'translateX(' . intval($attrs['bpafbTransformTranslateX']) . 'px)';
+		}
+		if (!empty($attrs['bpafbTransformTranslateY'])) {
+			$transforms[] = 'translateY(' . intval($attrs['bpafbTransformTranslateY']) . 'px)';
+		}
+		if (!empty($transforms)) {
+			$styles[] = 'transform: ' . implode(' ', $transforms) . ';';
+		}
+
+		// Visibility
+		if (!empty($attrs['bpafbHideDesktop'])) {
+			$classes[] = 'bpafb-hide-desktop';
+		}
+		if (!empty($attrs['bpafbHideTablet'])) {
+			$classes[] = 'bpafb-hide-tablet';
+		}
+		if (!empty($attrs['bpafbHideMobile'])) {
+			$classes[] = 'bpafb-hide-mobile';
+		}
+
+		// Motion effects
+		if (!empty($attrs['bpafbHoverAnimation']) && $attrs['bpafbHoverAnimation'] !== 'none') {
+			$classes[] = 'bpafb-hover-' . sanitize_html_class($attrs['bpafbHoverAnimation']);
+		}
+		if (!empty($attrs['bpafbFloatingEffect'])) {
+			$classes[] = 'bpafb-floating';
+		}
+
+		// Scroll-triggered entrance animation
+		$data_attrs = [];
+		if (!empty($attrs['bpafbAnimationType']) && $attrs['bpafbAnimationType'] !== 'none') {
+			$duration = isset($attrs['bpafbAnimationDuration']) ? intval($attrs['bpafbAnimationDuration']) : 800;
+			$delay = isset($attrs['bpafbAnimationDelay']) ? intval($attrs['bpafbAnimationDelay']) : 0;
+			$easing = !empty($attrs['bpafbAnimationEasing']) ? $attrs['bpafbAnimationEasing'] : 'ease';
+			$classes[] = 'bpafb-animate';
+			$data_attrs['data-bpafb-animation'] = sanitize_html_class($attrs['bpafbAnimationType']);
+			$styles[] = '--bpafb-anim-duration: ' . $duration . 'ms;';
+			$styles[] = '--bpafb-anim-delay: ' . $delay . 'ms;';
+			$styles[] = '--bpafb-anim-easing: ' . esc_attr($easing) . ';';
+		}
+
+		// Unique id used to scope custom CSS / responsive overrides to this block instance.
+		$uid = !empty($attrs['bpafbUid']) ? sanitize_html_class($attrs['bpafbUid']) : '';
+		$extra_style_tag = '';
+		if ($uid) {
+			$classes[] = 'bpafb-uid-' . $uid;
+			$extra_style_tag .= $this->bpafb_build_responsive_css($attrs, $uid);
+			$extra_style_tag .= $this->bpafb_build_custom_css($attrs, $uid);
+		}
+
+		// HTML attributes
+		$html_id = !empty($attrs['bpafbHtmlId']) ? $attrs['bpafbHtmlId'] : '';
+		if (!empty($attrs['bpafbHtmlClasses'])) {
+			$classes[] = $attrs['bpafbHtmlClasses'];
+		}
+		if (!empty($attrs['bpafbContainerOverlayColor']) && $bg_type === 'image') {
+			$styles[] = '--bpafb-overlay-color: ' . esc_attr($attrs['bpafbContainerOverlayColor']) . ';';
+		}
+
+		if (empty($styles) && count($classes) === 1 && empty($extra_style_tag) && empty($html_id)) {
 			return $block_content;
 		}
 
 		$style_attr_value = implode(' ', $styles);
 
-		return $this->bpafb_inject_styles($block_content, $style_attr_value, implode(' ', $classes));
+		$output = $this->bpafb_inject_styles($block_content, $style_attr_value, implode(' ', $classes), $html_id, $data_attrs);
+
+		return $extra_style_tag . $output;
 	}
 
 	/**
-	 * Helper function to inject style and class attributes into the first tag of HTML content.
+	 * Builds a <style> block for tablet/mobile responsive padding & margin overrides.
+	 *
+	 * @param array  $attrs Block attributes.
+	 * @param string $uid   Unique id used to scope the selector.
+	 * @return string
+	 */
+	private function bpafb_build_responsive_css($attrs, $uid)
+	{
+		$selector = '.bpafb-uid-' . $uid;
+		$breakpoints = [
+			'Tablet' => '(max-width: 1024px)',
+			'Mobile' => '(max-width: 767px)',
+		];
+		$sides = ['Top', 'Right', 'Bottom', 'Left'];
+		$css = '';
+
+		foreach ($breakpoints as $suffix => $media) {
+			$rules = '';
+			foreach (['Padding', 'Margin'] as $box) {
+				foreach ($sides as $side) {
+					$key = 'bpafbContainer' . $box . $side . $suffix;
+					if (isset($attrs[$key])) {
+						$rules .= strtolower($box) . '-' . strtolower($side) . ': ' . intval($attrs[$key]) . 'px !important;';
+					}
+				}
+			}
+			if ($rules) {
+				$css .= '@media ' . $media . ' { ' . $selector . ' { ' . $rules . ' } }';
+			}
+		}
+
+		return $css ? '<style>' . $css . '</style>' : '';
+	}
+
+	/**
+	 * Builds the scoped Custom CSS <style> block for a block instance.
+	 * Users write CSS using the literal word "selector" to target the block wrapper.
+	 *
+	 * @param array  $attrs Block attributes.
+	 * @param string $uid   Unique id used to scope the selector.
+	 * @return string
+	 */
+	private function bpafb_build_custom_css($attrs, $uid)
+	{
+		if (empty($attrs['bpafbCustomCss'])) {
+			return '';
+		}
+
+		$css = wp_strip_all_tags($attrs['bpafbCustomCss']);
+		$css = str_replace('</style', '', $css);
+		$css = str_replace('selector', '.bpafb-uid-' . $uid, $css);
+
+		return '<style>' . $css . '</style>';
+	}
+
+	/**
+	 * Helper function to inject style, class, id and data-* attributes into the first tag of HTML content.
 	 *
 	 * @param string $html             The original HTML content.
 	 * @param string $new_styles_str   The new inline styles to inject.
 	 * @param string $classes_to_add   The custom classes to add to the wrapper.
+	 * @param string $id               Optional HTML id to set on the wrapper (does not overwrite an existing id).
+	 * @param array  $data_attrs       Optional map of data-* attribute name => value.
 	 * @return string
 	 */
-	private function bpafb_inject_styles($html, $new_styles_str, $classes_to_add = '')
+	private function bpafb_inject_styles($html, $new_styles_str, $classes_to_add = '', $id = '', $data_attrs = [])
 	{
 		if (preg_match('/^\s*<([a-z0-9-]+)([^>]*)>/i', $html, $matches)) {
 			$tag = $matches[1];
 			$attributes_str = $matches[2];
 
 			// Check if style attribute already exists
-			if (preg_match('/style=["\']([^"\']*)["\']/i', $attributes_str, $style_matches)) {
+			if ($new_styles_str && preg_match('/style=["\']([^"\']*)["\']/i', $attributes_str, $style_matches)) {
 				$existing_styles = rtrim(trim($style_matches[1]), ';') . ';';
 				$updated_styles = $existing_styles . ' ' . $new_styles_str;
 				$new_attributes_str = preg_replace('/style=["\']([^"\']*)["\']/i', 'style="' . esc_attr($updated_styles) . '"', $attributes_str);
-			} else {
+			} elseif ($new_styles_str) {
 				$new_attributes_str = $attributes_str . ' style="' . esc_attr($new_styles_str) . '"';
+			} else {
+				$new_attributes_str = $attributes_str;
 			}
 
 			// Also add a custom container class
-			if (preg_match('/class=["\']([^"\']*)["\']/i', $new_attributes_str, $class_matches)) {
+			if ($classes_to_add && preg_match('/class=["\']([^"\']*)["\']/i', $new_attributes_str, $class_matches)) {
 				$updated_classes = trim($class_matches[1]) . ' ' . $classes_to_add;
 				$new_attributes_str = preg_replace('/class=["\']([^"\']*)["\']/i', 'class="' . esc_attr($updated_classes) . '"', $new_attributes_str);
-			} else {
+			} elseif ($classes_to_add) {
 				$new_attributes_str = $new_attributes_str . ' class="' . esc_attr($classes_to_add) . '"';
+			}
+
+			// Add an id only if the wrapper doesn't already have one.
+			if ($id && !preg_match('/\sid=["\']/i', $new_attributes_str)) {
+				$new_attributes_str .= ' id="' . esc_attr($id) . '"';
+			}
+
+			foreach ($data_attrs as $attr_name => $attr_value) {
+				$new_attributes_str .= ' ' . esc_attr($attr_name) . '="' . esc_attr($attr_value) . '"';
 			}
 
 			$pos = strpos($html, $matches[0]);

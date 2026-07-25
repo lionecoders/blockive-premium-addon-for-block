@@ -51,41 +51,29 @@
 		"alignment": {
 			"type": "string",
 			"default": "left"
-		}
+		},
+		"fontFamily": { "type": "string", "default": "" },
+		"fontWeight": { "type": "string", "default": "" },
+		"lineHeight": { "type": "number", "default": null },
+		"letterSpacing": { "type": "number", "default": null },
+		"textTransform": { "type": "string", "default": "" },
+		"textDecoration": { "type": "string", "default": "" },
+		"borderType": { "type": "string", "default": "solid" },
+		"boxShadow": { "type": "boolean", "default": false },
+		"shadowColor": { "type": "string", "default": "rgba(0,0,0,0.15)" },
+		"shadowBlur": { "type": "number", "default": 15 },
+		"shadowSpread": { "type": "number", "default": 0 },
+		"hoverBoxShadow": { "type": "boolean", "default": false },
+		"hoverShadowColor": { "type": "string", "default": "rgba(0,0,0,0.15)" },
+		"hoverShadowBlur": { "type": "number", "default": 15 },
+		"hoverShadowSpread": { "type": "number", "default": 0 }
 	},
 	"supports": {
 		"align": [
 			"wide",
 			"full"
 		],
-		"html": false,
-		"color": {
-			"text": true,
-			"background": true,
-			"gradients": true,
-			"link": true
-		},
-		"typography": {
-			"fontSize": true,
-			"lineHeight": true,
-			"__experimentalFontFamily": true,
-			"__experimentalFontWeight": true,
-			"__experimentalFontStyle": true,
-			"__experimentalTextTransform": true,
-			"__experimentalTextDecoration": true,
-			"__experimentalLetterSpacing": true,
-			"__experimentalDefaultControls": {
-				"fontSize": true
-			}
-		},
-		"spacing": {
-			"margin": true,
-			"padding": true,
-			"__experimentalDefaultControls": {
-				"margin": true,
-				"padding": true
-			}
-		}
+		"html": false
 	},
 	"textdomain": "blockive-premium-addon-for-block",
 	"editorScript": "file:./index.js",

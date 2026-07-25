@@ -11,6 +11,9 @@ import {
 import { useSelect } from '@wordpress/data';
 import { decodeEntities } from '@wordpress/html-entities';
 
+import InspectorTabs from '../components/inspector-tabs';
+import AdvancedTab from '../components/advanced-tab';
+
 function buildCategoryTree(categories) {
 	const map = {};
 	const tree = [];
@@ -106,6 +109,8 @@ export default function Edit({ attributes, setAttributes }) {
 	return (
 		<>
 			<InspectorControls>
+				<InspectorTabs
+					general={(
 				<PanelBody title={__('Settings', 'blockive-premium-addon-for-block')} initialOpen={true}>
 					<SelectControl
 						label={__('Taxonomy', 'blockive-premium-addon-for-block')}
@@ -219,6 +224,9 @@ export default function Edit({ attributes, setAttributes }) {
 						onChange={(val) => setAttributes({ showHierarchy: val })}
 					/>
 				</PanelBody>
+					)}
+					style={(
+						<>
 				<PanelColorSettings
 					title={__('Item Colors', 'blockive-premium-addon-for-block')}
 					initialOpen={false}
@@ -268,6 +276,10 @@ export default function Edit({ attributes, setAttributes }) {
 						onChange={(val) => setAttributes({ removeChildBorder: val })}
 					/>
 				</PanelBody>
+						</>
+					)}
+					advanced={<AdvancedTab attributes={attributes} setAttributes={setAttributes} />}
+				/>
 			</InspectorControls>
 
 			<div {...blockProps}>

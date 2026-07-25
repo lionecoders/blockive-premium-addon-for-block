@@ -14,6 +14,9 @@ import {
 } from '@wordpress/components';
 import { useState } from '@wordpress/element';
 
+import InspectorTabs from '../components/inspector-tabs';
+import AdvancedTab from '../components/advanced-tab';
+
 export default function Edit({ attributes, setAttributes }) {
 	const {
 		items,
@@ -73,6 +76,8 @@ export default function Edit({ attributes, setAttributes }) {
 	return (
 		<>
 			<InspectorControls>
+				<InspectorTabs
+					general={(
 				<PanelBody title={__('Tabs Items', 'blockive-premium-addon-for-block')} initialOpen={true}>
 					{items.map((item, index) => (
 						<div key={item.id} style={{ marginBottom: '15px', border: '1px solid #ddd', padding: '10px' }}>
@@ -90,8 +95,9 @@ export default function Edit({ attributes, setAttributes }) {
 						{__('Add Tab', 'blockive-premium-addon-for-block')}
 					</Button>
 				</PanelBody>
-
-				<PanelBody title={__('Colors & Styles', 'blockive-premium-addon-for-block')} initialOpen={false}>
+					)}
+					style={(
+				<PanelBody title={__('Colors & Styles', 'blockive-premium-addon-for-block')} initialOpen={true}>
 					<RangeControl
 						label={__('Tab Border Radius', 'blockive-premium-addon-for-block')}
 						value={tabBorderRadius}
@@ -118,6 +124,9 @@ export default function Edit({ attributes, setAttributes }) {
 						<ColorPalette value={contentTextColor} onChange={(val) => setAttributes({ contentTextColor: val })} />
 					</BaseControl>
 				</PanelBody>
+					)}
+					advanced={<AdvancedTab attributes={attributes} setAttributes={setAttributes} />}
+				/>
 			</InspectorControls>
 
 			<div {...blockProps}>

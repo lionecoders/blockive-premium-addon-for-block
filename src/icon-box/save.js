@@ -1,6 +1,9 @@
 import { useBlockProps, RichText } from '@wordpress/block-editor';
+import { getTypographyStyles } from '../components/typography-controls';
+import { getBorderStyles } from '../components/border-controls';
+import { getShadowStyle } from '../components/shadow-controls';
 
-export default function save({ attributes }) {
+export default function save( { attributes } ) {
 	const {
 		icon,
 		title,
@@ -11,82 +14,101 @@ export default function save({ attributes }) {
 		iconPosition,
 		iconSize,
 		iconColor,
+		iconColorHover,
 		iconBgColor,
+		iconBgColorHover,
 		titleColor,
+		titleColorHover,
 		descColor,
 		boxBgColor,
+		boxBgColorHover,
 		iconPadding,
 		iconBorderRadius,
 		boxAlignment,
 		iconBorderColor,
 		iconBorderWidth,
 		iconBorderStyle,
+		titleFontFamily,
+		titleFontSize,
+		titleFontWeight,
+		titleLineHeight,
+		descFontFamily,
+		descFontSize,
+		descLineHeight,
+		borderType,
+		borderWidth,
+		borderRadius,
+		borderColor,
+		boxShadow,
+		shadowColor,
+		shadowBlur,
+		shadowSpread,
+		hoverBoxShadow,
+		hoverShadowColor,
+		hoverShadowBlur,
+		hoverShadowSpread,
 	} = attributes;
 
 	const customStyles = {
-		'--bpafb-ib-icon-size': `${iconSize}px`,
+		'--bpafb-ib-icon-size': `${ iconSize }px`,
 		'--bpafb-ib-icon-color': iconColor,
+		'--bpafb-ib-icon-color-hover': iconColorHover,
 		'--bpafb-ib-icon-bg': iconBgColor,
-		'--bpafb-ib-icon-padding': `${iconPadding}px`,
-		'--bpafb-ib-icon-radius': `${iconBorderRadius}px`,
+		'--bpafb-ib-icon-bg-hover': iconBgColorHover,
+		'--bpafb-ib-icon-padding': `${ iconPadding }px`,
+		'--bpafb-ib-icon-radius': `${ iconBorderRadius }px`,
 		'--bpafb-ib-title-color': titleColor,
+		'--bpafb-ib-title-color-hover': titleColorHover,
 		'--bpafb-ib-desc-color': descColor,
 		'--bpafb-ib-box-bg': boxBgColor,
+		'--bpafb-ib-box-bg-hover': boxBgColorHover,
 		'--bpafb-ib-alignment': boxAlignment,
 		'--bpafb-ib-icon-border-color': iconBorderColor,
-		'--bpafb-ib-icon-border-width': iconBorderWidth ? `${iconBorderWidth}px` : undefined,
+		'--bpafb-ib-icon-border-width': iconBorderWidth ? `${ iconBorderWidth }px` : undefined,
 		'--bpafb-ib-icon-border-style': iconBorderStyle,
+		'--bpafb-ib-shadow': getShadowStyle( { enabled: boxShadow, color: shadowColor, blur: shadowBlur, spread: shadowSpread } ),
+		'--bpafb-ib-shadow-hover': getShadowStyle( { enabled: hoverBoxShadow, color: hoverShadowColor, blur: hoverShadowBlur, spread: hoverShadowSpread } ),
+		...getTypographyStyles( { fontFamily: titleFontFamily, fontSize: titleFontSize, fontWeight: titleFontWeight, lineHeight: titleLineHeight }, '--bpafb-ib-title' ),
+		...getTypographyStyles( { fontFamily: descFontFamily, fontSize: descFontSize, lineHeight: descLineHeight }, '--bpafb-ib-desc' ),
+		...getBorderStyles( { borderType, borderWidth, borderRadius, borderColor }, '--bpafb-ib-box' ),
 	};
 
-	const blockProps = useBlockProps.save({
-		className: `bpafb-icon-box-wrapper bpafb-icon-box--${iconPosition}`,
+	const blockProps = useBlockProps.save( {
+		className: `bpafb-icon-box-wrapper bpafb-icon-box--${ iconPosition }`,
 		style: customStyles,
-	});
+	} );
 
 	const TitleTag = titleTag;
 
 	const ContentElement = () => (
 		<>
-			{icon && (
+			{ icon && (
 				<div className="bpafb-icon-box-icon-wrapper">
-					<i className={`${icon} bpafb-icon-box-icon`}></i>
+					<i className={ `${ icon } bpafb-icon-box-icon` }></i>
 				</div>
-			)}
+			) }
 
 			<div className="bpafb-icon-box-content">
-				{title && (
-					<RichText.Content
-						tagName={TitleTag}
-						className="bpafb-icon-box-title"
-						value={title}
-					/>
-				)}
-
-				{description && (
-					<RichText.Content
-						tagName="div"
-						className="bpafb-icon-box-description"
-						value={description}
-					/>
-				)}
+				{ title && <RichText.Content tagName={ TitleTag } className="bpafb-icon-box-title" value={ title } /> }
+				{ description && <RichText.Content tagName="div" className="bpafb-icon-box-description" value={ description } /> }
 			</div>
 		</>
 	);
 
 	return (
-		<div {...blockProps}>
-			{url ? (
+		<div { ...blockProps }>
+			{ url ? (
 				<a
-					href={url}
+					href={ url }
 					className="bpafb-icon-box-link"
-					target={linkTarget ? '_blank' : undefined}
-					rel={linkTarget ? 'noopener noreferrer' : undefined}
+					target={ linkTarget ? '_blank' : undefined }
+					rel={ linkTarget ? 'noopener noreferrer' : undefined }
 				>
 					<ContentElement />
 				</a>
 			) : (
 				<ContentElement />
-			)}
+			) }
 		</div>
 	);
 }

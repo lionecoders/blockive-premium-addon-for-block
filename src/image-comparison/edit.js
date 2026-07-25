@@ -15,6 +15,9 @@ import {
 	SelectControl,
 } from '@wordpress/components';
 
+import InspectorTabs from '../components/inspector-tabs';
+import AdvancedTab from '../components/advanced-tab';
+
 export default function Edit({ attributes, setAttributes }) {
 	const {
 		beforeImage,
@@ -47,6 +50,9 @@ export default function Edit({ attributes, setAttributes }) {
 	return (
 		<>
 			<InspectorControls>
+				<InspectorTabs
+					general={(
+						<>
 				<PanelBody title={__('Images', 'blockive-premium-addon-for-block')} initialOpen={true}>
 					<div style={{ marginBottom: '15px' }}>
 						<label style={{ display: 'block', marginBottom: '8px' }}>{__('Before Image', 'blockive-premium-addon-for-block')}</label>
@@ -128,9 +134,10 @@ export default function Edit({ attributes, setAttributes }) {
 						onChange={(val) => setAttributes({ height: val })}
 					/>
 				</PanelBody>
-			</InspectorControls>
-
-			<InspectorControls group="styles">
+						</>
+					)}
+					style={(
+						<>
 				<PanelBody title={__('Colors', 'blockive-premium-addon-for-block')} initialOpen={true}>
 					<div style={{ marginBottom: '15px' }}>
 						<label>{__('Separator Color', 'blockive-premium-addon-for-block')}</label>
@@ -165,9 +172,13 @@ export default function Edit({ attributes, setAttributes }) {
 						</>
 					)}
 				</PanelBody>
+						</>
+					)}
+					advanced={<AdvancedTab attributes={attributes} setAttributes={setAttributes} />}
+				/>
 			</InspectorControls>
 
-			<div 
+			<div
 				{...blockProps}
 				data-position={sliderPosition}
 				data-label-position={labelPosition}

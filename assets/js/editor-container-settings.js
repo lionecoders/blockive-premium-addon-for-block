@@ -1,448 +1,158 @@
-( function( blocks, element, blockEditor, components, compose, hooks, i18n ) {
-	const el = element.createElement;
-	const { Fragment } = element;
-	const { InspectorControls } = blockEditor;
-	const { PanelBody, ColorPalette, RangeControl, SelectControl, ToggleControl, ButtonGroup, Button } = components;
+( function( element, compose, hooks ) {
 	const { createHigherOrderComponent } = compose;
 	const { addFilter } = hooks;
-	const { __ } = i18n;
 
 	const NAMESPACE = 'blockive-premium-addon-for-block/';
 
-	// 1. Register container attributes for all Blockive blocks
+	// Every attribute powering the shared "Advanced" tab (see src/components/advanced-tab).
+	// Registered globally for every Blockive block so no per-block block.json edits are needed.
+	const ADVANCED_ATTRIBUTES = {
+		// Layout
+		bpafbDisplay: { type: 'string', default: '' },
+		bpafbOverflow: { type: 'string', default: '' },
+		bpafbPosition: { type: 'string', default: '' },
+		bpafbContainerWidth: { type: 'number', default: undefined },
+		bpafbContainerWidthUnit: { type: 'string', default: 'px' },
+		bpafbContainerMinHeight: { type: 'number', default: undefined },
+		bpafbContainerMaxHeight: { type: 'number', default: undefined },
+		bpafbContainerAlign: { type: 'string', default: '' },
+
+		// Spacing (desktop)
+		bpafbContainerPaddingTop: { type: 'number', default: undefined },
+		bpafbContainerPaddingRight: { type: 'number', default: undefined },
+		bpafbContainerPaddingBottom: { type: 'number', default: undefined },
+		bpafbContainerPaddingLeft: { type: 'number', default: undefined },
+		bpafbContainerMarginTop: { type: 'number', default: undefined },
+		bpafbContainerMarginRight: { type: 'number', default: undefined },
+		bpafbContainerMarginBottom: { type: 'number', default: undefined },
+		bpafbContainerMarginLeft: { type: 'number', default: undefined },
+
+		// Spacing (tablet)
+		bpafbContainerPaddingTopTablet: { type: 'number', default: undefined },
+		bpafbContainerPaddingRightTablet: { type: 'number', default: undefined },
+		bpafbContainerPaddingBottomTablet: { type: 'number', default: undefined },
+		bpafbContainerPaddingLeftTablet: { type: 'number', default: undefined },
+		bpafbContainerMarginTopTablet: { type: 'number', default: undefined },
+		bpafbContainerMarginRightTablet: { type: 'number', default: undefined },
+		bpafbContainerMarginBottomTablet: { type: 'number', default: undefined },
+		bpafbContainerMarginLeftTablet: { type: 'number', default: undefined },
+
+		// Spacing (mobile)
+		bpafbContainerPaddingTopMobile: { type: 'number', default: undefined },
+		bpafbContainerPaddingRightMobile: { type: 'number', default: undefined },
+		bpafbContainerPaddingBottomMobile: { type: 'number', default: undefined },
+		bpafbContainerPaddingLeftMobile: { type: 'number', default: undefined },
+		bpafbContainerMarginTopMobile: { type: 'number', default: undefined },
+		bpafbContainerMarginRightMobile: { type: 'number', default: undefined },
+		bpafbContainerMarginBottomMobile: { type: 'number', default: undefined },
+		bpafbContainerMarginLeftMobile: { type: 'number', default: undefined },
+
+		// Background
+		bpafbContainerBgType: { type: 'string', default: 'color' },
+		bpafbContainerBgColor: { type: 'string', default: '' },
+		bpafbContainerBgGradient: { type: 'string', default: '' },
+		bpafbContainerBgImageUrl: { type: 'string', default: '' },
+		bpafbContainerBgImageId: { type: 'number', default: 0 },
+		bpafbContainerBgImageSize: { type: 'string', default: 'cover' },
+		bpafbContainerOverlayColor: { type: 'string', default: '' },
+
+		// Border
+		bpafbContainerBorderColor: { type: 'string', default: '' },
+		bpafbContainerBorderStyle: { type: 'string', default: 'none' },
+		bpafbContainerBorderWidth: { type: 'number', default: undefined },
+		bpafbContainerBorderRadius: { type: 'number', default: undefined },
+
+		// Shadow
+		bpafbContainerBoxShadow: { type: 'boolean', default: false },
+		bpafbContainerShadowColor: { type: 'string', default: 'rgba(0,0,0,0.1)' },
+		bpafbContainerShadowBlur: { type: 'number', default: 10 },
+		bpafbContainerShadowSpread: { type: 'number', default: 0 },
+		bpafbContainerHoverBoxShadow: { type: 'boolean', default: false },
+		bpafbContainerHoverShadowColor: { type: 'string', default: 'rgba(0,0,0,0.15)' },
+		bpafbContainerHoverShadowBlur: { type: 'number', default: 15 },
+		bpafbContainerHoverShadowSpread: { type: 'number', default: 0 },
+
+		// Visibility
+		bpafbHideDesktop: { type: 'boolean', default: false },
+		bpafbHideTablet: { type: 'boolean', default: false },
+		bpafbHideMobile: { type: 'boolean', default: false },
+
+		// Animation
+		bpafbAnimationType: { type: 'string', default: 'none' },
+		bpafbAnimationDuration: { type: 'number', default: 800 },
+		bpafbAnimationDelay: { type: 'number', default: 0 },
+		bpafbAnimationEasing: { type: 'string', default: 'ease' },
+
+		// Transform
+		bpafbTransformRotate: { type: 'number', default: 0 },
+		bpafbTransformScale: { type: 'number', default: 100 },
+		bpafbTransformTranslateX: { type: 'number', default: 0 },
+		bpafbTransformTranslateY: { type: 'number', default: 0 },
+
+		// Motion effects
+		bpafbHoverAnimation: { type: 'string', default: 'none' },
+		bpafbFloatingEffect: { type: 'boolean', default: false },
+
+		// Z-Index
+		bpafbZIndex: { type: 'number', default: undefined },
+
+		// Custom CSS / unique id used to scope it
+		bpafbCustomCss: { type: 'string', default: '' },
+		bpafbUid: { type: 'string', default: '' },
+
+		// HTML attributes
+		bpafbHtmlId: { type: 'string', default: '' },
+		bpafbHtmlClasses: { type: 'string', default: '' },
+	};
+
 	function addContainerAttributes( settings, name ) {
 		if ( ! name.startsWith( NAMESPACE ) ) {
 			return settings;
 		}
 
-		if ( ! settings.attributes ) {
-			settings.attributes = {};
-		}
-
-		settings.attributes = Object.assign( {}, settings.attributes, {
-			bpafbContainerBgColor: {
-				type: 'string',
-				default: '',
-			},
-			bpafbContainerPaddingTop: {
-				type: 'number',
-				default: undefined,
-			},
-			bpafbContainerPaddingRight: {
-				type: 'number',
-				default: undefined,
-			},
-			bpafbContainerPaddingBottom: {
-				type: 'number',
-				default: undefined,
-			},
-			bpafbContainerPaddingLeft: {
-				type: 'number',
-				default: undefined,
-			},
-			bpafbContainerMarginTop: {
-				type: 'number',
-				default: undefined,
-			},
-			bpafbContainerMarginRight: {
-				type: 'number',
-				default: undefined,
-			},
-			bpafbContainerMarginBottom: {
-				type: 'number',
-				default: undefined,
-			},
-			bpafbContainerMarginLeft: {
-				type: 'number',
-				default: undefined,
-			},
-			bpafbContainerBorderColor: {
-				type: 'string',
-				default: '',
-			},
-			bpafbContainerBorderStyle: {
-				type: 'string',
-				default: 'none',
-			},
-			bpafbContainerBorderWidth: {
-				type: 'number',
-				default: undefined,
-			},
-			bpafbContainerBorderRadius: {
-				type: 'number',
-				default: undefined,
-			},
-			bpafbContainerBoxShadow: {
-				type: 'boolean',
-				default: false,
-			},
-			bpafbContainerShadowColor: {
-				type: 'string',
-				default: 'rgba(0,0,0,0.1)',
-			},
-			bpafbContainerShadowBlur: {
-				type: 'number',
-				default: 10,
-			},
-			bpafbContainerShadowSpread: {
-				type: 'number',
-				default: 0,
-			},
-			bpafbContainerWidth: {
-				type: 'number',
-				default: undefined,
-			},
-			bpafbContainerWidthUnit: {
-				type: 'string',
-				default: 'px',
-			},
-			bpafbContainerAlign: {
-				type: 'string',
-				default: '',
-			},
-		} );
+		settings.attributes = Object.assign( {}, settings.attributes, ADVANCED_ATTRIBUTES );
 
 		return settings;
 	}
 	addFilter( 'blocks.registerBlockType', 'bpafb/container-attributes', addContainerAttributes );
 
-	// 2. Inject Gutenberg InspectorControls sidebar panel for Blockive blocks
-	const withContainerInspectorControls = createHigherOrderComponent( ( BlockEdit ) => {
-		return ( props ) => {
-			if ( ! props.name.startsWith( NAMESPACE ) ) {
-				return el( BlockEdit, props );
-			}
-
-			const { attributes, setAttributes } = props;
-			const {
-				bpafbContainerBgColor,
-				bpafbContainerPaddingTop,
-				bpafbContainerPaddingRight,
-				bpafbContainerPaddingBottom,
-				bpafbContainerPaddingLeft,
-				bpafbContainerMarginTop,
-				bpafbContainerMarginRight,
-				bpafbContainerMarginBottom,
-				bpafbContainerMarginLeft,
-				bpafbContainerBorderColor,
-				bpafbContainerBorderStyle,
-				bpafbContainerBorderWidth,
-				bpafbContainerBorderRadius,
-				bpafbContainerBoxShadow,
-				bpafbContainerShadowColor,
-				bpafbContainerShadowBlur,
-				bpafbContainerShadowSpread,
-				bpafbContainerWidth,
-				bpafbContainerWidthUnit,
-				bpafbContainerAlign,
-			} = attributes;
-
-			// Define width control ranges based on unit type
-			let minWidth = 100;
-			let maxWidth = 2000;
-			let stepWidth = 1;
-			if ( bpafbContainerWidthUnit === '%' ) {
-				minWidth = 10;
-				maxWidth = 100;
-			} else if ( bpafbContainerWidthUnit === 'rem' ) {
-				minWidth = 5;
-				maxWidth = 150;
-				stepWidth = 0.1;
-			}
-
-			return el(
-				Fragment,
-				null,
-				el( BlockEdit, props ),
-				el(
-					InspectorControls,
-					null,
-					el(
-						PanelBody,
-						{
-							title: __( 'Container Settings', 'blockive-premium-addon-for-block' ),
-							initialOpen: false,
-						},
-						// Width
-						el( 'h3', { style: { marginTop: '0px', marginBottom: '10px', fontSize: '14px', fontWeight: '600' } }, __( 'Container Width', 'blockive-premium-addon-for-block' ) ),
-						el(
-							'div',
-							{ style: { display: 'flex', gap: '10px', alignItems: 'flex-end', marginBottom: '15px' } },
-							el(
-								'div',
-								{ style: { flexGrow: 1 } },
-								el( RangeControl, {
-									label: __( 'Container Max Width', 'blockive-premium-addon-for-block' ),
-									value: bpafbContainerWidth,
-									onChange: ( val ) => setAttributes( { bpafbContainerWidth: val } ),
-									min: minWidth,
-									max: maxWidth,
-									step: stepWidth,
-								} )
-							),
-							el(
-								'div',
-								{ style: { width: '80px', marginBottom: '16px' } },
-								el( SelectControl, {
-									label: __( 'Unit', 'blockive-premium-addon-for-block' ),
-									value: bpafbContainerWidthUnit || 'px',
-									options: [
-										{ label: 'px', value: 'px' },
-										{ label: '%', value: '%' },
-										{ label: 'rem', value: 'rem' },
-									],
-									onChange: ( val ) => setAttributes( { bpafbContainerWidthUnit: val } ),
-								} )
-							)
-						),
-						el( 'p', { style: { marginTop: '0px', marginBottom: '8px', fontWeight: '500' } }, __( 'Alignment', 'blockive-premium-addon-for-block' ) ),
-						el(
-							ButtonGroup,
-							{ style: { marginBottom: '20px', display: 'flex', width: '100%' } },
-							el(
-								Button,
-								{
-									isPrimary: bpafbContainerAlign === 'left',
-									isSecondary: bpafbContainerAlign !== 'left',
-									style: { flexGrow: 1, textAlign: 'center', justifyContent: 'center' },
-									onClick: () => setAttributes( { bpafbContainerAlign: 'left' } ),
-								},
-								__( 'Left', 'blockive-premium-addon-for-block' )
-							),
-							el(
-								Button,
-								{
-									isPrimary: bpafbContainerAlign === 'center' || ! bpafbContainerAlign,
-									isSecondary: bpafbContainerAlign !== 'center' && bpafbContainerAlign !== '',
-									style: { flexGrow: 1, textAlign: 'center', justifyContent: 'center' },
-									onClick: () => setAttributes( { bpafbContainerAlign: 'center' } ),
-								},
-								__( 'Center', 'blockive-premium-addon-for-block' )
-							),
-							el(
-								Button,
-								{
-									isPrimary: bpafbContainerAlign === 'right',
-									isSecondary: bpafbContainerAlign !== 'right',
-									style: { flexGrow: 1, textAlign: 'center', justifyContent: 'center' },
-									onClick: () => setAttributes( { bpafbContainerAlign: 'right' } ),
-								},
-								__( 'Right', 'blockive-premium-addon-for-block' )
-							)
-						),
-
-						el( 'hr', { style: { margin: '15px 0', borderColor: '#e0e0e0' } } ),
-
-						// Background Settings
-						el( 'h3', { style: { margin: '0 0 10px 0', fontSize: '14px', fontWeight: '600' } }, __( 'Background Color', 'blockive-premium-addon-for-block' ) ),
-						el( ColorPalette, {
-							value: bpafbContainerBgColor,
-							onChange: ( val ) => setAttributes( { bpafbContainerBgColor: val } ),
-						} ),
-
-						el( 'hr', { style: { margin: '15px 0', borderColor: '#e0e0e0' } } ),
-
-						// Spacing settings
-						el( 'h3', { style: { margin: '0 0 10px 0', fontSize: '14px', fontWeight: '600' } }, __( 'Padding (px)', 'blockive-premium-addon-for-block' ) ),
-						el(
-							'div',
-							{ style: { display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px', marginBottom: '15px' } },
-							el( RangeControl, {
-								label: __( 'Top', 'blockive-premium-addon-for-block' ),
-								value: bpafbContainerPaddingTop,
-								onChange: ( val ) => setAttributes( { bpafbContainerPaddingTop: val } ),
-								min: 0,
-								max: 200,
-							} ),
-							el( RangeControl, {
-								label: __( 'Right', 'blockive-premium-addon-for-block' ),
-								value: bpafbContainerPaddingRight,
-								onChange: ( val ) => setAttributes( { bpafbContainerPaddingRight: val } ),
-								min: 0,
-								max: 200,
-							} ),
-							el( RangeControl, {
-								label: __( 'Bottom', 'blockive-premium-addon-for-block' ),
-								value: bpafbContainerPaddingBottom,
-								onChange: ( val ) => setAttributes( { bpafbContainerPaddingBottom: val } ),
-								min: 0,
-								max: 200,
-							} ),
-							el( RangeControl, {
-								label: __( 'Left', 'blockive-premium-addon-for-block' ),
-								value: bpafbContainerPaddingLeft,
-								onChange: ( val ) => setAttributes( { bpafbContainerPaddingLeft: val } ),
-								min: 0,
-								max: 200,
-							} )
-						),
-
-						el( 'h3', { style: { margin: '0 0 10px 0', fontSize: '14px', fontWeight: '600' } }, __( 'Margin (px)', 'blockive-premium-addon-for-block' ) ),
-						el(
-							'div',
-							{ style: { display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px', marginBottom: '15px' } },
-							el( RangeControl, {
-								label: __( 'Top', 'blockive-premium-addon-for-block' ),
-								value: bpafbContainerMarginTop,
-								onChange: ( val ) => setAttributes( { bpafbContainerMarginTop: val } ),
-								min: -100,
-								max: 200,
-							} ),
-							el( RangeControl, {
-								label: __( 'Right', 'blockive-premium-addon-for-block' ),
-								value: bpafbContainerMarginRight,
-								onChange: ( val ) => setAttributes( { bpafbContainerMarginRight: val } ),
-								min: -100,
-								max: 200,
-							} ),
-							el( RangeControl, {
-								label: __( 'Bottom', 'blockive-premium-addon-for-block' ),
-								value: bpafbContainerMarginBottom,
-								onChange: ( val ) => setAttributes( { bpafbContainerMarginBottom: val } ),
-								min: -100,
-								max: 200,
-							} ),
-							el( RangeControl, {
-								label: __( 'Left', 'blockive-premium-addon-for-block' ),
-								value: bpafbContainerMarginLeft,
-								onChange: ( val ) => setAttributes( { bpafbContainerMarginLeft: val } ),
-								min: -100,
-								max: 200,
-							} )
-						),
-
-						el( 'hr', { style: { margin: '15px 0', borderColor: '#e0e0e0' } } ),
-
-						// Border options
-						el( 'h3', { style: { margin: '0 0 10px 0', fontSize: '14px', fontWeight: '600' } }, __( 'Border Options', 'blockive-premium-addon-for-block' ) ),
-						el( SelectControl, {
-							label: __( 'Border Style', 'blockive-premium-addon-for-block' ),
-							value: bpafbContainerBorderStyle || 'none',
-							options: [
-								{ label: __( 'None', 'blockive-premium-addon-for-block' ), value: 'none' },
-								{ label: __( 'Solid', 'blockive-premium-addon-for-block' ), value: 'solid' },
-								{ label: __( 'Dashed', 'blockive-premium-addon-for-block' ), value: 'dashed' },
-								{ label: __( 'Dotted', 'blockive-premium-addon-for-block' ), value: 'dotted' },
-								{ label: __( 'Double', 'blockive-premium-addon-for-block' ), value: 'double' },
-							],
-							onChange: ( val ) => setAttributes( { bpafbContainerBorderStyle: val } ),
-						} ),
-						bpafbContainerBorderStyle && bpafbContainerBorderStyle !== 'none' && el(
-							Fragment,
-							null,
-							el( 'p', { style: { marginTop: '10px', marginBottom: '8px', fontWeight: '500' } }, __( 'Border Color', 'blockive-premium-addon-for-block' ) ),
-							el( ColorPalette, {
-								value: bpafbContainerBorderColor,
-								onChange: ( val ) => setAttributes( { bpafbContainerBorderColor: val } ),
-							} ),
-							el( RangeControl, {
-								label: __( 'Border Width (px)', 'blockive-premium-addon-for-block' ),
-								value: bpafbContainerBorderWidth,
-								onChange: ( val ) => setAttributes( { bpafbContainerBorderWidth: val } ),
-								min: 0,
-								max: 20,
-							} )
-						),
-						el( RangeControl, {
-							label: __( 'Border Radius (px)', 'blockive-premium-addon-for-block' ),
-							value: bpafbContainerBorderRadius,
-							onChange: ( val ) => setAttributes( { bpafbContainerBorderRadius: val } ),
-							min: 0,
-							max: 100,
-						} ),
-
-						el( 'hr', { style: { margin: '15px 0', borderColor: '#e0e0e0' } } ),
-
-						// Box Shadow settings
-						el( 'h3', { style: { margin: '0 0 10px 0', fontSize: '14px', fontWeight: '600' } }, __( 'Box Shadow', 'blockive-premium-addon-for-block' ) ),
-						el( ToggleControl, {
-							label: __( 'Enable Box Shadow', 'blockive-premium-addon-for-block' ),
-							checked: ! ! bpafbContainerBoxShadow,
-							onChange: ( val ) => setAttributes( { bpafbContainerBoxShadow: val } ),
-						} ),
-						bpafbContainerBoxShadow && el(
-							Fragment,
-							null,
-							el( 'p', { style: { marginTop: '10px', marginBottom: '8px', fontWeight: '500' } }, __( 'Shadow Color', 'blockive-premium-addon-for-block' ) ),
-							el( ColorPalette, {
-								value: bpafbContainerShadowColor || 'rgba(0,0,0,0.1)',
-								onChange: ( val ) => setAttributes( { bpafbContainerShadowColor: val } ),
-							} ),
-							el( RangeControl, {
-								label: __( 'Shadow Blur', 'blockive-premium-addon-for-block' ),
-								value: bpafbContainerShadowBlur !== undefined ? bpafbContainerShadowBlur : 10,
-								onChange: ( val ) => setAttributes( { bpafbContainerShadowBlur: val } ),
-								min: 0,
-								max: 100,
-							} ),
-							el( RangeControl, {
-								label: __( 'Shadow Spread', 'blockive-premium-addon-for-block' ),
-								value: bpafbContainerShadowSpread !== undefined ? bpafbContainerShadowSpread : 0,
-								onChange: ( val ) => setAttributes( { bpafbContainerShadowSpread: val } ),
-								min: -50,
-								max: 50,
-							} )
-						)
-					)
-				)
-			);
-		};
-	}, 'withContainerInspectorControls' );
-	addFilter( 'editor.BlockEdit', 'bpafb/container-controls', withContainerInspectorControls );
-
-	// 3. Apply custom container styles dynamically to the block wrapper in the editor
+	// Live-preview the subset of Advanced attributes that are simple, static
+	// wrapper styles. Hover states, responsive breakpoints, custom CSS and
+	// scroll animations are frontend-only concerns (see frontend-animations.js
+	// and bpafb_render_block_container()) and aren't simulated in the editor.
 	const withContainerStyles = createHigherOrderComponent( ( BlockListBlock ) => {
 		return ( props ) => {
 			if ( ! props.name.startsWith( NAMESPACE ) ) {
-				return el( BlockListBlock, props );
+				return element.createElement( BlockListBlock, props );
 			}
 
 			const { attributes } = props;
 			const styles = {};
 
-			// Width logic
 			if ( attributes.bpafbContainerWidth !== undefined ) {
 				const unit = attributes.bpafbContainerWidthUnit || 'px';
 				styles.width = '100%';
 				styles.maxWidth = attributes.bpafbContainerWidth + unit;
 			}
 
-			// Margins Left/Right
-			if ( attributes.bpafbContainerMarginLeft !== undefined ) {
-				styles.marginLeft = attributes.bpafbContainerMarginLeft + 'px';
-			}
-			if ( attributes.bpafbContainerMarginRight !== undefined ) {
-				styles.marginRight = attributes.bpafbContainerMarginRight + 'px';
-			}
+			[ 'MarginLeft', 'MarginRight', 'MarginTop', 'MarginBottom', 'PaddingTop', 'PaddingRight', 'PaddingBottom', 'PaddingLeft' ].forEach( ( suffix ) => {
+				const attrKey = 'bpafbContainer' + suffix;
+				if ( attributes[ attrKey ] !== undefined ) {
+					const cssProp = suffix.replace( /([A-Z])/g, ( m, p1, offset ) => ( offset > 0 ? '-' : '' ) + p1.toLowerCase() );
+					styles[ cssProp.replace( /-([a-z])/g, ( m, c ) => c.toUpperCase() ) ] = attributes[ attrKey ] + 'px';
+				}
+			} );
 
-			// Margins Top/Bottom
-			if ( attributes.bpafbContainerMarginTop !== undefined ) {
-				styles.marginTop = attributes.bpafbContainerMarginTop + 'px';
-			}
-			if ( attributes.bpafbContainerMarginBottom !== undefined ) {
-				styles.marginBottom = attributes.bpafbContainerMarginBottom + 'px';
-			}
-
-			// Background Color
-			if ( attributes.bpafbContainerBgColor ) {
+			if ( attributes.bpafbContainerBgType === 'gradient' && attributes.bpafbContainerBgGradient ) {
+				styles.backgroundImage = attributes.bpafbContainerBgGradient;
+			} else if ( attributes.bpafbContainerBgType === 'image' && attributes.bpafbContainerBgImageUrl ) {
+				styles.backgroundImage = 'url(' + attributes.bpafbContainerBgImageUrl + ')';
+				styles.backgroundSize = attributes.bpafbContainerBgImageSize || 'cover';
+				styles.backgroundPosition = 'center center';
+			} else if ( attributes.bpafbContainerBgColor ) {
 				styles.backgroundColor = attributes.bpafbContainerBgColor;
 			}
 
-			// Padding
-			if ( attributes.bpafbContainerPaddingTop !== undefined ) {
-				styles.paddingTop = attributes.bpafbContainerPaddingTop + 'px';
-			}
-			if ( attributes.bpafbContainerPaddingRight !== undefined ) {
-				styles.paddingRight = attributes.bpafbContainerPaddingRight + 'px';
-			}
-			if ( attributes.bpafbContainerPaddingBottom !== undefined ) {
-				styles.paddingBottom = attributes.bpafbContainerPaddingBottom + 'px';
-			}
-			if ( attributes.bpafbContainerPaddingLeft !== undefined ) {
-				styles.paddingLeft = attributes.bpafbContainerPaddingLeft + 'px';
-			}
-
-			// Border settings
 			if ( attributes.bpafbContainerBorderStyle && attributes.bpafbContainerBorderStyle !== 'none' ) {
 				styles.borderStyle = attributes.bpafbContainerBorderStyle;
 				if ( attributes.bpafbContainerBorderColor ) {
@@ -456,40 +166,77 @@
 				styles.borderRadius = attributes.bpafbContainerBorderRadius + 'px';
 			}
 
-			// Box Shadow settings
 			if ( attributes.bpafbContainerBoxShadow ) {
 				const blur = attributes.bpafbContainerShadowBlur !== undefined ? attributes.bpafbContainerShadowBlur : 10;
 				const spread = attributes.bpafbContainerShadowSpread !== undefined ? attributes.bpafbContainerShadowSpread : 0;
 				const color = attributes.bpafbContainerShadowColor || 'rgba(0,0,0,0.1)';
-				styles.boxShadow = `0 4px ${blur}px ${spread}px ${color}`;
+				styles.boxShadow = `0 4px ${ blur }px ${ spread }px ${ color }`;
 			}
 
-			// Merge styles and class name with existing wrapper props
+			if ( attributes.bpafbDisplay ) {
+				styles.display = attributes.bpafbDisplay;
+			}
+			if ( attributes.bpafbOverflow ) {
+				styles.overflow = attributes.bpafbOverflow;
+			}
+			if ( attributes.bpafbPosition ) {
+				styles.position = attributes.bpafbPosition;
+			}
+			if ( attributes.bpafbContainerMinHeight !== undefined ) {
+				styles.minHeight = attributes.bpafbContainerMinHeight + 'px';
+			}
+			if ( attributes.bpafbContainerMaxHeight !== undefined ) {
+				styles.maxHeight = attributes.bpafbContainerMaxHeight + 'px';
+			}
+			if ( attributes.bpafbZIndex !== undefined ) {
+				styles.zIndex = attributes.bpafbZIndex;
+			}
+
+			const transforms = [];
+			if ( attributes.bpafbTransformRotate ) {
+				transforms.push( `rotate(${ attributes.bpafbTransformRotate }deg)` );
+			}
+			if ( attributes.bpafbTransformScale !== undefined && attributes.bpafbTransformScale !== 100 ) {
+				transforms.push( `scale(${ attributes.bpafbTransformScale / 100 })` );
+			}
+			if ( attributes.bpafbTransformTranslateX ) {
+				transforms.push( `translateX(${ attributes.bpafbTransformTranslateX }px)` );
+			}
+			if ( attributes.bpafbTransformTranslateY ) {
+				transforms.push( `translateY(${ attributes.bpafbTransformTranslateY }px)` );
+			}
+			if ( transforms.length ) {
+				styles.transform = transforms.join( ' ' );
+			}
+
 			const existingStyle = props.wrapperProps?.style || {};
 			const existingClassName = props.wrapperProps?.className || '';
-			const align = attributes.bpafbContainerAlign || (attributes.bpafbContainerWidth !== undefined ? 'center' : '');
-			let newClassName = `${existingClassName} bpafb-has-container-settings`;
+			const align = attributes.bpafbContainerAlign || ( attributes.bpafbContainerWidth !== undefined ? 'center' : '' );
+			let newClassName = `${ existingClassName } bpafb-has-container-settings`;
 			if ( align ) {
-				newClassName += ` bpafb-align-${align}`;
+				newClassName += ` bpafb-align-${ align }`;
+			}
+			if ( attributes.bpafbFloatingEffect ) {
+				newClassName += ' bpafb-floating';
+			}
+			if ( attributes.bpafbHtmlClasses ) {
+				newClassName += ` ${ attributes.bpafbHtmlClasses }`;
 			}
 			newClassName = newClassName.trim();
 
 			const wrapperProps = Object.assign( {}, props.wrapperProps, {
 				style: Object.assign( {}, existingStyle, styles ),
 				className: newClassName,
+				id: attributes.bpafbHtmlId || undefined,
 			} );
 
-			return el( BlockListBlock, Object.assign( {}, props, { wrapperProps } ) );
+			return element.createElement( BlockListBlock, Object.assign( {}, props, { wrapperProps } ) );
 		};
 	}, 'withContainerStyles' );
 	addFilter( 'editor.BlockListBlock', 'bpafb/container-styles', withContainerStyles );
 
 } )(
-	window.wp.blocks,
 	window.wp.element,
-	window.wp.blockEditor,
-	window.wp.components,
 	window.wp.compose,
-	window.wp.hooks,
-	window.wp.i18n
+	window.wp.hooks
 );

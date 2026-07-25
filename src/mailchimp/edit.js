@@ -8,6 +8,9 @@ import {
 	ToggleControl,
 } from '@wordpress/components';
 
+import InspectorTabs from '../components/inspector-tabs';
+import AdvancedTab from '../components/advanced-tab';
+
 export default function Edit({ attributes, setAttributes }) {
 	const { 
 		title, subtitle, placeholderText, buttonText, 
@@ -44,6 +47,8 @@ export default function Edit({ attributes, setAttributes }) {
 	return (
 		<>
 			<InspectorControls>
+				<InspectorTabs
+					general={(
 				<PanelBody title={__('Content', 'blockive-premium-addon-for-block')} initialOpen={true}>
 					<TextControl
 						label={__('Title', 'blockive-premium-addon-for-block')}
@@ -72,9 +77,9 @@ export default function Edit({ attributes, setAttributes }) {
 						onChange={(val) => setAttributes({ formAction: val })}
 					/>
 				</PanelBody>
-			</InspectorControls>
-
-			<InspectorControls group="styles">
+					)}
+					style={(
+						<>
 				<PanelBody title={__('Colors', 'blockive-premium-addon-for-block')}>
 					<div style={{ marginBottom: '15px' }}>
 						<label>{__('Title Color', 'blockive-premium-addon-for-block')}</label>
@@ -219,6 +224,10 @@ export default function Edit({ attributes, setAttributes }) {
 						/>
 					</div>
 				</PanelBody>
+						</>
+					)}
+					advanced={<AdvancedTab attributes={attributes} setAttributes={setAttributes} />}
+				/>
 			</InspectorControls>
 
 			<div {...blockProps}>

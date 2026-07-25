@@ -8,6 +8,9 @@ import {
 	Button,
 } from '@wordpress/components';
 
+import InspectorTabs from '../components/inspector-tabs';
+import AdvancedTab from '../components/advanced-tab';
+
 export default function Edit({ attributes, setAttributes }) {
 	const { items, columns, numberColor, textColor, duration, gap } = attributes;
 
@@ -53,6 +56,9 @@ export default function Edit({ attributes, setAttributes }) {
 	return (
 		<>
 			<InspectorControls>
+				<InspectorTabs
+					general={(
+						<>
 				<PanelBody title={__('Fun Facts', 'blockive-premium-addon-for-block')} initialOpen={true}>
 					{(items || []).map((item, index) => (
 						<div key={item.id || index} style={{ border: '1px solid #ccc', padding: '10px', marginBottom: '10px', borderRadius: '4px', backgroundColor: '#f9f9f9' }}>
@@ -116,7 +122,9 @@ export default function Edit({ attributes, setAttributes }) {
 						step={100}
 					/>
 				</PanelBody>
-
+						</>
+					)}
+					style={(
 				<PanelBody title={__('Colors', 'blockive-premium-addon-for-block')} initialOpen={false}>
 					<div style={{ marginBottom: '15px' }}>
 						<label>{__('Number Color', 'blockive-premium-addon-for-block')}</label>
@@ -133,6 +141,9 @@ export default function Edit({ attributes, setAttributes }) {
 						/>
 					</div>
 				</PanelBody>
+					)}
+					advanced={<AdvancedTab attributes={attributes} setAttributes={setAttributes} />}
+				/>
 			</InspectorControls>
 
 			<div {...blockProps} style={{

@@ -16,6 +16,9 @@ import {
 	ColorPalette,
 } from '@wordpress/components';
 
+import InspectorTabs from '../components/inspector-tabs';
+import AdvancedTab from '../components/advanced-tab';
+
 export default function Edit({ attributes, setAttributes }) {
 	const {
 		content,
@@ -64,6 +67,9 @@ export default function Edit({ attributes, setAttributes }) {
 			</BlockControls>
 
 			<InspectorControls>
+				<InspectorTabs
+					general={(
+						<>
 				<PanelBody title={__('Settings', 'blockive-premium-addon-for-block')} initialOpen={true}>
 					<SelectControl
 						label={__('HTML Tag', 'blockive-premium-addon-for-block')}
@@ -91,9 +97,10 @@ export default function Edit({ attributes, setAttributes }) {
 						/>
 					)}
 				</PanelBody>
-			</InspectorControls>
-
-			<InspectorControls group="styles">
+						</>
+					)}
+					style={(
+						<>
 				<PanelBody title={__('Motion Effects', 'blockive-premium-addon-for-block')} initialOpen={false}>
 					<SelectControl
 						label={__('Entrance Animation', 'blockive-premium-addon-for-block')}
@@ -177,6 +184,10 @@ export default function Edit({ attributes, setAttributes }) {
 						max={100}
 					/>
 				</PanelBody>
+						</>
+					)}
+					advanced={<AdvancedTab attributes={attributes} setAttributes={setAttributes} />}
+				/>
 			</InspectorControls>
 
 			<RichText

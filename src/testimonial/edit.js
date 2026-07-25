@@ -18,6 +18,9 @@ import {
 } from '@wordpress/components';
 import { useState } from '@wordpress/element';
 
+import InspectorTabs from '../components/inspector-tabs';
+import AdvancedTab from '../components/advanced-tab';
+
 export default function Edit({ attributes, setAttributes }) {
 	const {
 		testimonials,
@@ -106,6 +109,9 @@ export default function Edit({ attributes, setAttributes }) {
 	return (
 		<>
 			<InspectorControls>
+				<InspectorTabs
+					general={(
+						<>
 				<PanelBody title={__('Testimonials', 'blockive-premium-addon-for-block')} initialOpen={true}>
 					{testimonials.map((testimonial, index) => (
 						<div key={testimonial.id} style={{ marginBottom: '15px', border: '1px solid #ddd', padding: '10px' }}>
@@ -209,9 +215,10 @@ export default function Edit({ attributes, setAttributes }) {
 						onChange={(val) => setAttributes({ infiniteLoop: val })}
 					/>
 				</PanelBody>
-			</InspectorControls>
-
-			<InspectorControls group="styles">
+						</>
+					)}
+					style={(
+						<>
 				<PanelBody title={__('Card Styles', 'blockive-premium-addon-for-block')}>
 					<SelectControl
 						label={__('Image Position', 'blockive-premium-addon-for-block')}
@@ -377,6 +384,10 @@ export default function Edit({ attributes, setAttributes }) {
 						</>
 					)}
 				</PanelBody>
+						</>
+					)}
+					advanced={<AdvancedTab attributes={attributes} setAttributes={setAttributes} />}
+				/>
 			</InspectorControls>
 
 			<div {...blockProps}>

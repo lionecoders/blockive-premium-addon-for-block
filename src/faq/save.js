@@ -1,6 +1,9 @@
 import { useBlockProps, RichText } from '@wordpress/block-editor';
+import { getTypographyStyles } from '../components/typography-controls';
+import { getBorderStyles } from '../components/border-controls';
+import { getShadowStyle } from '../components/shadow-controls';
 
-export default function save({ attributes }) {
+export default function save( { attributes } ) {
 	const {
 		items,
 		icon,
@@ -12,6 +15,25 @@ export default function save({ attributes }) {
 		contentBgColor,
 		borderColor,
 		borderWidth,
+		borderType,
+		borderRadius,
+		titleColorHover,
+		titleBgColorHover,
+		questionFontFamily,
+		questionFontSize,
+		questionFontWeight,
+		questionLineHeight,
+		questionLetterSpacing,
+		questionTextTransform,
+		questionTextDecoration,
+		boxShadow,
+		shadowColor,
+		shadowBlur,
+		shadowSpread,
+		hoverBoxShadow,
+		hoverShadowColor,
+		hoverShadowBlur,
+		hoverShadowSpread,
 		animationType,
 		animationDuration,
 		animationDelay,
@@ -23,104 +45,119 @@ export default function save({ attributes }) {
 	} = attributes;
 
 	const customStyles = {
-		'--bpafb-faq-borderWidth': `${borderWidth}px`,
-		'--bpafb-faq-borderColor': borderColor,
 		'--bpafb-faq-title-color': titleColor,
 		'--bpafb-faq-title-active-color': titleActiveColor,
 		'--bpafb-faq-title-bg': titleBgColor,
 		'--bpafb-faq-content-color': contentColor,
 		'--bpafb-faq-content-bg': contentBgColor,
+		...( titleColorHover ? { '--bpafb-faq-title-color-hover': titleColorHover } : {} ),
+		...( titleBgColorHover ? { '--bpafb-faq-title-bg-hover': titleBgColorHover } : {} ),
+		'--bpafb-faq-shadow': getShadowStyle( { enabled: boxShadow, color: shadowColor, blur: shadowBlur, spread: shadowSpread } ),
+		'--bpafb-faq-shadow-hover': getShadowStyle( { enabled: hoverBoxShadow, color: hoverShadowColor, blur: hoverShadowBlur, spread: hoverShadowSpread } ),
+		...getTypographyStyles(
+			{
+				fontFamily: questionFontFamily,
+				fontSize: questionFontSize,
+				fontWeight: questionFontWeight,
+				lineHeight: questionLineHeight,
+				letterSpacing: questionLetterSpacing,
+				textTransform: questionTextTransform,
+				textDecoration: questionTextDecoration,
+			},
+			'--bpafb-faq-title'
+		),
+		...getBorderStyles( { borderType, borderWidth, borderRadius, borderColor }, '--bpafb-faq' ),
 	};
 
-	if (animationType !== 'none') {
+	if ( animationType !== 'none' ) {
 		customStyles.animationDuration = animationDuration;
 		customStyles.animationDelay = animationDelay;
 	}
 
-	const blockProps = useBlockProps.save({
-		className: `bpafb-faq-wrapper ${animationType !== 'none' ? `bpafb-animate-${animationType}` : ''}`,
+	const blockProps = useBlockProps.save( {
+		className: `bpafb-faq-wrapper ${ animationType !== 'none' ? `bpafb-animate-${ animationType }` : '' }`,
 		style: customStyles,
-	});
+	} );
 
 	// Generate FAQ schema
 	const schemaData = {
-		"@context": "https://schema.org",
-		"@type": "FAQPage",
-		"mainEntity": items.map(item => ({
-			"@type": "Question",
-			"name": item.title.replace(/<\/?[^>]+(>|$)/g, ""),
-			"acceptedAnswer": {
-				"@type": "Answer",
-				"text": item.content
-			}
-		}))
+		'@context': 'https://schema.org',
+		'@type': 'FAQPage',
+		mainEntity: items.map( ( item ) => ( {
+			'@type': 'Question',
+			name: item.title.replace( /<\/?[^>]+(>|$)/g, '' ),
+			acceptedAnswer: {
+				'@type': 'Answer',
+				text: item.content,
+			},
+		} ) ),
 	};
-	
-	const schemaStr = JSON.stringify(schemaData).replace(/</g, '\\u003c');
+
+	const schemaStr = JSON.stringify( schemaData ).replace( /</g, '\\u003c' );
 
 	return (
-		<div {...blockProps}>
-			<script 
-				type="application/ld+json" 
-				dangerouslySetInnerHTML={{ __html: schemaStr }} 
+		<div { ...blockProps }>
+			<script
+				type="application/ld+json"
+				dangerouslySetInnerHTML={ { __html: schemaStr } }
 			/>
-			{headingText && (
+			{ headingText && (
 				<RichText.Content
-					tagName={headingTag}
+					tagName={ headingTag }
 					className="bpafb-faq-main-heading"
-					style={{ textAlign: headingAlign, color: headingColor, marginBottom: '20px' }}
-					value={headingText}
+					style={ { textAlign: headingAlign, color: headingColor, marginBottom: '20px' } }
+					value={ headingText }
 				/>
-			)}
-			{items.map((item, index) => {
+			) }
+			{ items.map( ( item, index ) => {
 				const isFirst = index === 0;
 				let iconElement = null;
-				
-				if (icon !== 'none') {
-					if (icon === 'plus-minus') {
+
+				if ( icon !== 'none' ) {
+					if ( icon === 'plus-minus' ) {
 						iconElement = (
 							<>
 								<span className="bpafb-faq-icon bpafb-icon-open"><i className="fas fa-plus"></i></span>
-								<span className="bpafb-faq-icon bpafb-icon-close" style={{ display: 'none' }}><i className="fas fa-minus"></i></span>
+								<span className="bpafb-faq-icon bpafb-icon-close" style={ { display: 'none' } }><i className="fas fa-minus"></i></span>
 							</>
 						);
-					} else if (icon === 'chevron') {
+					} else if ( icon === 'chevron' ) {
 						iconElement = (
 							<>
 								<span className="bpafb-faq-icon bpafb-icon-open"><i className="fas fa-chevron-down"></i></span>
-								<span className="bpafb-faq-icon bpafb-icon-close" style={{ display: 'none' }}><i className="fas fa-chevron-up"></i></span>
+								<span className="bpafb-faq-icon bpafb-icon-close" style={ { display: 'none' } }><i className="fas fa-chevron-up"></i></span>
 							</>
 						);
-					} else if (icon === 'angle') {
+					} else if ( icon === 'angle' ) {
 						iconElement = (
 							<>
 								<span className="bpafb-faq-icon bpafb-icon-open"><i className="fas fa-angle-down"></i></span>
-								<span className="bpafb-faq-icon bpafb-icon-close" style={{ display: 'none' }}><i className="fas fa-angle-up"></i></span>
+								<span className="bpafb-faq-icon bpafb-icon-close" style={ { display: 'none' } }><i className="fas fa-angle-up"></i></span>
 							</>
 						);
 					}
 				}
 
 				return (
-					<div key={item.id || index} className={`bpafb-faq-item ${isFirst ? 'active' : ''}`}>
-						<div className={`bpafb-faq-header flex-align-${iconAlign}`}>
-							{iconAlign === 'left' && iconElement}
+					<div key={ item.id || index } className={ `bpafb-faq-item ${ isFirst ? 'active' : '' }` }>
+						<div className={ `bpafb-faq-header flex-align-${ iconAlign }` }>
+							{ iconAlign === 'left' && iconElement }
 							<RichText.Content
-								tagName={titleTag}
+								tagName={ titleTag }
 								className="bpafb-faq-title"
-								value={item.title}
+								value={ item.title }
 							/>
-							{iconAlign === 'right' && iconElement}
+							{ iconAlign === 'right' && iconElement }
 						</div>
-						<div className="bpafb-faq-content" style={{ display: isFirst ? 'block' : 'none' }}>
+						<div className="bpafb-faq-content" style={ { display: isFirst ? 'block' : 'none' } }>
 							<RichText.Content
 								tagName="p"
-								value={item.content}
+								value={ item.content }
 							/>
 						</div>
 					</div>
 				);
-			})}
+			} ) }
 		</div>
 	);
 }

@@ -8,122 +8,55 @@
 	"icon": "info",
 	"description": "An icon box that displays an icon, title, description, and link.",
 	"attributes": {
-		"icon": {
-			"type": "string",
-			"default": "fas fa-star"
-		},
-		"title": {
-			"type": "string",
-			"default": "Icon Box Title"
-		},
-		"titleTag": {
-			"type": "string",
-			"default": "h3"
-		},
-		"description": {
-			"type": "string",
-			"default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-		},
-		"url": {
-			"type": "string",
-			"default": ""
-		},
-		"linkTarget": {
-			"type": "boolean",
-			"default": false
-		},
-		"iconPosition": {
-			"type": "string",
-			"default": "top"
-		},
-		"iconSize": {
-			"type": "number",
-			"default": 40
-		},
-		"iconColor": {
-			"type": "string",
-			"default": "#3b82f6"
-		},
-		"iconBgColor": {
-			"type": "string",
-			"default": "rgba(59, 130, 246, 0.1)"
-		},
-		"titleColor": {
-			"type": "string",
-			"default": ""
-		},
-		"descColor": {
-			"type": "string",
-			"default": ""
-		},
-		"boxBgColor": {
-			"type": "string",
-			"default": ""
-		},
-		"iconPadding": {
-			"type": "number",
-			"default": 20
-		},
-		"iconBorderRadius": {
-			"type": "number",
-			"default": 20
-		},
-		"boxAlignment": {
-			"type": "string",
-			"default": "center"
-		},
-		"iconBorderColor": {
-			"type": "string",
-			"default": ""
-		},
-		"iconBorderWidth": {
-			"type": "number",
-			"default": 0
-		},
-		"iconBorderStyle": {
-			"type": "string",
-			"default": "solid"
-		}
+		"icon": { "type": "string", "default": "fas fa-star" },
+		"title": { "type": "string", "default": "Icon Box Title" },
+		"titleTag": { "type": "string", "default": "h3" },
+		"description": { "type": "string", "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+		"url": { "type": "string", "default": "" },
+		"linkTarget": { "type": "boolean", "default": false },
+		"iconPosition": { "type": "string", "default": "top" },
+		"iconSize": { "type": "number", "default": 40 },
+		"iconColor": { "type": "string", "default": "#3b82f6" },
+		"iconColorHover": { "type": "string", "default": "" },
+		"iconBgColor": { "type": "string", "default": "rgba(59, 130, 246, 0.1)" },
+		"iconBgColorHover": { "type": "string", "default": "" },
+		"titleColor": { "type": "string", "default": "" },
+		"titleColorHover": { "type": "string", "default": "" },
+		"descColor": { "type": "string", "default": "" },
+		"boxBgColor": { "type": "string", "default": "" },
+		"boxBgColorHover": { "type": "string", "default": "" },
+		"iconPadding": { "type": "number", "default": 20 },
+		"iconBorderRadius": { "type": "number", "default": 20 },
+		"boxAlignment": { "type": "string", "default": "center" },
+		"iconBorderColor": { "type": "string", "default": "" },
+		"iconBorderWidth": { "type": "number", "default": 0 },
+		"iconBorderStyle": { "type": "string", "default": "solid" },
+		"titleFontFamily": { "type": "string", "default": "" },
+		"titleFontSize": { "type": "number", "default": null },
+		"titleFontWeight": { "type": "string", "default": "" },
+		"titleLineHeight": { "type": "number", "default": null },
+		"descFontFamily": { "type": "string", "default": "" },
+		"descFontSize": { "type": "number", "default": null },
+		"descLineHeight": { "type": "number", "default": null },
+		"borderType": { "type": "string", "default": "none" },
+		"borderWidth": { "type": "number", "default": 0 },
+		"borderRadius": { "type": "number", "default": 0 },
+		"borderColor": { "type": "string", "default": "" },
+		"boxShadow": { "type": "boolean", "default": false },
+		"shadowColor": { "type": "string", "default": "rgba(0,0,0,0.15)" },
+		"shadowBlur": { "type": "number", "default": 15 },
+		"shadowSpread": { "type": "number", "default": 0 },
+		"hoverBoxShadow": { "type": "boolean", "default": false },
+		"hoverShadowColor": { "type": "string", "default": "rgba(0,0,0,0.15)" },
+		"hoverShadowBlur": { "type": "number", "default": 15 },
+		"hoverShadowSpread": { "type": "number", "default": 0 }
 	},
 	"supports": {
 		"align": [
 			"wide",
 			"full"
 		],
-		"html": false,
-		"typography": {
-			"fontSize": true,
-			"lineHeight": true,
-			"__experimentalFontFamily": true,
-			"__experimentalDefaultControls": {
-				"fontSize": true
-			}
-		},
-		"spacing": {
-			"margin": true,
-			"padding": true,
-			"__experimentalDefaultControls": {
-				"margin": true,
-				"padding": true
-			}
-		},
-		"color": {
-			"background": false,
-			"text": false,
-			"gradients": false
-		},
-		"__experimentalBorder": {
-			"radius": true,
-			"color": true,
-			"width": true,
-			"style": true,
-			"__experimentalDefaultControls": {
-				"radius": true,
-				"color": true,
-				"width": true,
-				"style": true
-			}
-		}
+		"html": false
 	},
 	"textdomain": "blockive-premium-addon-for-block",
 	"editorScript": "file:./index.js",

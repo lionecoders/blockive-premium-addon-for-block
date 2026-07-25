@@ -19,6 +19,9 @@ import {
 } from '@wordpress/components';
 import { useState } from '@wordpress/element';
 
+import InspectorTabs from '../components/inspector-tabs';
+import AdvancedTab from '../components/advanced-tab';
+
 export default function Edit({ attributes, setAttributes }) {
 	const {
 		items,
@@ -80,6 +83,9 @@ export default function Edit({ attributes, setAttributes }) {
 	return (
 		<>
 			<InspectorControls>
+				<InspectorTabs
+					general={(
+						<>
 				<PanelBody title={__('Image Accordion Items', 'blockive-premium-addon-for-block')} initialOpen={true}>
 					{items.map((item, index) => (
 						<div key={item.id} style={{ marginBottom: '15px', border: '1px solid #ddd', padding: '10px' }}>
@@ -117,7 +123,7 @@ export default function Edit({ attributes, setAttributes }) {
 					</Button>
 				</PanelBody>
 
-				<PanelBody title={__('Styling & Settings', 'blockive-premium-addon-for-block')}>
+				<PanelBody title={__('Settings', 'blockive-premium-addon-for-block')}>
 					<ToggleControl
 						label={__('Show Title', 'blockive-premium-addon-for-block')}
 						checked={showTitle}
@@ -128,6 +134,12 @@ export default function Edit({ attributes, setAttributes }) {
 						checked={showContent}
 						onChange={(val) => setAttributes({ showContent: val })}
 					/>
+				</PanelBody>
+						</>
+					)}
+					style={(
+						<>
+				<PanelBody title={__('Styling', 'blockive-premium-addon-for-block')} initialOpen={true}>
 					<div style={{ marginBottom: '15px' }}>
 						<label>{__('Title Color', 'blockive-premium-addon-for-block')}</label>
 						<ColorPalette
@@ -189,6 +201,10 @@ export default function Edit({ attributes, setAttributes }) {
 						onChange={(val) => setAttributes({ imagePosition: val })}
 					/>
 				</PanelBody>
+						</>
+					)}
+					advanced={<AdvancedTab attributes={attributes} setAttributes={setAttributes} />}
+				/>
 			</InspectorControls>
 
 			<div {...blockProps}>

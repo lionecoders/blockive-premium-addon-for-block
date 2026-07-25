@@ -15,6 +15,9 @@ import {
 	ColorPalette,
 } from '@wordpress/components';
 
+import InspectorTabs from '../components/inspector-tabs';
+import AdvancedTab from '../components/advanced-tab';
+
 const themeColors = [
 	{ name: 'Indigo', color: '#4f46e5' },
 	{ name: 'Blue', color: '#2563eb' },
@@ -74,90 +77,98 @@ export default function Edit({ attributes, setAttributes }) {
 			</BlockControls>
 
 			<InspectorControls>
-				<PanelBody title={__('Content Settings', 'blockive-premium-addon-for-block')} initialOpen={true}>
-					<RangeControl
-						label={__('Percentage (%)', 'blockive-premium-addon-for-block')}
-						value={percentage}
-						onChange={(val) => setAttributes({ percentage: val })}
-						min={0}
-						max={100}
-					/>
-					<ToggleControl
-						label={__('Display Percentage Label?', 'blockive-premium-addon-for-block')}
-						checked={displayPercentage}
-						onChange={(val) => setAttributes({ displayPercentage: val })}
-					/>
-				</PanelBody>
-
-				<PanelBody title={__('Design Options', 'blockive-premium-addon-for-block')} initialOpen={false}>
-					<SelectControl
-						label={__('Layout Style', 'blockive-premium-addon-for-block')}
-						value={layoutStyle}
-						options={[
-							{ label: 'Standard (Top Info)', value: 'standard' },
-							{ label: 'Inline Inside Bar', value: 'inside' },
-						]}
-						onChange={(val) => setAttributes({ layoutStyle: val })}
-					/>
-					<RangeControl
-						label={__('Bar Height (px)', 'blockive-premium-addon-for-block')}
-						value={barHeight}
-						onChange={(val) => setAttributes({ barHeight: val })}
-						min={5}
-						max={100}
-					/>
-					<RangeControl
-						label={__('Border Radius (px)', 'blockive-premium-addon-for-block')}
-						value={borderRadius}
-						onChange={(val) => setAttributes({ borderRadius: val })}
-						min={0}
-						max={50}
-					/>
-					<ToggleControl
-						label={__('Striped Bar?', 'blockive-premium-addon-for-block')}
-						checked={isStriped}
-						onChange={(val) => setAttributes({ isStriped: val })}
-					/>
-					{isStriped && (
-						<ToggleControl
-							label={__('Animate Stripes? (Scrolling)', 'blockive-premium-addon-for-block')}
-							checked={isAnimated}
-							onChange={(val) => setAttributes({ isAnimated: val })}
-						/>
+				<InspectorTabs
+					general={(
+						<>
+							<PanelBody title={__('Content Settings', 'blockive-premium-addon-for-block')} initialOpen={true}>
+								<RangeControl
+									label={__('Percentage (%)', 'blockive-premium-addon-for-block')}
+									value={percentage}
+									onChange={(val) => setAttributes({ percentage: val })}
+									min={0}
+									max={100}
+								/>
+								<ToggleControl
+									label={__('Display Percentage Label?', 'blockive-premium-addon-for-block')}
+									checked={displayPercentage}
+									onChange={(val) => setAttributes({ displayPercentage: val })}
+								/>
+								<SelectControl
+									label={__('Layout Style', 'blockive-premium-addon-for-block')}
+									value={layoutStyle}
+									options={[
+										{ label: 'Standard (Top Info)', value: 'standard' },
+										{ label: 'Inline Inside Bar', value: 'inside' },
+									]}
+									onChange={(val) => setAttributes({ layoutStyle: val })}
+								/>
+							</PanelBody>
+						</>
 					)}
-					<RangeControl
-						label={__('Entrance Animation Speed (ms)', 'blockive-premium-addon-for-block')}
-						value={animationDuration}
-						onChange={(val) => setAttributes({ animationDuration: val })}
-						min={500}
-						max={5000}
-						step={100}
-						help={__('Controls how long the bar takes to fill up.', 'blockive-premium-addon-for-block')}
-					/>
-				</PanelBody>
-			</InspectorControls>
+					style={(
+						<>
+							<PanelBody title={__('Design Options', 'blockive-premium-addon-for-block')} initialOpen={true}>
+								<RangeControl
+									label={__('Bar Height (px)', 'blockive-premium-addon-for-block')}
+									value={barHeight}
+									onChange={(val) => setAttributes({ barHeight: val })}
+									min={5}
+									max={100}
+								/>
+								<RangeControl
+									label={__('Border Radius (px)', 'blockive-premium-addon-for-block')}
+									value={borderRadius}
+									onChange={(val) => setAttributes({ borderRadius: val })}
+									min={0}
+									max={50}
+								/>
+								<ToggleControl
+									label={__('Striped Bar?', 'blockive-premium-addon-for-block')}
+									checked={isStriped}
+									onChange={(val) => setAttributes({ isStriped: val })}
+								/>
+								{isStriped && (
+									<ToggleControl
+										label={__('Animate Stripes? (Scrolling)', 'blockive-premium-addon-for-block')}
+										checked={isAnimated}
+										onChange={(val) => setAttributes({ isAnimated: val })}
+									/>
+								)}
+								<RangeControl
+									label={__('Entrance Animation Speed (ms)', 'blockive-premium-addon-for-block')}
+									value={animationDuration}
+									onChange={(val) => setAttributes({ animationDuration: val })}
+									min={500}
+									max={5000}
+									step={100}
+									help={__('Controls how long the bar takes to fill up.', 'blockive-premium-addon-for-block')}
+								/>
+							</PanelBody>
 
-			<InspectorControls group="styles">
-				<PanelBody title={__('Colors', 'blockive-premium-addon-for-block')} initialOpen={true}>
-					<BaseControl label={__('Bar Progress Color', 'blockive-premium-addon-for-block')}>
-						<ColorPalette colors={themeColors} value={barColor || '#4f46e5'} onChange={(val) => setAttributes({ barColor: val })} />
-					</BaseControl>
-					<BaseControl label={__('Track Background', 'blockive-premium-addon-for-block')}>
-						<ColorPalette colors={themeColors} value={trackColor || '#f1f5f9'} onChange={(val) => setAttributes({ trackColor: val })} />
-					</BaseControl>
-					<BaseControl label={__('Title Color', 'blockive-premium-addon-for-block')}>
-						<ColorPalette colors={themeColors} value={titleColor || '#1e293b'} onChange={(val) => setAttributes({ titleColor: val })} />
-					</BaseControl>
-					<BaseControl label={__('Percentage Color', 'blockive-premium-addon-for-block')}>
-						<ColorPalette colors={themeColors} value={percentageColor || '#1e293b'} onChange={(val) => setAttributes({ percentageColor: val })} />
-					</BaseControl>
-					
-					{layoutStyle === 'inside' && (
-						<BaseControl label={__('Inner Text Color', 'blockive-premium-addon-for-block')}>
-							<ColorPalette colors={themeColors} value={innerTextColor || '#ffffff'} onChange={(val) => setAttributes({ innerTextColor: val })} />
-						</BaseControl>
+							<PanelBody title={__('Colors', 'blockive-premium-addon-for-block')} initialOpen={false}>
+								<BaseControl label={__('Bar Progress Color', 'blockive-premium-addon-for-block')}>
+									<ColorPalette colors={themeColors} value={barColor || '#4f46e5'} onChange={(val) => setAttributes({ barColor: val })} />
+								</BaseControl>
+								<BaseControl label={__('Track Background', 'blockive-premium-addon-for-block')}>
+									<ColorPalette colors={themeColors} value={trackColor || '#f1f5f9'} onChange={(val) => setAttributes({ trackColor: val })} />
+								</BaseControl>
+								<BaseControl label={__('Title Color', 'blockive-premium-addon-for-block')}>
+									<ColorPalette colors={themeColors} value={titleColor || '#1e293b'} onChange={(val) => setAttributes({ titleColor: val })} />
+								</BaseControl>
+								<BaseControl label={__('Percentage Color', 'blockive-premium-addon-for-block')}>
+									<ColorPalette colors={themeColors} value={percentageColor || '#1e293b'} onChange={(val) => setAttributes({ percentageColor: val })} />
+								</BaseControl>
+
+								{layoutStyle === 'inside' && (
+									<BaseControl label={__('Inner Text Color', 'blockive-premium-addon-for-block')}>
+										<ColorPalette colors={themeColors} value={innerTextColor || '#ffffff'} onChange={(val) => setAttributes({ innerTextColor: val })} />
+									</BaseControl>
+								)}
+							</PanelBody>
+						</>
 					)}
-				</PanelBody>
+					advanced={<AdvancedTab attributes={attributes} setAttributes={setAttributes} />}
+				/>
 			</InspectorControls>
 
 			<div {...blockProps}>

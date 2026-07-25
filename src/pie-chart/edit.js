@@ -17,6 +17,9 @@ import {
 import { useEffect, useRef } from '@wordpress/element';
 import Chart from 'chart.js/auto';
 
+import InspectorTabs from '../components/inspector-tabs';
+import AdvancedTab from '../components/advanced-tab';
+
 export default function Edit({ attributes, setAttributes }) {
 	const {
 		chartData,
@@ -111,80 +114,88 @@ export default function Edit({ attributes, setAttributes }) {
 			</BlockControls>
 
 			<InspectorControls>
-				<PanelBody title={__('Chart Data', 'blockive-premium-addon-for-block')} initialOpen={true}>
-					{chartData.map((item, index) => (
-						<div key={item.id} style={{ marginBottom: '15px', padding: '10px', border: '1px solid #e2e8f0', borderRadius: '4px' }}>
-							<TextControl
-								label={__('Label', 'blockive-premium-addon-for-block')}
-								value={item.label}
-								onChange={(val) => updateItem(index, 'label', val)}
-							/>
-							<TextControl
-								label={__('Value', 'blockive-premium-addon-for-block')}
-								type="number"
-								value={item.value}
-								onChange={(val) => updateItem(index, 'value', val)}
-							/>
-							<BaseControl label={__('Slice Color', 'blockive-premium-addon-for-block')}>
-								<ColorPalette
-									value={item.bg}
-									onChange={(val) => updateItem(index, 'bg', val || '#000')}
+				<InspectorTabs
+					general={(
+						<>
+							<PanelBody title={__('Chart Data', 'blockive-premium-addon-for-block')} initialOpen={true}>
+								{chartData.map((item, index) => (
+									<div key={item.id} style={{ marginBottom: '15px', padding: '10px', border: '1px solid #e2e8f0', borderRadius: '4px' }}>
+										<TextControl
+											label={__('Label', 'blockive-premium-addon-for-block')}
+											value={item.label}
+											onChange={(val) => updateItem(index, 'label', val)}
+										/>
+										<TextControl
+											label={__('Value', 'blockive-premium-addon-for-block')}
+											type="number"
+											value={item.value}
+											onChange={(val) => updateItem(index, 'value', val)}
+										/>
+										<BaseControl label={__('Slice Color', 'blockive-premium-addon-for-block')}>
+											<ColorPalette
+												value={item.bg}
+												onChange={(val) => updateItem(index, 'bg', val || '#000')}
+											/>
+										</BaseControl>
+										<Button isDestructive onClick={() => removeItem(index)} style={{ marginTop: '10px' }}>
+											{__('Remove Item', 'blockive-premium-addon-for-block')}
+										</Button>
+									</div>
+								))}
+								<Button isPrimary onClick={addItem}>
+									{__('Add Slice', 'blockive-premium-addon-for-block')}
+								</Button>
+							</PanelBody>
+
+							<PanelBody title={__('Chart Settings', 'blockive-premium-addon-for-block')} initialOpen={false}>
+								<RangeControl
+									label={__('Cutout % (Make it a Donut)', 'blockive-premium-addon-for-block')}
+									value={cutout}
+									onChange={(val) => setAttributes({ cutout: val })}
+									min={0}
+									max={90}
+									help={__('Set > 0 to create a Donut Chart.', 'blockive-premium-addon-for-block')}
 								/>
+								<SelectControl
+									label={__('Legend Position', 'blockive-premium-addon-for-block')}
+									value={legendPosition}
+									options={[
+										{ label: 'Top', value: 'top' },
+										{ label: 'Bottom', value: 'bottom' },
+										{ label: 'Left', value: 'left' },
+										{ label: 'Right', value: 'right' },
+										{ label: 'None', value: 'none' },
+									]}
+									onChange={(val) => setAttributes({ legendPosition: val })}
+								/>
+							</PanelBody>
+						</>
+					)}
+					style={(
+						<PanelBody title={__('Styling', 'blockive-premium-addon-for-block')} initialOpen={true}>
+							<RangeControl
+								label={__('Border Width (px)', 'blockive-premium-addon-for-block')}
+								value={borderWidth}
+								onChange={(val) => setAttributes({ borderWidth: val })}
+								min={0}
+								max={10}
+							/>
+							<BaseControl label={__('Border Color', 'blockive-premium-addon-for-block')}>
+								<ColorPalette value={borderColor} onChange={(val) => setAttributes({ borderColor: val || 'transparent' })} />
 							</BaseControl>
-							<Button isDestructive onClick={() => removeItem(index)} style={{ marginTop: '10px' }}>
-								{__('Remove Item', 'blockive-premium-addon-for-block')}
-							</Button>
-						</div>
-					))}
-					<Button isPrimary onClick={addItem}>
-						{__('Add Slice', 'blockive-premium-addon-for-block')}
-					</Button>
-				</PanelBody>
-
-				<PanelBody title={__('Chart Settings', 'blockive-premium-addon-for-block')} initialOpen={false}>
-					<RangeControl
-						label={__('Cutout % (Make it a Donut)', 'blockive-premium-addon-for-block')}
-						value={cutout}
-						onChange={(val) => setAttributes({ cutout: val })}
-						min={0}
-						max={90}
-						help={__('Set > 0 to create a Donut Chart.', 'blockive-premium-addon-for-block')}
-					/>
-					<SelectControl
-						label={__('Legend Position', 'blockive-premium-addon-for-block')}
-						value={legendPosition}
-						options={[
-							{ label: 'Top', value: 'top' },
-							{ label: 'Bottom', value: 'bottom' },
-							{ label: 'Left', value: 'left' },
-							{ label: 'Right', value: 'right' },
-							{ label: 'None', value: 'none' },
-						]}
-						onChange={(val) => setAttributes({ legendPosition: val })}
-					/>
-				</PanelBody>
-
-				<PanelBody title={__('Styling', 'blockive-premium-addon-for-block')} initialOpen={false}>
-					<RangeControl
-						label={__('Border Width (px)', 'blockive-premium-addon-for-block')}
-						value={borderWidth}
-						onChange={(val) => setAttributes({ borderWidth: val })}
-						min={0}
-						max={10}
-					/>
-					<BaseControl label={__('Border Color', 'blockive-premium-addon-for-block')}>
-						<ColorPalette value={borderColor} onChange={(val) => setAttributes({ borderColor: val || 'transparent' })} />
-					</BaseControl>
-					<RangeControl
-						label={__('Animation Speed (ms)', 'blockive-premium-addon-for-block')}
-						value={animationSpeed}
-						onChange={(val) => setAttributes({ animationSpeed: val })}
-						min={0}
-						max={5000}
-						step={100}
-						help={__('Only applies to the live site frontend.', 'blockive-premium-addon-for-block')}
-					/>
-				</PanelBody>
+							<RangeControl
+								label={__('Animation Speed (ms)', 'blockive-premium-addon-for-block')}
+								value={animationSpeed}
+								onChange={(val) => setAttributes({ animationSpeed: val })}
+								min={0}
+								max={5000}
+								step={100}
+								help={__('Only applies to the live site frontend.', 'blockive-premium-addon-for-block')}
+							/>
+						</PanelBody>
+					)}
+					advanced={<AdvancedTab attributes={attributes} setAttributes={setAttributes} />}
+				/>
 			</InspectorControls>
 
 			<div {...blockProps}>

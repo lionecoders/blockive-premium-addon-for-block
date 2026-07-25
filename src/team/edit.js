@@ -17,6 +17,9 @@ import {
 	SelectControl,
 } from '@wordpress/components';
 
+import InspectorTabs from '../components/inspector-tabs';
+import AdvancedTab from '../components/advanced-tab';
+
 export default function Edit({ attributes, setAttributes }) {
 	const { 
 		members, 
@@ -91,6 +94,9 @@ export default function Edit({ attributes, setAttributes }) {
 	return (
 		<>
 			<InspectorControls>
+				<InspectorTabs
+					general={(
+						<>
 				<PanelBody title={__('Team Members', 'blockive-premium-addon-for-block')} initialOpen={true}>
 					{members.map((member, index) => (
 						<div key={member.id} style={{ marginBottom: '15px', paddingBottom: '15px', borderBottom: '1px solid #eee' }}>
@@ -162,9 +168,10 @@ export default function Edit({ attributes, setAttributes }) {
 						max={100}
 					/>
 				</PanelBody>
-			</InspectorControls>
-
-			<InspectorControls group="styles">
+						</>
+					)}
+					style={(
+						<>
 				<PanelBody title={__('Image Styles', 'blockive-premium-addon-for-block')}>
 					<SelectControl
 						label={__('Image Style', 'blockive-premium-addon-for-block')}
@@ -294,6 +301,10 @@ export default function Edit({ attributes, setAttributes }) {
 						/>
 					</div>
 				</PanelBody>
+						</>
+					)}
+					advanced={<AdvancedTab attributes={attributes} setAttributes={setAttributes} />}
+				/>
 			</InspectorControls>
 
 			<div {...blockProps}>

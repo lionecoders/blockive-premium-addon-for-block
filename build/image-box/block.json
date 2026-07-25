@@ -68,6 +68,10 @@
       "type": "string",
       "default": ""
     },
+    "titleColorHover": {
+      "type": "string",
+      "default": ""
+    },
     "descColor": {
       "type": "string",
       "default": ""
@@ -76,7 +80,15 @@
       "type": "string",
       "default": "#3b82f6"
     },
+    "linkColorHover": {
+      "type": "string",
+      "default": ""
+    },
     "boxBgColor": {
+      "type": "string",
+      "default": ""
+    },
+    "boxBgColorHover": {
       "type": "string",
       "default": ""
     },
