@@ -1,0 +1,60 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "blockive-premium-addon-for-block/tb-post-excerpt",
+  "version": "0.1.0",
+  "title": "Post Excerpt",
+  "category": "blockive-template",
+  "icon": "excerpt-view",
+  "description": "Displays the current post's excerpt dynamically, with a configurable character limit and Read More link. Blockive Template Builder only.",
+  "usesContext": [
+    "postId",
+    "postType"
+  ],
+  "textdomain": "blockive-premium-addon-for-block",
+  "attributes": {
+    "excerptLength": {
+      "type": "number",
+      "default": 150
+    },
+    "showReadMore": {
+      "type": "boolean",
+      "default": true
+    },
+    "readMoreText": {
+      "type": "string",
+      "default": "Read More"
+    },
+    "textAlign": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "supports": {
+    "html": false,
+    "color": {
+      "text": true
+    },
+    "typography": {
+      "fontSize": true,
+      "lineHeight": true,
+      "__experimentalFontFamily": true,
+      "__experimentalFontWeight": true,
+      "__experimentalFontStyle": true,
+      "__experimentalTextTransform": true,
+      "__experimentalTextDecoration": true,
+      "__experimentalLetterSpacing": true,
+      "__experimentalDefaultControls": {
+        "fontSize": true
+      }
+    },
+    "spacing": {
+      "margin": true,
+      "padding": true,
+      "__experimentalDefaultControls": {
+        "margin": true
+      }
+    }
+  },
+  "render": "file:./render.php"
+}

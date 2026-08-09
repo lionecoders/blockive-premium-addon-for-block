@@ -1,0 +1,31 @@
+.bpafb-tb-categories {
+	display: inline-flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.bpafb-tb-categories a,
+.bpafb-tb-category-link {
+	color: inherit;
+	text-decoration: none;
+}
+
+.bpafb-tb-categories .bpafb-tb-category-sep {
+	opacity: 0.6;
+	margin: 0 0.15em;
+}
+
+.bpafb-tb-categories--badges {
+	gap: 0.4em;
+}
+
+.bpafb-tb-categories--badges .bpafb-tb-category-item {
+	background: rgba(0, 0, 0, 0.06);
+	padding: 0.2em 0.75em;
+	border-radius: 999px;
+	font-size: 0.85em;
+}
+
+.bpafb-tb-categories--badges .bpafb-tb-category-sep {
+	display: none;
+}

@@ -1,0 +1,55 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "blockive-premium-addon-for-block/tb-product-stock",
+  "version": "0.1.0",
+  "title": "Product Stock",
+  "category": "blockive-template",
+  "icon": "clipboard",
+  "description": "Displays the current WooCommerce product's stock status (In Stock / Out of Stock / On Backorder), and optionally the tracked quantity, dynamically. Blockive Template Builder only.",
+  "usesContext": [
+    "postId",
+    "postType"
+  ],
+  "textdomain": "blockive-premium-addon-for-block",
+  "attributes": {
+    "inStockText": {
+      "type": "string",
+      "default": "In Stock"
+    },
+    "outOfStockText": {
+      "type": "string",
+      "default": "Out of Stock"
+    },
+    "onBackorderText": {
+      "type": "string",
+      "default": "On Backorder"
+    },
+    "inStockColor": {
+      "type": "string",
+      "default": "#2e7d32"
+    },
+    "outOfStockColor": {
+      "type": "string",
+      "default": "#c62828"
+    },
+    "onBackorderColor": {
+      "type": "string",
+      "default": "#ef6c00"
+    }
+  },
+  "supports": {
+    "html": false,
+    "typography": {
+      "fontSize": true,
+      "__experimentalDefaultControls": {
+        "fontSize": true
+      }
+    },
+    "spacing": {
+      "margin": true,
+      "padding": true
+    }
+  },
+  "render": "file:./render.php"
+}

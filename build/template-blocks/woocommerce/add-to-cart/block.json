@@ -1,0 +1,45 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "blockive-premium-addon-for-block/tb-product-add-to-cart",
+  "version": "0.1.0",
+  "title": "Add To Cart",
+  "category": "blockive-template",
+  "icon": "cart",
+  "description": "Renders the current WooCommerce product's Add to Cart form - supports simple, variable, grouped and external products by calling WooCommerce's own single-product template. Blockive Template Builder only.",
+  "usesContext": [
+    "postId",
+    "postType"
+  ],
+  "textdomain": "blockive-premium-addon-for-block",
+  "attributes": {
+    "buttonText": {
+      "type": "string",
+      "default": ""
+    },
+    "btnBgColor": {
+      "type": "string",
+      "default": ""
+    },
+    "btnTextColor": {
+      "type": "string",
+      "default": ""
+    },
+    "btnHoverBgColor": {
+      "type": "string",
+      "default": ""
+    },
+    "btnHoverTextColor": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "supports": {
+    "html": false,
+    "spacing": {
+      "margin": true,
+      "padding": true
+    }
+  },
+  "render": "file:./render.php"
+}

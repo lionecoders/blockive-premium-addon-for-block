@@ -1,0 +1,50 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "blockive-premium-addon-for-block/tb-event-time",
+	"version": "0.1.0",
+	"title": "Event Time",
+	"category": "blockive-template",
+	"icon": "clock",
+	"description": "Displays the current event's start (and optionally end) time dynamically, via any supported events plugin. Blockive Template Builder only.",
+	"usesContext": [ "postId", "postType" ],
+	"textdomain": "blockive-premium-addon-for-block",
+	"attributes": {
+		"showEndTime": {
+			"type": "boolean",
+			"default": false
+		},
+		"timeRangeSeparator": {
+			"type": "string",
+			"default": " - "
+		},
+		"icon": {
+			"type": "string",
+			"default": "fa-regular fa-clock"
+		}
+	},
+	"supports": {
+		"html": false,
+		"color": {
+			"text": true
+		},
+		"typography": {
+			"fontSize": true,
+			"lineHeight": true,
+			"__experimentalFontFamily": true,
+			"__experimentalFontWeight": true,
+			"__experimentalFontStyle": true,
+			"__experimentalTextTransform": true,
+			"__experimentalTextDecoration": true,
+			"__experimentalLetterSpacing": true,
+			"__experimentalDefaultControls": {
+				"fontSize": true
+			}
+		},
+		"spacing": {
+			"margin": true,
+			"padding": true
+		}
+	},
+	"render": "file:./render.php"
+}

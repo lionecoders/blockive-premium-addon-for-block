@@ -1,0 +1,49 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "blockive-premium-addon-for-block/tb-product-meta",
+	"version": "0.1.0",
+	"title": "Product Meta",
+	"category": "blockive-template",
+	"icon": "list-view",
+	"description": "A reorderable row of product meta items (SKU, categories, tags, stock status). Blockive Template Builder only.",
+	"usesContext": [ "postId", "postType" ],
+	"textdomain": "blockive-premium-addon-for-block",
+	"attributes": {
+		"items": {
+			"type": "array",
+			"default": [
+				{ "key": "sku", "enabled": true },
+				{ "key": "categories", "enabled": true },
+				{ "key": "tags", "enabled": false },
+				{ "key": "stockStatus", "enabled": true }
+			]
+		},
+		"separator": {
+			"type": "string",
+			"default": "•"
+		},
+		"showIcons": {
+			"type": "boolean",
+			"default": true
+		}
+	},
+	"supports": {
+		"html": false,
+		"color": {
+			"text": true,
+			"link": true
+		},
+		"typography": {
+			"fontSize": true,
+			"__experimentalDefaultControls": {
+				"fontSize": true
+			}
+		},
+		"spacing": {
+			"margin": true,
+			"padding": true
+		}
+	},
+	"render": "file:./render.php"
+}

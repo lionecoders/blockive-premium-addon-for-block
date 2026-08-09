@@ -1,0 +1,42 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "blockive-premium-addon-for-block/tb-product-upsells",
+  "version": "0.1.0",
+  "title": "Upsells",
+  "category": "blockive-template",
+  "icon": "arrow-up-alt",
+  "description": "Displays a grid or slider of the current WooCommerce product's upsell products. Blockive Template Builder only.",
+  "usesContext": [
+    "postId",
+    "postType"
+  ],
+  "textdomain": "blockive-premium-addon-for-block",
+  "attributes": {
+    "numberOfProducts": {
+      "type": "number",
+      "default": 4
+    },
+    "layout": {
+      "type": "string",
+      "default": "grid"
+    },
+    "columns": {
+      "type": "number",
+      "default": 4
+    }
+  },
+  "supports": {
+    "html": false,
+    "align": [
+      "wide",
+      "full"
+    ],
+    "spacing": {
+      "margin": true,
+      "padding": true
+    }
+  },
+  "render": "file:./render.php",
+  "viewScript": "file:./view.js"
+}

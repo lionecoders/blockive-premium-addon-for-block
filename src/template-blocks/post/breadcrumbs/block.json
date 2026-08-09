@@ -1,0 +1,57 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "blockive-premium-addon-for-block/tb-breadcrumbs",
+	"version": "0.1.0",
+	"title": "Breadcrumbs",
+	"category": "blockive-template",
+	"icon": "admin-links",
+	"description": "Displays a Home > Category > Title breadcrumb trail for the current post dynamically. Blockive Template Builder only.",
+	"usesContext": [ "postId", "postType" ],
+	"textdomain": "blockive-premium-addon-for-block",
+	"attributes": {
+		"separator": {
+			"type": "string",
+			"default": "/"
+		},
+		"showHomeIcon": {
+			"type": "boolean",
+			"default": true
+		},
+		"homeIcon": {
+			"type": "string",
+			"default": "fa-solid fa-house"
+		},
+		"textColor": {
+			"type": "string",
+			"default": ""
+		},
+		"textHoverColor": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"supports": {
+		"html": false,
+		"typography": {
+			"fontSize": true,
+			"lineHeight": true,
+			"__experimentalFontFamily": true,
+			"__experimentalFontWeight": true,
+			"__experimentalFontStyle": true,
+			"__experimentalTextTransform": true,
+			"__experimentalLetterSpacing": true,
+			"__experimentalDefaultControls": {
+				"fontSize": true
+			}
+		},
+		"spacing": {
+			"margin": true,
+			"padding": true,
+			"__experimentalDefaultControls": {
+				"margin": true
+			}
+		}
+	},
+	"render": "file:./render.php"
+}

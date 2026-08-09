@@ -1,0 +1,42 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "blockive-premium-addon-for-block/tb-modified-date",
+	"version": "0.1.0",
+	"title": "Modified Date",
+	"category": "blockive-template",
+	"icon": "update",
+	"description": "Displays the current post's last modified date dynamically, with custom format and relative time. Blockive Template Builder only.",
+	"usesContext": [ "postId", "postType" ],
+	"textdomain": "blockive-premium-addon-for-block",
+	"attributes": {
+		"dateFormat": {
+			"type": "string",
+			"default": ""
+		},
+		"relative": {
+			"type": "boolean",
+			"default": false
+		}
+	},
+	"supports": {
+		"html": false,
+		"color": {
+			"text": true
+		},
+		"typography": {
+			"fontSize": true,
+			"__experimentalDefaultControls": {
+				"fontSize": true
+			}
+		},
+		"spacing": {
+			"margin": true,
+			"padding": true,
+			"__experimentalDefaultControls": {
+				"margin": true
+			}
+		}
+	},
+	"render": "file:./render.php"
+}

@@ -1,0 +1,33 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "blockive-premium-addon-for-block/tb-product-variations",
+  "version": "0.1.0",
+  "title": "Product Variations",
+  "category": "blockive-template",
+  "icon": "screenoptions",
+  "description": "Renders WooCommerce's native variation selector (dropdowns + AJAX price/availability) for variable products, via woocommerce_template_single_add_to_cart(). Pairs with, or can replace, the Add To Cart block. Blockive Template Builder only.",
+  "usesContext": [
+    "postId",
+    "postType"
+  ],
+  "textdomain": "blockive-premium-addon-for-block",
+  "attributes": {
+    "showPriceRange": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "supports": {
+    "html": false,
+    "align": [
+      "wide",
+      "full"
+    ],
+    "spacing": {
+      "margin": true,
+      "padding": true
+    }
+  },
+  "render": "file:./render.php"
+}

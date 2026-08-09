@@ -1,0 +1,55 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "blockive-premium-addon-for-block/tb-reading-time",
+	"version": "0.1.0",
+	"title": "Reading Time",
+	"category": "blockive-template",
+	"icon": "clock",
+	"description": "Displays the current post's estimated reading time dynamically. Blockive Template Builder only.",
+	"usesContext": [ "postId", "postType" ],
+	"textdomain": "blockive-premium-addon-for-block",
+	"attributes": {
+		"wpm": {
+			"type": "number",
+			"default": 200
+		},
+		"icon": {
+			"type": "string",
+			"default": "fa-regular fa-clock"
+		},
+		"prefix": {
+			"type": "string",
+			"default": ""
+		},
+		"suffix": {
+			"type": "string",
+			"default": " min read"
+		}
+	},
+	"supports": {
+		"html": false,
+		"color": {
+			"text": true,
+			"link": true
+		},
+		"typography": {
+			"fontSize": true,
+			"lineHeight": true,
+			"__experimentalFontFamily": true,
+			"__experimentalFontWeight": true,
+			"__experimentalFontStyle": true,
+			"__experimentalDefaultControls": {
+				"fontSize": true
+			}
+		},
+		"spacing": {
+			"margin": true,
+			"padding": true,
+			"__experimentalDefaultControls": {
+				"margin": true
+			}
+		}
+	},
+	"render": "file:./render.php"
+}

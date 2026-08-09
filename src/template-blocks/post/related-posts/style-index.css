@@ -1,0 +1,163 @@
+.bpafb-tb-related-posts {
+	display: block;
+}
+
+.bpafb-tb-related-posts-empty {
+	color: #757575;
+	font-size: 13px;
+}
+
+/* Grid layout */
+.bpafb-tb-related-posts-grid {
+	display: grid;
+	gap: 20px;
+}
+
+/* Card, shared by Grid and Slider */
+.bpafb-tb-related-post-card {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+.bpafb-tb-related-post-image {
+	display: block;
+	margin-bottom: 10px;
+}
+
+.bpafb-tb-related-post-image img {
+	display: block;
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+}
+
+.bpafb-tb-related-post-image-placeholder {
+	width: 100%;
+	aspect-ratio: 16/9;
+	background-color: #f0f0f0;
+}
+
+.bpafb-tb-related-post-date {
+	display: block;
+	font-size: 0.8em;
+	opacity: 0.65;
+	margin-bottom: 4px;
+}
+
+.bpafb-tb-related-post-title {
+	margin: 0 0 6px;
+	font-size: 1.05em;
+}
+
+.bpafb-tb-related-post-title a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.bpafb-tb-related-post-title a:hover {
+	text-decoration: underline;
+}
+
+.bpafb-tb-related-post-excerpt {
+	font-size: 0.9em;
+	opacity: 0.8;
+}
+
+/* Editor slider preview: a simple horizontal-scroll row of the same cards. */
+.bpafb-tb-related-posts-slider-preview {
+	display: flex;
+	gap: 20px;
+	overflow-x: auto;
+}
+.bpafb-tb-related-posts-slider-preview .bpafb-tb-related-post-card {
+	flex: 0 0 240px;
+}
+
+/*
+ * Minimal hand-rolled Swiper structural CSS (frontend only) - equivalent to
+ * the handful of rules this block actually needs from `swiper/css`, kept
+ * here instead of importing Swiper's stylesheet from view.js so the block
+ * doesn't need its own separately-enqueued view stylesheet (this file is
+ * already bundled into the frontend-loaded template-blocks style sheet).
+ */
+.bpafb-tb-related-posts-slider.swiper {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	list-style: none;
+	padding: 0 0 36px;
+	margin: 0;
+}
+
+.bpafb-tb-related-posts-slider .swiper-wrapper {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	box-sizing: content-box;
+	transition-property: transform;
+}
+
+.bpafb-tb-related-posts-slider .swiper-slide {
+	flex-shrink: 0;
+	width: 100%;
+	height: auto;
+	position: relative;
+}
+
+.bpafb-tb-related-posts-slider .swiper-button-prev,
+.bpafb-tb-related-posts-slider .swiper-button-next {
+	position: absolute;
+	top: calc( 50% - 18px );
+	z-index: 10;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 36px;
+	height: 36px;
+	border-radius: 50%;
+	background-color: #fff;
+	color: #333;
+	box-shadow: 0 1px 4px rgba( 0, 0, 0, 0.2 );
+	cursor: pointer;
+}
+
+.bpafb-tb-related-posts-slider .swiper-button-prev {
+	left: 6px;
+}
+
+.bpafb-tb-related-posts-slider .swiper-button-next {
+	right: 6px;
+}
+
+.bpafb-tb-related-posts-slider .swiper-button-disabled {
+	opacity: 0.35;
+	cursor: not-allowed;
+	pointer-events: none;
+}
+
+.bpafb-tb-related-posts-slider .swiper-pagination {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 8px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 6px;
+	z-index: 10;
+}
+
+.bpafb-tb-related-posts-slider .swiper-pagination-bullet {
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background-color: rgba( 0, 0, 0, 0.25 );
+	cursor: pointer;
+	display: inline-block;
+}
+
+.bpafb-tb-related-posts-slider .swiper-pagination-bullet-active {
+	background-color: rgba( 0, 0, 0, 0.75 );
+}

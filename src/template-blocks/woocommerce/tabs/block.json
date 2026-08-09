@@ -1,0 +1,36 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "blockive-premium-addon-for-block/tb-product-tabs",
+	"version": "0.1.0",
+	"title": "Product Tabs",
+	"category": "blockive-template",
+	"icon": "index-card",
+	"description": "Displays the current WooCommerce product's Description / Additional Information / Reviews tabs, similar to WooCommerce's default single product tabs. Blockive Template Builder only.",
+	"usesContext": [ "postId", "postType" ],
+	"textdomain": "blockive-premium-addon-for-block",
+	"attributes": {
+		"showDescriptionTab": {
+			"type": "boolean",
+			"default": true
+		},
+		"showAttributesTab": {
+			"type": "boolean",
+			"default": true
+		},
+		"showReviewsTab": {
+			"type": "boolean",
+			"default": true
+		}
+	},
+	"supports": {
+		"html": false,
+		"align": [ "wide", "full" ],
+		"spacing": {
+			"margin": true,
+			"padding": true
+		}
+	},
+	"render": "file:./render.php",
+	"viewScript": "file:./view.js"
+}

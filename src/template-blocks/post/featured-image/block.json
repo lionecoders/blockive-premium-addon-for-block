@@ -1,0 +1,58 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "blockive-premium-addon-for-block/tb-featured-image",
+	"version": "0.1.0",
+	"title": "Featured Image",
+	"category": "blockive-template",
+	"icon": "format-image",
+	"description": "Displays the current post's featured image dynamically. Blockive Template Builder only.",
+	"usesContext": [ "postId", "postType" ],
+	"textdomain": "blockive-premium-addon-for-block",
+	"attributes": {
+		"imageSize": {
+			"type": "string",
+			"default": "large"
+		},
+		"aspectRatio": {
+			"type": "string",
+			"default": ""
+		},
+		"borderRadius": {
+			"type": "number",
+			"default": 0
+		},
+		"objectFit": {
+			"type": "string",
+			"default": "cover"
+		},
+		"lazyLoad": {
+			"type": "boolean",
+			"default": true
+		},
+		"isLink": {
+			"type": "boolean",
+			"default": true
+		},
+		"overlayColor": {
+			"type": "string",
+			"default": ""
+		},
+		"hoverEffect": {
+			"type": "string",
+			"default": "none"
+		}
+	},
+	"supports": {
+		"html": false,
+		"align": [ "wide", "full" ],
+		"spacing": {
+			"margin": true,
+			"padding": true,
+			"__experimentalDefaultControls": {
+				"margin": true
+			}
+		}
+	},
+	"render": "file:./render.php"
+}

@@ -1,0 +1,47 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "blockive-premium-addon-for-block/tb-product-sale-badge",
+	"version": "0.1.0",
+	"title": "Sale Badge",
+	"category": "blockive-template",
+	"icon": "megaphone",
+	"description": "Shows a badge when the current WooCommerce product is on sale. Meant to be placed inside a container with Position set to Relative (Advanced tab > Layout) so this badge's absolute position is relative to that container. Blockive Template Builder only.",
+	"usesContext": [ "postId", "postType" ],
+	"textdomain": "blockive-premium-addon-for-block",
+	"attributes": {
+		"badgeText": {
+			"type": "string",
+			"default": "Sale!"
+		},
+		"badgeShape": {
+			"type": "string",
+			"default": "circle"
+		},
+		"bgColor": {
+			"type": "string",
+			"default": "#e63946"
+		},
+		"textColor": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"position": {
+			"type": "string",
+			"default": "top-right"
+		}
+	},
+	"supports": {
+		"html": false,
+		"typography": {
+			"fontSize": true,
+			"__experimentalDefaultControls": {
+				"fontSize": true
+			}
+		},
+		"spacing": {
+			"margin": true
+		}
+	},
+	"render": "file:./render.php"
+}

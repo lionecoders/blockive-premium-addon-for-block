@@ -22,6 +22,19 @@ define('BPAFB_PATH', plugin_dir_path(__FILE__));
 define('BPAFB_URL', plugin_dir_url(__FILE__));
 define('BPAFB_VERSION', '1.0.0');
 
+require_once BPAFB_PATH . 'includes/class-bpafb-template-post-type.php';
+require_once BPAFB_PATH . 'includes/class-bpafb-screen-helper.php';
+require_once BPAFB_PATH . 'includes/class-bpafb-template-builder.php';
+require_once BPAFB_PATH . 'includes/class-bpafb-template-blocks.php';
+require_once BPAFB_PATH . 'includes/class-bpafb-dynamic-field-providers.php';
+require_once BPAFB_PATH . 'includes/class-bpafb-events-adapter.php';
+require_once BPAFB_PATH . 'includes/class-bpafb-template-block-render.php';
+require_once BPAFB_PATH . 'includes/class-bpafb-post-meta-items.php';
+require_once BPAFB_PATH . 'includes/class-bpafb-dynamic-field-output.php';
+require_once BPAFB_PATH . 'includes/class-bpafb-product-meta-items.php';
+require_once BPAFB_PATH . 'includes/class-bpafb-product-card-list.php';
+require_once BPAFB_PATH . 'includes/class-bpafb-product-template-render.php';
+
 /**
  * Main Class for Blockive Premium Addon For Block.
  */
@@ -34,6 +47,9 @@ class Blockive_Premium_Addon_For_Block
 	public function __construct()
 	{
 		$this->bpafb_setup_hooks();
+		new Bpafb_Template_Post_Type();
+		new Bpafb_Template_Builder();
+		new Bpafb_Template_Blocks();
 	}
 
 	/**
@@ -72,6 +88,8 @@ class Blockive_Premium_Addon_For_Block
 	 */
 	public function bpafb_register_blocks()
 	{
+		Bpafb_Dynamic_Field_Providers::register_builtin_providers();
+
 		if (function_exists('wp_register_block_types_from_metadata_collection')) {
 			wp_register_block_types_from_metadata_collection(__DIR__ . '/build', __DIR__ . '/build/blocks-manifest.php');
 		} else {
@@ -88,6 +106,15 @@ class Blockive_Premium_Addon_For_Block
 		if (!function_exists('wpcf7') && !defined('WPCF7_PLUGIN')) {
 			if ($registry->is_registered('blockive-premium-addon-for-block/contact-form-7')) {
 				unregister_block_type('blockive-premium-addon-for-block/contact-form-7');
+			}
+		}
+
+		// WooCommerce Template Blocks require WooCommerce.
+		if (!class_exists('WooCommerce')) {
+			foreach ($registry->get_all_registered() as $bpafb_block_name => $bpafb_block_type) {
+				if (strpos($bpafb_block_name, Bpafb_Template_Blocks::NAME_PREFIX . 'product-') === 0) {
+					unregister_block_type($bpafb_block_name);
+				}
 			}
 		}
 

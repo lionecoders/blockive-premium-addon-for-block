@@ -1,0 +1,60 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "blockive-premium-addon-for-block/tb-categories",
+  "version": "0.1.0",
+  "title": "Categories",
+  "category": "blockive-template",
+  "icon": "category",
+  "description": "Displays the current post's categories dynamically, as a plain list or as badges, with normal/hover colors. Blockive Template Builder only.",
+  "usesContext": [
+    "postId",
+    "postType"
+  ],
+  "textdomain": "blockive-premium-addon-for-block",
+  "attributes": {
+    "separator": {
+      "type": "string",
+      "default": ", "
+    },
+    "badgeStyle": {
+      "type": "boolean",
+      "default": false
+    },
+    "isLink": {
+      "type": "boolean",
+      "default": true
+    },
+    "textColor": {
+      "type": "string",
+      "default": ""
+    },
+    "textHoverColor": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "supports": {
+    "html": false,
+    "typography": {
+      "fontSize": true,
+      "lineHeight": true,
+      "__experimentalFontFamily": true,
+      "__experimentalFontWeight": true,
+      "__experimentalFontStyle": true,
+      "__experimentalTextTransform": true,
+      "__experimentalLetterSpacing": true,
+      "__experimentalDefaultControls": {
+        "fontSize": true
+      }
+    },
+    "spacing": {
+      "margin": true,
+      "padding": true,
+      "__experimentalDefaultControls": {
+        "margin": true
+      }
+    }
+  },
+  "render": "file:./render.php"
+}

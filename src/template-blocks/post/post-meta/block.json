@@ -1,0 +1,51 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "blockive-premium-addon-for-block/tb-post-meta",
+	"version": "0.1.0",
+	"title": "Post Meta",
+	"category": "blockive-template",
+	"icon": "list-view",
+	"description": "A reorderable row of post meta items (author, date, categories, tags, comments, reading time). Blockive Template Builder only.",
+	"usesContext": [ "postId", "postType" ],
+	"textdomain": "blockive-premium-addon-for-block",
+	"attributes": {
+		"items": {
+			"type": "array",
+			"default": [
+				{ "key": "date", "enabled": true },
+				{ "key": "author", "enabled": true },
+				{ "key": "categories", "enabled": true },
+				{ "key": "comments", "enabled": true },
+				{ "key": "tags", "enabled": false },
+				{ "key": "readingTime", "enabled": false }
+			]
+		},
+		"separator": {
+			"type": "string",
+			"default": "•"
+		},
+		"showIcons": {
+			"type": "boolean",
+			"default": true
+		}
+	},
+	"supports": {
+		"html": false,
+		"color": {
+			"text": true,
+			"link": true
+		},
+		"typography": {
+			"fontSize": true,
+			"__experimentalDefaultControls": {
+				"fontSize": true
+			}
+		},
+		"spacing": {
+			"margin": true,
+			"padding": true
+		}
+	},
+	"render": "file:./render.php"
+}

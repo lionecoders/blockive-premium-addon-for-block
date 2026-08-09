@@ -1,0 +1,67 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "blockive-premium-addon-for-block/tb-previous-next-navigation",
+  "version": "0.1.0",
+  "title": "Previous / Next Navigation",
+  "category": "blockive-template",
+  "icon": "controls-repeat",
+  "description": "Links to the previous and next posts, dynamically. Blockive Template Builder only.",
+  "usesContext": [
+    "postId",
+    "postType"
+  ],
+  "textdomain": "blockive-premium-addon-for-block",
+  "attributes": {
+    "prevLabel": {
+      "type": "string",
+      "default": "Previous"
+    },
+    "nextLabel": {
+      "type": "string",
+      "default": "Next"
+    },
+    "prevIcon": {
+      "type": "string",
+      "default": "fa-solid fa-arrow-left"
+    },
+    "nextIcon": {
+      "type": "string",
+      "default": "fa-solid fa-arrow-right"
+    },
+    "hoverStyle": {
+      "type": "string",
+      "default": "none"
+    },
+    "inSameTerm": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "supports": {
+    "html": false,
+    "color": {
+      "text": true,
+      "link": true
+    },
+    "typography": {
+      "fontSize": true,
+      "lineHeight": true,
+      "__experimentalFontFamily": true,
+      "__experimentalFontWeight": true,
+      "__experimentalFontStyle": true,
+      "__experimentalTextTransform": true,
+      "__experimentalDefaultControls": {
+        "fontSize": true
+      }
+    },
+    "spacing": {
+      "margin": true,
+      "padding": true,
+      "__experimentalDefaultControls": {
+        "margin": true
+      }
+    }
+  },
+  "render": "file:./render.php"
+}

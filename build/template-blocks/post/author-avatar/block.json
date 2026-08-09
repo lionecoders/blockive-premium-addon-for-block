@@ -1,0 +1,63 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "blockive-premium-addon-for-block/tb-author-avatar",
+  "version": "0.1.0",
+  "title": "Author Avatar",
+  "category": "blockive-template",
+  "icon": "id",
+  "description": "Displays the current post's author avatar dynamically, with size, border and shadow controls. Blockive Template Builder only.",
+  "usesContext": [
+    "postId",
+    "postType"
+  ],
+  "textdomain": "blockive-premium-addon-for-block",
+  "attributes": {
+    "size": {
+      "type": "number",
+      "default": 96
+    },
+    "borderRadius": {
+      "type": "number",
+      "default": 9999
+    },
+    "borderType": {
+      "type": "string",
+      "default": "none"
+    },
+    "borderWidth": {
+      "type": "number",
+      "default": 1
+    },
+    "borderColor": {
+      "type": "string",
+      "default": ""
+    },
+    "shadowEnabled": {
+      "type": "boolean",
+      "default": false
+    },
+    "shadowColor": {
+      "type": "string",
+      "default": "rgba(0,0,0,0.15)"
+    },
+    "shadowBlur": {
+      "type": "number",
+      "default": 15
+    },
+    "shadowSpread": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "supports": {
+    "html": false,
+    "spacing": {
+      "margin": true,
+      "__experimentalDefaultControls": {
+        "margin": true
+      }
+    }
+  },
+  "render": "file:./render.php"
+}

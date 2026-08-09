@@ -1,0 +1,92 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "blockive-premium-addon-for-block/tb-dynamic-field",
+  "version": "0.1.0",
+  "title": "Dynamic Field",
+  "category": "blockive-template",
+  "icon": "editor-code",
+  "description": "Displays any WordPress Meta, ACF, Meta Box, Pods, WooCommerce or Event field dynamically, no coding required. Blockive Template Builder only.",
+  "usesContext": [
+    "postId",
+    "postType"
+  ],
+  "textdomain": "blockive-premium-addon-for-block",
+  "attributes": {
+    "provider": {
+      "type": "string",
+      "default": "post_meta"
+    },
+    "fieldKey": {
+      "type": "string",
+      "default": ""
+    },
+    "outputType": {
+      "type": "string",
+      "default": "text"
+    },
+    "linkText": {
+      "type": "string",
+      "default": ""
+    },
+    "dateFormat": {
+      "type": "string",
+      "default": ""
+    },
+    "prefix": {
+      "type": "string",
+      "default": ""
+    },
+    "suffix": {
+      "type": "string",
+      "default": ""
+    },
+    "fallback": {
+      "type": "string",
+      "default": ""
+    },
+    "tagName": {
+      "type": "string",
+      "default": "div"
+    },
+    "textColor": {
+      "type": "string",
+      "default": ""
+    },
+    "textHoverColor": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "supports": {
+    "html": false,
+    "color": {
+      "text": true,
+      "background": true,
+      "gradients": true,
+      "link": true
+    },
+    "typography": {
+      "fontSize": true,
+      "lineHeight": true,
+      "__experimentalFontFamily": true,
+      "__experimentalFontWeight": true,
+      "__experimentalFontStyle": true,
+      "__experimentalTextTransform": true,
+      "__experimentalTextDecoration": true,
+      "__experimentalLetterSpacing": true,
+      "__experimentalDefaultControls": {
+        "fontSize": true
+      }
+    },
+    "spacing": {
+      "margin": true,
+      "padding": true,
+      "__experimentalDefaultControls": {
+        "margin": true,
+        "padding": true
+      }
+    }
+  },
+  "render": "file:./render.php"
+}

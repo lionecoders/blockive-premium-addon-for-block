@@ -1,0 +1,51 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "blockive-premium-addon-for-block/tb-comments-count",
+	"version": "0.1.0",
+	"title": "Comments Count",
+	"category": "blockive-template",
+	"icon": "admin-comments",
+	"description": "Displays the current post's comment count dynamically. Blockive Template Builder only.",
+	"usesContext": [ "postId", "postType" ],
+	"textdomain": "blockive-premium-addon-for-block",
+	"attributes": {
+		"icon": {
+			"type": "string",
+			"default": "fa-regular fa-comment"
+		},
+		"format": {
+			"type": "string",
+			"default": "{count} Comments"
+		},
+		"isLink": {
+			"type": "boolean",
+			"default": true
+		}
+	},
+	"supports": {
+		"html": false,
+		"color": {
+			"text": true,
+			"link": true
+		},
+		"typography": {
+			"fontSize": true,
+			"lineHeight": true,
+			"__experimentalFontFamily": true,
+			"__experimentalFontWeight": true,
+			"__experimentalFontStyle": true,
+			"__experimentalDefaultControls": {
+				"fontSize": true
+			}
+		},
+		"spacing": {
+			"margin": true,
+			"padding": true,
+			"__experimentalDefaultControls": {
+				"margin": true
+			}
+		}
+	},
+	"render": "file:./render.php"
+}

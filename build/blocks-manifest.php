@@ -2419,88 +2419,43 @@ return array(
 	'tabs' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
-		'name' => 'blockive-premium-addon-for-block/tabs',
+		'name' => 'blockive-premium-addon-for-block/tb-product-tabs',
 		'version' => '0.1.0',
-		'title' => 'Blockive Tabs',
-		'category' => 'bpafb-widgets',
+		'title' => 'Product Tabs',
+		'category' => 'blockive-template',
 		'icon' => 'index-card',
-		'description' => 'A modern Tab block with premium segmented control styling.',
+		'description' => 'Displays the current WooCommerce product\'s Description / Additional Information / Reviews tabs, similar to WooCommerce\'s default single product tabs. Blockive Template Builder only.',
+		'usesContext' => array(
+			'postId',
+			'postType'
+		),
+		'textdomain' => 'blockive-premium-addon-for-block',
 		'attributes' => array(
-			'items' => array(
-				'type' => 'array',
-				'default' => array(
-					array(
-						'id' => '1',
-						'title' => 'First Tab',
-						'content' => 'This is the content for the first tab.'
-					),
-					array(
-						'id' => '2',
-						'title' => 'Second Tab',
-						'content' => 'This is the content for the second tab.'
-					),
-					array(
-						'id' => '3',
-						'title' => 'Third Tab',
-						'content' => 'This is the content for the third tab.'
-					)
-				)
+			'showDescriptionTab' => array(
+				'type' => 'boolean',
+				'default' => true
 			),
-			'tabBgColor' => array(
-				'type' => 'string',
-				'default' => '#f1f5f9'
+			'showAttributesTab' => array(
+				'type' => 'boolean',
+				'default' => true
 			),
-			'tabActiveColor' => array(
-				'type' => 'string',
-				'default' => '#ffffff'
-			),
-			'textColor' => array(
-				'type' => 'string',
-				'default' => '#64748b'
-			),
-			'textActiveColor' => array(
-				'type' => 'string',
-				'default' => '#0f172a'
-			),
-			'contentBgColor' => array(
-				'type' => 'string',
-				'default' => '#ffffff'
-			),
-			'contentTextColor' => array(
-				'type' => 'string',
-				'default' => '#334155'
-			),
-			'tabBorderRadius' => array(
-				'type' => 'number',
-				'default' => 12
+			'showReviewsTab' => array(
+				'type' => 'boolean',
+				'default' => true
 			)
 		),
 		'supports' => array(
+			'html' => false,
 			'align' => array(
 				'wide',
 				'full'
 			),
-			'html' => false,
-			'typography' => array(
-				'fontSize' => true,
-				'lineHeight' => true,
-				'__experimentalFontFamily' => true,
-				'__experimentalDefaultControls' => array(
-					'fontSize' => true
-				)
-			),
 			'spacing' => array(
 				'margin' => true,
-				'padding' => true,
-				'__experimentalDefaultControls' => array(
-					'margin' => true,
-					'padding' => true
-				)
+				'padding' => true
 			)
 		),
-		'textdomain' => 'blockive-premium-addon-for-block',
-		'editorScript' => 'file:./index.js',
-		'style' => 'file:./index.css',
+		'render' => 'file:./render.php',
 		'viewScript' => 'file:./view.js'
 	),
 	'team' => array(
@@ -2828,5 +2783,2464 @@ return array(
 		'editorScript' => 'file:./index.js',
 		'editorStyle' => 'file:./style-index.css',
 		'style' => 'file:./style-index.css'
+	),
+	'dynamic-field' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'blockive-premium-addon-for-block/tb-dynamic-field',
+		'version' => '0.1.0',
+		'title' => 'Dynamic Field',
+		'category' => 'blockive-template',
+		'icon' => 'editor-code',
+		'description' => 'Displays any WordPress Meta, ACF, Meta Box, Pods, WooCommerce or Event field dynamically, no coding required. Blockive Template Builder only.',
+		'usesContext' => array(
+			'postId',
+			'postType'
+		),
+		'textdomain' => 'blockive-premium-addon-for-block',
+		'attributes' => array(
+			'provider' => array(
+				'type' => 'string',
+				'default' => 'post_meta'
+			),
+			'fieldKey' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'outputType' => array(
+				'type' => 'string',
+				'default' => 'text'
+			),
+			'linkText' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'dateFormat' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'prefix' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'suffix' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'fallback' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'tagName' => array(
+				'type' => 'string',
+				'default' => 'div'
+			),
+			'textColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'textHoverColor' => array(
+				'type' => 'string',
+				'default' => ''
+			)
+		),
+		'supports' => array(
+			'html' => false,
+			'color' => array(
+				'text' => true,
+				'background' => true,
+				'gradients' => true,
+				'link' => true
+			),
+			'typography' => array(
+				'fontSize' => true,
+				'lineHeight' => true,
+				'__experimentalFontFamily' => true,
+				'__experimentalFontWeight' => true,
+				'__experimentalFontStyle' => true,
+				'__experimentalTextTransform' => true,
+				'__experimentalTextDecoration' => true,
+				'__experimentalLetterSpacing' => true,
+				'__experimentalDefaultControls' => array(
+					'fontSize' => true
+				)
+			),
+			'spacing' => array(
+				'margin' => true,
+				'padding' => true,
+				'__experimentalDefaultControls' => array(
+					'margin' => true,
+					'padding' => true
+				)
+			)
+		),
+		'render' => 'file:./render.php'
+	),
+	'cost' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'blockive-premium-addon-for-block/tb-event-cost',
+		'version' => '0.1.0',
+		'title' => 'Event Cost',
+		'category' => 'blockive-template',
+		'icon' => 'tickets-alt',
+		'description' => 'Displays the current event\'s cost dynamically, via any supported events plugin, with a configurable label when the event is free. Blockive Template Builder only.',
+		'usesContext' => array(
+			'postId',
+			'postType'
+		),
+		'textdomain' => 'blockive-premium-addon-for-block',
+		'attributes' => array(
+			'freeText' => array(
+				'type' => 'string',
+				'default' => 'Free'
+			),
+			'icon' => array(
+				'type' => 'string',
+				'default' => 'fa-solid fa-ticket'
+			)
+		),
+		'supports' => array(
+			'html' => false,
+			'color' => array(
+				'text' => true
+			),
+			'typography' => array(
+				'fontSize' => true,
+				'lineHeight' => true,
+				'__experimentalFontFamily' => true,
+				'__experimentalFontWeight' => true,
+				'__experimentalFontStyle' => true,
+				'__experimentalTextTransform' => true,
+				'__experimentalTextDecoration' => true,
+				'__experimentalLetterSpacing' => true,
+				'__experimentalDefaultControls' => array(
+					'fontSize' => true
+				)
+			),
+			'spacing' => array(
+				'margin' => true,
+				'padding' => true
+			)
+		),
+		'render' => 'file:./render.php'
+	),
+	'date' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'blockive-premium-addon-for-block/tb-event-date',
+		'version' => '0.1.0',
+		'title' => 'Event Date',
+		'category' => 'blockive-template',
+		'icon' => 'calendar',
+		'description' => 'Displays the current event\'s start (and optionally end) date dynamically, via any supported events plugin. Blockive Template Builder only.',
+		'usesContext' => array(
+			'postId',
+			'postType'
+		),
+		'textdomain' => 'blockive-premium-addon-for-block',
+		'attributes' => array(
+			'dateFormat' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'relative' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'icon' => array(
+				'type' => 'string',
+				'default' => 'fa-regular fa-calendar'
+			),
+			'showEndDate' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'dateRangeSeparator' => array(
+				'type' => 'string',
+				'default' => ' - '
+			)
+		),
+		'supports' => array(
+			'html' => false,
+			'color' => array(
+				'text' => true
+			),
+			'typography' => array(
+				'fontSize' => true,
+				'lineHeight' => true,
+				'__experimentalFontFamily' => true,
+				'__experimentalFontWeight' => true,
+				'__experimentalFontStyle' => true,
+				'__experimentalTextTransform' => true,
+				'__experimentalTextDecoration' => true,
+				'__experimentalLetterSpacing' => true,
+				'__experimentalDefaultControls' => array(
+					'fontSize' => true
+				)
+			),
+			'spacing' => array(
+				'margin' => true,
+				'padding' => true
+			)
+		),
+		'render' => 'file:./render.php'
+	),
+	'event-title' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'blockive-premium-addon-for-block/tb-event-title',
+		'version' => '0.1.0',
+		'title' => 'Event Title',
+		'category' => 'blockive-template',
+		'icon' => 'calendar-alt',
+		'description' => 'Displays the current event\'s title dynamically. Blockive Template Builder only.',
+		'usesContext' => array(
+			'postId',
+			'postType'
+		),
+		'textdomain' => 'blockive-premium-addon-for-block',
+		'attributes' => array(
+			'tagName' => array(
+				'type' => 'string',
+				'default' => 'h2'
+			),
+			'textAlign' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'isLink' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'linkTarget' => array(
+				'type' => 'string',
+				'default' => '_self'
+			),
+			'textColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'textHoverColor' => array(
+				'type' => 'string',
+				'default' => ''
+			)
+		),
+		'supports' => array(
+			'html' => false,
+			'color' => array(
+				'text' => true,
+				'background' => true,
+				'gradients' => true,
+				'link' => true
+			),
+			'typography' => array(
+				'fontSize' => true,
+				'lineHeight' => true,
+				'__experimentalFontFamily' => true,
+				'__experimentalFontWeight' => true,
+				'__experimentalFontStyle' => true,
+				'__experimentalTextTransform' => true,
+				'__experimentalTextDecoration' => true,
+				'__experimentalLetterSpacing' => true,
+				'__experimentalDefaultControls' => array(
+					'fontSize' => true
+				)
+			),
+			'spacing' => array(
+				'margin' => true,
+				'padding' => true,
+				'__experimentalDefaultControls' => array(
+					'margin' => true,
+					'padding' => true
+				)
+			)
+		),
+		'render' => 'file:./render.php'
+	),
+	'image' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'blockive-premium-addon-for-block/tb-event-image',
+		'version' => '0.1.0',
+		'title' => 'Event Image',
+		'category' => 'blockive-template',
+		'icon' => 'format-image',
+		'description' => 'Displays the current event\'s featured image dynamically. Blockive Template Builder only.',
+		'usesContext' => array(
+			'postId',
+			'postType'
+		),
+		'textdomain' => 'blockive-premium-addon-for-block',
+		'attributes' => array(
+			'imageSize' => array(
+				'type' => 'string',
+				'default' => 'large'
+			),
+			'aspectRatio' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'borderRadius' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'objectFit' => array(
+				'type' => 'string',
+				'default' => 'cover'
+			),
+			'lazyLoad' => array(
+				'type' => 'boolean',
+				'default' => true
+			),
+			'isLink' => array(
+				'type' => 'boolean',
+				'default' => true
+			),
+			'overlayColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'hoverEffect' => array(
+				'type' => 'string',
+				'default' => 'none'
+			)
+		),
+		'supports' => array(
+			'html' => false,
+			'align' => array(
+				'wide',
+				'full'
+			),
+			'spacing' => array(
+				'margin' => true,
+				'padding' => true,
+				'__experimentalDefaultControls' => array(
+					'margin' => true
+				)
+			)
+		),
+		'render' => 'file:./render.php'
+	),
+	'map' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'blockive-premium-addon-for-block/tb-event-map',
+		'version' => '0.1.0',
+		'title' => 'Event Map',
+		'category' => 'blockive-template',
+		'icon' => 'location',
+		'description' => 'Displays an embedded map for the current event\'s venue address, via any supported events plugin. Blockive Template Builder only.',
+		'usesContext' => array(
+			'postId',
+			'postType'
+		),
+		'textdomain' => 'blockive-premium-addon-for-block',
+		'attributes' => array(
+			'height' => array(
+				'type' => 'number',
+				'default' => 300
+			)
+		),
+		'supports' => array(
+			'html' => false,
+			'align' => array(
+				'wide',
+				'full'
+			),
+			'spacing' => array(
+				'margin' => true,
+				'padding' => true
+			)
+		),
+		'render' => 'file:./render.php'
+	),
+	'organizer' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'blockive-premium-addon-for-block/tb-event-organizer',
+		'version' => '0.1.0',
+		'title' => 'Organizer',
+		'category' => 'blockive-template',
+		'icon' => 'admin-users',
+		'description' => 'Displays the current event\'s organizer dynamically, optionally linked to the organizer\'s website, via any supported events plugin. Blockive Template Builder only.',
+		'usesContext' => array(
+			'postId',
+			'postType'
+		),
+		'textdomain' => 'blockive-premium-addon-for-block',
+		'attributes' => array(
+			'isLink' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'linkTarget' => array(
+				'type' => 'string',
+				'default' => '_self'
+			),
+			'icon' => array(
+				'type' => 'string',
+				'default' => 'fa-regular fa-address-card'
+			)
+		),
+		'supports' => array(
+			'html' => false,
+			'color' => array(
+				'text' => true,
+				'link' => true
+			),
+			'typography' => array(
+				'fontSize' => true,
+				'lineHeight' => true,
+				'__experimentalFontFamily' => true,
+				'__experimentalFontWeight' => true,
+				'__experimentalFontStyle' => true,
+				'__experimentalTextTransform' => true,
+				'__experimentalTextDecoration' => true,
+				'__experimentalLetterSpacing' => true,
+				'__experimentalDefaultControls' => array(
+					'fontSize' => true
+				)
+			),
+			'spacing' => array(
+				'margin' => true,
+				'padding' => true
+			)
+		),
+		'render' => 'file:./render.php'
+	),
+	'register-button' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'blockive-premium-addon-for-block/tb-event-register-button',
+		'version' => '0.1.0',
+		'title' => 'Register Button',
+		'category' => 'blockive-template',
+		'icon' => 'megaphone',
+		'description' => 'A styled button linking to the current event\'s registration URL. Blockive Template Builder only.',
+		'usesContext' => array(
+			'postId',
+			'postType'
+		),
+		'textdomain' => 'blockive-premium-addon-for-block',
+		'attributes' => array(
+			'buttonText' => array(
+				'type' => 'string',
+				'default' => 'Register Now'
+			),
+			'url' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'useEventRegistrationMeta' => array(
+				'type' => 'boolean',
+				'default' => true
+			),
+			'openInNewTab' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bgHoverColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'textColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'textHoverColor' => array(
+				'type' => 'string',
+				'default' => ''
+			)
+		),
+		'supports' => array(
+			'html' => false,
+			'typography' => array(
+				'fontSize' => true,
+				'lineHeight' => true,
+				'__experimentalFontFamily' => true,
+				'__experimentalFontWeight' => true,
+				'__experimentalFontStyle' => true,
+				'__experimentalTextTransform' => true,
+				'__experimentalLetterSpacing' => true,
+				'__experimentalDefaultControls' => array(
+					'fontSize' => true
+				)
+			),
+			'spacing' => array(
+				'margin' => true,
+				'padding' => true
+			)
+		),
+		'render' => 'file:./render.php'
+	),
+	'time' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'blockive-premium-addon-for-block/tb-event-time',
+		'version' => '0.1.0',
+		'title' => 'Event Time',
+		'category' => 'blockive-template',
+		'icon' => 'clock',
+		'description' => 'Displays the current event\'s start (and optionally end) time dynamically, via any supported events plugin. Blockive Template Builder only.',
+		'usesContext' => array(
+			'postId',
+			'postType'
+		),
+		'textdomain' => 'blockive-premium-addon-for-block',
+		'attributes' => array(
+			'showEndTime' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'timeRangeSeparator' => array(
+				'type' => 'string',
+				'default' => ' - '
+			),
+			'icon' => array(
+				'type' => 'string',
+				'default' => 'fa-regular fa-clock'
+			)
+		),
+		'supports' => array(
+			'html' => false,
+			'color' => array(
+				'text' => true
+			),
+			'typography' => array(
+				'fontSize' => true,
+				'lineHeight' => true,
+				'__experimentalFontFamily' => true,
+				'__experimentalFontWeight' => true,
+				'__experimentalFontStyle' => true,
+				'__experimentalTextTransform' => true,
+				'__experimentalTextDecoration' => true,
+				'__experimentalLetterSpacing' => true,
+				'__experimentalDefaultControls' => array(
+					'fontSize' => true
+				)
+			),
+			'spacing' => array(
+				'margin' => true,
+				'padding' => true
+			)
+		),
+		'render' => 'file:./render.php'
+	),
+	'venue' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'blockive-premium-addon-for-block/tb-event-venue',
+		'version' => '0.1.0',
+		'title' => 'Venue',
+		'category' => 'blockive-template',
+		'icon' => 'location-alt',
+		'description' => 'Displays the current event\'s venue (and optionally address) dynamically, via any supported events plugin. Blockive Template Builder only.',
+		'usesContext' => array(
+			'postId',
+			'postType'
+		),
+		'textdomain' => 'blockive-premium-addon-for-block',
+		'attributes' => array(
+			'showAddress' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'icon' => array(
+				'type' => 'string',
+				'default' => 'fa-solid fa-location-dot'
+			)
+		),
+		'supports' => array(
+			'html' => false,
+			'color' => array(
+				'text' => true
+			),
+			'typography' => array(
+				'fontSize' => true,
+				'lineHeight' => true,
+				'__experimentalFontFamily' => true,
+				'__experimentalFontWeight' => true,
+				'__experimentalFontStyle' => true,
+				'__experimentalTextTransform' => true,
+				'__experimentalTextDecoration' => true,
+				'__experimentalLetterSpacing' => true,
+				'__experimentalDefaultControls' => array(
+					'fontSize' => true
+				)
+			),
+			'spacing' => array(
+				'margin' => true,
+				'padding' => true
+			)
+		),
+		'render' => 'file:./render.php'
+	),
+	'author' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'blockive-premium-addon-for-block/tb-author',
+		'version' => '0.1.0',
+		'title' => 'Author',
+		'category' => 'blockive-template',
+		'icon' => 'admin-users',
+		'description' => 'Displays the current post\'s author name dynamically, optionally linked to their author archive. Blockive Template Builder only.',
+		'usesContext' => array(
+			'postId',
+			'postType'
+		),
+		'textdomain' => 'blockive-premium-addon-for-block',
+		'attributes' => array(
+			'displayFormat' => array(
+				'type' => 'string',
+				'default' => 'display_name'
+			),
+			'isLink' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'linkTarget' => array(
+				'type' => 'string',
+				'default' => '_self'
+			),
+			'textAlign' => array(
+				'type' => 'string',
+				'default' => ''
+			)
+		),
+		'supports' => array(
+			'html' => false,
+			'color' => array(
+				'text' => true,
+				'background' => true,
+				'gradients' => true,
+				'link' => true
+			),
+			'typography' => array(
+				'fontSize' => true,
+				'lineHeight' => true,
+				'__experimentalFontFamily' => true,
+				'__experimentalFontWeight' => true,
+				'__experimentalFontStyle' => true,
+				'__experimentalTextTransform' => true,
+				'__experimentalTextDecoration' => true,
+				'__experimentalLetterSpacing' => true,
+				'__experimentalDefaultControls' => array(
+					'fontSize' => true
+				)
+			),
+			'spacing' => array(
+				'margin' => true,
+				'padding' => true,
+				'__experimentalDefaultControls' => array(
+					'margin' => true
+				)
+			)
+		),
+		'render' => 'file:./render.php'
+	),
+	'author-avatar' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'blockive-premium-addon-for-block/tb-author-avatar',
+		'version' => '0.1.0',
+		'title' => 'Author Avatar',
+		'category' => 'blockive-template',
+		'icon' => 'id',
+		'description' => 'Displays the current post\'s author avatar dynamically, with size, border and shadow controls. Blockive Template Builder only.',
+		'usesContext' => array(
+			'postId',
+			'postType'
+		),
+		'textdomain' => 'blockive-premium-addon-for-block',
+		'attributes' => array(
+			'size' => array(
+				'type' => 'number',
+				'default' => 96
+			),
+			'borderRadius' => array(
+				'type' => 'number',
+				'default' => 9999
+			),
+			'borderType' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'borderWidth' => array(
+				'type' => 'number',
+				'default' => 1
+			),
+			'borderColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'shadowEnabled' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'shadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'shadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'shadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			)
+		),
+		'supports' => array(
+			'html' => false,
+			'spacing' => array(
+				'margin' => true,
+				'__experimentalDefaultControls' => array(
+					'margin' => true
+				)
+			)
+		),
+		'render' => 'file:./render.php'
+	),
+	'breadcrumbs' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'blockive-premium-addon-for-block/tb-breadcrumbs',
+		'version' => '0.1.0',
+		'title' => 'Breadcrumbs',
+		'category' => 'blockive-template',
+		'icon' => 'admin-links',
+		'description' => 'Displays a Home > Category > Title breadcrumb trail for the current post dynamically. Blockive Template Builder only.',
+		'usesContext' => array(
+			'postId',
+			'postType'
+		),
+		'textdomain' => 'blockive-premium-addon-for-block',
+		'attributes' => array(
+			'separator' => array(
+				'type' => 'string',
+				'default' => '/'
+			),
+			'showHomeIcon' => array(
+				'type' => 'boolean',
+				'default' => true
+			),
+			'homeIcon' => array(
+				'type' => 'string',
+				'default' => 'fa-solid fa-house'
+			),
+			'textColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'textHoverColor' => array(
+				'type' => 'string',
+				'default' => ''
+			)
+		),
+		'supports' => array(
+			'html' => false,
+			'typography' => array(
+				'fontSize' => true,
+				'lineHeight' => true,
+				'__experimentalFontFamily' => true,
+				'__experimentalFontWeight' => true,
+				'__experimentalFontStyle' => true,
+				'__experimentalTextTransform' => true,
+				'__experimentalLetterSpacing' => true,
+				'__experimentalDefaultControls' => array(
+					'fontSize' => true
+				)
+			),
+			'spacing' => array(
+				'margin' => true,
+				'padding' => true,
+				'__experimentalDefaultControls' => array(
+					'margin' => true
+				)
+			)
+		),
+		'render' => 'file:./render.php'
+	),
+	'categories' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'blockive-premium-addon-for-block/tb-categories',
+		'version' => '0.1.0',
+		'title' => 'Categories',
+		'category' => 'blockive-template',
+		'icon' => 'category',
+		'description' => 'Displays the current post\'s categories dynamically, as a plain list or as badges, with normal/hover colors. Blockive Template Builder only.',
+		'usesContext' => array(
+			'postId',
+			'postType'
+		),
+		'textdomain' => 'blockive-premium-addon-for-block',
+		'attributes' => array(
+			'separator' => array(
+				'type' => 'string',
+				'default' => ', '
+			),
+			'badgeStyle' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'isLink' => array(
+				'type' => 'boolean',
+				'default' => true
+			),
+			'textColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'textHoverColor' => array(
+				'type' => 'string',
+				'default' => ''
+			)
+		),
+		'supports' => array(
+			'html' => false,
+			'typography' => array(
+				'fontSize' => true,
+				'lineHeight' => true,
+				'__experimentalFontFamily' => true,
+				'__experimentalFontWeight' => true,
+				'__experimentalFontStyle' => true,
+				'__experimentalTextTransform' => true,
+				'__experimentalLetterSpacing' => true,
+				'__experimentalDefaultControls' => array(
+					'fontSize' => true
+				)
+			),
+			'spacing' => array(
+				'margin' => true,
+				'padding' => true,
+				'__experimentalDefaultControls' => array(
+					'margin' => true
+				)
+			)
+		),
+		'render' => 'file:./render.php'
+	),
+	'comments-count' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'blockive-premium-addon-for-block/tb-comments-count',
+		'version' => '0.1.0',
+		'title' => 'Comments Count',
+		'category' => 'blockive-template',
+		'icon' => 'admin-comments',
+		'description' => 'Displays the current post\'s comment count dynamically. Blockive Template Builder only.',
+		'usesContext' => array(
+			'postId',
+			'postType'
+		),
+		'textdomain' => 'blockive-premium-addon-for-block',
+		'attributes' => array(
+			'icon' => array(
+				'type' => 'string',
+				'default' => 'fa-regular fa-comment'
+			),
+			'format' => array(
+				'type' => 'string',
+				'default' => '{count} Comments'
+			),
+			'isLink' => array(
+				'type' => 'boolean',
+				'default' => true
+			)
+		),
+		'supports' => array(
+			'html' => false,
+			'color' => array(
+				'text' => true,
+				'link' => true
+			),
+			'typography' => array(
+				'fontSize' => true,
+				'lineHeight' => true,
+				'__experimentalFontFamily' => true,
+				'__experimentalFontWeight' => true,
+				'__experimentalFontStyle' => true,
+				'__experimentalDefaultControls' => array(
+					'fontSize' => true
+				)
+			),
+			'spacing' => array(
+				'margin' => true,
+				'padding' => true,
+				'__experimentalDefaultControls' => array(
+					'margin' => true
+				)
+			)
+		),
+		'render' => 'file:./render.php'
+	),
+	'featured-image' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'blockive-premium-addon-for-block/tb-featured-image',
+		'version' => '0.1.0',
+		'title' => 'Featured Image',
+		'category' => 'blockive-template',
+		'icon' => 'format-image',
+		'description' => 'Displays the current post\'s featured image dynamically. Blockive Template Builder only.',
+		'usesContext' => array(
+			'postId',
+			'postType'
+		),
+		'textdomain' => 'blockive-premium-addon-for-block',
+		'attributes' => array(
+			'imageSize' => array(
+				'type' => 'string',
+				'default' => 'large'
+			),
+			'aspectRatio' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'borderRadius' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'objectFit' => array(
+				'type' => 'string',
+				'default' => 'cover'
+			),
+			'lazyLoad' => array(
+				'type' => 'boolean',
+				'default' => true
+			),
+			'isLink' => array(
+				'type' => 'boolean',
+				'default' => true
+			),
+			'overlayColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'hoverEffect' => array(
+				'type' => 'string',
+				'default' => 'none'
+			)
+		),
+		'supports' => array(
+			'html' => false,
+			'align' => array(
+				'wide',
+				'full'
+			),
+			'spacing' => array(
+				'margin' => true,
+				'padding' => true,
+				'__experimentalDefaultControls' => array(
+					'margin' => true
+				)
+			)
+		),
+		'render' => 'file:./render.php'
+	),
+	'featured-video' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'blockive-premium-addon-for-block/tb-featured-video',
+		'version' => '0.1.0',
+		'title' => 'Featured Video',
+		'category' => 'blockive-template',
+		'icon' => 'video-alt3',
+		'description' => 'Displays the current post\'s featured video dynamically (post meta, auto-detected content video, or a manual fallback URL). Blockive Template Builder only.',
+		'usesContext' => array(
+			'postId',
+			'postType'
+		),
+		'textdomain' => 'blockive-premium-addon-for-block',
+		'attributes' => array(
+			'videoUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'metaKey' => array(
+				'type' => 'string',
+				'default' => 'featured_video_url'
+			),
+			'autoDetect' => array(
+				'type' => 'boolean',
+				'default' => true
+			),
+			'aspectRatio' => array(
+				'type' => 'string',
+				'default' => '16/9'
+			)
+		),
+		'supports' => array(
+			'html' => false,
+			'align' => array(
+				'wide',
+				'full'
+			),
+			'spacing' => array(
+				'margin' => true,
+				'padding' => true,
+				'__experimentalDefaultControls' => array(
+					'margin' => true
+				)
+			)
+		),
+		'render' => 'file:./render.php'
+	),
+	'modified-date' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'blockive-premium-addon-for-block/tb-modified-date',
+		'version' => '0.1.0',
+		'title' => 'Modified Date',
+		'category' => 'blockive-template',
+		'icon' => 'update',
+		'description' => 'Displays the current post\'s last modified date dynamically, with custom format and relative time. Blockive Template Builder only.',
+		'usesContext' => array(
+			'postId',
+			'postType'
+		),
+		'textdomain' => 'blockive-premium-addon-for-block',
+		'attributes' => array(
+			'dateFormat' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'relative' => array(
+				'type' => 'boolean',
+				'default' => false
+			)
+		),
+		'supports' => array(
+			'html' => false,
+			'color' => array(
+				'text' => true
+			),
+			'typography' => array(
+				'fontSize' => true,
+				'__experimentalDefaultControls' => array(
+					'fontSize' => true
+				)
+			),
+			'spacing' => array(
+				'margin' => true,
+				'padding' => true,
+				'__experimentalDefaultControls' => array(
+					'margin' => true
+				)
+			)
+		),
+		'render' => 'file:./render.php'
+	),
+	'post-content' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'blockive-premium-addon-for-block/tb-post-content',
+		'version' => '0.1.0',
+		'title' => 'Post Content',
+		'category' => 'blockive-template',
+		'icon' => 'editor-paragraph',
+		'description' => 'Displays the current post\'s full content dynamically, with optional truncation, drop cap and max width. Blockive Template Builder only.',
+		'usesContext' => array(
+			'postId',
+			'postType'
+		),
+		'textdomain' => 'blockive-premium-addon-for-block',
+		'attributes' => array(
+			'wordLimit' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'showReadMore' => array(
+				'type' => 'boolean',
+				'default' => true
+			),
+			'readMoreText' => array(
+				'type' => 'string',
+				'default' => 'Read More'
+			),
+			'maxWidth' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'dropCap' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'textAlign' => array(
+				'type' => 'string',
+				'default' => ''
+			)
+		),
+		'supports' => array(
+			'html' => false,
+			'align' => array(
+				'wide',
+				'full'
+			),
+			'color' => array(
+				'text' => true,
+				'background' => true,
+				'gradients' => true,
+				'link' => true
+			),
+			'typography' => array(
+				'fontSize' => true,
+				'lineHeight' => true,
+				'__experimentalFontFamily' => true,
+				'__experimentalFontWeight' => true,
+				'__experimentalFontStyle' => true,
+				'__experimentalTextTransform' => true,
+				'__experimentalTextDecoration' => true,
+				'__experimentalLetterSpacing' => true,
+				'__experimentalDefaultControls' => array(
+					'fontSize' => true
+				)
+			),
+			'spacing' => array(
+				'margin' => true,
+				'padding' => true,
+				'__experimentalDefaultControls' => array(
+					'margin' => true,
+					'padding' => true
+				)
+			)
+		),
+		'render' => 'file:./render.php'
+	),
+	'post-excerpt' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'blockive-premium-addon-for-block/tb-post-excerpt',
+		'version' => '0.1.0',
+		'title' => 'Post Excerpt',
+		'category' => 'blockive-template',
+		'icon' => 'excerpt-view',
+		'description' => 'Displays the current post\'s excerpt dynamically, with a configurable character limit and Read More link. Blockive Template Builder only.',
+		'usesContext' => array(
+			'postId',
+			'postType'
+		),
+		'textdomain' => 'blockive-premium-addon-for-block',
+		'attributes' => array(
+			'excerptLength' => array(
+				'type' => 'number',
+				'default' => 150
+			),
+			'showReadMore' => array(
+				'type' => 'boolean',
+				'default' => true
+			),
+			'readMoreText' => array(
+				'type' => 'string',
+				'default' => 'Read More'
+			),
+			'textAlign' => array(
+				'type' => 'string',
+				'default' => ''
+			)
+		),
+		'supports' => array(
+			'html' => false,
+			'color' => array(
+				'text' => true
+			),
+			'typography' => array(
+				'fontSize' => true,
+				'lineHeight' => true,
+				'__experimentalFontFamily' => true,
+				'__experimentalFontWeight' => true,
+				'__experimentalFontStyle' => true,
+				'__experimentalTextTransform' => true,
+				'__experimentalTextDecoration' => true,
+				'__experimentalLetterSpacing' => true,
+				'__experimentalDefaultControls' => array(
+					'fontSize' => true
+				)
+			),
+			'spacing' => array(
+				'margin' => true,
+				'padding' => true,
+				'__experimentalDefaultControls' => array(
+					'margin' => true
+				)
+			)
+		),
+		'render' => 'file:./render.php'
+	),
+	'post-meta' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'blockive-premium-addon-for-block/tb-post-meta',
+		'version' => '0.1.0',
+		'title' => 'Post Meta',
+		'category' => 'blockive-template',
+		'icon' => 'list-view',
+		'description' => 'A reorderable row of post meta items (author, date, categories, tags, comments, reading time). Blockive Template Builder only.',
+		'usesContext' => array(
+			'postId',
+			'postType'
+		),
+		'textdomain' => 'blockive-premium-addon-for-block',
+		'attributes' => array(
+			'items' => array(
+				'type' => 'array',
+				'default' => array(
+					array(
+						'key' => 'date',
+						'enabled' => true
+					),
+					array(
+						'key' => 'author',
+						'enabled' => true
+					),
+					array(
+						'key' => 'categories',
+						'enabled' => true
+					),
+					array(
+						'key' => 'comments',
+						'enabled' => true
+					),
+					array(
+						'key' => 'tags',
+						'enabled' => false
+					),
+					array(
+						'key' => 'readingTime',
+						'enabled' => false
+					)
+				)
+			),
+			'separator' => array(
+				'type' => 'string',
+				'default' => '•'
+			),
+			'showIcons' => array(
+				'type' => 'boolean',
+				'default' => true
+			)
+		),
+		'supports' => array(
+			'html' => false,
+			'color' => array(
+				'text' => true,
+				'link' => true
+			),
+			'typography' => array(
+				'fontSize' => true,
+				'__experimentalDefaultControls' => array(
+					'fontSize' => true
+				)
+			),
+			'spacing' => array(
+				'margin' => true,
+				'padding' => true
+			)
+		),
+		'render' => 'file:./render.php'
+	),
+	'post-title' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'blockive-premium-addon-for-block/tb-post-title',
+		'version' => '0.1.0',
+		'title' => 'Post Title',
+		'category' => 'blockive-template',
+		'icon' => 'editor-textcolor',
+		'description' => 'Displays the current post\'s title dynamically. Blockive Template Builder only.',
+		'usesContext' => array(
+			'postId',
+			'postType'
+		),
+		'textdomain' => 'blockive-premium-addon-for-block',
+		'attributes' => array(
+			'tagName' => array(
+				'type' => 'string',
+				'default' => 'h2'
+			),
+			'textAlign' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'isLink' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'linkTarget' => array(
+				'type' => 'string',
+				'default' => '_self'
+			),
+			'textColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'textHoverColor' => array(
+				'type' => 'string',
+				'default' => ''
+			)
+		),
+		'supports' => array(
+			'html' => false,
+			'color' => array(
+				'text' => true,
+				'background' => true,
+				'gradients' => true,
+				'link' => true
+			),
+			'typography' => array(
+				'fontSize' => true,
+				'lineHeight' => true,
+				'__experimentalFontFamily' => true,
+				'__experimentalFontWeight' => true,
+				'__experimentalFontStyle' => true,
+				'__experimentalTextTransform' => true,
+				'__experimentalTextDecoration' => true,
+				'__experimentalLetterSpacing' => true,
+				'__experimentalDefaultControls' => array(
+					'fontSize' => true
+				)
+			),
+			'spacing' => array(
+				'margin' => true,
+				'padding' => true,
+				'__experimentalDefaultControls' => array(
+					'margin' => true,
+					'padding' => true
+				)
+			)
+		),
+		'render' => 'file:./render.php'
+	),
+	'previous-next-navigation' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'blockive-premium-addon-for-block/tb-previous-next-navigation',
+		'version' => '0.1.0',
+		'title' => 'Previous / Next Navigation',
+		'category' => 'blockive-template',
+		'icon' => 'controls-repeat',
+		'description' => 'Links to the previous and next posts, dynamically. Blockive Template Builder only.',
+		'usesContext' => array(
+			'postId',
+			'postType'
+		),
+		'textdomain' => 'blockive-premium-addon-for-block',
+		'attributes' => array(
+			'prevLabel' => array(
+				'type' => 'string',
+				'default' => 'Previous'
+			),
+			'nextLabel' => array(
+				'type' => 'string',
+				'default' => 'Next'
+			),
+			'prevIcon' => array(
+				'type' => 'string',
+				'default' => 'fa-solid fa-arrow-left'
+			),
+			'nextIcon' => array(
+				'type' => 'string',
+				'default' => 'fa-solid fa-arrow-right'
+			),
+			'hoverStyle' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'inSameTerm' => array(
+				'type' => 'boolean',
+				'default' => false
+			)
+		),
+		'supports' => array(
+			'html' => false,
+			'color' => array(
+				'text' => true,
+				'link' => true
+			),
+			'typography' => array(
+				'fontSize' => true,
+				'lineHeight' => true,
+				'__experimentalFontFamily' => true,
+				'__experimentalFontWeight' => true,
+				'__experimentalFontStyle' => true,
+				'__experimentalTextTransform' => true,
+				'__experimentalDefaultControls' => array(
+					'fontSize' => true
+				)
+			),
+			'spacing' => array(
+				'margin' => true,
+				'padding' => true,
+				'__experimentalDefaultControls' => array(
+					'margin' => true
+				)
+			)
+		),
+		'render' => 'file:./render.php'
+	),
+	'publish-date' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'blockive-premium-addon-for-block/tb-publish-date',
+		'version' => '0.1.0',
+		'title' => 'Publish Date',
+		'category' => 'blockive-template',
+		'icon' => 'calendar-alt',
+		'description' => 'Displays the current post\'s publish date dynamically, with custom format, relative time and icon. Blockive Template Builder only.',
+		'usesContext' => array(
+			'postId',
+			'postType'
+		),
+		'textdomain' => 'blockive-premium-addon-for-block',
+		'attributes' => array(
+			'dateFormat' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'relative' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'icon' => array(
+				'type' => 'string',
+				'default' => 'fa-regular fa-calendar'
+			)
+		),
+		'supports' => array(
+			'html' => false,
+			'color' => array(
+				'text' => true
+			),
+			'typography' => array(
+				'fontSize' => true,
+				'lineHeight' => true,
+				'__experimentalFontFamily' => true,
+				'__experimentalFontWeight' => true,
+				'__experimentalFontStyle' => true,
+				'__experimentalTextTransform' => true,
+				'__experimentalLetterSpacing' => true,
+				'__experimentalDefaultControls' => array(
+					'fontSize' => true
+				)
+			),
+			'spacing' => array(
+				'margin' => true,
+				'padding' => true,
+				'__experimentalDefaultControls' => array(
+					'margin' => true
+				)
+			)
+		),
+		'render' => 'file:./render.php'
+	),
+	'reading-time' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'blockive-premium-addon-for-block/tb-reading-time',
+		'version' => '0.1.0',
+		'title' => 'Reading Time',
+		'category' => 'blockive-template',
+		'icon' => 'clock',
+		'description' => 'Displays the current post\'s estimated reading time dynamically. Blockive Template Builder only.',
+		'usesContext' => array(
+			'postId',
+			'postType'
+		),
+		'textdomain' => 'blockive-premium-addon-for-block',
+		'attributes' => array(
+			'wpm' => array(
+				'type' => 'number',
+				'default' => 200
+			),
+			'icon' => array(
+				'type' => 'string',
+				'default' => 'fa-regular fa-clock'
+			),
+			'prefix' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'suffix' => array(
+				'type' => 'string',
+				'default' => ' min read'
+			)
+		),
+		'supports' => array(
+			'html' => false,
+			'color' => array(
+				'text' => true,
+				'link' => true
+			),
+			'typography' => array(
+				'fontSize' => true,
+				'lineHeight' => true,
+				'__experimentalFontFamily' => true,
+				'__experimentalFontWeight' => true,
+				'__experimentalFontStyle' => true,
+				'__experimentalDefaultControls' => array(
+					'fontSize' => true
+				)
+			),
+			'spacing' => array(
+				'margin' => true,
+				'padding' => true,
+				'__experimentalDefaultControls' => array(
+					'margin' => true
+				)
+			)
+		),
+		'render' => 'file:./render.php'
+	),
+	'related-posts' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'blockive-premium-addon-for-block/tb-related-posts',
+		'version' => '0.1.0',
+		'title' => 'Related Posts',
+		'category' => 'blockive-template',
+		'icon' => 'layout',
+		'description' => 'Displays a grid or slider of posts related to the current post. Blockive Template Builder only.',
+		'usesContext' => array(
+			'postId',
+			'postType'
+		),
+		'textdomain' => 'blockive-premium-addon-for-block',
+		'attributes' => array(
+			'numberOfPosts' => array(
+				'type' => 'number',
+				'default' => 3
+			),
+			'layout' => array(
+				'type' => 'string',
+				'default' => 'grid'
+			),
+			'columns' => array(
+				'type' => 'number',
+				'default' => 3
+			),
+			'orderBy' => array(
+				'type' => 'string',
+				'default' => 'date'
+			),
+			'order' => array(
+				'type' => 'string',
+				'default' => 'desc'
+			),
+			'sameCategory' => array(
+				'type' => 'boolean',
+				'default' => true
+			),
+			'showImage' => array(
+				'type' => 'boolean',
+				'default' => true
+			),
+			'showDate' => array(
+				'type' => 'boolean',
+				'default' => true
+			),
+			'showExcerpt' => array(
+				'type' => 'boolean',
+				'default' => false
+			)
+		),
+		'supports' => array(
+			'html' => false,
+			'align' => array(
+				'wide',
+				'full'
+			),
+			'spacing' => array(
+				'margin' => true,
+				'padding' => true,
+				'__experimentalDefaultControls' => array(
+					'margin' => true
+				)
+			)
+		),
+		'render' => 'file:./render.php',
+		'viewScript' => 'file:./view.js'
+	),
+	'tags' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'blockive-premium-addon-for-block/tb-tags',
+		'version' => '0.1.0',
+		'title' => 'Tags',
+		'category' => 'blockive-template',
+		'icon' => 'tag',
+		'description' => 'Displays the current post\'s tags dynamically. Blockive Template Builder only.',
+		'usesContext' => array(
+			'postId',
+			'postType'
+		),
+		'textdomain' => 'blockive-premium-addon-for-block',
+		'attributes' => array(
+			'separator' => array(
+				'type' => 'string',
+				'default' => ', '
+			),
+			'badgeStyle' => array(
+				'type' => 'boolean',
+				'default' => false
+			)
+		),
+		'supports' => array(
+			'html' => false,
+			'color' => array(
+				'text' => true,
+				'background' => true,
+				'link' => true
+			),
+			'typography' => array(
+				'fontSize' => true,
+				'lineHeight' => true,
+				'__experimentalFontFamily' => true,
+				'__experimentalFontWeight' => true,
+				'__experimentalFontStyle' => true,
+				'__experimentalTextTransform' => true,
+				'__experimentalTextDecoration' => true,
+				'__experimentalLetterSpacing' => true,
+				'__experimentalDefaultControls' => array(
+					'fontSize' => true
+				)
+			),
+			'spacing' => array(
+				'margin' => true,
+				'padding' => true,
+				'__experimentalDefaultControls' => array(
+					'margin' => true
+				)
+			)
+		),
+		'render' => 'file:./render.php'
+	),
+	'add-to-cart' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'blockive-premium-addon-for-block/tb-product-add-to-cart',
+		'version' => '0.1.0',
+		'title' => 'Add To Cart',
+		'category' => 'blockive-template',
+		'icon' => 'cart',
+		'description' => 'Renders the current WooCommerce product\'s Add to Cart form - supports simple, variable, grouped and external products by calling WooCommerce\'s own single-product template. Blockive Template Builder only.',
+		'usesContext' => array(
+			'postId',
+			'postType'
+		),
+		'textdomain' => 'blockive-premium-addon-for-block',
+		'attributes' => array(
+			'buttonText' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'btnBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'btnTextColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'btnHoverBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'btnHoverTextColor' => array(
+				'type' => 'string',
+				'default' => ''
+			)
+		),
+		'supports' => array(
+			'html' => false,
+			'spacing' => array(
+				'margin' => true,
+				'padding' => true
+			)
+		),
+		'render' => 'file:./render.php'
+	),
+	'attributes' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'blockive-premium-addon-for-block/tb-product-attributes',
+		'version' => '0.1.0',
+		'title' => 'Product Attributes',
+		'category' => 'blockive-template',
+		'icon' => 'list-view',
+		'description' => 'Displays the current WooCommerce product\'s custom and taxonomy attributes as a table or list. Blockive Template Builder only.',
+		'usesContext' => array(
+			'postId',
+			'postType'
+		),
+		'textdomain' => 'blockive-premium-addon-for-block',
+		'attributes' => array(
+			'layout' => array(
+				'type' => 'string',
+				'default' => 'table'
+			),
+			'showLabel' => array(
+				'type' => 'boolean',
+				'default' => true
+			)
+		),
+		'supports' => array(
+			'html' => false,
+			'color' => array(
+				'text' => true,
+				'link' => true
+			),
+			'typography' => array(
+				'fontSize' => true,
+				'__experimentalDefaultControls' => array(
+					'fontSize' => true
+				)
+			),
+			'spacing' => array(
+				'margin' => true,
+				'padding' => true,
+				'__experimentalDefaultControls' => array(
+					'margin' => true,
+					'padding' => true
+				)
+			)
+		),
+		'render' => 'file:./render.php'
+	),
+	'cross-sells' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'blockive-premium-addon-for-block/tb-product-cross-sells',
+		'version' => '0.1.0',
+		'title' => 'Cross Sells',
+		'category' => 'blockive-template',
+		'icon' => 'randomize',
+		'description' => 'Displays a grid or slider of the current WooCommerce product\'s cross-sell products (sourced from the product itself, not the live cart, so it renders sensibly inside a template preview). Blockive Template Builder only.',
+		'usesContext' => array(
+			'postId',
+			'postType'
+		),
+		'textdomain' => 'blockive-premium-addon-for-block',
+		'attributes' => array(
+			'numberOfProducts' => array(
+				'type' => 'number',
+				'default' => 4
+			),
+			'layout' => array(
+				'type' => 'string',
+				'default' => 'grid'
+			),
+			'columns' => array(
+				'type' => 'number',
+				'default' => 4
+			)
+		),
+		'supports' => array(
+			'html' => false,
+			'align' => array(
+				'wide',
+				'full'
+			),
+			'spacing' => array(
+				'margin' => true,
+				'padding' => true
+			)
+		),
+		'render' => 'file:./render.php',
+		'viewScript' => 'file:./view.js'
+	),
+	'description' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'blockive-premium-addon-for-block/tb-product-description',
+		'version' => '0.1.0',
+		'title' => 'Product Description',
+		'category' => 'blockive-template',
+		'icon' => 'editor-justify',
+		'description' => 'Displays the current WooCommerce product\'s full description dynamically. Blockive Template Builder only.',
+		'usesContext' => array(
+			'postId',
+			'postType'
+		),
+		'textdomain' => 'blockive-premium-addon-for-block',
+		'attributes' => array(
+			'maxWidth' => array(
+				'type' => 'number',
+				'default' => 0
+			)
+		),
+		'supports' => array(
+			'html' => false,
+			'color' => array(
+				'text' => true,
+				'background' => true,
+				'link' => true
+			),
+			'typography' => array(
+				'fontSize' => true,
+				'lineHeight' => true,
+				'__experimentalFontFamily' => true,
+				'__experimentalFontWeight' => true,
+				'__experimentalFontStyle' => true,
+				'__experimentalTextTransform' => true,
+				'__experimentalLetterSpacing' => true,
+				'__experimentalDefaultControls' => array(
+					'fontSize' => true
+				)
+			),
+			'spacing' => array(
+				'margin' => true,
+				'padding' => true,
+				'__experimentalDefaultControls' => array(
+					'margin' => true,
+					'padding' => true
+				)
+			)
+		),
+		'render' => 'file:./render.php'
+	),
+	'gallery' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'blockive-premium-addon-for-block/tb-product-gallery',
+		'version' => '0.1.0',
+		'title' => 'Product Gallery',
+		'category' => 'blockive-template',
+		'icon' => 'format-gallery',
+		'description' => 'Displays the current WooCommerce product\'s full image gallery (main image plus thumbnail strip) dynamically. Blockive Template Builder only.',
+		'usesContext' => array(
+			'postId',
+			'postType'
+		),
+		'textdomain' => 'blockive-premium-addon-for-block',
+		'attributes' => array(
+			'thumbnailPosition' => array(
+				'type' => 'string',
+				'default' => 'bottom'
+			),
+			'thumbnailSize' => array(
+				'type' => 'string',
+				'default' => 'thumbnail'
+			),
+			'mainImageSize' => array(
+				'type' => 'string',
+				'default' => 'large'
+			)
+		),
+		'supports' => array(
+			'html' => false,
+			'align' => array(
+				'wide',
+				'full'
+			),
+			'spacing' => array(
+				'margin' => true,
+				'padding' => true,
+				'__experimentalDefaultControls' => array(
+					'margin' => true
+				)
+			)
+		),
+		'render' => 'file:./render.php'
+	),
+	'images' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'blockive-premium-addon-for-block/tb-product-images',
+		'version' => '0.1.0',
+		'title' => 'Product Images',
+		'category' => 'blockive-template',
+		'icon' => 'format-image',
+		'description' => 'Displays the current WooCommerce product\'s main image dynamically. Blockive Template Builder only.',
+		'usesContext' => array(
+			'postId',
+			'postType'
+		),
+		'textdomain' => 'blockive-premium-addon-for-block',
+		'attributes' => array(
+			'imageSize' => array(
+				'type' => 'string',
+				'default' => 'large'
+			),
+			'aspectRatio' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'borderRadius' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'objectFit' => array(
+				'type' => 'string',
+				'default' => 'cover'
+			),
+			'lazyLoad' => array(
+				'type' => 'boolean',
+				'default' => true
+			),
+			'isLink' => array(
+				'type' => 'boolean',
+				'default' => true
+			)
+		),
+		'supports' => array(
+			'html' => false,
+			'align' => array(
+				'wide',
+				'full'
+			),
+			'spacing' => array(
+				'margin' => true,
+				'padding' => true,
+				'__experimentalDefaultControls' => array(
+					'margin' => true
+				)
+			)
+		),
+		'render' => 'file:./render.php'
+	),
+	'meta' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'blockive-premium-addon-for-block/tb-product-meta',
+		'version' => '0.1.0',
+		'title' => 'Product Meta',
+		'category' => 'blockive-template',
+		'icon' => 'list-view',
+		'description' => 'A reorderable row of product meta items (SKU, categories, tags, stock status). Blockive Template Builder only.',
+		'usesContext' => array(
+			'postId',
+			'postType'
+		),
+		'textdomain' => 'blockive-premium-addon-for-block',
+		'attributes' => array(
+			'items' => array(
+				'type' => 'array',
+				'default' => array(
+					array(
+						'key' => 'sku',
+						'enabled' => true
+					),
+					array(
+						'key' => 'categories',
+						'enabled' => true
+					),
+					array(
+						'key' => 'tags',
+						'enabled' => false
+					),
+					array(
+						'key' => 'stockStatus',
+						'enabled' => true
+					)
+				)
+			),
+			'separator' => array(
+				'type' => 'string',
+				'default' => '•'
+			),
+			'showIcons' => array(
+				'type' => 'boolean',
+				'default' => true
+			)
+		),
+		'supports' => array(
+			'html' => false,
+			'color' => array(
+				'text' => true,
+				'link' => true
+			),
+			'typography' => array(
+				'fontSize' => true,
+				'__experimentalDefaultControls' => array(
+					'fontSize' => true
+				)
+			),
+			'spacing' => array(
+				'margin' => true,
+				'padding' => true
+			)
+		),
+		'render' => 'file:./render.php'
+	),
+	'price' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'blockive-premium-addon-for-block/tb-product-price',
+		'version' => '0.1.0',
+		'title' => 'Product Price',
+		'category' => 'blockive-template',
+		'icon' => 'tag',
+		'description' => 'Displays the current WooCommerce product\'s price (including sale/regular price formatting) dynamically. Blockive Template Builder only.',
+		'usesContext' => array(
+			'postId',
+			'postType'
+		),
+		'textdomain' => 'blockive-premium-addon-for-block',
+		'attributes' => array(
+			'textAlign' => array(
+				'type' => 'string',
+				'default' => ''
+			)
+		),
+		'supports' => array(
+			'html' => false,
+			'color' => array(
+				'text' => true,
+				'background' => true,
+				'gradients' => true
+			),
+			'typography' => array(
+				'fontSize' => true,
+				'lineHeight' => true,
+				'__experimentalFontFamily' => true,
+				'__experimentalFontWeight' => true,
+				'__experimentalFontStyle' => true,
+				'__experimentalTextTransform' => true,
+				'__experimentalLetterSpacing' => true,
+				'__experimentalDefaultControls' => array(
+					'fontSize' => true
+				)
+			),
+			'spacing' => array(
+				'margin' => true,
+				'padding' => true,
+				'__experimentalDefaultControls' => array(
+					'margin' => true
+				)
+			)
+		),
+		'render' => 'file:./render.php'
+	),
+	'rating' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'blockive-premium-addon-for-block/tb-product-rating',
+		'version' => '0.1.0',
+		'title' => 'Product Rating',
+		'category' => 'blockive-template',
+		'icon' => 'star-filled',
+		'description' => 'Displays the current WooCommerce product\'s average star rating, and optionally its review count, dynamically. Blockive Template Builder only.',
+		'usesContext' => array(
+			'postId',
+			'postType'
+		),
+		'textdomain' => 'blockive-premium-addon-for-block',
+		'attributes' => array(
+			'showCount' => array(
+				'type' => 'boolean',
+				'default' => true
+			),
+			'starColor' => array(
+				'type' => 'string',
+				'default' => ''
+			)
+		),
+		'supports' => array(
+			'html' => false,
+			'typography' => array(
+				'fontSize' => true,
+				'__experimentalDefaultControls' => array(
+					'fontSize' => true
+				)
+			),
+			'spacing' => array(
+				'margin' => true,
+				'padding' => true
+			)
+		),
+		'render' => 'file:./render.php'
+	),
+	'related' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'blockive-premium-addon-for-block/tb-product-related',
+		'version' => '0.1.0',
+		'title' => 'Related Products',
+		'category' => 'blockive-template',
+		'icon' => 'grid-view',
+		'description' => 'Displays a grid or slider of the current WooCommerce product\'s related products. Blockive Template Builder only.',
+		'usesContext' => array(
+			'postId',
+			'postType'
+		),
+		'textdomain' => 'blockive-premium-addon-for-block',
+		'attributes' => array(
+			'numberOfProducts' => array(
+				'type' => 'number',
+				'default' => 4
+			),
+			'layout' => array(
+				'type' => 'string',
+				'default' => 'grid'
+			),
+			'columns' => array(
+				'type' => 'number',
+				'default' => 4
+			)
+		),
+		'supports' => array(
+			'html' => false,
+			'align' => array(
+				'wide',
+				'full'
+			),
+			'spacing' => array(
+				'margin' => true,
+				'padding' => true
+			)
+		),
+		'render' => 'file:./render.php',
+		'viewScript' => 'file:./view.js'
+	),
+	'sale-badge' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'blockive-premium-addon-for-block/tb-product-sale-badge',
+		'version' => '0.1.0',
+		'title' => 'Sale Badge',
+		'category' => 'blockive-template',
+		'icon' => 'megaphone',
+		'description' => 'Shows a badge when the current WooCommerce product is on sale. Meant to be placed inside a container with Position set to Relative (Advanced tab > Layout) so this badge\'s absolute position is relative to that container. Blockive Template Builder only.',
+		'usesContext' => array(
+			'postId',
+			'postType'
+		),
+		'textdomain' => 'blockive-premium-addon-for-block',
+		'attributes' => array(
+			'badgeText' => array(
+				'type' => 'string',
+				'default' => 'Sale!'
+			),
+			'badgeShape' => array(
+				'type' => 'string',
+				'default' => 'circle'
+			),
+			'bgColor' => array(
+				'type' => 'string',
+				'default' => '#e63946'
+			),
+			'textColor' => array(
+				'type' => 'string',
+				'default' => '#ffffff'
+			),
+			'position' => array(
+				'type' => 'string',
+				'default' => 'top-right'
+			)
+		),
+		'supports' => array(
+			'html' => false,
+			'typography' => array(
+				'fontSize' => true,
+				'__experimentalDefaultControls' => array(
+					'fontSize' => true
+				)
+			),
+			'spacing' => array(
+				'margin' => true
+			)
+		),
+		'render' => 'file:./render.php'
+	),
+	'short-description' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'blockive-premium-addon-for-block/tb-product-short-description',
+		'version' => '0.1.0',
+		'title' => 'Product Short Description',
+		'category' => 'blockive-template',
+		'icon' => 'editor-alignleft',
+		'description' => 'Displays the current WooCommerce product\'s short description dynamically. Blockive Template Builder only.',
+		'usesContext' => array(
+			'postId',
+			'postType'
+		),
+		'textdomain' => 'blockive-premium-addon-for-block',
+		'attributes' => array(
+			'maxWidth' => array(
+				'type' => 'number',
+				'default' => 0
+			)
+		),
+		'supports' => array(
+			'html' => false,
+			'color' => array(
+				'text' => true,
+				'background' => true,
+				'link' => true
+			),
+			'typography' => array(
+				'fontSize' => true,
+				'lineHeight' => true,
+				'__experimentalFontFamily' => true,
+				'__experimentalFontWeight' => true,
+				'__experimentalFontStyle' => true,
+				'__experimentalTextTransform' => true,
+				'__experimentalLetterSpacing' => true,
+				'__experimentalDefaultControls' => array(
+					'fontSize' => true
+				)
+			),
+			'spacing' => array(
+				'margin' => true,
+				'padding' => true,
+				'__experimentalDefaultControls' => array(
+					'margin' => true,
+					'padding' => true
+				)
+			)
+		),
+		'render' => 'file:./render.php'
+	),
+	'sku' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'blockive-premium-addon-for-block/tb-product-sku',
+		'version' => '0.1.0',
+		'title' => 'Product SKU',
+		'category' => 'blockive-template',
+		'icon' => 'id',
+		'description' => 'Displays the current WooCommerce product\'s SKU dynamically. Blockive Template Builder only.',
+		'usesContext' => array(
+			'postId',
+			'postType'
+		),
+		'textdomain' => 'blockive-premium-addon-for-block',
+		'attributes' => array(
+			'label' => array(
+				'type' => 'string',
+				'default' => 'SKU:'
+			),
+			'hideIfEmpty' => array(
+				'type' => 'boolean',
+				'default' => true
+			),
+			'textColor' => array(
+				'type' => 'string',
+				'default' => ''
+			)
+		),
+		'supports' => array(
+			'html' => false,
+			'typography' => array(
+				'fontSize' => true,
+				'__experimentalDefaultControls' => array(
+					'fontSize' => true
+				)
+			),
+			'spacing' => array(
+				'margin' => true,
+				'padding' => true
+			)
+		),
+		'render' => 'file:./render.php'
+	),
+	'stock' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'blockive-premium-addon-for-block/tb-product-stock',
+		'version' => '0.1.0',
+		'title' => 'Product Stock',
+		'category' => 'blockive-template',
+		'icon' => 'clipboard',
+		'description' => 'Displays the current WooCommerce product\'s stock status (In Stock / Out of Stock / On Backorder), and optionally the tracked quantity, dynamically. Blockive Template Builder only.',
+		'usesContext' => array(
+			'postId',
+			'postType'
+		),
+		'textdomain' => 'blockive-premium-addon-for-block',
+		'attributes' => array(
+			'inStockText' => array(
+				'type' => 'string',
+				'default' => 'In Stock'
+			),
+			'outOfStockText' => array(
+				'type' => 'string',
+				'default' => 'Out of Stock'
+			),
+			'onBackorderText' => array(
+				'type' => 'string',
+				'default' => 'On Backorder'
+			),
+			'inStockColor' => array(
+				'type' => 'string',
+				'default' => '#2e7d32'
+			),
+			'outOfStockColor' => array(
+				'type' => 'string',
+				'default' => '#c62828'
+			),
+			'onBackorderColor' => array(
+				'type' => 'string',
+				'default' => '#ef6c00'
+			)
+		),
+		'supports' => array(
+			'html' => false,
+			'typography' => array(
+				'fontSize' => true,
+				'__experimentalDefaultControls' => array(
+					'fontSize' => true
+				)
+			),
+			'spacing' => array(
+				'margin' => true,
+				'padding' => true
+			)
+		),
+		'render' => 'file:./render.php'
+	),
+	'title' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'blockive-premium-addon-for-block/tb-product-title',
+		'version' => '0.1.0',
+		'title' => 'Product Title',
+		'category' => 'blockive-template',
+		'icon' => 'editor-textcolor',
+		'description' => 'Displays the current WooCommerce product\'s title dynamically. Blockive Template Builder only.',
+		'usesContext' => array(
+			'postId',
+			'postType'
+		),
+		'textdomain' => 'blockive-premium-addon-for-block',
+		'attributes' => array(
+			'tagName' => array(
+				'type' => 'string',
+				'default' => 'h2'
+			),
+			'textAlign' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'isLink' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'linkTarget' => array(
+				'type' => 'string',
+				'default' => '_self'
+			),
+			'textColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'textHoverColor' => array(
+				'type' => 'string',
+				'default' => ''
+			)
+		),
+		'supports' => array(
+			'html' => false,
+			'color' => array(
+				'text' => true,
+				'background' => true,
+				'gradients' => true,
+				'link' => true
+			),
+			'typography' => array(
+				'fontSize' => true,
+				'lineHeight' => true,
+				'__experimentalFontFamily' => true,
+				'__experimentalFontWeight' => true,
+				'__experimentalFontStyle' => true,
+				'__experimentalTextTransform' => true,
+				'__experimentalTextDecoration' => true,
+				'__experimentalLetterSpacing' => true,
+				'__experimentalDefaultControls' => array(
+					'fontSize' => true
+				)
+			),
+			'spacing' => array(
+				'margin' => true,
+				'padding' => true,
+				'__experimentalDefaultControls' => array(
+					'margin' => true,
+					'padding' => true
+				)
+			)
+		),
+		'render' => 'file:./render.php'
+	),
+	'upsells' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'blockive-premium-addon-for-block/tb-product-upsells',
+		'version' => '0.1.0',
+		'title' => 'Upsells',
+		'category' => 'blockive-template',
+		'icon' => 'arrow-up-alt',
+		'description' => 'Displays a grid or slider of the current WooCommerce product\'s upsell products. Blockive Template Builder only.',
+		'usesContext' => array(
+			'postId',
+			'postType'
+		),
+		'textdomain' => 'blockive-premium-addon-for-block',
+		'attributes' => array(
+			'numberOfProducts' => array(
+				'type' => 'number',
+				'default' => 4
+			),
+			'layout' => array(
+				'type' => 'string',
+				'default' => 'grid'
+			),
+			'columns' => array(
+				'type' => 'number',
+				'default' => 4
+			)
+		),
+		'supports' => array(
+			'html' => false,
+			'align' => array(
+				'wide',
+				'full'
+			),
+			'spacing' => array(
+				'margin' => true,
+				'padding' => true
+			)
+		),
+		'render' => 'file:./render.php',
+		'viewScript' => 'file:./view.js'
+	),
+	'variations' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'blockive-premium-addon-for-block/tb-product-variations',
+		'version' => '0.1.0',
+		'title' => 'Product Variations',
+		'category' => 'blockive-template',
+		'icon' => 'screenoptions',
+		'description' => 'Renders WooCommerce\'s native variation selector (dropdowns + AJAX price/availability) for variable products, via woocommerce_template_single_add_to_cart(). Pairs with, or can replace, the Add To Cart block. Blockive Template Builder only.',
+		'usesContext' => array(
+			'postId',
+			'postType'
+		),
+		'textdomain' => 'blockive-premium-addon-for-block',
+		'attributes' => array(
+			'showPriceRange' => array(
+				'type' => 'boolean',
+				'default' => true
+			)
+		),
+		'supports' => array(
+			'html' => false,
+			'align' => array(
+				'wide',
+				'full'
+			),
+			'spacing' => array(
+				'margin' => true,
+				'padding' => true
+			)
+		),
+		'render' => 'file:./render.php'
 	)
 );
