@@ -32,7 +32,9 @@ if ($bpafb_word_limit > 0 && $bpafb_raw_content !== '') {
 	}
 	$bpafb_content_html = '<p>' . esc_html(wp_trim_words($bpafb_plain, $bpafb_word_limit, '…')) . '</p>';
 } else {
+	// phpcs:disable WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound
 	$bpafb_content_html = $bpafb_post_id ? apply_filters('the_content', $bpafb_raw_content) : '';
+	// phpcs:enable WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound
 }
 
 $bpafb_style = '';

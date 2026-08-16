@@ -145,7 +145,9 @@ class Bpafb_Product_Template_Render
 
 		$had_global_product = array_key_exists('product', $GLOBALS);
 		$previous_product = $had_global_product ? $GLOBALS['product'] : null;
+		// phpcs:disable WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
 		$GLOBALS['product'] = $product;
+		// phpcs:enable WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
 
 		$button_text_filter = null;
 		if ($button_text !== '') {
@@ -172,7 +174,9 @@ class Bpafb_Product_Template_Render
 		}
 
 		if ($had_global_product) {
+			// phpcs:disable WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
 			$GLOBALS['product'] = $previous_product;
+			// phpcs:enable WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
 		} else {
 			unset($GLOBALS['product']);
 		}

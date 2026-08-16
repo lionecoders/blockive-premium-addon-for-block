@@ -63,7 +63,7 @@ $bpafb_query_args = [
 	'no_found_rows'       => true,
 ];
 if ($bpafb_post_id) {
-	$bpafb_query_args['post__not_in'] = [$bpafb_post_id];
+	$bpafb_query_args['post__not_in'] = [$bpafb_post_id]; // phpcs:ignore WordPressVIPMinimum.Performance.WPQueryParams.PostNotIn_post__not_in
 }
 // Only actually scope by taxonomy if the current post has terms there;
 // otherwise fall back to the plain latest-posts query rather than an

@@ -33,12 +33,12 @@ class Bpafb_Screen_Helper
 		}
 
 		// Fallback for early admin hooks that fire before the screen object is populated.
-		if (isset($_GET['post_type']) && sanitize_key(wp_unslash($_GET['post_type'])) === Bpafb_Template_Post_Type::POST_TYPE) {
+		if (isset($_GET['post_type']) && sanitize_key(wp_unslash($_GET['post_type'])) === Bpafb_Template_Post_Type::POST_TYPE) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
 			return true;
 		}
 
-		if (isset($_GET['post'])) {
-			$post_type = get_post_type(absint($_GET['post']));
+		if (isset($_GET['post'])) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+			$post_type = get_post_type(absint($_GET['post'])); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
 			if ($post_type === Bpafb_Template_Post_Type::POST_TYPE) {
 				return true;
 			}

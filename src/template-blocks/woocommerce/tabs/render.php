@@ -69,7 +69,9 @@ if ($bpafb_product) {
 					<?php if ($bpafb_key === 'description') :
 						$bpafb_description = $bpafb_product->get_description();
 						if ($bpafb_description !== '') {
+							// phpcs:disable WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound
 							echo apply_filters('the_content', $bpafb_description); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+							// phpcs:enable WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound
 						} else {
 							echo '<p>' . esc_html__('No description available.', 'blockive-premium-addon-for-block') . '</p>';
 						}
@@ -119,14 +121,18 @@ if ($bpafb_product) {
 							$bpafb_prev_product = $product;
 							$bpafb_prev_post = $post;
 
+							// phpcs:disable WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
 							$product = $bpafb_product; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited -- WooCommerce's own review template reads this global, same convention used by the Add To Cart / Variations Template Blocks.
+							// phpcs:enable WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
 							$post = $bpafb_review_post; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
 							setup_postdata($post);
 
 							wc_get_template('single-product/tabs/reviews.php', ['product' => $bpafb_product]);
 
 							wp_reset_postdata();
+							// phpcs:disable WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
 							$product = $bpafb_prev_product;
+							// phpcs:enable WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
 							$post = $bpafb_prev_post;
 						} else {
 							?>

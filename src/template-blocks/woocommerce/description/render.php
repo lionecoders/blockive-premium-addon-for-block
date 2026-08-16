@@ -32,7 +32,9 @@ $bpafb_wrapper_attributes = get_block_wrapper_attributes([
 	<?php else :
 		$bpafb_description = $bpafb_product->get_description();
 		if ($bpafb_description !== '') {
+			// phpcs:disable WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound
 			echo apply_filters('the_content', $bpafb_description); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			// phpcs:enable WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound
 		}
 	endif; ?>
 </div>

@@ -43,7 +43,9 @@ $bpafb_wrapper_attributes = get_block_wrapper_attributes([
 		$bpafb_prev_product = $product;
 		$bpafb_prev_post = $post;
 
+		// phpcs:disable WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
 		$product = $bpafb_product; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited -- woocommerce_template_single_add_to_cart() and the variable.php template it loads read this global.
+		// phpcs:enable WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
 		$bpafb_product_post = get_post($bpafb_product->get_id());
 		if ($bpafb_product_post) {
 			$post = $bpafb_product_post; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
@@ -53,7 +55,9 @@ $bpafb_wrapper_attributes = get_block_wrapper_attributes([
 		woocommerce_template_single_add_to_cart();
 
 		wp_reset_postdata();
+		// phpcs:disable WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
 		$product = $bpafb_prev_product;
+		// phpcs:enable WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
 		$post = $bpafb_prev_post;
 	}
 	?>

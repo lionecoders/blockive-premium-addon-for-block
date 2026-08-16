@@ -44,7 +44,7 @@ $bpafb_wrapper_attributes = get_block_wrapper_attributes([
 
 if ($bpafb_text_hover_color && $bpafb_uid) {
 	$bpafb_hover_selector = '.bpafb-uid-' . esc_attr($bpafb_uid) . ' .bpafb-tb-category-item';
-	echo '<style>' . $bpafb_hover_selector . ':hover, ' . $bpafb_hover_selector . ':hover a { color:' . esc_attr($bpafb_text_hover_color) . ' !important; }</style>';
+	echo '<style>' . esc_attr($bpafb_hover_selector) . ':hover, ' . esc_attr($bpafb_hover_selector) . ':hover a { color:' . esc_attr($bpafb_text_hover_color) . ' !important; }</style>';
 }
 
 printf('<div %s>', $bpafb_wrapper_attributes); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
