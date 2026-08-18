@@ -58,7 +58,6 @@
 	border-radius: var(--bpafb-tab-radius, 12px);
     overflow: hidden;
     position: relative;
-    border: 1px solid #e2e8f0;
 }
 
 .bpafb-tab-pane {

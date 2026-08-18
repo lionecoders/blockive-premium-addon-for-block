@@ -19,7 +19,7 @@
 		"@wordpress/blocks": "latest",
 		"@wordpress/i18n": "latest",
 		"chart.js": "^4.5.1",
-		"swiper": "^12.1.4"
+		"swiper": "^12.2.0"
 	},
 	"devDependencies": {
 		"@wordpress/scripts": "^31.8.0"

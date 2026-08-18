@@ -30,7 +30,7 @@
 		"boxAlignment": { "type": "string", "default": "center" },
 		"iconBorderColor": { "type": "string", "default": "" },
 		"iconBorderWidth": { "type": "number", "default": 0 },
-		"iconBorderStyle": { "type": "string", "default": "solid" },
+		"iconBorderStyle": { "type": "string", "default": "none" },
 		"titleFontFamily": { "type": "string", "default": "" },
 		"titleFontSize": { "type": "number", "default": null },
 		"titleFontWeight": { "type": "string", "default": "" },

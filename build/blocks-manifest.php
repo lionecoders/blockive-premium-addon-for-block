@@ -60,11 +60,11 @@ return array(
 			),
 			'borderWidth' => array(
 				'type' => 'number',
-				'default' => 1
+				'default' => 0
 			),
 			'borderType' => array(
 				'type' => 'string',
-				'default' => 'solid'
+				'default' => 'none'
 			),
 			'borderRadius' => array(
 				'type' => 'number',
@@ -856,7 +856,7 @@ return array(
 			),
 			'borderWidth' => array(
 				'type' => 'number',
-				'default' => 1
+				'default' => 0
 			),
 			'borderRadius' => array(
 				'type' => 'number',
@@ -896,7 +896,7 @@ return array(
 			),
 			'borderType' => array(
 				'type' => 'string',
-				'default' => 'solid'
+				'default' => 'none'
 			),
 			'boxShadow' => array(
 				'type' => 'boolean',
@@ -1001,11 +1001,11 @@ return array(
 			),
 			'borderWidth' => array(
 				'type' => 'number',
-				'default' => 1
+				'default' => 0
 			),
 			'borderType' => array(
 				'type' => 'string',
-				'default' => 'solid'
+				'default' => 'none'
 			),
 			'borderRadius' => array(
 				'type' => 'number',
@@ -1383,7 +1383,7 @@ return array(
 			),
 			'iconBorderStyle' => array(
 				'type' => 'string',
-				'default' => 'solid'
+				'default' => 'none'
 			),
 			'titleFontFamily' => array(
 				'type' => 'string',
@@ -2067,7 +2067,7 @@ return array(
 			),
 			'cardBorderStyle' => array(
 				'type' => 'string',
-				'default' => 'solid'
+				'default' => 'none'
 			)
 		),
 		'render' => 'file:./render.php',
@@ -2201,7 +2201,7 @@ return array(
 			),
 			'borderWidth' => array(
 				'type' => 'number',
-				'default' => 1
+				'default' => 0
 			),
 			'borderRadius' => array(
 				'type' => 'number',

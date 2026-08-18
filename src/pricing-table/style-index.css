@@ -30,7 +30,7 @@
 	max-width: 100%;
 	height: 100%;
 	background-color: var(--bpafb-pt-box-bg, #ffffff);
-	border: var(--bpafb-pt-borderWidth, 1px) solid var(--bpafb-pt-borderColor, #f1f5f9);
+	border: var(--bpafb-pt-borderWidth, 0px) solid var(--bpafb-pt-borderColor, #f1f5f9);
 	border-radius: var(--bpafb-pt-borderRadius, 16px);
 	overflow: hidden;
 	display: flex;

@@ -98,7 +98,7 @@
     },
     "iconBorderStyle": {
       "type": "string",
-      "default": "solid"
+      "default": "none"
     },
     "titleFontFamily": {
       "type": "string",

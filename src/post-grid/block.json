@@ -92,7 +92,7 @@
 		},
 		"cardBorderStyle": {
 			"type": "string",
-			"default": "solid"
+			"default": "none"
 		}
 	},
 	"render": "file:./render.php",

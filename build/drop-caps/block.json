@@ -38,7 +38,7 @@
     },
     "borderWidth": {
       "type": "number",
-      "default": 1
+      "default": 0
     },
     "borderRadius": {
       "type": "number",
@@ -78,7 +78,7 @@
     },
     "borderType": {
       "type": "string",
-      "default": "solid"
+      "default": "none"
     },
     "boxShadow": {
       "type": "boolean",

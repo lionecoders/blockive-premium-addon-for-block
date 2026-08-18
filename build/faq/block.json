@@ -57,11 +57,11 @@
     },
     "borderWidth": {
       "type": "number",
-      "default": 1
+      "default": 0
     },
     "borderType": {
       "type": "string",
-      "default": "solid"
+      "default": "none"
     },
     "borderRadius": {
       "type": "number",

@@ -124,7 +124,7 @@
     },
     "borderWidth": {
       "type": "number",
-      "default": 1
+      "default": 0
     },
     "borderRadius": {
       "type": "number",
