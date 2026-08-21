@@ -58,7 +58,8 @@
       "__experimentalDefaultControls": {
         "margin": true
       }
-    }
+    },
+    "anchor": true
   },
   "render": "file:./render.php"
 }

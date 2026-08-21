@@ -7,7 +7,10 @@
 	"category": "blockive-template",
 	"icon": "excerpt-view",
 	"description": "Displays the current post's excerpt dynamically, with a configurable character limit and Read More link. Blockive Template Builder only.",
-	"usesContext": [ "postId", "postType" ],
+	"usesContext": [
+		"postId",
+		"postType"
+	],
 	"textdomain": "blockive-premium-addon-for-block",
 	"attributes": {
 		"excerptLength": {
@@ -51,7 +54,8 @@
 			"__experimentalDefaultControls": {
 				"margin": true
 			}
-		}
+		},
+		"anchor": true
 	},
 	"render": "file:./render.php"
 }

@@ -86,6 +86,18 @@ return array(
 				'type' => 'number',
 				'default' => null
 			),
+			'titleLetterSpacing' => array(
+				'type' => 'number',
+				'default' => null
+			),
+			'titleTextTransform' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'titleTextDecoration' => array(
+				'type' => 'string',
+				'default' => ''
+			),
 			'boxShadow' => array(
 				'type' => 'boolean',
 				'default' => false
@@ -136,7 +148,8 @@ return array(
 				'wide',
 				'full'
 			),
-			'html' => false
+			'html' => false,
+			'anchor' => true
 		),
 		'textdomain' => 'blockive-premium-addon-for-block',
 		'editorScript' => 'file:./index.js',
@@ -271,6 +284,18 @@ return array(
 				'type' => 'number',
 				'default' => null
 			),
+			'dayLetterSpacing' => array(
+				'type' => 'number',
+				'default' => null
+			),
+			'dayTextTransform' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'dayTextDecoration' => array(
+				'type' => 'string',
+				'default' => ''
+			),
 			'timeFontFamily' => array(
 				'type' => 'string',
 				'default' => ''
@@ -286,6 +311,18 @@ return array(
 			'timeLineHeight' => array(
 				'type' => 'number',
 				'default' => null
+			),
+			'timeLetterSpacing' => array(
+				'type' => 'number',
+				'default' => null
+			),
+			'timeTextTransform' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'timeTextDecoration' => array(
+				'type' => 'string',
+				'default' => ''
 			),
 			'borderType' => array(
 				'type' => 'string',
@@ -341,7 +378,8 @@ return array(
 				'wide',
 				'full'
 			),
-			'html' => false
+			'html' => false,
+			'anchor' => true
 		),
 		'textdomain' => 'blockive-premium-addon-for-block',
 		'editorScript' => 'file:./index.js',
@@ -508,7 +546,8 @@ return array(
 				'wide',
 				'full'
 			),
-			'html' => false
+			'html' => false,
+			'anchor' => true
 		),
 		'textdomain' => 'blockive-premium-addon-for-block',
 		'editorScript' => 'file:./index.js',
@@ -536,7 +575,8 @@ return array(
 			'spacing' => array(
 				'margin' => true,
 				'padding' => true
-			)
+			),
+			'anchor' => true
 		),
 		'attributes' => array(
 			'showCount' => array(
@@ -663,7 +703,8 @@ return array(
 					'width' => true,
 					'style' => true
 				)
-			)
+			),
+			'anchor' => true
 		),
 		'attributes' => array(
 			'formId' => array(
@@ -809,7 +850,8 @@ return array(
 					'margin' => true,
 					'padding' => true
 				)
-			)
+			),
+			'anchor' => true
 		),
 		'textdomain' => 'blockive-premium-addon-for-block',
 		'editorScript' => 'file:./index.js',
@@ -936,7 +978,8 @@ return array(
 				'wide',
 				'full'
 			),
-			'html' => false
+			'html' => false,
+			'anchor' => true
 		),
 		'textdomain' => 'blockive-premium-addon-for-block',
 		'editorScript' => 'file:./index.js',
@@ -1117,7 +1160,8 @@ return array(
 				'wide',
 				'full'
 			),
-			'html' => false
+			'html' => false,
+			'anchor' => true
 		),
 		'textdomain' => 'blockive-premium-addon-for-block',
 		'editorScript' => 'file:./index.js',
@@ -1184,7 +1228,10 @@ return array(
 		'editorScript' => 'file:./index.js',
 		'editorStyle' => 'file:./style-index.css',
 		'style' => 'file:./style-index.css',
-		'viewScript' => 'file:./view.js'
+		'viewScript' => 'file:./view.js',
+		'supports' => array(
+			'anchor' => true
+		)
 	),
 	'heading' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
@@ -1199,6 +1246,10 @@ return array(
 			'content' => array(
 				'type' => 'string',
 				'default' => 'Stunning Default Heading'
+			),
+			'alignment' => array(
+				'type' => 'string',
+				'default' => ''
 			),
 			'level' => array(
 				'type' => 'number',
@@ -1277,7 +1328,8 @@ return array(
 					'margin' => true,
 					'padding' => true
 				)
-			)
+			),
+			'anchor' => true
 		),
 		'textdomain' => 'blockive-premium-addon-for-block',
 		'editorScript' => 'file:./index.js',
@@ -1401,6 +1453,18 @@ return array(
 				'type' => 'number',
 				'default' => null
 			),
+			'titleLetterSpacing' => array(
+				'type' => 'number',
+				'default' => null
+			),
+			'titleTextTransform' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'titleTextDecoration' => array(
+				'type' => 'string',
+				'default' => ''
+			),
 			'descFontFamily' => array(
 				'type' => 'string',
 				'default' => ''
@@ -1409,9 +1473,25 @@ return array(
 				'type' => 'number',
 				'default' => null
 			),
+			'descFontWeight' => array(
+				'type' => 'string',
+				'default' => ''
+			),
 			'descLineHeight' => array(
 				'type' => 'number',
 				'default' => null
+			),
+			'descLetterSpacing' => array(
+				'type' => 'number',
+				'default' => null
+			),
+			'descTextTransform' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'descTextDecoration' => array(
+				'type' => 'string',
+				'default' => ''
 			),
 			'borderType' => array(
 				'type' => 'string',
@@ -1467,7 +1547,8 @@ return array(
 				'wide',
 				'full'
 			),
-			'html' => false
+			'html' => false,
+			'anchor' => true
 		),
 		'textdomain' => 'blockive-premium-addon-for-block',
 		'editorScript' => 'file:./index.js',
@@ -1540,7 +1621,10 @@ return array(
 		'editorScript' => 'file:./index.js',
 		'editorStyle' => 'file:./index.css',
 		'style' => 'file:./index.css',
-		'viewScript' => 'file:./view.js'
+		'viewScript' => 'file:./view.js',
+		'supports' => array(
+			'anchor' => true
+		)
 	),
 	'image-box' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
@@ -1679,7 +1763,8 @@ return array(
 					'width' => true,
 					'style' => true
 				)
-			)
+			),
+			'anchor' => true
 		),
 		'textdomain' => 'blockive-premium-addon-for-block',
 		'editorScript' => 'file:./index.js',
@@ -1747,7 +1832,10 @@ return array(
 		'editorScript' => 'file:./index.js',
 		'editorStyle' => 'file:./index.css',
 		'style' => 'file:./index.css',
-		'viewScript' => 'file:./view.js'
+		'viewScript' => 'file:./view.js',
+		'supports' => array(
+			'anchor' => true
+		)
 	),
 	'lottie' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
@@ -1786,7 +1874,10 @@ return array(
 		'editorScript' => 'file:./index.js',
 		'editorStyle' => 'file:./style-index.css',
 		'style' => 'file:./style-index.css',
-		'viewScript' => 'file:./view.js'
+		'viewScript' => 'file:./view.js',
+		'supports' => array(
+			'anchor' => true
+		)
 	),
 	'mailchimp' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
@@ -1893,7 +1984,10 @@ return array(
 		),
 		'editorScript' => 'file:./index.js',
 		'editorStyle' => 'file:./index.css',
-		'style' => 'file:./index.css'
+		'style' => 'file:./index.css',
+		'supports' => array(
+			'anchor' => true
+		)
 	),
 	'pie-chart' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
@@ -1966,7 +2060,8 @@ return array(
 					'margin' => true,
 					'padding' => true
 				)
-			)
+			),
+			'anchor' => true
 		),
 		'textdomain' => 'blockive-premium-addon-for-block',
 		'editorScript' => 'file:./index.js',
@@ -1990,7 +2085,8 @@ return array(
 			'spacing' => array(
 				'margin' => true,
 				'padding' => true
-			)
+			),
+			'anchor' => true
 		),
 		'attributes' => array(
 			'columns' => array(
@@ -2231,7 +2327,8 @@ return array(
 				'__experimentalDefaultControls' => array(
 					'margin' => true
 				)
-			)
+			),
+			'anchor' => true
 		),
 		'textdomain' => 'blockive-premium-addon-for-block',
 		'editorScript' => 'file:./index.js',
@@ -2321,7 +2418,8 @@ return array(
 			'spacing' => array(
 				'margin' => true,
 				'padding' => true
-			)
+			),
+			'anchor' => true
 		),
 		'textdomain' => 'blockive-premium-addon-for-block',
 		'editorScript' => 'file:./index.js',
@@ -2410,7 +2508,8 @@ return array(
 			'spacing' => array(
 				'margin' => true,
 				'padding' => true
-			)
+			),
+			'anchor' => true
 		),
 		'textdomain' => 'blockive-premium-addon-for-block',
 		'editorScript' => 'file:./index.js',
@@ -2453,7 +2552,8 @@ return array(
 			'spacing' => array(
 				'margin' => true,
 				'padding' => true
-			)
+			),
+			'anchor' => true
 		),
 		'render' => 'file:./render.php',
 		'viewScript' => 'file:./view.js'
@@ -2582,7 +2682,10 @@ return array(
 		),
 		'editorScript' => 'file:./index.js',
 		'editorStyle' => 'file:./index.css',
-		'style' => 'file:./index.css'
+		'style' => 'file:./index.css',
+		'supports' => array(
+			'anchor' => true
+		)
 	),
 	'testimonial' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
@@ -2743,7 +2846,10 @@ return array(
 		'editorScript' => 'file:./index.js',
 		'editorStyle' => 'file:./index.css',
 		'style' => 'file:./index.css',
-		'viewScript' => 'file:./view.js'
+		'viewScript' => 'file:./view.js',
+		'supports' => array(
+			'anchor' => true
+		)
 	),
 	'video' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
@@ -2782,7 +2888,10 @@ return array(
 		),
 		'editorScript' => 'file:./index.js',
 		'editorStyle' => 'file:./style-index.css',
-		'style' => 'file:./style-index.css'
+		'style' => 'file:./style-index.css',
+		'supports' => array(
+			'anchor' => true
+		)
 	),
 	'dynamic-field' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
@@ -2872,7 +2981,8 @@ return array(
 					'margin' => true,
 					'padding' => true
 				)
-			)
+			),
+			'anchor' => true
 		),
 		'render' => 'file:./render.php'
 	),
@@ -2921,7 +3031,8 @@ return array(
 			'spacing' => array(
 				'margin' => true,
 				'padding' => true
-			)
+			),
+			'anchor' => true
 		),
 		'render' => 'file:./render.php'
 	),
@@ -2982,7 +3093,8 @@ return array(
 			'spacing' => array(
 				'margin' => true,
 				'padding' => true
-			)
+			),
+			'anchor' => true
 		),
 		'render' => 'file:./render.php'
 	),
@@ -3054,7 +3166,8 @@ return array(
 					'margin' => true,
 					'padding' => true
 				)
-			)
+			),
+			'anchor' => true
 		),
 		'render' => 'file:./render.php'
 	),
@@ -3118,7 +3231,8 @@ return array(
 				'__experimentalDefaultControls' => array(
 					'margin' => true
 				)
-			)
+			),
+			'anchor' => true
 		),
 		'render' => 'file:./render.php'
 	),
@@ -3151,7 +3265,8 @@ return array(
 			'spacing' => array(
 				'margin' => true,
 				'padding' => true
-			)
+			),
+			'anchor' => true
 		),
 		'render' => 'file:./render.php'
 	),
@@ -3205,7 +3320,8 @@ return array(
 			'spacing' => array(
 				'margin' => true,
 				'padding' => true
-			)
+			),
+			'anchor' => true
 		),
 		'render' => 'file:./render.php'
 	),
@@ -3274,7 +3390,8 @@ return array(
 			'spacing' => array(
 				'margin' => true,
 				'padding' => true
-			)
+			),
+			'anchor' => true
 		),
 		'render' => 'file:./render.php'
 	),
@@ -3327,7 +3444,8 @@ return array(
 			'spacing' => array(
 				'margin' => true,
 				'padding' => true
-			)
+			),
+			'anchor' => true
 		),
 		'render' => 'file:./render.php'
 	),
@@ -3376,7 +3494,8 @@ return array(
 			'spacing' => array(
 				'margin' => true,
 				'padding' => true
-			)
+			),
+			'anchor' => true
 		),
 		'render' => 'file:./render.php'
 	),
@@ -3439,7 +3558,8 @@ return array(
 				'__experimentalDefaultControls' => array(
 					'margin' => true
 				)
-			)
+			),
+			'anchor' => true
 		),
 		'render' => 'file:./render.php'
 	),
@@ -3502,7 +3622,8 @@ return array(
 				'__experimentalDefaultControls' => array(
 					'margin' => true
 				)
-			)
+			),
+			'anchor' => true
 		),
 		'render' => 'file:./render.php'
 	),
@@ -3562,7 +3683,8 @@ return array(
 				'__experimentalDefaultControls' => array(
 					'margin' => true
 				)
-			)
+			),
+			'anchor' => true
 		),
 		'render' => 'file:./render.php'
 	),
@@ -3622,7 +3744,8 @@ return array(
 				'__experimentalDefaultControls' => array(
 					'margin' => true
 				)
-			)
+			),
+			'anchor' => true
 		),
 		'render' => 'file:./render.php'
 	),
@@ -3676,7 +3799,8 @@ return array(
 				'__experimentalDefaultControls' => array(
 					'margin' => true
 				)
-			)
+			),
+			'anchor' => true
 		),
 		'render' => 'file:./render.php'
 	),
@@ -3740,7 +3864,8 @@ return array(
 				'__experimentalDefaultControls' => array(
 					'margin' => true
 				)
-			)
+			),
+			'anchor' => true
 		),
 		'render' => 'file:./render.php'
 	),
@@ -3788,7 +3913,8 @@ return array(
 				'__experimentalDefaultControls' => array(
 					'margin' => true
 				)
-			)
+			),
+			'anchor' => true
 		),
 		'render' => 'file:./render.php'
 	),
@@ -3833,7 +3959,8 @@ return array(
 				'__experimentalDefaultControls' => array(
 					'margin' => true
 				)
-			)
+			),
+			'anchor' => true
 		),
 		'render' => 'file:./render.php'
 	),
@@ -3909,7 +4036,8 @@ return array(
 					'margin' => true,
 					'padding' => true
 				)
-			)
+			),
+			'anchor' => true
 		),
 		'render' => 'file:./render.php'
 	),
@@ -3969,7 +4097,8 @@ return array(
 				'__experimentalDefaultControls' => array(
 					'margin' => true
 				)
-			)
+			),
+			'anchor' => true
 		),
 		'render' => 'file:./render.php'
 	),
@@ -4041,7 +4170,8 @@ return array(
 			'spacing' => array(
 				'margin' => true,
 				'padding' => true
-			)
+			),
+			'anchor' => true
 		),
 		'render' => 'file:./render.php'
 	),
@@ -4113,7 +4243,8 @@ return array(
 					'margin' => true,
 					'padding' => true
 				)
-			)
+			),
+			'anchor' => true
 		),
 		'render' => 'file:./render.php'
 	),
@@ -4180,7 +4311,8 @@ return array(
 				'__experimentalDefaultControls' => array(
 					'margin' => true
 				)
-			)
+			),
+			'anchor' => true
 		),
 		'render' => 'file:./render.php'
 	),
@@ -4235,7 +4367,8 @@ return array(
 				'__experimentalDefaultControls' => array(
 					'margin' => true
 				)
-			)
+			),
+			'anchor' => true
 		),
 		'render' => 'file:./render.php'
 	),
@@ -4293,7 +4426,8 @@ return array(
 				'__experimentalDefaultControls' => array(
 					'margin' => true
 				)
-			)
+			),
+			'anchor' => true
 		),
 		'render' => 'file:./render.php'
 	),
@@ -4361,7 +4495,8 @@ return array(
 				'__experimentalDefaultControls' => array(
 					'margin' => true
 				)
-			)
+			),
+			'anchor' => true
 		),
 		'render' => 'file:./render.php',
 		'viewScript' => 'file:./view.js'
@@ -4416,7 +4551,8 @@ return array(
 				'__experimentalDefaultControls' => array(
 					'margin' => true
 				)
-			)
+			),
+			'anchor' => true
 		),
 		'render' => 'file:./render.php'
 	),
@@ -4461,7 +4597,8 @@ return array(
 			'spacing' => array(
 				'margin' => true,
 				'padding' => true
-			)
+			),
+			'anchor' => true
 		),
 		'render' => 'file:./render.php'
 	),
@@ -4508,7 +4645,8 @@ return array(
 					'margin' => true,
 					'padding' => true
 				)
-			)
+			),
+			'anchor' => true
 		),
 		'render' => 'file:./render.php'
 	),
@@ -4549,7 +4687,8 @@ return array(
 			'spacing' => array(
 				'margin' => true,
 				'padding' => true
-			)
+			),
+			'anchor' => true
 		),
 		'render' => 'file:./render.php',
 		'viewScript' => 'file:./view.js'
@@ -4600,7 +4739,8 @@ return array(
 					'margin' => true,
 					'padding' => true
 				)
-			)
+			),
+			'anchor' => true
 		),
 		'render' => 'file:./render.php'
 	),
@@ -4644,7 +4784,8 @@ return array(
 				'__experimentalDefaultControls' => array(
 					'margin' => true
 				)
-			)
+			),
+			'anchor' => true
 		),
 		'render' => 'file:./render.php'
 	),
@@ -4700,7 +4841,8 @@ return array(
 				'__experimentalDefaultControls' => array(
 					'margin' => true
 				)
-			)
+			),
+			'anchor' => true
 		),
 		'render' => 'file:./render.php'
 	),
@@ -4764,7 +4906,8 @@ return array(
 			'spacing' => array(
 				'margin' => true,
 				'padding' => true
-			)
+			),
+			'anchor' => true
 		),
 		'render' => 'file:./render.php'
 	),
@@ -4813,7 +4956,8 @@ return array(
 				'__experimentalDefaultControls' => array(
 					'margin' => true
 				)
-			)
+			),
+			'anchor' => true
 		),
 		'render' => 'file:./render.php'
 	),
@@ -4852,7 +4996,8 @@ return array(
 			'spacing' => array(
 				'margin' => true,
 				'padding' => true
-			)
+			),
+			'anchor' => true
 		),
 		'render' => 'file:./render.php'
 	),
@@ -4893,7 +5038,8 @@ return array(
 			'spacing' => array(
 				'margin' => true,
 				'padding' => true
-			)
+			),
+			'anchor' => true
 		),
 		'render' => 'file:./render.php',
 		'viewScript' => 'file:./view.js'
@@ -4944,7 +5090,8 @@ return array(
 			),
 			'spacing' => array(
 				'margin' => true
-			)
+			),
+			'anchor' => true
 		),
 		'render' => 'file:./render.php'
 	),
@@ -4994,7 +5141,8 @@ return array(
 					'margin' => true,
 					'padding' => true
 				)
-			)
+			),
+			'anchor' => true
 		),
 		'render' => 'file:./render.php'
 	),
@@ -5037,7 +5185,8 @@ return array(
 			'spacing' => array(
 				'margin' => true,
 				'padding' => true
-			)
+			),
+			'anchor' => true
 		),
 		'render' => 'file:./render.php'
 	),
@@ -5092,7 +5241,8 @@ return array(
 			'spacing' => array(
 				'margin' => true,
 				'padding' => true
-			)
+			),
+			'anchor' => true
 		),
 		'render' => 'file:./render.php'
 	),
@@ -5164,7 +5314,8 @@ return array(
 					'margin' => true,
 					'padding' => true
 				)
-			)
+			),
+			'anchor' => true
 		),
 		'render' => 'file:./render.php'
 	),
@@ -5205,7 +5356,8 @@ return array(
 			'spacing' => array(
 				'margin' => true,
 				'padding' => true
-			)
+			),
+			'anchor' => true
 		),
 		'render' => 'file:./render.php',
 		'viewScript' => 'file:./view.js'
@@ -5239,7 +5391,8 @@ return array(
 			'spacing' => array(
 				'margin' => true,
 				'padding' => true
-			)
+			),
+			'anchor' => true
 		),
 		'render' => 'file:./render.php'
 	)

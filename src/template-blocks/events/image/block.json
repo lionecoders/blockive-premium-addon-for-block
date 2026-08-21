@@ -7,7 +7,10 @@
 	"category": "blockive-template",
 	"icon": "format-image",
 	"description": "Displays the current event's featured image dynamically. Blockive Template Builder only.",
-	"usesContext": [ "postId", "postType" ],
+	"usesContext": [
+		"postId",
+		"postType"
+	],
 	"textdomain": "blockive-premium-addon-for-block",
 	"attributes": {
 		"imageSize": {
@@ -45,14 +48,18 @@
 	},
 	"supports": {
 		"html": false,
-		"align": [ "wide", "full" ],
+		"align": [
+			"wide",
+			"full"
+		],
 		"spacing": {
 			"margin": true,
 			"padding": true,
 			"__experimentalDefaultControls": {
 				"margin": true
 			}
-		}
+		},
+		"anchor": true
 	},
 	"render": "file:./render.php"
 }

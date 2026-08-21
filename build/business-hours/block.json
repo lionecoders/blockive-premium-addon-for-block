@@ -126,6 +126,18 @@
       "type": "number",
       "default": null
     },
+    "dayLetterSpacing": {
+      "type": "number",
+      "default": null
+    },
+    "dayTextTransform": {
+      "type": "string",
+      "default": ""
+    },
+    "dayTextDecoration": {
+      "type": "string",
+      "default": ""
+    },
     "timeFontFamily": {
       "type": "string",
       "default": ""
@@ -141,6 +153,18 @@
     "timeLineHeight": {
       "type": "number",
       "default": null
+    },
+    "timeLetterSpacing": {
+      "type": "number",
+      "default": null
+    },
+    "timeTextTransform": {
+      "type": "string",
+      "default": ""
+    },
+    "timeTextDecoration": {
+      "type": "string",
+      "default": ""
     },
     "borderType": {
       "type": "string",
@@ -196,7 +220,8 @@
       "wide",
       "full"
     ],
-    "html": false
+    "html": false,
+    "anchor": true
   },
   "textdomain": "blockive-premium-addon-for-block",
   "editorScript": "file:./index.js",

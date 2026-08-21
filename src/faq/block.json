@@ -75,21 +75,66 @@
 			"type": "string",
 			"default": ""
 		},
-		"questionFontFamily": { "type": "string", "default": "" },
-		"questionFontSize": { "type": "number", "default": null },
-		"questionFontWeight": { "type": "string", "default": "" },
-		"questionLineHeight": { "type": "number", "default": null },
-		"questionLetterSpacing": { "type": "number", "default": null },
-		"questionTextTransform": { "type": "string", "default": "" },
-		"questionTextDecoration": { "type": "string", "default": "" },
-		"boxShadow": { "type": "boolean", "default": false },
-		"shadowColor": { "type": "string", "default": "rgba(0,0,0,0.15)" },
-		"shadowBlur": { "type": "number", "default": 15 },
-		"shadowSpread": { "type": "number", "default": 0 },
-		"hoverBoxShadow": { "type": "boolean", "default": false },
-		"hoverShadowColor": { "type": "string", "default": "rgba(0,0,0,0.15)" },
-		"hoverShadowBlur": { "type": "number", "default": 15 },
-		"hoverShadowSpread": { "type": "number", "default": 0 },
+		"questionFontFamily": {
+			"type": "string",
+			"default": ""
+		},
+		"questionFontSize": {
+			"type": "number",
+			"default": null
+		},
+		"questionFontWeight": {
+			"type": "string",
+			"default": ""
+		},
+		"questionLineHeight": {
+			"type": "number",
+			"default": null
+		},
+		"questionLetterSpacing": {
+			"type": "number",
+			"default": null
+		},
+		"questionTextTransform": {
+			"type": "string",
+			"default": ""
+		},
+		"questionTextDecoration": {
+			"type": "string",
+			"default": ""
+		},
+		"boxShadow": {
+			"type": "boolean",
+			"default": false
+		},
+		"shadowColor": {
+			"type": "string",
+			"default": "rgba(0,0,0,0.15)"
+		},
+		"shadowBlur": {
+			"type": "number",
+			"default": 15
+		},
+		"shadowSpread": {
+			"type": "number",
+			"default": 0
+		},
+		"hoverBoxShadow": {
+			"type": "boolean",
+			"default": false
+		},
+		"hoverShadowColor": {
+			"type": "string",
+			"default": "rgba(0,0,0,0.15)"
+		},
+		"hoverShadowBlur": {
+			"type": "number",
+			"default": 15
+		},
+		"hoverShadowSpread": {
+			"type": "number",
+			"default": 0
+		},
 		"animationType": {
 			"type": "string",
 			"default": "none"
@@ -128,7 +173,8 @@
 			"wide",
 			"full"
 		],
-		"html": false
+		"html": false,
+		"anchor": true
 	},
 	"textdomain": "blockive-premium-addon-for-block",
 	"editorScript": "file:./index.js",

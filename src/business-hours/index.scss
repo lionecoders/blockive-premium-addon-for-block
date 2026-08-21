@@ -67,6 +67,9 @@
 			font-size: var(--bpafb-bh-day-font-size, inherit);
 			font-weight: var(--bpafb-bh-day-font-weight, inherit);
 			line-height: var(--bpafb-bh-day-line-height, inherit);
+			letter-spacing: var(--bpafb-bh-day-letter-spacing, normal);
+			text-transform: var(--bpafb-bh-day-text-transform, none);
+			text-decoration: var(--bpafb-bh-day-text-decoration, none);
 		}
 
 		.bpafb-business-hours-time {
@@ -76,6 +79,9 @@
 			font-size: var(--bpafb-bh-time-font-size, inherit);
 			font-weight: var(--bpafb-bh-time-font-weight, inherit);
 			line-height: var(--bpafb-bh-time-line-height, inherit);
+			letter-spacing: var(--bpafb-bh-time-letter-spacing, normal);
+			text-transform: var(--bpafb-bh-time-text-transform, none);
+			text-decoration: var(--bpafb-bh-time-text-decoration, none);
 
 			&.closed {
 				color: var(--bpafb-bh-closed-color);

@@ -7,7 +7,10 @@
 	"category": "blockive-template",
 	"icon": "format-gallery",
 	"description": "Displays the current WooCommerce product's full image gallery (main image plus thumbnail strip) dynamically. Blockive Template Builder only.",
-	"usesContext": [ "postId", "postType" ],
+	"usesContext": [
+		"postId",
+		"postType"
+	],
 	"textdomain": "blockive-premium-addon-for-block",
 	"attributes": {
 		"thumbnailPosition": {
@@ -25,14 +28,18 @@
 	},
 	"supports": {
 		"html": false,
-		"align": [ "wide", "full" ],
+		"align": [
+			"wide",
+			"full"
+		],
 		"spacing": {
 			"margin": true,
 			"padding": true,
 			"__experimentalDefaultControls": {
 				"margin": true
 			}
-		}
+		},
+		"anchor": true
 	},
 	"render": "file:./render.php"
 }

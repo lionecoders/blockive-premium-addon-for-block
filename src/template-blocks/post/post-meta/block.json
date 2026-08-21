@@ -7,18 +7,39 @@
 	"category": "blockive-template",
 	"icon": "list-view",
 	"description": "A reorderable row of post meta items (author, date, categories, tags, comments, reading time). Blockive Template Builder only.",
-	"usesContext": [ "postId", "postType" ],
+	"usesContext": [
+		"postId",
+		"postType"
+	],
 	"textdomain": "blockive-premium-addon-for-block",
 	"attributes": {
 		"items": {
 			"type": "array",
 			"default": [
-				{ "key": "date", "enabled": true },
-				{ "key": "author", "enabled": true },
-				{ "key": "categories", "enabled": true },
-				{ "key": "comments", "enabled": true },
-				{ "key": "tags", "enabled": false },
-				{ "key": "readingTime", "enabled": false }
+				{
+					"key": "date",
+					"enabled": true
+				},
+				{
+					"key": "author",
+					"enabled": true
+				},
+				{
+					"key": "categories",
+					"enabled": true
+				},
+				{
+					"key": "comments",
+					"enabled": true
+				},
+				{
+					"key": "tags",
+					"enabled": false
+				},
+				{
+					"key": "readingTime",
+					"enabled": false
+				}
 			]
 		},
 		"separator": {
@@ -45,7 +66,8 @@
 		"spacing": {
 			"margin": true,
 			"padding": true
-		}
+		},
+		"anchor": true
 	},
 	"render": "file:./render.php"
 }

@@ -42,11 +42,6 @@
 	cursor: pointer;
 	background-color: var(--bpafb-accordion-title-bg, #ffffff);
 	color: var(--bpafb-accordion-title-color, #0f172a);
-	font-family: var(--bpafb-accordion-title-font-family, inherit);
-	font-weight: var(--bpafb-accordion-title-font-weight, 600);
-	font-size: var(--bpafb-accordion-title-font-size, 1.15em);
-	letter-spacing: -0.015em;
-	line-height: var(--bpafb-accordion-title-line-height, inherit);
 	transition: all 0.4s ease;
 	position: relative;
 	user-select: none;
@@ -115,7 +110,13 @@
 .bpafb-accordion-title {
 	flex: 1;
 	margin: 0;
-	font-family: inherit;
+	font-family: var(--bpafb-accordion-title-font-family, inherit);
+	font-weight: var(--bpafb-accordion-title-font-weight, 600);
+	font-size: var(--bpafb-accordion-title-font-size, 1.15em);
+	letter-spacing: var(--bpafb-accordion-title-letter-spacing, -0.015em);
+	text-transform: var(--bpafb-accordion-title-text-transform, none);
+	text-decoration: var(--bpafb-accordion-title-text-decoration, none);
+	line-height: var(--bpafb-accordion-title-line-height, inherit);
 }
 
 /* Content Area */

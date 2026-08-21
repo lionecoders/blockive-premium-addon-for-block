@@ -7,7 +7,10 @@
 	"category": "blockive-template",
 	"icon": "megaphone",
 	"description": "Shows a badge when the current WooCommerce product is on sale. Meant to be placed inside a container with Position set to Relative (Advanced tab > Layout) so this badge's absolute position is relative to that container. Blockive Template Builder only.",
-	"usesContext": [ "postId", "postType" ],
+	"usesContext": [
+		"postId",
+		"postType"
+	],
 	"textdomain": "blockive-premium-addon-for-block",
 	"attributes": {
 		"badgeText": {
@@ -41,7 +44,8 @@
 		},
 		"spacing": {
 			"margin": true
-		}
+		},
+		"anchor": true
 	},
 	"render": "file:./render.php"
 }

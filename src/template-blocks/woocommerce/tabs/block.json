@@ -7,7 +7,10 @@
 	"category": "blockive-template",
 	"icon": "index-card",
 	"description": "Displays the current WooCommerce product's Description / Additional Information / Reviews tabs, similar to WooCommerce's default single product tabs. Blockive Template Builder only.",
-	"usesContext": [ "postId", "postType" ],
+	"usesContext": [
+		"postId",
+		"postType"
+	],
 	"textdomain": "blockive-premium-addon-for-block",
 	"attributes": {
 		"showDescriptionTab": {
@@ -25,11 +28,15 @@
 	},
 	"supports": {
 		"html": false,
-		"align": [ "wide", "full" ],
+		"align": [
+			"wide",
+			"full"
+		],
 		"spacing": {
 			"margin": true,
 			"padding": true
-		}
+		},
+		"anchor": true
 	},
 	"render": "file:./render.php",
 	"viewScript": "file:./view.js"

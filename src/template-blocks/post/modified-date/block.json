@@ -7,7 +7,10 @@
 	"category": "blockive-template",
 	"icon": "update",
 	"description": "Displays the current post's last modified date dynamically, with custom format and relative time. Blockive Template Builder only.",
-	"usesContext": [ "postId", "postType" ],
+	"usesContext": [
+		"postId",
+		"postType"
+	],
 	"textdomain": "blockive-premium-addon-for-block",
 	"attributes": {
 		"dateFormat": {
@@ -36,7 +39,8 @@
 			"__experimentalDefaultControls": {
 				"margin": true
 			}
-		}
+		},
+		"anchor": true
 	},
 	"render": "file:./render.php"
 }

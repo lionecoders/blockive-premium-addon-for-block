@@ -123,9 +123,6 @@ export default function AdvancedTab( { attributes, setAttributes } ) {
 		bpafbHoverAnimation = 'none',
 		bpafbFloatingEffect = false,
 		bpafbZIndex,
-		bpafbCustomCss = '',
-		bpafbHtmlId = '',
-		bpafbHtmlClasses = '',
 	} = attributes;
 
 	useEffect( () => {
@@ -380,29 +377,6 @@ export default function AdvancedTab( { attributes, setAttributes } ) {
 					onChange={ ( val ) => setAttributes( { bpafbZIndex: val } ) }
 					min={ -10 }
 					max={ 999 }
-				/>
-			</PanelBody>
-
-			<PanelBody title={ __( 'Custom CSS', 'blockive-premium-addon-for-block' ) } initialOpen={ false }>
-				<TextareaControl
-					help={ __( "Use the keyword 'selector' to target this block, e.g. selector { color: red; }", 'blockive-premium-addon-for-block' ) }
-					value={ bpafbCustomCss }
-					onChange={ ( val ) => setAttributes( { bpafbCustomCss: val } ) }
-					rows={ 8 }
-				/>
-			</PanelBody>
-
-			<PanelBody title={ __( 'HTML Attributes', 'blockive-premium-addon-for-block' ) } initialOpen={ false }>
-				<TextControl
-					label={ __( 'HTML ID', 'blockive-premium-addon-for-block' ) }
-					value={ bpafbHtmlId }
-					onChange={ ( val ) => setAttributes( { bpafbHtmlId: val } ) }
-				/>
-				<TextControl
-					label={ __( 'CSS Classes', 'blockive-premium-addon-for-block' ) }
-					value={ bpafbHtmlClasses }
-					onChange={ ( val ) => setAttributes( { bpafbHtmlClasses: val } ) }
-					help={ __( 'Separate multiple classes with spaces.', 'blockive-premium-addon-for-block' ) }
 				/>
 			</PanelBody>
 		</>

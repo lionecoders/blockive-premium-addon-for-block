@@ -12,6 +12,10 @@
       "type": "string",
       "default": "Stunning Default Heading"
     },
+    "alignment": {
+      "type": "string",
+      "default": ""
+    },
     "level": {
       "type": "number",
       "default": 2
@@ -89,7 +93,8 @@
         "margin": true,
         "padding": true
       }
-    }
+    },
+    "anchor": true
   },
   "textdomain": "blockive-premium-addon-for-block",
   "editorScript": "file:./index.js",

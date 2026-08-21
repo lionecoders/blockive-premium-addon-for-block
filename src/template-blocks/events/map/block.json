@@ -7,7 +7,10 @@
 	"category": "blockive-template",
 	"icon": "location",
 	"description": "Displays an embedded map for the current event's venue address, via any supported events plugin. Blockive Template Builder only.",
-	"usesContext": [ "postId", "postType" ],
+	"usesContext": [
+		"postId",
+		"postType"
+	],
 	"textdomain": "blockive-premium-addon-for-block",
 	"attributes": {
 		"height": {
@@ -17,11 +20,15 @@
 	},
 	"supports": {
 		"html": false,
-		"align": [ "wide", "full" ],
+		"align": [
+			"wide",
+			"full"
+		],
 		"spacing": {
 			"margin": true,
 			"padding": true
-		}
+		},
+		"anchor": true
 	},
 	"render": "file:./render.php"
 }

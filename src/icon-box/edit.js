@@ -38,9 +38,16 @@ export default function Edit( { attributes, setAttributes } ) {
 		titleFontSize,
 		titleFontWeight,
 		titleLineHeight,
+		titleLetterSpacing,
+		titleTextTransform,
+		titleTextDecoration,
 		descFontFamily,
 		descFontSize,
+		descFontWeight,
 		descLineHeight,
+		descLetterSpacing,
+		descTextTransform,
+		descTextDecoration,
 		borderType,
 		borderWidth,
 		borderRadius,
@@ -74,8 +81,8 @@ export default function Edit( { attributes, setAttributes } ) {
 		'--bpafb-ib-icon-border-style': iconBorderStyle,
 		'--bpafb-ib-shadow': getShadowStyle( { enabled: boxShadow, color: shadowColor, blur: shadowBlur, spread: shadowSpread } ),
 		'--bpafb-ib-shadow-hover': getShadowStyle( { enabled: hoverBoxShadow, color: hoverShadowColor, blur: hoverShadowBlur, spread: hoverShadowSpread } ),
-		...getTypographyStyles( { fontFamily: titleFontFamily, fontSize: titleFontSize, fontWeight: titleFontWeight, lineHeight: titleLineHeight }, '--bpafb-ib-title' ),
-		...getTypographyStyles( { fontFamily: descFontFamily, fontSize: descFontSize, lineHeight: descLineHeight }, '--bpafb-ib-desc' ),
+		...getTypographyStyles( { fontFamily: titleFontFamily, fontSize: titleFontSize, fontWeight: titleFontWeight, lineHeight: titleLineHeight, letterSpacing: titleLetterSpacing, textTransform: titleTextTransform, textDecoration: titleTextDecoration }, '--bpafb-ib-title' ),
+		...getTypographyStyles( { fontFamily: descFontFamily, fontSize: descFontSize, fontWeight: descFontWeight, lineHeight: descLineHeight, letterSpacing: descLetterSpacing, textTransform: descTextTransform, textDecoration: descTextDecoration }, '--bpafb-ib-desc' ),
 		...getBorderStyles( { borderType, borderWidth, borderRadius, borderColor }, '--bpafb-ib-box' ),
 	};
 
@@ -207,14 +214,14 @@ export default function Edit( { attributes, setAttributes } ) {
 
 			<PanelBody title={ __( 'Title Typography', 'blockive-premium-addon-for-block' ) } initialOpen={ false }>
 				<TypographyControls
-					values={ { fontFamily: titleFontFamily, fontSize: titleFontSize, fontWeight: titleFontWeight, lineHeight: titleLineHeight } }
+					values={ { fontFamily: titleFontFamily, fontSize: titleFontSize, fontWeight: titleFontWeight, lineHeight: titleLineHeight, letterSpacing: titleLetterSpacing, textTransform: titleTextTransform, textDecoration: titleTextDecoration } }
 					onChange={ ( key, val ) => setAttributes( { [ `title${ key.charAt( 0 ).toUpperCase() }${ key.slice( 1 ) }` ]: val } ) }
 				/>
 			</PanelBody>
 
 			<PanelBody title={ __( 'Description Typography', 'blockive-premium-addon-for-block' ) } initialOpen={ false }>
 				<TypographyControls
-					values={ { fontFamily: descFontFamily, fontSize: descFontSize, lineHeight: descLineHeight } }
+					values={ { fontFamily: descFontFamily, fontSize: descFontSize, fontWeight: descFontWeight, lineHeight: descLineHeight, letterSpacing: descLetterSpacing, textTransform: descTextTransform, textDecoration: descTextDecoration } }
 					onChange={ ( key, val ) => setAttributes( { [ `desc${ key.charAt( 0 ).toUpperCase() }${ key.slice( 1 ) }` ]: val } ) }
 				/>
 			</PanelBody>

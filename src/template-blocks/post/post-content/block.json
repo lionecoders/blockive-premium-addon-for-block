@@ -7,7 +7,10 @@
 	"category": "blockive-template",
 	"icon": "editor-paragraph",
 	"description": "Displays the current post's full content dynamically, with optional truncation, drop cap and max width. Blockive Template Builder only.",
-	"usesContext": [ "postId", "postType" ],
+	"usesContext": [
+		"postId",
+		"postType"
+	],
 	"textdomain": "blockive-premium-addon-for-block",
 	"attributes": {
 		"wordLimit": {
@@ -37,7 +40,10 @@
 	},
 	"supports": {
 		"html": false,
-		"align": [ "wide", "full" ],
+		"align": [
+			"wide",
+			"full"
+		],
 		"color": {
 			"text": true,
 			"background": true,
@@ -64,7 +70,8 @@
 				"margin": true,
 				"padding": true
 			}
-		}
+		},
+		"anchor": true
 	},
 	"render": "file:./render.php"
 }

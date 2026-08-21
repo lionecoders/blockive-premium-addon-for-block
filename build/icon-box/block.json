@@ -116,6 +116,18 @@
       "type": "number",
       "default": null
     },
+    "titleLetterSpacing": {
+      "type": "number",
+      "default": null
+    },
+    "titleTextTransform": {
+      "type": "string",
+      "default": ""
+    },
+    "titleTextDecoration": {
+      "type": "string",
+      "default": ""
+    },
     "descFontFamily": {
       "type": "string",
       "default": ""
@@ -124,9 +136,25 @@
       "type": "number",
       "default": null
     },
+    "descFontWeight": {
+      "type": "string",
+      "default": ""
+    },
     "descLineHeight": {
       "type": "number",
       "default": null
+    },
+    "descLetterSpacing": {
+      "type": "number",
+      "default": null
+    },
+    "descTextTransform": {
+      "type": "string",
+      "default": ""
+    },
+    "descTextDecoration": {
+      "type": "string",
+      "default": ""
     },
     "borderType": {
       "type": "string",
@@ -182,7 +210,8 @@
       "wide",
       "full"
     ],
-    "html": false
+    "html": false,
+    "anchor": true
   },
   "textdomain": "blockive-premium-addon-for-block",
   "editorScript": "file:./index.js",

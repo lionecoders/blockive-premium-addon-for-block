@@ -83,6 +83,18 @@
       "type": "number",
       "default": null
     },
+    "titleLetterSpacing": {
+      "type": "number",
+      "default": null
+    },
+    "titleTextTransform": {
+      "type": "string",
+      "default": ""
+    },
+    "titleTextDecoration": {
+      "type": "string",
+      "default": ""
+    },
     "boxShadow": {
       "type": "boolean",
       "default": false
@@ -133,7 +145,8 @@
       "wide",
       "full"
     ],
-    "html": false
+    "html": false,
+    "anchor": true
   },
   "textdomain": "blockive-premium-addon-for-block",
   "editorScript": "file:./index.js",

@@ -129,6 +129,9 @@
 			font-size: var(--bpafb-ib-title-font-size, inherit);
 			font-weight: var(--bpafb-ib-title-font-weight, inherit);
 			line-height: var(--bpafb-ib-title-line-height, inherit);
+			letter-spacing: var(--bpafb-ib-title-letter-spacing, normal);
+			text-transform: var(--bpafb-ib-title-text-transform, none);
+			text-decoration: var(--bpafb-ib-title-text-decoration, none);
 			margin-top: 0;
 			margin-bottom: 10px;
 			transition: color 0.3s ease;
@@ -138,7 +141,11 @@
 			color: var(--bpafb-ib-desc-color);
 			font-family: var(--bpafb-ib-desc-font-family, inherit);
 			font-size: var(--bpafb-ib-desc-font-size, inherit);
+			font-weight: var(--bpafb-ib-desc-font-weight, inherit);
 			line-height: var(--bpafb-ib-desc-line-height, 1.6);
+			letter-spacing: var(--bpafb-ib-desc-letter-spacing, normal);
+			text-transform: var(--bpafb-ib-desc-text-transform, none);
+			text-decoration: var(--bpafb-ib-desc-text-decoration, none);
 			margin: 0;
 		}
 	}

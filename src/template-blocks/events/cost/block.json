@@ -7,7 +7,10 @@
 	"category": "blockive-template",
 	"icon": "tickets-alt",
 	"description": "Displays the current event's cost dynamically, via any supported events plugin, with a configurable label when the event is free. Blockive Template Builder only.",
-	"usesContext": [ "postId", "postType" ],
+	"usesContext": [
+		"postId",
+		"postType"
+	],
 	"textdomain": "blockive-premium-addon-for-block",
 	"attributes": {
 		"freeText": {
@@ -40,7 +43,8 @@
 		"spacing": {
 			"margin": true,
 			"padding": true
-		}
+		},
+		"anchor": true
 	},
 	"render": "file:./render.php"
 }

@@ -7,7 +7,10 @@
 	"category": "blockive-template",
 	"icon": "list-view",
 	"description": "Displays the current WooCommerce product's custom and taxonomy attributes as a table or list. Blockive Template Builder only.",
-	"usesContext": [ "postId", "postType" ],
+	"usesContext": [
+		"postId",
+		"postType"
+	],
 	"textdomain": "blockive-premium-addon-for-block",
 	"attributes": {
 		"layout": {
@@ -38,7 +41,8 @@
 				"margin": true,
 				"padding": true
 			}
-		}
+		},
+		"anchor": true
 	},
 	"render": "file:./render.php"
 }

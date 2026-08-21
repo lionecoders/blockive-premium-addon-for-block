@@ -72,33 +72,94 @@
 			"type": "number",
 			"default": 8
 		},
-		"fontFamily": { "type": "string", "default": "" },
-		"fontSize": { "type": "number", "default": null },
-		"fontWeight": { "type": "string", "default": "" },
-		"lineHeight": { "type": "number", "default": null },
-		"letterSpacing": { "type": "number", "default": null },
-		"textTransform": { "type": "string", "default": "" },
-		"textDecoration": { "type": "string", "default": "" },
-		"borderType": { "type": "string", "default": "none" },
-		"borderWidth": { "type": "number", "default": 0 },
-		"borderRadius": { "type": "number", "default": 4 },
-		"borderColor": { "type": "string", "default": "" },
-		"borderColorHover": { "type": "string", "default": "" },
-		"boxShadow": { "type": "boolean", "default": false },
-		"shadowColor": { "type": "string", "default": "rgba(0,0,0,0.15)" },
-		"shadowBlur": { "type": "number", "default": 15 },
-		"shadowSpread": { "type": "number", "default": 0 },
-		"hoverBoxShadow": { "type": "boolean", "default": false },
-		"hoverShadowColor": { "type": "string", "default": "rgba(0,0,0,0.15)" },
-		"hoverShadowBlur": { "type": "number", "default": 15 },
-		"hoverShadowSpread": { "type": "number", "default": 0 }
+		"fontFamily": {
+			"type": "string",
+			"default": ""
+		},
+		"fontSize": {
+			"type": "number",
+			"default": null
+		},
+		"fontWeight": {
+			"type": "string",
+			"default": ""
+		},
+		"lineHeight": {
+			"type": "number",
+			"default": null
+		},
+		"letterSpacing": {
+			"type": "number",
+			"default": null
+		},
+		"textTransform": {
+			"type": "string",
+			"default": ""
+		},
+		"textDecoration": {
+			"type": "string",
+			"default": ""
+		},
+		"borderType": {
+			"type": "string",
+			"default": "none"
+		},
+		"borderWidth": {
+			"type": "number",
+			"default": 0
+		},
+		"borderRadius": {
+			"type": "number",
+			"default": 4
+		},
+		"borderColor": {
+			"type": "string",
+			"default": ""
+		},
+		"borderColorHover": {
+			"type": "string",
+			"default": ""
+		},
+		"boxShadow": {
+			"type": "boolean",
+			"default": false
+		},
+		"shadowColor": {
+			"type": "string",
+			"default": "rgba(0,0,0,0.15)"
+		},
+		"shadowBlur": {
+			"type": "number",
+			"default": 15
+		},
+		"shadowSpread": {
+			"type": "number",
+			"default": 0
+		},
+		"hoverBoxShadow": {
+			"type": "boolean",
+			"default": false
+		},
+		"hoverShadowColor": {
+			"type": "string",
+			"default": "rgba(0,0,0,0.15)"
+		},
+		"hoverShadowBlur": {
+			"type": "number",
+			"default": 15
+		},
+		"hoverShadowSpread": {
+			"type": "number",
+			"default": 0
+		}
 	},
 	"supports": {
 		"align": [
 			"wide",
 			"full"
 		],
-		"html": false
+		"html": false,
+		"anchor": true
 	},
 	"textdomain": "blockive-premium-addon-for-block",
 	"editorScript": "file:./index.js",

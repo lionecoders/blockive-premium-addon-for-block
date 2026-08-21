@@ -7,7 +7,10 @@
 	"category": "blockive-template",
 	"icon": "cart",
 	"description": "Renders the current WooCommerce product's Add to Cart form - supports simple, variable, grouped and external products by calling WooCommerce's own single-product template. Blockive Template Builder only.",
-	"usesContext": [ "postId", "postType" ],
+	"usesContext": [
+		"postId",
+		"postType"
+	],
 	"textdomain": "blockive-premium-addon-for-block",
 	"attributes": {
 		"buttonText": {
@@ -36,7 +39,8 @@
 		"spacing": {
 			"margin": true,
 			"padding": true
-		}
+		},
+		"anchor": true
 	},
 	"render": "file:./render.php"
 }

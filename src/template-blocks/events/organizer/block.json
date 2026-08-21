@@ -7,7 +7,10 @@
 	"category": "blockive-template",
 	"icon": "admin-users",
 	"description": "Displays the current event's organizer dynamically, optionally linked to the organizer's website, via any supported events plugin. Blockive Template Builder only.",
-	"usesContext": [ "postId", "postType" ],
+	"usesContext": [
+		"postId",
+		"postType"
+	],
 	"textdomain": "blockive-premium-addon-for-block",
 	"attributes": {
 		"isLink": {
@@ -45,7 +48,8 @@
 		"spacing": {
 			"margin": true,
 			"padding": true
-		}
+		},
+		"anchor": true
 	},
 	"render": "file:./render.php"
 }

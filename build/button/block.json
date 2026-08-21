@@ -158,7 +158,8 @@
       "wide",
       "full"
     ],
-    "html": false
+    "html": false,
+    "anchor": true
   },
   "textdomain": "blockive-premium-addon-for-block",
   "editorScript": "file:./index.js",

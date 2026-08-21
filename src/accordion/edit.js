@@ -37,6 +37,9 @@ export default function Edit( { attributes, setAttributes } ) {
 		titleFontSize,
 		titleFontWeight,
 		titleLineHeight,
+		titleLetterSpacing,
+		titleTextTransform,
+		titleTextDecoration,
 		boxShadow,
 		shadowColor,
 		shadowBlur,
@@ -61,7 +64,7 @@ export default function Edit( { attributes, setAttributes } ) {
 		'--bpafb-accordion-title-bg': titleBgColor,
 		'--bpafb-accordion-content-color': contentColor,
 		'--bpafb-accordion-content-bg': contentBgColor,
-		...getTypographyStyles( { fontFamily: titleFontFamily, fontSize: titleFontSize, fontWeight: titleFontWeight, lineHeight: titleLineHeight }, '--bpafb-accordion-title' ),
+		...getTypographyStyles( { fontFamily: titleFontFamily, fontSize: titleFontSize, fontWeight: titleFontWeight, lineHeight: titleLineHeight, letterSpacing: titleLetterSpacing, textTransform: titleTextTransform, textDecoration: titleTextDecoration }, '--bpafb-accordion-title' ),
 		...getBorderStyles( { borderType, borderWidth, borderRadius, borderColor }, '--bpafb-accordion' ),
 	};
 
@@ -160,7 +163,7 @@ export default function Edit( { attributes, setAttributes } ) {
 		<>
 			<PanelBody title={ __( 'Title Typography', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
 				<TypographyControls
-					values={ { fontFamily: titleFontFamily, fontSize: titleFontSize, fontWeight: titleFontWeight, lineHeight: titleLineHeight } }
+					values={ { fontFamily: titleFontFamily, fontSize: titleFontSize, fontWeight: titleFontWeight, lineHeight: titleLineHeight, letterSpacing: titleLetterSpacing, textTransform: titleTextTransform, textDecoration: titleTextDecoration } }
 					onChange={ ( key, val ) => setAttributes( { [ `title${ key.charAt( 0 ).toUpperCase() }${ key.slice( 1 ) }` ]: val } ) }
 				/>
 			</PanelBody>

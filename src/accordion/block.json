@@ -67,18 +67,66 @@
 			"type": "number",
 			"default": 12
 		},
-		"titleFontFamily": { "type": "string", "default": "" },
-		"titleFontSize": { "type": "number", "default": null },
-		"titleFontWeight": { "type": "string", "default": "" },
-		"titleLineHeight": { "type": "number", "default": null },
-		"boxShadow": { "type": "boolean", "default": false },
-		"shadowColor": { "type": "string", "default": "rgba(0,0,0,0.15)" },
-		"shadowBlur": { "type": "number", "default": 15 },
-		"shadowSpread": { "type": "number", "default": 0 },
-		"hoverBoxShadow": { "type": "boolean", "default": false },
-		"hoverShadowColor": { "type": "string", "default": "rgba(0,0,0,0.15)" },
-		"hoverShadowBlur": { "type": "number", "default": 15 },
-		"hoverShadowSpread": { "type": "number", "default": 0 },
+		"titleFontFamily": {
+			"type": "string",
+			"default": ""
+		},
+		"titleFontSize": {
+			"type": "number",
+			"default": null
+		},
+		"titleFontWeight": {
+			"type": "string",
+			"default": ""
+		},
+		"titleLineHeight": {
+			"type": "number",
+			"default": null
+		},
+		"titleLetterSpacing": {
+			"type": "number",
+			"default": null
+		},
+		"titleTextTransform": {
+			"type": "string",
+			"default": ""
+		},
+		"titleTextDecoration": {
+			"type": "string",
+			"default": ""
+		},
+		"boxShadow": {
+			"type": "boolean",
+			"default": false
+		},
+		"shadowColor": {
+			"type": "string",
+			"default": "rgba(0,0,0,0.15)"
+		},
+		"shadowBlur": {
+			"type": "number",
+			"default": 15
+		},
+		"shadowSpread": {
+			"type": "number",
+			"default": 0
+		},
+		"hoverBoxShadow": {
+			"type": "boolean",
+			"default": false
+		},
+		"hoverShadowColor": {
+			"type": "string",
+			"default": "rgba(0,0,0,0.15)"
+		},
+		"hoverShadowBlur": {
+			"type": "number",
+			"default": 15
+		},
+		"hoverShadowSpread": {
+			"type": "number",
+			"default": 0
+		},
 		"animationType": {
 			"type": "string",
 			"default": "none"
@@ -97,7 +145,8 @@
 			"wide",
 			"full"
 		],
-		"html": false
+		"html": false,
+		"anchor": true
 	},
 	"textdomain": "blockive-premium-addon-for-block",
 	"editorScript": "file:./index.js",

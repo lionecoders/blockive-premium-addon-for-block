@@ -38,10 +38,16 @@ export default function Edit( { attributes, setAttributes } ) {
 		dayFontSize,
 		dayFontWeight,
 		dayLineHeight,
+		dayLetterSpacing,
+		dayTextTransform,
+		dayTextDecoration,
 		timeFontFamily,
 		timeFontSize,
 		timeFontWeight,
 		timeLineHeight,
+		timeLetterSpacing,
+		timeTextTransform,
+		timeTextDecoration,
 		borderType,
 		borderWidth,
 		borderRadius,
@@ -68,8 +74,8 @@ export default function Edit( { attributes, setAttributes } ) {
 		'--bpafb-bh-item-text-color-hover': itemTextColorHover,
 		'--bpafb-bh-shadow': getShadowStyle( { enabled: boxShadow, color: shadowColor, blur: shadowBlur, spread: shadowSpread } ),
 		'--bpafb-bh-shadow-hover': getShadowStyle( { enabled: hoverBoxShadow, color: hoverShadowColor, blur: hoverShadowBlur, spread: hoverShadowSpread } ),
-		...getTypographyStyles( { fontFamily: dayFontFamily, fontSize: dayFontSize, fontWeight: dayFontWeight, lineHeight: dayLineHeight }, '--bpafb-bh-day' ),
-		...getTypographyStyles( { fontFamily: timeFontFamily, fontSize: timeFontSize, fontWeight: timeFontWeight, lineHeight: timeLineHeight }, '--bpafb-bh-time' ),
+		...getTypographyStyles( { fontFamily: dayFontFamily, fontSize: dayFontSize, fontWeight: dayFontWeight, lineHeight: dayLineHeight, letterSpacing: dayLetterSpacing, textTransform: dayTextTransform, textDecoration: dayTextDecoration }, '--bpafb-bh-day' ),
+		...getTypographyStyles( { fontFamily: timeFontFamily, fontSize: timeFontSize, fontWeight: timeFontWeight, lineHeight: timeLineHeight, letterSpacing: timeLetterSpacing, textTransform: timeTextTransform, textDecoration: timeTextDecoration }, '--bpafb-bh-time' ),
 		...getBorderStyles( { borderType, borderWidth, borderRadius, borderColor }, '--bpafb-bh-container' ),
 	};
 
@@ -230,14 +236,14 @@ export default function Edit( { attributes, setAttributes } ) {
 
 			<PanelBody title={ __( 'Day Typography', 'blockive-premium-addon-for-block' ) } initialOpen={ false }>
 				<TypographyControls
-					values={ { fontFamily: dayFontFamily, fontSize: dayFontSize, fontWeight: dayFontWeight, lineHeight: dayLineHeight } }
+					values={ { fontFamily: dayFontFamily, fontSize: dayFontSize, fontWeight: dayFontWeight, lineHeight: dayLineHeight, letterSpacing: dayLetterSpacing, textTransform: dayTextTransform, textDecoration: dayTextDecoration } }
 					onChange={ ( key, val ) => setAttributes( { [ `day${ key.charAt( 0 ).toUpperCase() }${ key.slice( 1 ) }` ]: val } ) }
 				/>
 			</PanelBody>
 
 			<PanelBody title={ __( 'Time Typography', 'blockive-premium-addon-for-block' ) } initialOpen={ false }>
 				<TypographyControls
-					values={ { fontFamily: timeFontFamily, fontSize: timeFontSize, fontWeight: timeFontWeight, lineHeight: timeLineHeight } }
+					values={ { fontFamily: timeFontFamily, fontSize: timeFontSize, fontWeight: timeFontWeight, lineHeight: timeLineHeight, letterSpacing: timeLetterSpacing, textTransform: timeTextTransform, textDecoration: timeTextDecoration } }
 					onChange={ ( key, val ) => setAttributes( { [ `time${ key.charAt( 0 ).toUpperCase() }${ key.slice( 1 ) }` ]: val } ) }
 				/>
 			</PanelBody>

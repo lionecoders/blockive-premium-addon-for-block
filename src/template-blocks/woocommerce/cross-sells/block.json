@@ -7,7 +7,10 @@
 	"category": "blockive-template",
 	"icon": "randomize",
 	"description": "Displays a grid or slider of the current WooCommerce product's cross-sell products (sourced from the product itself, not the live cart, so it renders sensibly inside a template preview). Blockive Template Builder only.",
-	"usesContext": [ "postId", "postType" ],
+	"usesContext": [
+		"postId",
+		"postType"
+	],
 	"textdomain": "blockive-premium-addon-for-block",
 	"attributes": {
 		"numberOfProducts": {
@@ -25,11 +28,15 @@
 	},
 	"supports": {
 		"html": false,
-		"align": [ "wide", "full" ],
+		"align": [
+			"wide",
+			"full"
+		],
 		"spacing": {
 			"margin": true,
 			"padding": true
-		}
+		},
+		"anchor": true
 	},
 	"render": "file:./render.php",
 	"viewScript": "file:./view.js"

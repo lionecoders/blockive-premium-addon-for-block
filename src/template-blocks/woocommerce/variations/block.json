@@ -7,7 +7,10 @@
 	"category": "blockive-template",
 	"icon": "screenoptions",
 	"description": "Renders WooCommerce's native variation selector (dropdowns + AJAX price/availability) for variable products, via woocommerce_template_single_add_to_cart(). Pairs with, or can replace, the Add To Cart block. Blockive Template Builder only.",
-	"usesContext": [ "postId", "postType" ],
+	"usesContext": [
+		"postId",
+		"postType"
+	],
 	"textdomain": "blockive-premium-addon-for-block",
 	"attributes": {
 		"showPriceRange": {
@@ -17,11 +20,15 @@
 	},
 	"supports": {
 		"html": false,
-		"align": [ "wide", "full" ],
+		"align": [
+			"wide",
+			"full"
+		],
 		"spacing": {
 			"margin": true,
 			"padding": true
-		}
+		},
+		"anchor": true
 	},
 	"render": "file:./render.php"
 }

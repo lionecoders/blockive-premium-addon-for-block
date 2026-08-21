@@ -32,7 +32,8 @@
 				"width": true,
 				"style": true
 			}
-		}
+		},
+		"anchor": true
 	},
 	"attributes": {
 		"formId": {

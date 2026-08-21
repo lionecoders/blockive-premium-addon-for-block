@@ -7,16 +7,31 @@
 	"category": "blockive-template",
 	"icon": "list-view",
 	"description": "A reorderable row of product meta items (SKU, categories, tags, stock status). Blockive Template Builder only.",
-	"usesContext": [ "postId", "postType" ],
+	"usesContext": [
+		"postId",
+		"postType"
+	],
 	"textdomain": "blockive-premium-addon-for-block",
 	"attributes": {
 		"items": {
 			"type": "array",
 			"default": [
-				{ "key": "sku", "enabled": true },
-				{ "key": "categories", "enabled": true },
-				{ "key": "tags", "enabled": false },
-				{ "key": "stockStatus", "enabled": true }
+				{
+					"key": "sku",
+					"enabled": true
+				},
+				{
+					"key": "categories",
+					"enabled": true
+				},
+				{
+					"key": "tags",
+					"enabled": false
+				},
+				{
+					"key": "stockStatus",
+					"enabled": true
+				}
 			]
 		},
 		"separator": {
@@ -43,7 +58,8 @@
 		"spacing": {
 			"margin": true,
 			"padding": true
-		}
+		},
+		"anchor": true
 	},
 	"render": "file:./render.php"
 }

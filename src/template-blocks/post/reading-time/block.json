@@ -7,7 +7,10 @@
 	"category": "blockive-template",
 	"icon": "clock",
 	"description": "Displays the current post's estimated reading time dynamically. Blockive Template Builder only.",
-	"usesContext": [ "postId", "postType" ],
+	"usesContext": [
+		"postId",
+		"postType"
+	],
 	"textdomain": "blockive-premium-addon-for-block",
 	"attributes": {
 		"wpm": {
@@ -49,7 +52,8 @@
 			"__experimentalDefaultControls": {
 				"margin": true
 			}
-		}
+		},
+		"anchor": true
 	},
 	"render": "file:./render.php"
 }

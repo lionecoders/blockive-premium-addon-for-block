@@ -7,7 +7,10 @@
 	"category": "blockive-template",
 	"icon": "location-alt",
 	"description": "Displays the current event's venue (and optionally address) dynamically, via any supported events plugin. Blockive Template Builder only.",
-	"usesContext": [ "postId", "postType" ],
+	"usesContext": [
+		"postId",
+		"postType"
+	],
 	"textdomain": "blockive-premium-addon-for-block",
 	"attributes": {
 		"showAddress": {
@@ -40,7 +43,8 @@
 		"spacing": {
 			"margin": true,
 			"padding": true
-		}
+		},
+		"anchor": true
 	},
 	"render": "file:./render.php"
 }

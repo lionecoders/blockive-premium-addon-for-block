@@ -7,7 +7,10 @@
 	"category": "blockive-template",
 	"icon": "editor-justify",
 	"description": "Displays the current WooCommerce product's full description dynamically. Blockive Template Builder only.",
-	"usesContext": [ "postId", "postType" ],
+	"usesContext": [
+		"postId",
+		"postType"
+	],
 	"textdomain": "blockive-premium-addon-for-block",
 	"attributes": {
 		"maxWidth": {
@@ -41,7 +44,8 @@
 				"margin": true,
 				"padding": true
 			}
-		}
+		},
+		"anchor": true
 	},
 	"render": "file:./render.php"
 }

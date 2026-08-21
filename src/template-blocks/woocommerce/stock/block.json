@@ -7,7 +7,10 @@
 	"category": "blockive-template",
 	"icon": "clipboard",
 	"description": "Displays the current WooCommerce product's stock status (In Stock / Out of Stock / On Backorder), and optionally the tracked quantity, dynamically. Blockive Template Builder only.",
-	"usesContext": [ "postId", "postType" ],
+	"usesContext": [
+		"postId",
+		"postType"
+	],
 	"textdomain": "blockive-premium-addon-for-block",
 	"attributes": {
 		"inStockText": {
@@ -46,7 +49,8 @@
 		"spacing": {
 			"margin": true,
 			"padding": true
-		}
+		},
+		"anchor": true
 	},
 	"render": "file:./render.php"
 }

@@ -102,35 +102,126 @@
 			"type": "string",
 			"default": ""
 		},
-		"itemBgColorHover": { "type": "string", "default": "" },
-		"itemTextColorHover": { "type": "string", "default": "" },
-		"dayFontFamily": { "type": "string", "default": "" },
-		"dayFontSize": { "type": "number", "default": null },
-		"dayFontWeight": { "type": "string", "default": "" },
-		"dayLineHeight": { "type": "number", "default": null },
-		"timeFontFamily": { "type": "string", "default": "" },
-		"timeFontSize": { "type": "number", "default": null },
-		"timeFontWeight": { "type": "string", "default": "" },
-		"timeLineHeight": { "type": "number", "default": null },
-		"borderType": { "type": "string", "default": "none" },
-		"borderWidth": { "type": "number", "default": 0 },
-		"borderRadius": { "type": "number", "default": 8 },
-		"borderColor": { "type": "string", "default": "" },
-		"boxShadow": { "type": "boolean", "default": false },
-		"shadowColor": { "type": "string", "default": "rgba(0,0,0,0.15)" },
-		"shadowBlur": { "type": "number", "default": 15 },
-		"shadowSpread": { "type": "number", "default": 0 },
-		"hoverBoxShadow": { "type": "boolean", "default": false },
-		"hoverShadowColor": { "type": "string", "default": "rgba(0,0,0,0.15)" },
-		"hoverShadowBlur": { "type": "number", "default": 15 },
-		"hoverShadowSpread": { "type": "number", "default": 0 }
+		"itemBgColorHover": {
+			"type": "string",
+			"default": ""
+		},
+		"itemTextColorHover": {
+			"type": "string",
+			"default": ""
+		},
+		"dayFontFamily": {
+			"type": "string",
+			"default": ""
+		},
+		"dayFontSize": {
+			"type": "number",
+			"default": null
+		},
+		"dayFontWeight": {
+			"type": "string",
+			"default": ""
+		},
+		"dayLineHeight": {
+			"type": "number",
+			"default": null
+		},
+		"dayLetterSpacing": {
+			"type": "number",
+			"default": null
+		},
+		"dayTextTransform": {
+			"type": "string",
+			"default": ""
+		},
+		"dayTextDecoration": {
+			"type": "string",
+			"default": ""
+		},
+		"timeFontFamily": {
+			"type": "string",
+			"default": ""
+		},
+		"timeFontSize": {
+			"type": "number",
+			"default": null
+		},
+		"timeFontWeight": {
+			"type": "string",
+			"default": ""
+		},
+		"timeLineHeight": {
+			"type": "number",
+			"default": null
+		},
+		"timeLetterSpacing": {
+			"type": "number",
+			"default": null
+		},
+		"timeTextTransform": {
+			"type": "string",
+			"default": ""
+		},
+		"timeTextDecoration": {
+			"type": "string",
+			"default": ""
+		},
+		"borderType": {
+			"type": "string",
+			"default": "none"
+		},
+		"borderWidth": {
+			"type": "number",
+			"default": 0
+		},
+		"borderRadius": {
+			"type": "number",
+			"default": 8
+		},
+		"borderColor": {
+			"type": "string",
+			"default": ""
+		},
+		"boxShadow": {
+			"type": "boolean",
+			"default": false
+		},
+		"shadowColor": {
+			"type": "string",
+			"default": "rgba(0,0,0,0.15)"
+		},
+		"shadowBlur": {
+			"type": "number",
+			"default": 15
+		},
+		"shadowSpread": {
+			"type": "number",
+			"default": 0
+		},
+		"hoverBoxShadow": {
+			"type": "boolean",
+			"default": false
+		},
+		"hoverShadowColor": {
+			"type": "string",
+			"default": "rgba(0,0,0,0.15)"
+		},
+		"hoverShadowBlur": {
+			"type": "number",
+			"default": 15
+		},
+		"hoverShadowSpread": {
+			"type": "number",
+			"default": 0
+		}
 	},
 	"supports": {
 		"align": [
 			"wide",
 			"full"
 		],
-		"html": false
+		"html": false,
+		"anchor": true
 	},
 	"textdomain": "blockive-premium-addon-for-block",
 	"editorScript": "file:./index.js",

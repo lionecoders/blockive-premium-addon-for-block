@@ -21,6 +21,9 @@ export default function save( { attributes } ) {
 		titleFontSize,
 		titleFontWeight,
 		titleLineHeight,
+		titleLetterSpacing,
+		titleTextTransform,
+		titleTextDecoration,
 		boxShadow,
 		shadowColor,
 		shadowBlur,
@@ -43,7 +46,7 @@ export default function save( { attributes } ) {
 		'--bpafb-accordion-title-bg': titleBgColor,
 		'--bpafb-accordion-content-color': contentColor,
 		'--bpafb-accordion-content-bg': contentBgColor,
-		...getTypographyStyles( { fontFamily: titleFontFamily, fontSize: titleFontSize, fontWeight: titleFontWeight, lineHeight: titleLineHeight }, '--bpafb-accordion-title' ),
+		...getTypographyStyles( { fontFamily: titleFontFamily, fontSize: titleFontSize, fontWeight: titleFontWeight, lineHeight: titleLineHeight, letterSpacing: titleLetterSpacing, textTransform: titleTextTransform, textDecoration: titleTextDecoration }, '--bpafb-accordion-title' ),
 		...getBorderStyles( { borderType, borderWidth, borderRadius, borderColor }, '--bpafb-accordion' ),
 	};
 
