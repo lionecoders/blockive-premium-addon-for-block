@@ -24,6 +24,14 @@
 					if ( entry.isIntersecting ) {
 						entry.target.classList.add( 'bpafb-in-view' );
 						obs.unobserve( entry.target );
+						
+						// Remove entrance animation attributes after completion so continuous animations (like floating) can take over
+						entry.target.addEventListener( 'animationend', function( e ) {
+							if ( e.animationName && e.animationName.indexOf( 'bpafb-' ) === 0 && e.animationName !== 'bpafb-floating' ) {
+								entry.target.removeAttribute( 'data-bpafb-animation' );
+								entry.target.classList.remove( 'bpafb-animate', 'bpafb-in-view' );
+							}
+						}, { once: true } );
 					}
 				} );
 			},

@@ -296,6 +296,8 @@ class Blockive_Premium_Addon_For_Block
 		}
 
 		// Layout
+		$uid = !empty($attrs['bpafbUid']) ? sanitize_html_class($attrs['bpafbUid']) : '';
+
 		if (!empty($attrs['bpafbDisplay'])) {
 			$styles[] = 'display: ' . esc_attr($attrs['bpafbDisplay']) . ';';
 		}
@@ -313,24 +315,31 @@ class Blockive_Premium_Addon_For_Block
 		}
 		if (isset($attrs['bpafbZIndex'])) {
 			$styles[] = 'z-index: ' . intval($attrs['bpafbZIndex']) . ';';
+			if (empty($attrs['bpafbPosition'])) {
+				$styles[] = 'position: relative;';
+			}
 		}
 
 		// Transform
-		$transforms = [];
+		$has_transform = false;
 		if (!empty($attrs['bpafbTransformRotate'])) {
-			$transforms[] = 'rotate(' . floatval($attrs['bpafbTransformRotate']) . 'deg)';
+			$styles[] = 'rotate: ' . floatval($attrs['bpafbTransformRotate']) . 'deg;';
+			$has_transform = true;
 		}
 		if (isset($attrs['bpafbTransformScale']) && floatval($attrs['bpafbTransformScale']) !== 100.0) {
-			$transforms[] = 'scale(' . (floatval($attrs['bpafbTransformScale']) / 100) . ')';
+			$styles[] = 'scale: ' . (floatval($attrs['bpafbTransformScale']) / 100) . ';';
+			$has_transform = true;
 		}
-		if (!empty($attrs['bpafbTransformTranslateX'])) {
-			$transforms[] = 'translateX(' . intval($attrs['bpafbTransformTranslateX']) . 'px)';
+		if (!empty($attrs['bpafbTransformTranslateX']) || !empty($attrs['bpafbTransformTranslateY'])) {
+			$tx = !empty($attrs['bpafbTransformTranslateX']) ? intval($attrs['bpafbTransformTranslateX']) : 0;
+			$ty = !empty($attrs['bpafbTransformTranslateY']) ? intval($attrs['bpafbTransformTranslateY']) : 0;
+			$styles[] = 'translate: ' . $tx . 'px ' . $ty . 'px;';
+			$has_transform = true;
 		}
-		if (!empty($attrs['bpafbTransformTranslateY'])) {
-			$transforms[] = 'translateY(' . intval($attrs['bpafbTransformTranslateY']) . 'px)';
-		}
-		if (!empty($transforms)) {
-			$styles[] = 'transform: ' . implode(' ', $transforms) . ';';
+		
+		if ($has_transform && empty($attrs['bpafbDisplay'])) {
+			// Transforms require a non-inline display type to work on the frontend
+			$styles[] = 'display: block;';
 		}
 
 		// Visibility
@@ -366,7 +375,6 @@ class Blockive_Premium_Addon_For_Block
 		}
 
 		// Unique id used to scope custom CSS / responsive overrides to this block instance.
-		$uid = !empty($attrs['bpafbUid']) ? sanitize_html_class($attrs['bpafbUid']) : '';
 		$extra_style_tag = '';
 		if ($uid) {
 			$classes[] = 'bpafb-uid-' . $uid;

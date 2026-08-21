@@ -192,21 +192,16 @@
 				styles.zIndex = attributes.bpafbZIndex;
 			}
 
-			const transforms = [];
 			if ( attributes.bpafbTransformRotate ) {
-				transforms.push( `rotate(${ attributes.bpafbTransformRotate }deg)` );
+				styles.rotate = `${ attributes.bpafbTransformRotate }deg`;
 			}
 			if ( attributes.bpafbTransformScale !== undefined && attributes.bpafbTransformScale !== 100 ) {
-				transforms.push( `scale(${ attributes.bpafbTransformScale / 100 })` );
+				styles.scale = `${ attributes.bpafbTransformScale / 100 }`;
 			}
-			if ( attributes.bpafbTransformTranslateX ) {
-				transforms.push( `translateX(${ attributes.bpafbTransformTranslateX }px)` );
-			}
-			if ( attributes.bpafbTransformTranslateY ) {
-				transforms.push( `translateY(${ attributes.bpafbTransformTranslateY }px)` );
-			}
-			if ( transforms.length ) {
-				styles.transform = transforms.join( ' ' );
+			if ( attributes.bpafbTransformTranslateX || attributes.bpafbTransformTranslateY ) {
+				const tx = attributes.bpafbTransformTranslateX || 0;
+				const ty = attributes.bpafbTransformTranslateY || 0;
+				styles.translate = `${ tx }px ${ ty }px`;
 			}
 
 			const existingStyle = props.wrapperProps?.style || {};

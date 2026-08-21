@@ -45,7 +45,7 @@ export default function BackgroundControls( { values = {}, onChange } ) {
 
 			{ bgType === 'gradient' && (
 				<BaseControl label={ __( 'Background Gradient', 'blockive-premium-addon-for-block' ) }>
-					<GradientPicker value={ bgGradient } onChange={ ( val ) => onChange( 'bgGradient', val ) } />
+					<GradientPicker value={ bgGradient || undefined } onChange={ ( val ) => onChange( 'bgGradient', val ) } />
 				</BaseControl>
 			) }
 

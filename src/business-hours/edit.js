@@ -189,6 +189,11 @@ export default function Edit( { attributes, setAttributes } ) {
 			</PanelBody>
 
 			<PanelBody title={ __( 'Settings', 'blockive-premium-addon-for-block' ) } initialOpen={ false }>
+				<TextControl
+					label={ __( 'Title', 'blockive-premium-addon-for-block' ) }
+					value={ title }
+					onChange={ ( val ) => setAttributes( { title: val } ) }
+				/>
 				<ToggleControl
 					label={ __( 'Highlight Today', 'blockive-premium-addon-for-block' ) }
 					checked={ highlightToday }
@@ -281,15 +286,13 @@ export default function Edit( { attributes, setAttributes } ) {
 
 			<div { ...blockProps }>
 				<div className="bpafb-business-hours-container">
-					{ title && (
-						<RichText
-							tagName="h3"
-							className="bpafb-business-hours-title"
-							value={ title }
-							onChange={ ( val ) => setAttributes( { title: val } ) }
-							placeholder={ __( 'Business Hours', 'blockive-premium-addon-for-block' ) }
-						/>
-					) }
+					<RichText
+						tagName="h3"
+						className="bpafb-business-hours-title"
+						value={ title }
+						onChange={ ( val ) => setAttributes( { title: val } ) }
+						placeholder={ __( 'Business Hours', 'blockive-premium-addon-for-block' ) }
+					/>
 
 					<div className="bpafb-business-hours-list">
 						{ hours.map( ( hour, index ) => {

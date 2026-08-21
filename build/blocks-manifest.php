@@ -141,6 +141,252 @@ return array(
 			'animationDelay' => array(
 				'type' => 'string',
 				'default' => '0s'
+			),
+			'bpafbUid' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbDisplay' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbOverflow' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbPosition' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerWidthUnit' => array(
+				'type' => 'string',
+				'default' => 'px'
+			),
+			'bpafbContainerMinHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMaxHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBgType' => array(
+				'type' => 'string',
+				'default' => 'color'
+			),
+			'bpafbContainerBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgGradient' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageId' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerBgImageSize' => array(
+				'type' => 'string',
+				'default' => 'cover'
+			),
+			'bpafbContainerOverlayColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBorderStyle' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbContainerBorderWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderRadius' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerHoverBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerHoverShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerHoverShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerHoverShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHideDesktop' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideTablet' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideMobile' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbAnimationType' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbAnimationDuration' => array(
+				'type' => 'number',
+				'default' => 800
+			),
+			'bpafbAnimationDelay' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbAnimationEasing' => array(
+				'type' => 'string',
+				'default' => 'ease'
+			),
+			'bpafbTransformRotate' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformScale' => array(
+				'type' => 'number',
+				'default' => 100
+			),
+			'bpafbTransformTranslateX' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformTranslateY' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHoverAnimation' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbFloatingEffect' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbZIndex' => array(
+				'type' => 'number'
+			),
+			'bpafbHtmlId' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbHtmlClasses' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbCustomCss' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerAlign' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerPaddingTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftMobile' => array(
+				'type' => 'number'
 			)
 		),
 		'supports' => array(
@@ -371,6 +617,252 @@ return array(
 			'hoverShadowSpread' => array(
 				'type' => 'number',
 				'default' => 0
+			),
+			'bpafbUid' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbDisplay' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbOverflow' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbPosition' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerWidthUnit' => array(
+				'type' => 'string',
+				'default' => 'px'
+			),
+			'bpafbContainerMinHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMaxHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBgType' => array(
+				'type' => 'string',
+				'default' => 'color'
+			),
+			'bpafbContainerBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgGradient' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageId' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerBgImageSize' => array(
+				'type' => 'string',
+				'default' => 'cover'
+			),
+			'bpafbContainerOverlayColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBorderStyle' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbContainerBorderWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderRadius' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerHoverBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerHoverShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerHoverShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerHoverShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHideDesktop' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideTablet' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideMobile' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbAnimationType' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbAnimationDuration' => array(
+				'type' => 'number',
+				'default' => 800
+			),
+			'bpafbAnimationDelay' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbAnimationEasing' => array(
+				'type' => 'string',
+				'default' => 'ease'
+			),
+			'bpafbTransformRotate' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformScale' => array(
+				'type' => 'number',
+				'default' => 100
+			),
+			'bpafbTransformTranslateX' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformTranslateY' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHoverAnimation' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbFloatingEffect' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbZIndex' => array(
+				'type' => 'number'
+			),
+			'bpafbHtmlId' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbHtmlClasses' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbCustomCss' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerAlign' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerPaddingTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftMobile' => array(
+				'type' => 'number'
 			)
 		),
 		'supports' => array(
@@ -539,6 +1031,252 @@ return array(
 			'hoverShadowSpread' => array(
 				'type' => 'number',
 				'default' => 0
+			),
+			'bpafbUid' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbDisplay' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbOverflow' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbPosition' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerWidthUnit' => array(
+				'type' => 'string',
+				'default' => 'px'
+			),
+			'bpafbContainerMinHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMaxHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBgType' => array(
+				'type' => 'string',
+				'default' => 'color'
+			),
+			'bpafbContainerBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgGradient' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageId' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerBgImageSize' => array(
+				'type' => 'string',
+				'default' => 'cover'
+			),
+			'bpafbContainerOverlayColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBorderStyle' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbContainerBorderWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderRadius' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerHoverBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerHoverShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerHoverShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerHoverShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHideDesktop' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideTablet' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideMobile' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbAnimationType' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbAnimationDuration' => array(
+				'type' => 'number',
+				'default' => 800
+			),
+			'bpafbAnimationDelay' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbAnimationEasing' => array(
+				'type' => 'string',
+				'default' => 'ease'
+			),
+			'bpafbTransformRotate' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformScale' => array(
+				'type' => 'number',
+				'default' => 100
+			),
+			'bpafbTransformTranslateX' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformTranslateY' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHoverAnimation' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbFloatingEffect' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbZIndex' => array(
+				'type' => 'number'
+			),
+			'bpafbHtmlId' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbHtmlClasses' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbCustomCss' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerAlign' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerPaddingTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftMobile' => array(
+				'type' => 'number'
 			)
 		),
 		'supports' => array(
@@ -662,6 +1400,252 @@ return array(
 			'taxonomy' => array(
 				'type' => 'string',
 				'default' => 'category'
+			),
+			'bpafbUid' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbDisplay' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbOverflow' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbPosition' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerWidthUnit' => array(
+				'type' => 'string',
+				'default' => 'px'
+			),
+			'bpafbContainerMinHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMaxHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBgType' => array(
+				'type' => 'string',
+				'default' => 'color'
+			),
+			'bpafbContainerBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgGradient' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageId' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerBgImageSize' => array(
+				'type' => 'string',
+				'default' => 'cover'
+			),
+			'bpafbContainerOverlayColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBorderStyle' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbContainerBorderWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderRadius' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerHoverBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerHoverShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerHoverShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerHoverShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHideDesktop' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideTablet' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideMobile' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbAnimationType' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbAnimationDuration' => array(
+				'type' => 'number',
+				'default' => 800
+			),
+			'bpafbAnimationDelay' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbAnimationEasing' => array(
+				'type' => 'string',
+				'default' => 'ease'
+			),
+			'bpafbTransformRotate' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformScale' => array(
+				'type' => 'number',
+				'default' => 100
+			),
+			'bpafbTransformTranslateX' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformTranslateY' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHoverAnimation' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbFloatingEffect' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbZIndex' => array(
+				'type' => 'number'
+			),
+			'bpafbHtmlId' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbHtmlClasses' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbCustomCss' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerAlign' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerPaddingTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftMobile' => array(
+				'type' => 'number'
 			)
 		),
 		'render' => 'file:./render.php',
@@ -728,6 +1712,252 @@ return array(
 			),
 			'descriptionColor' => array(
 				'type' => 'string'
+			),
+			'bpafbUid' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbDisplay' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbOverflow' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbPosition' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerWidthUnit' => array(
+				'type' => 'string',
+				'default' => 'px'
+			),
+			'bpafbContainerMinHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMaxHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBgType' => array(
+				'type' => 'string',
+				'default' => 'color'
+			),
+			'bpafbContainerBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgGradient' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageId' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerBgImageSize' => array(
+				'type' => 'string',
+				'default' => 'cover'
+			),
+			'bpafbContainerOverlayColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBorderStyle' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbContainerBorderWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderRadius' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerHoverBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerHoverShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerHoverShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerHoverShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHideDesktop' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideTablet' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideMobile' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbAnimationType' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbAnimationDuration' => array(
+				'type' => 'number',
+				'default' => 800
+			),
+			'bpafbAnimationDelay' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbAnimationEasing' => array(
+				'type' => 'string',
+				'default' => 'ease'
+			),
+			'bpafbTransformRotate' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformScale' => array(
+				'type' => 'number',
+				'default' => 100
+			),
+			'bpafbTransformTranslateX' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformTranslateY' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHoverAnimation' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbFloatingEffect' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbZIndex' => array(
+				'type' => 'number'
+			),
+			'bpafbHtmlId' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbHtmlClasses' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbCustomCss' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerAlign' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerPaddingTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftMobile' => array(
+				'type' => 'number'
 			)
 		),
 		'editorScript' => 'file:./index.js',
@@ -827,6 +2057,252 @@ return array(
 			'animationDelay' => array(
 				'type' => 'string',
 				'default' => '0s'
+			),
+			'bpafbUid' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbDisplay' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbOverflow' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbPosition' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerWidthUnit' => array(
+				'type' => 'string',
+				'default' => 'px'
+			),
+			'bpafbContainerMinHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMaxHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBgType' => array(
+				'type' => 'string',
+				'default' => 'color'
+			),
+			'bpafbContainerBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgGradient' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageId' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerBgImageSize' => array(
+				'type' => 'string',
+				'default' => 'cover'
+			),
+			'bpafbContainerOverlayColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBorderStyle' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbContainerBorderWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderRadius' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerHoverBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerHoverShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerHoverShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerHoverShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHideDesktop' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideTablet' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideMobile' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbAnimationType' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbAnimationDuration' => array(
+				'type' => 'number',
+				'default' => 800
+			),
+			'bpafbAnimationDelay' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbAnimationEasing' => array(
+				'type' => 'string',
+				'default' => 'ease'
+			),
+			'bpafbTransformRotate' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformScale' => array(
+				'type' => 'number',
+				'default' => 100
+			),
+			'bpafbTransformTranslateX' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformTranslateY' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHoverAnimation' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbFloatingEffect' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbZIndex' => array(
+				'type' => 'number'
+			),
+			'bpafbHtmlId' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbHtmlClasses' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbCustomCss' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerAlign' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerPaddingTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftMobile' => array(
+				'type' => 'number'
 			)
 		),
 		'supports' => array(
@@ -971,6 +2447,252 @@ return array(
 			'hoverShadowSpread' => array(
 				'type' => 'number',
 				'default' => 0
+			),
+			'bpafbUid' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbDisplay' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbOverflow' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbPosition' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerWidthUnit' => array(
+				'type' => 'string',
+				'default' => 'px'
+			),
+			'bpafbContainerMinHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMaxHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBgType' => array(
+				'type' => 'string',
+				'default' => 'color'
+			),
+			'bpafbContainerBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgGradient' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageId' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerBgImageSize' => array(
+				'type' => 'string',
+				'default' => 'cover'
+			),
+			'bpafbContainerOverlayColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBorderStyle' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbContainerBorderWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderRadius' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerHoverBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerHoverShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerHoverShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerHoverShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHideDesktop' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideTablet' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideMobile' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbAnimationType' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbAnimationDuration' => array(
+				'type' => 'number',
+				'default' => 800
+			),
+			'bpafbAnimationDelay' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbAnimationEasing' => array(
+				'type' => 'string',
+				'default' => 'ease'
+			),
+			'bpafbTransformRotate' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformScale' => array(
+				'type' => 'number',
+				'default' => 100
+			),
+			'bpafbTransformTranslateX' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformTranslateY' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHoverAnimation' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbFloatingEffect' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbZIndex' => array(
+				'type' => 'number'
+			),
+			'bpafbHtmlId' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbHtmlClasses' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbCustomCss' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerAlign' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerPaddingTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftMobile' => array(
+				'type' => 'number'
 			)
 		),
 		'supports' => array(
@@ -1153,6 +2875,252 @@ return array(
 			'headingColor' => array(
 				'type' => 'string',
 				'default' => '#0f172a'
+			),
+			'bpafbUid' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbDisplay' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbOverflow' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbPosition' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerWidthUnit' => array(
+				'type' => 'string',
+				'default' => 'px'
+			),
+			'bpafbContainerMinHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMaxHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBgType' => array(
+				'type' => 'string',
+				'default' => 'color'
+			),
+			'bpafbContainerBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgGradient' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageId' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerBgImageSize' => array(
+				'type' => 'string',
+				'default' => 'cover'
+			),
+			'bpafbContainerOverlayColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBorderStyle' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbContainerBorderWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderRadius' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerHoverBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerHoverShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerHoverShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerHoverShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHideDesktop' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideTablet' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideMobile' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbAnimationType' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbAnimationDuration' => array(
+				'type' => 'number',
+				'default' => 800
+			),
+			'bpafbAnimationDelay' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbAnimationEasing' => array(
+				'type' => 'string',
+				'default' => 'ease'
+			),
+			'bpafbTransformRotate' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformScale' => array(
+				'type' => 'number',
+				'default' => 100
+			),
+			'bpafbTransformTranslateX' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformTranslateY' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHoverAnimation' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbFloatingEffect' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbZIndex' => array(
+				'type' => 'number'
+			),
+			'bpafbHtmlId' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbHtmlClasses' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbCustomCss' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerAlign' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerPaddingTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftMobile' => array(
+				'type' => 'number'
 			)
 		),
 		'supports' => array(
@@ -1223,6 +3191,252 @@ return array(
 			'gap' => array(
 				'type' => 'number',
 				'default' => 20
+			),
+			'bpafbUid' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbDisplay' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbOverflow' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbPosition' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerWidthUnit' => array(
+				'type' => 'string',
+				'default' => 'px'
+			),
+			'bpafbContainerMinHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMaxHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBgType' => array(
+				'type' => 'string',
+				'default' => 'color'
+			),
+			'bpafbContainerBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgGradient' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageId' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerBgImageSize' => array(
+				'type' => 'string',
+				'default' => 'cover'
+			),
+			'bpafbContainerOverlayColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBorderStyle' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbContainerBorderWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderRadius' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerHoverBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerHoverShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerHoverShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerHoverShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHideDesktop' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideTablet' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideMobile' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbAnimationType' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbAnimationDuration' => array(
+				'type' => 'number',
+				'default' => 800
+			),
+			'bpafbAnimationDelay' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbAnimationEasing' => array(
+				'type' => 'string',
+				'default' => 'ease'
+			),
+			'bpafbTransformRotate' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformScale' => array(
+				'type' => 'number',
+				'default' => 100
+			),
+			'bpafbTransformTranslateX' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformTranslateY' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHoverAnimation' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbFloatingEffect' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbZIndex' => array(
+				'type' => 'number'
+			),
+			'bpafbHtmlId' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbHtmlClasses' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbCustomCss' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerAlign' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerPaddingTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftMobile' => array(
+				'type' => 'number'
 			)
 		),
 		'editorScript' => 'file:./index.js',
@@ -1294,6 +3508,252 @@ return array(
 			'animationDelay' => array(
 				'type' => 'string',
 				'default' => '0s'
+			),
+			'bpafbUid' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbDisplay' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbOverflow' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbPosition' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerWidthUnit' => array(
+				'type' => 'string',
+				'default' => 'px'
+			),
+			'bpafbContainerMinHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMaxHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBgType' => array(
+				'type' => 'string',
+				'default' => 'color'
+			),
+			'bpafbContainerBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgGradient' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageId' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerBgImageSize' => array(
+				'type' => 'string',
+				'default' => 'cover'
+			),
+			'bpafbContainerOverlayColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBorderStyle' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbContainerBorderWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderRadius' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerHoverBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerHoverShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerHoverShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerHoverShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHideDesktop' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideTablet' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideMobile' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbAnimationType' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbAnimationDuration' => array(
+				'type' => 'number',
+				'default' => 800
+			),
+			'bpafbAnimationDelay' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbAnimationEasing' => array(
+				'type' => 'string',
+				'default' => 'ease'
+			),
+			'bpafbTransformRotate' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformScale' => array(
+				'type' => 'number',
+				'default' => 100
+			),
+			'bpafbTransformTranslateX' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformTranslateY' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHoverAnimation' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbFloatingEffect' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbZIndex' => array(
+				'type' => 'number'
+			),
+			'bpafbHtmlId' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbHtmlClasses' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbCustomCss' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerAlign' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerPaddingTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftMobile' => array(
+				'type' => 'number'
 			)
 		),
 		'supports' => array(
@@ -1540,6 +4000,252 @@ return array(
 			'hoverShadowSpread' => array(
 				'type' => 'number',
 				'default' => 0
+			),
+			'bpafbUid' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbDisplay' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbOverflow' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbPosition' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerWidthUnit' => array(
+				'type' => 'string',
+				'default' => 'px'
+			),
+			'bpafbContainerMinHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMaxHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBgType' => array(
+				'type' => 'string',
+				'default' => 'color'
+			),
+			'bpafbContainerBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgGradient' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageId' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerBgImageSize' => array(
+				'type' => 'string',
+				'default' => 'cover'
+			),
+			'bpafbContainerOverlayColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBorderStyle' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbContainerBorderWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderRadius' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerHoverBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerHoverShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerHoverShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerHoverShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHideDesktop' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideTablet' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideMobile' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbAnimationType' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbAnimationDuration' => array(
+				'type' => 'number',
+				'default' => 800
+			),
+			'bpafbAnimationDelay' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbAnimationEasing' => array(
+				'type' => 'string',
+				'default' => 'ease'
+			),
+			'bpafbTransformRotate' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformScale' => array(
+				'type' => 'number',
+				'default' => 100
+			),
+			'bpafbTransformTranslateX' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformTranslateY' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHoverAnimation' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbFloatingEffect' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbZIndex' => array(
+				'type' => 'number'
+			),
+			'bpafbHtmlId' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbHtmlClasses' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbCustomCss' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerAlign' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerPaddingTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftMobile' => array(
+				'type' => 'number'
 			)
 		),
 		'supports' => array(
@@ -1616,6 +4322,252 @@ return array(
 			'showContent' => array(
 				'type' => 'boolean',
 				'default' => true
+			),
+			'bpafbUid' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbDisplay' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbOverflow' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbPosition' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerWidthUnit' => array(
+				'type' => 'string',
+				'default' => 'px'
+			),
+			'bpafbContainerMinHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMaxHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBgType' => array(
+				'type' => 'string',
+				'default' => 'color'
+			),
+			'bpafbContainerBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgGradient' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageId' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerBgImageSize' => array(
+				'type' => 'string',
+				'default' => 'cover'
+			),
+			'bpafbContainerOverlayColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBorderStyle' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbContainerBorderWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderRadius' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerHoverBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerHoverShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerHoverShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerHoverShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHideDesktop' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideTablet' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideMobile' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbAnimationType' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbAnimationDuration' => array(
+				'type' => 'number',
+				'default' => 800
+			),
+			'bpafbAnimationDelay' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbAnimationEasing' => array(
+				'type' => 'string',
+				'default' => 'ease'
+			),
+			'bpafbTransformRotate' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformScale' => array(
+				'type' => 'number',
+				'default' => 100
+			),
+			'bpafbTransformTranslateX' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformTranslateY' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHoverAnimation' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbFloatingEffect' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbZIndex' => array(
+				'type' => 'number'
+			),
+			'bpafbHtmlId' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbHtmlClasses' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbCustomCss' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerAlign' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerPaddingTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftMobile' => array(
+				'type' => 'number'
 			)
 		),
 		'editorScript' => 'file:./index.js',
@@ -1723,6 +4675,252 @@ return array(
 			'imageSpacing' => array(
 				'type' => 'number',
 				'default' => 20
+			),
+			'bpafbUid' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbDisplay' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbOverflow' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbPosition' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerWidthUnit' => array(
+				'type' => 'string',
+				'default' => 'px'
+			),
+			'bpafbContainerMinHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMaxHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBgType' => array(
+				'type' => 'string',
+				'default' => 'color'
+			),
+			'bpafbContainerBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgGradient' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageId' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerBgImageSize' => array(
+				'type' => 'string',
+				'default' => 'cover'
+			),
+			'bpafbContainerOverlayColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBorderStyle' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbContainerBorderWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderRadius' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerHoverBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerHoverShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerHoverShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerHoverShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHideDesktop' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideTablet' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideMobile' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbAnimationType' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbAnimationDuration' => array(
+				'type' => 'number',
+				'default' => 800
+			),
+			'bpafbAnimationDelay' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbAnimationEasing' => array(
+				'type' => 'string',
+				'default' => 'ease'
+			),
+			'bpafbTransformRotate' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformScale' => array(
+				'type' => 'number',
+				'default' => 100
+			),
+			'bpafbTransformTranslateX' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformTranslateY' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHoverAnimation' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbFloatingEffect' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbZIndex' => array(
+				'type' => 'number'
+			),
+			'bpafbHtmlId' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbHtmlClasses' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbCustomCss' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerAlign' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerPaddingTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftMobile' => array(
+				'type' => 'number'
 			)
 		),
 		'supports' => array(
@@ -1827,6 +5025,252 @@ return array(
 			'height' => array(
 				'type' => 'string',
 				'default' => ''
+			),
+			'bpafbUid' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbDisplay' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbOverflow' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbPosition' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerWidthUnit' => array(
+				'type' => 'string',
+				'default' => 'px'
+			),
+			'bpafbContainerMinHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMaxHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBgType' => array(
+				'type' => 'string',
+				'default' => 'color'
+			),
+			'bpafbContainerBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgGradient' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageId' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerBgImageSize' => array(
+				'type' => 'string',
+				'default' => 'cover'
+			),
+			'bpafbContainerOverlayColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBorderStyle' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbContainerBorderWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderRadius' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerHoverBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerHoverShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerHoverShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerHoverShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHideDesktop' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideTablet' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideMobile' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbAnimationType' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbAnimationDuration' => array(
+				'type' => 'number',
+				'default' => 800
+			),
+			'bpafbAnimationDelay' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbAnimationEasing' => array(
+				'type' => 'string',
+				'default' => 'ease'
+			),
+			'bpafbTransformRotate' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformScale' => array(
+				'type' => 'number',
+				'default' => 100
+			),
+			'bpafbTransformTranslateX' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformTranslateY' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHoverAnimation' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbFloatingEffect' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbZIndex' => array(
+				'type' => 'number'
+			),
+			'bpafbHtmlId' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbHtmlClasses' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbCustomCss' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerAlign' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerPaddingTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftMobile' => array(
+				'type' => 'number'
 			)
 		),
 		'editorScript' => 'file:./index.js',
@@ -1869,6 +5313,252 @@ return array(
 			'linkTarget' => array(
 				'type' => 'boolean',
 				'default' => false
+			),
+			'bpafbUid' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbDisplay' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbOverflow' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbPosition' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerWidthUnit' => array(
+				'type' => 'string',
+				'default' => 'px'
+			),
+			'bpafbContainerMinHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMaxHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBgType' => array(
+				'type' => 'string',
+				'default' => 'color'
+			),
+			'bpafbContainerBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgGradient' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageId' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerBgImageSize' => array(
+				'type' => 'string',
+				'default' => 'cover'
+			),
+			'bpafbContainerOverlayColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBorderStyle' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbContainerBorderWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderRadius' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerHoverBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerHoverShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerHoverShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerHoverShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHideDesktop' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideTablet' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideMobile' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbAnimationType' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbAnimationDuration' => array(
+				'type' => 'number',
+				'default' => 800
+			),
+			'bpafbAnimationDelay' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbAnimationEasing' => array(
+				'type' => 'string',
+				'default' => 'ease'
+			),
+			'bpafbTransformRotate' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformScale' => array(
+				'type' => 'number',
+				'default' => 100
+			),
+			'bpafbTransformTranslateX' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformTranslateY' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHoverAnimation' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbFloatingEffect' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbZIndex' => array(
+				'type' => 'number'
+			),
+			'bpafbHtmlId' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbHtmlClasses' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbCustomCss' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerAlign' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerPaddingTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftMobile' => array(
+				'type' => 'number'
 			)
 		),
 		'editorScript' => 'file:./index.js',
@@ -1980,6 +5670,252 @@ return array(
 			'formGap' => array(
 				'type' => 'number',
 				'default' => 0
+			),
+			'bpafbUid' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbDisplay' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbOverflow' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbPosition' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerWidthUnit' => array(
+				'type' => 'string',
+				'default' => 'px'
+			),
+			'bpafbContainerMinHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMaxHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBgType' => array(
+				'type' => 'string',
+				'default' => 'color'
+			),
+			'bpafbContainerBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgGradient' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageId' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerBgImageSize' => array(
+				'type' => 'string',
+				'default' => 'cover'
+			),
+			'bpafbContainerOverlayColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBorderStyle' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbContainerBorderWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderRadius' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerHoverBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerHoverShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerHoverShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerHoverShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHideDesktop' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideTablet' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideMobile' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbAnimationType' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbAnimationDuration' => array(
+				'type' => 'number',
+				'default' => 800
+			),
+			'bpafbAnimationDelay' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbAnimationEasing' => array(
+				'type' => 'string',
+				'default' => 'ease'
+			),
+			'bpafbTransformRotate' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformScale' => array(
+				'type' => 'number',
+				'default' => 100
+			),
+			'bpafbTransformTranslateX' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformTranslateY' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHoverAnimation' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbFloatingEffect' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbZIndex' => array(
+				'type' => 'number'
+			),
+			'bpafbHtmlId' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbHtmlClasses' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbCustomCss' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerAlign' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerPaddingTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftMobile' => array(
+				'type' => 'number'
 			)
 		),
 		'editorScript' => 'file:./index.js',
@@ -2045,6 +5981,252 @@ return array(
 			'alignment' => array(
 				'type' => 'string',
 				'default' => 'center'
+			),
+			'bpafbUid' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbDisplay' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbOverflow' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbPosition' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerWidthUnit' => array(
+				'type' => 'string',
+				'default' => 'px'
+			),
+			'bpafbContainerMinHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMaxHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBgType' => array(
+				'type' => 'string',
+				'default' => 'color'
+			),
+			'bpafbContainerBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgGradient' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageId' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerBgImageSize' => array(
+				'type' => 'string',
+				'default' => 'cover'
+			),
+			'bpafbContainerOverlayColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBorderStyle' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbContainerBorderWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderRadius' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerHoverBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerHoverShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerHoverShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerHoverShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHideDesktop' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideTablet' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideMobile' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbAnimationType' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbAnimationDuration' => array(
+				'type' => 'number',
+				'default' => 800
+			),
+			'bpafbAnimationDelay' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbAnimationEasing' => array(
+				'type' => 'string',
+				'default' => 'ease'
+			),
+			'bpafbTransformRotate' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformScale' => array(
+				'type' => 'number',
+				'default' => 100
+			),
+			'bpafbTransformTranslateX' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformTranslateY' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHoverAnimation' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbFloatingEffect' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbZIndex' => array(
+				'type' => 'number'
+			),
+			'bpafbHtmlId' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbHtmlClasses' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbCustomCss' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerAlign' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerPaddingTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftMobile' => array(
+				'type' => 'number'
 			)
 		),
 		'supports' => array(
@@ -2164,6 +6346,252 @@ return array(
 			'cardBorderStyle' => array(
 				'type' => 'string',
 				'default' => 'none'
+			),
+			'bpafbUid' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbDisplay' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbOverflow' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbPosition' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerWidthUnit' => array(
+				'type' => 'string',
+				'default' => 'px'
+			),
+			'bpafbContainerMinHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMaxHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBgType' => array(
+				'type' => 'string',
+				'default' => 'color'
+			),
+			'bpafbContainerBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgGradient' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageId' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerBgImageSize' => array(
+				'type' => 'string',
+				'default' => 'cover'
+			),
+			'bpafbContainerOverlayColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBorderStyle' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbContainerBorderWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderRadius' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerHoverBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerHoverShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerHoverShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerHoverShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHideDesktop' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideTablet' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideMobile' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbAnimationType' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbAnimationDuration' => array(
+				'type' => 'number',
+				'default' => 800
+			),
+			'bpafbAnimationDelay' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbAnimationEasing' => array(
+				'type' => 'string',
+				'default' => 'ease'
+			),
+			'bpafbTransformRotate' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformScale' => array(
+				'type' => 'number',
+				'default' => 100
+			),
+			'bpafbTransformTranslateX' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformTranslateY' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHoverAnimation' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbFloatingEffect' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbZIndex' => array(
+				'type' => 'number'
+			),
+			'bpafbHtmlId' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbHtmlClasses' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbCustomCss' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerAlign' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerPaddingTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftMobile' => array(
+				'type' => 'number'
 			)
 		),
 		'render' => 'file:./render.php',
@@ -2306,6 +6734,252 @@ return array(
 			'boxShadow' => array(
 				'type' => 'boolean',
 				'default' => true
+			),
+			'bpafbUid' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbDisplay' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbOverflow' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbPosition' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerWidthUnit' => array(
+				'type' => 'string',
+				'default' => 'px'
+			),
+			'bpafbContainerMinHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMaxHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBgType' => array(
+				'type' => 'string',
+				'default' => 'color'
+			),
+			'bpafbContainerBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgGradient' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageId' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerBgImageSize' => array(
+				'type' => 'string',
+				'default' => 'cover'
+			),
+			'bpafbContainerOverlayColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBorderStyle' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbContainerBorderWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderRadius' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerHoverBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerHoverShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerHoverShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerHoverShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHideDesktop' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideTablet' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideMobile' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbAnimationType' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbAnimationDuration' => array(
+				'type' => 'number',
+				'default' => 800
+			),
+			'bpafbAnimationDelay' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbAnimationEasing' => array(
+				'type' => 'string',
+				'default' => 'ease'
+			),
+			'bpafbTransformRotate' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformScale' => array(
+				'type' => 'number',
+				'default' => 100
+			),
+			'bpafbTransformTranslateX' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformTranslateY' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHoverAnimation' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbFloatingEffect' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbZIndex' => array(
+				'type' => 'number'
+			),
+			'bpafbHtmlId' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbHtmlClasses' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbCustomCss' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerAlign' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerPaddingTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftMobile' => array(
+				'type' => 'number'
 			)
 		),
 		'supports' => array(
@@ -2403,6 +7077,252 @@ return array(
 			'alignment' => array(
 				'type' => 'string',
 				'default' => 'left'
+			),
+			'bpafbUid' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbDisplay' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbOverflow' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbPosition' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerWidthUnit' => array(
+				'type' => 'string',
+				'default' => 'px'
+			),
+			'bpafbContainerMinHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMaxHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBgType' => array(
+				'type' => 'string',
+				'default' => 'color'
+			),
+			'bpafbContainerBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgGradient' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageId' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerBgImageSize' => array(
+				'type' => 'string',
+				'default' => 'cover'
+			),
+			'bpafbContainerOverlayColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBorderStyle' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbContainerBorderWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderRadius' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerHoverBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerHoverShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerHoverShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerHoverShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHideDesktop' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideTablet' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideMobile' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbAnimationType' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbAnimationDuration' => array(
+				'type' => 'number',
+				'default' => 800
+			),
+			'bpafbAnimationDelay' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbAnimationEasing' => array(
+				'type' => 'string',
+				'default' => 'ease'
+			),
+			'bpafbTransformRotate' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformScale' => array(
+				'type' => 'number',
+				'default' => 100
+			),
+			'bpafbTransformTranslateX' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformTranslateY' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHoverAnimation' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbFloatingEffect' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbZIndex' => array(
+				'type' => 'number'
+			),
+			'bpafbHtmlId' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbHtmlClasses' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbCustomCss' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerAlign' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerPaddingTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftMobile' => array(
+				'type' => 'number'
 			)
 		),
 		'supports' => array(
@@ -2497,6 +7417,252 @@ return array(
 			'hoverAnimation' => array(
 				'type' => 'string',
 				'default' => 'none'
+			),
+			'bpafbUid' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbDisplay' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbOverflow' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbPosition' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerWidthUnit' => array(
+				'type' => 'string',
+				'default' => 'px'
+			),
+			'bpafbContainerMinHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMaxHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBgType' => array(
+				'type' => 'string',
+				'default' => 'color'
+			),
+			'bpafbContainerBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgGradient' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageId' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerBgImageSize' => array(
+				'type' => 'string',
+				'default' => 'cover'
+			),
+			'bpafbContainerOverlayColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBorderStyle' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbContainerBorderWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderRadius' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerHoverBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerHoverShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerHoverShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerHoverShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHideDesktop' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideTablet' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideMobile' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbAnimationType' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbAnimationDuration' => array(
+				'type' => 'number',
+				'default' => 800
+			),
+			'bpafbAnimationDelay' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbAnimationEasing' => array(
+				'type' => 'string',
+				'default' => 'ease'
+			),
+			'bpafbTransformRotate' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformScale' => array(
+				'type' => 'number',
+				'default' => 100
+			),
+			'bpafbTransformTranslateX' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformTranslateY' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHoverAnimation' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbFloatingEffect' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbZIndex' => array(
+				'type' => 'number'
+			),
+			'bpafbHtmlId' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbHtmlClasses' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbCustomCss' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerAlign' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerPaddingTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftMobile' => array(
+				'type' => 'number'
 			)
 		),
 		'supports' => array(
@@ -2541,6 +7707,252 @@ return array(
 			'showReviewsTab' => array(
 				'type' => 'boolean',
 				'default' => true
+			),
+			'bpafbUid' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbDisplay' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbOverflow' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbPosition' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerWidthUnit' => array(
+				'type' => 'string',
+				'default' => 'px'
+			),
+			'bpafbContainerMinHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMaxHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBgType' => array(
+				'type' => 'string',
+				'default' => 'color'
+			),
+			'bpafbContainerBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgGradient' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageId' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerBgImageSize' => array(
+				'type' => 'string',
+				'default' => 'cover'
+			),
+			'bpafbContainerOverlayColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBorderStyle' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbContainerBorderWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderRadius' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerHoverBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerHoverShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerHoverShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerHoverShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHideDesktop' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideTablet' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideMobile' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbAnimationType' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbAnimationDuration' => array(
+				'type' => 'number',
+				'default' => 800
+			),
+			'bpafbAnimationDelay' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbAnimationEasing' => array(
+				'type' => 'string',
+				'default' => 'ease'
+			),
+			'bpafbTransformRotate' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformScale' => array(
+				'type' => 'number',
+				'default' => 100
+			),
+			'bpafbTransformTranslateX' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformTranslateY' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHoverAnimation' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbFloatingEffect' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbZIndex' => array(
+				'type' => 'number'
+			),
+			'bpafbHtmlId' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbHtmlClasses' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbCustomCss' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerAlign' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerPaddingTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftMobile' => array(
+				'type' => 'number'
 			)
 		),
 		'supports' => array(
@@ -2678,6 +8090,252 @@ return array(
 			'boxShadowColor' => array(
 				'type' => 'string',
 				'default' => 'rgba(0, 0, 0, 0.1)'
+			),
+			'bpafbUid' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbDisplay' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbOverflow' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbPosition' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerWidthUnit' => array(
+				'type' => 'string',
+				'default' => 'px'
+			),
+			'bpafbContainerMinHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMaxHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBgType' => array(
+				'type' => 'string',
+				'default' => 'color'
+			),
+			'bpafbContainerBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgGradient' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageId' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerBgImageSize' => array(
+				'type' => 'string',
+				'default' => 'cover'
+			),
+			'bpafbContainerOverlayColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBorderStyle' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbContainerBorderWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderRadius' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerHoverBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerHoverShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerHoverShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerHoverShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHideDesktop' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideTablet' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideMobile' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbAnimationType' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbAnimationDuration' => array(
+				'type' => 'number',
+				'default' => 800
+			),
+			'bpafbAnimationDelay' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbAnimationEasing' => array(
+				'type' => 'string',
+				'default' => 'ease'
+			),
+			'bpafbTransformRotate' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformScale' => array(
+				'type' => 'number',
+				'default' => 100
+			),
+			'bpafbTransformTranslateX' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformTranslateY' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHoverAnimation' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbFloatingEffect' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbZIndex' => array(
+				'type' => 'number'
+			),
+			'bpafbHtmlId' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbHtmlClasses' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbCustomCss' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerAlign' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerPaddingTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftMobile' => array(
+				'type' => 'number'
 			)
 		),
 		'editorScript' => 'file:./index.js',
@@ -2841,6 +8499,252 @@ return array(
 			'boxShadowColor' => array(
 				'type' => 'string',
 				'default' => 'rgba(0, 0, 0, 0.1)'
+			),
+			'bpafbUid' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbDisplay' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbOverflow' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbPosition' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerWidthUnit' => array(
+				'type' => 'string',
+				'default' => 'px'
+			),
+			'bpafbContainerMinHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMaxHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBgType' => array(
+				'type' => 'string',
+				'default' => 'color'
+			),
+			'bpafbContainerBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgGradient' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageId' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerBgImageSize' => array(
+				'type' => 'string',
+				'default' => 'cover'
+			),
+			'bpafbContainerOverlayColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBorderStyle' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbContainerBorderWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderRadius' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerHoverBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerHoverShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerHoverShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerHoverShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHideDesktop' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideTablet' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideMobile' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbAnimationType' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbAnimationDuration' => array(
+				'type' => 'number',
+				'default' => 800
+			),
+			'bpafbAnimationDelay' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbAnimationEasing' => array(
+				'type' => 'string',
+				'default' => 'ease'
+			),
+			'bpafbTransformRotate' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformScale' => array(
+				'type' => 'number',
+				'default' => 100
+			),
+			'bpafbTransformTranslateX' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformTranslateY' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHoverAnimation' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbFloatingEffect' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbZIndex' => array(
+				'type' => 'number'
+			),
+			'bpafbHtmlId' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbHtmlClasses' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbCustomCss' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerAlign' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerPaddingTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftMobile' => array(
+				'type' => 'number'
 			)
 		),
 		'editorScript' => 'file:./index.js',
@@ -2884,6 +8788,252 @@ return array(
 			'loop' => array(
 				'type' => 'boolean',
 				'default' => false
+			),
+			'bpafbUid' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbDisplay' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbOverflow' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbPosition' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerWidthUnit' => array(
+				'type' => 'string',
+				'default' => 'px'
+			),
+			'bpafbContainerMinHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMaxHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBgType' => array(
+				'type' => 'string',
+				'default' => 'color'
+			),
+			'bpafbContainerBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgGradient' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageId' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerBgImageSize' => array(
+				'type' => 'string',
+				'default' => 'cover'
+			),
+			'bpafbContainerOverlayColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBorderStyle' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbContainerBorderWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderRadius' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerHoverBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerHoverShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerHoverShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerHoverShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHideDesktop' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideTablet' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideMobile' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbAnimationType' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbAnimationDuration' => array(
+				'type' => 'number',
+				'default' => 800
+			),
+			'bpafbAnimationDelay' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbAnimationEasing' => array(
+				'type' => 'string',
+				'default' => 'ease'
+			),
+			'bpafbTransformRotate' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformScale' => array(
+				'type' => 'number',
+				'default' => 100
+			),
+			'bpafbTransformTranslateX' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformTranslateY' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHoverAnimation' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbFloatingEffect' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbZIndex' => array(
+				'type' => 'number'
+			),
+			'bpafbHtmlId' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbHtmlClasses' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbCustomCss' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerAlign' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerPaddingTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftMobile' => array(
+				'type' => 'number'
 			)
 		),
 		'editorScript' => 'file:./index.js',
@@ -2951,6 +9101,252 @@ return array(
 			'textHoverColor' => array(
 				'type' => 'string',
 				'default' => ''
+			),
+			'bpafbUid' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbDisplay' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbOverflow' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbPosition' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerWidthUnit' => array(
+				'type' => 'string',
+				'default' => 'px'
+			),
+			'bpafbContainerMinHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMaxHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBgType' => array(
+				'type' => 'string',
+				'default' => 'color'
+			),
+			'bpafbContainerBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgGradient' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageId' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerBgImageSize' => array(
+				'type' => 'string',
+				'default' => 'cover'
+			),
+			'bpafbContainerOverlayColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBorderStyle' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbContainerBorderWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderRadius' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerHoverBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerHoverShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerHoverShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerHoverShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHideDesktop' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideTablet' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideMobile' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbAnimationType' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbAnimationDuration' => array(
+				'type' => 'number',
+				'default' => 800
+			),
+			'bpafbAnimationDelay' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbAnimationEasing' => array(
+				'type' => 'string',
+				'default' => 'ease'
+			),
+			'bpafbTransformRotate' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformScale' => array(
+				'type' => 'number',
+				'default' => 100
+			),
+			'bpafbTransformTranslateX' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformTranslateY' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHoverAnimation' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbFloatingEffect' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbZIndex' => array(
+				'type' => 'number'
+			),
+			'bpafbHtmlId' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbHtmlClasses' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbCustomCss' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerAlign' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerPaddingTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftMobile' => array(
+				'type' => 'number'
 			)
 		),
 		'supports' => array(
@@ -3008,6 +9404,252 @@ return array(
 			'icon' => array(
 				'type' => 'string',
 				'default' => 'fa-solid fa-ticket'
+			),
+			'bpafbUid' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbDisplay' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbOverflow' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbPosition' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerWidthUnit' => array(
+				'type' => 'string',
+				'default' => 'px'
+			),
+			'bpafbContainerMinHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMaxHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBgType' => array(
+				'type' => 'string',
+				'default' => 'color'
+			),
+			'bpafbContainerBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgGradient' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageId' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerBgImageSize' => array(
+				'type' => 'string',
+				'default' => 'cover'
+			),
+			'bpafbContainerOverlayColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBorderStyle' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbContainerBorderWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderRadius' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerHoverBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerHoverShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerHoverShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerHoverShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHideDesktop' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideTablet' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideMobile' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbAnimationType' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbAnimationDuration' => array(
+				'type' => 'number',
+				'default' => 800
+			),
+			'bpafbAnimationDelay' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbAnimationEasing' => array(
+				'type' => 'string',
+				'default' => 'ease'
+			),
+			'bpafbTransformRotate' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformScale' => array(
+				'type' => 'number',
+				'default' => 100
+			),
+			'bpafbTransformTranslateX' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformTranslateY' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHoverAnimation' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbFloatingEffect' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbZIndex' => array(
+				'type' => 'number'
+			),
+			'bpafbHtmlId' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbHtmlClasses' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbCustomCss' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerAlign' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerPaddingTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftMobile' => array(
+				'type' => 'number'
 			)
 		),
 		'supports' => array(
@@ -3070,6 +9712,252 @@ return array(
 			'dateRangeSeparator' => array(
 				'type' => 'string',
 				'default' => ' - '
+			),
+			'bpafbUid' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbDisplay' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbOverflow' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbPosition' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerWidthUnit' => array(
+				'type' => 'string',
+				'default' => 'px'
+			),
+			'bpafbContainerMinHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMaxHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBgType' => array(
+				'type' => 'string',
+				'default' => 'color'
+			),
+			'bpafbContainerBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgGradient' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageId' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerBgImageSize' => array(
+				'type' => 'string',
+				'default' => 'cover'
+			),
+			'bpafbContainerOverlayColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBorderStyle' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbContainerBorderWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderRadius' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerHoverBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerHoverShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerHoverShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerHoverShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHideDesktop' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideTablet' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideMobile' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbAnimationType' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbAnimationDuration' => array(
+				'type' => 'number',
+				'default' => 800
+			),
+			'bpafbAnimationDelay' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbAnimationEasing' => array(
+				'type' => 'string',
+				'default' => 'ease'
+			),
+			'bpafbTransformRotate' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformScale' => array(
+				'type' => 'number',
+				'default' => 100
+			),
+			'bpafbTransformTranslateX' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformTranslateY' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHoverAnimation' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbFloatingEffect' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbZIndex' => array(
+				'type' => 'number'
+			),
+			'bpafbHtmlId' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbHtmlClasses' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbCustomCss' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerAlign' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerPaddingTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftMobile' => array(
+				'type' => 'number'
 			)
 		),
 		'supports' => array(
@@ -3136,6 +10024,252 @@ return array(
 			'textHoverColor' => array(
 				'type' => 'string',
 				'default' => ''
+			),
+			'bpafbUid' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbDisplay' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbOverflow' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbPosition' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerWidthUnit' => array(
+				'type' => 'string',
+				'default' => 'px'
+			),
+			'bpafbContainerMinHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMaxHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBgType' => array(
+				'type' => 'string',
+				'default' => 'color'
+			),
+			'bpafbContainerBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgGradient' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageId' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerBgImageSize' => array(
+				'type' => 'string',
+				'default' => 'cover'
+			),
+			'bpafbContainerOverlayColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBorderStyle' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbContainerBorderWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderRadius' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerHoverBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerHoverShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerHoverShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerHoverShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHideDesktop' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideTablet' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideMobile' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbAnimationType' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbAnimationDuration' => array(
+				'type' => 'number',
+				'default' => 800
+			),
+			'bpafbAnimationDelay' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbAnimationEasing' => array(
+				'type' => 'string',
+				'default' => 'ease'
+			),
+			'bpafbTransformRotate' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformScale' => array(
+				'type' => 'number',
+				'default' => 100
+			),
+			'bpafbTransformTranslateX' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformTranslateY' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHoverAnimation' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbFloatingEffect' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbZIndex' => array(
+				'type' => 'number'
+			),
+			'bpafbHtmlId' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbHtmlClasses' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbCustomCss' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerAlign' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerPaddingTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftMobile' => array(
+				'type' => 'number'
 			)
 		),
 		'supports' => array(
@@ -3217,6 +10351,252 @@ return array(
 			'hoverEffect' => array(
 				'type' => 'string',
 				'default' => 'none'
+			),
+			'bpafbUid' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbDisplay' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbOverflow' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbPosition' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerWidthUnit' => array(
+				'type' => 'string',
+				'default' => 'px'
+			),
+			'bpafbContainerMinHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMaxHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBgType' => array(
+				'type' => 'string',
+				'default' => 'color'
+			),
+			'bpafbContainerBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgGradient' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageId' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerBgImageSize' => array(
+				'type' => 'string',
+				'default' => 'cover'
+			),
+			'bpafbContainerOverlayColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBorderStyle' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbContainerBorderWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderRadius' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerHoverBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerHoverShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerHoverShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerHoverShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHideDesktop' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideTablet' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideMobile' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbAnimationType' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbAnimationDuration' => array(
+				'type' => 'number',
+				'default' => 800
+			),
+			'bpafbAnimationDelay' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbAnimationEasing' => array(
+				'type' => 'string',
+				'default' => 'ease'
+			),
+			'bpafbTransformRotate' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformScale' => array(
+				'type' => 'number',
+				'default' => 100
+			),
+			'bpafbTransformTranslateX' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformTranslateY' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHoverAnimation' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbFloatingEffect' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbZIndex' => array(
+				'type' => 'number'
+			),
+			'bpafbHtmlId' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbHtmlClasses' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbCustomCss' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerAlign' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerPaddingTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftMobile' => array(
+				'type' => 'number'
 			)
 		),
 		'supports' => array(
@@ -3254,6 +10634,252 @@ return array(
 			'height' => array(
 				'type' => 'number',
 				'default' => 300
+			),
+			'bpafbUid' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbDisplay' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbOverflow' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbPosition' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerWidthUnit' => array(
+				'type' => 'string',
+				'default' => 'px'
+			),
+			'bpafbContainerMinHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMaxHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBgType' => array(
+				'type' => 'string',
+				'default' => 'color'
+			),
+			'bpafbContainerBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgGradient' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageId' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerBgImageSize' => array(
+				'type' => 'string',
+				'default' => 'cover'
+			),
+			'bpafbContainerOverlayColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBorderStyle' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbContainerBorderWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderRadius' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerHoverBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerHoverShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerHoverShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerHoverShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHideDesktop' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideTablet' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideMobile' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbAnimationType' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbAnimationDuration' => array(
+				'type' => 'number',
+				'default' => 800
+			),
+			'bpafbAnimationDelay' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbAnimationEasing' => array(
+				'type' => 'string',
+				'default' => 'ease'
+			),
+			'bpafbTransformRotate' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformScale' => array(
+				'type' => 'number',
+				'default' => 100
+			),
+			'bpafbTransformTranslateX' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformTranslateY' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHoverAnimation' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbFloatingEffect' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbZIndex' => array(
+				'type' => 'number'
+			),
+			'bpafbHtmlId' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbHtmlClasses' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbCustomCss' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerAlign' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerPaddingTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftMobile' => array(
+				'type' => 'number'
 			)
 		),
 		'supports' => array(
@@ -3296,6 +10922,252 @@ return array(
 			'icon' => array(
 				'type' => 'string',
 				'default' => 'fa-regular fa-address-card'
+			),
+			'bpafbUid' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbDisplay' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbOverflow' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbPosition' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerWidthUnit' => array(
+				'type' => 'string',
+				'default' => 'px'
+			),
+			'bpafbContainerMinHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMaxHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBgType' => array(
+				'type' => 'string',
+				'default' => 'color'
+			),
+			'bpafbContainerBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgGradient' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageId' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerBgImageSize' => array(
+				'type' => 'string',
+				'default' => 'cover'
+			),
+			'bpafbContainerOverlayColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBorderStyle' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbContainerBorderWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderRadius' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerHoverBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerHoverShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerHoverShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerHoverShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHideDesktop' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideTablet' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideMobile' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbAnimationType' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbAnimationDuration' => array(
+				'type' => 'number',
+				'default' => 800
+			),
+			'bpafbAnimationDelay' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbAnimationEasing' => array(
+				'type' => 'string',
+				'default' => 'ease'
+			),
+			'bpafbTransformRotate' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformScale' => array(
+				'type' => 'number',
+				'default' => 100
+			),
+			'bpafbTransformTranslateX' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformTranslateY' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHoverAnimation' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbFloatingEffect' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbZIndex' => array(
+				'type' => 'number'
+			),
+			'bpafbHtmlId' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbHtmlClasses' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbCustomCss' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerAlign' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerPaddingTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftMobile' => array(
+				'type' => 'number'
 			)
 		),
 		'supports' => array(
@@ -3371,6 +11243,252 @@ return array(
 			'textHoverColor' => array(
 				'type' => 'string',
 				'default' => ''
+			),
+			'bpafbUid' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbDisplay' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbOverflow' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbPosition' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerWidthUnit' => array(
+				'type' => 'string',
+				'default' => 'px'
+			),
+			'bpafbContainerMinHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMaxHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBgType' => array(
+				'type' => 'string',
+				'default' => 'color'
+			),
+			'bpafbContainerBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgGradient' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageId' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerBgImageSize' => array(
+				'type' => 'string',
+				'default' => 'cover'
+			),
+			'bpafbContainerOverlayColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBorderStyle' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbContainerBorderWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderRadius' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerHoverBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerHoverShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerHoverShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerHoverShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHideDesktop' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideTablet' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideMobile' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbAnimationType' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbAnimationDuration' => array(
+				'type' => 'number',
+				'default' => 800
+			),
+			'bpafbAnimationDelay' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbAnimationEasing' => array(
+				'type' => 'string',
+				'default' => 'ease'
+			),
+			'bpafbTransformRotate' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformScale' => array(
+				'type' => 'number',
+				'default' => 100
+			),
+			'bpafbTransformTranslateX' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformTranslateY' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHoverAnimation' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbFloatingEffect' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbZIndex' => array(
+				'type' => 'number'
+			),
+			'bpafbHtmlId' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbHtmlClasses' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbCustomCss' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerAlign' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerPaddingTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftMobile' => array(
+				'type' => 'number'
 			)
 		),
 		'supports' => array(
@@ -3421,6 +11539,252 @@ return array(
 			'icon' => array(
 				'type' => 'string',
 				'default' => 'fa-regular fa-clock'
+			),
+			'bpafbUid' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbDisplay' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbOverflow' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbPosition' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerWidthUnit' => array(
+				'type' => 'string',
+				'default' => 'px'
+			),
+			'bpafbContainerMinHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMaxHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBgType' => array(
+				'type' => 'string',
+				'default' => 'color'
+			),
+			'bpafbContainerBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgGradient' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageId' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerBgImageSize' => array(
+				'type' => 'string',
+				'default' => 'cover'
+			),
+			'bpafbContainerOverlayColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBorderStyle' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbContainerBorderWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderRadius' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerHoverBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerHoverShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerHoverShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerHoverShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHideDesktop' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideTablet' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideMobile' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbAnimationType' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbAnimationDuration' => array(
+				'type' => 'number',
+				'default' => 800
+			),
+			'bpafbAnimationDelay' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbAnimationEasing' => array(
+				'type' => 'string',
+				'default' => 'ease'
+			),
+			'bpafbTransformRotate' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformScale' => array(
+				'type' => 'number',
+				'default' => 100
+			),
+			'bpafbTransformTranslateX' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformTranslateY' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHoverAnimation' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbFloatingEffect' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbZIndex' => array(
+				'type' => 'number'
+			),
+			'bpafbHtmlId' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbHtmlClasses' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbCustomCss' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerAlign' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerPaddingTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftMobile' => array(
+				'type' => 'number'
 			)
 		),
 		'supports' => array(
@@ -3471,6 +11835,252 @@ return array(
 			'icon' => array(
 				'type' => 'string',
 				'default' => 'fa-solid fa-location-dot'
+			),
+			'bpafbUid' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbDisplay' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbOverflow' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbPosition' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerWidthUnit' => array(
+				'type' => 'string',
+				'default' => 'px'
+			),
+			'bpafbContainerMinHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMaxHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBgType' => array(
+				'type' => 'string',
+				'default' => 'color'
+			),
+			'bpafbContainerBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgGradient' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageId' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerBgImageSize' => array(
+				'type' => 'string',
+				'default' => 'cover'
+			),
+			'bpafbContainerOverlayColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBorderStyle' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbContainerBorderWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderRadius' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerHoverBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerHoverShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerHoverShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerHoverShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHideDesktop' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideTablet' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideMobile' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbAnimationType' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbAnimationDuration' => array(
+				'type' => 'number',
+				'default' => 800
+			),
+			'bpafbAnimationDelay' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbAnimationEasing' => array(
+				'type' => 'string',
+				'default' => 'ease'
+			),
+			'bpafbTransformRotate' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformScale' => array(
+				'type' => 'number',
+				'default' => 100
+			),
+			'bpafbTransformTranslateX' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformTranslateY' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHoverAnimation' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbFloatingEffect' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbZIndex' => array(
+				'type' => 'number'
+			),
+			'bpafbHtmlId' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbHtmlClasses' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbCustomCss' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerAlign' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerPaddingTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftMobile' => array(
+				'type' => 'number'
 			)
 		),
 		'supports' => array(
@@ -3529,6 +12139,252 @@ return array(
 			'textAlign' => array(
 				'type' => 'string',
 				'default' => ''
+			),
+			'bpafbUid' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbDisplay' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbOverflow' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbPosition' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerWidthUnit' => array(
+				'type' => 'string',
+				'default' => 'px'
+			),
+			'bpafbContainerMinHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMaxHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBgType' => array(
+				'type' => 'string',
+				'default' => 'color'
+			),
+			'bpafbContainerBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgGradient' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageId' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerBgImageSize' => array(
+				'type' => 'string',
+				'default' => 'cover'
+			),
+			'bpafbContainerOverlayColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBorderStyle' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbContainerBorderWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderRadius' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerHoverBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerHoverShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerHoverShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerHoverShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHideDesktop' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideTablet' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideMobile' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbAnimationType' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbAnimationDuration' => array(
+				'type' => 'number',
+				'default' => 800
+			),
+			'bpafbAnimationDelay' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbAnimationEasing' => array(
+				'type' => 'string',
+				'default' => 'ease'
+			),
+			'bpafbTransformRotate' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformScale' => array(
+				'type' => 'number',
+				'default' => 100
+			),
+			'bpafbTransformTranslateX' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformTranslateY' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHoverAnimation' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbFloatingEffect' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbZIndex' => array(
+				'type' => 'number'
+			),
+			'bpafbHtmlId' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbHtmlClasses' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbCustomCss' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerAlign' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerPaddingTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftMobile' => array(
+				'type' => 'number'
 			)
 		),
 		'supports' => array(
@@ -3613,6 +12469,252 @@ return array(
 			'shadowSpread' => array(
 				'type' => 'number',
 				'default' => 0
+			),
+			'bpafbUid' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbDisplay' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbOverflow' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbPosition' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerWidthUnit' => array(
+				'type' => 'string',
+				'default' => 'px'
+			),
+			'bpafbContainerMinHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMaxHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBgType' => array(
+				'type' => 'string',
+				'default' => 'color'
+			),
+			'bpafbContainerBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgGradient' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageId' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerBgImageSize' => array(
+				'type' => 'string',
+				'default' => 'cover'
+			),
+			'bpafbContainerOverlayColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBorderStyle' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbContainerBorderWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderRadius' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerHoverBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerHoverShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerHoverShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerHoverShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHideDesktop' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideTablet' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideMobile' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbAnimationType' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbAnimationDuration' => array(
+				'type' => 'number',
+				'default' => 800
+			),
+			'bpafbAnimationDelay' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbAnimationEasing' => array(
+				'type' => 'string',
+				'default' => 'ease'
+			),
+			'bpafbTransformRotate' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformScale' => array(
+				'type' => 'number',
+				'default' => 100
+			),
+			'bpafbTransformTranslateX' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformTranslateY' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHoverAnimation' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbFloatingEffect' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbZIndex' => array(
+				'type' => 'number'
+			),
+			'bpafbHtmlId' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbHtmlClasses' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbCustomCss' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerAlign' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerPaddingTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftMobile' => array(
+				'type' => 'number'
 			)
 		),
 		'supports' => array(
@@ -3661,6 +12763,252 @@ return array(
 			'textHoverColor' => array(
 				'type' => 'string',
 				'default' => ''
+			),
+			'bpafbUid' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbDisplay' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbOverflow' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbPosition' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerWidthUnit' => array(
+				'type' => 'string',
+				'default' => 'px'
+			),
+			'bpafbContainerMinHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMaxHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBgType' => array(
+				'type' => 'string',
+				'default' => 'color'
+			),
+			'bpafbContainerBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgGradient' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageId' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerBgImageSize' => array(
+				'type' => 'string',
+				'default' => 'cover'
+			),
+			'bpafbContainerOverlayColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBorderStyle' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbContainerBorderWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderRadius' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerHoverBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerHoverShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerHoverShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerHoverShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHideDesktop' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideTablet' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideMobile' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbAnimationType' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbAnimationDuration' => array(
+				'type' => 'number',
+				'default' => 800
+			),
+			'bpafbAnimationDelay' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbAnimationEasing' => array(
+				'type' => 'string',
+				'default' => 'ease'
+			),
+			'bpafbTransformRotate' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformScale' => array(
+				'type' => 'number',
+				'default' => 100
+			),
+			'bpafbTransformTranslateX' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformTranslateY' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHoverAnimation' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbFloatingEffect' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbZIndex' => array(
+				'type' => 'number'
+			),
+			'bpafbHtmlId' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbHtmlClasses' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbCustomCss' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerAlign' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerPaddingTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftMobile' => array(
+				'type' => 'number'
 			)
 		),
 		'supports' => array(
@@ -3722,6 +13070,252 @@ return array(
 			'textHoverColor' => array(
 				'type' => 'string',
 				'default' => ''
+			),
+			'bpafbUid' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbDisplay' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbOverflow' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbPosition' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerWidthUnit' => array(
+				'type' => 'string',
+				'default' => 'px'
+			),
+			'bpafbContainerMinHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMaxHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBgType' => array(
+				'type' => 'string',
+				'default' => 'color'
+			),
+			'bpafbContainerBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgGradient' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageId' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerBgImageSize' => array(
+				'type' => 'string',
+				'default' => 'cover'
+			),
+			'bpafbContainerOverlayColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBorderStyle' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbContainerBorderWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderRadius' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerHoverBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerHoverShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerHoverShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerHoverShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHideDesktop' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideTablet' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideMobile' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbAnimationType' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbAnimationDuration' => array(
+				'type' => 'number',
+				'default' => 800
+			),
+			'bpafbAnimationDelay' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbAnimationEasing' => array(
+				'type' => 'string',
+				'default' => 'ease'
+			),
+			'bpafbTransformRotate' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformScale' => array(
+				'type' => 'number',
+				'default' => 100
+			),
+			'bpafbTransformTranslateX' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformTranslateY' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHoverAnimation' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbFloatingEffect' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbZIndex' => array(
+				'type' => 'number'
+			),
+			'bpafbHtmlId' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbHtmlClasses' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbCustomCss' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerAlign' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerPaddingTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftMobile' => array(
+				'type' => 'number'
 			)
 		),
 		'supports' => array(
@@ -3775,6 +13369,252 @@ return array(
 			'isLink' => array(
 				'type' => 'boolean',
 				'default' => true
+			),
+			'bpafbUid' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbDisplay' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbOverflow' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbPosition' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerWidthUnit' => array(
+				'type' => 'string',
+				'default' => 'px'
+			),
+			'bpafbContainerMinHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMaxHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBgType' => array(
+				'type' => 'string',
+				'default' => 'color'
+			),
+			'bpafbContainerBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgGradient' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageId' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerBgImageSize' => array(
+				'type' => 'string',
+				'default' => 'cover'
+			),
+			'bpafbContainerOverlayColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBorderStyle' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbContainerBorderWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderRadius' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerHoverBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerHoverShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerHoverShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerHoverShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHideDesktop' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideTablet' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideMobile' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbAnimationType' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbAnimationDuration' => array(
+				'type' => 'number',
+				'default' => 800
+			),
+			'bpafbAnimationDelay' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbAnimationEasing' => array(
+				'type' => 'string',
+				'default' => 'ease'
+			),
+			'bpafbTransformRotate' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformScale' => array(
+				'type' => 'number',
+				'default' => 100
+			),
+			'bpafbTransformTranslateX' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformTranslateY' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHoverAnimation' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbFloatingEffect' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbZIndex' => array(
+				'type' => 'number'
+			),
+			'bpafbHtmlId' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbHtmlClasses' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbCustomCss' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerAlign' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerPaddingTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftMobile' => array(
+				'type' => 'number'
 			)
 		),
 		'supports' => array(
@@ -3850,6 +13690,252 @@ return array(
 			'hoverEffect' => array(
 				'type' => 'string',
 				'default' => 'none'
+			),
+			'bpafbUid' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbDisplay' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbOverflow' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbPosition' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerWidthUnit' => array(
+				'type' => 'string',
+				'default' => 'px'
+			),
+			'bpafbContainerMinHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMaxHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBgType' => array(
+				'type' => 'string',
+				'default' => 'color'
+			),
+			'bpafbContainerBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgGradient' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageId' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerBgImageSize' => array(
+				'type' => 'string',
+				'default' => 'cover'
+			),
+			'bpafbContainerOverlayColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBorderStyle' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbContainerBorderWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderRadius' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerHoverBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerHoverShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerHoverShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerHoverShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHideDesktop' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideTablet' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideMobile' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbAnimationType' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbAnimationDuration' => array(
+				'type' => 'number',
+				'default' => 800
+			),
+			'bpafbAnimationDelay' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbAnimationEasing' => array(
+				'type' => 'string',
+				'default' => 'ease'
+			),
+			'bpafbTransformRotate' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformScale' => array(
+				'type' => 'number',
+				'default' => 100
+			),
+			'bpafbTransformTranslateX' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformTranslateY' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHoverAnimation' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbFloatingEffect' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbZIndex' => array(
+				'type' => 'number'
+			),
+			'bpafbHtmlId' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbHtmlClasses' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbCustomCss' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerAlign' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerPaddingTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftMobile' => array(
+				'type' => 'number'
 			)
 		),
 		'supports' => array(
@@ -3899,6 +13985,252 @@ return array(
 			'aspectRatio' => array(
 				'type' => 'string',
 				'default' => '16/9'
+			),
+			'bpafbUid' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbDisplay' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbOverflow' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbPosition' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerWidthUnit' => array(
+				'type' => 'string',
+				'default' => 'px'
+			),
+			'bpafbContainerMinHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMaxHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBgType' => array(
+				'type' => 'string',
+				'default' => 'color'
+			),
+			'bpafbContainerBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgGradient' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageId' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerBgImageSize' => array(
+				'type' => 'string',
+				'default' => 'cover'
+			),
+			'bpafbContainerOverlayColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBorderStyle' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbContainerBorderWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderRadius' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerHoverBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerHoverShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerHoverShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerHoverShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHideDesktop' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideTablet' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideMobile' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbAnimationType' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbAnimationDuration' => array(
+				'type' => 'number',
+				'default' => 800
+			),
+			'bpafbAnimationDelay' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbAnimationEasing' => array(
+				'type' => 'string',
+				'default' => 'ease'
+			),
+			'bpafbTransformRotate' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformScale' => array(
+				'type' => 'number',
+				'default' => 100
+			),
+			'bpafbTransformTranslateX' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformTranslateY' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHoverAnimation' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbFloatingEffect' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbZIndex' => array(
+				'type' => 'number'
+			),
+			'bpafbHtmlId' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbHtmlClasses' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbCustomCss' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerAlign' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerPaddingTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftMobile' => array(
+				'type' => 'number'
 			)
 		),
 		'supports' => array(
@@ -3940,6 +14272,252 @@ return array(
 			'relative' => array(
 				'type' => 'boolean',
 				'default' => false
+			),
+			'bpafbUid' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbDisplay' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbOverflow' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbPosition' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerWidthUnit' => array(
+				'type' => 'string',
+				'default' => 'px'
+			),
+			'bpafbContainerMinHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMaxHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBgType' => array(
+				'type' => 'string',
+				'default' => 'color'
+			),
+			'bpafbContainerBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgGradient' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageId' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerBgImageSize' => array(
+				'type' => 'string',
+				'default' => 'cover'
+			),
+			'bpafbContainerOverlayColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBorderStyle' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbContainerBorderWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderRadius' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerHoverBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerHoverShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerHoverShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerHoverShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHideDesktop' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideTablet' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideMobile' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbAnimationType' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbAnimationDuration' => array(
+				'type' => 'number',
+				'default' => 800
+			),
+			'bpafbAnimationDelay' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbAnimationEasing' => array(
+				'type' => 'string',
+				'default' => 'ease'
+			),
+			'bpafbTransformRotate' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformScale' => array(
+				'type' => 'number',
+				'default' => 100
+			),
+			'bpafbTransformTranslateX' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformTranslateY' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHoverAnimation' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbFloatingEffect' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbZIndex' => array(
+				'type' => 'number'
+			),
+			'bpafbHtmlId' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbHtmlClasses' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbCustomCss' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerAlign' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerPaddingTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftMobile' => array(
+				'type' => 'number'
 			)
 		),
 		'supports' => array(
@@ -4002,6 +14580,252 @@ return array(
 			'textAlign' => array(
 				'type' => 'string',
 				'default' => ''
+			),
+			'bpafbUid' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbDisplay' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbOverflow' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbPosition' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerWidthUnit' => array(
+				'type' => 'string',
+				'default' => 'px'
+			),
+			'bpafbContainerMinHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMaxHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBgType' => array(
+				'type' => 'string',
+				'default' => 'color'
+			),
+			'bpafbContainerBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgGradient' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageId' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerBgImageSize' => array(
+				'type' => 'string',
+				'default' => 'cover'
+			),
+			'bpafbContainerOverlayColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBorderStyle' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbContainerBorderWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderRadius' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerHoverBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerHoverShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerHoverShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerHoverShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHideDesktop' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideTablet' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideMobile' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbAnimationType' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbAnimationDuration' => array(
+				'type' => 'number',
+				'default' => 800
+			),
+			'bpafbAnimationDelay' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbAnimationEasing' => array(
+				'type' => 'string',
+				'default' => 'ease'
+			),
+			'bpafbTransformRotate' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformScale' => array(
+				'type' => 'number',
+				'default' => 100
+			),
+			'bpafbTransformTranslateX' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformTranslateY' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHoverAnimation' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbFloatingEffect' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbZIndex' => array(
+				'type' => 'number'
+			),
+			'bpafbHtmlId' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbHtmlClasses' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbCustomCss' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerAlign' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerPaddingTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftMobile' => array(
+				'type' => 'number'
 			)
 		),
 		'supports' => array(
@@ -4071,6 +14895,252 @@ return array(
 			'textAlign' => array(
 				'type' => 'string',
 				'default' => ''
+			),
+			'bpafbUid' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbDisplay' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbOverflow' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbPosition' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerWidthUnit' => array(
+				'type' => 'string',
+				'default' => 'px'
+			),
+			'bpafbContainerMinHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMaxHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBgType' => array(
+				'type' => 'string',
+				'default' => 'color'
+			),
+			'bpafbContainerBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgGradient' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageId' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerBgImageSize' => array(
+				'type' => 'string',
+				'default' => 'cover'
+			),
+			'bpafbContainerOverlayColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBorderStyle' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbContainerBorderWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderRadius' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerHoverBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerHoverShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerHoverShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerHoverShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHideDesktop' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideTablet' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideMobile' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbAnimationType' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbAnimationDuration' => array(
+				'type' => 'number',
+				'default' => 800
+			),
+			'bpafbAnimationDelay' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbAnimationEasing' => array(
+				'type' => 'string',
+				'default' => 'ease'
+			),
+			'bpafbTransformRotate' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformScale' => array(
+				'type' => 'number',
+				'default' => 100
+			),
+			'bpafbTransformTranslateX' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformTranslateY' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHoverAnimation' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbFloatingEffect' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbZIndex' => array(
+				'type' => 'number'
+			),
+			'bpafbHtmlId' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbHtmlClasses' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbCustomCss' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerAlign' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerPaddingTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftMobile' => array(
+				'type' => 'number'
 			)
 		),
 		'supports' => array(
@@ -4153,6 +15223,252 @@ return array(
 			'showIcons' => array(
 				'type' => 'boolean',
 				'default' => true
+			),
+			'bpafbUid' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbDisplay' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbOverflow' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbPosition' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerWidthUnit' => array(
+				'type' => 'string',
+				'default' => 'px'
+			),
+			'bpafbContainerMinHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMaxHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBgType' => array(
+				'type' => 'string',
+				'default' => 'color'
+			),
+			'bpafbContainerBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgGradient' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageId' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerBgImageSize' => array(
+				'type' => 'string',
+				'default' => 'cover'
+			),
+			'bpafbContainerOverlayColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBorderStyle' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbContainerBorderWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderRadius' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerHoverBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerHoverShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerHoverShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerHoverShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHideDesktop' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideTablet' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideMobile' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbAnimationType' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbAnimationDuration' => array(
+				'type' => 'number',
+				'default' => 800
+			),
+			'bpafbAnimationDelay' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbAnimationEasing' => array(
+				'type' => 'string',
+				'default' => 'ease'
+			),
+			'bpafbTransformRotate' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformScale' => array(
+				'type' => 'number',
+				'default' => 100
+			),
+			'bpafbTransformTranslateX' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformTranslateY' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHoverAnimation' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbFloatingEffect' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbZIndex' => array(
+				'type' => 'number'
+			),
+			'bpafbHtmlId' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbHtmlClasses' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbCustomCss' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerAlign' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerPaddingTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftMobile' => array(
+				'type' => 'number'
 			)
 		),
 		'supports' => array(
@@ -4213,6 +15529,252 @@ return array(
 			'textHoverColor' => array(
 				'type' => 'string',
 				'default' => ''
+			),
+			'bpafbUid' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbDisplay' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbOverflow' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbPosition' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerWidthUnit' => array(
+				'type' => 'string',
+				'default' => 'px'
+			),
+			'bpafbContainerMinHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMaxHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBgType' => array(
+				'type' => 'string',
+				'default' => 'color'
+			),
+			'bpafbContainerBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgGradient' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageId' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerBgImageSize' => array(
+				'type' => 'string',
+				'default' => 'cover'
+			),
+			'bpafbContainerOverlayColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBorderStyle' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbContainerBorderWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderRadius' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerHoverBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerHoverShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerHoverShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerHoverShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHideDesktop' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideTablet' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideMobile' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbAnimationType' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbAnimationDuration' => array(
+				'type' => 'number',
+				'default' => 800
+			),
+			'bpafbAnimationDelay' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbAnimationEasing' => array(
+				'type' => 'string',
+				'default' => 'ease'
+			),
+			'bpafbTransformRotate' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformScale' => array(
+				'type' => 'number',
+				'default' => 100
+			),
+			'bpafbTransformTranslateX' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformTranslateY' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHoverAnimation' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbFloatingEffect' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbZIndex' => array(
+				'type' => 'number'
+			),
+			'bpafbHtmlId' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbHtmlClasses' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbCustomCss' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerAlign' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerPaddingTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftMobile' => array(
+				'type' => 'number'
 			)
 		),
 		'supports' => array(
@@ -4286,6 +15848,252 @@ return array(
 			'inSameTerm' => array(
 				'type' => 'boolean',
 				'default' => false
+			),
+			'bpafbUid' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbDisplay' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbOverflow' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbPosition' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerWidthUnit' => array(
+				'type' => 'string',
+				'default' => 'px'
+			),
+			'bpafbContainerMinHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMaxHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBgType' => array(
+				'type' => 'string',
+				'default' => 'color'
+			),
+			'bpafbContainerBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgGradient' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageId' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerBgImageSize' => array(
+				'type' => 'string',
+				'default' => 'cover'
+			),
+			'bpafbContainerOverlayColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBorderStyle' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbContainerBorderWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderRadius' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerHoverBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerHoverShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerHoverShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerHoverShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHideDesktop' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideTablet' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideMobile' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbAnimationType' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbAnimationDuration' => array(
+				'type' => 'number',
+				'default' => 800
+			),
+			'bpafbAnimationDelay' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbAnimationEasing' => array(
+				'type' => 'string',
+				'default' => 'ease'
+			),
+			'bpafbTransformRotate' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformScale' => array(
+				'type' => 'number',
+				'default' => 100
+			),
+			'bpafbTransformTranslateX' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformTranslateY' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHoverAnimation' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbFloatingEffect' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbZIndex' => array(
+				'type' => 'number'
+			),
+			'bpafbHtmlId' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbHtmlClasses' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbCustomCss' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerAlign' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerPaddingTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftMobile' => array(
+				'type' => 'number'
 			)
 		),
 		'supports' => array(
@@ -4342,6 +16150,252 @@ return array(
 			'icon' => array(
 				'type' => 'string',
 				'default' => 'fa-regular fa-calendar'
+			),
+			'bpafbUid' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbDisplay' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbOverflow' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbPosition' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerWidthUnit' => array(
+				'type' => 'string',
+				'default' => 'px'
+			),
+			'bpafbContainerMinHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMaxHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBgType' => array(
+				'type' => 'string',
+				'default' => 'color'
+			),
+			'bpafbContainerBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgGradient' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageId' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerBgImageSize' => array(
+				'type' => 'string',
+				'default' => 'cover'
+			),
+			'bpafbContainerOverlayColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBorderStyle' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbContainerBorderWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderRadius' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerHoverBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerHoverShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerHoverShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerHoverShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHideDesktop' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideTablet' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideMobile' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbAnimationType' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbAnimationDuration' => array(
+				'type' => 'number',
+				'default' => 800
+			),
+			'bpafbAnimationDelay' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbAnimationEasing' => array(
+				'type' => 'string',
+				'default' => 'ease'
+			),
+			'bpafbTransformRotate' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformScale' => array(
+				'type' => 'number',
+				'default' => 100
+			),
+			'bpafbTransformTranslateX' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformTranslateY' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHoverAnimation' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbFloatingEffect' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbZIndex' => array(
+				'type' => 'number'
+			),
+			'bpafbHtmlId' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbHtmlClasses' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbCustomCss' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerAlign' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerPaddingTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftMobile' => array(
+				'type' => 'number'
 			)
 		),
 		'supports' => array(
@@ -4402,6 +16456,252 @@ return array(
 			'suffix' => array(
 				'type' => 'string',
 				'default' => ' min read'
+			),
+			'bpafbUid' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbDisplay' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbOverflow' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbPosition' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerWidthUnit' => array(
+				'type' => 'string',
+				'default' => 'px'
+			),
+			'bpafbContainerMinHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMaxHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBgType' => array(
+				'type' => 'string',
+				'default' => 'color'
+			),
+			'bpafbContainerBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgGradient' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageId' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerBgImageSize' => array(
+				'type' => 'string',
+				'default' => 'cover'
+			),
+			'bpafbContainerOverlayColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBorderStyle' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbContainerBorderWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderRadius' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerHoverBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerHoverShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerHoverShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerHoverShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHideDesktop' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideTablet' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideMobile' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbAnimationType' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbAnimationDuration' => array(
+				'type' => 'number',
+				'default' => 800
+			),
+			'bpafbAnimationDelay' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbAnimationEasing' => array(
+				'type' => 'string',
+				'default' => 'ease'
+			),
+			'bpafbTransformRotate' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformScale' => array(
+				'type' => 'number',
+				'default' => 100
+			),
+			'bpafbTransformTranslateX' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformTranslateY' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHoverAnimation' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbFloatingEffect' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbZIndex' => array(
+				'type' => 'number'
+			),
+			'bpafbHtmlId' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbHtmlClasses' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbCustomCss' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerAlign' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerPaddingTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftMobile' => array(
+				'type' => 'number'
 			)
 		),
 		'supports' => array(
@@ -4481,6 +16781,252 @@ return array(
 			'showExcerpt' => array(
 				'type' => 'boolean',
 				'default' => false
+			),
+			'bpafbUid' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbDisplay' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbOverflow' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbPosition' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerWidthUnit' => array(
+				'type' => 'string',
+				'default' => 'px'
+			),
+			'bpafbContainerMinHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMaxHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBgType' => array(
+				'type' => 'string',
+				'default' => 'color'
+			),
+			'bpafbContainerBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgGradient' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageId' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerBgImageSize' => array(
+				'type' => 'string',
+				'default' => 'cover'
+			),
+			'bpafbContainerOverlayColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBorderStyle' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbContainerBorderWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderRadius' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerHoverBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerHoverShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerHoverShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerHoverShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHideDesktop' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideTablet' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideMobile' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbAnimationType' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbAnimationDuration' => array(
+				'type' => 'number',
+				'default' => 800
+			),
+			'bpafbAnimationDelay' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbAnimationEasing' => array(
+				'type' => 'string',
+				'default' => 'ease'
+			),
+			'bpafbTransformRotate' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformScale' => array(
+				'type' => 'number',
+				'default' => 100
+			),
+			'bpafbTransformTranslateX' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformTranslateY' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHoverAnimation' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbFloatingEffect' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbZIndex' => array(
+				'type' => 'number'
+			),
+			'bpafbHtmlId' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbHtmlClasses' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbCustomCss' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerAlign' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerPaddingTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftMobile' => array(
+				'type' => 'number'
 			)
 		),
 		'supports' => array(
@@ -4523,6 +17069,252 @@ return array(
 			'badgeStyle' => array(
 				'type' => 'boolean',
 				'default' => false
+			),
+			'bpafbUid' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbDisplay' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbOverflow' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbPosition' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerWidthUnit' => array(
+				'type' => 'string',
+				'default' => 'px'
+			),
+			'bpafbContainerMinHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMaxHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBgType' => array(
+				'type' => 'string',
+				'default' => 'color'
+			),
+			'bpafbContainerBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgGradient' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageId' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerBgImageSize' => array(
+				'type' => 'string',
+				'default' => 'cover'
+			),
+			'bpafbContainerOverlayColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBorderStyle' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbContainerBorderWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderRadius' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerHoverBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerHoverShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerHoverShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerHoverShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHideDesktop' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideTablet' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideMobile' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbAnimationType' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbAnimationDuration' => array(
+				'type' => 'number',
+				'default' => 800
+			),
+			'bpafbAnimationDelay' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbAnimationEasing' => array(
+				'type' => 'string',
+				'default' => 'ease'
+			),
+			'bpafbTransformRotate' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformScale' => array(
+				'type' => 'number',
+				'default' => 100
+			),
+			'bpafbTransformTranslateX' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformTranslateY' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHoverAnimation' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbFloatingEffect' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbZIndex' => array(
+				'type' => 'number'
+			),
+			'bpafbHtmlId' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbHtmlClasses' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbCustomCss' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerAlign' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerPaddingTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftMobile' => array(
+				'type' => 'number'
 			)
 		),
 		'supports' => array(
@@ -4590,6 +17382,252 @@ return array(
 			'btnHoverTextColor' => array(
 				'type' => 'string',
 				'default' => ''
+			),
+			'bpafbUid' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbDisplay' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbOverflow' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbPosition' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerWidthUnit' => array(
+				'type' => 'string',
+				'default' => 'px'
+			),
+			'bpafbContainerMinHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMaxHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBgType' => array(
+				'type' => 'string',
+				'default' => 'color'
+			),
+			'bpafbContainerBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgGradient' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageId' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerBgImageSize' => array(
+				'type' => 'string',
+				'default' => 'cover'
+			),
+			'bpafbContainerOverlayColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBorderStyle' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbContainerBorderWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderRadius' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerHoverBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerHoverShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerHoverShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerHoverShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHideDesktop' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideTablet' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideMobile' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbAnimationType' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbAnimationDuration' => array(
+				'type' => 'number',
+				'default' => 800
+			),
+			'bpafbAnimationDelay' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbAnimationEasing' => array(
+				'type' => 'string',
+				'default' => 'ease'
+			),
+			'bpafbTransformRotate' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformScale' => array(
+				'type' => 'number',
+				'default' => 100
+			),
+			'bpafbTransformTranslateX' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformTranslateY' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHoverAnimation' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbFloatingEffect' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbZIndex' => array(
+				'type' => 'number'
+			),
+			'bpafbHtmlId' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbHtmlClasses' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbCustomCss' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerAlign' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerPaddingTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftMobile' => array(
+				'type' => 'number'
 			)
 		),
 		'supports' => array(
@@ -4624,6 +17662,252 @@ return array(
 			'showLabel' => array(
 				'type' => 'boolean',
 				'default' => true
+			),
+			'bpafbUid' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbDisplay' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbOverflow' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbPosition' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerWidthUnit' => array(
+				'type' => 'string',
+				'default' => 'px'
+			),
+			'bpafbContainerMinHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMaxHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBgType' => array(
+				'type' => 'string',
+				'default' => 'color'
+			),
+			'bpafbContainerBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgGradient' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageId' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerBgImageSize' => array(
+				'type' => 'string',
+				'default' => 'cover'
+			),
+			'bpafbContainerOverlayColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBorderStyle' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbContainerBorderWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderRadius' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerHoverBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerHoverShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerHoverShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerHoverShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHideDesktop' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideTablet' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideMobile' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbAnimationType' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbAnimationDuration' => array(
+				'type' => 'number',
+				'default' => 800
+			),
+			'bpafbAnimationDelay' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbAnimationEasing' => array(
+				'type' => 'string',
+				'default' => 'ease'
+			),
+			'bpafbTransformRotate' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformScale' => array(
+				'type' => 'number',
+				'default' => 100
+			),
+			'bpafbTransformTranslateX' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformTranslateY' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHoverAnimation' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbFloatingEffect' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbZIndex' => array(
+				'type' => 'number'
+			),
+			'bpafbHtmlId' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbHtmlClasses' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbCustomCss' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerAlign' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerPaddingTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftMobile' => array(
+				'type' => 'number'
 			)
 		),
 		'supports' => array(
@@ -4676,6 +17960,252 @@ return array(
 			'columns' => array(
 				'type' => 'number',
 				'default' => 4
+			),
+			'bpafbUid' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbDisplay' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbOverflow' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbPosition' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerWidthUnit' => array(
+				'type' => 'string',
+				'default' => 'px'
+			),
+			'bpafbContainerMinHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMaxHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBgType' => array(
+				'type' => 'string',
+				'default' => 'color'
+			),
+			'bpafbContainerBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgGradient' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageId' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerBgImageSize' => array(
+				'type' => 'string',
+				'default' => 'cover'
+			),
+			'bpafbContainerOverlayColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBorderStyle' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbContainerBorderWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderRadius' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerHoverBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerHoverShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerHoverShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerHoverShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHideDesktop' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideTablet' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideMobile' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbAnimationType' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbAnimationDuration' => array(
+				'type' => 'number',
+				'default' => 800
+			),
+			'bpafbAnimationDelay' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbAnimationEasing' => array(
+				'type' => 'string',
+				'default' => 'ease'
+			),
+			'bpafbTransformRotate' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformScale' => array(
+				'type' => 'number',
+				'default' => 100
+			),
+			'bpafbTransformTranslateX' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformTranslateY' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHoverAnimation' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbFloatingEffect' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbZIndex' => array(
+				'type' => 'number'
+			),
+			'bpafbHtmlId' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbHtmlClasses' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbCustomCss' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerAlign' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerPaddingTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftMobile' => array(
+				'type' => 'number'
 			)
 		),
 		'supports' => array(
@@ -4711,6 +18241,252 @@ return array(
 			'maxWidth' => array(
 				'type' => 'number',
 				'default' => 0
+			),
+			'bpafbUid' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbDisplay' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbOverflow' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbPosition' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerWidthUnit' => array(
+				'type' => 'string',
+				'default' => 'px'
+			),
+			'bpafbContainerMinHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMaxHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBgType' => array(
+				'type' => 'string',
+				'default' => 'color'
+			),
+			'bpafbContainerBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgGradient' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageId' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerBgImageSize' => array(
+				'type' => 'string',
+				'default' => 'cover'
+			),
+			'bpafbContainerOverlayColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBorderStyle' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbContainerBorderWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderRadius' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerHoverBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerHoverShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerHoverShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerHoverShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHideDesktop' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideTablet' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideMobile' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbAnimationType' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbAnimationDuration' => array(
+				'type' => 'number',
+				'default' => 800
+			),
+			'bpafbAnimationDelay' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbAnimationEasing' => array(
+				'type' => 'string',
+				'default' => 'ease'
+			),
+			'bpafbTransformRotate' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformScale' => array(
+				'type' => 'number',
+				'default' => 100
+			),
+			'bpafbTransformTranslateX' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformTranslateY' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHoverAnimation' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbFloatingEffect' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbZIndex' => array(
+				'type' => 'number'
+			),
+			'bpafbHtmlId' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbHtmlClasses' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbCustomCss' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerAlign' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerPaddingTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftMobile' => array(
+				'type' => 'number'
 			)
 		),
 		'supports' => array(
@@ -4770,6 +18546,252 @@ return array(
 			'mainImageSize' => array(
 				'type' => 'string',
 				'default' => 'large'
+			),
+			'bpafbUid' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbDisplay' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbOverflow' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbPosition' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerWidthUnit' => array(
+				'type' => 'string',
+				'default' => 'px'
+			),
+			'bpafbContainerMinHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMaxHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBgType' => array(
+				'type' => 'string',
+				'default' => 'color'
+			),
+			'bpafbContainerBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgGradient' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageId' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerBgImageSize' => array(
+				'type' => 'string',
+				'default' => 'cover'
+			),
+			'bpafbContainerOverlayColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBorderStyle' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbContainerBorderWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderRadius' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerHoverBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerHoverShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerHoverShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerHoverShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHideDesktop' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideTablet' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideMobile' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbAnimationType' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbAnimationDuration' => array(
+				'type' => 'number',
+				'default' => 800
+			),
+			'bpafbAnimationDelay' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbAnimationEasing' => array(
+				'type' => 'string',
+				'default' => 'ease'
+			),
+			'bpafbTransformRotate' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformScale' => array(
+				'type' => 'number',
+				'default' => 100
+			),
+			'bpafbTransformTranslateX' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformTranslateY' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHoverAnimation' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbFloatingEffect' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbZIndex' => array(
+				'type' => 'number'
+			),
+			'bpafbHtmlId' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbHtmlClasses' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbCustomCss' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerAlign' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerPaddingTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftMobile' => array(
+				'type' => 'number'
 			)
 		),
 		'supports' => array(
@@ -4827,6 +18849,252 @@ return array(
 			'isLink' => array(
 				'type' => 'boolean',
 				'default' => true
+			),
+			'bpafbUid' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbDisplay' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbOverflow' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbPosition' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerWidthUnit' => array(
+				'type' => 'string',
+				'default' => 'px'
+			),
+			'bpafbContainerMinHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMaxHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBgType' => array(
+				'type' => 'string',
+				'default' => 'color'
+			),
+			'bpafbContainerBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgGradient' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageId' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerBgImageSize' => array(
+				'type' => 'string',
+				'default' => 'cover'
+			),
+			'bpafbContainerOverlayColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBorderStyle' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbContainerBorderWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderRadius' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerHoverBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerHoverShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerHoverShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerHoverShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHideDesktop' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideTablet' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideMobile' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbAnimationType' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbAnimationDuration' => array(
+				'type' => 'number',
+				'default' => 800
+			),
+			'bpafbAnimationDelay' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbAnimationEasing' => array(
+				'type' => 'string',
+				'default' => 'ease'
+			),
+			'bpafbTransformRotate' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformScale' => array(
+				'type' => 'number',
+				'default' => 100
+			),
+			'bpafbTransformTranslateX' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformTranslateY' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHoverAnimation' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbFloatingEffect' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbZIndex' => array(
+				'type' => 'number'
+			),
+			'bpafbHtmlId' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbHtmlClasses' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbCustomCss' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerAlign' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerPaddingTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftMobile' => array(
+				'type' => 'number'
 			)
 		),
 		'supports' => array(
@@ -4889,6 +19157,252 @@ return array(
 			'showIcons' => array(
 				'type' => 'boolean',
 				'default' => true
+			),
+			'bpafbUid' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbDisplay' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbOverflow' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbPosition' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerWidthUnit' => array(
+				'type' => 'string',
+				'default' => 'px'
+			),
+			'bpafbContainerMinHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMaxHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBgType' => array(
+				'type' => 'string',
+				'default' => 'color'
+			),
+			'bpafbContainerBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgGradient' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageId' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerBgImageSize' => array(
+				'type' => 'string',
+				'default' => 'cover'
+			),
+			'bpafbContainerOverlayColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBorderStyle' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbContainerBorderWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderRadius' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerHoverBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerHoverShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerHoverShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerHoverShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHideDesktop' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideTablet' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideMobile' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbAnimationType' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbAnimationDuration' => array(
+				'type' => 'number',
+				'default' => 800
+			),
+			'bpafbAnimationDelay' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbAnimationEasing' => array(
+				'type' => 'string',
+				'default' => 'ease'
+			),
+			'bpafbTransformRotate' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformScale' => array(
+				'type' => 'number',
+				'default' => 100
+			),
+			'bpafbTransformTranslateX' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformTranslateY' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHoverAnimation' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbFloatingEffect' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbZIndex' => array(
+				'type' => 'number'
+			),
+			'bpafbHtmlId' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbHtmlClasses' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbCustomCss' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerAlign' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerPaddingTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftMobile' => array(
+				'type' => 'number'
 			)
 		),
 		'supports' => array(
@@ -4929,6 +19443,252 @@ return array(
 			'textAlign' => array(
 				'type' => 'string',
 				'default' => ''
+			),
+			'bpafbUid' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbDisplay' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbOverflow' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbPosition' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerWidthUnit' => array(
+				'type' => 'string',
+				'default' => 'px'
+			),
+			'bpafbContainerMinHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMaxHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBgType' => array(
+				'type' => 'string',
+				'default' => 'color'
+			),
+			'bpafbContainerBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgGradient' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageId' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerBgImageSize' => array(
+				'type' => 'string',
+				'default' => 'cover'
+			),
+			'bpafbContainerOverlayColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBorderStyle' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbContainerBorderWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderRadius' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerHoverBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerHoverShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerHoverShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerHoverShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHideDesktop' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideTablet' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideMobile' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbAnimationType' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbAnimationDuration' => array(
+				'type' => 'number',
+				'default' => 800
+			),
+			'bpafbAnimationDelay' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbAnimationEasing' => array(
+				'type' => 'string',
+				'default' => 'ease'
+			),
+			'bpafbTransformRotate' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformScale' => array(
+				'type' => 'number',
+				'default' => 100
+			),
+			'bpafbTransformTranslateX' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformTranslateY' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHoverAnimation' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbFloatingEffect' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbZIndex' => array(
+				'type' => 'number'
+			),
+			'bpafbHtmlId' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbHtmlClasses' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbCustomCss' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerAlign' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerPaddingTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftMobile' => array(
+				'type' => 'number'
 			)
 		),
 		'supports' => array(
@@ -4983,6 +19743,252 @@ return array(
 			'starColor' => array(
 				'type' => 'string',
 				'default' => ''
+			),
+			'bpafbUid' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbDisplay' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbOverflow' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbPosition' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerWidthUnit' => array(
+				'type' => 'string',
+				'default' => 'px'
+			),
+			'bpafbContainerMinHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMaxHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBgType' => array(
+				'type' => 'string',
+				'default' => 'color'
+			),
+			'bpafbContainerBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgGradient' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageId' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerBgImageSize' => array(
+				'type' => 'string',
+				'default' => 'cover'
+			),
+			'bpafbContainerOverlayColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBorderStyle' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbContainerBorderWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderRadius' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerHoverBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerHoverShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerHoverShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerHoverShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHideDesktop' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideTablet' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideMobile' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbAnimationType' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbAnimationDuration' => array(
+				'type' => 'number',
+				'default' => 800
+			),
+			'bpafbAnimationDelay' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbAnimationEasing' => array(
+				'type' => 'string',
+				'default' => 'ease'
+			),
+			'bpafbTransformRotate' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformScale' => array(
+				'type' => 'number',
+				'default' => 100
+			),
+			'bpafbTransformTranslateX' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformTranslateY' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHoverAnimation' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbFloatingEffect' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbZIndex' => array(
+				'type' => 'number'
+			),
+			'bpafbHtmlId' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbHtmlClasses' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbCustomCss' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerAlign' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerPaddingTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftMobile' => array(
+				'type' => 'number'
 			)
 		),
 		'supports' => array(
@@ -5027,6 +20033,252 @@ return array(
 			'columns' => array(
 				'type' => 'number',
 				'default' => 4
+			),
+			'bpafbUid' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbDisplay' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbOverflow' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbPosition' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerWidthUnit' => array(
+				'type' => 'string',
+				'default' => 'px'
+			),
+			'bpafbContainerMinHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMaxHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBgType' => array(
+				'type' => 'string',
+				'default' => 'color'
+			),
+			'bpafbContainerBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgGradient' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageId' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerBgImageSize' => array(
+				'type' => 'string',
+				'default' => 'cover'
+			),
+			'bpafbContainerOverlayColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBorderStyle' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbContainerBorderWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderRadius' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerHoverBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerHoverShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerHoverShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerHoverShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHideDesktop' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideTablet' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideMobile' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbAnimationType' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbAnimationDuration' => array(
+				'type' => 'number',
+				'default' => 800
+			),
+			'bpafbAnimationDelay' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbAnimationEasing' => array(
+				'type' => 'string',
+				'default' => 'ease'
+			),
+			'bpafbTransformRotate' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformScale' => array(
+				'type' => 'number',
+				'default' => 100
+			),
+			'bpafbTransformTranslateX' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformTranslateY' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHoverAnimation' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbFloatingEffect' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbZIndex' => array(
+				'type' => 'number'
+			),
+			'bpafbHtmlId' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbHtmlClasses' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbCustomCss' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerAlign' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerPaddingTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftMobile' => array(
+				'type' => 'number'
 			)
 		),
 		'supports' => array(
@@ -5078,6 +20330,252 @@ return array(
 			'position' => array(
 				'type' => 'string',
 				'default' => 'top-right'
+			),
+			'bpafbUid' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbDisplay' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbOverflow' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbPosition' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerWidthUnit' => array(
+				'type' => 'string',
+				'default' => 'px'
+			),
+			'bpafbContainerMinHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMaxHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBgType' => array(
+				'type' => 'string',
+				'default' => 'color'
+			),
+			'bpafbContainerBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgGradient' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageId' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerBgImageSize' => array(
+				'type' => 'string',
+				'default' => 'cover'
+			),
+			'bpafbContainerOverlayColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBorderStyle' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbContainerBorderWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderRadius' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerHoverBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerHoverShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerHoverShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerHoverShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHideDesktop' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideTablet' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideMobile' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbAnimationType' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbAnimationDuration' => array(
+				'type' => 'number',
+				'default' => 800
+			),
+			'bpafbAnimationDelay' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbAnimationEasing' => array(
+				'type' => 'string',
+				'default' => 'ease'
+			),
+			'bpafbTransformRotate' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformScale' => array(
+				'type' => 'number',
+				'default' => 100
+			),
+			'bpafbTransformTranslateX' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformTranslateY' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHoverAnimation' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbFloatingEffect' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbZIndex' => array(
+				'type' => 'number'
+			),
+			'bpafbHtmlId' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbHtmlClasses' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbCustomCss' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerAlign' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerPaddingTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftMobile' => array(
+				'type' => 'number'
 			)
 		),
 		'supports' => array(
@@ -5113,6 +20611,252 @@ return array(
 			'maxWidth' => array(
 				'type' => 'number',
 				'default' => 0
+			),
+			'bpafbUid' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbDisplay' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbOverflow' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbPosition' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerWidthUnit' => array(
+				'type' => 'string',
+				'default' => 'px'
+			),
+			'bpafbContainerMinHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMaxHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBgType' => array(
+				'type' => 'string',
+				'default' => 'color'
+			),
+			'bpafbContainerBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgGradient' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageId' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerBgImageSize' => array(
+				'type' => 'string',
+				'default' => 'cover'
+			),
+			'bpafbContainerOverlayColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBorderStyle' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbContainerBorderWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderRadius' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerHoverBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerHoverShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerHoverShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerHoverShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHideDesktop' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideTablet' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideMobile' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbAnimationType' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbAnimationDuration' => array(
+				'type' => 'number',
+				'default' => 800
+			),
+			'bpafbAnimationDelay' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbAnimationEasing' => array(
+				'type' => 'string',
+				'default' => 'ease'
+			),
+			'bpafbTransformRotate' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformScale' => array(
+				'type' => 'number',
+				'default' => 100
+			),
+			'bpafbTransformTranslateX' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformTranslateY' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHoverAnimation' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbFloatingEffect' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbZIndex' => array(
+				'type' => 'number'
+			),
+			'bpafbHtmlId' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbHtmlClasses' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbCustomCss' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerAlign' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerPaddingTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftMobile' => array(
+				'type' => 'number'
 			)
 		),
 		'supports' => array(
@@ -5172,6 +20916,252 @@ return array(
 			'textColor' => array(
 				'type' => 'string',
 				'default' => ''
+			),
+			'bpafbUid' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbDisplay' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbOverflow' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbPosition' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerWidthUnit' => array(
+				'type' => 'string',
+				'default' => 'px'
+			),
+			'bpafbContainerMinHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMaxHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBgType' => array(
+				'type' => 'string',
+				'default' => 'color'
+			),
+			'bpafbContainerBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgGradient' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageId' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerBgImageSize' => array(
+				'type' => 'string',
+				'default' => 'cover'
+			),
+			'bpafbContainerOverlayColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBorderStyle' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbContainerBorderWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderRadius' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerHoverBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerHoverShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerHoverShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerHoverShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHideDesktop' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideTablet' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideMobile' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbAnimationType' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbAnimationDuration' => array(
+				'type' => 'number',
+				'default' => 800
+			),
+			'bpafbAnimationDelay' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbAnimationEasing' => array(
+				'type' => 'string',
+				'default' => 'ease'
+			),
+			'bpafbTransformRotate' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformScale' => array(
+				'type' => 'number',
+				'default' => 100
+			),
+			'bpafbTransformTranslateX' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformTranslateY' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHoverAnimation' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbFloatingEffect' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbZIndex' => array(
+				'type' => 'number'
+			),
+			'bpafbHtmlId' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbHtmlClasses' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbCustomCss' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerAlign' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerPaddingTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftMobile' => array(
+				'type' => 'number'
 			)
 		),
 		'supports' => array(
@@ -5228,6 +21218,252 @@ return array(
 			'onBackorderColor' => array(
 				'type' => 'string',
 				'default' => '#ef6c00'
+			),
+			'bpafbUid' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbDisplay' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbOverflow' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbPosition' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerWidthUnit' => array(
+				'type' => 'string',
+				'default' => 'px'
+			),
+			'bpafbContainerMinHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMaxHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBgType' => array(
+				'type' => 'string',
+				'default' => 'color'
+			),
+			'bpafbContainerBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgGradient' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageId' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerBgImageSize' => array(
+				'type' => 'string',
+				'default' => 'cover'
+			),
+			'bpafbContainerOverlayColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBorderStyle' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbContainerBorderWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderRadius' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerHoverBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerHoverShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerHoverShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerHoverShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHideDesktop' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideTablet' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideMobile' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbAnimationType' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbAnimationDuration' => array(
+				'type' => 'number',
+				'default' => 800
+			),
+			'bpafbAnimationDelay' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbAnimationEasing' => array(
+				'type' => 'string',
+				'default' => 'ease'
+			),
+			'bpafbTransformRotate' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformScale' => array(
+				'type' => 'number',
+				'default' => 100
+			),
+			'bpafbTransformTranslateX' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformTranslateY' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHoverAnimation' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbFloatingEffect' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbZIndex' => array(
+				'type' => 'number'
+			),
+			'bpafbHtmlId' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbHtmlClasses' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbCustomCss' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerAlign' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerPaddingTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftMobile' => array(
+				'type' => 'number'
 			)
 		),
 		'supports' => array(
@@ -5284,6 +21520,252 @@ return array(
 			'textHoverColor' => array(
 				'type' => 'string',
 				'default' => ''
+			),
+			'bpafbUid' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbDisplay' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbOverflow' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbPosition' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerWidthUnit' => array(
+				'type' => 'string',
+				'default' => 'px'
+			),
+			'bpafbContainerMinHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMaxHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBgType' => array(
+				'type' => 'string',
+				'default' => 'color'
+			),
+			'bpafbContainerBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgGradient' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageId' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerBgImageSize' => array(
+				'type' => 'string',
+				'default' => 'cover'
+			),
+			'bpafbContainerOverlayColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBorderStyle' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbContainerBorderWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderRadius' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerHoverBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerHoverShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerHoverShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerHoverShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHideDesktop' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideTablet' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideMobile' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbAnimationType' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbAnimationDuration' => array(
+				'type' => 'number',
+				'default' => 800
+			),
+			'bpafbAnimationDelay' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbAnimationEasing' => array(
+				'type' => 'string',
+				'default' => 'ease'
+			),
+			'bpafbTransformRotate' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformScale' => array(
+				'type' => 'number',
+				'default' => 100
+			),
+			'bpafbTransformTranslateX' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformTranslateY' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHoverAnimation' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbFloatingEffect' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbZIndex' => array(
+				'type' => 'number'
+			),
+			'bpafbHtmlId' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbHtmlClasses' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbCustomCss' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerAlign' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerPaddingTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftMobile' => array(
+				'type' => 'number'
 			)
 		),
 		'supports' => array(
@@ -5345,6 +21827,252 @@ return array(
 			'columns' => array(
 				'type' => 'number',
 				'default' => 4
+			),
+			'bpafbUid' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbDisplay' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbOverflow' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbPosition' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerWidthUnit' => array(
+				'type' => 'string',
+				'default' => 'px'
+			),
+			'bpafbContainerMinHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMaxHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBgType' => array(
+				'type' => 'string',
+				'default' => 'color'
+			),
+			'bpafbContainerBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgGradient' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageId' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerBgImageSize' => array(
+				'type' => 'string',
+				'default' => 'cover'
+			),
+			'bpafbContainerOverlayColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBorderStyle' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbContainerBorderWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderRadius' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerHoverBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerHoverShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerHoverShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerHoverShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHideDesktop' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideTablet' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideMobile' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbAnimationType' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbAnimationDuration' => array(
+				'type' => 'number',
+				'default' => 800
+			),
+			'bpafbAnimationDelay' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbAnimationEasing' => array(
+				'type' => 'string',
+				'default' => 'ease'
+			),
+			'bpafbTransformRotate' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformScale' => array(
+				'type' => 'number',
+				'default' => 100
+			),
+			'bpafbTransformTranslateX' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformTranslateY' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHoverAnimation' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbFloatingEffect' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbZIndex' => array(
+				'type' => 'number'
+			),
+			'bpafbHtmlId' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbHtmlClasses' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbCustomCss' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerAlign' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerPaddingTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftMobile' => array(
+				'type' => 'number'
 			)
 		),
 		'supports' => array(
@@ -5380,6 +22108,252 @@ return array(
 			'showPriceRange' => array(
 				'type' => 'boolean',
 				'default' => true
+			),
+			'bpafbUid' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbDisplay' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbOverflow' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbPosition' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerWidthUnit' => array(
+				'type' => 'string',
+				'default' => 'px'
+			),
+			'bpafbContainerMinHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMaxHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBgType' => array(
+				'type' => 'string',
+				'default' => 'color'
+			),
+			'bpafbContainerBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgGradient' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageId' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerBgImageSize' => array(
+				'type' => 'string',
+				'default' => 'cover'
+			),
+			'bpafbContainerOverlayColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBorderStyle' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbContainerBorderWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderRadius' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerHoverBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerHoverShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerHoverShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerHoverShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHideDesktop' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideTablet' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideMobile' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbAnimationType' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbAnimationDuration' => array(
+				'type' => 'number',
+				'default' => 800
+			),
+			'bpafbAnimationDelay' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbAnimationEasing' => array(
+				'type' => 'string',
+				'default' => 'ease'
+			),
+			'bpafbTransformRotate' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformScale' => array(
+				'type' => 'number',
+				'default' => 100
+			),
+			'bpafbTransformTranslateX' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformTranslateY' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHoverAnimation' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbFloatingEffect' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbZIndex' => array(
+				'type' => 'number'
+			),
+			'bpafbHtmlId' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbHtmlClasses' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbCustomCss' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerAlign' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerPaddingTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftMobile' => array(
+				'type' => 'number'
 			)
 		),
 		'supports' => array(
