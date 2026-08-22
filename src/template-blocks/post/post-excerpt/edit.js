@@ -51,41 +51,39 @@ export default function Edit( { attributes, setAttributes } ) {
 				/>
 			</BlockControls>
 
-			<InspectorControls>
-				<InspectorTabs
-					general={
-						<PanelBody title={ __( 'Settings', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
-							<RangeControl
-								label={ __( 'Character Limit (0 = full excerpt)', 'blockive-premium-addon-for-block' ) }
-								value={ excerptLength }
-								onChange={ ( value ) => setAttributes( { excerptLength: value } ) }
-								min={ 0 }
-								max={ 1000 }
+			<InspectorTabs
+				general={
+					<PanelBody title={ __( 'Settings', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
+						<RangeControl
+							label={ __( 'Character Limit (0 = full excerpt)', 'blockive-premium-addon-for-block' ) }
+							value={ excerptLength }
+							onChange={ ( value ) => setAttributes( { excerptLength: value } ) }
+							min={ 0 }
+							max={ 1000 }
+						/>
+						<ToggleControl
+							label={ __( 'Show Read More Link', 'blockive-premium-addon-for-block' ) }
+							checked={ !! showReadMore }
+							onChange={ ( value ) => setAttributes( { showReadMore: value } ) }
+						/>
+						{ showReadMore && (
+							<TextControl
+								label={ __( 'Read More Text', 'blockive-premium-addon-for-block' ) }
+								value={ readMoreText }
+								onChange={ ( value ) => setAttributes( { readMoreText: value } ) }
 							/>
-							<ToggleControl
-								label={ __( 'Show Read More Link', 'blockive-premium-addon-for-block' ) }
-								checked={ !! showReadMore }
-								onChange={ ( value ) => setAttributes( { showReadMore: value } ) }
-							/>
-							{ showReadMore && (
-								<TextControl
-									label={ __( 'Read More Text', 'blockive-premium-addon-for-block' ) }
-									value={ readMoreText }
-									onChange={ ( value ) => setAttributes( { readMoreText: value } ) }
-								/>
-							) }
-						</PanelBody>
-					}
-					style={
-						<PanelBody title={ __( 'Style', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
-							<p className="bpafb-help-text">
-								{ __( 'Font, size, weight, color and other typography options are available in the native Styles panel above.', 'blockive-premium-addon-for-block' ) }
-							</p>
-						</PanelBody>
-					}
-					advanced={ <AdvancedTab attributes={ attributes } setAttributes={ setAttributes } /> }
-				/>
-			</InspectorControls>
+						) }
+					</PanelBody>
+				}
+				style={
+					<PanelBody title={ __( 'Style', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
+						<p className="bpafb-help-text">
+							{ __( 'Font, size, weight, color and other typography options are available in the native Styles panel above.', 'blockive-premium-addon-for-block' ) }
+						</p>
+					</PanelBody>
+				}
+				advanced={ <AdvancedTab attributes={ attributes } setAttributes={ setAttributes } /> }
+			/>
 
 			<p { ...blockProps }>
 				{ text }

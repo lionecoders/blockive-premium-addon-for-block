@@ -89,33 +89,31 @@ export default function Edit( { attributes, setAttributes } ) {
 
 	return (
 		<>
-			<InspectorControls>
-				<InspectorTabs
-					general={
-						<PanelBody title={ __( 'Meta Items', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
-							<p className="bpafb-help-text">
-								{ __( 'Drag to reorder. Toggle to show or hide.', 'blockive-premium-addon-for-block' ) }
-							</p>
-							<ReorderableItemsList items={ items } onChange={ ( next ) => setAttributes( { items: next } ) } />
-						</PanelBody>
-					}
-					style={
-						<PanelBody title={ __( 'Style', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
-							<TextControl
-								label={ __( 'Separator', 'blockive-premium-addon-for-block' ) }
-								value={ separator }
-								onChange={ ( value ) => setAttributes( { separator: value } ) }
-							/>
-							<ToggleControl
-								label={ __( 'Show Icons', 'blockive-premium-addon-for-block' ) }
-								checked={ !! showIcons }
-								onChange={ ( value ) => setAttributes( { showIcons: value } ) }
-							/>
-						</PanelBody>
-					}
-					advanced={ <AdvancedTab attributes={ attributes } setAttributes={ setAttributes } /> }
-				/>
-			</InspectorControls>
+			<InspectorTabs
+				general={
+					<PanelBody title={ __( 'Meta Items', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
+						<p className="bpafb-help-text">
+							{ __( 'Drag to reorder. Toggle to show or hide.', 'blockive-premium-addon-for-block' ) }
+						</p>
+						<ReorderableItemsList items={ items } onChange={ ( next ) => setAttributes( { items: next } ) } />
+					</PanelBody>
+				}
+				style={
+					<PanelBody title={ __( 'Style', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
+						<TextControl
+							label={ __( 'Separator', 'blockive-premium-addon-for-block' ) }
+							value={ separator }
+							onChange={ ( value ) => setAttributes( { separator: value } ) }
+						/>
+						<ToggleControl
+							label={ __( 'Show Icons', 'blockive-premium-addon-for-block' ) }
+							checked={ !! showIcons }
+							onChange={ ( value ) => setAttributes( { showIcons: value } ) }
+						/>
+					</PanelBody>
+				}
+				advanced={ <AdvancedTab attributes={ attributes } setAttributes={ setAttributes } /> }
+			/>
 
 			<div { ...blockProps }>
 				{ enabledItems.map( ( item, index ) => (

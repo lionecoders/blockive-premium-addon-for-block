@@ -23,34 +23,32 @@ export default function Edit( { attributes, setAttributes } ) {
 
 	return (
 		<>
-			<InspectorControls>
-				<InspectorTabs
-					general={
-						<PanelBody title={ __( 'Settings', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
-							<TextControl
-								label={ __( 'Date Format', 'blockive-premium-addon-for-block' ) }
-								value={ dateFormat }
-								onChange={ ( value ) => setAttributes( { dateFormat: value } ) }
-								help={ __( 'PHP date format string, e.g. F j, Y. Leave empty for the site default.', 'blockive-premium-addon-for-block' ) }
-							/>
-							<ToggleControl
-								label={ __( 'Relative Time', 'blockive-premium-addon-for-block' ) }
-								checked={ !! relative }
-								onChange={ ( value ) => setAttributes( { relative: value } ) }
-								help={ __( 'Show "2 days ago" style relative time instead of a formatted date.', 'blockive-premium-addon-for-block' ) }
-							/>
-						</PanelBody>
-					}
-					style={
-						<PanelBody title={ __( 'Style', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
-							<p className="bpafb-help-text">
-								{ __( 'Font size and text color options are available in the native Styles panel above.', 'blockive-premium-addon-for-block' ) }
-							</p>
-						</PanelBody>
-					}
-					advanced={ <AdvancedTab attributes={ attributes } setAttributes={ setAttributes } /> }
-				/>
-			</InspectorControls>
+			<InspectorTabs
+				general={
+					<PanelBody title={ __( 'Settings', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
+						<TextControl
+							label={ __( 'Date Format', 'blockive-premium-addon-for-block' ) }
+							value={ dateFormat }
+							onChange={ ( value ) => setAttributes( { dateFormat: value } ) }
+							help={ __( 'PHP date format string, e.g. F j, Y. Leave empty for the site default.', 'blockive-premium-addon-for-block' ) }
+						/>
+						<ToggleControl
+							label={ __( 'Relative Time', 'blockive-premium-addon-for-block' ) }
+							checked={ !! relative }
+							onChange={ ( value ) => setAttributes( { relative: value } ) }
+							help={ __( 'Show "2 days ago" style relative time instead of a formatted date.', 'blockive-premium-addon-for-block' ) }
+						/>
+					</PanelBody>
+				}
+				style={
+					<PanelBody title={ __( 'Style', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
+						<p className="bpafb-help-text">
+							{ __( 'Font size and text color options are available in the native Styles panel above.', 'blockive-premium-addon-for-block' ) }
+						</p>
+					</PanelBody>
+				}
+				advanced={ <AdvancedTab attributes={ attributes } setAttributes={ setAttributes } /> }
+			/>
 
 			<span { ...blockProps }>
 				<time>{ previewDateText }</time>

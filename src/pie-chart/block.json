@@ -308,14 +308,6 @@
 			"full"
 		],
 		"html": false,
-		"spacing": {
-			"margin": true,
-			"padding": true,
-			"__experimentalDefaultControls": {
-				"margin": true,
-				"padding": true
-			}
-		},
 		"anchor": true
 	},
 	"textdomain": "blockive-premium-addon-for-block",

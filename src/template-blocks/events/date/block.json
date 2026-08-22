@@ -298,10 +298,6 @@
 				"fontSize": true
 			}
 		},
-		"spacing": {
-			"margin": true,
-			"padding": true
-		},
 		"anchor": true
 	},
 	"render": "file:./render.php"

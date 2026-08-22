@@ -25,43 +25,41 @@ export default function Edit( { attributes, setAttributes } ) {
 
 	return (
 		<>
-			<InspectorControls>
-				<InspectorTabs
-					general={
-						<PanelBody title={ __( 'Video', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
-							<TextControl
-								label={ __( 'Featured Video Meta Key', 'blockive-premium-addon-for-block' ) }
-								value={ metaKey }
-								onChange={ ( value ) => setAttributes( { metaKey: value } ) }
-								help={ __( 'Reads this post meta key first, if it holds a URL.', 'blockive-premium-addon-for-block' ) }
-							/>
-							<ToggleControl
-								label={ __( 'Auto Detect', 'blockive-premium-addon-for-block' ) }
-								checked={ !! autoDetect }
-								onChange={ ( value ) => setAttributes( { autoDetect: value } ) }
-								help={ __( 'Use a video found in the post content or the featured media, if it is a video.', 'blockive-premium-addon-for-block' ) }
-							/>
-							<TextControl
-								label={ __( 'Video URL (fallback)', 'blockive-premium-addon-for-block' ) }
-								value={ videoUrl }
-								onChange={ ( value ) => setAttributes( { videoUrl: value } ) }
-								help={ __( 'YouTube, Vimeo, or a direct .mp4/.webm/.ogg URL. Used when no meta value or auto-detected video is found.', 'blockive-premium-addon-for-block' ) }
-							/>
-						</PanelBody>
-					}
-					style={
-						<PanelBody title={ __( 'Style', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
-							<SelectControl
-								label={ __( 'Aspect Ratio', 'blockive-premium-addon-for-block' ) }
-								value={ aspectRatio }
-								options={ ASPECT_OPTIONS }
-								onChange={ ( value ) => setAttributes( { aspectRatio: value } ) }
-							/>
-						</PanelBody>
-					}
-					advanced={ <AdvancedTab attributes={ attributes } setAttributes={ setAttributes } /> }
-				/>
-			</InspectorControls>
+			<InspectorTabs
+				general={
+					<PanelBody title={ __( 'Video', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
+						<TextControl
+							label={ __( 'Featured Video Meta Key', 'blockive-premium-addon-for-block' ) }
+							value={ metaKey }
+							onChange={ ( value ) => setAttributes( { metaKey: value } ) }
+							help={ __( 'Reads this post meta key first, if it holds a URL.', 'blockive-premium-addon-for-block' ) }
+						/>
+						<ToggleControl
+							label={ __( 'Auto Detect', 'blockive-premium-addon-for-block' ) }
+							checked={ !! autoDetect }
+							onChange={ ( value ) => setAttributes( { autoDetect: value } ) }
+							help={ __( 'Use a video found in the post content or the featured media, if it is a video.', 'blockive-premium-addon-for-block' ) }
+						/>
+						<TextControl
+							label={ __( 'Video URL (fallback)', 'blockive-premium-addon-for-block' ) }
+							value={ videoUrl }
+							onChange={ ( value ) => setAttributes( { videoUrl: value } ) }
+							help={ __( 'YouTube, Vimeo, or a direct .mp4/.webm/.ogg URL. Used when no meta value or auto-detected video is found.', 'blockive-premium-addon-for-block' ) }
+						/>
+					</PanelBody>
+				}
+				style={
+					<PanelBody title={ __( 'Style', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
+						<SelectControl
+							label={ __( 'Aspect Ratio', 'blockive-premium-addon-for-block' ) }
+							value={ aspectRatio }
+							options={ ASPECT_OPTIONS }
+							onChange={ ( value ) => setAttributes( { aspectRatio: value } ) }
+						/>
+					</PanelBody>
+				}
+				advanced={ <AdvancedTab attributes={ attributes } setAttributes={ setAttributes } /> }
+			/>
 
 			<div { ...blockProps }>
 				<div className="bpafb-tb-featured-video-placeholder">

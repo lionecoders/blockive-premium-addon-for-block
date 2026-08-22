@@ -8,30 +8,9 @@
 	"icon": "email-alt",
 	"description": "Contact Form 7 integration block.",
 	"supports": {
-		"color": {
-			"text": false,
-			"background": true,
-			"link": false
-		},
 		"typography": {
 			"fontSize": true,
 			"lineHeight": true
-		},
-		"spacing": {
-			"margin": true,
-			"padding": true
-		},
-		"__experimentalBorder": {
-			"radius": true,
-			"color": true,
-			"width": true,
-			"style": true,
-			"__experimentalDefaultControls": {
-				"radius": true,
-				"color": true,
-				"width": true,
-				"style": true
-			}
 		},
 		"anchor": true
 	},

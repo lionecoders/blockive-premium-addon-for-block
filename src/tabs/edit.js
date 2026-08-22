@@ -75,59 +75,57 @@ export default function Edit({ attributes, setAttributes }) {
 
 	return (
 		<>
-			<InspectorControls>
-				<InspectorTabs
-					general={(
-				<PanelBody title={__('Tabs Items', 'blockive-premium-addon-for-block')} initialOpen={true}>
-					{items.map((item, index) => (
-						<div key={item.id} style={{ marginBottom: '15px', border: '1px solid #ddd', padding: '10px' }}>
-							<TextControl
-								label={__('Title', 'blockive-premium-addon-for-block')}
-								value={item.title}
-								onChange={(val) => updateItem(index, 'title', val)}
-							/>
-							<Button isDestructive onClick={() => removeItem(index)} disabled={items.length <= 1}>
-								{__('Remove Item', 'blockive-premium-addon-for-block')}
-							</Button>
-						</div>
-					))}
-					<Button isPrimary onClick={addItem}>
-						{__('Add Tab', 'blockive-premium-addon-for-block')}
-					</Button>
-				</PanelBody>
-					)}
-					style={(
-				<PanelBody title={__('Colors & Styles', 'blockive-premium-addon-for-block')} initialOpen={true}>
-					<RangeControl
-						label={__('Tab Border Radius', 'blockive-premium-addon-for-block')}
-						value={tabBorderRadius}
-						onChange={(val) => setAttributes({ tabBorderRadius: val })}
-						min={0}
-						max={30}
-					/>
-					<BaseControl label={__('Tabs Track Background', 'blockive-premium-addon-for-block')}>
-						<ColorPalette value={tabBgColor} onChange={(val) => setAttributes({ tabBgColor: val })} />
-					</BaseControl>
-					<BaseControl label={__('Active Tab Background', 'blockive-premium-addon-for-block')}>
-						<ColorPalette value={tabActiveColor} onChange={(val) => setAttributes({ tabActiveColor: val })} />
-					</BaseControl>
-					<BaseControl label={__('Tab Text Color', 'blockive-premium-addon-for-block')}>
-						<ColorPalette value={textColor} onChange={(val) => setAttributes({ textColor: val })} />
-					</BaseControl>
-					<BaseControl label={__('Active Tab Text Color', 'blockive-premium-addon-for-block')}>
-						<ColorPalette value={textActiveColor} onChange={(val) => setAttributes({ textActiveColor: val })} />
-					</BaseControl>
-					<BaseControl label={__('Content Background', 'blockive-premium-addon-for-block')}>
-						<ColorPalette value={contentBgColor} onChange={(val) => setAttributes({ contentBgColor: val })} />
-					</BaseControl>
-					<BaseControl label={__('Content Text Color', 'blockive-premium-addon-for-block')}>
-						<ColorPalette value={contentTextColor} onChange={(val) => setAttributes({ contentTextColor: val })} />
-					</BaseControl>
-				</PanelBody>
-					)}
-					advanced={<AdvancedTab attributes={attributes} setAttributes={setAttributes} />}
+			<InspectorTabs
+				general={(
+			<PanelBody title={__('Tabs Items', 'blockive-premium-addon-for-block')} initialOpen={true}>
+				{items.map((item, index) => (
+					<div key={item.id} style={{ marginBottom: '15px', border: '1px solid #ddd', padding: '10px' }}>
+						<TextControl
+							label={__('Title', 'blockive-premium-addon-for-block')}
+							value={item.title}
+							onChange={(val) => updateItem(index, 'title', val)}
+						/>
+						<Button isDestructive onClick={() => removeItem(index)} disabled={items.length <= 1}>
+							{__('Remove Item', 'blockive-premium-addon-for-block')}
+						</Button>
+					</div>
+				))}
+				<Button isPrimary onClick={addItem}>
+					{__('Add Tab', 'blockive-premium-addon-for-block')}
+				</Button>
+			</PanelBody>
+				)}
+				style={(
+			<PanelBody title={__('Colors & Styles', 'blockive-premium-addon-for-block')} initialOpen={true}>
+				<RangeControl
+					label={__('Tab Border Radius', 'blockive-premium-addon-for-block')}
+					value={tabBorderRadius}
+					onChange={(val) => setAttributes({ tabBorderRadius: val })}
+					min={0}
+					max={30}
 				/>
-			</InspectorControls>
+				<BaseControl label={__('Tabs Track Background', 'blockive-premium-addon-for-block')}>
+					<ColorPalette value={tabBgColor} onChange={(val) => setAttributes({ tabBgColor: val })} />
+				</BaseControl>
+				<BaseControl label={__('Active Tab Background', 'blockive-premium-addon-for-block')}>
+					<ColorPalette value={tabActiveColor} onChange={(val) => setAttributes({ tabActiveColor: val })} />
+				</BaseControl>
+				<BaseControl label={__('Tab Text Color', 'blockive-premium-addon-for-block')}>
+					<ColorPalette value={textColor} onChange={(val) => setAttributes({ textColor: val })} />
+				</BaseControl>
+				<BaseControl label={__('Active Tab Text Color', 'blockive-premium-addon-for-block')}>
+					<ColorPalette value={textActiveColor} onChange={(val) => setAttributes({ textActiveColor: val })} />
+				</BaseControl>
+				<BaseControl label={__('Content Background', 'blockive-premium-addon-for-block')}>
+					<ColorPalette value={contentBgColor} onChange={(val) => setAttributes({ contentBgColor: val })} />
+				</BaseControl>
+				<BaseControl label={__('Content Text Color', 'blockive-premium-addon-for-block')}>
+					<ColorPalette value={contentTextColor} onChange={(val) => setAttributes({ contentTextColor: val })} />
+				</BaseControl>
+			</PanelBody>
+				)}
+				advanced={<AdvancedTab attributes={attributes} setAttributes={setAttributes} />}
+			/>
 
 			<div {...blockProps}>
 				<div className="bpafb-tabs-nav-track">

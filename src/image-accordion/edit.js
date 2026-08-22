@@ -82,130 +82,128 @@ export default function Edit({ attributes, setAttributes }) {
 
 	return (
 		<>
-			<InspectorControls>
-				<InspectorTabs
-					general={(
-						<>
-				<PanelBody title={__('Image Accordion Items', 'blockive-premium-addon-for-block')} initialOpen={true}>
-					{items.map((item, index) => (
-						<div key={item.id} style={{ marginBottom: '15px', border: '1px solid #ddd', padding: '10px' }}>
-							<TextControl
-								label={__('Title', 'blockive-premium-addon-for-block')}
-								value={item.title}
-								onChange={(val) => updateItem(index, 'title', val)}
-							/>
-							<TextareaControl
-								label={__('Description', 'blockive-premium-addon-for-block')}
-								value={item.content}
-								onChange={(val) => updateItem(index, 'content', val)}
-							/>
-							<div style={{ marginBottom: '10px' }}>
-								<MediaUploadCheck>
-									<MediaUpload
-										onSelect={(media) => updateItem(index, 'imageUrl', media.url)}
-										allowedTypes={['image']}
-										value={item.imageUrl}
-										render={({ open }) => (
-											<Button onClick={open} isPrimary>
-												{item.imageUrl ? __('Change Image', 'blockive-premium-addon-for-block') : __('Select Image', 'blockive-premium-addon-for-block')}
-											</Button>
-										)}
-									/>
-								</MediaUploadCheck>
-							</div>
-							<Button isDestructive onClick={() => removeItem(index)}>
-								{__('Remove Item', 'blockive-premium-addon-for-block')}
-							</Button>
+			<InspectorTabs
+				general={(
+					<>
+			<PanelBody title={__('Image Accordion Items', 'blockive-premium-addon-for-block')} initialOpen={true}>
+				{items.map((item, index) => (
+					<div key={item.id} style={{ marginBottom: '15px', border: '1px solid #ddd', padding: '10px' }}>
+						<TextControl
+							label={__('Title', 'blockive-premium-addon-for-block')}
+							value={item.title}
+							onChange={(val) => updateItem(index, 'title', val)}
+						/>
+						<TextareaControl
+							label={__('Description', 'blockive-premium-addon-for-block')}
+							value={item.content}
+							onChange={(val) => updateItem(index, 'content', val)}
+						/>
+						<div style={{ marginBottom: '10px' }}>
+							<MediaUploadCheck>
+								<MediaUpload
+									onSelect={(media) => updateItem(index, 'imageUrl', media.url)}
+									allowedTypes={['image']}
+									value={item.imageUrl}
+									render={({ open }) => (
+										<Button onClick={open} isPrimary>
+											{item.imageUrl ? __('Change Image', 'blockive-premium-addon-for-block') : __('Select Image', 'blockive-premium-addon-for-block')}
+										</Button>
+									)}
+								/>
+							</MediaUploadCheck>
 						</div>
-					))}
-					<Button isPrimary onClick={addItem}>
-						{__('Add Item', 'blockive-premium-addon-for-block')}
-					</Button>
-				</PanelBody>
+						<Button isDestructive onClick={() => removeItem(index)}>
+							{__('Remove Item', 'blockive-premium-addon-for-block')}
+						</Button>
+					</div>
+				))}
+				<Button isPrimary onClick={addItem}>
+					{__('Add Item', 'blockive-premium-addon-for-block')}
+				</Button>
+			</PanelBody>
 
-				<PanelBody title={__('Settings', 'blockive-premium-addon-for-block')}>
-					<ToggleControl
-						label={__('Show Title', 'blockive-premium-addon-for-block')}
-						checked={showTitle}
-						onChange={(val) => setAttributes({ showTitle: val })}
-					/>
-					<ToggleControl
-						label={__('Show Description', 'blockive-premium-addon-for-block')}
-						checked={showContent}
-						onChange={(val) => setAttributes({ showContent: val })}
-					/>
-				</PanelBody>
-						</>
-					)}
-					style={(
-						<>
-				<PanelBody title={__('Styling', 'blockive-premium-addon-for-block')} initialOpen={true}>
-					<div style={{ marginBottom: '15px' }}>
-						<label>{__('Title Color', 'blockive-premium-addon-for-block')}</label>
-						<ColorPalette
-							value={titleColor}
-							onChange={(val) => setAttributes({ titleColor: val })}
-						/>
-					</div>
-					<div style={{ marginBottom: '15px' }}>
-						<label>{__('Content Color', 'blockive-premium-addon-for-block')}</label>
-						<ColorPalette
-							value={contentColor}
-							onChange={(val) => setAttributes({ contentColor: val })}
-						/>
-					</div>
-					<TextControl
-						label={__('Height', 'blockive-premium-addon-for-block')}
-						value={height}
-						onChange={(val) => setAttributes({ height: val })}
-						help={__('e.g. 400px, 50vh', 'blockive-premium-addon-for-block')}
-					/>
-					<TextControl
-						label={__('Animation Duration', 'blockive-premium-addon-for-block')}
-						value={animationDuration}
-						onChange={(val) => setAttributes({ animationDuration: val })}
-						help={__('e.g. 0.3s, 500ms', 'blockive-premium-addon-for-block')}
-					/>
-					<RangeControl
-						label={__('Overlay Opacity', 'blockive-premium-addon-for-block')}
-						value={overlayOpacity}
-						onChange={(val) => setAttributes({ overlayOpacity: val })}
-						min={0}
-						max={1}
-						step={0.1}
-					/>
-					<SelectControl
-						label={__('Image Size', 'blockive-premium-addon-for-block')}
-						value={imageSize}
-						options={[
-							{ label: __('Cover', 'blockive-premium-addon-for-block'), value: 'cover' },
-							{ label: __('Contain', 'blockive-premium-addon-for-block'), value: 'contain' },
-							{ label: __('Auto', 'blockive-premium-addon-for-block'), value: 'auto' },
-						]}
-						onChange={(val) => setAttributes({ imageSize: val })}
-					/>
-					<SelectControl
-						label={__('Image Position', 'blockive-premium-addon-for-block')}
-						value={imagePosition}
-						options={[
-							{ label: __('Center Center', 'blockive-premium-addon-for-block'), value: 'center center' },
-							{ label: __('Center Top', 'blockive-premium-addon-for-block'), value: 'center top' },
-							{ label: __('Center Bottom', 'blockive-premium-addon-for-block'), value: 'center bottom' },
-							{ label: __('Left Center', 'blockive-premium-addon-for-block'), value: 'left center' },
-							{ label: __('Left Top', 'blockive-premium-addon-for-block'), value: 'left top' },
-							{ label: __('Left Bottom', 'blockive-premium-addon-for-block'), value: 'left bottom' },
-							{ label: __('Right Center', 'blockive-premium-addon-for-block'), value: 'right center' },
-							{ label: __('Right Top', 'blockive-premium-addon-for-block'), value: 'right top' },
-							{ label: __('Right Bottom', 'blockive-premium-addon-for-block'), value: 'right bottom' },
-						]}
-						onChange={(val) => setAttributes({ imagePosition: val })}
-					/>
-				</PanelBody>
-						</>
-					)}
-					advanced={<AdvancedTab attributes={attributes} setAttributes={setAttributes} />}
+			<PanelBody title={__('Settings', 'blockive-premium-addon-for-block')}>
+				<ToggleControl
+					label={__('Show Title', 'blockive-premium-addon-for-block')}
+					checked={showTitle}
+					onChange={(val) => setAttributes({ showTitle: val })}
 				/>
-			</InspectorControls>
+				<ToggleControl
+					label={__('Show Description', 'blockive-premium-addon-for-block')}
+					checked={showContent}
+					onChange={(val) => setAttributes({ showContent: val })}
+				/>
+			</PanelBody>
+					</>
+				)}
+				style={(
+					<>
+			<PanelBody title={__('Styling', 'blockive-premium-addon-for-block')} initialOpen={true}>
+				<div style={{ marginBottom: '15px' }}>
+					<label>{__('Title Color', 'blockive-premium-addon-for-block')}</label>
+					<ColorPalette
+						value={titleColor}
+						onChange={(val) => setAttributes({ titleColor: val })}
+					/>
+				</div>
+				<div style={{ marginBottom: '15px' }}>
+					<label>{__('Content Color', 'blockive-premium-addon-for-block')}</label>
+					<ColorPalette
+						value={contentColor}
+						onChange={(val) => setAttributes({ contentColor: val })}
+					/>
+				</div>
+				<TextControl
+					label={__('Height', 'blockive-premium-addon-for-block')}
+					value={height}
+					onChange={(val) => setAttributes({ height: val })}
+					help={__('e.g. 400px, 50vh', 'blockive-premium-addon-for-block')}
+				/>
+				<TextControl
+					label={__('Animation Duration', 'blockive-premium-addon-for-block')}
+					value={animationDuration}
+					onChange={(val) => setAttributes({ animationDuration: val })}
+					help={__('e.g. 0.3s, 500ms', 'blockive-premium-addon-for-block')}
+				/>
+				<RangeControl
+					label={__('Overlay Opacity', 'blockive-premium-addon-for-block')}
+					value={overlayOpacity}
+					onChange={(val) => setAttributes({ overlayOpacity: val })}
+					min={0}
+					max={1}
+					step={0.1}
+				/>
+				<SelectControl
+					label={__('Image Size', 'blockive-premium-addon-for-block')}
+					value={imageSize}
+					options={[
+						{ label: __('Cover', 'blockive-premium-addon-for-block'), value: 'cover' },
+						{ label: __('Contain', 'blockive-premium-addon-for-block'), value: 'contain' },
+						{ label: __('Auto', 'blockive-premium-addon-for-block'), value: 'auto' },
+					]}
+					onChange={(val) => setAttributes({ imageSize: val })}
+				/>
+				<SelectControl
+					label={__('Image Position', 'blockive-premium-addon-for-block')}
+					value={imagePosition}
+					options={[
+						{ label: __('Center Center', 'blockive-premium-addon-for-block'), value: 'center center' },
+						{ label: __('Center Top', 'blockive-premium-addon-for-block'), value: 'center top' },
+						{ label: __('Center Bottom', 'blockive-premium-addon-for-block'), value: 'center bottom' },
+						{ label: __('Left Center', 'blockive-premium-addon-for-block'), value: 'left center' },
+						{ label: __('Left Top', 'blockive-premium-addon-for-block'), value: 'left top' },
+						{ label: __('Left Bottom', 'blockive-premium-addon-for-block'), value: 'left bottom' },
+						{ label: __('Right Center', 'blockive-premium-addon-for-block'), value: 'right center' },
+						{ label: __('Right Top', 'blockive-premium-addon-for-block'), value: 'right top' },
+						{ label: __('Right Bottom', 'blockive-premium-addon-for-block'), value: 'right bottom' },
+					]}
+					onChange={(val) => setAttributes({ imagePosition: val })}
+				/>
+			</PanelBody>
+					</>
+				)}
+				advanced={<AdvancedTab attributes={attributes} setAttributes={setAttributes} />}
+			/>
 
 			<div {...blockProps}>
 				<div className="bpafb-image-accordion">

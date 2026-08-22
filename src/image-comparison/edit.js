@@ -49,134 +49,132 @@ export default function Edit({ attributes, setAttributes }) {
 
 	return (
 		<>
-			<InspectorControls>
-				<InspectorTabs
-					general={(
-						<>
-				<PanelBody title={__('Images', 'blockive-premium-addon-for-block')} initialOpen={true}>
-					<div style={{ marginBottom: '15px' }}>
-						<label style={{ display: 'block', marginBottom: '8px' }}>{__('Before Image', 'blockive-premium-addon-for-block')}</label>
-						<MediaUploadCheck>
-							<MediaUpload
-								onSelect={(media) => setAttributes({ beforeImage: media.url })}
-								allowedTypes={['image']}
-								value={beforeImage}
-								render={({ open }) => (
-									<Button onClick={open} isPrimary>
-										{beforeImage ? __('Change Image', 'blockive-premium-addon-for-block') : __('Select Image', 'blockive-premium-addon-for-block')}
-									</Button>
-								)}
-							/>
-						</MediaUploadCheck>
-					</div>
-
-					<div style={{ marginBottom: '15px' }}>
-						<label style={{ display: 'block', marginBottom: '8px' }}>{__('After Image', 'blockive-premium-addon-for-block')}</label>
-						<MediaUploadCheck>
-							<MediaUpload
-								onSelect={(media) => setAttributes({ afterImage: media.url })}
-								allowedTypes={['image']}
-								value={afterImage}
-								render={({ open }) => (
-									<Button onClick={open} isPrimary>
-										{afterImage ? __('Change Image', 'blockive-premium-addon-for-block') : __('Select Image', 'blockive-premium-addon-for-block')}
-									</Button>
-								)}
-							/>
-						</MediaUploadCheck>
-					</div>
-				</PanelBody>
-
-				<PanelBody title={__('Settings', 'blockive-premium-addon-for-block')}>
-					<ToggleControl
-						label={__('Show Labels', 'blockive-premium-addon-for-block')}
-						checked={showLabels}
-						onChange={(val) => setAttributes({ showLabels: val })}
-					/>
-
-					{showLabels && (
-						<>
-							<TextControl
-								label={__('Before Label', 'blockive-premium-addon-for-block')}
-								value={beforeLabel}
-								onChange={(val) => setAttributes({ beforeLabel: val })}
-							/>
-							<TextControl
-								label={__('After Label', 'blockive-premium-addon-for-block')}
-								value={afterLabel}
-								onChange={(val) => setAttributes({ afterLabel: val })}
-							/>
-							<SelectControl
-								label={__('Label Position', 'blockive-premium-addon-for-block')}
-								value={labelPosition}
-								options={[
-									{ label: __('Top', 'blockive-premium-addon-for-block'), value: 'top' },
-									{ label: __('Center', 'blockive-premium-addon-for-block'), value: 'center' },
-									{ label: __('Bottom', 'blockive-premium-addon-for-block'), value: 'bottom' },
-								]}
-								onChange={(val) => setAttributes({ labelPosition: val })}
-							/>
-						</>
-					)}
-
-					<RangeControl
-						label={__('Initial Slider Position (%)', 'blockive-premium-addon-for-block')}
-						value={sliderPosition}
-						onChange={(val) => setAttributes({ sliderPosition: val })}
-						min={0}
-						max={100}
-						step={1}
-					/>
-
-					<TextControl
-						label={__('Height (e.g., 400px)', 'blockive-premium-addon-for-block')}
-						value={height}
-						onChange={(val) => setAttributes({ height: val })}
-					/>
-				</PanelBody>
-						</>
-					)}
-					style={(
-						<>
-				<PanelBody title={__('Colors', 'blockive-premium-addon-for-block')} initialOpen={true}>
-					<div style={{ marginBottom: '15px' }}>
-						<label>{__('Separator Color', 'blockive-premium-addon-for-block')}</label>
-						<ColorPalette
-							value={separatorColor}
-							onChange={(val) => setAttributes({ separatorColor: val })}
+			<InspectorTabs
+				general={(
+					<>
+			<PanelBody title={__('Images', 'blockive-premium-addon-for-block')} initialOpen={true}>
+				<div style={{ marginBottom: '15px' }}>
+					<label style={{ display: 'block', marginBottom: '8px' }}>{__('Before Image', 'blockive-premium-addon-for-block')}</label>
+					<MediaUploadCheck>
+						<MediaUpload
+							onSelect={(media) => setAttributes({ beforeImage: media.url })}
+							allowedTypes={['image']}
+							value={beforeImage}
+							render={({ open }) => (
+								<Button onClick={open} isPrimary>
+									{beforeImage ? __('Change Image', 'blockive-premium-addon-for-block') : __('Select Image', 'blockive-premium-addon-for-block')}
+								</Button>
+							)}
 						/>
-					</div>
-					<div style={{ marginBottom: '15px' }}>
-						<label>{__('Arrow Color', 'blockive-premium-addon-for-block')}</label>
-						<ColorPalette
-							value={arrowColor}
-							onChange={(val) => setAttributes({ arrowColor: val })}
+					</MediaUploadCheck>
+				</div>
+
+				<div style={{ marginBottom: '15px' }}>
+					<label style={{ display: 'block', marginBottom: '8px' }}>{__('After Image', 'blockive-premium-addon-for-block')}</label>
+					<MediaUploadCheck>
+						<MediaUpload
+							onSelect={(media) => setAttributes({ afterImage: media.url })}
+							allowedTypes={['image']}
+							value={afterImage}
+							render={({ open }) => (
+								<Button onClick={open} isPrimary>
+									{afterImage ? __('Change Image', 'blockive-premium-addon-for-block') : __('Select Image', 'blockive-premium-addon-for-block')}
+								</Button>
+							)}
 						/>
-					</div>
-					{showLabels && (
-						<>
-							<div style={{ marginBottom: '15px' }}>
-								<label>{__('Label Text Color', 'blockive-premium-addon-for-block')}</label>
-								<ColorPalette
-									value={labelColor}
-									onChange={(val) => setAttributes({ labelColor: val })}
-								/>
-							</div>
-							<div style={{ marginBottom: '15px' }}>
-								<label>{__('Label Background Color', 'blockive-premium-addon-for-block')}</label>
-								<ColorPalette
-									value={labelBackgroundColor}
-									onChange={(val) => setAttributes({ labelBackgroundColor: val })}
-								/>
-							</div>
-						</>
-					)}
-				</PanelBody>
-						</>
-					)}
-					advanced={<AdvancedTab attributes={attributes} setAttributes={setAttributes} />}
+					</MediaUploadCheck>
+				</div>
+			</PanelBody>
+
+			<PanelBody title={__('Settings', 'blockive-premium-addon-for-block')}>
+				<ToggleControl
+					label={__('Show Labels', 'blockive-premium-addon-for-block')}
+					checked={showLabels}
+					onChange={(val) => setAttributes({ showLabels: val })}
 				/>
-			</InspectorControls>
+
+				{showLabels && (
+					<>
+						<TextControl
+							label={__('Before Label', 'blockive-premium-addon-for-block')}
+							value={beforeLabel}
+							onChange={(val) => setAttributes({ beforeLabel: val })}
+						/>
+						<TextControl
+							label={__('After Label', 'blockive-premium-addon-for-block')}
+							value={afterLabel}
+							onChange={(val) => setAttributes({ afterLabel: val })}
+						/>
+						<SelectControl
+							label={__('Label Position', 'blockive-premium-addon-for-block')}
+							value={labelPosition}
+							options={[
+								{ label: __('Top', 'blockive-premium-addon-for-block'), value: 'top' },
+								{ label: __('Center', 'blockive-premium-addon-for-block'), value: 'center' },
+								{ label: __('Bottom', 'blockive-premium-addon-for-block'), value: 'bottom' },
+							]}
+							onChange={(val) => setAttributes({ labelPosition: val })}
+						/>
+					</>
+				)}
+
+				<RangeControl
+					label={__('Initial Slider Position (%)', 'blockive-premium-addon-for-block')}
+					value={sliderPosition}
+					onChange={(val) => setAttributes({ sliderPosition: val })}
+					min={0}
+					max={100}
+					step={1}
+				/>
+
+				<TextControl
+					label={__('Height (e.g., 400px)', 'blockive-premium-addon-for-block')}
+					value={height}
+					onChange={(val) => setAttributes({ height: val })}
+				/>
+			</PanelBody>
+					</>
+				)}
+				style={(
+					<>
+			<PanelBody title={__('Colors', 'blockive-premium-addon-for-block')} initialOpen={true}>
+				<div style={{ marginBottom: '15px' }}>
+					<label>{__('Separator Color', 'blockive-premium-addon-for-block')}</label>
+					<ColorPalette
+						value={separatorColor}
+						onChange={(val) => setAttributes({ separatorColor: val })}
+					/>
+				</div>
+				<div style={{ marginBottom: '15px' }}>
+					<label>{__('Arrow Color', 'blockive-premium-addon-for-block')}</label>
+					<ColorPalette
+						value={arrowColor}
+						onChange={(val) => setAttributes({ arrowColor: val })}
+					/>
+				</div>
+				{showLabels && (
+					<>
+						<div style={{ marginBottom: '15px' }}>
+							<label>{__('Label Text Color', 'blockive-premium-addon-for-block')}</label>
+							<ColorPalette
+								value={labelColor}
+								onChange={(val) => setAttributes({ labelColor: val })}
+							/>
+						</div>
+						<div style={{ marginBottom: '15px' }}>
+							<label>{__('Label Background Color', 'blockive-premium-addon-for-block')}</label>
+							<ColorPalette
+								value={labelBackgroundColor}
+								onChange={(val) => setAttributes({ labelBackgroundColor: val })}
+							/>
+						</div>
+					</>
+				)}
+			</PanelBody>
+					</>
+				)}
+				advanced={<AdvancedTab attributes={attributes} setAttributes={setAttributes} />}
+			/>
 
 			<div
 				{...blockProps}

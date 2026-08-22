@@ -43,37 +43,35 @@ export default function Edit( { attributes, setAttributes } ) {
 
 	return (
 		<>
-			<InspectorControls>
-				<InspectorTabs
-					general={
-						<PanelBody title={ __( 'Tabs', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
-							<ToggleControl
-								label={ __( 'Show Description Tab', 'blockive-premium-addon-for-block' ) }
-								checked={ !! showDescriptionTab }
-								onChange={ ( value ) => setAttributes( { showDescriptionTab: value } ) }
-							/>
-							<ToggleControl
-								label={ __( 'Show Additional Information Tab', 'blockive-premium-addon-for-block' ) }
-								checked={ !! showAttributesTab }
-								onChange={ ( value ) => setAttributes( { showAttributesTab: value } ) }
-							/>
-							<ToggleControl
-								label={ __( 'Show Reviews Tab', 'blockive-premium-addon-for-block' ) }
-								checked={ !! showReviewsTab }
-								onChange={ ( value ) => setAttributes( { showReviewsTab: value } ) }
-							/>
-						</PanelBody>
-					}
-					style={
-						<PanelBody title={ __( 'Style', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
-							<p className="bpafb-help-text">
-								{ __( 'Tab colors follow the theme defaults; use Advanced > Custom CSS for further styling.', 'blockive-premium-addon-for-block' ) }
-							</p>
-						</PanelBody>
-					}
-					advanced={ <AdvancedTab attributes={ attributes } setAttributes={ setAttributes } /> }
-				/>
-			</InspectorControls>
+			<InspectorTabs
+				general={
+					<PanelBody title={ __( 'Tabs', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
+						<ToggleControl
+							label={ __( 'Show Description Tab', 'blockive-premium-addon-for-block' ) }
+							checked={ !! showDescriptionTab }
+							onChange={ ( value ) => setAttributes( { showDescriptionTab: value } ) }
+						/>
+						<ToggleControl
+							label={ __( 'Show Additional Information Tab', 'blockive-premium-addon-for-block' ) }
+							checked={ !! showAttributesTab }
+							onChange={ ( value ) => setAttributes( { showAttributesTab: value } ) }
+						/>
+						<ToggleControl
+							label={ __( 'Show Reviews Tab', 'blockive-premium-addon-for-block' ) }
+							checked={ !! showReviewsTab }
+							onChange={ ( value ) => setAttributes( { showReviewsTab: value } ) }
+						/>
+					</PanelBody>
+				}
+				style={
+					<PanelBody title={ __( 'Style', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
+						<p className="bpafb-help-text">
+							{ __( 'Tab colors follow the theme defaults; use Advanced > Custom CSS for further styling.', 'blockive-premium-addon-for-block' ) }
+						</p>
+					</PanelBody>
+				}
+				advanced={ <AdvancedTab attributes={ attributes } setAttributes={ setAttributes } /> }
+			/>
 
 			<div { ...blockProps }>
 				{ tabs.length === 0 ? (

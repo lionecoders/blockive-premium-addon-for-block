@@ -38,40 +38,38 @@ export default function Edit( { attributes, setAttributes } ) {
 				/>
 			</BlockControls>
 
-			<InspectorControls>
-				<InspectorTabs
-					general={
-						<PanelBody title={ __( 'Settings', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
-							<SelectControl
-								label={ __( 'Display Format', 'blockive-premium-addon-for-block' ) }
-								value={ displayFormat }
-								options={ DISPLAY_FORMAT_OPTIONS }
-								onChange={ ( value ) => setAttributes( { displayFormat: value } ) }
-							/>
+			<InspectorTabs
+				general={
+					<PanelBody title={ __( 'Settings', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
+						<SelectControl
+							label={ __( 'Display Format', 'blockive-premium-addon-for-block' ) }
+							value={ displayFormat }
+							options={ DISPLAY_FORMAT_OPTIONS }
+							onChange={ ( value ) => setAttributes( { displayFormat: value } ) }
+						/>
+						<ToggleControl
+							label={ __( 'Link to Author Archive', 'blockive-premium-addon-for-block' ) }
+							checked={ !! isLink }
+							onChange={ ( value ) => setAttributes( { isLink: value } ) }
+						/>
+						{ isLink && (
 							<ToggleControl
-								label={ __( 'Link to Author Archive', 'blockive-premium-addon-for-block' ) }
-								checked={ !! isLink }
-								onChange={ ( value ) => setAttributes( { isLink: value } ) }
+								label={ __( 'Open in New Tab', 'blockive-premium-addon-for-block' ) }
+								checked={ linkTarget === '_blank' }
+								onChange={ ( value ) => setAttributes( { linkTarget: value ? '_blank' : '_self' } ) }
 							/>
-							{ isLink && (
-								<ToggleControl
-									label={ __( 'Open in New Tab', 'blockive-premium-addon-for-block' ) }
-									checked={ linkTarget === '_blank' }
-									onChange={ ( value ) => setAttributes( { linkTarget: value ? '_blank' : '_self' } ) }
-								/>
-							) }
-						</PanelBody>
-					}
-					style={
-						<PanelBody title={ __( 'Style', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
-							<p className="bpafb-help-text">
-								{ __( 'Font, size, weight, color and other typography options are available in the native Styles panel above.', 'blockive-premium-addon-for-block' ) }
-							</p>
-						</PanelBody>
-					}
-					advanced={ <AdvancedTab attributes={ attributes } setAttributes={ setAttributes } /> }
-				/>
-			</InspectorControls>
+						) }
+					</PanelBody>
+				}
+				style={
+					<PanelBody title={ __( 'Style', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
+						<p className="bpafb-help-text">
+							{ __( 'Font, size, weight, color and other typography options are available in the native Styles panel above.', 'blockive-premium-addon-for-block' ) }
+						</p>
+					</PanelBody>
+				}
+				advanced={ <AdvancedTab attributes={ attributes } setAttributes={ setAttributes } /> }
+			/>
 
 			<span { ...blockProps }>
 				{ isResolving && ! previewName

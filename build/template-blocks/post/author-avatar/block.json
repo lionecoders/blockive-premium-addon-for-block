@@ -298,12 +298,6 @@
   },
   "supports": {
     "html": false,
-    "spacing": {
-      "margin": true,
-      "__experimentalDefaultControls": {
-        "margin": true
-      }
-    },
     "anchor": true
   },
   "render": "file:./render.php"

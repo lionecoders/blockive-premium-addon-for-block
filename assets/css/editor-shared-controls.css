@@ -1,9 +1,5 @@
 /* Shared editor-only styling for the Blockive InspectorTabs component library */
 
-.bpafb-inspector-tabs .components-tab-panel__tab-content {
-	padding-top: 16px;
-}
-
 .bpafb-spacing-controls__label {
 	font-weight: 500;
 	margin-bottom: 8px;

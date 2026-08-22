@@ -108,287 +108,285 @@ export default function Edit({ attributes, setAttributes }) {
 
 	return (
 		<>
-			<InspectorControls>
-				<InspectorTabs
-					general={(
-						<>
-				<PanelBody title={__('Testimonials', 'blockive-premium-addon-for-block')} initialOpen={true}>
-					{testimonials.map((testimonial, index) => (
-						<div key={testimonial.id} style={{ marginBottom: '15px', border: '1px solid #ddd', padding: '10px' }}>
-							<TextControl
-								label={__('Name', 'blockive-premium-addon-for-block')}
-								value={testimonial.name}
-								onChange={(val) => updateTestimonial(index, 'name', val)}
-							/>
-							<TextControl
-								label={__('Designation', 'blockive-premium-addon-for-block')}
-								value={testimonial.designation}
-								onChange={(val) => updateTestimonial(index, 'designation', val)}
-							/>
-							<div style={{ marginBottom: '10px' }}>
-								<MediaUploadCheck>
-									<MediaUpload
-										onSelect={(media) => updateTestimonial(index, 'image', media.url)}
-										allowedTypes={['image']}
-										value={testimonial.image}
-										render={({ open }) => (
-											<div style={{ display: 'flex', gap: '10px' }}>
-												<Button onClick={open} isPrimary size="small">
-													{testimonial.image ? __('Change Image', 'blockive-premium-addon-for-block') : __('Select Image', 'blockive-premium-addon-for-block')}
+			<InspectorTabs
+				general={(
+					<>
+			<PanelBody title={__('Testimonials', 'blockive-premium-addon-for-block')} initialOpen={true}>
+				{testimonials.map((testimonial, index) => (
+					<div key={testimonial.id} style={{ marginBottom: '15px', border: '1px solid #ddd', padding: '10px' }}>
+						<TextControl
+							label={__('Name', 'blockive-premium-addon-for-block')}
+							value={testimonial.name}
+							onChange={(val) => updateTestimonial(index, 'name', val)}
+						/>
+						<TextControl
+							label={__('Designation', 'blockive-premium-addon-for-block')}
+							value={testimonial.designation}
+							onChange={(val) => updateTestimonial(index, 'designation', val)}
+						/>
+						<div style={{ marginBottom: '10px' }}>
+							<MediaUploadCheck>
+								<MediaUpload
+									onSelect={(media) => updateTestimonial(index, 'image', media.url)}
+									allowedTypes={['image']}
+									value={testimonial.image}
+									render={({ open }) => (
+										<div style={{ display: 'flex', gap: '10px' }}>
+											<Button onClick={open} isPrimary size="small">
+												{testimonial.image ? __('Change Image', 'blockive-premium-addon-for-block') : __('Select Image', 'blockive-premium-addon-for-block')}
+											</Button>
+											{testimonial.image && (
+												<Button isDestructive size="small" onClick={() => updateTestimonial(index, 'image', '')}>
+													{__('Remove Image', 'blockive-premium-addon-for-block')}
 												</Button>
-												{testimonial.image && (
-													<Button isDestructive size="small" onClick={() => updateTestimonial(index, 'image', '')}>
-														{__('Remove Image', 'blockive-premium-addon-for-block')}
-													</Button>
-												)}
-											</div>
-										)}
-									/>
-								</MediaUploadCheck>
-							</div>
-							<RangeControl
-								label={__('Rating', 'blockive-premium-addon-for-block')}
-								value={testimonial.rating}
-								onChange={(val) => updateTestimonial(index, 'rating', val)}
-								min={1}
-								max={5}
-							/>
-							<Button isDestructive onClick={() => removeTestimonial(index)} size="small">
-								{__('Remove', 'blockive-premium-addon-for-block')}
-							</Button>
+											)}
+										</div>
+									)}
+								/>
+							</MediaUploadCheck>
 						</div>
-					))}
-					<Button isPrimary onClick={addTestimonial}>
-						{__('Add Testimonial', 'blockive-premium-addon-for-block')}
-					</Button>
-				</PanelBody>
-
-				<PanelBody title={__('Settings', 'blockive-premium-addon-for-block')}>
-					<ToggleControl
-						label={__('Show Image', 'blockive-premium-addon-for-block')}
-						checked={showImage}
-						onChange={(val) => setAttributes({ showImage: val })}
-					/>
-					<ToggleControl
-						label={__('Show Rating', 'blockive-premium-addon-for-block')}
-						checked={showRating}
-						onChange={(val) => setAttributes({ showRating: val })}
-					/>
-					<ToggleControl
-						label={__('Show Dots', 'blockive-premium-addon-for-block')}
-						checked={showDots}
-						onChange={(val) => setAttributes({ showDots: val })}
-					/>
-					<ToggleControl
-						label={__('Show Arrows', 'blockive-premium-addon-for-block')}
-						checked={showArrows}
-						onChange={(val) => setAttributes({ showArrows: val })}
-					/>
-					<SelectControl
-						label={__('Arrow Icon', 'blockive-premium-addon-for-block')}
-						value={arrowIcon}
-						options={[
-							{ label: __('Angle (❮ ❯)', 'blockive-premium-addon-for-block'), value: 'angle' },
-							{ label: __('Chevron (‹ ›)', 'blockive-premium-addon-for-block'), value: 'chevron' },
-							{ label: __('Long Arrow (← →)', 'blockive-premium-addon-for-block'), value: 'long-arrow' },
-						]}
-						onChange={(val) => setAttributes({ arrowIcon: val })}
-					/>
-					<ToggleControl
-						label={__('Auto Play', 'blockive-premium-addon-for-block')}
-						checked={autoPlay}
-						onChange={(val) => setAttributes({ autoPlay: val })}
-					/>
-					{autoPlay && (
 						<RangeControl
-							label={__('Auto Play Speed (ms)', 'blockive-premium-addon-for-block')}
-							value={autoPlaySpeed}
-							onChange={(val) => setAttributes({ autoPlaySpeed: val })}
-							min={1000}
-							max={10000}
-							step={500}
+							label={__('Rating', 'blockive-premium-addon-for-block')}
+							value={testimonial.rating}
+							onChange={(val) => updateTestimonial(index, 'rating', val)}
+							min={1}
+							max={5}
 						/>
-					)}
-					<ToggleControl
-						label={__('Infinite Loop', 'blockive-premium-addon-for-block')}
-						checked={infiniteLoop}
-						onChange={(val) => setAttributes({ infiniteLoop: val })}
-					/>
-				</PanelBody>
-						</>
-					)}
-					style={(
-						<>
-				<PanelBody title={__('Card Styles', 'blockive-premium-addon-for-block')}>
-					<SelectControl
-						label={__('Image Position', 'blockive-premium-addon-for-block')}
-						value={imagePosition}
-						options={[
-							{ label: __('Top', 'blockive-premium-addon-for-block'), value: 'top' },
-							{ label: __('Bottom', 'blockive-premium-addon-for-block'), value: 'bottom' },
-							{ label: __('Left', 'blockive-premium-addon-for-block'), value: 'left' },
-							{ label: __('Right', 'blockive-premium-addon-for-block'), value: 'right' },
-						]}
-						onChange={(val) => setAttributes({ imagePosition: val })}
-					/>
-					<SelectControl
-						label={__('Image Style', 'blockive-premium-addon-for-block')}
-						value={imageStyle}
-						options={[
-							{ label: __('Circle', 'blockive-premium-addon-for-block'), value: 'circle' },
-							{ label: __('Rounded', 'blockive-premium-addon-for-block'), value: 'rounded' },
-							{ label: __('Square', 'blockive-premium-addon-for-block'), value: 'square' },
-						]}
-						onChange={(val) => setAttributes({ imageStyle: val })}
-					/>
-					<SelectControl
-						label={__('Text Alignment', 'blockive-premium-addon-for-block')}
-						value={textAlign}
-						options={[
-							{ label: __('Left', 'blockive-premium-addon-for-block'), value: 'left' },
-							{ label: __('Center', 'blockive-premium-addon-for-block'), value: 'center' },
-							{ label: __('Right', 'blockive-premium-addon-for-block'), value: 'right' },
-						]}
-						onChange={(val) => setAttributes({ textAlign: val })}
-					/>
-					<ToggleControl
-						label={__('Enable Box Shadow', 'blockive-premium-addon-for-block')}
-						checked={enableBoxShadow}
-						onChange={(val) => setAttributes({ enableBoxShadow: val })}
-					/>
-					{enableBoxShadow && (
-						<div style={{ marginLeft: '10px', paddingLeft: '10px', borderLeft: '2px solid #ddd', marginBottom: '15px' }}>
-							<RangeControl
-								label={__('Horizontal Offset', 'blockive-premium-addon-for-block')}
-								value={boxShadowHOffset}
-								onChange={(val) => setAttributes({ boxShadowHOffset: val })}
-								min={-50}
-								max={50}
-							/>
-							<RangeControl
-								label={__('Vertical Offset', 'blockive-premium-addon-for-block')}
-								value={boxShadowVOffset}
-								onChange={(val) => setAttributes({ boxShadowVOffset: val })}
-								min={-50}
-								max={50}
-							/>
-							<RangeControl
-								label={__('Blur Radius', 'blockive-premium-addon-for-block')}
-								value={boxShadowBlur}
-								onChange={(val) => setAttributes({ boxShadowBlur: val })}
-								min={0}
-								max={100}
-							/>
-							<RangeControl
-								label={__('Spread Radius', 'blockive-premium-addon-for-block')}
-								value={boxShadowSpread}
-								onChange={(val) => setAttributes({ boxShadowSpread: val })}
-								min={-50}
-								max={50}
-							/>
-						</div>
-					)}
-					<RangeControl
-						label={__('Border Width (px)', 'blockive-premium-addon-for-block')}
-						value={cardBorderWidth}
-						onChange={(val) => setAttributes({ cardBorderWidth: val })}
-						min={0}
-						max={20}
-					/>
-					<RangeControl
-						label={__('Border Radius (px)', 'blockive-premium-addon-for-block')}
-						value={cardBorderRadius}
-						onChange={(val) => setAttributes({ cardBorderRadius: val })}
-						min={0}
-						max={100}
-					/>
-				</PanelBody>
+						<Button isDestructive onClick={() => removeTestimonial(index)} size="small">
+							{__('Remove', 'blockive-premium-addon-for-block')}
+						</Button>
+					</div>
+				))}
+				<Button isPrimary onClick={addTestimonial}>
+					{__('Add Testimonial', 'blockive-premium-addon-for-block')}
+				</Button>
+			</PanelBody>
 
-				<PanelBody title={__('Colors', 'blockive-premium-addon-for-block')}>
-					{enableBoxShadow && (
-						<div style={{ marginBottom: '15px' }}>
-							<label>{__('Box Shadow Color', 'blockive-premium-addon-for-block')}</label>
-							<ColorPicker
-								color={boxShadowColor}
-								onChange={(val) => setAttributes({ boxShadowColor: val })}
-								enableAlpha
-								defaultValue="rgba(0, 0, 0, 0.1)"
+			<PanelBody title={__('Settings', 'blockive-premium-addon-for-block')}>
+				<ToggleControl
+					label={__('Show Image', 'blockive-premium-addon-for-block')}
+					checked={showImage}
+					onChange={(val) => setAttributes({ showImage: val })}
+				/>
+				<ToggleControl
+					label={__('Show Rating', 'blockive-premium-addon-for-block')}
+					checked={showRating}
+					onChange={(val) => setAttributes({ showRating: val })}
+				/>
+				<ToggleControl
+					label={__('Show Dots', 'blockive-premium-addon-for-block')}
+					checked={showDots}
+					onChange={(val) => setAttributes({ showDots: val })}
+				/>
+				<ToggleControl
+					label={__('Show Arrows', 'blockive-premium-addon-for-block')}
+					checked={showArrows}
+					onChange={(val) => setAttributes({ showArrows: val })}
+				/>
+				<SelectControl
+					label={__('Arrow Icon', 'blockive-premium-addon-for-block')}
+					value={arrowIcon}
+					options={[
+						{ label: __('Angle (❮ ❯)', 'blockive-premium-addon-for-block'), value: 'angle' },
+						{ label: __('Chevron (‹ ›)', 'blockive-premium-addon-for-block'), value: 'chevron' },
+						{ label: __('Long Arrow (← →)', 'blockive-premium-addon-for-block'), value: 'long-arrow' },
+					]}
+					onChange={(val) => setAttributes({ arrowIcon: val })}
+				/>
+				<ToggleControl
+					label={__('Auto Play', 'blockive-premium-addon-for-block')}
+					checked={autoPlay}
+					onChange={(val) => setAttributes({ autoPlay: val })}
+				/>
+				{autoPlay && (
+					<RangeControl
+						label={__('Auto Play Speed (ms)', 'blockive-premium-addon-for-block')}
+						value={autoPlaySpeed}
+						onChange={(val) => setAttributes({ autoPlaySpeed: val })}
+						min={1000}
+						max={10000}
+						step={500}
+					/>
+				)}
+				<ToggleControl
+					label={__('Infinite Loop', 'blockive-premium-addon-for-block')}
+					checked={infiniteLoop}
+					onChange={(val) => setAttributes({ infiniteLoop: val })}
+				/>
+			</PanelBody>
+					</>
+				)}
+				style={(
+					<>
+			<PanelBody title={__('Card Styles', 'blockive-premium-addon-for-block')}>
+				<SelectControl
+					label={__('Image Position', 'blockive-premium-addon-for-block')}
+					value={imagePosition}
+					options={[
+						{ label: __('Top', 'blockive-premium-addon-for-block'), value: 'top' },
+						{ label: __('Bottom', 'blockive-premium-addon-for-block'), value: 'bottom' },
+						{ label: __('Left', 'blockive-premium-addon-for-block'), value: 'left' },
+						{ label: __('Right', 'blockive-premium-addon-for-block'), value: 'right' },
+					]}
+					onChange={(val) => setAttributes({ imagePosition: val })}
+				/>
+				<SelectControl
+					label={__('Image Style', 'blockive-premium-addon-for-block')}
+					value={imageStyle}
+					options={[
+						{ label: __('Circle', 'blockive-premium-addon-for-block'), value: 'circle' },
+						{ label: __('Rounded', 'blockive-premium-addon-for-block'), value: 'rounded' },
+						{ label: __('Square', 'blockive-premium-addon-for-block'), value: 'square' },
+					]}
+					onChange={(val) => setAttributes({ imageStyle: val })}
+				/>
+				<SelectControl
+					label={__('Text Alignment', 'blockive-premium-addon-for-block')}
+					value={textAlign}
+					options={[
+						{ label: __('Left', 'blockive-premium-addon-for-block'), value: 'left' },
+						{ label: __('Center', 'blockive-premium-addon-for-block'), value: 'center' },
+						{ label: __('Right', 'blockive-premium-addon-for-block'), value: 'right' },
+					]}
+					onChange={(val) => setAttributes({ textAlign: val })}
+				/>
+				<ToggleControl
+					label={__('Enable Box Shadow', 'blockive-premium-addon-for-block')}
+					checked={enableBoxShadow}
+					onChange={(val) => setAttributes({ enableBoxShadow: val })}
+				/>
+				{enableBoxShadow && (
+					<div style={{ marginLeft: '10px', paddingLeft: '10px', borderLeft: '2px solid #ddd', marginBottom: '15px' }}>
+						<RangeControl
+							label={__('Horizontal Offset', 'blockive-premium-addon-for-block')}
+							value={boxShadowHOffset}
+							onChange={(val) => setAttributes({ boxShadowHOffset: val })}
+							min={-50}
+							max={50}
+						/>
+						<RangeControl
+							label={__('Vertical Offset', 'blockive-premium-addon-for-block')}
+							value={boxShadowVOffset}
+							onChange={(val) => setAttributes({ boxShadowVOffset: val })}
+							min={-50}
+							max={50}
+						/>
+						<RangeControl
+							label={__('Blur Radius', 'blockive-premium-addon-for-block')}
+							value={boxShadowBlur}
+							onChange={(val) => setAttributes({ boxShadowBlur: val })}
+							min={0}
+							max={100}
+						/>
+						<RangeControl
+							label={__('Spread Radius', 'blockive-premium-addon-for-block')}
+							value={boxShadowSpread}
+							onChange={(val) => setAttributes({ boxShadowSpread: val })}
+							min={-50}
+							max={50}
+						/>
+					</div>
+				)}
+				<RangeControl
+					label={__('Border Width (px)', 'blockive-premium-addon-for-block')}
+					value={cardBorderWidth}
+					onChange={(val) => setAttributes({ cardBorderWidth: val })}
+					min={0}
+					max={20}
+				/>
+				<RangeControl
+					label={__('Border Radius (px)', 'blockive-premium-addon-for-block')}
+					value={cardBorderRadius}
+					onChange={(val) => setAttributes({ cardBorderRadius: val })}
+					min={0}
+					max={100}
+				/>
+			</PanelBody>
+
+			<PanelBody title={__('Colors', 'blockive-premium-addon-for-block')}>
+				{enableBoxShadow && (
+					<div style={{ marginBottom: '15px' }}>
+						<label>{__('Box Shadow Color', 'blockive-premium-addon-for-block')}</label>
+						<ColorPicker
+							color={boxShadowColor}
+							onChange={(val) => setAttributes({ boxShadowColor: val })}
+							enableAlpha
+							defaultValue="rgba(0, 0, 0, 0.1)"
+						/>
+					</div>
+				)}
+				<div style={{ marginBottom: '15px' }}>
+					<label>{__('Card Border Color', 'blockive-premium-addon-for-block')}</label>
+					<ColorPalette
+						value={cardBorderColor}
+						onChange={(val) => setAttributes({ cardBorderColor: val })}
+					/>
+				</div>
+				<div style={{ marginBottom: '15px' }}>
+					<label>{__('Text Color', 'blockive-premium-addon-for-block')}</label>
+					<ColorPalette
+						value={textColor}
+						onChange={(val) => setAttributes({ textColor: val })}
+					/>
+				</div>
+				<div style={{ marginBottom: '15px' }}>
+					<label>{__('Description Color', 'blockive-premium-addon-for-block')}</label>
+					<ColorPalette
+						value={descColor}
+						onChange={(val) => setAttributes({ descColor: val })}
+					/>
+				</div>
+				<div style={{ marginBottom: '15px' }}>
+					<label>{__('Position Color', 'blockive-premium-addon-for-block')}</label>
+					<ColorPalette
+						value={positionColor}
+						onChange={(val) => setAttributes({ positionColor: val })}
+					/>
+				</div>
+				<div>
+					<label>{__('Background Color', 'blockive-premium-addon-for-block')}</label>
+					<ColorPalette
+						value={bgColor}
+						onChange={(val) => setAttributes({ bgColor: val })}
+					/>
+				</div>
+				<div style={{ marginBottom: '15px' }}>
+					<label>{__('Arrow Color', 'blockive-premium-addon-for-block')}</label>
+					<ColorPalette
+						value={arrowColor}
+						onChange={(val) => setAttributes({ arrowColor: val })}
+					/>
+				</div>
+				<div>
+					<label>{__('Arrow Background Color', 'blockive-premium-addon-for-block')}</label>
+					<ColorPalette
+						value={arrowBgColor}
+						onChange={(val) => setAttributes({ arrowBgColor: val })}
+					/>
+				</div>
+				{showDots && (
+					<>
+						<div style={{ marginBottom: '15px', marginTop: '15px' }}>
+							<label>{__('Dot Color', 'blockive-premium-addon-for-block')}</label>
+							<ColorPalette
+								value={dotColor}
+								onChange={(val) => setAttributes({ dotColor: val })}
 							/>
 						</div>
-					)}
-					<div style={{ marginBottom: '15px' }}>
-						<label>{__('Card Border Color', 'blockive-premium-addon-for-block')}</label>
-						<ColorPalette
-							value={cardBorderColor}
-							onChange={(val) => setAttributes({ cardBorderColor: val })}
-						/>
-					</div>
-					<div style={{ marginBottom: '15px' }}>
-						<label>{__('Text Color', 'blockive-premium-addon-for-block')}</label>
-						<ColorPalette
-							value={textColor}
-							onChange={(val) => setAttributes({ textColor: val })}
-						/>
-					</div>
-					<div style={{ marginBottom: '15px' }}>
-						<label>{__('Description Color', 'blockive-premium-addon-for-block')}</label>
-						<ColorPalette
-							value={descColor}
-							onChange={(val) => setAttributes({ descColor: val })}
-						/>
-					</div>
-					<div style={{ marginBottom: '15px' }}>
-						<label>{__('Position Color', 'blockive-premium-addon-for-block')}</label>
-						<ColorPalette
-							value={positionColor}
-							onChange={(val) => setAttributes({ positionColor: val })}
-						/>
-					</div>
-					<div>
-						<label>{__('Background Color', 'blockive-premium-addon-for-block')}</label>
-						<ColorPalette
-							value={bgColor}
-							onChange={(val) => setAttributes({ bgColor: val })}
-						/>
-					</div>
-					<div style={{ marginBottom: '15px' }}>
-						<label>{__('Arrow Color', 'blockive-premium-addon-for-block')}</label>
-						<ColorPalette
-							value={arrowColor}
-							onChange={(val) => setAttributes({ arrowColor: val })}
-						/>
-					</div>
-					<div>
-						<label>{__('Arrow Background Color', 'blockive-premium-addon-for-block')}</label>
-						<ColorPalette
-							value={arrowBgColor}
-							onChange={(val) => setAttributes({ arrowBgColor: val })}
-						/>
-					</div>
-					{showDots && (
-						<>
-							<div style={{ marginBottom: '15px', marginTop: '15px' }}>
-								<label>{__('Dot Color', 'blockive-premium-addon-for-block')}</label>
-								<ColorPalette
-									value={dotColor}
-									onChange={(val) => setAttributes({ dotColor: val })}
-								/>
-							</div>
-							<div>
-								<label>{__('Active Dot Color', 'blockive-premium-addon-for-block')}</label>
-								<ColorPalette
-									value={activeDotColor}
-									onChange={(val) => setAttributes({ activeDotColor: val })}
-								/>
-							</div>
-						</>
-					)}
-				</PanelBody>
-						</>
-					)}
-					advanced={<AdvancedTab attributes={attributes} setAttributes={setAttributes} />}
-				/>
-			</InspectorControls>
+						<div>
+							<label>{__('Active Dot Color', 'blockive-premium-addon-for-block')}</label>
+							<ColorPalette
+								value={activeDotColor}
+								onChange={(val) => setAttributes({ activeDotColor: val })}
+							/>
+						</div>
+					</>
+				)}
+			</PanelBody>
+					</>
+				)}
+				advanced={<AdvancedTab attributes={attributes} setAttributes={setAttributes} />}
+			/>
 
 			<div {...blockProps}>
 				<div className="bpafb-testimonial-slider">

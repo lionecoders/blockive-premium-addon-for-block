@@ -28,44 +28,42 @@ export default function Edit( { attributes, setAttributes } ) {
 
 	return (
 		<>
-			<InspectorControls>
-				<InspectorTabs
-					general={
-						<PanelBody title={ __( 'Settings', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
+			<InspectorTabs
+				general={
+					<PanelBody title={ __( 'Settings', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
+						<RangeControl
+							label={ __( 'Number of Products', 'blockive-premium-addon-for-block' ) }
+							value={ numberOfProducts }
+							onChange={ ( value ) => setAttributes( { numberOfProducts: value } ) }
+							min={ 1 }
+							max={ 12 }
+						/>
+						<SelectControl
+							label={ __( 'Layout', 'blockive-premium-addon-for-block' ) }
+							value={ layout }
+							options={ LAYOUT_OPTIONS }
+							onChange={ ( value ) => setAttributes( { layout: value } ) }
+						/>
+						{ layout === 'grid' && (
 							<RangeControl
-								label={ __( 'Number of Products', 'blockive-premium-addon-for-block' ) }
-								value={ numberOfProducts }
-								onChange={ ( value ) => setAttributes( { numberOfProducts: value } ) }
+								label={ __( 'Columns', 'blockive-premium-addon-for-block' ) }
+								value={ columns }
+								onChange={ ( value ) => setAttributes( { columns: value } ) }
 								min={ 1 }
-								max={ 12 }
+								max={ 6 }
 							/>
-							<SelectControl
-								label={ __( 'Layout', 'blockive-premium-addon-for-block' ) }
-								value={ layout }
-								options={ LAYOUT_OPTIONS }
-								onChange={ ( value ) => setAttributes( { layout: value } ) }
-							/>
-							{ layout === 'grid' && (
-								<RangeControl
-									label={ __( 'Columns', 'blockive-premium-addon-for-block' ) }
-									value={ columns }
-									onChange={ ( value ) => setAttributes( { columns: value } ) }
-									min={ 1 }
-									max={ 6 }
-								/>
-							) }
-						</PanelBody>
-					}
-					style={
-						<PanelBody title={ __( 'Style', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
-							<p className="bpafb-help-text">
-								{ __( 'Card colors follow theme defaults; use Advanced > Custom CSS for further styling.', 'blockive-premium-addon-for-block' ) }
-							</p>
-						</PanelBody>
-					}
-					advanced={ <AdvancedTab attributes={ attributes } setAttributes={ setAttributes } /> }
-				/>
-			</InspectorControls>
+						) }
+					</PanelBody>
+				}
+				style={
+					<PanelBody title={ __( 'Style', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
+						<p className="bpafb-help-text">
+							{ __( 'Card colors follow theme defaults; use Advanced > Custom CSS for further styling.', 'blockive-premium-addon-for-block' ) }
+						</p>
+					</PanelBody>
+				}
+				advanced={ <AdvancedTab attributes={ attributes } setAttributes={ setAttributes } /> }
+			/>
 
 			<div { ...blockProps }>
 				{ Array.from( { length: Math.max( 1, previewCount ) } ).map( ( _, index ) => (

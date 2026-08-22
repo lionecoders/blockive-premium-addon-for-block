@@ -108,179 +108,177 @@ export default function Edit({ attributes, setAttributes }) {
 
 	return (
 		<>
-			<InspectorControls>
-				<InspectorTabs
-					general={(
-				<PanelBody title={__('Settings', 'blockive-premium-addon-for-block')} initialOpen={true}>
-					<SelectControl
-						label={__('Taxonomy', 'blockive-premium-addon-for-block')}
-						value={taxonomy}
-						options={taxonomyOptions}
-						onChange={(val) => setAttributes({ taxonomy: val })}
-					/>
+			<InspectorTabs
+				general={(
+			<PanelBody title={__('Settings', 'blockive-premium-addon-for-block')} initialOpen={true}>
+				<SelectControl
+					label={__('Taxonomy', 'blockive-premium-addon-for-block')}
+					value={taxonomy}
+					options={taxonomyOptions}
+					onChange={(val) => setAttributes({ taxonomy: val })}
+				/>
 
-					<SelectControl
-						label={__('Layout Type', 'blockive-premium-addon-for-block')}
-						value={layoutType}
-						options={[
-							{ label: __('Vertical', 'blockive-premium-addon-for-block'), value: 'vertical' },
-							{ label: __('Horizontal', 'blockive-premium-addon-for-block'), value: 'horizontal' },
-						]}
-						onChange={(val) => setAttributes({ layoutType: val })}
-					/>
-
-					<RangeControl
-						label={__('Limit', 'blockive-premium-addon-for-block')}
-						value={limit}
-						onChange={(val) => setAttributes({ limit: val })}
-						min={1}
-						max={50}
-					/>
-
-					{layoutType === 'horizontal' && (
-						<RangeControl
-							label={__('Columns', 'blockive-premium-addon-for-block')}
-							value={columns}
-							onChange={(val) => setAttributes({ columns: val })}
-							min={1}
-							max={6}
-						/>
-					)}
-
-					<RangeControl
-						label={__('Gap Between Items (px)', 'blockive-premium-addon-for-block')}
-						value={gap}
-						onChange={(val) => setAttributes({ gap: val })}
-						min={0}
-						max={100}
-					/>
-
-					<SelectControl
-						label={__('Text Alignment', 'blockive-premium-addon-for-block')}
-						value={textAlign}
-						options={[
-							{ label: __('Left', 'blockive-premium-addon-for-block'), value: 'left' },
-							{ label: __('Center', 'blockive-premium-addon-for-block'), value: 'center' },
-							{ label: __('Right', 'blockive-premium-addon-for-block'), value: 'right' },
-						]}
-						onChange={(val) => setAttributes({ textAlign: val })}
-					/>
-
-					<SelectControl
-						label={__('Order By', 'blockive-premium-addon-for-block')}
-						value={orderBy}
-						options={[
-							{ label: __('Name', 'blockive-premium-addon-for-block'), value: 'name' },
-							{ label: __('Count', 'blockive-premium-addon-for-block'), value: 'count' },
-							{ label: __('Term ID', 'blockive-premium-addon-for-block'), value: 'id' },
-						]}
-						onChange={(val) => setAttributes({ orderBy: val })}
-					/>
-
-					<SelectControl
-						label={__('Order Direction', 'blockive-premium-addon-for-block')}
-						value={order}
-						options={[
-							{ label: __('Ascending', 'blockive-premium-addon-for-block'), value: 'asc' },
-							{ label: __('Descending', 'blockive-premium-addon-for-block'), value: 'desc' },
-						]}
-						onChange={(val) => setAttributes({ order: val })}
-					/>
-
-					<TextControl
-						label={__('Exclude Categories (IDs)', 'blockive-premium-addon-for-block')}
-						help={__('Comma separated term IDs.', 'blockive-premium-addon-for-block')}
-						value={excludeTerms}
-						onChange={(val) => setAttributes({ excludeTerms: val })}
-					/>
-
-					<ToggleControl
-						label={__('Show Count', 'blockive-premium-addon-for-block')}
-						checked={showCount}
-						onChange={(val) => setAttributes({ showCount: val })}
-					/>
-
-					<ToggleControl
-						label={__('Show Description', 'blockive-premium-addon-for-block')}
-						checked={showDescription}
-						onChange={(val) => setAttributes({ showDescription: val })}
-					/>
-
-					<ToggleControl
-						label={__('Enable Link', 'blockive-premium-addon-for-block')}
-						checked={enableLink}
-						onChange={(val) => setAttributes({ enableLink: val })}
-					/>
-
-					<ToggleControl
-						label={__('Hide Empty Categories', 'blockive-premium-addon-for-block')}
-						checked={hideEmpty}
-						onChange={(val) => setAttributes({ hideEmpty: val })}
-					/>
-
-					<ToggleControl
-						label={__('Show Hierarchy', 'blockive-premium-addon-for-block')}
-						checked={showHierarchy}
-						onChange={(val) => setAttributes({ showHierarchy: val })}
-					/>
-				</PanelBody>
-					)}
-					style={(
-						<>
-				<PanelColorSettings
-					title={__('Item Colors', 'blockive-premium-addon-for-block')}
-					initialOpen={false}
-					colorSettings={[
-						{
-							value: itemBgColor,
-							onChange: (val) => setAttributes({ itemBgColor: val }),
-							label: __('Background Color', 'blockive-premium-addon-for-block'),
-						},
-						{
-							value: itemBorderColor,
-							onChange: (val) => setAttributes({ itemBorderColor: val }),
-							label: __('Border Color', 'blockive-premium-addon-for-block'),
-						},
+				<SelectControl
+					label={__('Layout Type', 'blockive-premium-addon-for-block')}
+					value={layoutType}
+					options={[
+						{ label: __('Vertical', 'blockive-premium-addon-for-block'), value: 'vertical' },
+						{ label: __('Horizontal', 'blockive-premium-addon-for-block'), value: 'horizontal' },
 					]}
+					onChange={(val) => setAttributes({ layoutType: val })}
 				/>
-				<PanelBody title={__('Item Appearance', 'blockive-premium-addon-for-block')} initialOpen={false}>
-					<RangeControl
-						label={__('Padding (px)', 'blockive-premium-addon-for-block')}
-						value={itemPadding}
-						onChange={(val) => setAttributes({ itemPadding: val })}
-						min={0}
-						max={50}
-					/>
-					<RangeControl
-						label={__('Border Width (px)', 'blockive-premium-addon-for-block')}
-						value={itemBorderWidth}
-						onChange={(val) => setAttributes({ itemBorderWidth: val })}
-						min={0}
-						max={20}
-					/>
-					<RangeControl
-						label={__('Border Radius (px)', 'blockive-premium-addon-for-block')}
-						value={itemBorderRadius}
-						onChange={(val) => setAttributes({ itemBorderRadius: val })}
-						min={0}
-						max={100}
-					/>
-					<ToggleControl
-						label={__('Enable Box Shadow', 'blockive-premium-addon-for-block')}
-						checked={enableBoxShadow}
-						onChange={(val) => setAttributes({ enableBoxShadow: val })}
-					/>
-					<ToggleControl
-						label={__('Remove Border from Child Items', 'blockive-premium-addon-for-block')}
-						checked={removeChildBorder}
-						onChange={(val) => setAttributes({ removeChildBorder: val })}
-					/>
-				</PanelBody>
-						</>
-					)}
-					advanced={<AdvancedTab attributes={attributes} setAttributes={setAttributes} />}
+
+				<RangeControl
+					label={__('Limit', 'blockive-premium-addon-for-block')}
+					value={limit}
+					onChange={(val) => setAttributes({ limit: val })}
+					min={1}
+					max={50}
 				/>
-			</InspectorControls>
+
+				{layoutType === 'horizontal' && (
+					<RangeControl
+						label={__('Columns', 'blockive-premium-addon-for-block')}
+						value={columns}
+						onChange={(val) => setAttributes({ columns: val })}
+						min={1}
+						max={6}
+					/>
+				)}
+
+				<RangeControl
+					label={__('Gap Between Items (px)', 'blockive-premium-addon-for-block')}
+					value={gap}
+					onChange={(val) => setAttributes({ gap: val })}
+					min={0}
+					max={100}
+				/>
+
+				<SelectControl
+					label={__('Text Alignment', 'blockive-premium-addon-for-block')}
+					value={textAlign}
+					options={[
+						{ label: __('Left', 'blockive-premium-addon-for-block'), value: 'left' },
+						{ label: __('Center', 'blockive-premium-addon-for-block'), value: 'center' },
+						{ label: __('Right', 'blockive-premium-addon-for-block'), value: 'right' },
+					]}
+					onChange={(val) => setAttributes({ textAlign: val })}
+				/>
+
+				<SelectControl
+					label={__('Order By', 'blockive-premium-addon-for-block')}
+					value={orderBy}
+					options={[
+						{ label: __('Name', 'blockive-premium-addon-for-block'), value: 'name' },
+						{ label: __('Count', 'blockive-premium-addon-for-block'), value: 'count' },
+						{ label: __('Term ID', 'blockive-premium-addon-for-block'), value: 'id' },
+					]}
+					onChange={(val) => setAttributes({ orderBy: val })}
+				/>
+
+				<SelectControl
+					label={__('Order Direction', 'blockive-premium-addon-for-block')}
+					value={order}
+					options={[
+						{ label: __('Ascending', 'blockive-premium-addon-for-block'), value: 'asc' },
+						{ label: __('Descending', 'blockive-premium-addon-for-block'), value: 'desc' },
+					]}
+					onChange={(val) => setAttributes({ order: val })}
+				/>
+
+				<TextControl
+					label={__('Exclude Categories (IDs)', 'blockive-premium-addon-for-block')}
+					help={__('Comma separated term IDs.', 'blockive-premium-addon-for-block')}
+					value={excludeTerms}
+					onChange={(val) => setAttributes({ excludeTerms: val })}
+				/>
+
+				<ToggleControl
+					label={__('Show Count', 'blockive-premium-addon-for-block')}
+					checked={showCount}
+					onChange={(val) => setAttributes({ showCount: val })}
+				/>
+
+				<ToggleControl
+					label={__('Show Description', 'blockive-premium-addon-for-block')}
+					checked={showDescription}
+					onChange={(val) => setAttributes({ showDescription: val })}
+				/>
+
+				<ToggleControl
+					label={__('Enable Link', 'blockive-premium-addon-for-block')}
+					checked={enableLink}
+					onChange={(val) => setAttributes({ enableLink: val })}
+				/>
+
+				<ToggleControl
+					label={__('Hide Empty Categories', 'blockive-premium-addon-for-block')}
+					checked={hideEmpty}
+					onChange={(val) => setAttributes({ hideEmpty: val })}
+				/>
+
+				<ToggleControl
+					label={__('Show Hierarchy', 'blockive-premium-addon-for-block')}
+					checked={showHierarchy}
+					onChange={(val) => setAttributes({ showHierarchy: val })}
+				/>
+			</PanelBody>
+				)}
+				style={(
+					<>
+			<PanelColorSettings
+				title={__('Item Colors', 'blockive-premium-addon-for-block')}
+				initialOpen={false}
+				colorSettings={[
+					{
+						value: itemBgColor,
+						onChange: (val) => setAttributes({ itemBgColor: val }),
+						label: __('Background Color', 'blockive-premium-addon-for-block'),
+					},
+					{
+						value: itemBorderColor,
+						onChange: (val) => setAttributes({ itemBorderColor: val }),
+						label: __('Border Color', 'blockive-premium-addon-for-block'),
+					},
+				]}
+			/>
+			<PanelBody title={__('Item Appearance', 'blockive-premium-addon-for-block')} initialOpen={false}>
+				<RangeControl
+					label={__('Padding (px)', 'blockive-premium-addon-for-block')}
+					value={itemPadding}
+					onChange={(val) => setAttributes({ itemPadding: val })}
+					min={0}
+					max={50}
+				/>
+				<RangeControl
+					label={__('Border Width (px)', 'blockive-premium-addon-for-block')}
+					value={itemBorderWidth}
+					onChange={(val) => setAttributes({ itemBorderWidth: val })}
+					min={0}
+					max={20}
+				/>
+				<RangeControl
+					label={__('Border Radius (px)', 'blockive-premium-addon-for-block')}
+					value={itemBorderRadius}
+					onChange={(val) => setAttributes({ itemBorderRadius: val })}
+					min={0}
+					max={100}
+				/>
+				<ToggleControl
+					label={__('Enable Box Shadow', 'blockive-premium-addon-for-block')}
+					checked={enableBoxShadow}
+					onChange={(val) => setAttributes({ enableBoxShadow: val })}
+				/>
+				<ToggleControl
+					label={__('Remove Border from Child Items', 'blockive-premium-addon-for-block')}
+					checked={removeChildBorder}
+					onChange={(val) => setAttributes({ removeChildBorder: val })}
+				/>
+			</PanelBody>
+					</>
+				)}
+				advanced={<AdvancedTab attributes={attributes} setAttributes={setAttributes} />}
+			/>
 
 			<div {...blockProps}>
 				{isResolving && !categories ? (

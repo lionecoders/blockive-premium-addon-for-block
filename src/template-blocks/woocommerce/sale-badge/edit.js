@@ -31,45 +31,43 @@ export default function Edit( { attributes, setAttributes } ) {
 
 	return (
 		<>
-			<InspectorControls>
-				<InspectorTabs
-					general={
-						<PanelBody title={ __( 'Sale Badge', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
-							<p className="bpafb-help-text">
-								{ __( 'Only renders on the front end when the product is on sale. Place this block inside a container with Position set to Relative (Advanced tab > Layout) so it positions correctly.', 'blockive-premium-addon-for-block' ) }
-							</p>
-							<TextControl
-								label={ __( 'Badge Text', 'blockive-premium-addon-for-block' ) }
-								value={ badgeText }
-								onChange={ ( value ) => setAttributes( { badgeText: value } ) }
-							/>
-							<SelectControl
-								label={ __( 'Badge Shape', 'blockive-premium-addon-for-block' ) }
-								value={ badgeShape }
-								options={ SHAPE_OPTIONS }
-								onChange={ ( value ) => setAttributes( { badgeShape: value } ) }
-							/>
-							<SelectControl
-								label={ __( 'Position', 'blockive-premium-addon-for-block' ) }
-								value={ position }
-								options={ POSITION_OPTIONS }
-								onChange={ ( value ) => setAttributes( { position: value } ) }
-							/>
-						</PanelBody>
-					}
-					style={
-						<PanelBody title={ __( 'Colors', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
-							<BaseControl label={ __( 'Background Color', 'blockive-premium-addon-for-block' ) }>
-								<ColorPalette value={ bgColor } onChange={ ( value ) => setAttributes( { bgColor: value } ) } />
-							</BaseControl>
-							<BaseControl label={ __( 'Text Color', 'blockive-premium-addon-for-block' ) }>
-								<ColorPalette value={ textColor } onChange={ ( value ) => setAttributes( { textColor: value } ) } />
-							</BaseControl>
-						</PanelBody>
-					}
-					advanced={ <AdvancedTab attributes={ attributes } setAttributes={ setAttributes } /> }
-				/>
-			</InspectorControls>
+			<InspectorTabs
+				general={
+					<PanelBody title={ __( 'Sale Badge', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
+						<p className="bpafb-help-text">
+							{ __( 'Only renders on the front end when the product is on sale. Place this block inside a container with Position set to Relative (Advanced tab > Layout) so it positions correctly.', 'blockive-premium-addon-for-block' ) }
+						</p>
+						<TextControl
+							label={ __( 'Badge Text', 'blockive-premium-addon-for-block' ) }
+							value={ badgeText }
+							onChange={ ( value ) => setAttributes( { badgeText: value } ) }
+						/>
+						<SelectControl
+							label={ __( 'Badge Shape', 'blockive-premium-addon-for-block' ) }
+							value={ badgeShape }
+							options={ SHAPE_OPTIONS }
+							onChange={ ( value ) => setAttributes( { badgeShape: value } ) }
+						/>
+						<SelectControl
+							label={ __( 'Position', 'blockive-premium-addon-for-block' ) }
+							value={ position }
+							options={ POSITION_OPTIONS }
+							onChange={ ( value ) => setAttributes( { position: value } ) }
+						/>
+					</PanelBody>
+				}
+				style={
+					<PanelBody title={ __( 'Colors', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
+						<BaseControl label={ __( 'Background Color', 'blockive-premium-addon-for-block' ) }>
+							<ColorPalette value={ bgColor } onChange={ ( value ) => setAttributes( { bgColor: value } ) } />
+						</BaseControl>
+						<BaseControl label={ __( 'Text Color', 'blockive-premium-addon-for-block' ) }>
+							<ColorPalette value={ textColor } onChange={ ( value ) => setAttributes( { textColor: value } ) } />
+						</BaseControl>
+					</PanelBody>
+				}
+				advanced={ <AdvancedTab attributes={ attributes } setAttributes={ setAttributes } /> }
+			/>
 
 			<span { ...blockProps }>{ badgeText || __( 'Sale!', 'blockive-premium-addon-for-block' ) }</span>
 		</>

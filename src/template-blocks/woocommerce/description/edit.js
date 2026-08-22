@@ -27,30 +27,28 @@ export default function Edit( { attributes, setAttributes } ) {
 
 	return (
 		<>
-			<InspectorControls>
-				<InspectorTabs
-					general={
-						<PanelBody title={ __( 'Settings', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
-							<RangeControl
-								label={ __( 'Max Width (px)', 'blockive-premium-addon-for-block' ) }
-								value={ maxWidth }
-								onChange={ ( value ) => setAttributes( { maxWidth: value } ) }
-								min={ 0 }
-								max={ 1200 }
-								help={ __( '0 = no limit.', 'blockive-premium-addon-for-block' ) }
-							/>
-						</PanelBody>
-					}
-					style={
-						<PanelBody title={ __( 'Style', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
-							<p className="bpafb-help-text">
-								{ __( 'Font, size, weight, color and other typography options are available in the native Styles panel above.', 'blockive-premium-addon-for-block' ) }
-							</p>
-						</PanelBody>
-					}
-					advanced={ <AdvancedTab attributes={ attributes } setAttributes={ setAttributes } /> }
-				/>
-			</InspectorControls>
+			<InspectorTabs
+				general={
+					<PanelBody title={ __( 'Settings', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
+						<RangeControl
+							label={ __( 'Max Width (px)', 'blockive-premium-addon-for-block' ) }
+							value={ maxWidth }
+							onChange={ ( value ) => setAttributes( { maxWidth: value } ) }
+							min={ 0 }
+							max={ 1200 }
+							help={ __( '0 = no limit.', 'blockive-premium-addon-for-block' ) }
+						/>
+					</PanelBody>
+				}
+				style={
+					<PanelBody title={ __( 'Style', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
+						<p className="bpafb-help-text">
+							{ __( 'Font, size, weight, color and other typography options are available in the native Styles panel above.', 'blockive-premium-addon-for-block' ) }
+						</p>
+					</PanelBody>
+				}
+				advanced={ <AdvancedTab attributes={ attributes } setAttributes={ setAttributes } /> }
+			/>
 
 			<div { ...blockProps }>
 				{ isResolving && ! previewHtml ? (

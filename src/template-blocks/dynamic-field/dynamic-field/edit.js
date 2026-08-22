@@ -108,98 +108,96 @@ export default function Edit( { attributes, setAttributes } ) {
 
 	return (
 		<>
-			<InspectorControls>
-				<InspectorTabs
-					general={
-						<PanelBody title={ __( 'Field', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
-							<SelectControl
-								label={ __( 'Provider', 'blockive-premium-addon-for-block' ) }
-								value={ provider }
-								options={ providerOptions }
-								onChange={ ( value ) => setAttributes( { provider: value } ) }
-							/>
+			<InspectorTabs
+				general={
+					<PanelBody title={ __( 'Field', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
+						<SelectControl
+							label={ __( 'Provider', 'blockive-premium-addon-for-block' ) }
+							value={ provider }
+							options={ providerOptions }
+							onChange={ ( value ) => setAttributes( { provider: value } ) }
+						/>
+						<TextControl
+							label={ __( 'Field', 'blockive-premium-addon-for-block' ) }
+							help={ __( 'The field key/name understood by the selected provider, e.g. a meta key or ACF field name.', 'blockive-premium-addon-for-block' ) }
+							value={ fieldKey }
+							onChange={ ( value ) => setAttributes( { fieldKey: value } ) }
+						/>
+						<SelectControl
+							label={ __( 'Output Type', 'blockive-premium-addon-for-block' ) }
+							value={ outputType }
+							options={ OUTPUT_TYPE_OPTIONS }
+							onChange={ ( value ) => setAttributes( { outputType: value } ) }
+						/>
+						{ outputType === 'link' && (
 							<TextControl
-								label={ __( 'Field', 'blockive-premium-addon-for-block' ) }
-								help={ __( 'The field key/name understood by the selected provider, e.g. a meta key or ACF field name.', 'blockive-premium-addon-for-block' ) }
-								value={ fieldKey }
-								onChange={ ( value ) => setAttributes( { fieldKey: value } ) }
+								label={ __( 'Link Text', 'blockive-premium-addon-for-block' ) }
+								placeholder={ fieldKey }
+								value={ linkText }
+								onChange={ ( value ) => setAttributes( { linkText: value } ) }
 							/>
-							<SelectControl
-								label={ __( 'Output Type', 'blockive-premium-addon-for-block' ) }
-								value={ outputType }
-								options={ OUTPUT_TYPE_OPTIONS }
-								onChange={ ( value ) => setAttributes( { outputType: value } ) }
-							/>
-							{ outputType === 'link' && (
-								<TextControl
-									label={ __( 'Link Text', 'blockive-premium-addon-for-block' ) }
-									placeholder={ fieldKey }
-									value={ linkText }
-									onChange={ ( value ) => setAttributes( { linkText: value } ) }
-								/>
-							) }
-							{ outputType === 'date' && (
-								<TextControl
-									label={ __( 'Date Format', 'blockive-premium-addon-for-block' ) }
-									help={ __( 'PHP date format, e.g. F j, Y. Leave blank to use the site default.', 'blockive-premium-addon-for-block' ) }
-									value={ dateFormat }
-									onChange={ ( value ) => setAttributes( { dateFormat: value } ) }
-								/>
-							) }
-							{ showAffixes && (
-								<>
-									<TextControl
-										label={ __( 'Prefix', 'blockive-premium-addon-for-block' ) }
-										value={ prefix }
-										onChange={ ( value ) => setAttributes( { prefix: value } ) }
-									/>
-									<TextControl
-										label={ __( 'Suffix', 'blockive-premium-addon-for-block' ) }
-										value={ suffix }
-										onChange={ ( value ) => setAttributes( { suffix: value } ) }
-									/>
-								</>
-							) }
+						) }
+						{ outputType === 'date' && (
 							<TextControl
-								label={ __( 'Fallback', 'blockive-premium-addon-for-block' ) }
-								help={ __( 'Shown when the resolved field value is empty.', 'blockive-premium-addon-for-block' ) }
-								value={ fallback }
-								onChange={ ( value ) => setAttributes( { fallback: value } ) }
+								label={ __( 'Date Format', 'blockive-premium-addon-for-block' ) }
+								help={ __( 'PHP date format, e.g. F j, Y. Leave blank to use the site default.', 'blockive-premium-addon-for-block' ) }
+								value={ dateFormat }
+								onChange={ ( value ) => setAttributes( { dateFormat: value } ) }
 							/>
-							<SelectControl
-								label={ __( 'HTML Tag', 'blockive-premium-addon-for-block' ) }
-								value={ TagName }
-								options={ TAG_OPTIONS }
-								onChange={ ( value ) => setAttributes( { tagName: value } ) }
-							/>
-						</PanelBody>
-					}
-					style={
-						<PanelBody title={ __( 'Colors', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
-							<ColorStateControls
-								normal={ [
-									{
-										label: __( 'Text Color', 'blockive-premium-addon-for-block' ),
-										value: textColor,
-										onChange: ( value ) => setAttributes( { textColor: value } ),
-									},
-								] }
-								hover={ [
-									{
-										label: __( 'Text Color', 'blockive-premium-addon-for-block' ),
-										value: textHoverColor,
-										onChange: ( value ) => setAttributes( { textHoverColor: value } ),
-									},
-								] }
-							/>
-							<p className="bpafb-help-text">
-								{ __( 'Font, size, weight and other typography options are available in the native Styles panel above.', 'blockive-premium-addon-for-block' ) }
-							</p>
-						</PanelBody>
-					}
-					advanced={ <AdvancedTab attributes={ attributes } setAttributes={ setAttributes } /> }
-				/>
-			</InspectorControls>
+						) }
+						{ showAffixes && (
+							<>
+								<TextControl
+									label={ __( 'Prefix', 'blockive-premium-addon-for-block' ) }
+									value={ prefix }
+									onChange={ ( value ) => setAttributes( { prefix: value } ) }
+								/>
+								<TextControl
+									label={ __( 'Suffix', 'blockive-premium-addon-for-block' ) }
+									value={ suffix }
+									onChange={ ( value ) => setAttributes( { suffix: value } ) }
+								/>
+							</>
+						) }
+						<TextControl
+							label={ __( 'Fallback', 'blockive-premium-addon-for-block' ) }
+							help={ __( 'Shown when the resolved field value is empty.', 'blockive-premium-addon-for-block' ) }
+							value={ fallback }
+							onChange={ ( value ) => setAttributes( { fallback: value } ) }
+						/>
+						<SelectControl
+							label={ __( 'HTML Tag', 'blockive-premium-addon-for-block' ) }
+							value={ TagName }
+							options={ TAG_OPTIONS }
+							onChange={ ( value ) => setAttributes( { tagName: value } ) }
+						/>
+					</PanelBody>
+				}
+				style={
+					<PanelBody title={ __( 'Colors', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
+						<ColorStateControls
+							normal={ [
+								{
+									label: __( 'Text Color', 'blockive-premium-addon-for-block' ),
+									value: textColor,
+									onChange: ( value ) => setAttributes( { textColor: value } ),
+								},
+							] }
+							hover={ [
+								{
+									label: __( 'Text Color', 'blockive-premium-addon-for-block' ),
+									value: textHoverColor,
+									onChange: ( value ) => setAttributes( { textHoverColor: value } ),
+								},
+							] }
+						/>
+						<p className="bpafb-help-text">
+							{ __( 'Font, size, weight and other typography options are available in the native Styles panel above.', 'blockive-premium-addon-for-block' ) }
+						</p>
+					</PanelBody>
+				}
+				advanced={ <AdvancedTab attributes={ attributes } setAttributes={ setAttributes } /> }
+			/>
 
 			{ preview.type === 'image' && (
 				<TagName { ...blockProps }>

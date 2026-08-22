@@ -27,33 +27,31 @@ export default function Edit( { attributes, setAttributes } ) {
 
 	return (
 		<>
-			<InspectorControls>
-				<InspectorTabs
-					general={
-						<PanelBody title={ __( 'Settings', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
-							<SelectControl
-								label={ __( 'Layout', 'blockive-premium-addon-for-block' ) }
-								value={ layout }
-								options={ LAYOUT_OPTIONS }
-								onChange={ ( value ) => setAttributes( { layout: value } ) }
-							/>
-							<ToggleControl
-								label={ __( 'Show Attribute Label', 'blockive-premium-addon-for-block' ) }
-								checked={ !! showLabel }
-								onChange={ ( value ) => setAttributes( { showLabel: value } ) }
-							/>
-						</PanelBody>
-					}
-					style={
-						<PanelBody title={ __( 'Style', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
-							<p className="bpafb-help-text">
-								{ __( 'Font size and text color are available in the native Styles panel above.', 'blockive-premium-addon-for-block' ) }
-							</p>
-						</PanelBody>
-					}
-					advanced={ <AdvancedTab attributes={ attributes } setAttributes={ setAttributes } /> }
-				/>
-			</InspectorControls>
+			<InspectorTabs
+				general={
+					<PanelBody title={ __( 'Settings', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
+						<SelectControl
+							label={ __( 'Layout', 'blockive-premium-addon-for-block' ) }
+							value={ layout }
+							options={ LAYOUT_OPTIONS }
+							onChange={ ( value ) => setAttributes( { layout: value } ) }
+						/>
+						<ToggleControl
+							label={ __( 'Show Attribute Label', 'blockive-premium-addon-for-block' ) }
+							checked={ !! showLabel }
+							onChange={ ( value ) => setAttributes( { showLabel: value } ) }
+						/>
+					</PanelBody>
+				}
+				style={
+					<PanelBody title={ __( 'Style', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
+						<p className="bpafb-help-text">
+							{ __( 'Font size and text color are available in the native Styles panel above.', 'blockive-premium-addon-for-block' ) }
+						</p>
+					</PanelBody>
+				}
+				advanced={ <AdvancedTab attributes={ attributes } setAttributes={ setAttributes } /> }
+			/>
 
 			<div { ...blockProps }>
 				{ layout === 'list' ? (

@@ -1,35 +1,20 @@
-import { __ } from '@wordpress/i18n';
-import { TabPanel } from '@wordpress/components';
-
-const TABS = [
-	{
-		name: 'general',
-		title: __( 'General', 'blockive-premium-addon-for-block' ),
-		className: 'bpafb-tab-general',
-	},
-	{
-		name: 'style',
-		title: __( 'Style', 'blockive-premium-addon-for-block' ),
-		className: 'bpafb-tab-style',
-	},
-	{
-		name: 'advanced',
-		title: __( 'Advanced', 'blockive-premium-addon-for-block' ),
-		className: 'bpafb-tab-advanced',
-	},
-];
+import { InspectorControls } from '@wordpress/block-editor';
 
 /**
- * Shared Elementor-style 3 tab inspector shell used by every Blockive block.
- * Every block passes its General / Style tab content in as props; the
- * Advanced tab content should be the shared <AdvancedTab /> component.
+ * Shared inspector wiring used by every Blockive block. There is no custom
+ * tab navigation here — `general` renders as plain PanelBody sections in
+ * the block's native Settings tab, `style` in the block's native Styles
+ * tab, and `advanced` (the shared <AdvancedTab />) places its own panels
+ * across both native tabs itself. This keeps every existing setting
+ * available, just as ordinary collapsible panels instead of behind a
+ * second layer of tab navigation.
  */
 export default function InspectorTabs( { general, style, advanced } ) {
-	const content = { general, style, advanced };
-
 	return (
-		<TabPanel className="bpafb-inspector-tabs" activeClass="is-active" tabs={ TABS }>
-			{ ( tab ) => <div className="bpafb-inspector-tab-panel">{ content[ tab.name ] }</div> }
-		</TabPanel>
+		<>
+			{ general && <InspectorControls group="settings">{ general }</InspectorControls> }
+			{ style && <InspectorControls group="styles">{ style }</InspectorControls> }
+			{ advanced }
+		</>
 	);
 }

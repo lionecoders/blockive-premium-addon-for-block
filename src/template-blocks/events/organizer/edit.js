@@ -14,40 +14,38 @@ export default function Edit( { attributes, setAttributes } ) {
 
 	return (
 		<>
-			<InspectorControls>
-				<InspectorTabs
-					general={
-						<PanelBody title={ __( 'Settings', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
+			<InspectorTabs
+				general={
+					<PanelBody title={ __( 'Settings', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
+						<ToggleControl
+							label={ __( 'Link to Organizer Website', 'blockive-premium-addon-for-block' ) }
+							checked={ !! isLink }
+							onChange={ ( value ) => setAttributes( { isLink: value } ) }
+						/>
+						{ isLink && (
 							<ToggleControl
-								label={ __( 'Link to Organizer Website', 'blockive-premium-addon-for-block' ) }
-								checked={ !! isLink }
-								onChange={ ( value ) => setAttributes( { isLink: value } ) }
+								label={ __( 'Open in New Tab', 'blockive-premium-addon-for-block' ) }
+								checked={ linkTarget === '_blank' }
+								onChange={ ( value ) => setAttributes( { linkTarget: value ? '_blank' : '_self' } ) }
 							/>
-							{ isLink && (
-								<ToggleControl
-									label={ __( 'Open in New Tab', 'blockive-premium-addon-for-block' ) }
-									checked={ linkTarget === '_blank' }
-									onChange={ ( value ) => setAttributes( { linkTarget: value ? '_blank' : '_self' } ) }
-								/>
-							) }
-							<TextControl
-								label={ __( 'Icon (Font Awesome class)', 'blockive-premium-addon-for-block' ) }
-								value={ icon }
-								onChange={ ( value ) => setAttributes( { icon: value } ) }
-								help={ __( 'Leave blank to hide the icon.', 'blockive-premium-addon-for-block' ) }
-							/>
-						</PanelBody>
-					}
-					style={
-						<PanelBody title={ __( 'Colors', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
-							<p className="bpafb-help-text">
-								{ __( 'Text color, font, size, weight and other typography options are available in the native Styles panel above.', 'blockive-premium-addon-for-block' ) }
-							</p>
-						</PanelBody>
-					}
-					advanced={ <AdvancedTab attributes={ attributes } setAttributes={ setAttributes } /> }
-				/>
-			</InspectorControls>
+						) }
+						<TextControl
+							label={ __( 'Icon (Font Awesome class)', 'blockive-premium-addon-for-block' ) }
+							value={ icon }
+							onChange={ ( value ) => setAttributes( { icon: value } ) }
+							help={ __( 'Leave blank to hide the icon.', 'blockive-premium-addon-for-block' ) }
+						/>
+					</PanelBody>
+				}
+				style={
+					<PanelBody title={ __( 'Colors', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
+						<p className="bpafb-help-text">
+							{ __( 'Text color, font, size, weight and other typography options are available in the native Styles panel above.', 'blockive-premium-addon-for-block' ) }
+						</p>
+					</PanelBody>
+				}
+				advanced={ <AdvancedTab attributes={ attributes } setAttributes={ setAttributes } /> }
+			/>
 
 			<div { ...blockProps }>
 				{ icon && <i className={ icon } /> }

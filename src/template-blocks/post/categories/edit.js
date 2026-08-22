@@ -27,55 +27,53 @@ export default function Edit( { attributes, setAttributes } ) {
 
 	return (
 		<>
-			<InspectorControls>
-				<InspectorTabs
-					general={
-						<PanelBody title={ __( 'Settings', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
-							<ToggleControl
-								label={ __( 'Badge Style', 'blockive-premium-addon-for-block' ) }
-								checked={ !! badgeStyle }
-								onChange={ ( value ) => setAttributes( { badgeStyle: value } ) }
+			<InspectorTabs
+				general={
+					<PanelBody title={ __( 'Settings', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
+						<ToggleControl
+							label={ __( 'Badge Style', 'blockive-premium-addon-for-block' ) }
+							checked={ !! badgeStyle }
+							onChange={ ( value ) => setAttributes( { badgeStyle: value } ) }
+						/>
+						<ToggleControl
+							label={ __( 'Link to Category Archive', 'blockive-premium-addon-for-block' ) }
+							checked={ !! isLink }
+							onChange={ ( value ) => setAttributes( { isLink: value } ) }
+						/>
+						{ ! badgeStyle && (
+							<TextControl
+								label={ __( 'Separator', 'blockive-premium-addon-for-block' ) }
+								value={ separator }
+								onChange={ ( value ) => setAttributes( { separator: value } ) }
 							/>
-							<ToggleControl
-								label={ __( 'Link to Category Archive', 'blockive-premium-addon-for-block' ) }
-								checked={ !! isLink }
-								onChange={ ( value ) => setAttributes( { isLink: value } ) }
-							/>
-							{ ! badgeStyle && (
-								<TextControl
-									label={ __( 'Separator', 'blockive-premium-addon-for-block' ) }
-									value={ separator }
-									onChange={ ( value ) => setAttributes( { separator: value } ) }
-								/>
-							) }
-						</PanelBody>
-					}
-					style={
-						<PanelBody title={ __( 'Colors', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
-							<ColorStateControls
-								normal={ [
-									{
-										label: __( 'Text Color', 'blockive-premium-addon-for-block' ),
-										value: textColor,
-										onChange: ( value ) => setAttributes( { textColor: value } ),
-									},
-								] }
-								hover={ [
-									{
-										label: __( 'Text Color', 'blockive-premium-addon-for-block' ),
-										value: textHoverColor,
-										onChange: ( value ) => setAttributes( { textHoverColor: value } ),
-									},
-								] }
-							/>
-							<p className="bpafb-help-text">
-								{ __( 'Font size, weight and other typography options are available in the native Styles panel above.', 'blockive-premium-addon-for-block' ) }
-							</p>
-						</PanelBody>
-					}
-					advanced={ <AdvancedTab attributes={ attributes } setAttributes={ setAttributes } /> }
-				/>
-			</InspectorControls>
+						) }
+					</PanelBody>
+				}
+				style={
+					<PanelBody title={ __( 'Colors', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
+						<ColorStateControls
+							normal={ [
+								{
+									label: __( 'Text Color', 'blockive-premium-addon-for-block' ),
+									value: textColor,
+									onChange: ( value ) => setAttributes( { textColor: value } ),
+								},
+							] }
+							hover={ [
+								{
+									label: __( 'Text Color', 'blockive-premium-addon-for-block' ),
+									value: textHoverColor,
+									onChange: ( value ) => setAttributes( { textHoverColor: value } ),
+								},
+							] }
+						/>
+						<p className="bpafb-help-text">
+							{ __( 'Font size, weight and other typography options are available in the native Styles panel above.', 'blockive-premium-addon-for-block' ) }
+						</p>
+					</PanelBody>
+				}
+				advanced={ <AdvancedTab attributes={ attributes } setAttributes={ setAttributes } /> }
+			/>
 
 			<div { ...blockProps }>
 				{ previewCategories.map( ( name, index ) => (

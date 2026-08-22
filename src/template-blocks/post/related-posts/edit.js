@@ -68,83 +68,81 @@ export default function Edit( { attributes, setAttributes } ) {
 
 	return (
 		<>
-			<InspectorControls>
-				<InspectorTabs
-					general={
-						<>
-							<PanelBody title={ __( 'Layout', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
+			<InspectorTabs
+				general={
+					<>
+						<PanelBody title={ __( 'Layout', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
+							<RangeControl
+								label={ __( 'Number of Posts', 'blockive-premium-addon-for-block' ) }
+								value={ numberOfPosts }
+								onChange={ ( value ) => setAttributes( { numberOfPosts: value } ) }
+								min={ 1 }
+								max={ 12 }
+							/>
+							<SelectControl
+								label={ __( 'Layout', 'blockive-premium-addon-for-block' ) }
+								value={ layout }
+								options={ LAYOUT_OPTIONS }
+								onChange={ ( value ) => setAttributes( { layout: value } ) }
+							/>
+							{ layout === 'grid' && (
 								<RangeControl
-									label={ __( 'Number of Posts', 'blockive-premium-addon-for-block' ) }
-									value={ numberOfPosts }
-									onChange={ ( value ) => setAttributes( { numberOfPosts: value } ) }
+									label={ __( 'Columns', 'blockive-premium-addon-for-block' ) }
+									value={ columns }
+									onChange={ ( value ) => setAttributes( { columns: value } ) }
 									min={ 1 }
-									max={ 12 }
+									max={ 6 }
 								/>
-								<SelectControl
-									label={ __( 'Layout', 'blockive-premium-addon-for-block' ) }
-									value={ layout }
-									options={ LAYOUT_OPTIONS }
-									onChange={ ( value ) => setAttributes( { layout: value } ) }
-								/>
-								{ layout === 'grid' && (
-									<RangeControl
-										label={ __( 'Columns', 'blockive-premium-addon-for-block' ) }
-										value={ columns }
-										onChange={ ( value ) => setAttributes( { columns: value } ) }
-										min={ 1 }
-										max={ 6 }
-									/>
-								) }
-							</PanelBody>
-							<PanelBody title={ __( 'Query', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
-								<SelectControl
-									label={ __( 'Order By', 'blockive-premium-addon-for-block' ) }
-									value={ orderBy }
-									options={ ORDER_BY_OPTIONS }
-									onChange={ ( value ) => setAttributes( { orderBy: value } ) }
-								/>
-								<SelectControl
-									label={ __( 'Order', 'blockive-premium-addon-for-block' ) }
-									value={ order }
-									options={ ORDER_OPTIONS }
-									onChange={ ( value ) => setAttributes( { order: value } ) }
-								/>
-								<ToggleControl
-									label={ __( 'Match Same Category', 'blockive-premium-addon-for-block' ) }
-									checked={ !! sameCategory }
-									onChange={ ( value ) => setAttributes( { sameCategory: value } ) }
-									help={ __( 'Only show posts sharing a category (or the primary taxonomy) with the current post.', 'blockive-premium-addon-for-block' ) }
-								/>
-							</PanelBody>
-							<PanelBody title={ __( 'Display', 'blockive-premium-addon-for-block' ) } initialOpen={ false }>
-								<ToggleControl
-									label={ __( 'Show Image', 'blockive-premium-addon-for-block' ) }
-									checked={ !! showImage }
-									onChange={ ( value ) => setAttributes( { showImage: value } ) }
-								/>
-								<ToggleControl
-									label={ __( 'Show Date', 'blockive-premium-addon-for-block' ) }
-									checked={ !! showDate }
-									onChange={ ( value ) => setAttributes( { showDate: value } ) }
-								/>
-								<ToggleControl
-									label={ __( 'Show Excerpt', 'blockive-premium-addon-for-block' ) }
-									checked={ !! showExcerpt }
-									onChange={ ( value ) => setAttributes( { showExcerpt: value } ) }
-								/>
-							</PanelBody>
-						</>
-					}
-					style={
-						<PanelBody title={ __( 'Style', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
-							<p className="bpafb-help-text">
-								{ __( 'Card typography and spacing options are available in the native Styles panel above.', 'blockive-premium-addon-for-block' ) }
-							</p>
+							) }
 						</PanelBody>
-					}
-					advanced={ <AdvancedTab attributes={ attributes } setAttributes={ setAttributes } /> }
-				/>
-			</InspectorControls>
+						<PanelBody title={ __( 'Query', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
+							<SelectControl
+								label={ __( 'Order By', 'blockive-premium-addon-for-block' ) }
+								value={ orderBy }
+								options={ ORDER_BY_OPTIONS }
+								onChange={ ( value ) => setAttributes( { orderBy: value } ) }
+							/>
+							<SelectControl
+								label={ __( 'Order', 'blockive-premium-addon-for-block' ) }
+								value={ order }
+								options={ ORDER_OPTIONS }
+								onChange={ ( value ) => setAttributes( { order: value } ) }
+							/>
+							<ToggleControl
+								label={ __( 'Match Same Category', 'blockive-premium-addon-for-block' ) }
+								checked={ !! sameCategory }
+								onChange={ ( value ) => setAttributes( { sameCategory: value } ) }
+								help={ __( 'Only show posts sharing a category (or the primary taxonomy) with the current post.', 'blockive-premium-addon-for-block' ) }
+							/>
+						</PanelBody>
+						<PanelBody title={ __( 'Display', 'blockive-premium-addon-for-block' ) } initialOpen={ false }>
+							<ToggleControl
+								label={ __( 'Show Image', 'blockive-premium-addon-for-block' ) }
+								checked={ !! showImage }
+								onChange={ ( value ) => setAttributes( { showImage: value } ) }
+							/>
+							<ToggleControl
+								label={ __( 'Show Date', 'blockive-premium-addon-for-block' ) }
+								checked={ !! showDate }
+								onChange={ ( value ) => setAttributes( { showDate: value } ) }
+							/>
+							<ToggleControl
+								label={ __( 'Show Excerpt', 'blockive-premium-addon-for-block' ) }
+								checked={ !! showExcerpt }
+								onChange={ ( value ) => setAttributes( { showExcerpt: value } ) }
+							/>
+						</PanelBody>
+					</>
+				}
+				style={
+					<PanelBody title={ __( 'Style', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
+						<p className="bpafb-help-text">
+							{ __( 'Card typography and spacing options are available in the native Styles panel above.', 'blockive-premium-addon-for-block' ) }
+						</p>
+					</PanelBody>
+				}
+				advanced={ <AdvancedTab attributes={ attributes } setAttributes={ setAttributes } /> }
+			/>
 
 			<div { ...blockProps }>
 				{ layout === 'slider' ? (

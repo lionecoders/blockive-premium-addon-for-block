@@ -57,57 +57,55 @@ export default function Edit( { attributes, setAttributes } ) {
 				/>
 			</BlockControls>
 
-			<InspectorControls>
-				<InspectorTabs
-					general={
-						<PanelBody title={ __( 'Content', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
-							<RangeControl
-								label={ __( 'Truncate to Words (0 = full content)', 'blockive-premium-addon-for-block' ) }
-								value={ wordLimit }
-								onChange={ ( value ) => setAttributes( { wordLimit: value } ) }
-								min={ 0 }
-								max={ 500 }
-							/>
-							{ wordLimit > 0 && (
-								<>
-									<ToggleControl
-										label={ __( 'Show Read More Link', 'blockive-premium-addon-for-block' ) }
-										checked={ !! showReadMore }
-										onChange={ ( value ) => setAttributes( { showReadMore: value } ) }
+			<InspectorTabs
+				general={
+					<PanelBody title={ __( 'Content', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
+						<RangeControl
+							label={ __( 'Truncate to Words (0 = full content)', 'blockive-premium-addon-for-block' ) }
+							value={ wordLimit }
+							onChange={ ( value ) => setAttributes( { wordLimit: value } ) }
+							min={ 0 }
+							max={ 500 }
+						/>
+						{ wordLimit > 0 && (
+							<>
+								<ToggleControl
+									label={ __( 'Show Read More Link', 'blockive-premium-addon-for-block' ) }
+									checked={ !! showReadMore }
+									onChange={ ( value ) => setAttributes( { showReadMore: value } ) }
+								/>
+								{ showReadMore && (
+									<TextControl
+										label={ __( 'Read More Text', 'blockive-premium-addon-for-block' ) }
+										value={ readMoreText }
+										onChange={ ( value ) => setAttributes( { readMoreText: value } ) }
 									/>
-									{ showReadMore && (
-										<TextControl
-											label={ __( 'Read More Text', 'blockive-premium-addon-for-block' ) }
-											value={ readMoreText }
-											onChange={ ( value ) => setAttributes( { readMoreText: value } ) }
-										/>
-									) }
-								</>
-							) }
-						</PanelBody>
-					}
-					style={
-						<PanelBody title={ __( 'Style', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
-							<RangeControl
-								label={ __( 'Max Width (px, 0 = none)', 'blockive-premium-addon-for-block' ) }
-								value={ maxWidth }
-								onChange={ ( value ) => setAttributes( { maxWidth: value } ) }
-								min={ 0 }
-								max={ 1600 }
-							/>
-							<ToggleControl
-								label={ __( 'Drop Cap', 'blockive-premium-addon-for-block' ) }
-								checked={ !! dropCap }
-								onChange={ ( value ) => setAttributes( { dropCap: value } ) }
-							/>
-							<p className="bpafb-help-text">
-								{ __( 'Font, size, weight, color and other typography options are available in the native Styles panel above.', 'blockive-premium-addon-for-block' ) }
-							</p>
-						</PanelBody>
-					}
-					advanced={ <AdvancedTab attributes={ attributes } setAttributes={ setAttributes } /> }
-				/>
-			</InspectorControls>
+								) }
+							</>
+						) }
+					</PanelBody>
+				}
+				style={
+					<PanelBody title={ __( 'Style', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
+						<RangeControl
+							label={ __( 'Max Width (px, 0 = none)', 'blockive-premium-addon-for-block' ) }
+							value={ maxWidth }
+							onChange={ ( value ) => setAttributes( { maxWidth: value } ) }
+							min={ 0 }
+							max={ 1600 }
+						/>
+						<ToggleControl
+							label={ __( 'Drop Cap', 'blockive-premium-addon-for-block' ) }
+							checked={ !! dropCap }
+							onChange={ ( value ) => setAttributes( { dropCap: value } ) }
+						/>
+						<p className="bpafb-help-text">
+							{ __( 'Font, size, weight, color and other typography options are available in the native Styles panel above.', 'blockive-premium-addon-for-block' ) }
+						</p>
+					</PanelBody>
+				}
+				advanced={ <AdvancedTab attributes={ attributes } setAttributes={ setAttributes } /> }
+			/>
 
 			<div { ...blockProps }>
 				<RawHTML>{ previewHtml }</RawHTML>

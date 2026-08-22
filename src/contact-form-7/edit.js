@@ -68,13 +68,11 @@ export default function Edit({ attributes, setAttributes }) {
 
 	return (
 		<>
-			<InspectorControls>
-				<InspectorTabs
-					general={generalTab}
-					style={styleTab}
-					advanced={<AdvancedTab attributes={attributes} setAttributes={setAttributes} />}
-				/>
-			</InspectorControls>
+			<InspectorTabs
+				general={generalTab}
+				style={styleTab}
+				advanced={<AdvancedTab attributes={attributes} setAttributes={setAttributes} />}
+			/>
 
 			<div {...blockProps}>
 				{showTitle && (

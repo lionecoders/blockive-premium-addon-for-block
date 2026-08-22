@@ -29,25 +29,23 @@ export default function Edit( { attributes, setAttributes } ) {
 				/>
 			</BlockControls>
 
-			<InspectorControls>
-				<InspectorTabs
-					general={
-						<PanelBody title={ __( 'Price', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
-							<p className="bpafb-help-text">
-								{ __( 'Renders the product’s regular/sale price exactly as WooCommerce formats it. Use the Align toolbar above to set text alignment.', 'blockive-premium-addon-for-block' ) }
-							</p>
-						</PanelBody>
-					}
-					style={
-						<PanelBody title={ __( 'Colors', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
-							<p className="bpafb-help-text">
-								{ __( 'Font, size, weight, color and other typography options are available in the native Styles panel above.', 'blockive-premium-addon-for-block' ) }
-							</p>
-						</PanelBody>
-					}
-					advanced={ <AdvancedTab attributes={ attributes } setAttributes={ setAttributes } /> }
-				/>
-			</InspectorControls>
+			<InspectorTabs
+				general={
+					<PanelBody title={ __( 'Price', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
+						<p className="bpafb-help-text">
+							{ __( 'Renders the product’s regular/sale price exactly as WooCommerce formats it. Use the Align toolbar above to set text alignment.', 'blockive-premium-addon-for-block' ) }
+						</p>
+					</PanelBody>
+				}
+				style={
+					<PanelBody title={ __( 'Colors', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
+						<p className="bpafb-help-text">
+							{ __( 'Font, size, weight, color and other typography options are available in the native Styles panel above.', 'blockive-premium-addon-for-block' ) }
+						</p>
+					</PanelBody>
+				}
+				advanced={ <AdvancedTab attributes={ attributes } setAttributes={ setAttributes } /> }
+			/>
 
 			<div { ...blockProps }>
 				<span className="woocommerce-Price-amount amount">

@@ -45,54 +45,52 @@ export default function Edit( { attributes, setAttributes } ) {
 
 	return (
 		<>
-			<InspectorControls>
-				<InspectorTabs
-					general={
-						<PanelBody title={ __( 'Image', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
-							<SelectControl
-								label={ __( 'Image Size', 'blockive-premium-addon-for-block' ) }
-								value={ imageSize }
-								options={ SIZE_OPTIONS }
-								onChange={ ( value ) => setAttributes( { imageSize: value } ) }
-							/>
-							<SelectControl
-								label={ __( 'Aspect Ratio', 'blockive-premium-addon-for-block' ) }
-								value={ aspectRatio }
-								options={ ASPECT_OPTIONS }
-								onChange={ ( value ) => setAttributes( { aspectRatio: value } ) }
-							/>
-							<SelectControl
-								label={ __( 'Object Fit', 'blockive-premium-addon-for-block' ) }
-								value={ objectFit }
-								options={ OBJECT_FIT_OPTIONS }
-								onChange={ ( value ) => setAttributes( { objectFit: value } ) }
-							/>
-							<ToggleControl
-								label={ __( 'Lazy Load', 'blockive-premium-addon-for-block' ) }
-								checked={ !! lazyLoad }
-								onChange={ ( value ) => setAttributes( { lazyLoad: value } ) }
-							/>
-							<ToggleControl
-								label={ __( 'Link to Product', 'blockive-premium-addon-for-block' ) }
-								checked={ !! isLink }
-								onChange={ ( value ) => setAttributes( { isLink: value } ) }
-							/>
-						</PanelBody>
-					}
-					style={
-						<PanelBody title={ __( 'Style', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
-							<RangeControl
-								label={ __( 'Border Radius (px)', 'blockive-premium-addon-for-block' ) }
-								value={ borderRadius }
-								onChange={ ( value ) => setAttributes( { borderRadius: value } ) }
-								min={ 0 }
-								max={ 100 }
-							/>
-						</PanelBody>
-					}
-					advanced={ <AdvancedTab attributes={ attributes } setAttributes={ setAttributes } /> }
-				/>
-			</InspectorControls>
+			<InspectorTabs
+				general={
+					<PanelBody title={ __( 'Image', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
+						<SelectControl
+							label={ __( 'Image Size', 'blockive-premium-addon-for-block' ) }
+							value={ imageSize }
+							options={ SIZE_OPTIONS }
+							onChange={ ( value ) => setAttributes( { imageSize: value } ) }
+						/>
+						<SelectControl
+							label={ __( 'Aspect Ratio', 'blockive-premium-addon-for-block' ) }
+							value={ aspectRatio }
+							options={ ASPECT_OPTIONS }
+							onChange={ ( value ) => setAttributes( { aspectRatio: value } ) }
+						/>
+						<SelectControl
+							label={ __( 'Object Fit', 'blockive-premium-addon-for-block' ) }
+							value={ objectFit }
+							options={ OBJECT_FIT_OPTIONS }
+							onChange={ ( value ) => setAttributes( { objectFit: value } ) }
+						/>
+						<ToggleControl
+							label={ __( 'Lazy Load', 'blockive-premium-addon-for-block' ) }
+							checked={ !! lazyLoad }
+							onChange={ ( value ) => setAttributes( { lazyLoad: value } ) }
+						/>
+						<ToggleControl
+							label={ __( 'Link to Product', 'blockive-premium-addon-for-block' ) }
+							checked={ !! isLink }
+							onChange={ ( value ) => setAttributes( { isLink: value } ) }
+						/>
+					</PanelBody>
+				}
+				style={
+					<PanelBody title={ __( 'Style', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
+						<RangeControl
+							label={ __( 'Border Radius (px)', 'blockive-premium-addon-for-block' ) }
+							value={ borderRadius }
+							onChange={ ( value ) => setAttributes( { borderRadius: value } ) }
+							min={ 0 }
+							max={ 100 }
+						/>
+					</PanelBody>
+				}
+				advanced={ <AdvancedTab attributes={ attributes } setAttributes={ setAttributes } /> }
+			/>
 
 			<figure { ...blockProps }>
 				{ previewImageUrl ? (

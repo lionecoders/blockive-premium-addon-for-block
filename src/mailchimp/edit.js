@@ -46,189 +46,187 @@ export default function Edit({ attributes, setAttributes }) {
 
 	return (
 		<>
-			<InspectorControls>
-				<InspectorTabs
-					general={(
-				<PanelBody title={__('Content', 'blockive-premium-addon-for-block')} initialOpen={true}>
-					<TextControl
-						label={__('Title', 'blockive-premium-addon-for-block')}
-						value={title}
-						onChange={(val) => setAttributes({ title: val })}
-					/>
-					<TextControl
-						label={__('Subtitle', 'blockive-premium-addon-for-block')}
-						value={subtitle}
-						onChange={(val) => setAttributes({ subtitle: val })}
-					/>
-					<TextControl
-						label={__('Placeholder Text', 'blockive-premium-addon-for-block')}
-						value={placeholderText}
-						onChange={(val) => setAttributes({ placeholderText: val })}
-					/>
-					<TextControl
-						label={__('Button Text', 'blockive-premium-addon-for-block')}
-						value={buttonText}
-						onChange={(val) => setAttributes({ buttonText: val })}
-					/>
-					<TextControl
-						label={__('MailChimp Form Action URL', 'blockive-premium-addon-for-block')}
-						help={__('Paste the action URL from your MailChimp embedded form code here.', 'blockive-premium-addon-for-block')}
-						value={formAction}
-						onChange={(val) => setAttributes({ formAction: val })}
-					/>
-				</PanelBody>
-					)}
-					style={(
-						<>
-				<PanelBody title={__('Colors', 'blockive-premium-addon-for-block')}>
-					<div style={{ marginBottom: '15px' }}>
-						<label>{__('Title Color', 'blockive-premium-addon-for-block')}</label>
-						<ColorPalette
-							value={titleColor}
-							onChange={(val) => setAttributes({ titleColor: val })}
-						/>
-					</div>
-					<div style={{ marginBottom: '15px' }}>
-						<label>{__('Subtitle Color', 'blockive-premium-addon-for-block')}</label>
-						<ColorPalette
-							value={subtitleColor}
-							onChange={(val) => setAttributes({ subtitleColor: val })}
-						/>
-					</div>
-					<div style={{ marginBottom: '15px' }}>
-						<label>{__('Input Background Color', 'blockive-premium-addon-for-block')}</label>
-						<ColorPalette
-							value={inputBgColor}
-							onChange={(val) => setAttributes({ inputBgColor: val })}
-						/>
-					</div>
-					<div style={{ marginBottom: '15px' }}>
-						<label>{__('Button Background Color', 'blockive-premium-addon-for-block')}</label>
-						<ColorPalette
-							value={buttonBgColor}
-							onChange={(val) => setAttributes({ buttonBgColor: val })}
-						/>
-					</div>
-					<div style={{ marginBottom: '15px' }}>
-						<label>{__('Button Text Color', 'blockive-premium-addon-for-block')}</label>
-						<ColorPalette
-							value={buttonTextColor}
-							onChange={(val) => setAttributes({ buttonTextColor: val })}
-						/>
-					</div>
-					<div style={{ marginBottom: '15px' }}>
-						<label>{__('Button Hover Background Color', 'blockive-premium-addon-for-block')}</label>
-						<ColorPalette
-							value={buttonHoverBgColor}
-							onChange={(val) => setAttributes({ buttonHoverBgColor: val })}
-						/>
-					</div>
-					<div>
-						<label>{__('Button Hover Text Color', 'blockive-premium-addon-for-block')}</label>
-						<ColorPalette
-							value={buttonHoverTextColor}
-							onChange={(val) => setAttributes({ buttonHoverTextColor: val })}
-						/>
-					</div>
-				</PanelBody>
-
-				<PanelBody title={__('Border Radius', 'blockive-premium-addon-for-block')}>
-					<RangeControl
-						label={__('Input Border Radius', 'blockive-premium-addon-for-block')}
-						value={inputBorderRadius}
-						onChange={(val) => setAttributes({ inputBorderRadius: val })}
-						min={0}
-						max={50}
-					/>
-					<RangeControl
-						label={__('Button Border Radius', 'blockive-premium-addon-for-block')}
-						value={buttonBorderRadius}
-						onChange={(val) => setAttributes({ buttonBorderRadius: val })}
-						min={0}
-						max={50}
-					/>
-				</PanelBody>
-
-				<PanelBody title={__('Spacing', 'blockive-premium-addon-for-block')}>
-					<RangeControl
-						label={__('Gap Between Input and Button', 'blockive-premium-addon-for-block')}
-						value={formGap}
-						onChange={(val) => setAttributes({ formGap: val })}
-						min={0}
-						max={50}
-					/>
-				</PanelBody>
-
-				<PanelBody title={__('Icons & Borders', 'blockive-premium-addon-for-block')}>
-					<ToggleControl
-						label={__('Show Input Envelope Icon', 'blockive-premium-addon-for-block')}
-						checked={showInputIcon}
-						onChange={(val) => setAttributes({ showInputIcon: val })}
-					/>
-					{showInputIcon && (
-						<>
-							<div style={{ marginBottom: '15px' }}>
-								<label>{__('Input Icon Background', 'blockive-premium-addon-for-block')}</label>
-								<ColorPalette
-									value={inputIconBgColor}
-									onChange={(val) => setAttributes({ inputIconBgColor: val })}
-								/>
-							</div>
-							<div style={{ marginBottom: '15px' }}>
-								<label>{__('Input Icon Color', 'blockive-premium-addon-for-block')}</label>
-								<ColorPalette
-									value={inputIconColor}
-									onChange={(val) => setAttributes({ inputIconColor: val })}
-								/>
-							</div>
-						</>
-					)}
-
-					<ToggleControl
-						label={__('Show Button Checkmark Icon', 'blockive-premium-addon-for-block')}
-						checked={showButtonIcon}
-						onChange={(val) => setAttributes({ showButtonIcon: val })}
-					/>
-
-					<hr style={{ margin: '20px 0' }} />
-
-					<RangeControl
-						label={__('Input Border Width', 'blockive-premium-addon-for-block')}
-						value={inputBorderWidth}
-						onChange={(val) => setAttributes({ inputBorderWidth: val })}
-						min={0}
-						max={10}
-					/>
-					<div style={{ marginBottom: '15px' }}>
-						<label>{__('Input Border Color', 'blockive-premium-addon-for-block')}</label>
-						<ColorPalette
-							value={inputBorderColor}
-							onChange={(val) => setAttributes({ inputBorderColor: val })}
-						/>
-					</div>
-
-					<hr style={{ margin: '20px 0' }} />
-
-					<RangeControl
-						label={__('Button Border Width', 'blockive-premium-addon-for-block')}
-						value={buttonBorderWidth}
-						onChange={(val) => setAttributes({ buttonBorderWidth: val })}
-						min={0}
-						max={10}
-					/>
-					<div style={{ marginBottom: '15px' }}>
-						<label>{__('Button Border Color', 'blockive-premium-addon-for-block')}</label>
-						<ColorPalette
-							value={buttonBorderColor}
-							onChange={(val) => setAttributes({ buttonBorderColor: val })}
-						/>
-					</div>
-				</PanelBody>
-						</>
-					)}
-					advanced={<AdvancedTab attributes={attributes} setAttributes={setAttributes} />}
+			<InspectorTabs
+				general={(
+			<PanelBody title={__('Content', 'blockive-premium-addon-for-block')} initialOpen={true}>
+				<TextControl
+					label={__('Title', 'blockive-premium-addon-for-block')}
+					value={title}
+					onChange={(val) => setAttributes({ title: val })}
 				/>
-			</InspectorControls>
+				<TextControl
+					label={__('Subtitle', 'blockive-premium-addon-for-block')}
+					value={subtitle}
+					onChange={(val) => setAttributes({ subtitle: val })}
+				/>
+				<TextControl
+					label={__('Placeholder Text', 'blockive-premium-addon-for-block')}
+					value={placeholderText}
+					onChange={(val) => setAttributes({ placeholderText: val })}
+				/>
+				<TextControl
+					label={__('Button Text', 'blockive-premium-addon-for-block')}
+					value={buttonText}
+					onChange={(val) => setAttributes({ buttonText: val })}
+				/>
+				<TextControl
+					label={__('MailChimp Form Action URL', 'blockive-premium-addon-for-block')}
+					help={__('Paste the action URL from your MailChimp embedded form code here.', 'blockive-premium-addon-for-block')}
+					value={formAction}
+					onChange={(val) => setAttributes({ formAction: val })}
+				/>
+			</PanelBody>
+				)}
+				style={(
+					<>
+			<PanelBody title={__('Colors', 'blockive-premium-addon-for-block')}>
+				<div style={{ marginBottom: '15px' }}>
+					<label>{__('Title Color', 'blockive-premium-addon-for-block')}</label>
+					<ColorPalette
+						value={titleColor}
+						onChange={(val) => setAttributes({ titleColor: val })}
+					/>
+				</div>
+				<div style={{ marginBottom: '15px' }}>
+					<label>{__('Subtitle Color', 'blockive-premium-addon-for-block')}</label>
+					<ColorPalette
+						value={subtitleColor}
+						onChange={(val) => setAttributes({ subtitleColor: val })}
+					/>
+				</div>
+				<div style={{ marginBottom: '15px' }}>
+					<label>{__('Input Background Color', 'blockive-premium-addon-for-block')}</label>
+					<ColorPalette
+						value={inputBgColor}
+						onChange={(val) => setAttributes({ inputBgColor: val })}
+					/>
+				</div>
+				<div style={{ marginBottom: '15px' }}>
+					<label>{__('Button Background Color', 'blockive-premium-addon-for-block')}</label>
+					<ColorPalette
+						value={buttonBgColor}
+						onChange={(val) => setAttributes({ buttonBgColor: val })}
+					/>
+				</div>
+				<div style={{ marginBottom: '15px' }}>
+					<label>{__('Button Text Color', 'blockive-premium-addon-for-block')}</label>
+					<ColorPalette
+						value={buttonTextColor}
+						onChange={(val) => setAttributes({ buttonTextColor: val })}
+					/>
+				</div>
+				<div style={{ marginBottom: '15px' }}>
+					<label>{__('Button Hover Background Color', 'blockive-premium-addon-for-block')}</label>
+					<ColorPalette
+						value={buttonHoverBgColor}
+						onChange={(val) => setAttributes({ buttonHoverBgColor: val })}
+					/>
+				</div>
+				<div>
+					<label>{__('Button Hover Text Color', 'blockive-premium-addon-for-block')}</label>
+					<ColorPalette
+						value={buttonHoverTextColor}
+						onChange={(val) => setAttributes({ buttonHoverTextColor: val })}
+					/>
+				</div>
+			</PanelBody>
+
+			<PanelBody title={__('Border Radius', 'blockive-premium-addon-for-block')}>
+				<RangeControl
+					label={__('Input Border Radius', 'blockive-premium-addon-for-block')}
+					value={inputBorderRadius}
+					onChange={(val) => setAttributes({ inputBorderRadius: val })}
+					min={0}
+					max={50}
+				/>
+				<RangeControl
+					label={__('Button Border Radius', 'blockive-premium-addon-for-block')}
+					value={buttonBorderRadius}
+					onChange={(val) => setAttributes({ buttonBorderRadius: val })}
+					min={0}
+					max={50}
+				/>
+			</PanelBody>
+
+			<PanelBody title={__('Spacing', 'blockive-premium-addon-for-block')}>
+				<RangeControl
+					label={__('Gap Between Input and Button', 'blockive-premium-addon-for-block')}
+					value={formGap}
+					onChange={(val) => setAttributes({ formGap: val })}
+					min={0}
+					max={50}
+				/>
+			</PanelBody>
+
+			<PanelBody title={__('Icons & Borders', 'blockive-premium-addon-for-block')}>
+				<ToggleControl
+					label={__('Show Input Envelope Icon', 'blockive-premium-addon-for-block')}
+					checked={showInputIcon}
+					onChange={(val) => setAttributes({ showInputIcon: val })}
+				/>
+				{showInputIcon && (
+					<>
+						<div style={{ marginBottom: '15px' }}>
+							<label>{__('Input Icon Background', 'blockive-premium-addon-for-block')}</label>
+							<ColorPalette
+								value={inputIconBgColor}
+								onChange={(val) => setAttributes({ inputIconBgColor: val })}
+							/>
+						</div>
+						<div style={{ marginBottom: '15px' }}>
+							<label>{__('Input Icon Color', 'blockive-premium-addon-for-block')}</label>
+							<ColorPalette
+								value={inputIconColor}
+								onChange={(val) => setAttributes({ inputIconColor: val })}
+							/>
+						</div>
+					</>
+				)}
+
+				<ToggleControl
+					label={__('Show Button Checkmark Icon', 'blockive-premium-addon-for-block')}
+					checked={showButtonIcon}
+					onChange={(val) => setAttributes({ showButtonIcon: val })}
+				/>
+
+				<hr style={{ margin: '20px 0' }} />
+
+				<RangeControl
+					label={__('Input Border Width', 'blockive-premium-addon-for-block')}
+					value={inputBorderWidth}
+					onChange={(val) => setAttributes({ inputBorderWidth: val })}
+					min={0}
+					max={10}
+				/>
+				<div style={{ marginBottom: '15px' }}>
+					<label>{__('Input Border Color', 'blockive-premium-addon-for-block')}</label>
+					<ColorPalette
+						value={inputBorderColor}
+						onChange={(val) => setAttributes({ inputBorderColor: val })}
+					/>
+				</div>
+
+				<hr style={{ margin: '20px 0' }} />
+
+				<RangeControl
+					label={__('Button Border Width', 'blockive-premium-addon-for-block')}
+					value={buttonBorderWidth}
+					onChange={(val) => setAttributes({ buttonBorderWidth: val })}
+					min={0}
+					max={10}
+				/>
+				<div style={{ marginBottom: '15px' }}>
+					<label>{__('Button Border Color', 'blockive-premium-addon-for-block')}</label>
+					<ColorPalette
+						value={buttonBorderColor}
+						onChange={(val) => setAttributes({ buttonBorderColor: val })}
+					/>
+				</div>
+			</PanelBody>
+					</>
+				)}
+				advanced={<AdvancedTab attributes={attributes} setAttributes={setAttributes} />}
+			/>
 
 			<div {...blockProps}>
 				<div className="bpafb-mailchimp-content" style={Object.keys(customStyles).length > 0 ? customStyles : undefined}>

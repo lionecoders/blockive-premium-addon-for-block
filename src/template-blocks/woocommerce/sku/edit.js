@@ -20,33 +20,31 @@ export default function Edit( { attributes, setAttributes } ) {
 
 	return (
 		<>
-			<InspectorControls>
-				<InspectorTabs
-					general={
-						<PanelBody title={ __( 'SKU', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
-							<TextControl
-								label={ __( 'Label', 'blockive-premium-addon-for-block' ) }
-								value={ label }
-								onChange={ ( value ) => setAttributes( { label: value } ) }
-							/>
-							<ToggleControl
-								label={ __( 'Hide If Empty', 'blockive-premium-addon-for-block' ) }
-								help={ __( 'Don’t render anything when the product has no SKU set.', 'blockive-premium-addon-for-block' ) }
-								checked={ !! hideIfEmpty }
-								onChange={ ( value ) => setAttributes( { hideIfEmpty: value } ) }
-							/>
-						</PanelBody>
-					}
-					style={
-						<PanelBody title={ __( 'Colors', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
-							<BaseControl label={ __( 'Text Color', 'blockive-premium-addon-for-block' ) }>
-								<ColorPalette value={ textColor } onChange={ ( value ) => setAttributes( { textColor: value } ) } />
-							</BaseControl>
-						</PanelBody>
-					}
-					advanced={ <AdvancedTab attributes={ attributes } setAttributes={ setAttributes } /> }
-				/>
-			</InspectorControls>
+			<InspectorTabs
+				general={
+					<PanelBody title={ __( 'SKU', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
+						<TextControl
+							label={ __( 'Label', 'blockive-premium-addon-for-block' ) }
+							value={ label }
+							onChange={ ( value ) => setAttributes( { label: value } ) }
+						/>
+						<ToggleControl
+							label={ __( 'Hide If Empty', 'blockive-premium-addon-for-block' ) }
+							help={ __( 'Don’t render anything when the product has no SKU set.', 'blockive-premium-addon-for-block' ) }
+							checked={ !! hideIfEmpty }
+							onChange={ ( value ) => setAttributes( { hideIfEmpty: value } ) }
+						/>
+					</PanelBody>
+				}
+				style={
+					<PanelBody title={ __( 'Colors', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
+						<BaseControl label={ __( 'Text Color', 'blockive-premium-addon-for-block' ) }>
+							<ColorPalette value={ textColor } onChange={ ( value ) => setAttributes( { textColor: value } ) } />
+						</BaseControl>
+					</PanelBody>
+				}
+				advanced={ <AdvancedTab attributes={ attributes } setAttributes={ setAttributes } /> }
+			/>
 
 			<div { ...blockProps }>
 				{ label ? <span className="bpafb-tb-sku-label">{ label } </span> : null }

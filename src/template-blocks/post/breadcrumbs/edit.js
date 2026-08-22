@@ -40,56 +40,54 @@ export default function Edit( { attributes, setAttributes } ) {
 
 	return (
 		<>
-			<InspectorControls>
-				<InspectorTabs
-					general={
-						<PanelBody title={ __( 'Settings', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
+			<InspectorTabs
+				general={
+					<PanelBody title={ __( 'Settings', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
+						<TextControl
+							label={ __( 'Separator', 'blockive-premium-addon-for-block' ) }
+							value={ separator }
+							onChange={ ( value ) => setAttributes( { separator: value } ) }
+						/>
+						<ToggleControl
+							label={ __( 'Show Home Icon', 'blockive-premium-addon-for-block' ) }
+							checked={ !! showHomeIcon }
+							onChange={ ( value ) => setAttributes( { showHomeIcon: value } ) }
+						/>
+						{ showHomeIcon && (
 							<TextControl
-								label={ __( 'Separator', 'blockive-premium-addon-for-block' ) }
-								value={ separator }
-								onChange={ ( value ) => setAttributes( { separator: value } ) }
+								label={ __( 'Home Icon (Font Awesome class)', 'blockive-premium-addon-for-block' ) }
+								value={ homeIcon }
+								onChange={ ( value ) => setAttributes( { homeIcon: value } ) }
+								help={ __( 'e.g. fa-solid fa-house', 'blockive-premium-addon-for-block' ) }
 							/>
-							<ToggleControl
-								label={ __( 'Show Home Icon', 'blockive-premium-addon-for-block' ) }
-								checked={ !! showHomeIcon }
-								onChange={ ( value ) => setAttributes( { showHomeIcon: value } ) }
-							/>
-							{ showHomeIcon && (
-								<TextControl
-									label={ __( 'Home Icon (Font Awesome class)', 'blockive-premium-addon-for-block' ) }
-									value={ homeIcon }
-									onChange={ ( value ) => setAttributes( { homeIcon: value } ) }
-									help={ __( 'e.g. fa-solid fa-house', 'blockive-premium-addon-for-block' ) }
-								/>
-							) }
-						</PanelBody>
-					}
-					style={
-						<PanelBody title={ __( 'Colors', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
-							<ColorStateControls
-								normal={ [
-									{
-										label: __( 'Link Color', 'blockive-premium-addon-for-block' ),
-										value: textColor,
-										onChange: ( value ) => setAttributes( { textColor: value } ),
-									},
-								] }
-								hover={ [
-									{
-										label: __( 'Link Color', 'blockive-premium-addon-for-block' ),
-										value: textHoverColor,
-										onChange: ( value ) => setAttributes( { textHoverColor: value } ),
-									},
-								] }
-							/>
-							<p className="bpafb-help-text">
-								{ __( 'Font, size, weight and other typography options are available in the native Styles panel above.', 'blockive-premium-addon-for-block' ) }
-							</p>
-						</PanelBody>
-					}
-					advanced={ <AdvancedTab attributes={ attributes } setAttributes={ setAttributes } /> }
-				/>
-			</InspectorControls>
+						) }
+					</PanelBody>
+				}
+				style={
+					<PanelBody title={ __( 'Colors', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
+						<ColorStateControls
+							normal={ [
+								{
+									label: __( 'Link Color', 'blockive-premium-addon-for-block' ),
+									value: textColor,
+									onChange: ( value ) => setAttributes( { textColor: value } ),
+								},
+							] }
+							hover={ [
+								{
+									label: __( 'Link Color', 'blockive-premium-addon-for-block' ),
+									value: textHoverColor,
+									onChange: ( value ) => setAttributes( { textHoverColor: value } ),
+								},
+							] }
+						/>
+						<p className="bpafb-help-text">
+							{ __( 'Font, size, weight and other typography options are available in the native Styles panel above.', 'blockive-premium-addon-for-block' ) }
+						</p>
+					</PanelBody>
+				}
+				advanced={ <AdvancedTab attributes={ attributes } setAttributes={ setAttributes } /> }
+			/>
 
 			<nav { ...blockProps } aria-label={ __( 'Breadcrumb', 'blockive-premium-addon-for-block' ) }>
 				{ isResolving && ! record

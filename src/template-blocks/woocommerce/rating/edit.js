@@ -20,27 +20,25 @@ export default function Edit( { attributes, setAttributes } ) {
 
 	return (
 		<>
-			<InspectorControls>
-				<InspectorTabs
-					general={
-						<PanelBody title={ __( 'Rating', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
-							<ToggleControl
-								label={ __( 'Show Review Count', 'blockive-premium-addon-for-block' ) }
-								checked={ !! showCount }
-								onChange={ ( value ) => setAttributes( { showCount: value } ) }
-							/>
-						</PanelBody>
-					}
-					style={
-						<PanelBody title={ __( 'Colors', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
-							<BaseControl label={ __( 'Star Color', 'blockive-premium-addon-for-block' ) }>
-								<ColorPalette value={ starColor } onChange={ ( value ) => setAttributes( { starColor: value } ) } />
-							</BaseControl>
-						</PanelBody>
-					}
-					advanced={ <AdvancedTab attributes={ attributes } setAttributes={ setAttributes } /> }
-				/>
-			</InspectorControls>
+			<InspectorTabs
+				general={
+					<PanelBody title={ __( 'Rating', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
+						<ToggleControl
+							label={ __( 'Show Review Count', 'blockive-premium-addon-for-block' ) }
+							checked={ !! showCount }
+							onChange={ ( value ) => setAttributes( { showCount: value } ) }
+						/>
+					</PanelBody>
+				}
+				style={
+					<PanelBody title={ __( 'Colors', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
+						<BaseControl label={ __( 'Star Color', 'blockive-premium-addon-for-block' ) }>
+							<ColorPalette value={ starColor } onChange={ ( value ) => setAttributes( { starColor: value } ) } />
+						</BaseControl>
+					</PanelBody>
+				}
+				advanced={ <AdvancedTab attributes={ attributes } setAttributes={ setAttributes } /> }
+			/>
 
 			<div { ...blockProps }>
 				<span className="bpafb-tb-rating-stars" aria-hidden="true">★★★★☆</span>

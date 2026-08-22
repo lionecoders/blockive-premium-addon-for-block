@@ -272,7 +272,7 @@
 		"html": false,
 		"color": {
 			"text": true,
-			"background": true,
+			"background": false,
 			"link": true
 		},
 		"typography": {
@@ -286,13 +286,6 @@
 			"__experimentalLetterSpacing": true,
 			"__experimentalDefaultControls": {
 				"fontSize": true
-			}
-		},
-		"spacing": {
-			"margin": true,
-			"padding": true,
-			"__experimentalDefaultControls": {
-				"margin": true
 			}
 		},
 		"anchor": true

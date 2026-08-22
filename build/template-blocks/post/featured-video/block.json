@@ -282,13 +282,6 @@
       "wide",
       "full"
     ],
-    "spacing": {
-      "margin": true,
-      "padding": true,
-      "__experimentalDefaultControls": {
-        "margin": true
-      }
-    },
     "anchor": true
   },
   "render": "file:./render.php"

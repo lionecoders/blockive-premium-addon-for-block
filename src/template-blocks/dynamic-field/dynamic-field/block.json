@@ -308,8 +308,8 @@
 		"html": false,
 		"color": {
 			"text": true,
-			"background": true,
-			"gradients": true,
+			"background": false,
+			"gradients": false,
 			"link": true
 		},
 		"typography": {
@@ -323,14 +323,6 @@
 			"__experimentalLetterSpacing": true,
 			"__experimentalDefaultControls": {
 				"fontSize": true
-			}
-		},
-		"spacing": {
-			"margin": true,
-			"padding": true,
-			"__experimentalDefaultControls": {
-				"margin": true,
-				"padding": true
 			}
 		},
 		"anchor": true

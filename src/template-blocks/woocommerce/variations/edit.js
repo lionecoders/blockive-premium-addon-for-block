@@ -12,33 +12,31 @@ export default function Edit( { attributes, setAttributes } ) {
 
 	return (
 		<>
-			<InspectorControls>
-				<InspectorTabs
-					general={
-						<PanelBody title={ __( 'Settings', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
-							<ToggleControl
-								label={ __( 'Show Price Range', 'blockive-premium-addon-for-block' ) }
-								checked={ !! showPriceRange }
-								onChange={ ( value ) => setAttributes( { showPriceRange: value } ) }
-							/>
-							<p className="bpafb-help-text">
-								{ __(
-									'Renders WooCommerce’s native variation selector for variable products (dropdowns, AJAX price/availability). Non-variable products render nothing extra here.',
-									'blockive-premium-addon-for-block'
-								) }
-							</p>
-						</PanelBody>
-					}
-					style={
-						<PanelBody title={ __( 'Style', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
-							<p className="bpafb-help-text">
-								{ __( 'This block renders WooCommerce’s own variation form markup/styles on the frontend and cannot be restyled here beyond spacing.', 'blockive-premium-addon-for-block' ) }
-							</p>
-						</PanelBody>
-					}
-					advanced={ <AdvancedTab attributes={ attributes } setAttributes={ setAttributes } /> }
-				/>
-			</InspectorControls>
+			<InspectorTabs
+				general={
+					<PanelBody title={ __( 'Settings', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
+						<ToggleControl
+							label={ __( 'Show Price Range', 'blockive-premium-addon-for-block' ) }
+							checked={ !! showPriceRange }
+							onChange={ ( value ) => setAttributes( { showPriceRange: value } ) }
+						/>
+						<p className="bpafb-help-text">
+							{ __(
+								'Renders WooCommerce’s native variation selector for variable products (dropdowns, AJAX price/availability). Non-variable products render nothing extra here.',
+								'blockive-premium-addon-for-block'
+							) }
+						</p>
+					</PanelBody>
+				}
+				style={
+					<PanelBody title={ __( 'Style', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
+						<p className="bpafb-help-text">
+							{ __( 'This block renders WooCommerce’s own variation form markup/styles on the frontend and cannot be restyled here beyond spacing.', 'blockive-premium-addon-for-block' ) }
+						</p>
+					</PanelBody>
+				}
+				advanced={ <AdvancedTab attributes={ attributes } setAttributes={ setAttributes } /> }
+			/>
 
 			<div { ...blockProps }>
 				{ showPriceRange && (

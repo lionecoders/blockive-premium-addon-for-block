@@ -1310,10 +1310,6 @@ return array(
 				'fontSize' => true,
 				'lineHeight' => true
 			),
-			'spacing' => array(
-				'margin' => true,
-				'padding' => true
-			),
 			'anchor' => true
 		),
 		'attributes' => array(
@@ -1663,30 +1659,9 @@ return array(
 		'icon' => 'email-alt',
 		'description' => 'Contact Form 7 integration block.',
 		'supports' => array(
-			'color' => array(
-				'text' => false,
-				'background' => true,
-				'link' => false
-			),
 			'typography' => array(
 				'fontSize' => true,
 				'lineHeight' => true
-			),
-			'spacing' => array(
-				'margin' => true,
-				'padding' => true
-			),
-			'__experimentalBorder' => array(
-				'radius' => true,
-				'color' => true,
-				'width' => true,
-				'style' => true,
-				'__experimentalDefaultControls' => array(
-					'radius' => true,
-					'color' => true,
-					'width' => true,
-					'style' => true
-				)
 			),
 			'anchor' => true
 		),
@@ -2317,14 +2292,6 @@ return array(
 				'__experimentalFontFamily' => true,
 				'__experimentalDefaultControls' => array(
 					'fontSize' => true
-				)
-			),
-			'spacing' => array(
-				'margin' => true,
-				'padding' => true,
-				'__experimentalDefaultControls' => array(
-					'margin' => true,
-					'padding' => true
 				)
 			),
 			'anchor' => true
@@ -3764,8 +3731,8 @@ return array(
 			'html' => false,
 			'color' => array(
 				'text' => true,
-				'background' => true,
-				'gradients' => true,
+				'background' => false,
+				'gradients' => false,
 				'link' => true
 			),
 			'typography' => array(
@@ -3779,14 +3746,6 @@ return array(
 				'__experimentalLetterSpacing' => true,
 				'__experimentalDefaultControls' => array(
 					'fontSize' => true
-				)
-			),
-			'spacing' => array(
-				'margin' => true,
-				'padding' => true,
-				'__experimentalDefaultControls' => array(
-					'margin' => true,
-					'padding' => true
 				)
 			),
 			'anchor' => true
@@ -4935,31 +4894,6 @@ return array(
 				'__experimentalFontFamily' => true,
 				'__experimentalDefaultControls' => array(
 					'fontSize' => true
-				)
-			),
-			'spacing' => array(
-				'margin' => true,
-				'padding' => true,
-				'__experimentalDefaultControls' => array(
-					'margin' => true,
-					'padding' => true
-				)
-			),
-			'color' => array(
-				'background' => false,
-				'text' => false,
-				'gradients' => false
-			),
-			'__experimentalBorder' => array(
-				'radius' => true,
-				'color' => true,
-				'width' => true,
-				'style' => true,
-				'__experimentalDefaultControls' => array(
-					'radius' => true,
-					'color' => true,
-					'width' => true,
-					'style' => true
 				)
 			),
 			'anchor' => true
@@ -6235,14 +6169,6 @@ return array(
 				'full'
 			),
 			'html' => false,
-			'spacing' => array(
-				'margin' => true,
-				'padding' => true,
-				'__experimentalDefaultControls' => array(
-					'margin' => true,
-					'padding' => true
-				)
-			),
 			'anchor' => true
 		),
 		'textdomain' => 'blockive-premium-addon-for-block',
@@ -6263,10 +6189,6 @@ return array(
 			'typography' => array(
 				'fontSize' => true,
 				'lineHeight' => true
-			),
-			'spacing' => array(
-				'margin' => true,
-				'padding' => true
 			),
 			'anchor' => true
 		),
@@ -6995,13 +6917,6 @@ return array(
 					'fontSize' => true
 				)
 			),
-			'spacing' => array(
-				'margin' => true,
-				'padding' => true,
-				'__experimentalDefaultControls' => array(
-					'margin' => true
-				)
-			),
 			'anchor' => true
 		),
 		'textdomain' => 'blockive-premium-addon-for-block',
@@ -7335,10 +7250,6 @@ return array(
 				'fontSize' => true,
 				'__experimentalFontWeight' => true
 			),
-			'spacing' => array(
-				'margin' => true,
-				'padding' => true
-			),
 			'anchor' => true
 		),
 		'textdomain' => 'blockive-premium-addon-for-block',
@@ -7671,10 +7582,6 @@ return array(
 				'full'
 			),
 			'html' => false,
-			'spacing' => array(
-				'margin' => true,
-				'padding' => true
-			),
 			'anchor' => true
 		),
 		'textdomain' => 'blockive-premium-addon-for-block',
@@ -7960,10 +7867,6 @@ return array(
 			'align' => array(
 				'wide',
 				'full'
-			),
-			'spacing' => array(
-				'margin' => true,
-				'padding' => true
 			),
 			'anchor' => true
 		),
@@ -9353,8 +9256,8 @@ return array(
 			'html' => false,
 			'color' => array(
 				'text' => true,
-				'background' => true,
-				'gradients' => true,
+				'background' => false,
+				'gradients' => false,
 				'link' => true
 			),
 			'typography' => array(
@@ -9368,14 +9271,6 @@ return array(
 				'__experimentalLetterSpacing' => true,
 				'__experimentalDefaultControls' => array(
 					'fontSize' => true
-				)
-			),
-			'spacing' => array(
-				'margin' => true,
-				'padding' => true,
-				'__experimentalDefaultControls' => array(
-					'margin' => true,
-					'padding' => true
 				)
 			),
 			'anchor' => true
@@ -9669,10 +9564,6 @@ return array(
 				'__experimentalDefaultControls' => array(
 					'fontSize' => true
 				)
-			),
-			'spacing' => array(
-				'margin' => true,
-				'padding' => true
 			),
 			'anchor' => true
 		),
@@ -9978,10 +9869,6 @@ return array(
 					'fontSize' => true
 				)
 			),
-			'spacing' => array(
-				'margin' => true,
-				'padding' => true
-			),
 			'anchor' => true
 		),
 		'render' => 'file:./render.php'
@@ -10276,8 +10163,8 @@ return array(
 			'html' => false,
 			'color' => array(
 				'text' => true,
-				'background' => true,
-				'gradients' => true,
+				'background' => false,
+				'gradients' => false,
 				'link' => true
 			),
 			'typography' => array(
@@ -10291,14 +10178,6 @@ return array(
 				'__experimentalLetterSpacing' => true,
 				'__experimentalDefaultControls' => array(
 					'fontSize' => true
-				)
-			),
-			'spacing' => array(
-				'margin' => true,
-				'padding' => true,
-				'__experimentalDefaultControls' => array(
-					'margin' => true,
-					'padding' => true
 				)
 			),
 			'anchor' => true
@@ -10605,13 +10484,6 @@ return array(
 				'wide',
 				'full'
 			),
-			'spacing' => array(
-				'margin' => true,
-				'padding' => true,
-				'__experimentalDefaultControls' => array(
-					'margin' => true
-				)
-			),
 			'anchor' => true
 		),
 		'render' => 'file:./render.php'
@@ -10887,10 +10759,6 @@ return array(
 			'align' => array(
 				'wide',
 				'full'
-			),
-			'spacing' => array(
-				'margin' => true,
-				'padding' => true
 			),
 			'anchor' => true
 		),
@@ -11188,10 +11056,6 @@ return array(
 				'__experimentalDefaultControls' => array(
 					'fontSize' => true
 				)
-			),
-			'spacing' => array(
-				'margin' => true,
-				'padding' => true
 			),
 			'anchor' => true
 		),
@@ -11505,10 +11369,6 @@ return array(
 					'fontSize' => true
 				)
 			),
-			'spacing' => array(
-				'margin' => true,
-				'padding' => true
-			),
 			'anchor' => true
 		),
 		'render' => 'file:./render.php'
@@ -11805,10 +11665,6 @@ return array(
 					'fontSize' => true
 				)
 			),
-			'spacing' => array(
-				'margin' => true,
-				'padding' => true
-			),
 			'anchor' => true
 		),
 		'render' => 'file:./render.php'
@@ -12101,10 +11957,6 @@ return array(
 					'fontSize' => true
 				)
 			),
-			'spacing' => array(
-				'margin' => true,
-				'padding' => true
-			),
 			'anchor' => true
 		),
 		'render' => 'file:./render.php'
@@ -12391,8 +12243,8 @@ return array(
 			'html' => false,
 			'color' => array(
 				'text' => true,
-				'background' => true,
-				'gradients' => true,
+				'background' => false,
+				'gradients' => false,
 				'link' => true
 			),
 			'typography' => array(
@@ -12406,13 +12258,6 @@ return array(
 				'__experimentalLetterSpacing' => true,
 				'__experimentalDefaultControls' => array(
 					'fontSize' => true
-				)
-			),
-			'spacing' => array(
-				'margin' => true,
-				'padding' => true,
-				'__experimentalDefaultControls' => array(
-					'margin' => true
 				)
 			),
 			'anchor' => true
@@ -12719,12 +12564,6 @@ return array(
 		),
 		'supports' => array(
 			'html' => false,
-			'spacing' => array(
-				'margin' => true,
-				'__experimentalDefaultControls' => array(
-					'margin' => true
-				)
-			),
 			'anchor' => true
 		),
 		'render' => 'file:./render.php'
@@ -13023,13 +12862,6 @@ return array(
 				'__experimentalLetterSpacing' => true,
 				'__experimentalDefaultControls' => array(
 					'fontSize' => true
-				)
-			),
-			'spacing' => array(
-				'margin' => true,
-				'padding' => true,
-				'__experimentalDefaultControls' => array(
-					'margin' => true
 				)
 			),
 			'anchor' => true
@@ -13332,13 +13164,6 @@ return array(
 					'fontSize' => true
 				)
 			),
-			'spacing' => array(
-				'margin' => true,
-				'padding' => true,
-				'__experimentalDefaultControls' => array(
-					'margin' => true
-				)
-			),
 			'anchor' => true
 		),
 		'render' => 'file:./render.php'
@@ -13631,13 +13456,6 @@ return array(
 				'__experimentalFontStyle' => true,
 				'__experimentalDefaultControls' => array(
 					'fontSize' => true
-				)
-			),
-			'spacing' => array(
-				'margin' => true,
-				'padding' => true,
-				'__experimentalDefaultControls' => array(
-					'margin' => true
 				)
 			),
 			'anchor' => true
@@ -13944,13 +13762,6 @@ return array(
 				'wide',
 				'full'
 			),
-			'spacing' => array(
-				'margin' => true,
-				'padding' => true,
-				'__experimentalDefaultControls' => array(
-					'margin' => true
-				)
-			),
 			'anchor' => true
 		),
 		'render' => 'file:./render.php'
@@ -14239,13 +14050,6 @@ return array(
 				'wide',
 				'full'
 			),
-			'spacing' => array(
-				'margin' => true,
-				'padding' => true,
-				'__experimentalDefaultControls' => array(
-					'margin' => true
-				)
-			),
 			'anchor' => true
 		),
 		'render' => 'file:./render.php'
@@ -14529,13 +14333,6 @@ return array(
 				'fontSize' => true,
 				'__experimentalDefaultControls' => array(
 					'fontSize' => true
-				)
-			),
-			'spacing' => array(
-				'margin' => true,
-				'padding' => true,
-				'__experimentalDefaultControls' => array(
-					'margin' => true
 				)
 			),
 			'anchor' => true
@@ -14836,8 +14633,8 @@ return array(
 			),
 			'color' => array(
 				'text' => true,
-				'background' => true,
-				'gradients' => true,
+				'background' => false,
+				'gradients' => false,
 				'link' => true
 			),
 			'typography' => array(
@@ -14851,14 +14648,6 @@ return array(
 				'__experimentalLetterSpacing' => true,
 				'__experimentalDefaultControls' => array(
 					'fontSize' => true
-				)
-			),
-			'spacing' => array(
-				'margin' => true,
-				'padding' => true,
-				'__experimentalDefaultControls' => array(
-					'margin' => true,
-					'padding' => true
 				)
 			),
 			'anchor' => true
@@ -15159,13 +14948,6 @@ return array(
 				'__experimentalLetterSpacing' => true,
 				'__experimentalDefaultControls' => array(
 					'fontSize' => true
-				)
-			),
-			'spacing' => array(
-				'margin' => true,
-				'padding' => true,
-				'__experimentalDefaultControls' => array(
-					'margin' => true
 				)
 			),
 			'anchor' => true
@@ -15483,10 +15265,6 @@ return array(
 					'fontSize' => true
 				)
 			),
-			'spacing' => array(
-				'margin' => true,
-				'padding' => true
-			),
 			'anchor' => true
 		),
 		'render' => 'file:./render.php'
@@ -15781,8 +15559,8 @@ return array(
 			'html' => false,
 			'color' => array(
 				'text' => true,
-				'background' => true,
-				'gradients' => true,
+				'background' => false,
+				'gradients' => false,
 				'link' => true
 			),
 			'typography' => array(
@@ -15796,14 +15574,6 @@ return array(
 				'__experimentalLetterSpacing' => true,
 				'__experimentalDefaultControls' => array(
 					'fontSize' => true
-				)
-			),
-			'spacing' => array(
-				'margin' => true,
-				'padding' => true,
-				'__experimentalDefaultControls' => array(
-					'margin' => true,
-					'padding' => true
 				)
 			),
 			'anchor' => true
@@ -16113,13 +15883,6 @@ return array(
 					'fontSize' => true
 				)
 			),
-			'spacing' => array(
-				'margin' => true,
-				'padding' => true,
-				'__experimentalDefaultControls' => array(
-					'margin' => true
-				)
-			),
 			'anchor' => true
 		),
 		'render' => 'file:./render.php'
@@ -16413,13 +16176,6 @@ return array(
 				'__experimentalLetterSpacing' => true,
 				'__experimentalDefaultControls' => array(
 					'fontSize' => true
-				)
-			),
-			'spacing' => array(
-				'margin' => true,
-				'padding' => true,
-				'__experimentalDefaultControls' => array(
-					'margin' => true
 				)
 			),
 			'anchor' => true
@@ -16718,13 +16474,6 @@ return array(
 				'__experimentalFontStyle' => true,
 				'__experimentalDefaultControls' => array(
 					'fontSize' => true
-				)
-			),
-			'spacing' => array(
-				'margin' => true,
-				'padding' => true,
-				'__experimentalDefaultControls' => array(
-					'margin' => true
 				)
 			),
 			'anchor' => true
@@ -17035,13 +16784,6 @@ return array(
 				'wide',
 				'full'
 			),
-			'spacing' => array(
-				'margin' => true,
-				'padding' => true,
-				'__experimentalDefaultControls' => array(
-					'margin' => true
-				)
-			),
 			'anchor' => true
 		),
 		'render' => 'file:./render.php',
@@ -17321,7 +17063,7 @@ return array(
 			'html' => false,
 			'color' => array(
 				'text' => true,
-				'background' => true,
+				'background' => false,
 				'link' => true
 			),
 			'typography' => array(
@@ -17335,13 +17077,6 @@ return array(
 				'__experimentalLetterSpacing' => true,
 				'__experimentalDefaultControls' => array(
 					'fontSize' => true
-				)
-			),
-			'spacing' => array(
-				'margin' => true,
-				'padding' => true,
-				'__experimentalDefaultControls' => array(
-					'margin' => true
 				)
 			),
 			'anchor' => true
@@ -17632,10 +17367,6 @@ return array(
 		),
 		'supports' => array(
 			'html' => false,
-			'spacing' => array(
-				'margin' => true,
-				'padding' => true
-			),
 			'anchor' => true
 		),
 		'render' => 'file:./render.php'
@@ -17922,14 +17653,6 @@ return array(
 					'fontSize' => true
 				)
 			),
-			'spacing' => array(
-				'margin' => true,
-				'padding' => true,
-				'__experimentalDefaultControls' => array(
-					'margin' => true,
-					'padding' => true
-				)
-			),
 			'anchor' => true
 		),
 		'render' => 'file:./render.php'
@@ -18214,10 +17937,6 @@ return array(
 				'wide',
 				'full'
 			),
-			'spacing' => array(
-				'margin' => true,
-				'padding' => true
-			),
 			'anchor' => true
 		),
 		'render' => 'file:./render.php',
@@ -18493,7 +18212,7 @@ return array(
 			'html' => false,
 			'color' => array(
 				'text' => true,
-				'background' => true,
+				'background' => false,
 				'link' => true
 			),
 			'typography' => array(
@@ -18506,14 +18225,6 @@ return array(
 				'__experimentalLetterSpacing' => true,
 				'__experimentalDefaultControls' => array(
 					'fontSize' => true
-				)
-			),
-			'spacing' => array(
-				'margin' => true,
-				'padding' => true,
-				'__experimentalDefaultControls' => array(
-					'margin' => true,
-					'padding' => true
 				)
 			),
 			'anchor' => true
@@ -18799,13 +18510,6 @@ return array(
 			'align' => array(
 				'wide',
 				'full'
-			),
-			'spacing' => array(
-				'margin' => true,
-				'padding' => true,
-				'__experimentalDefaultControls' => array(
-					'margin' => true
-				)
 			),
 			'anchor' => true
 		),
@@ -19102,13 +18806,6 @@ return array(
 			'align' => array(
 				'wide',
 				'full'
-			),
-			'spacing' => array(
-				'margin' => true,
-				'padding' => true,
-				'__experimentalDefaultControls' => array(
-					'margin' => true
-				)
 			),
 			'anchor' => true
 		),
@@ -19417,10 +19114,6 @@ return array(
 					'fontSize' => true
 				)
 			),
-			'spacing' => array(
-				'margin' => true,
-				'padding' => true
-			),
 			'anchor' => true
 		),
 		'render' => 'file:./render.php'
@@ -19695,8 +19388,8 @@ return array(
 			'html' => false,
 			'color' => array(
 				'text' => true,
-				'background' => true,
-				'gradients' => true
+				'background' => false,
+				'gradients' => false
 			),
 			'typography' => array(
 				'fontSize' => true,
@@ -19708,13 +19401,6 @@ return array(
 				'__experimentalLetterSpacing' => true,
 				'__experimentalDefaultControls' => array(
 					'fontSize' => true
-				)
-			),
-			'spacing' => array(
-				'margin' => true,
-				'padding' => true,
-				'__experimentalDefaultControls' => array(
-					'margin' => true
 				)
 			),
 			'anchor' => true
@@ -19999,10 +19685,6 @@ return array(
 					'fontSize' => true
 				)
 			),
-			'spacing' => array(
-				'margin' => true,
-				'padding' => true
-			),
 			'anchor' => true
 		),
 		'render' => 'file:./render.php'
@@ -20286,10 +19968,6 @@ return array(
 			'align' => array(
 				'wide',
 				'full'
-			),
-			'spacing' => array(
-				'margin' => true,
-				'padding' => true
 			),
 			'anchor' => true
 		),
@@ -20586,9 +20264,6 @@ return array(
 					'fontSize' => true
 				)
 			),
-			'spacing' => array(
-				'margin' => true
-			),
 			'anchor' => true
 		),
 		'render' => 'file:./render.php'
@@ -20863,7 +20538,7 @@ return array(
 			'html' => false,
 			'color' => array(
 				'text' => true,
-				'background' => true,
+				'background' => false,
 				'link' => true
 			),
 			'typography' => array(
@@ -20876,14 +20551,6 @@ return array(
 				'__experimentalLetterSpacing' => true,
 				'__experimentalDefaultControls' => array(
 					'fontSize' => true
-				)
-			),
-			'spacing' => array(
-				'margin' => true,
-				'padding' => true,
-				'__experimentalDefaultControls' => array(
-					'margin' => true,
-					'padding' => true
 				)
 			),
 			'anchor' => true
@@ -21171,10 +20838,6 @@ return array(
 				'__experimentalDefaultControls' => array(
 					'fontSize' => true
 				)
-			),
-			'spacing' => array(
-				'margin' => true,
-				'padding' => true
 			),
 			'anchor' => true
 		),
@@ -21474,10 +21137,6 @@ return array(
 					'fontSize' => true
 				)
 			),
-			'spacing' => array(
-				'margin' => true,
-				'padding' => true
-			),
 			'anchor' => true
 		),
 		'render' => 'file:./render.php'
@@ -21772,8 +21431,8 @@ return array(
 			'html' => false,
 			'color' => array(
 				'text' => true,
-				'background' => true,
-				'gradients' => true,
+				'background' => false,
+				'gradients' => false,
 				'link' => true
 			),
 			'typography' => array(
@@ -21787,14 +21446,6 @@ return array(
 				'__experimentalLetterSpacing' => true,
 				'__experimentalDefaultControls' => array(
 					'fontSize' => true
-				)
-			),
-			'spacing' => array(
-				'margin' => true,
-				'padding' => true,
-				'__experimentalDefaultControls' => array(
-					'margin' => true,
-					'padding' => true
 				)
 			),
 			'anchor' => true
@@ -22081,10 +21732,6 @@ return array(
 				'wide',
 				'full'
 			),
-			'spacing' => array(
-				'margin' => true,
-				'padding' => true
-			),
 			'anchor' => true
 		),
 		'render' => 'file:./render.php',
@@ -22361,10 +22008,6 @@ return array(
 			'align' => array(
 				'wide',
 				'full'
-			),
-			'spacing' => array(
-				'margin' => true,
-				'padding' => true
 			),
 			'anchor' => true
 		),

@@ -50,56 +50,54 @@ export default function Edit( { attributes, setAttributes } ) {
 				/>
 			</BlockControls>
 
-			<InspectorControls>
-				<InspectorTabs
-					general={
-						<PanelBody title={ __( 'Settings', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
-							<SelectControl
-								label={ __( 'HTML Tag', 'blockive-premium-addon-for-block' ) }
-								value={ TagName }
-								options={ TAG_OPTIONS }
-								onChange={ ( value ) => setAttributes( { tagName: value } ) }
-							/>
+			<InspectorTabs
+				general={
+					<PanelBody title={ __( 'Settings', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
+						<SelectControl
+							label={ __( 'HTML Tag', 'blockive-premium-addon-for-block' ) }
+							value={ TagName }
+							options={ TAG_OPTIONS }
+							onChange={ ( value ) => setAttributes( { tagName: value } ) }
+						/>
+						<ToggleControl
+							label={ __( 'Link to Event', 'blockive-premium-addon-for-block' ) }
+							checked={ !! isLink }
+							onChange={ ( value ) => setAttributes( { isLink: value } ) }
+						/>
+						{ isLink && (
 							<ToggleControl
-								label={ __( 'Link to Event', 'blockive-premium-addon-for-block' ) }
-								checked={ !! isLink }
-								onChange={ ( value ) => setAttributes( { isLink: value } ) }
+								label={ __( 'Open in New Tab', 'blockive-premium-addon-for-block' ) }
+								checked={ linkTarget === '_blank' }
+								onChange={ ( value ) => setAttributes( { linkTarget: value ? '_blank' : '_self' } ) }
 							/>
-							{ isLink && (
-								<ToggleControl
-									label={ __( 'Open in New Tab', 'blockive-premium-addon-for-block' ) }
-									checked={ linkTarget === '_blank' }
-									onChange={ ( value ) => setAttributes( { linkTarget: value ? '_blank' : '_self' } ) }
-								/>
-							) }
-						</PanelBody>
-					}
-					style={
-						<PanelBody title={ __( 'Colors', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
-							<ColorStateControls
-								normal={ [
-									{
-										label: __( 'Text Color', 'blockive-premium-addon-for-block' ),
-										value: textColor,
-										onChange: ( value ) => setAttributes( { textColor: value } ),
-									},
-								] }
-								hover={ [
-									{
-										label: __( 'Text Color', 'blockive-premium-addon-for-block' ),
-										value: textHoverColor,
-										onChange: ( value ) => setAttributes( { textHoverColor: value } ),
-									},
-								] }
-							/>
-							<p className="bpafb-help-text">
-								{ __( 'Font, size, weight and other typography options are available in the native Styles panel above.', 'blockive-premium-addon-for-block' ) }
-							</p>
-						</PanelBody>
-					}
-					advanced={ <AdvancedTab attributes={ attributes } setAttributes={ setAttributes } /> }
-				/>
-			</InspectorControls>
+						) }
+					</PanelBody>
+				}
+				style={
+					<PanelBody title={ __( 'Colors', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
+						<ColorStateControls
+							normal={ [
+								{
+									label: __( 'Text Color', 'blockive-premium-addon-for-block' ),
+									value: textColor,
+									onChange: ( value ) => setAttributes( { textColor: value } ),
+								},
+							] }
+							hover={ [
+								{
+									label: __( 'Text Color', 'blockive-premium-addon-for-block' ),
+									value: textHoverColor,
+									onChange: ( value ) => setAttributes( { textHoverColor: value } ),
+								},
+							] }
+						/>
+						<p className="bpafb-help-text">
+							{ __( 'Font, size, weight and other typography options are available in the native Styles panel above.', 'blockive-premium-addon-for-block' ) }
+						</p>
+					</PanelBody>
+				}
+				advanced={ <AdvancedTab attributes={ attributes } setAttributes={ setAttributes } /> }
+			/>
 
 			<TagName { ...blockProps }>
 				{ isResolving && ! previewTitle

@@ -41,55 +41,53 @@ export default function Edit( { attributes, setAttributes } ) {
 
 	return (
 		<>
-			<InspectorControls>
-				<InspectorTabs
-					general={
-						<PanelBody title={ __( 'Avatar', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
-							<RangeControl
-								label={ __( 'Avatar Size (px)', 'blockive-premium-addon-for-block' ) }
-								value={ size }
-								onChange={ ( value ) => setAttributes( { size: value } ) }
-								min={ 16 }
-								max={ 400 }
-							/>
-							<RangeControl
-								label={ __( 'Border Radius (px)', 'blockive-premium-addon-for-block' ) }
-								value={ borderRadius }
-								onChange={ ( value ) => setAttributes( { borderRadius: value } ) }
-								min={ 0 }
-								max={ 9999 }
+			<InspectorTabs
+				general={
+					<PanelBody title={ __( 'Avatar', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
+						<RangeControl
+							label={ __( 'Avatar Size (px)', 'blockive-premium-addon-for-block' ) }
+							value={ size }
+							onChange={ ( value ) => setAttributes( { size: value } ) }
+							min={ 16 }
+							max={ 400 }
+						/>
+						<RangeControl
+							label={ __( 'Border Radius (px)', 'blockive-premium-addon-for-block' ) }
+							value={ borderRadius }
+							onChange={ ( value ) => setAttributes( { borderRadius: value } ) }
+							min={ 0 }
+							max={ 9999 }
+						/>
+					</PanelBody>
+				}
+				style={
+					<>
+						<PanelBody title={ __( 'Border', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
+							<BorderControls
+								values={ { borderType, borderWidth, borderColor } }
+								onChange={ ( key, value ) => setAttributes( { [ key ]: value } ) }
+								showRadius={ false }
 							/>
 						</PanelBody>
-					}
-					style={
-						<>
-							<PanelBody title={ __( 'Border', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
-								<BorderControls
-									values={ { borderType, borderWidth, borderColor } }
-									onChange={ ( key, value ) => setAttributes( { [ key ]: value } ) }
-									showRadius={ false }
-								/>
-							</PanelBody>
-							<PanelBody title={ __( 'Shadow', 'blockive-premium-addon-for-block' ) } initialOpen={ false }>
-								<ShadowControls
-									hasHover={ false }
-									normalValues={ { enabled: shadowEnabled, color: shadowColor, blur: shadowBlur, spread: shadowSpread } }
-									onNormalChange={ ( key, value ) => {
-										const map = {
-											enabled: 'shadowEnabled',
-											color: 'shadowColor',
-											blur: 'shadowBlur',
-											spread: 'shadowSpread',
-										};
-										setAttributes( { [ map[ key ] ]: value } );
-									} }
-								/>
-							</PanelBody>
-						</>
-					}
-					advanced={ <AdvancedTab attributes={ attributes } setAttributes={ setAttributes } /> }
-				/>
-			</InspectorControls>
+						<PanelBody title={ __( 'Shadow', 'blockive-premium-addon-for-block' ) } initialOpen={ false }>
+							<ShadowControls
+								hasHover={ false }
+								normalValues={ { enabled: shadowEnabled, color: shadowColor, blur: shadowBlur, spread: shadowSpread } }
+								onNormalChange={ ( key, value ) => {
+									const map = {
+										enabled: 'shadowEnabled',
+										color: 'shadowColor',
+										blur: 'shadowBlur',
+										spread: 'shadowSpread',
+									};
+									setAttributes( { [ map[ key ] ]: value } );
+								} }
+							/>
+						</PanelBody>
+					</>
+				}
+				advanced={ <AdvancedTab attributes={ attributes } setAttributes={ setAttributes } /> }
+			/>
 
 			<div { ...blockProps }>
 				{ previewAvatarUrl ? (

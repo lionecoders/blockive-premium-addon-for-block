@@ -38,33 +38,31 @@ export default function Edit( { attributes, setAttributes } ) {
 
 	return (
 		<>
-			<InspectorControls>
-				<InspectorTabs
-					general={
-						<PanelBody title={ __( 'Gallery', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
-							<SelectControl
-								label={ __( 'Thumbnail Position', 'blockive-premium-addon-for-block' ) }
-								value={ thumbnailPosition }
-								options={ POSITION_OPTIONS }
-								onChange={ ( value ) => setAttributes( { thumbnailPosition: value } ) }
-							/>
-							<SelectControl
-								label={ __( 'Main Image Size', 'blockive-premium-addon-for-block' ) }
-								value={ mainImageSize }
-								options={ SIZE_OPTIONS }
-								onChange={ ( value ) => setAttributes( { mainImageSize: value } ) }
-							/>
-							<SelectControl
-								label={ __( 'Thumbnail Size', 'blockive-premium-addon-for-block' ) }
-								value={ thumbnailSize }
-								options={ SIZE_OPTIONS }
-								onChange={ ( value ) => setAttributes( { thumbnailSize: value } ) }
-							/>
-						</PanelBody>
-					}
-					advanced={ <AdvancedTab attributes={ attributes } setAttributes={ setAttributes } /> }
-				/>
-			</InspectorControls>
+			<InspectorTabs
+				general={
+					<PanelBody title={ __( 'Gallery', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
+						<SelectControl
+							label={ __( 'Thumbnail Position', 'blockive-premium-addon-for-block' ) }
+							value={ thumbnailPosition }
+							options={ POSITION_OPTIONS }
+							onChange={ ( value ) => setAttributes( { thumbnailPosition: value } ) }
+						/>
+						<SelectControl
+							label={ __( 'Main Image Size', 'blockive-premium-addon-for-block' ) }
+							value={ mainImageSize }
+							options={ SIZE_OPTIONS }
+							onChange={ ( value ) => setAttributes( { mainImageSize: value } ) }
+						/>
+						<SelectControl
+							label={ __( 'Thumbnail Size', 'blockive-premium-addon-for-block' ) }
+							value={ thumbnailSize }
+							options={ SIZE_OPTIONS }
+							onChange={ ( value ) => setAttributes( { thumbnailSize: value } ) }
+						/>
+					</PanelBody>
+				}
+				advanced={ <AdvancedTab attributes={ attributes } setAttributes={ setAttributes } /> }
+			/>
 
 			<div { ...blockProps }>
 				<div className="bpafb-tb-product-gallery-main">
