@@ -21,7 +21,7 @@ export default function Edit({ attributes, setAttributes }) {
 			<TextControl
 				label={__('Contact Form 7 ID', 'blockive-premium-addon-for-block')}
 				value={formId}
-				onChange={(val) => setAttributes({ formId: val })}
+				onChange={(val) => setAttributes({ formId: val.replace(/[^0-9]/g, '') })}
 				help="Enter the ID of the Contact Form 7 form"
 				placeholder="e.g., 123"
 			/>

@@ -99,9 +99,28 @@ class Blockive_Premium_Addon_For_Block
 			}
 		}
 
-		// Unregister blocks that require third-party plugins if those plugins are not active.
 		$registry = WP_Block_Type_Registry::get_instance();
 
+		// The `wp-scripts build --blocks-manifest` generator keys every block by its
+		// immediate folder name only, which is what WP_Block_Metadata_Registry expects
+		// to find one level under the collection root. All Template Builder blocks live
+		// two levels down (build/template-blocks/<category>/<block>/), so the manifest
+		// path above resolves to a non-existent block.json for them; WP core then leaves
+		// `$metadata['file']` null and silently skips wiring up their `render` callback.
+		// Re-register those specific blocks from their real block.json location so
+		// render.php actually runs.
+		foreach (glob(__DIR__ . '/build/template-blocks/*/*/block.json') as $bpafb_tb_json) {
+			$bpafb_tb_data = json_decode(file_get_contents($bpafb_tb_json), true);
+			if (empty($bpafb_tb_data['name'])) {
+				continue;
+			}
+			if ($registry->is_registered($bpafb_tb_data['name'])) {
+				unregister_block_type($bpafb_tb_data['name']);
+			}
+			register_block_type(dirname($bpafb_tb_json));
+		}
+
+		// Unregister blocks that require third-party plugins if those plugins are not active.
 		// Contact Form 7
 		if (!function_exists('wpcf7') && !defined('WPCF7_PLUGIN')) {
 			if ($registry->is_registered('blockive-premium-addon-for-block/contact-form-7')) {
@@ -470,7 +489,18 @@ class Blockive_Premium_Addon_For_Block
 	 */
 	private function bpafb_inject_styles($html, $new_styles_str, $classes_to_add = '', $id = '', $data_attrs = [])
 	{
-		if (preg_match('/^\s*<([a-z0-9-]+)([^>]*)>/i', $html, $matches)) {
+		// Some render.php templates emit a local <style> tag (e.g. hover-color
+		// rules) before their actual wrapper element. Skip past any such
+		// leading <style>...</style> blocks so the match below targets the
+		// block's real root element instead of the style tag.
+		$search_html = $html;
+		$prefix_len = 0;
+		while (preg_match('/^\s*<style\b[^>]*>.*?<\/style>/is', $search_html, $style_match)) {
+			$prefix_len += strlen($style_match[0]);
+			$search_html = substr($search_html, strlen($style_match[0]));
+		}
+
+		if (preg_match('/^\s*<([a-z0-9-]+)([^>]*)>/i', $search_html, $matches)) {
 			$tag = $matches[1];
 			$attributes_str = $matches[2];
 
@@ -502,7 +532,7 @@ class Blockive_Premium_Addon_For_Block
 				$new_attributes_str .= ' ' . esc_attr($attr_name) . '="' . esc_attr($attr_value) . '"';
 			}
 
-			$pos = strpos($html, $matches[0]);
+			$pos = $prefix_len + strpos($search_html, $matches[0]);
 			$replaced = '<' . $tag . $new_attributes_str . '>';
 			return substr($html, 0, $pos) . $replaced . substr($html, $pos + strlen($matches[0]));
 		}

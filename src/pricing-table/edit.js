@@ -137,16 +137,22 @@ export default function Edit({ attributes, setAttributes }) {
 
 	const addFeature = (tableIndex) => {
 		const newTables = [...(tables || [])];
-		newTables[tableIndex].features = [
-			...(newTables[tableIndex].features || []),
-			{ id: Date.now().toString(), text: 'New Feature', active: true, icon: 'fas fa-check' },
-		];
+		newTables[tableIndex] = {
+			...newTables[tableIndex],
+			features: [
+				...(newTables[tableIndex].features || []),
+				{ id: Date.now().toString(), text: 'New Feature', active: true, icon: 'fas fa-check' },
+			],
+		};
 		setAttributes({ tables: newTables });
 	};
 
 	const removeFeature = (tableIndex, featureIndex) => {
 		const newTables = [...(tables || [])];
-		newTables[tableIndex].features = newTables[tableIndex].features.filter((_, i) => i !== featureIndex);
+		newTables[tableIndex] = {
+			...newTables[tableIndex],
+			features: newTables[tableIndex].features.filter((_, i) => i !== featureIndex),
+		};
 		setAttributes({ tables: newTables });
 	};
 

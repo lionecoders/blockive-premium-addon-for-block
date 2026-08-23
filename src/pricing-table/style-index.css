@@ -1,7 +1,5 @@
 .wp-block-blockive-premium-addon-for-block-pricing-table {
 	display: flex;
-	border: none !important;
-	outline: none !important;
 }
 
 .wp-block-blockive-premium-addon-for-block-pricing-table.alignleft { justify-content: flex-start; }
@@ -10,8 +8,6 @@
 
 .bpafb-pricing-wrapper {
 	width: 100%;
-	border: none !important;
-	outline: none !important;
 }
 
 .bpafb-pricing-grid {

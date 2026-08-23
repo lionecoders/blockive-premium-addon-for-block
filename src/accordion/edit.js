@@ -233,7 +233,17 @@ export default function Edit( { attributes, setAttributes } ) {
 						<div key={ item.id } className={ `bpafb-accordion-item ${ isActive ? 'active' : '' }` }>
 							<div
 								className={ `bpafb-accordion-header flex-align-${ iconAlign }` }
+								role="button"
+								tabIndex={ 0 }
+								aria-expanded={ isActive }
+								aria-controls={ `bpafb-accordion-content-${ item.id }` }
 								onClick={ () => setActiveIndex( isActive ? -1 : index ) }
+								onKeyDown={ ( event ) => {
+									if ( event.key === 'Enter' || event.key === ' ' ) {
+										event.preventDefault();
+										setActiveIndex( isActive ? -1 : index );
+									}
+								} }
 							>
 								{ iconAlign === 'left' && iconElement }
 								<RichText
@@ -246,7 +256,7 @@ export default function Edit( { attributes, setAttributes } ) {
 								{ iconAlign === 'right' && iconElement }
 							</div>
 							{ isActive && (
-								<div className="bpafb-accordion-content">
+								<div className="bpafb-accordion-content" id={ `bpafb-accordion-content-${ item.id }` }>
 									<RichText
 										tagName="p"
 										value={ item.content }

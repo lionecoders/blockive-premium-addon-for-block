@@ -77,6 +77,12 @@ function generateUid() {
 	return Math.random().toString( 36 ).slice( 2, 10 );
 }
 
+// Tracks which bpafbUid values are already claimed by a mounted block
+// instance in this editor session, so a duplicated block (which starts out
+// with a copy of the original's uid) can detect the collision and get a
+// fresh one instead of silently sharing CSS scope with the original.
+const claimedUids = new Set();
+
 /**
  * The single shared "Advanced" control set rendered identically by every
  * Blockive block. Its panels are split across the block's two native
@@ -131,10 +137,17 @@ export default function AdvancedTab( { attributes, setAttributes } ) {
 	} = attributes;
 
 	useEffect( () => {
-		if ( ! bpafbUid ) {
-			setAttributes( { bpafbUid: generateUid() } );
+		if ( ! bpafbUid || claimedUids.has( bpafbUid ) ) {
+			const newUid = generateUid();
+			claimedUids.add( newUid );
+			setAttributes( { bpafbUid: newUid } );
+		} else {
+			claimedUids.add( bpafbUid );
 		}
-	}, [ bpafbUid ] );
+		// Intentionally run only on mount: this is a one-time claim check per
+		// block instance, not a reaction to bpafbUid changes.
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [] );
 
 	return (
 		<>

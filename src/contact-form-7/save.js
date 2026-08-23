@@ -2,6 +2,7 @@ import { useBlockProps } from '@wordpress/block-editor';
 
 export default function Save({ attributes }) {
 	const { formId, showTitle, title, description, titleColor, descriptionColor } = attributes;
+	const safeFormId = ( formId || '' ).replace( /[^0-9]/g, '' );
 
 	const blockProps = useBlockProps.save({
 		className: 'bpafb-contact-form-7-wrapper',
@@ -16,7 +17,7 @@ export default function Save({ attributes }) {
 				</>
 			)}
 			<div className="bpafb-cf7-form-wrapper">
-				{formId && `[contact-form-7 id="${formId}"]`}
+				{safeFormId && `[contact-form-7 id="${safeFormId}"]`}
 			</div>
 		</div>
 	);

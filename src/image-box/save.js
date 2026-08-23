@@ -73,9 +73,11 @@ export default function save({ attributes }) {
 				)}
 
 				{linkUrl && linkText && (
-					<div className="bpafb-image-box-link">
-						{linkText}
-					</div>
+					<RichText.Content
+						tagName="div"
+						className="bpafb-image-box-link"
+						value={linkText}
+					/>
 				)}
 			</div>
 		</>

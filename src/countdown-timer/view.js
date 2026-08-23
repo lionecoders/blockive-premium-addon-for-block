@@ -12,6 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const minsEl = timer.querySelector('.bpafb-cd-minutes .bpafb-countdown-number');
         const secsEl = timer.querySelector('.bpafb-cd-seconds .bpafb-countdown-number');
         
+        let interval;
+
         const updateTimer = () => {
             const now = new Date().getTime();
             const distance = targetDate - now;
@@ -37,6 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
         };
         
         updateTimer();
-        const interval = setInterval(updateTimer, 1000);
+        interval = setInterval(updateTimer, 1000);
     });
 });

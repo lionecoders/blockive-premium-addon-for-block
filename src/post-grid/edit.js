@@ -256,7 +256,11 @@ export default function Edit({ attributes, setAttributes }) {
 										<h3 className="bpafb-post-title">
 											<a href={post.link} onClick={(e) => e.preventDefault()} style={{ color: titleColor }}>{post.title.rendered}</a>
 										</h3>
-										{showAuthor && <span className="bpafb-post-author" style={{ color: authorColor }}>By Author</span>}
+										{showAuthor && (
+										<span className="bpafb-post-author" style={{ color: authorColor }}>
+											{__('By', 'blockive-premium-addon-for-block')} {post._embedded && post._embedded.author && post._embedded.author[0] ? post._embedded.author[0].name : __('Author', 'blockive-premium-addon-for-block')}
+										</span>
+									)}
 										{showExcerpt && (
 											<div className="bpafb-post-excerpt" style={{ color: excerptColor }} dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }} />
 										)}
