@@ -24,7 +24,6 @@
 
 /* Ensure max-width works and is responsive */
 .bpafb-has-container-settings {
-	width: 100% !important;
 	box-sizing: border-box !important;
 }
 
