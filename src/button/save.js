@@ -2,6 +2,7 @@ import { useBlockProps, RichText } from '@wordpress/block-editor';
 import { getTypographyStyles } from '../components/typography-controls';
 import { getBorderStyles } from '../components/border-controls';
 import { getShadowStyle } from '../components/shadow-controls';
+import { getSafeButtonUrl } from './utils';
 
 export default function save( { attributes } ) {
 	const {
@@ -82,11 +83,13 @@ export default function save( { attributes } ) {
 		</span>
 	);
 
+	const safeUrl = getSafeButtonUrl( url );
+
 	return (
 		<div { ...blockProps }>
-			{ url ? (
+			{ safeUrl ? (
 				<a
-					href={ url }
+					href={ safeUrl }
 					className="bpafb-button-link"
 					target={ linkTarget ? '_blank' : undefined }
 					rel={ linkTarget ? 'noopener noreferrer' : undefined }

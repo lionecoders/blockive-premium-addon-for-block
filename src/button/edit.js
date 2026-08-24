@@ -140,8 +140,7 @@ export default function Edit( { attributes, setAttributes } ) {
 					{ label: 'Justified (Full Width)', value: 'justify' },
 				] }
 				onChange={ ( val ) => {
-					setAttributes( { alignment: val } );
-					setAttributes( { buttonWidth: val === 'justify' ? 'full' : 'auto' } );
+					setAttributes( { alignment: val, buttonWidth: val === 'justify' ? 'full' : 'auto' } );
 				} }
 			/>
 		</PanelBody>
