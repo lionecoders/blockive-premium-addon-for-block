@@ -3407,8 +3407,7 @@ return array(
 			)
 		),
 		'editorScript' => 'file:./index.js',
-		'editorStyle' => 'file:./style-index.css',
-		'style' => 'file:./style-index.css',
+		'style' => 'file:./index.css',
 		'viewScript' => 'file:./view.js',
 		'supports' => array(
 			'anchor' => true
