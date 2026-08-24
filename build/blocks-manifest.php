@@ -1936,8 +1936,7 @@ return array(
 			)
 		),
 		'editorScript' => 'file:./index.js',
-		'editorStyle' => 'file:./style-index.css',
-		'style' => 'file:./style-index.css'
+		'style' => 'file:./index.css'
 	),
 	'countdown-timer' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
