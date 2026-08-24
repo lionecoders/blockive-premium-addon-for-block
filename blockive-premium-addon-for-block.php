@@ -62,6 +62,7 @@ class Blockive_Premium_Addon_For_Block
 		add_action('enqueue_block_assets', [$this, 'bpafb_enqueue_global_assets']);
 		add_action('enqueue_block_editor_assets', [$this, 'bpafb_enqueue_editor_assets']);
 		add_filter('render_block', [$this, 'bpafb_render_block_container'], 10, 2);
+		add_filter('content_save_pre', [$this, 'bpafb_strip_unauthorized_custom_css']);
 	}
 
 	/**
@@ -177,6 +178,18 @@ class Blockive_Premium_Addon_For_Block
 			],
 			BPAFB_VERSION,
 			true
+		);
+
+		// Lets AdvancedTab (bundled separately per block) know whether the
+		// current user may use the Custom CSS field. This only controls the
+		// editor UI; the actual security boundary is enforced server-side at
+		// save time, see bpafb_strip_unauthorized_custom_css().
+		wp_localize_script(
+			'bpafb-editor-container-settings',
+			'bpafbEditorSettings',
+			[
+				'canUseCustomCss' => current_user_can('unfiltered_html'),
+			]
 		);
 	}
 
@@ -454,6 +467,75 @@ class Blockive_Premium_Addon_For_Block
 		}
 
 		return $css ? '<style>' . $css . '</style>' : '';
+	}
+
+	/**
+	 * Strips Blockive's per-block Custom CSS attribute (bpafbCustomCss) from
+	 * post content on save for users who lack the capability WordPress uses
+	 * to gate unfiltered/raw content in post bodies.
+	 *
+	 * This runs at save time, not render time: the capability that matters
+	 * is the *saving* author's, not the frontend visitor's. render_block
+	 * runs for every visitor on every page view, and anonymous visitors
+	 * never have unfiltered_html, so gating there would silently break
+	 * Custom CSS for every authorized author's content on the frontend.
+	 *
+	 * Block attributes stored in the `<!-- wp:... {...} -->` comment
+	 * delimiter are not passed through wp_kses_post() the way visible post
+	 * content is (WordPress core allows block comments through kses so
+	 * blocks keep working for users without unfiltered_html), so
+	 * bpafbCustomCss needs its own gate here -- otherwise a user with only
+	 * edit_posts could set it directly via the REST API content field,
+	 * bypassing the editor UI entirely.
+	 *
+	 * @param string $content Raw post content about to be saved.
+	 * @return string
+	 */
+	public function bpafb_strip_unauthorized_custom_css($content)
+	{
+		if (current_user_can('unfiltered_html')) {
+			return $content;
+		}
+
+		// Cheap guard so this only does block-parsing work on content that
+		// could actually contain the attribute (serialize_block omits
+		// attributes matching their block.json default, and the default is
+		// an empty string, so a non-empty value is the only way this
+		// substring appears).
+		if (strpos($content, 'bpafbCustomCss') === false) {
+			return $content;
+		}
+
+		if (!function_exists('parse_blocks') || !function_exists('serialize_blocks')) {
+			return $content;
+		}
+
+		$blocks = $this->bpafb_strip_custom_css_from_blocks(parse_blocks($content));
+
+		return serialize_blocks($blocks);
+	}
+
+	/**
+	 * Recursively clears bpafbCustomCss from every Blockive block in a
+	 * parsed block tree, including nested innerBlocks.
+	 *
+	 * @param array $blocks Parsed block tree (as returned by parse_blocks()).
+	 * @return array
+	 */
+	private function bpafb_strip_custom_css_from_blocks($blocks)
+	{
+		foreach ($blocks as $index => $block) {
+			if (!empty($block['blockName']) && strpos($block['blockName'], 'blockive-premium-addon-for-block/') === 0) {
+				if (!empty($block['attrs']['bpafbCustomCss'])) {
+					$blocks[$index]['attrs']['bpafbCustomCss'] = '';
+				}
+			}
+			if (!empty($block['innerBlocks'])) {
+				$blocks[$index]['innerBlocks'] = $this->bpafb_strip_custom_css_from_blocks($block['innerBlocks']);
+			}
+		}
+
+		return $blocks;
 	}
 
 	/**

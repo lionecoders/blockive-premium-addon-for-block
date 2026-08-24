@@ -134,7 +134,19 @@ export default function AdvancedTab( { attributes, setAttributes } ) {
 		bpafbHoverAnimation = 'none',
 		bpafbFloatingEffect = false,
 		bpafbZIndex,
+		bpafbHtmlId = '',
+		bpafbHtmlClasses = '',
+		bpafbCustomCss = '',
 	} = attributes;
+
+	// Custom CSS output requires the same capability WordPress uses to gate
+	// unfiltered/raw markup in post content (see bpafb_strip_unauthorized_custom_css()
+	// in the main plugin file, which enforces this server-side at save time --
+	// this flag only controls whether the field is shown, it is not the
+	// security boundary itself).
+	const canUseCustomCss = typeof window !== 'undefined' && window.bpafbEditorSettings
+		? !! window.bpafbEditorSettings.canUseCustomCss
+		: false;
 
 	useEffect( () => {
 		if ( ! bpafbUid || claimedUids.has( bpafbUid ) ) {
@@ -236,6 +248,33 @@ export default function AdvancedTab( { attributes, setAttributes } ) {
 						min={ -10 }
 						max={ 999 }
 					/>
+				</PanelBody>
+
+				<PanelBody title={ __( 'Custom Attributes', 'blockive-premium-addon-for-block' ) } initialOpen={ false }>
+					<TextControl
+						label={ __( 'HTML ID', 'blockive-premium-addon-for-block' ) }
+						value={ bpafbHtmlId }
+						onChange={ ( val ) => setAttributes( { bpafbHtmlId: val } ) }
+						help={ __( 'Sets a custom id on this block’s wrapper element. Ignored if the block already has an id (e.g. from the native HTML Anchor field below).', 'blockive-premium-addon-for-block' ) }
+					/>
+					<TextControl
+						label={ __( 'HTML Classes', 'blockive-premium-addon-for-block' ) }
+						value={ bpafbHtmlClasses }
+						onChange={ ( val ) => setAttributes( { bpafbHtmlClasses: val } ) }
+						help={ __( 'Space-separated custom classes added to this block’s wrapper element, alongside any native Additional CSS Class(es).', 'blockive-premium-addon-for-block' ) }
+					/>
+					{ canUseCustomCss ? (
+						<TextareaControl
+							label={ __( 'Custom CSS (Blockive)', 'blockive-premium-addon-for-block' ) }
+							value={ bpafbCustomCss }
+							onChange={ ( val ) => setAttributes( { bpafbCustomCss: val } ) }
+							help={ __( 'Scoped to this block instance only -- use the word "selector" to target its wrapper, e.g. "selector { color: red; }". This is separate from the native Gutenberg Additional CSS field: that one applies as inline styles on this block only and isn’t scoped the same way.', 'blockive-premium-addon-for-block' ) }
+						/>
+					) : (
+						<p className="bpafb-custom-css-restricted">
+							{ __( 'Custom CSS requires the "unfiltered_html" capability on your account. Ask an administrator if you need this enabled.', 'blockive-premium-addon-for-block' ) }
+						</p>
+					) }
 				</PanelBody>
 			</InspectorControls>
 
