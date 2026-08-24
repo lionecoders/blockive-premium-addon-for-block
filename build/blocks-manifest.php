@@ -5496,8 +5496,7 @@ return array(
 			)
 		),
 		'editorScript' => 'file:./index.js',
-		'editorStyle' => 'file:./style-index.css',
-		'style' => 'file:./style-index.css',
+		'style' => 'file:./index.css',
 		'supports' => array(
 			'anchor' => true
 		)
