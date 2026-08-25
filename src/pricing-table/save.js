@@ -1,4 +1,5 @@
 import { useBlockProps, RichText } from '@wordpress/block-editor';
+import { getSafePricingTableUrl } from './utils';
 
 export default function save({ attributes }) {
 	const {
@@ -119,7 +120,7 @@ export default function save({ attributes }) {
 						</ul>
 
 						<div className="bpafb-pricing-footer">
-							<a href={table.buttonUrl || '#'} className="bpafb-pricing-button">
+							<a href={getSafePricingTableUrl(table.buttonUrl) || '#'} className="bpafb-pricing-button">
 								<RichText.Content value={table.buttonText} />
 							</a>
 						</div>

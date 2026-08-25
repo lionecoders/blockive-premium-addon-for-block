@@ -1,7 +1,9 @@
 import { useBlockProps } from '@wordpress/block-editor';
+import { getSafeLottieUrl } from './utils';
 
 export default function Save({ attributes }) {
 	const { animationUrl, width, height, align, linkUrl, linkTarget } = attributes;
+	const safeLinkUrl = getSafeLottieUrl( linkUrl );
 
 	const alignmentMap = {
 		left: 'flex-start',
@@ -24,16 +26,16 @@ export default function Save({ attributes }) {
 			<div className="bpafb-lottie-container" style={{ width: width, height: height }}>
 				{animationUrl && (
 					animationUrl.includes('.mp4') ? (
-						linkUrl ? (
-							<a href={linkUrl} target={linkTarget ? '_blank' : '_self'} rel={linkTarget ? 'noopener noreferrer' : undefined} style={{ display: 'block', width: '100%', height: '100%' }}>
+						safeLinkUrl ? (
+							<a href={safeLinkUrl} target={linkTarget ? '_blank' : '_self'} rel={linkTarget ? 'noopener noreferrer' : undefined} style={{ display: 'block', width: '100%', height: '100%' }}>
 								<video src={animationUrl} autoPlay={true} loop={true} muted={true} playsInline={true} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
 							</a>
 						) : (
 							<video src={animationUrl} autoPlay={true} loop={true} muted={true} playsInline={true} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
 						)
 					) : (
-						linkUrl ? (
-							<a href={linkUrl} target={linkTarget ? '_blank' : '_self'} rel={linkTarget ? 'noopener noreferrer' : undefined} style={{ display: 'block', width: '100%', height: '100%' }}>
+						safeLinkUrl ? (
+							<a href={safeLinkUrl} target={linkTarget ? '_blank' : '_self'} rel={linkTarget ? 'noopener noreferrer' : undefined} style={{ display: 'block', width: '100%', height: '100%' }}>
 								<img src={animationUrl} alt="Animation" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
 							</a>
 						) : (

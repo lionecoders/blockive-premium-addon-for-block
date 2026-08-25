@@ -1,4 +1,5 @@
 import { useBlockProps, RichText } from '@wordpress/block-editor';
+import { getSafeImageBoxUrl } from './utils';
 
 export default function save({ attributes }) {
 	const {
@@ -83,11 +84,13 @@ export default function save({ attributes }) {
 		</>
 	);
 
+	const safeLinkUrl = getSafeImageBoxUrl( linkUrl );
+
 	return (
 		<div {...blockProps}>
-			{linkUrl ? (
+			{safeLinkUrl ? (
 				<a
-					href={linkUrl}
+					href={safeLinkUrl}
 					className="bpafb-image-box-link-wrapper"
 					target={linkTarget ? '_blank' : undefined}
 					rel={linkTarget ? 'noopener noreferrer' : undefined}
