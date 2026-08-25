@@ -6,8 +6,9 @@ if (!defined('ABSPATH')) {
  * Render function for the Post Grid block.
  */
 
-$bpafb_columns = isset($attributes['columns']) ? $attributes['columns'] : 3;
-$bpafb_posts_per_page = isset($attributes['postsPerPage']) ? $attributes['postsPerPage'] : 9;
+$bpafb_columns = isset($attributes['columns']) ? absint($attributes['columns']) : 3;
+$bpafb_posts_per_page = isset($attributes['postsPerPage']) ? absint($attributes['postsPerPage']) : 9;
+$bpafb_posts_per_page = max(1, min(50, $bpafb_posts_per_page));
 $bpafb_orderby = isset($attributes['orderBy']) ? $attributes['orderBy'] : 'date';
 $bpafb_order = isset($attributes['order']) ? $attributes['order'] : 'desc';
 $bpafb_show_image = isset($attributes['showImage']) ? $attributes['showImage'] : true;
@@ -21,9 +22,9 @@ $bpafb_date_color = isset($attributes['dateColor']) ? $attributes['dateColor'] :
 $bpafb_author_color = isset($attributes['authorColor']) ? $attributes['authorColor'] : '';
 $bpafb_excerpt_color = isset($attributes['excerptColor']) ? $attributes['excerptColor'] : '';
 $bpafb_card_bg_color = isset($attributes['cardBgColor']) ? $attributes['cardBgColor'] : '';
-$bpafb_card_br_radius = isset($attributes['cardBorderRadius']) ? $attributes['cardBorderRadius'] : 8;
+$bpafb_card_br_radius = isset($attributes['cardBorderRadius']) ? absint($attributes['cardBorderRadius']) : 8;
 $bpafb_card_bd_color = isset($attributes['cardBorderColor']) ? $attributes['cardBorderColor'] : '';
-$bpafb_card_bd_width = isset($attributes['cardBorderWidth']) ? $attributes['cardBorderWidth'] : 0;
+$bpafb_card_bd_width = isset($attributes['cardBorderWidth']) ? absint($attributes['cardBorderWidth']) : 0;
 $bpafb_card_bd_style = isset($attributes['cardBorderStyle']) ? $attributes['cardBorderStyle'] : 'solid';
 
 $bpafb_card_style = '';
