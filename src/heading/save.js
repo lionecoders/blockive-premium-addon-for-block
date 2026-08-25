@@ -1,4 +1,5 @@
 import { useBlockProps, RichText } from '@wordpress/block-editor';
+import { getSafeHeadingUrl } from './utils';
 
 export default function save({ attributes }) {
 	const {
@@ -46,9 +47,11 @@ export default function save({ attributes }) {
 		/>
 	);
 
-	if (link) {
+	const safeLink = getSafeHeadingUrl(link);
+
+	if (safeLink) {
 		return (
-			<a href={link} target={linkTarget} rel={linkTarget === '_blank' ? 'noopener noreferrer' : undefined} style={{ textDecoration: 'none' }}>
+			<a href={safeLink} target={linkTarget} rel={linkTarget === '_blank' ? 'noopener noreferrer' : undefined} style={{ textDecoration: 'none' }}>
 				{contentElement}
 			</a>
 		);
