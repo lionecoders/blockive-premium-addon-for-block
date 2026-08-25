@@ -17,6 +17,7 @@ import {
 
 import InspectorTabs from '../components/inspector-tabs';
 import AdvancedTab from '../components/advanced-tab';
+import { getSafeSocialIconsUrl } from './utils';
 
 const PREDEFINED_NETWORKS = [
 	{ label: 'Facebook', value: 'facebook', icon: 'fab fa-facebook-f', color: '#1877F2' },
@@ -229,10 +230,10 @@ export default function Edit({ attributes, setAttributes }) {
 					const color = colorType === 'custom' ? customSecondaryColor : '#ffffff';
 					
 					return (
-						<a 
-							key={item.id} 
-							href={item.link || '#'} 
-							className="bpafb-social-icon-item" 
+						<a
+							key={item.id}
+							href={getSafeSocialIconsUrl(item.link) || '#'}
+							className="bpafb-social-icon-item"
 							style={{ 
 								backgroundColor: bg,
 								color: color,

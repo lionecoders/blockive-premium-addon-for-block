@@ -1,4 +1,5 @@
 import { useBlockProps } from '@wordpress/block-editor';
+import { getSafeSocialIconsUrl } from './utils';
 
 export default function save({ attributes }) {
 	const {
@@ -25,10 +26,10 @@ export default function save({ attributes }) {
 				const color = colorType === 'custom' ? customSecondaryColor : '#ffffff';
 				
 				return (
-					<a 
-						key={item.id} 
-						href={item.link || '#'} 
-						className="bpafb-social-icon-item" 
+					<a
+						key={item.id}
+						href={getSafeSocialIconsUrl(item.link) || '#'}
+						className="bpafb-social-icon-item"
 						target="_blank" 
 						rel="noopener noreferrer"
 						style={{ 
