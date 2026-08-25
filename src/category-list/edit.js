@@ -40,8 +40,14 @@ export default function Edit({ attributes, setAttributes }) {
 	const { categories, isResolving, taxonomies } = useSelect(
 		(select) => {
 			const parsedExclude = excludeTerms ? excludeTerms.split(',').map(id => parseInt(id.trim(), 10)).filter(id => !isNaN(id)) : [];
+			// When Show Hierarchy is on, fetch up to the REST API's own page-size cap (100)
+			// so the full term set needed to build an accurate tree is available; `limit`
+			// is then applied to top-level nodes only, after the tree is built (see `tree`
+			// below). Taxonomies with more than 100 total terms are a known, accepted
+			// limitation of hierarchy mode. When hierarchy is off, `limit` is still applied
+			// directly as `per_page` (unchanged, efficient server-side truncation).
 			const query = {
-				per_page: limit,
+				per_page: showHierarchy ? 100 : limit,
 				hide_empty: hideEmpty,
 				orderby: orderBy === 'id' ? 'id' : (orderBy === 'count' ? 'count' : 'name'),
 				order: order,
@@ -53,7 +59,7 @@ export default function Edit({ attributes, setAttributes }) {
 				taxonomies: select('core').getTaxonomies({ per_page: -1 }),
 			};
 		},
-		[limit, hideEmpty, orderBy, order, excludeTerms, taxonomy]
+		[limit, hideEmpty, orderBy, order, excludeTerms, taxonomy, showHierarchy]
 	);
 
 	const taxonomyOptions = taxonomies 
@@ -63,7 +69,9 @@ export default function Edit({ attributes, setAttributes }) {
 	const selectedTaxonomy = taxonomies ? taxonomies.find(tax => tax.slug === taxonomy) : null;
 	const taxonomyLabel = selectedTaxonomy ? (selectedTaxonomy.labels && selectedTaxonomy.labels.singular_name ? selectedTaxonomy.labels.singular_name : selectedTaxonomy.name) : __('category', 'blockive-premium-addon-for-block');
 
-	const tree = (categories && showHierarchy) ? buildCategoryTree(categories) : (categories || []);
+	const tree = showHierarchy
+		? (categories ? (limit > 0 ? buildCategoryTree(categories).slice(0, limit) : buildCategoryTree(categories)) : [])
+		: (categories || []);
 
 	const itemStyle = {
 		backgroundColor: itemBgColor || undefined,

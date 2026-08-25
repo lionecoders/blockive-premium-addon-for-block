@@ -76,7 +76,7 @@ if (!is_wp_error($bpafb_raw_categories)) {
 		}
 		$bpafb_categories[] = $bpafb_cat;
 	}
-	if ($bpafb_limit > 0) {
+	if (!$bpafb_showHierarchy && $bpafb_limit > 0) {
 		$bpafb_categories = array_slice($bpafb_categories, 0, $bpafb_limit);
 	}
 } else {
@@ -96,6 +96,11 @@ if (!is_wp_error($bpafb_categories) && $bpafb_showHierarchy) {
 		} else {
 			$bpafb_tree[] = $bpafb_map[$bpafb_cat->term_id];
 		}
+	}
+	// Limit applies to top-level nodes only, after the hierarchy is built, so a
+	// retained top-level category always keeps its complete children intact.
+	if ($bpafb_limit > 0) {
+		$bpafb_tree = array_slice($bpafb_tree, 0, $bpafb_limit);
 	}
 	$bpafb_categories = $bpafb_tree;
 }
