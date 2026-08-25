@@ -1,7 +1,6 @@
 import { __ } from '@wordpress/i18n';
 import {
 	useBlockProps,
-	InspectorControls,
 	RichText,
 } from '@wordpress/block-editor';
 import {
@@ -27,6 +26,7 @@ export default function Edit({ attributes, setAttributes }) {
 		contentBgColor,
 		contentTextColor,
 		tabBorderRadius,
+		bpafbUid,
 	} = attributes;
 
 	const [activeIndex, setActiveIndex] = useState(0);
@@ -128,14 +128,43 @@ export default function Edit({ attributes, setAttributes }) {
 			/>
 
 			<div {...blockProps}>
-				<div className="bpafb-tabs-nav-track">
+				<div className="bpafb-tabs-nav-track" role="tablist">
 					{items.map((item, index) => {
 						const isActive = activeIndex === index;
+						const tabId = `bpafb-tab-${bpafbUid}-${item.id || index}`;
+						const panelId = `bpafb-tabpanel-${bpafbUid}-${item.id || index}`;
 						return (
-							<div 
-								key={item.id} 
+							<div
+								key={item.id}
+								id={tabId}
 								className={`bpafb-tab-pill ${isActive ? 'active' : ''}`}
-								onClick={(e) => setActiveIndex(index)}
+								role="tab"
+								tabIndex={0}
+								aria-selected={isActive}
+								aria-controls={panelId}
+								onClick={() => setActiveIndex(index)}
+								onKeyDown={(e) => {
+									// Ignore keys originating from inside the editable title (RichText) —
+									// only handle them when the tab "chrome" itself has focus, so typing
+									// spaces/arrow keys while editing the title isn't hijacked as tab navigation.
+									if (e.target !== e.currentTarget) {
+										return;
+									}
+									if (e.key === 'Enter' || e.key === ' ') {
+										e.preventDefault();
+										setActiveIndex(index);
+									} else if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+										e.preventDefault();
+										const nextIndex = e.key === 'ArrowRight'
+											? (index + 1) % items.length
+											: (index - 1 + items.length) % items.length;
+										setActiveIndex(nextIndex);
+										const tabs = e.currentTarget.parentElement.querySelectorAll('[role="tab"]');
+										if (tabs[nextIndex]) {
+											tabs[nextIndex].focus();
+										}
+									}
+								}}
 							>
 								<div style={{ flex: 1, textAlign: 'center' }}>
 									<RichText
@@ -155,8 +184,10 @@ export default function Edit({ attributes, setAttributes }) {
 					{items.map((item, index) => {
 						const isActive = activeIndex === index;
 						if (!isActive) return null;
+						const tabId = `bpafb-tab-${bpafbUid}-${item.id || index}`;
+						const panelId = `bpafb-tabpanel-${bpafbUid}-${item.id || index}`;
 						return (
-							<div key={item.id} className="bpafb-tab-pane active">
+							<div key={item.id} id={panelId} className="bpafb-tab-pane active" role="tabpanel" aria-labelledby={tabId}>
 								<RichText
 									tagName="div"
 									className="bpafb-tab-content-text"

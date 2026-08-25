@@ -18,26 +18,41 @@ const initBlockiveTabs = () => {
         
         const pills = wrapper.querySelectorAll('.bpafb-tab-pill');
         const panes = wrapper.querySelectorAll('.bpafb-tab-pane');
-        
+
+        const activatePill = (index) => {
+            // Remove active state from all navigation pills and tab content panes
+            pills.forEach(p => {
+                p.classList.remove('active');
+                p.setAttribute('aria-selected', 'false');
+            });
+            panes.forEach(p => p.classList.remove('active'));
+
+            // Set the current navigation pill and corresponding content pane as active
+            const pill = pills[index];
+            pill.classList.add('active');
+            pill.setAttribute('aria-selected', 'true');
+            if (panes[index]) {
+                panes[index].classList.add('active');
+            }
+        };
+
         pills.forEach((pill, index) => {
             // Click transition handling
-            pill.addEventListener('click', () => {
-                // Remove active class from all navigation pills and tab content panes
-                pills.forEach(p => p.classList.remove('active'));
-                panes.forEach(p => p.classList.remove('active'));
-                
-                // Set the current navigation pill and corresponding content pane as active
-                pill.classList.add('active');
-                if (panes[index]) {
-                    panes[index].classList.add('active');
-                }
-            });
-            
-            // Native keyboard accessibility (Enter/Space support for focus states)
+            pill.addEventListener('click', () => activatePill(index));
+
+            // Native keyboard accessibility: Enter/Space activates the focused tab,
+            // Left/Right arrow keys move focus between tabs and activate them (WAI-ARIA tabs pattern).
             pill.addEventListener('keydown', (e) => {
                 if (e.key === 'Enter' || e.key === ' ') {
                     e.preventDefault();
-                    pill.click();
+                    activatePill(index);
+                } else if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+                    e.preventDefault();
+                    const nextIndex = e.key === 'ArrowRight'
+                        ? (index + 1) % pills.length
+                        : (index - 1 + pills.length) % pills.length;
+                    pills[nextIndex].focus();
+                    activatePill(nextIndex);
                 }
             });
         });
