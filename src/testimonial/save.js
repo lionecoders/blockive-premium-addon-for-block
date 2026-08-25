@@ -1,3 +1,4 @@
+import { __ } from '@wordpress/i18n';
 import { useBlockProps } from '@wordpress/block-editor';
 
 export default function Save({ attributes }) {
@@ -80,9 +81,9 @@ export default function Save({ attributes }) {
 						<div className="bpafb-testimonial-text-wrap">
 							<p className="bpafb-testimonial-content">{testimonial.content}</p>
 							{showRating && (
-								<div className="bpafb-testimonial-rating">
+								<div className="bpafb-testimonial-rating" role="img" aria-label={`${testimonial.rating} ${__('out of 5 stars', 'blockive-premium-addon-for-block')}`}>
 									{[...Array(testimonial.rating)].map((_, i) => (
-										<span key={i} className="bpafb-star">★</span>
+										<span key={i} className="bpafb-star" aria-hidden="true">★</span>
 									))}
 								</div>
 							)}
@@ -94,10 +95,10 @@ export default function Save({ attributes }) {
 
 				{showArrows && (
 					<>
-						<button className="bpafb-arrow bpafb-prev" type="button">
+						<button className="bpafb-arrow bpafb-prev" type="button" aria-label={__('Previous testimonial', 'blockive-premium-addon-for-block')}>
 							{arrowIcon === 'chevron' ? '‹' : arrowIcon === 'long-arrow' ? '←' : '❮'}
 						</button>
-						<button className="bpafb-arrow bpafb-next" type="button">
+						<button className="bpafb-arrow bpafb-next" type="button" aria-label={__('Next testimonial', 'blockive-premium-addon-for-block')}>
 							{arrowIcon === 'chevron' ? '›' : arrowIcon === 'long-arrow' ? '→' : '❯'}
 						</button>
 					</>
@@ -111,9 +112,21 @@ export default function Save({ attributes }) {
 								className={`bpafb-dot ${index === 0 ? 'active' : ''}`}
 								type="button"
 								data-index={index}
+								aria-label={`${__('Go to testimonial', 'blockive-premium-addon-for-block')} ${index + 1}`}
 							/>
 						))}
 					</div>
+				)}
+
+				{autoPlay && (
+					<button
+						type="button"
+						className="bpafb-testimonial-autoplay-toggle"
+						aria-pressed="false"
+						aria-label={__('Pause automatic slideshow', 'blockive-premium-addon-for-block')}
+					>
+						<span className="bpafb-autoplay-icon" aria-hidden="true">⏸</span>
+					</button>
 				)}
 			</div>
 		</div>

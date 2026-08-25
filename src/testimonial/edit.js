@@ -1,7 +1,6 @@
 import { __ } from '@wordpress/i18n';
 import {
 	useBlockProps,
-	InspectorControls,
 	MediaUpload,
 	MediaUploadCheck,
 	RichText,
@@ -405,9 +404,9 @@ export default function Edit({ attributes, setAttributes }) {
 							<div className="bpafb-testimonial-text-wrap">
 								<p className="bpafb-testimonial-content">{testimonial.content}</p>
 								{showRating && (
-									<div className="bpafb-testimonial-rating">
+									<div className="bpafb-testimonial-rating" role="img" aria-label={`${testimonial.rating} ${__('out of 5 stars', 'blockive-premium-addon-for-block')}`}>
 										{[...Array(testimonial.rating)].map((_, i) => (
-											<span key={i} className="bpafb-star">★</span>
+											<span key={i} className="bpafb-star" aria-hidden="true">★</span>
 										))}
 									</div>
 								)}
@@ -419,8 +418,10 @@ export default function Edit({ attributes, setAttributes }) {
 
 					{showArrows && (
 						<>
-							<button 
-								className="bpafb-arrow bpafb-prev" 
+							<button
+								className="bpafb-arrow bpafb-prev"
+								type="button"
+								aria-label={__('Previous testimonial', 'blockive-premium-addon-for-block')}
 								onClick={() => {
 									if (!infiniteLoop && activeIndex === 0) return;
 									setActiveIndex((activeIndex - 1 + testimonials.length) % testimonials.length);
@@ -429,8 +430,10 @@ export default function Edit({ attributes, setAttributes }) {
 							>
 								{arrowIcon === 'chevron' ? '‹' : arrowIcon === 'long-arrow' ? '←' : '❮'}
 							</button>
-							<button 
-								className="bpafb-arrow bpafb-next" 
+							<button
+								className="bpafb-arrow bpafb-next"
+								type="button"
+								aria-label={__('Next testimonial', 'blockive-premium-addon-for-block')}
 								onClick={() => {
 									if (!infiniteLoop && activeIndex === testimonials.length - 1) return;
 									setActiveIndex((activeIndex + 1) % testimonials.length);
@@ -448,6 +451,8 @@ export default function Edit({ attributes, setAttributes }) {
 								<button
 									key={index}
 									className={`bpafb-dot ${activeIndex === index ? 'active' : ''}`}
+									type="button"
+									aria-label={`${__('Go to testimonial', 'blockive-premium-addon-for-block')} ${index + 1}`}
 									onClick={() => setActiveIndex(index)}
 								/>
 							))}

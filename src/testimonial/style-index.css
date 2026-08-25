@@ -123,6 +123,25 @@
 	background-color: #999999;
 }
 
+.bpafb-testimonial-autoplay-toggle {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	background: transparent;
+	color: var(--bpafb-arrow-color, #333333);
+	border: none;
+	font-size: 14px;
+	line-height: 1;
+	padding: 8px;
+	cursor: pointer;
+	z-index: 10;
+	opacity: 0.7;
+}
+
+.bpafb-testimonial-autoplay-toggle:hover {
+	opacity: 1;
+}
+
 /* Text Alignment */
 .bpafb-text-align-left .bpafb-testimonial-item { text-align: left; }
 .bpafb-text-align-center .bpafb-testimonial-item { text-align: center; }
