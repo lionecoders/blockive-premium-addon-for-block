@@ -189,10 +189,17 @@ export default function Edit({ attributes, setAttributes }) {
 						</div>
 					)}
 
-					<div className="bpafb-pb-track">
-						<div 
+					<div
+						className="bpafb-pb-track"
+						role="progressbar"
+						aria-valuenow={percentage}
+						aria-valuemin={0}
+						aria-valuemax={100}
+						aria-label={title || __('Progress', 'blockive-premium-addon-for-block')}
+					>
+						<div
 							className={`bpafb-pb-fill ${isStriped ? 'bpafb-pb-striped' : ''} ${isStriped && isAnimated ? 'bpafb-pb-striped-animated' : ''}`}
-							style={{ 
+							style={{
 								width: `${percentage}%`,
 								...barBgStyle
 							}}
