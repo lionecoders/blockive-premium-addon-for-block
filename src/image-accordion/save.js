@@ -25,6 +25,9 @@ export default function Save({ attributes }) {
 					<div
 						key={item.id}
 						className={`bpafb-image-accordion-item ${index === 0 ? 'active' : ''}`}
+						role="button"
+						tabIndex="0"
+						aria-current={index === 0 ? 'true' : 'false'}
 						style={{
 							backgroundImage: item.imageUrl ? `url(${item.imageUrl})` : 'none',
 						}}

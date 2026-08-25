@@ -211,7 +211,16 @@ export default function Edit({ attributes, setAttributes }) {
 						<div
 							key={item.id}
 							className={`bpafb-image-accordion-item ${activeIndex === index ? 'active' : ''}`}
+							role="button"
+							tabIndex={0}
+							aria-current={activeIndex === index ? 'true' : 'false'}
 							onClick={() => setActiveIndex(index)}
+							onKeyDown={(event) => {
+								if (event.key === 'Enter' || event.key === ' ') {
+									event.preventDefault();
+									setActiveIndex(index);
+								}
+							}}
 							style={{
 								backgroundImage: item.imageUrl ? `url(${item.imageUrl})` : 'none',
 							}}
