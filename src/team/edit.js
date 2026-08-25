@@ -1,7 +1,6 @@
 import { __ } from '@wordpress/i18n';
 import {
 	useBlockProps,
-	InspectorControls,
 	MediaUpload,
 	MediaUploadCheck,
 	RichText,
