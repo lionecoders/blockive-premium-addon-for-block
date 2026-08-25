@@ -259,6 +259,7 @@ export default function Edit({ attributes, setAttributes }) {
 								name="EMAIL"
 								className="bpafb-mailchimp-input"
 								placeholder={placeholderText}
+								aria-label={placeholderText || __('Email address', 'blockive-premium-addon-for-block')}
 								style={{
 									...inputStyle,
 									border: 'none',

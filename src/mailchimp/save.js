@@ -1,4 +1,6 @@
+import { __ } from '@wordpress/i18n';
 import { useBlockProps } from '@wordpress/block-editor';
+import { getSafeMailchimpUrl } from './utils';
 
 export default function Save({ attributes }) {
 	const { 
@@ -38,7 +40,7 @@ export default function Save({ attributes }) {
 			<div className="bpafb-mailchimp-content" style={Object.keys(customStyles).length > 0 ? customStyles : undefined}>
 				<h2 className="bpafb-mailchimp-title" style={titleStyle}>{title}</h2>
 				<p className="bpafb-mailchimp-subtitle" style={subtitleStyle}>{subtitle}</p>
-				<form className="bpafb-mailchimp-form" action={formAction || '#'} method="post" target="_blank" style={{ gap: `${formGap}px` }}>
+				<form className="bpafb-mailchimp-form" action={getSafeMailchimpUrl(formAction) || '#'} method="post" target="_blank" rel="noopener noreferrer" style={{ gap: `${formGap}px` }}>
 					<div className="bpafb-mailchimp-input-wrapper" style={{ 
 						display: 'flex', 
 						border: `${inputBorderWidth}px solid ${inputBorderColor}`,
@@ -65,6 +67,7 @@ export default function Save({ attributes }) {
 							name="EMAIL"
 							className="bpafb-mailchimp-input"
 							placeholder={placeholderText}
+							aria-label={placeholderText || __('Email address', 'blockive-premium-addon-for-block')}
 							style={{
 								...inputStyle,
 								border: 'none',
