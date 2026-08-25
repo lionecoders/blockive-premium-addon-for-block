@@ -2,6 +2,7 @@ import { useBlockProps, RichText } from '@wordpress/block-editor';
 import { getTypographyStyles } from '../components/typography-controls';
 import { getBorderStyles } from '../components/border-controls';
 import { getShadowStyle } from '../components/shadow-controls';
+import { getSafeIconBoxUrl } from './utils';
 
 export default function save( { attributes } ) {
 	const {
@@ -102,11 +103,13 @@ export default function save( { attributes } ) {
 		</>
 	);
 
+	const safeUrl = getSafeIconBoxUrl( url );
+
 	return (
 		<div { ...blockProps }>
-			{ url ? (
+			{ safeUrl ? (
 				<a
-					href={ url }
+					href={ safeUrl }
 					className="bpafb-icon-box-link"
 					target={ linkTarget ? '_blank' : undefined }
 					rel={ linkTarget ? 'noopener noreferrer' : undefined }
