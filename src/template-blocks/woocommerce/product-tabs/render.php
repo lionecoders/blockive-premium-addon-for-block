@@ -16,6 +16,12 @@ if (!defined('ABSPATH')) {
  */
 
 $bpafb_post_id = Bpafb_Template_Block_Render::get_post_id($block);
+
+if ($bpafb_post_id && post_password_required($bpafb_post_id)) {
+	echo get_the_password_form($bpafb_post_id); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- get_the_password_form() returns pre-escaped WordPress core markup.
+	return;
+}
+
 $bpafb_product = $bpafb_post_id ? wc_get_product($bpafb_post_id) : null;
 
 $bpafb_show_description = !isset($attributes['showDescriptionTab']) || !empty($attributes['showDescriptionTab']);
