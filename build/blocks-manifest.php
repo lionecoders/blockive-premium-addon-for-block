@@ -7587,29 +7587,60 @@ return array(
 	'tabs' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
-		'name' => 'blockive-premium-addon-for-block/tb-product-tabs',
+		'name' => 'blockive-premium-addon-for-block/tabs',
 		'version' => '0.1.0',
-		'title' => 'Product Tabs',
-		'category' => 'blockive-template',
+		'title' => 'Blockive Tabs',
+		'category' => 'bpafb-widgets',
 		'icon' => 'index-card',
-		'description' => 'Displays the current WooCommerce product\'s Description / Additional Information / Reviews tabs, similar to WooCommerce\'s default single product tabs. Blockive Template Builder only.',
-		'usesContext' => array(
-			'postId',
-			'postType'
-		),
-		'textdomain' => 'blockive-premium-addon-for-block',
+		'description' => 'A modern Tab block with premium segmented control styling.',
 		'attributes' => array(
-			'showDescriptionTab' => array(
-				'type' => 'boolean',
-				'default' => true
+			'items' => array(
+				'type' => 'array',
+				'default' => array(
+					array(
+						'id' => '1',
+						'title' => 'First Tab',
+						'content' => 'This is the content for the first tab.'
+					),
+					array(
+						'id' => '2',
+						'title' => 'Second Tab',
+						'content' => 'This is the content for the second tab.'
+					),
+					array(
+						'id' => '3',
+						'title' => 'Third Tab',
+						'content' => 'This is the content for the third tab.'
+					)
+				)
 			),
-			'showAttributesTab' => array(
-				'type' => 'boolean',
-				'default' => true
+			'tabBgColor' => array(
+				'type' => 'string',
+				'default' => '#f1f5f9'
 			),
-			'showReviewsTab' => array(
-				'type' => 'boolean',
-				'default' => true
+			'tabActiveColor' => array(
+				'type' => 'string',
+				'default' => '#ffffff'
+			),
+			'textColor' => array(
+				'type' => 'string',
+				'default' => '#64748b'
+			),
+			'textActiveColor' => array(
+				'type' => 'string',
+				'default' => '#0f172a'
+			),
+			'contentBgColor' => array(
+				'type' => 'string',
+				'default' => '#ffffff'
+			),
+			'contentTextColor' => array(
+				'type' => 'string',
+				'default' => '#334155'
+			),
+			'tabBorderRadius' => array(
+				'type' => 'number',
+				'default' => 12
 			),
 			'bpafbUid' => array(
 				'type' => 'string',
@@ -7859,14 +7890,24 @@ return array(
 			)
 		),
 		'supports' => array(
-			'html' => false,
 			'align' => array(
 				'wide',
 				'full'
 			),
+			'html' => false,
+			'typography' => array(
+				'fontSize' => true,
+				'lineHeight' => true,
+				'__experimentalFontFamily' => true,
+				'__experimentalDefaultControls' => array(
+					'fontSize' => true
+				)
+			),
 			'anchor' => true
 		),
-		'render' => 'file:./render.php',
+		'textdomain' => 'blockive-premium-addon-for-block',
+		'editorScript' => 'file:./index.js',
+		'style' => 'file:./index.css',
 		'viewScript' => 'file:./view.js'
 	),
 	'team' => array(
@@ -19401,6 +19442,291 @@ return array(
 			'anchor' => true
 		),
 		'render' => 'file:./render.php'
+	),
+	'product-tabs' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'blockive-premium-addon-for-block/tb-product-tabs',
+		'version' => '0.1.0',
+		'title' => 'Product Tabs',
+		'category' => 'blockive-template',
+		'icon' => 'index-card',
+		'description' => 'Displays the current WooCommerce product\'s Description / Additional Information / Reviews tabs, similar to WooCommerce\'s default single product tabs. Blockive Template Builder only.',
+		'usesContext' => array(
+			'postId',
+			'postType'
+		),
+		'textdomain' => 'blockive-premium-addon-for-block',
+		'attributes' => array(
+			'showDescriptionTab' => array(
+				'type' => 'boolean',
+				'default' => true
+			),
+			'showAttributesTab' => array(
+				'type' => 'boolean',
+				'default' => true
+			),
+			'showReviewsTab' => array(
+				'type' => 'boolean',
+				'default' => true
+			),
+			'bpafbUid' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbDisplay' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbOverflow' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbPosition' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerWidthUnit' => array(
+				'type' => 'string',
+				'default' => 'px'
+			),
+			'bpafbContainerMinHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMaxHeight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBgType' => array(
+				'type' => 'string',
+				'default' => 'color'
+			),
+			'bpafbContainerBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgGradient' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBgImageId' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerBgImageSize' => array(
+				'type' => 'string',
+				'default' => 'cover'
+			),
+			'bpafbContainerOverlayColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBorderStyle' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbContainerBorderWidth' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderRadius' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerBorderColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbContainerHoverBoxShadow' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbContainerHoverShadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'bpafbContainerHoverShadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'bpafbContainerHoverShadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHideDesktop' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideTablet' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbHideMobile' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbAnimationType' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbAnimationDuration' => array(
+				'type' => 'number',
+				'default' => 800
+			),
+			'bpafbAnimationDelay' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbAnimationEasing' => array(
+				'type' => 'string',
+				'default' => 'ease'
+			),
+			'bpafbTransformRotate' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformScale' => array(
+				'type' => 'number',
+				'default' => 100
+			),
+			'bpafbTransformTranslateX' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbTransformTranslateY' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'bpafbHoverAnimation' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'bpafbFloatingEffect' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'bpafbZIndex' => array(
+				'type' => 'number'
+			),
+			'bpafbHtmlId' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbHtmlClasses' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbCustomCss' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerAlign' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bpafbContainerPaddingTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTop' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRight' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottom' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeft' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftTablet' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginTopMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginRightMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginBottomMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerPaddingLeftMobile' => array(
+				'type' => 'number'
+			),
+			'bpafbContainerMarginLeftMobile' => array(
+				'type' => 'number'
+			)
+		),
+		'supports' => array(
+			'html' => false,
+			'align' => array(
+				'wide',
+				'full'
+			),
+			'anchor' => true
+		),
+		'render' => 'file:./render.php',
+		'viewScript' => 'file:./view.js'
 	),
 	'rating' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',

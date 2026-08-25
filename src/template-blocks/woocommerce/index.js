@@ -11,7 +11,7 @@ import './short-description';
 import './description';
 import './attributes';
 import './meta';
-import './tabs';
+import './product-tabs';
 import './variations';
 import './related';
 import './upsells';
