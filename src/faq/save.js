@@ -79,28 +79,13 @@ export default function save( { attributes } ) {
 		style: customStyles,
 	} );
 
-	// Generate FAQ schema
-	const schemaData = {
-		'@context': 'https://schema.org',
-		'@type': 'FAQPage',
-		mainEntity: items.map( ( item ) => ( {
-			'@type': 'Question',
-			name: item.title.replace( /<\/?[^>]+(>|$)/g, '' ),
-			acceptedAnswer: {
-				'@type': 'Answer',
-				text: item.content,
-			},
-		} ) ),
-	};
-
-	const schemaStr = JSON.stringify( schemaData ).replace( /</g, '\\u003c' );
+	// FAQPage JSON-LD schema is generated and injected server-side (see
+	// bpafb_inject_faq_schema() in the main plugin file) so it is never
+	// subject to the save-time wp_kses_post() filter, which strips <script>
+	// tags for any user without the unfiltered_html capability.
 
 	return (
 		<div { ...blockProps }>
-			<script
-				type="application/ld+json"
-				dangerouslySetInnerHTML={ { __html: schemaStr } }
-			/>
 			{ headingText && (
 				<RichText.Content
 					tagName={ headingTag }
@@ -140,7 +125,13 @@ export default function save( { attributes } ) {
 
 				return (
 					<div key={ item.id || index } className={ `bpafb-faq-item ${ isFirst ? 'active' : '' }` }>
-						<div className={ `bpafb-faq-header flex-align-${ iconAlign }` }>
+						<div
+							className={ `bpafb-faq-header flex-align-${ iconAlign }` }
+							role="button"
+							tabIndex="0"
+							aria-expanded={ isFirst }
+							aria-controls={ `bpafb-faq-content-${ item.id || index }` }
+						>
 							{ iconAlign === 'left' && iconElement }
 							<RichText.Content
 								tagName={ titleTag }
@@ -149,7 +140,7 @@ export default function save( { attributes } ) {
 							/>
 							{ iconAlign === 'right' && iconElement }
 						</div>
-						<div className="bpafb-faq-content" style={ { display: isFirst ? 'block' : 'none' } }>
+						<div className="bpafb-faq-content" id={ `bpafb-faq-content-${ item.id || index }` } style={ { display: isFirst ? 'block' : 'none' } }>
 							<RichText.Content
 								tagName="p"
 								value={ item.content }

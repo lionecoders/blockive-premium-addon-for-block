@@ -62,6 +62,7 @@ class Blockive_Premium_Addon_For_Block
 		add_action('enqueue_block_assets', [$this, 'bpafb_enqueue_global_assets']);
 		add_action('enqueue_block_editor_assets', [$this, 'bpafb_enqueue_editor_assets']);
 		add_filter('render_block', [$this, 'bpafb_render_block_container'], 10, 2);
+		add_filter('render_block', [$this, 'bpafb_inject_faq_schema'], 10, 3);
 		add_filter('content_save_pre', [$this, 'bpafb_strip_unauthorized_custom_css']);
 	}
 
@@ -432,6 +433,65 @@ class Blockive_Premium_Addon_For_Block
 		$output = $this->bpafb_inject_styles($block_content, $style_attr_value, implode(' ', $classes), $html_id, $data_attrs);
 
 		return $extra_style_tag . $output;
+	}
+
+	/**
+	 * Injects FAQPage JSON-LD schema for the Blockive FAQ block at render time.
+	 *
+	 * The FAQ block is static (its visible markup is generated client-side in
+	 * save.js), but the schema is generated here instead, so it is never part
+	 * of the saved post_content and is therefore never subject to the
+	 * save-time wp_kses_post() filter, which strips <script> tags for any
+	 * user without the unfiltered_html capability.
+	 *
+	 * @param string   $block_content The block content.
+	 * @param array    $block         The block record.
+	 * @param WP_Block $instance      The block instance (provides fully-resolved
+	 *                                attributes, including registered defaults
+	 *                                that are omitted from $block['attrs'] when
+	 *                                a block instance hasn't changed them).
+	 * @return string
+	 */
+	public function bpafb_inject_faq_schema($block_content, $block, $instance = null)
+	{
+		if (empty($block['blockName']) || $block['blockName'] !== 'blockive-premium-addon-for-block/faq') {
+			return $block_content;
+		}
+
+		// Note: WP_Block only defines __get() (not __isset()), so isset($instance->attributes)
+		// would always evaluate false regardless of the real value. Access it directly instead.
+		$attrs = $instance instanceof WP_Block ? $instance->attributes : (isset($block['attrs']) ? $block['attrs'] : []);
+		$items = isset($attrs['items']) && is_array($attrs['items']) ? $attrs['items'] : [];
+
+		if (empty($items)) {
+			return $block_content;
+		}
+
+		$main_entity = [];
+		foreach ($items as $item) {
+			$title = isset($item['title']) ? wp_strip_all_tags($item['title']) : '';
+			$content = isset($item['content']) ? $item['content'] : '';
+
+			$main_entity[] = [
+				'@type' => 'Question',
+				'name' => $title,
+				'acceptedAnswer' => [
+					'@type' => 'Answer',
+					'text' => $content,
+				],
+			];
+		}
+
+		$schema = [
+			'@context' => 'https://schema.org',
+			'@type' => 'FAQPage',
+			'mainEntity' => $main_entity,
+		];
+
+		$schema_json = wp_json_encode($schema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+		$schema_json = str_replace('<', '\\u003c', $schema_json);
+
+		return $block_content . '<script type="application/ld+json">' . $schema_json . '</script>';
 	}
 
 	/**

@@ -266,6 +266,39 @@ export default function Edit( { attributes, setAttributes } ) {
 					} }
 				/>
 			</PanelBody>
+
+			<PanelBody title={ __( 'Animation', 'blockive-premium-addon-for-block' ) } initialOpen={ false }>
+				<SelectControl
+					label={ __( 'Animation Type', 'blockive-premium-addon-for-block' ) }
+					value={ animationType }
+					options={ [
+						{ label: __( 'None', 'blockive-premium-addon-for-block' ), value: 'none' },
+						{ label: __( 'Fade In', 'blockive-premium-addon-for-block' ), value: 'fadeIn' },
+						{ label: __( 'Fade In Up', 'blockive-premium-addon-for-block' ), value: 'fadeInUp' },
+						{ label: __( 'Fade In Down', 'blockive-premium-addon-for-block' ), value: 'fadeInDown' },
+						{ label: __( 'Zoom In', 'blockive-premium-addon-for-block' ), value: 'zoomIn' },
+						{ label: __( 'Slide In Left', 'blockive-premium-addon-for-block' ), value: 'slideInLeft' },
+						{ label: __( 'Slide In Right', 'blockive-premium-addon-for-block' ), value: 'slideInRight' },
+					] }
+					onChange={ ( val ) => setAttributes( { animationType: val } ) }
+				/>
+				{ animationType !== 'none' && (
+					<>
+						<TextControl
+							label={ __( 'Animation Duration', 'blockive-premium-addon-for-block' ) }
+							help={ __( 'e.g., 1s, 500ms', 'blockive-premium-addon-for-block' ) }
+							value={ animationDuration }
+							onChange={ ( val ) => setAttributes( { animationDuration: val } ) }
+						/>
+						<TextControl
+							label={ __( 'Animation Delay', 'blockive-premium-addon-for-block' ) }
+							help={ __( 'e.g., 0s, 200ms', 'blockive-premium-addon-for-block' ) }
+							value={ animationDelay }
+							onChange={ ( val ) => setAttributes( { animationDelay: val } ) }
+						/>
+					</>
+				) }
+			</PanelBody>
 		</>
 	);
 
@@ -311,7 +344,17 @@ export default function Edit( { attributes, setAttributes } ) {
 						<div key={ item.id } className={ `bpafb-faq-item ${ isActive ? 'active' : '' }` }>
 							<div
 								className={ `bpafb-faq-header flex-align-${ iconAlign }` }
+								role="button"
+								tabIndex={ 0 }
+								aria-expanded={ isActive }
+								aria-controls={ `bpafb-faq-content-${ item.id }` }
 								onClick={ () => setActiveIndex( isActive ? -1 : index ) }
+								onKeyDown={ ( event ) => {
+									if ( event.key === 'Enter' || event.key === ' ' ) {
+										event.preventDefault();
+										setActiveIndex( isActive ? -1 : index );
+									}
+								} }
 							>
 								{ iconAlign === 'left' && iconElement }
 								<RichText
@@ -324,7 +367,7 @@ export default function Edit( { attributes, setAttributes } ) {
 								{ iconAlign === 'right' && iconElement }
 							</div>
 							{ isActive && (
-								<div className="bpafb-faq-content">
+								<div className="bpafb-faq-content" id={ `bpafb-faq-content-${ item.id }` }>
 									<RichText
 										tagName="p"
 										value={ item.content }
