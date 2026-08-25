@@ -1,3 +1,4 @@
+import { __ } from '@wordpress/i18n';
 import { useBlockProps } from '@wordpress/block-editor';
 
 export default function Save({ attributes }) {
@@ -29,7 +30,17 @@ export default function Save({ attributes }) {
 				{beforeImage && (
 					<img src={beforeImage} alt="" style={{ visibility: 'hidden', display: 'block', width: '100%', height: 'auto', pointerEvents: 'none' }} />
 				)}
-				<div className="bpafb-comparison-handle" style={{ left: `${sliderPosition}%` }}>
+				<div
+					className="bpafb-comparison-handle"
+					style={{ left: `${sliderPosition}%` }}
+					role="slider"
+					tabIndex={0}
+					aria-orientation="horizontal"
+					aria-valuenow={sliderPosition}
+					aria-valuemin={0}
+					aria-valuemax={100}
+					aria-label={__('Image comparison slider', 'blockive-premium-addon-for-block')}
+				>
 					<span className="bpafb-handle-icon"></span>
 				</div>
 		</div>
