@@ -56,7 +56,7 @@ export default function save({ attributes }) {
 						/>
 						{displayPercentage && (
 							<span className="bpafb-pb-percentage">
-								<span className="bpafb-pb-number">0</span>%
+								<span className="bpafb-pb-number">{percentage}</span>%
 							</span>
 						)}
 					</div>
@@ -73,7 +73,7 @@ export default function save({ attributes }) {
 					<div
 						className={`bpafb-pb-fill ${isStriped ? 'bpafb-pb-striped' : ''} ${isStriped && isAnimated ? 'bpafb-pb-striped-animated' : ''}`}
 						style={{
-							width: '0%', // Initially 0% for frontend animation!
+							width: `${percentage}%`, // Real value by default; view.js animates from 0 for JS-enabled visitors.
 							...barBgStyle
 						}}
 					>
