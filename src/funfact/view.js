@@ -1,7 +1,7 @@
 function animateCounter(counter) {
-	const target = parseInt(counter.getAttribute('data-count'));
+	const target = parseInt((counter.getAttribute('data-count') || '').replace(/,/g, ''), 10) || 0;
 	const wrapper = counter.closest('.bpafb-funfact-wrapper');
-	const duration = parseInt(wrapper.getAttribute('data-duration')) || 1000;
+	const duration = parseInt(wrapper.getAttribute('data-duration'), 10) || 1000;
 	const increment = target / (duration / 16);
 	let current = 0;
 
