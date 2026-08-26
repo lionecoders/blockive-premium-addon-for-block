@@ -245,6 +245,7 @@ export default function Edit({ attributes, setAttributes }) {
 								height: `${iconSize + (iconPadding * 2)}px`
 							}}
 							onClick={(e) => e.preventDefault()} // prevent navigation in editor
+							aria-label={`Visit our ${item.network}`}
 						>
 							<i className={item.icon}></i>
 						</a>
