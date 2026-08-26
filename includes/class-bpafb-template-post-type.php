@@ -73,8 +73,8 @@ class Bpafb_Template_Post_Type
 			'single'        => true,
 			'default'       => 'post',
 			'show_in_rest'  => true,
-			'auth_callback' => function () {
-				return current_user_can('edit_posts');
+			'auth_callback' => function ($allowed, $meta_key, $post_id) {
+				return current_user_can('edit_post', $post_id);
 			},
 		]);
 	}
