@@ -33,7 +33,7 @@ export default function Edit({ attributes, setAttributes }) {
 	// Handle Repeater Item Update
 	const updateItem = (index, key, value) => {
 		const newItems = [...items];
-		newItems[index][key] = value;
+		newItems[index] = { ...newItems[index], [key]: value };
 		setAttributes({ items: newItems });
 	};
 
