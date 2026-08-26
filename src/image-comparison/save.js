@@ -21,10 +21,20 @@ export default function Save({ attributes }) {
 
 	return (
 		<div {...blockProps}>
-				<div className="bpafb-comparison-image after-image" style={{ backgroundImage: afterImage ? `url(${afterImage})` : 'none' }}>
+				<div
+					className="bpafb-comparison-image after-image"
+					style={{ backgroundImage: afterImage ? `url(${afterImage})` : 'none' }}
+					role="img"
+					aria-label={afterLabel || __('After image', 'blockive-premium-addon-for-block')}
+				>
 					{showLabels && <span className="bpafb-label after-label">{afterLabel}</span>}
 				</div>
-				<div className="bpafb-comparison-image before-image" style={{ backgroundImage: beforeImage ? `url(${beforeImage})` : 'none', clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}>
+				<div
+					className="bpafb-comparison-image before-image"
+					style={{ backgroundImage: beforeImage ? `url(${beforeImage})` : 'none', clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
+					role="img"
+					aria-label={beforeLabel || __('Before image', 'blockive-premium-addon-for-block')}
+				>
 					{showLabels && <span className="bpafb-label before-label">{beforeLabel}</span>}
 				</div>
 				{beforeImage && (
