@@ -1,4 +1,5 @@
 import { useBlockProps } from '@wordpress/block-editor';
+import { getSafeVideoUrl } from './utils';
 
 export default function Save({ attributes }) {
 	const { videoUrl, width, height, autoplay, controls, loop } = attributes;
@@ -22,7 +23,7 @@ export default function Save({ attributes }) {
 				muted={autoplay ? true : undefined}
 				style={{ width: '100%', height: '100%', objectFit: 'contain' }}
 			>
-				<source src={videoUrl} />
+				<source src={getSafeVideoUrl(videoUrl)} />
 				Your browser does not support the video tag.
 			</video>
 		</div>

@@ -8,6 +8,7 @@ import {
 } from '@wordpress/components';
 
 import InspectorTabs from '../components/inspector-tabs';
+import { getSafeVideoUrl } from './utils';
 import AdvancedTab from '../components/advanced-tab';
 
 export default function Edit({ attributes, setAttributes }) {
@@ -95,7 +96,7 @@ export default function Edit({ attributes, setAttributes }) {
 						muted={autoplay ? true : undefined}
 						style={{ width: '100%', height: '100%', objectFit: 'contain' }}
 					>
-						<source src={videoUrl} />
+						<source src={getSafeVideoUrl(videoUrl)} />
 						{__('Your browser does not support the video tag.', 'blockive-premium-addon-for-block')}
 					</video>
 				) : (
