@@ -1,3 +1,4 @@
+import { __ } from '@wordpress/i18n';
 import { useBlockProps } from '@wordpress/block-editor';
 import { getSafeLottieUrl } from './utils';
 
@@ -36,10 +37,10 @@ export default function Save({ attributes }) {
 					) : (
 						safeLinkUrl ? (
 							<a href={safeLinkUrl} target={linkTarget ? '_blank' : '_self'} rel={linkTarget ? 'noopener noreferrer' : undefined} style={{ display: 'block', width: '100%', height: '100%' }}>
-								<img src={animationUrl} alt="Animation" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+								<img src={animationUrl} alt={__('Animation', 'blockive-premium-addon-for-block')} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
 							</a>
 						) : (
-							<img src={animationUrl} alt="Animation" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+							<img src={animationUrl} alt={__('Animation', 'blockive-premium-addon-for-block')} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
 						)
 					)
 				)}

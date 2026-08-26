@@ -109,7 +109,7 @@ export default function Edit({ attributes, setAttributes }) {
 						animationUrl.includes('.mp4') ? (
 							<video src={animationUrl} autoPlay={true} loop={true} muted={true} playsInline={true} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
 						) : (
-							<img src={animationUrl} alt="Animation" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+							<img src={animationUrl} alt={__('Animation', 'blockive-premium-addon-for-block')} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
 						)
 					) : (
 						<div style={{ width: '100%', height: '100%', minHeight: '50px' }} />
