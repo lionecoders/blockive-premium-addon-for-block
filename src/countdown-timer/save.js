@@ -1,3 +1,4 @@
+import { __ } from '@wordpress/i18n';
 import { useBlockProps } from '@wordpress/block-editor';
 
 export default function save({ attributes }) {
@@ -49,7 +50,13 @@ export default function save({ attributes }) {
 
 	return (
 		<div {...blockProps}>
-			<div className="bpafb-countdown-wrapper" data-target-date={targetDate}>
+			<div
+				className="bpafb-countdown-wrapper"
+				data-target-date={targetDate}
+				role="timer"
+				aria-live="off"
+				aria-label={__('Countdown timer', 'blockive-premium-addon-for-block')}
+			>
 				{showDays && (
 					<div className="bpafb-countdown-item bpafb-cd-days">
 						<div className="bpafb-countdown-number">00</div>

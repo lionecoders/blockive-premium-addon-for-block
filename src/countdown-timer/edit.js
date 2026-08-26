@@ -243,7 +243,13 @@ export default function Edit({ attributes, setAttributes }) {
 			/>
 
 			<div {...blockProps}>
-				<div className="bpafb-countdown-wrapper" data-target-date={targetDate}>
+				<div
+					className="bpafb-countdown-wrapper"
+					data-target-date={targetDate}
+					role="timer"
+					aria-live="off"
+					aria-label={__('Countdown timer', 'blockive-premium-addon-for-block')}
+				>
 					{!targetDate && (
 						<div style={{ padding: '20px', border: '1px dashed #ccc', textAlign: 'center', width: '100%' }}>
 							{__('Please set a target date in the block settings.', 'blockive-premium-addon-for-block')}
