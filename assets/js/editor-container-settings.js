@@ -4,6 +4,30 @@
 
 	const NAMESPACE = 'blockive-premium-addon-for-block/';
 
+	/**
+	 * Converts a React-style camelCase style object (as already computed by
+	 * withContainerStyles below) into a plain CSS declaration-list string,
+	 * e.g. { maxWidth: '400px' } -> "max-width: 400px;".
+	 */
+	function bpafbStylesToCssText( styleObj ) {
+		return Object.keys( styleObj )
+			.filter( ( prop ) => styleObj[ prop ] !== undefined && styleObj[ prop ] !== null && styleObj[ prop ] !== '' )
+			.map( ( prop ) => {
+				const kebabProp = prop.replace( /[A-Z]/g, ( match ) => '-' + match.toLowerCase() );
+				// !important is required here: WordPress core's own editor
+				// layout-constraint rule (`.block-editor-block-list__layout.is-root-container
+				// > :where(...)`) sets max-width with higher specificity than a
+				// single class selector, even though :where() itself carries zero
+				// specificity - confirmed by direct inspection of the editor's
+				// applied stylesheets. Scoped to this block instance's own
+				// preview-only <style> tag, matching the same justified,
+				// documented pattern already used for an analogous cascade
+				// conflict in Pie Chart's alignment CSS.
+				return `${ kebabProp }: ${ styleObj[ prop ] } !important;`;
+			} )
+			.join( ' ' );
+	}
+
 	// Every attribute powering the shared "Advanced" tab (see src/components/advanced-tab).
 	// Registered globally for every Blockive block so no per-block block.json edits are needed.
 	const ADVANCED_ATTRIBUTES = {
@@ -217,6 +241,13 @@
 			if ( attributes.bpafbHtmlClasses ) {
 				newClassName += ` ${ attributes.bpafbHtmlClasses }`;
 			}
+			// Scopes the live-preview <style> tag below to this block instance,
+			// reusing the same uid already used to scope the frontend's
+			// responsive/custom-CSS <style> tags (see bpafb_build_responsive_css()/
+			// bpafb_build_custom_css() in the main plugin file).
+			if ( attributes.bpafbUid ) {
+				newClassName += ` bpafb-uid-${ attributes.bpafbUid }`;
+			}
 			newClassName = newClassName.trim();
 
 			const wrapperProps = Object.assign( {}, props.wrapperProps, {
@@ -225,7 +256,34 @@
 				id: attributes.bpafbHtmlId || undefined,
 			} );
 
-			return element.createElement( BlockListBlock, Object.assign( {}, props, { wrapperProps } ) );
+			// WordPress core's own internal wrapperProps/PrivateBlockContext
+			// composition (between the editor.BlockListBlock filter and the
+			// block's own useBlockProps() call) does not reliably carry
+			// wrapperProps.style through to the rendered DOM node, even though
+			// wrapperProps.className does - confirmed by direct inspection of
+			// the editor canvas DOM (2026-08-26 investigation). Since that
+			// composition is undocumented/internal and not guaranteed stable
+			// across WordPress versions, don't depend on it: render the same
+			// computed styles as a scoped <style> tag instead, as a plain React
+			// Fragment sibling next to the block. This uses only ordinary,
+			// version-stable mechanisms (a CSS selector + a <style> element -
+			// nothing Gutenberg-internal), never touches the frontend PHP
+			// render path, and is automatically cleaned up by React when the
+			// block unmounts (it's part of the same subtree, not a manually
+			// managed DOM node). wrapperProps.style above is left in place
+			// unchanged in case a future WordPress version fixes the
+			// underlying composition gap.
+			const cssText = bpafbStylesToCssText( styles );
+			const previewStyleTag = ( attributes.bpafbUid && cssText )
+				? element.createElement( 'style', {}, `.bpafb-uid-${ attributes.bpafbUid } { ${ cssText } }` )
+				: null;
+
+			return element.createElement(
+				element.Fragment,
+				{},
+				previewStyleTag,
+				element.createElement( BlockListBlock, Object.assign( {}, props, { wrapperProps } ) )
+			);
 		};
 	}, 'withContainerStyles' );
 	addFilter( 'editor.BlockListBlock', 'bpafb/container-styles', withContainerStyles );
