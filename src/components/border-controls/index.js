@@ -56,11 +56,11 @@ export function getBorderStyles( values = {}, prefix ) {
 	const styles = {};
 	if ( borderType && borderType !== 'none' ) {
 		styles[ `${ prefix }-border-style` ] = borderType;
-		if ( borderWidth !== undefined ) styles[ `${ prefix }-border-width` ] = `${ borderWidth }px`;
+		if ( borderWidth !== undefined && borderWidth !== null ) styles[ `${ prefix }-border-width` ] = `${ borderWidth }px`;
 		if ( borderColor ) styles[ `${ prefix }-border-color` ] = borderColor;
 	} else {
 		styles[ `${ prefix }-border-style` ] = 'none';
 	}
-	if ( borderRadius !== undefined ) styles[ `${ prefix }-border-radius` ] = `${ borderRadius }px`;
+	if ( borderRadius !== undefined && borderRadius !== null ) styles[ `${ prefix }-border-radius` ] = `${ borderRadius }px`;
 	return styles;
 }

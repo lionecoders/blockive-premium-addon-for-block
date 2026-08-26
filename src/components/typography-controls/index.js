@@ -115,10 +115,10 @@ export function getTypographyStyles( values = {}, prefix ) {
 
 	const styles = {};
 	if ( fontFamily ) styles[ `${ prefix }-font-family` ] = fontFamily;
-	if ( fontSize !== undefined ) styles[ `${ prefix }-font-size` ] = `${ fontSize }px`;
+	if ( fontSize !== undefined && fontSize !== null ) styles[ `${ prefix }-font-size` ] = `${ fontSize }px`;
 	if ( fontWeight ) styles[ `${ prefix }-font-weight` ] = fontWeight;
-	if ( lineHeight !== undefined ) styles[ `${ prefix }-line-height` ] = lineHeight;
-	if ( letterSpacing !== undefined ) styles[ `${ prefix }-letter-spacing` ] = `${ letterSpacing }px`;
+	if ( lineHeight !== undefined && lineHeight !== null ) styles[ `${ prefix }-line-height` ] = lineHeight;
+	if ( letterSpacing !== undefined && letterSpacing !== null ) styles[ `${ prefix }-letter-spacing` ] = `${ letterSpacing }px`;
 	if ( textTransform ) styles[ `${ prefix }-text-transform` ] = textTransform;
 	if ( textDecoration ) styles[ `${ prefix }-text-decoration` ] = textDecoration;
 	return styles;
