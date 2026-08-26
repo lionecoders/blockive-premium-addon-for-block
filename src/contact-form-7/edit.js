@@ -1,4 +1,4 @@
-import { __ } from '@wordpress/i18n';
+import { __, sprintf } from '@wordpress/i18n';
 import { useBlockProps, InspectorControls, PanelColorSettings } from '@wordpress/block-editor';
 import {
 	PanelBody,
@@ -84,7 +84,11 @@ export default function Edit({ attributes, setAttributes }) {
 				<div className="bpafb-cf7-form-wrapper">
 					{formId ? (
 						<p style={{ color: '#666', fontStyle: 'italic' }}>
-							{__('Contact Form 7 (ID: ' + formId + ') will display here on frontend', 'blockive-premium-addon-for-block')}
+							{sprintf(
+								/* translators: %s: Contact Form 7 form ID. */
+								__('Contact Form 7 (ID: %s) will display here on frontend', 'blockive-premium-addon-for-block'),
+								formId
+							)}
 						</p>
 					) : (
 						<p style={{ color: '#d32f2f' }}>
