@@ -2,6 +2,7 @@ import { __ } from '@wordpress/i18n';
 import { useBlockProps, InspectorControls, PanelColorSettings } from '@wordpress/block-editor';
 import { useSelect } from '@wordpress/data';
 import { dateI18n } from '@wordpress/date';
+import { decodeEntities } from '@wordpress/html-entities';
 import {
 	PanelBody,
 	RangeControl,
@@ -241,7 +242,7 @@ export default function Edit({ attributes, setAttributes }) {
 									{showImage && (
 										<div className="bpafb-post-image">
 											{featuredImage ? (
-												<img src={featuredImage} alt={post.title.rendered} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+												<img src={featuredImage} alt={decodeEntities(post.title.rendered)} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
 											) : (
 												<div style={{ backgroundColor: '#f0f0f0', width: '100%', paddingBottom: '75%' }}></div>
 											)}
@@ -254,7 +255,7 @@ export default function Edit({ attributes, setAttributes }) {
 											</span>
 										)}
 										<h3 className="bpafb-post-title">
-											<a href={post.link} onClick={(e) => e.preventDefault()} style={{ color: titleColor }}>{post.title.rendered}</a>
+											<a href={post.link} onClick={(e) => e.preventDefault()} style={{ color: titleColor }}>{decodeEntities(post.title.rendered)}</a>
 										</h3>
 										{showAuthor && (
 										<span className="bpafb-post-author" style={{ color: authorColor }}>
