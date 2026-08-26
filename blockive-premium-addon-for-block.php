@@ -646,13 +646,17 @@ class Blockive_Premium_Addon_For_Block
 			$tag = $matches[1];
 			$attributes_str = $matches[2];
 
-			// Check if style attribute already exists
+			// Check if style attribute already exists.
+			// Note: $existing_styles is extracted from already-rendered HTML (already
+			// attribute-safe), and $new_styles_str's individual values were already
+			// esc_attr()'d when built in bpafb_render_block_container(); re-escaping
+			// the combined string here would double-encode entities like `&`.
 			if ($new_styles_str && preg_match('/style=["\']([^"\']*)["\']/i', $attributes_str, $style_matches)) {
 				$existing_styles = rtrim(trim($style_matches[1]), ';') . ';';
 				$updated_styles = $existing_styles . ' ' . $new_styles_str;
-				$new_attributes_str = preg_replace('/style=["\']([^"\']*)["\']/i', 'style="' . esc_attr($updated_styles) . '"', $attributes_str);
+				$new_attributes_str = preg_replace('/style=["\']([^"\']*)["\']/i', 'style="' . $updated_styles . '"', $attributes_str);
 			} elseif ($new_styles_str) {
-				$new_attributes_str = $attributes_str . ' style="' . esc_attr($new_styles_str) . '"';
+				$new_attributes_str = $attributes_str . ' style="' . $new_styles_str . '"';
 			} else {
 				$new_attributes_str = $attributes_str;
 			}
