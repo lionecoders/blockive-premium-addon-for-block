@@ -1,10 +1,10 @@
 === Blockive - Premium Addon For Block ===
-Contributors:      deep7197, lionecoders
+Contributors:      mveous, deep7197, lionecoders
 Tags:              block, blocks, gutenberg, blockive, widgets
 Requires at least: 6.8
 Requires PHP:      7.4
-Tested up to:      7.0
-Stable tag:        1.0.0
+Tested up to:      7.1
+Stable tag:        1.0.1
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -56,6 +56,8 @@ Yes, blockive-premium-addon-for-block is designed to work seamlessly with any st
 2. Example of the Blockive Accordion block in action.
 
 == Changelog ==
+= 1.0.1 =
+* Tested Upto WP 7.1
 
 = 1.0.0 =
 * Initial release.

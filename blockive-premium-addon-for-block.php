@@ -2,11 +2,11 @@
 /**
  * Plugin Name:       Blockive - Premium Addon For Block
  * Description: A powerful Blockive addon plugin that offers a wide range of Blocks
- * Plugin URI: https://lionecoders.com
- * Version:           1.0.0
+ * Plugin URI: https://mveous.com
+ * Version:           1.0.1
  * Requires at least: 6.8
  * Requires PHP:      7.4
- * Author:            Lionecoders
+ * Author:            Mveous
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       blockive-premium-addon-for-block
@@ -20,7 +20,7 @@ if (!defined('ABSPATH')) {
 
 define('BPAFB_PATH', plugin_dir_path(__FILE__));
 define('BPAFB_URL', plugin_dir_url(__FILE__));
-define('BPAFB_VERSION', '1.0.0');
+define('BPAFB_VERSION', '1.0.1');
 
 /**
  * Main Class for Blockive Premium Addon For Block.
