@@ -16,7 +16,7 @@ const TemplateSettingsPanel = () => {
 			return [ { label: __( 'Post', 'blockive-premium-addon-for-block' ), value: 'post' } ];
 		}
 		return types
-			.filter( ( type ) => type.viewable && type.slug !== TEMPLATE_POST_TYPE )
+			.filter( ( type ) => type.viewable && type.slug !== TEMPLATE_POST_TYPE && type.slug !== 'attachment' )
 			.map( ( type ) => ( { label: type.labels.singular_name, value: type.slug } ) );
 	}, [] );
 
