@@ -3,17 +3,32 @@ import { registerPlugin } from '@wordpress/plugins';
 import { PluginDocumentSettingPanel } from '@wordpress/editor';
 import { PanelRow, SelectControl, TextControl } from '@wordpress/components';
 import { Icon, lock } from '@wordpress/icons';
-import { useSelect } from '@wordpress/data';
+import { useSelect, useDispatch } from '@wordpress/data';
 import { useEntityProp } from '@wordpress/core-data';
+import { useEffect } from '@wordpress/element';
 
 const TEMPLATE_POST_TYPE = window.bpafbTemplateBuilder?.postType || 'blockive_template';
+const PRO_DISPLAY_CONDITION_LOCK = 'bpafb_pro_display_condition_lock';
 
 const DisplayConditionsPanel = () => {
 	const [ meta, setMeta ] = useEntityProp( 'postType', TEMPLATE_POST_TYPE, 'meta' );
+	const { lockPostSaving, unlockPostSaving } = useDispatch( 'core/editor' );
 
 	const targetPostType = meta?._bpafb_template_type || 'post';
 	const scope = meta?._bpafb_display_condition_scope || 'all';
 	const priority = Number.isFinite( meta?._bpafb_template_priority ) ? meta._bpafb_template_priority : 10;
+
+	useEffect( () => {
+		if ( scope === 'specific' ) {
+			lockPostSaving( PRO_DISPLAY_CONDITION_LOCK );
+		} else {
+			unlockPostSaving( PRO_DISPLAY_CONDITION_LOCK );
+		}
+
+		return () => {
+			unlockPostSaving( PRO_DISPLAY_CONDITION_LOCK );
+		};
+	}, [ scope, lockPostSaving, unlockPostSaving ] );
 
 	const targetPostTypeLabel = useSelect(
 		( select ) => select( 'core' ).getPostType( targetPostType )?.labels?.name || targetPostType,

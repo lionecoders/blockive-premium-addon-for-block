@@ -46,7 +46,7 @@ class Bpafb_Template_Display_Conditions
 		register_post_meta($post_type, self::META_SCOPE, [
 			'type'          => 'string',
 			'single'        => true,
-			'default'       => 'specific',
+			'default'       => 'all',
 			'show_in_rest'  => true,
 			'auth_callback' => $auth_callback,
 		]);

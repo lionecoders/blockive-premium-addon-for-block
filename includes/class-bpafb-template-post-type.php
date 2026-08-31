@@ -23,6 +23,72 @@ class Bpafb_Template_Post_Type
 	{
 		add_action('init', [$this, 'register_post_type']);
 		add_action('init', [$this, 'register_meta']);
+		add_filter('manage_' . self::POST_TYPE . '_posts_columns', [$this, 'add_admin_columns']);
+		add_action('manage_' . self::POST_TYPE . '_posts_custom_column', [$this, 'render_admin_column'], 10, 2);
+	}
+
+	/**
+	 * Inserts "Template Type" and "Display Condition" columns into the
+	 * Blockive Templates list table, between Title and Date.
+	 *
+	 * @param array $columns Existing column list.
+	 * @return array Modified column list.
+	 */
+	public function add_admin_columns($columns)
+	{
+		$date = $columns['date'] ?? null;
+		unset($columns['date']);
+
+		$columns['bpafb_template_type']     = __('Template Type', 'blockive-premium-addon-for-block');
+		$columns['bpafb_display_condition'] = __('Display Condition', 'blockive-premium-addon-for-block');
+
+		if (null !== $date) {
+			$columns['date'] = $date;
+		}
+
+		return $columns;
+	}
+
+	/**
+	 * Renders the "Template Type" and "Display Condition" column content.
+	 *
+	 * @param string $column  Column key.
+	 * @param int    $post_id Post ID.
+	 */
+	public function render_admin_column($column, $post_id)
+	{
+		if ('bpafb_template_type' !== $column && 'bpafb_display_condition' !== $column) {
+			return;
+		}
+
+		$post_type_slug = get_post_meta($post_id, '_bpafb_template_type', true) ?: 'post';
+		$post_type_obj  = get_post_type_object($post_type_slug);
+
+		if ('bpafb_template_type' === $column) {
+			echo esc_html($post_type_obj ? $post_type_obj->labels->singular_name : $post_type_slug);
+			return;
+		}
+
+		$post_type_name = $post_type_obj ? $post_type_obj->labels->name : $post_type_slug;
+		$scope          = get_post_meta($post_id, Bpafb_Template_Display_Conditions::META_SCOPE, true);
+
+		if ('all' === $scope) {
+			echo esc_html(
+				sprintf(
+					/* translators: %s: post type name, e.g. "Posts". */
+					__('All %s', 'blockive-premium-addon-for-block'),
+					$post_type_name
+				)
+			);
+		} else {
+			echo esc_html(
+				sprintf(
+					/* translators: %s: post type name, e.g. "Posts". */
+					__('Specific %s (Pro)', 'blockive-premium-addon-for-block'),
+					$post_type_name
+				)
+			);
+		}
 	}
 
 	/**

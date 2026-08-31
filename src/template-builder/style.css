@@ -45,3 +45,10 @@
 	font-style: normal;
 	line-height: 1.5;
 }
+
+.bpafb-template-conflict-modal__actions {
+	display: flex;
+	justify-content: flex-end;
+	gap: 8px;
+	margin-top: 20px;
+}

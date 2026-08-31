@@ -24,16 +24,18 @@ while (have_posts()) :
 	$bpafb_template_id   = Bpafb_Template_Frontend_Render::get_matched_template_id();
 	$bpafb_template_post = $bpafb_template_id ? get_post($bpafb_template_id) : null;
 	?>
-	<div class="bpafb-template-render">
-		<?php
-		if ($bpafb_template_post) {
-			// Same mechanism WordPress core uses to turn block markup into
-			// HTML (do_blocks() et al), matching how the template's content
-			// already renders inside the block editor.
-			echo apply_filters('the_content', $bpafb_template_post->post_content); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-		}
-		?>
-	</div>
+	<main id="primary" class="site-main bpafb-template-main">
+		<div class="bpafb-template-render entry-content wp-block-post-content is-layout-constrained">
+			<?php
+			if ($bpafb_template_post) {
+				// Same mechanism WordPress core uses to turn block markup into
+				// HTML (do_blocks() et al), matching how the template's content
+				// already renders inside the block editor.
+				echo apply_filters('the_content', $bpafb_template_post->post_content); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			}
+			?>
+		</div>
+	</main>
 	<?php
 endwhile;
 
