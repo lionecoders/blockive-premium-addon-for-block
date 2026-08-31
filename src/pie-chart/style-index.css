@@ -3,12 +3,18 @@
 }
 
 .wp-block-blockive-premium-addon-for-block-pie-chart.alignleft {
+    /* !important needed: WordPress core's own layout-support CSS
+       (e.g. `.is-layout-constrained > .alignleft { float: left; }`)
+       matches at equal specificity and can win the cascade tie. */
+    float: none !important;
     justify-content: flex-start;
 }
 .wp-block-blockive-premium-addon-for-block-pie-chart.aligncenter {
+    float: none !important;
     justify-content: center;
 }
 .wp-block-blockive-premium-addon-for-block-pie-chart.alignright {
+    float: none !important;
     justify-content: flex-end;
 }
 

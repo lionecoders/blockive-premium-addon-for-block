@@ -8,11 +8,37 @@
 	--bpafb-ib-desc-color: inherit;
 	--bpafb-ib-box-bg: transparent;
 	--bpafb-ib-alignment: center;
+	--bpafb-ib-box-border-style: none;
+	--bpafb-ib-box-border-width: 0px;
+	--bpafb-ib-box-border-radius: 0px;
+	--bpafb-ib-box-border-color: transparent;
+	--bpafb-ib-shadow: none;
+	--bpafb-ib-shadow-hover: none;
 
 	background-color: var(--bpafb-ib-box-bg);
 	text-align: var(--bpafb-ib-alignment);
 	display: flex;
+	border-style: var(--bpafb-ib-box-border-style);
+	border-width: var(--bpafb-ib-box-border-width);
+	border-radius: var(--bpafb-ib-box-border-radius);
+	border-color: var(--bpafb-ib-box-border-color);
+	box-shadow: var(--bpafb-ib-shadow);
 	transition: all 0.3s ease;
+
+	&:hover {
+		background-color: var(--bpafb-ib-box-bg-hover, var(--bpafb-ib-box-bg));
+		box-shadow: var(--bpafb-ib-shadow-hover);
+
+		.bpafb-icon-box-icon-wrapper {
+			background-color: var(--bpafb-ib-icon-bg-hover, var(--bpafb-ib-icon-bg));
+		}
+		.bpafb-icon-box-icon {
+			color: var(--bpafb-ib-icon-color-hover, var(--bpafb-ib-icon-color));
+		}
+		.bpafb-icon-box-title {
+			color: var(--bpafb-ib-title-color-hover, var(--bpafb-ib-title-color));
+		}
+	}
 
 	.bpafb-icon-box-link {
 		display: flex;
@@ -99,6 +125,13 @@
 
 		.bpafb-icon-box-title {
 			color: var(--bpafb-ib-title-color);
+			font-family: var(--bpafb-ib-title-font-family, inherit);
+			font-size: var(--bpafb-ib-title-font-size, inherit);
+			font-weight: var(--bpafb-ib-title-font-weight, inherit);
+			line-height: var(--bpafb-ib-title-line-height, inherit);
+			letter-spacing: var(--bpafb-ib-title-letter-spacing, normal);
+			text-transform: var(--bpafb-ib-title-text-transform, none);
+			text-decoration: var(--bpafb-ib-title-text-decoration, none);
 			margin-top: 0;
 			margin-bottom: 10px;
 			transition: color 0.3s ease;
@@ -106,8 +139,14 @@
 
 		.bpafb-icon-box-description {
 			color: var(--bpafb-ib-desc-color);
+			font-family: var(--bpafb-ib-desc-font-family, inherit);
+			font-size: var(--bpafb-ib-desc-font-size, inherit);
+			font-weight: var(--bpafb-ib-desc-font-weight, inherit);
+			line-height: var(--bpafb-ib-desc-line-height, 1.6);
+			letter-spacing: var(--bpafb-ib-desc-letter-spacing, normal);
+			text-transform: var(--bpafb-ib-desc-text-transform, none);
+			text-decoration: var(--bpafb-ib-desc-text-decoration, none);
 			margin: 0;
-			line-height: 1.6;
 		}
 	}
 }

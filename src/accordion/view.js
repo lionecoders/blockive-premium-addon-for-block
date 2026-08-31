@@ -24,8 +24,7 @@ const initBlockiveAccordion = () => {
             const content = item.querySelector('.bpafb-accordion-content');
 
             if (header && content) {
-                // Attach click event to header for expand/collapse toggle
-                header.addEventListener('click', () => {
+                const toggleItem = () => {
                     const isActive = item.classList.contains('active');
 
                     // 1. Close all other accordion items (Single Open Behavior)
@@ -33,6 +32,8 @@ const initBlockiveAccordion = () => {
                         otherItem.classList.remove('active');
                         const otherContent = otherItem.querySelector('.bpafb-accordion-content');
                         if (otherContent) otherContent.style.display = 'none';
+                        const otherHeader = otherItem.querySelector('.bpafb-accordion-header');
+                        if (otherHeader) otherHeader.setAttribute('aria-expanded', 'false');
 
                         // Toggle indicator icons for inactive items
                         const openIcon = otherItem.querySelector('.bpafb-icon-open');
@@ -45,12 +46,24 @@ const initBlockiveAccordion = () => {
                     if (!isActive) {
                         item.classList.add('active');
                         content.style.display = 'block';
+                        header.setAttribute('aria-expanded', 'true');
 
                         // Toggle indicator icons for active item
                         const openIcon = item.querySelector('.bpafb-icon-open');
                         const closeIcon = item.querySelector('.bpafb-icon-close');
                         if (openIcon) openIcon.style.display = 'none';
                         if (closeIcon) closeIcon.style.display = 'inline';
+                    }
+                };
+
+                // Attach click event to header for expand/collapse toggle
+                header.addEventListener('click', toggleItem);
+
+                // Attach keyboard support (Enter / Space) for the same toggle
+                header.addEventListener('keydown', (event) => {
+                    if (event.key === 'Enter' || event.key === ' ') {
+                        event.preventDefault();
+                        toggleItem();
                     }
                 });
             }

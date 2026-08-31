@@ -1,0 +1,116 @@
+.wp-block-blockive-premium-addon-for-block-faq {
+	position: relative;
+}
+
+.bpafb-faq-wrapper {
+	--bpafb-faq-title-color: #0f172a;
+	--bpafb-faq-title-active-color: #4f46e5;
+	--bpafb-faq-title-bg: #ffffff;
+	--bpafb-faq-content-color: #334155;
+	--bpafb-faq-content-bg: #f8fafc;
+	--bpafb-faq-border-style: solid;
+	--bpafb-faq-border-width: 1px;
+	--bpafb-faq-border-radius: 0px;
+	--bpafb-faq-border-color: #e2e8f0;
+	--bpafb-faq-shadow: none;
+	--bpafb-faq-shadow-hover: none;
+
+	width: 100%;
+}
+
+.bpafb-faq-item {
+	border-bottom: var( --bpafb-faq-border-width ) var( --bpafb-faq-border-style ) var( --bpafb-faq-border-color );
+	margin-bottom: 0;
+	border-radius: var( --bpafb-faq-border-radius );
+	box-shadow: var( --bpafb-faq-shadow );
+	overflow: hidden;
+	transition: all 0.3s ease;
+
+	&:first-child {
+		border-top: var( --bpafb-faq-border-width ) var( --bpafb-faq-border-style ) var( --bpafb-faq-border-color );
+	}
+
+	&:hover,
+	&.active {
+		box-shadow: var( --bpafb-faq-shadow-hover, var( --bpafb-faq-shadow ) );
+	}
+}
+
+.bpafb-faq-header {
+	display: flex;
+	padding: 15px 20px;
+	cursor: pointer;
+	background-color: var( --bpafb-faq-title-bg );
+	color: var( --bpafb-faq-title-color );
+	transition: background-color 0.3s, color 0.3s;
+	align-items: center;
+
+	&:hover {
+		color: var( --bpafb-faq-title-color-hover, var( --bpafb-faq-title-active-color ) );
+		background-color: var( --bpafb-faq-title-bg-hover, var( --bpafb-faq-title-bg ) );
+	}
+}
+
+.bpafb-faq-item.active .bpafb-faq-header {
+	color: var( --bpafb-faq-title-active-color );
+}
+
+.bpafb-faq-header.flex-align-left {
+	justify-content: flex-start;
+}
+.bpafb-faq-header.flex-align-right {
+	justify-content: space-between;
+}
+
+.bpafb-faq-title {
+	flex-grow: 1;
+	font-family: var( --bpafb-faq-title-font-family, inherit );
+	font-size: var( --bpafb-faq-title-font-size, inherit );
+	font-weight: var( --bpafb-faq-title-font-weight, 600 );
+	line-height: var( --bpafb-faq-title-line-height, inherit );
+	letter-spacing: var( --bpafb-faq-title-letter-spacing, normal );
+	text-transform: var( --bpafb-faq-title-text-transform, none );
+	text-decoration: var( --bpafb-faq-title-text-decoration, none );
+}
+.bpafb-faq-header.flex-align-left .bpafb-faq-title {
+	margin-left: 10px;
+}
+
+.bpafb-faq-icon {
+	font-weight: bold;
+	font-size: 1.1em;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 24px;
+	height: 24px;
+}
+
+.bpafb-faq-content {
+	padding: 15px 20px;
+	background-color: var( --bpafb-faq-content-bg );
+	color: var( --bpafb-faq-content-color );
+	border-top: var( --bpafb-faq-border-width ) var( --bpafb-faq-border-style ) var( --bpafb-faq-border-color );
+	display: none;
+}
+
+/* Base states for editor where view.js doesn't trigger */
+.bpafb-faq-item.active .bpafb-faq-content {
+	display: block;
+}
+
+/* Animations */
+.bpafb-animate-none { animation: none; }
+.bpafb-animate-fadeIn { animation-name: fadeIn; }
+.bpafb-animate-fadeInUp { animation-name: fadeInUp; }
+.bpafb-animate-fadeInDown { animation-name: fadeInDown; }
+.bpafb-animate-zoomIn { animation-name: zoomIn; }
+.bpafb-animate-slideInLeft { animation-name: slideInLeft; }
+.bpafb-animate-slideInRight { animation-name: slideInRight; }
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes fadeInUp { from { opacity: 0; transform: translate3d(0, 40px, 0); } to { opacity: 1; transform: translate3d(0, 0, 0); } }
+@keyframes fadeInDown { from { opacity: 0; transform: translate3d(0, -40px, 0); } to { opacity: 1; transform: translate3d(0, 0, 0); } }
+@keyframes zoomIn { from { opacity: 0; transform: scale3d(0.9, 0.9, 0.9); } to { opacity: 1; transform: scale3d(1, 1, 1); } }
+@keyframes slideInLeft { from { opacity: 0; transform: translate3d(-100px, 0, 0); } to { opacity: 1; transform: translate3d(0, 0, 0); } }
+@keyframes slideInRight { from { opacity: 0; transform: translate3d(100px, 0, 0); } to { opacity: 1; transform: translate3d(0, 0, 0); } }

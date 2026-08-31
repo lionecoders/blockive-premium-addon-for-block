@@ -32,8 +32,14 @@ document.addEventListener('DOMContentLoaded', () => {
 					const targetPercentage = parseFloat(wrapper.getAttribute('data-percentage')) || 0;
 					const duration = parseInt(wrapper.getAttribute('data-duration'), 10) || 1500;
 					
-					// 1. Animate Width of progress fill element using hardware-accelerated cubic-bezier transition
+					// 1. Animate Width of progress fill element using hardware-accelerated cubic-bezier transition.
+					// The fill starts at its real, saved width (so no-JS/failed-JS visitors always see the
+					// correct value); reset to 0% here and force a reflow so JS-enabled visitors still get
+					// the animate-from-0 effect.
 					if (fillArea) {
+						fillArea.style.transition = 'none';
+						fillArea.style.width = '0%';
+						fillArea.offsetHeight; // eslint-disable-line no-unused-expressions -- force reflow
 						fillArea.style.transition = `width ${duration}ms cubic-bezier(0.165, 0.84, 0.44, 1)`;
 						fillArea.style.width = `${targetPercentage}%`;
 					}

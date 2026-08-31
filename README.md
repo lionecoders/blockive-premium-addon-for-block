@@ -20,17 +20,32 @@ A powerful, high-performance, and elegant collection of premium blocks for the W
 | 📋 | **Blockive Accordion** | Beautiful, collapsible content sections ideal for FAQs or structured info. | Icon alignments, active state colors, expand/collapse speed. |
 | 🕒 | **Blockive Business Hours** | Display your business opening and closing times with custom styling and current-day highlighting. | Current-day highlight, row typography, border options. |
 | 🔘 | **Blockive Button** | A highly customizable button with icon and badge support. | Hover animations, custom badges, icon position, styling. |
+| 🗂️ | **Blockive Category List** | A styled taxonomy browser for organizing and surfacing site content. | Hierarchy display, grid/list layouts, per-item styling, post-count badges. |
+| ✉️ | **Blockive Contact Form 7** | Drop-in Contact Form 7 integration styled to match the rest of your layout. | Form selection by ID, live editor placeholder, custom container styling. |
 | ⏱️ | **Blockive Countdown Timer** | Urgency-inducing timers for sales, promotions, and events. | Labels, border styling, color mapping. |
 | 🔠 | **Blockive Drop Caps** | Editorial-style typographic enhancements for standard paragraphs. | First-letter custom padding, custom margins, colored initials. |
 | ❓ | **Blockive FAQ** | Schema-ready accordion style FAQ lists. | Structured data auto-generation, schema support toggle. |
 | 🔢 | **Blockive Fun Fact** | Show off your achievements with an animated statistics/counter block. | Prefix/suffix options, animation speed, layouts, typography. |
 | ✍️ | **Blockive Heading** | Eye-catching titles with gradients, stroke highlights, and text shadows. | Stroke width/color, blend modes, text-shadow offset/blur. |
 | 📦 | **Blockive Icon Box** | A stylish box displaying an icon, title, description, and custom link. | Icon styling, custom animations, border/background options. |
+| 🖼️ | **Blockive Image Accordion** | Interactive image panels that expand to reveal a title and description on hover. | Custom overlay opacity, animation speed, per-item height, text colors. |
 | 🖼️ | **Blockive Image Box** | An image box that displays an image, title, description, and link. | Image layout modes, hover effects, styling controls. |
+| ↔️ | **Blockive Image Comparison** | A draggable before/after slider for showcasing edits, redesigns, or comparisons. | Keyboard-accessible handle, horizontal/vertical orientation, custom labels. |
+| 🎬 | **Blockive Lottie** | Play lightweight, scalable Lottie animations anywhere on your site. | Loop, autoplay, playback speed, scroll or hover triggers. |
+| 📧 | **Blockive MailChimp** | Capture newsletter signups with a styled Mailchimp subscription form. | List selection, secure form handling, custom field styling. |
 | 📊 | **Blockive Pie Chart** | High-performance interactive data visualizations. | Custom legend placement, donut/pie toggle, Chart.js backend. |
+| 📰 | **Blockive Post Grid** | A dynamic, query-driven grid for showcasing your latest posts anywhere on your site. | Custom queries, pagination, responsive grid columns, post-type filtering. |
+| 💰 | **Blockive Pricing Table** | A fully customizable pricing table block with features list and button. | Ribbon/badge, features styling, toggle support. |
 | 📈 | **Blockive Progress Bar** | Dynamic animated bar and line indicators to show project/skill levels. | Animated steps, custom height, percentage toggle. |
 | 🔗 | **Blockive Social Icons** | Premium links to social profiles with custom shapes and hover animations. | Shape variants (round/circle/square), custom SVG color mapping, animations. |
 | 📑 | **Blockive Tabs** | Sleek content switchers to organize large amounts of tabular content. | Tab pills alignment, keyboard focus/arrow-key transitions. |
+| 👥 | **Blockive Team** | Introduce your team with photos, roles, bios, and social links in a clean grid. | Per-member social links, responsive columns, avatar and bio styling. |
+| 💬 | **Blockive Testimonial** | A polished testimonials slider with star ratings and customer avatars. | Pausable autoplay, star ratings, avatar styling, accessible navigation. |
+| 🎥 | **Blockive Video** | Embed and style video content with a custom cover image and lightbox playback. | Custom cover image, play button styling, lightbox option. |
+
+### 🏗️ Template Builder Blocks
+
+Includes over **50+ dynamic blocks** specifically designed for the **Blockive Template Builder**. Easily create custom templates for single posts, archives, events, and full WooCommerce product pages with elements like Dynamic Fields, Post Content, Add to Cart, Product Variations, and more.
 
 ---
 
@@ -72,30 +87,46 @@ The plugin uses the official `@wordpress/scripts` toolchain for bundling, lintin
 ## 📂 Project Directory Structure
 
 ```text
-lc-block-widgets/
+blockive-premium-addon-for-block/
 ├── .distignore
 ├── .editorconfig
 ├── .gitignore
 ├── .wp-org/
 ├── assets/                       # Shared global assets
-│   ├── css/                      # Webfonts and style helpers
+│   ├── css/                      # Editor/frontend shared stylesheets
+│   ├── js/                       # Editor container-settings + frontend animation scripts
 │   └── webfonts/                 # Font files
 ├── build/                        # Compiled production-ready assets (auto-generated)
 │   ├── blocks-manifest.php
 │   ├── accordion/
 │   ├── business-hours/
 │   ├── button/
+│   ├── category-list/
+│   ├── contact-form-7/
 │   ├── countdown-timer/
 │   ├── drop-caps/
 │   ├── faq/
 │   ├── funfact/
 │   ├── heading/
 │   ├── icon-box/
+│   ├── image-accordion/
 │   ├── image-box/
+│   ├── image-comparison/
+│   ├── lottie/
+│   ├── mailchimp/
 │   ├── pie-chart/
+│   ├── post-grid/
+│   ├── pricing-table/
 │   ├── progress-bar/
 │   ├── social-icons/
-│   └── tabs/
+│   ├── tabs/
+│   ├── team/
+│   ├── template-blocks/          # 45 dynamic sub-blocks for the Template Builder
+│   ├── template-builder/         # Template Builder editor bundle
+│   ├── testimonial/
+│   └── video/
+├── includes/                     # PHP classes: Template Builder CPT, dynamic-field
+│                                  # providers, WooCommerce/events adapters
 ├── node_modules/                # Development dependency packages (not committed)
 ├── package-lock.json
 ├── package.json                 # Dependencies, scripts, and metadata
@@ -106,18 +137,32 @@ lc-block-widgets/
     ├── accordion/
     ├── business-hours/
     ├── button/
-    ├── components/
+    ├── category-list/
+    ├── components/               # Shared inspector controls (typography, border,
+    │                              # spacing, background, shadow, animation, advanced tab)
+    ├── contact-form-7/
     ├── countdown-timer/
     ├── drop-caps/
     ├── faq/
     ├── funfact/
     ├── heading/
     ├── icon-box/
+    ├── image-accordion/
     ├── image-box/
+    ├── image-comparison/
+    ├── lottie/
+    ├── mailchimp/
     ├── pie-chart/
+    ├── post-grid/
+    ├── pricing-table/
     ├── progress-bar/
     ├── social-icons/
-    └── tabs/
+    ├── tabs/
+    ├── team/
+    ├── template-blocks/          # 45 dynamic sub-blocks (post, events, woocommerce)
+    ├── template-builder/         # Template Builder editor UI
+    ├── testimonial/
+    └── video/
 ```
 
 ---

@@ -14,6 +14,17 @@
 	transition: all 0.3s ease;
 	width: 100%;
 
+	&:hover {
+		background-color: var(--bpafb-imgbox-box-bg-hover, var(--bpafb-imgbox-box-bg));
+
+		.bpafb-image-box-title {
+			color: var(--bpafb-imgbox-title-color-hover, var(--bpafb-imgbox-title-color));
+		}
+		.bpafb-image-box-link {
+			color: var(--bpafb-imgbox-link-color-hover, var(--bpafb-imgbox-link-color));
+		}
+	}
+
 	.bpafb-image-box-link-wrapper {
 		display: flex;
 		text-decoration: none;

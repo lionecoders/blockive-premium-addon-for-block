@@ -10,6 +10,7 @@ export default function save({ attributes }) {
 		contentBgColor,
 		contentTextColor,
 		tabBorderRadius,
+		bpafbUid,
 	} = attributes;
 
 	const customStyles = {
@@ -32,8 +33,18 @@ export default function save({ attributes }) {
 			<div className="bpafb-tabs-nav-track" role="tablist">
 				{items.map((item, index) => {
 					const isFirst = index === 0;
+					const tabId = `bpafb-tab-${bpafbUid}-${item.id || index}`;
+					const panelId = `bpafb-tabpanel-${bpafbUid}-${item.id || index}`;
 					return (
-						<div key={item.id || index} className={`bpafb-tab-pill ${isFirst ? 'active' : ''}`} role="tab" tabIndex={0}>
+						<div
+							key={item.id || index}
+							id={tabId}
+							className={`bpafb-tab-pill ${isFirst ? 'active' : ''}`}
+							role="tab"
+							tabIndex={0}
+							aria-selected={isFirst}
+							aria-controls={panelId}
+						>
 							<div style={{ flex: 1, textAlign: 'center' }}>
 								<RichText.Content
 									tagName="span"
@@ -49,8 +60,16 @@ export default function save({ attributes }) {
 			<div className="bpafb-tabs-content-area">
 				{items.map((item, index) => {
 					const isFirst = index === 0;
+					const tabId = `bpafb-tab-${bpafbUid}-${item.id || index}`;
+					const panelId = `bpafb-tabpanel-${bpafbUid}-${item.id || index}`;
 					return (
-						<div key={item.id || index} className={`bpafb-tab-pane ${isFirst ? 'active' : ''}`}>
+						<div
+							key={item.id || index}
+							id={panelId}
+							className={`bpafb-tab-pane ${isFirst ? 'active' : ''}`}
+							role="tabpanel"
+							aria-labelledby={tabId}
+						>
 							<RichText.Content
 								tagName="div"
 								className="bpafb-tab-content-text"

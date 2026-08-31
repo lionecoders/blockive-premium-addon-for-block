@@ -18,20 +18,34 @@ Built with performance in mind, our blocks are lightweight and load only the nec
 
 ### Included Blocks:
 
-1.  **Blockive Accordion**: Create beautiful, collapsible content sections with advanced styling options for titles, icons, and animations.
-2.  **Blockive Business Hours**: Display your business opening and closing times with custom styling and current-day highlighting.
+1.  **Blockive Accordion**: Accordion block with advanced layout and style settings.
+2.  **Blockive Business Hours**: Business Hours block to display opening and closing times.
 3.  **Blockive Button**: A highly customizable button with icon and badge support.
-4.  **Blockive Countdown Timer**: Drive urgency and increase conversions with fully customizable countdown timers for sales and events.
-5.  **Blockive Drop Caps**: Elevate your typography with elegant drop caps that make your articles look professional and polished.
-6.  **Blockive FAQ**: Schema-ready FAQ block that helps with SEO while providing a clean way to answer common customer questions.
-7.  **Blockive Fun Fact**: Show off your achievements with an animated statistics/counter block.
-8.  **Blockive Heading**: Design eye-catching headings with custom gradients, unique fonts, and modern typography settings.
-9.  **Blockive Icon Box**: A stylish box displaying an icon, title, description, and custom link.
-10. **Blockive Image Box**: An image box that displays an image, title, description, and link.
-11. **Blockive Pie Chart**: Visualize your data beautifully with dynamic pie and donut charts powered by Chart.js.
-12. **Blockive Progress Bar**: Show off your skills or project progress with animated and highly customizable progress bars.
-13. **Blockive Social Icons**: Add stylish social media links to your pages with custom colors, shapes, and hover effects.
-14. **Blockive Tabs**: Organize large amounts of content into sleek, responsive tab systems to improve user experience.
+4.  **Blockive Category List**: A styled taxonomy browser with hierarchy display, custom layouts, and per-item styling.
+5.  **Blockive Contact Form 7**: Drop-in Contact Form 7 integration styled to match the rest of your layout.
+6.  **Blockive Countdown Timer**: A customizable countdown timer block with rich styling settings.
+7.  **Blockive Drop Caps**: Advanced drop caps block with customizable view, shape, and styling.
+8.  **Blockive FAQ**: FAQ block with rich schema.org markup for SEO.
+9.  **Blockive Fun Fact**: Animated statistics/counter block.
+10. **Blockive Heading**: Advanced heading block with rich customized settings.
+11. **Blockive Icon Box**: An icon box that displays an icon, title, description, and link.
+12. **Blockive Image Accordion**: An interactive, hover-expanding image gallery with custom overlay content and animations.
+13. **Blockive Image Box**: An image box that displays an image, title, description, and link.
+14. **Blockive Image Comparison**: A keyboard-accessible before/after image slider for showcasing visual comparisons.
+15. **Blockive Lottie**: Embed lightweight, vector-based Lottie animations with full control over loop, speed, and playback triggers.
+16. **Blockive MailChimp**: A secure Mailchimp newsletter signup form block with custom styling controls.
+17. **Blockive Pie Chart**: A dynamic pie and donut chart block using Chart.js.
+18. **Blockive Post Grid**: A dynamic, query-driven post grid with custom queries, pagination, and responsive layouts.
+19. **Blockive Pricing Table**: A fully customizable pricing table block with features list and button.
+20. **Blockive Progress Bar**: A premium animated progress bar widget.
+21. **Blockive Social Icons**: A premium social icons block with customizable controls.
+22. **Blockive Tabs**: A modern Tab block with premium segmented control styling.
+23. **Blockive Team**: A team showcase block with member photos, roles, bios, and social links.
+24. **Blockive Testimonial**: An accessible testimonials slider with star ratings, avatars, and pausable autoplay.
+25. **Blockive Video**: A styled video embed block with a custom cover image, play button design, and lightbox playback.
+
+### Template Builder Blocks
+Includes over 50+ dynamic blocks specifically designed for the Blockive Template Builder. Easily create custom templates for single posts, archives, events, and full WooCommerce product pages.
 
 == Installation ==
 
@@ -61,4 +75,3 @@ Yes, blockive-premium-addon-for-block is designed to work seamlessly with any st
 
 = 1.0.0 =
 * Initial release.
-

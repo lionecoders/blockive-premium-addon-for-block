@@ -10,11 +10,13 @@
 .bpafb-accordion-item {
 	position: relative;
 	z-index: 1;
-	border: var(--bpafb-accordion-bw, 1px) solid var(--bpafb-accordion-borderColor, #e2e8f0);
-	border-radius: 12px;
+	border-style: var(--bpafb-accordion-border-style, solid);
+	border-width: var(--bpafb-accordion-border-width, 1px);
+	border-color: var(--bpafb-accordion-border-color, #e2e8f0);
+	border-radius: var(--bpafb-accordion-border-radius, 12px);
 	overflow: hidden;
 	background: var(--bpafb-accordion-content-bg, #ffffff);
-	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
+	box-shadow: var(--bpafb-accordion-shadow, 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02));
 	transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 	will-change: transform, box-shadow;
 }
@@ -22,7 +24,7 @@
 .bpafb-accordion-item:hover {
 	z-index: 2;
 	border-color: #cbd5e1;
-	box-shadow: 0 12px 20px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+	box-shadow: var(--bpafb-accordion-shadow-hover, 0 12px 20px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01));
 	transform: translateY(-2px);
 }
 
@@ -40,11 +42,6 @@
 	cursor: pointer;
 	background-color: var(--bpafb-accordion-title-bg, #ffffff);
 	color: var(--bpafb-accordion-title-color, #0f172a);
-	font-family: inherit;
-	font-weight: 600;
-	font-size: 1.15em;
-	letter-spacing: -0.015em;
-	line-height: inherit;
 	transition: all 0.4s ease;
 	position: relative;
 	user-select: none;
@@ -113,14 +110,20 @@
 .bpafb-accordion-title {
 	flex: 1;
 	margin: 0;
-	font-family: inherit;
+	font-family: var(--bpafb-accordion-title-font-family, inherit);
+	font-weight: var(--bpafb-accordion-title-font-weight, 600);
+	font-size: var(--bpafb-accordion-title-font-size, 1.15em);
+	letter-spacing: var(--bpafb-accordion-title-letter-spacing, -0.015em);
+	text-transform: var(--bpafb-accordion-title-text-transform, none);
+	text-decoration: var(--bpafb-accordion-title-text-decoration, none);
+	line-height: var(--bpafb-accordion-title-line-height, inherit);
 }
 
 /* Content Area */
 .bpafb-accordion-content {
 	padding: 0 24px 24px;
 	background-color: var(--bpafb-accordion-content-bg, #ffffff);
-	color: var(--bpafb-accordion-content-color, #475569);
+	color: var(--bpafb-accordion-content-color, #334155);
 	font-family: inherit;
 	line-height: inherit;
 	font-size: 1em;

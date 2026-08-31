@@ -1,10 +1,20 @@
 .bpafb-funfact-wrapper {
+	display: grid;
+	grid-template-columns: repeat(var(--bpafb-funfact-columns, 3), 1fr);
+	gap: var(--bpafb-funfact-gap, 20px);
 	width: 100%;
 	margin: 20px 0;
+}
+
+.bpafb-funfact-item {
 	padding: 30px;
 	background: #f9f9f9;
 	border-radius: 8px;
 	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 
 .bpafb-funfact-content {
@@ -18,7 +28,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	gap: 5px;
+	gap: 3px;
 	margin-bottom: 15px;
 }
 
@@ -33,8 +43,6 @@
 	font-weight: 700;
 	color: var(--bpafb-funfact-number-color, #4f46e5);
 	display: inline-block;
-	min-width: 100px;
-	text-align: right;
 }
 
 .bpafb-funfact-suffix {
@@ -44,7 +52,7 @@
 }
 
 .bpafb-funfact-title {
-	font-size: 18px;
+	font-size: 16px;
 	font-weight: 600;
 	color: var(--bpafb-funfact-text-color, #333333);
 	margin: 0;
@@ -52,7 +60,17 @@
 	letter-spacing: 1px;
 }
 
+@media (max-width: 768px) {
+	.bpafb-funfact-wrapper {
+		grid-template-columns: repeat(min(2, var(--bpafb-funfact-columns, 3)), 1fr) !important;
+	}
+}
+
 @media (max-width: 480px) {
+	.bpafb-funfact-wrapper {
+		grid-template-columns: 1fr !important;
+	}
+	
 	.bpafb-funfact-counter {
 		font-size: 36px;
 	}

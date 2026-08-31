@@ -1,3 +1,4 @@
+import { __ } from '@wordpress/i18n';
 import { useBlockProps, RichText } from '@wordpress/block-editor';
 
 export default function save({ attributes }) {
@@ -55,17 +56,24 @@ export default function save({ attributes }) {
 						/>
 						{displayPercentage && (
 							<span className="bpafb-pb-percentage">
-								<span className="bpafb-pb-number">0</span>%
+								<span className="bpafb-pb-number">{percentage}</span>%
 							</span>
 						)}
 					</div>
 				)}
 
-				<div className="bpafb-pb-track">
-					<div 
+				<div
+					className="bpafb-pb-track"
+					role="progressbar"
+					aria-valuenow={percentage}
+					aria-valuemin={0}
+					aria-valuemax={100}
+					aria-label={title || __('Progress', 'blockive-premium-addon-for-block')}
+				>
+					<div
 						className={`bpafb-pb-fill ${isStriped ? 'bpafb-pb-striped' : ''} ${isStriped && isAnimated ? 'bpafb-pb-striped-animated' : ''}`}
-						style={{ 
-							width: '0%', // Initially 0% for frontend animation!
+						style={{
+							width: `${percentage}%`, // Real value by default; view.js animates from 0 for JS-enabled visitors.
 							...barBgStyle
 						}}
 					>

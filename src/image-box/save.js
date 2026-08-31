@@ -1,4 +1,5 @@
 import { useBlockProps, RichText } from '@wordpress/block-editor';
+import { getSafeImageBoxUrl } from './utils';
 
 export default function save({ attributes }) {
 	const {
@@ -15,9 +16,12 @@ export default function save({ attributes }) {
 		verticalAlign,
 		imageRadius,
 		titleColor,
+		titleColorHover,
 		descColor,
 		linkColor,
+		linkColorHover,
 		boxBgColor,
+		boxBgColorHover,
 		imageSpacing,
 		imageSize,
 	} = attributes;
@@ -25,9 +29,12 @@ export default function save({ attributes }) {
 	const customStyles = {
 		'--bpafb-imgbox-img-radius': `${imageRadius}px`,
 		'--bpafb-imgbox-title-color': titleColor,
+		'--bpafb-imgbox-title-color-hover': titleColorHover,
 		'--bpafb-imgbox-desc-color': descColor,
 		'--bpafb-imgbox-link-color': linkColor,
+		'--bpafb-imgbox-link-color-hover': linkColorHover,
 		'--bpafb-imgbox-box-bg': boxBgColor,
+		'--bpafb-imgbox-box-bg-hover': boxBgColorHover,
 		'--bpafb-imgbox-spacing': `${imageSpacing}px`,
 		'--bpafb-imgbox-align': contentAlign,
 		'--bpafb-imgbox-valign': verticalAlign === 'top' ? 'flex-start' : (verticalAlign === 'bottom' ? 'flex-end' : 'center'),
@@ -67,19 +74,23 @@ export default function save({ attributes }) {
 				)}
 
 				{linkUrl && linkText && (
-					<div className="bpafb-image-box-link">
-						{linkText}
-					</div>
+					<RichText.Content
+						tagName="div"
+						className="bpafb-image-box-link"
+						value={linkText}
+					/>
 				)}
 			</div>
 		</>
 	);
 
+	const safeLinkUrl = getSafeImageBoxUrl( linkUrl );
+
 	return (
 		<div {...blockProps}>
-			{linkUrl ? (
+			{safeLinkUrl ? (
 				<a
-					href={linkUrl}
+					href={safeLinkUrl}
 					className="bpafb-image-box-link-wrapper"
 					target={linkTarget ? '_blank' : undefined}
 					rel={linkTarget ? 'noopener noreferrer' : undefined}

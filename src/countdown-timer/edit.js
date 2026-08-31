@@ -16,6 +16,9 @@ import {
 } from '@wordpress/components';
 import { useEffect, useState } from '@wordpress/element';
 
+import InspectorTabs from '../components/inspector-tabs';
+import AdvancedTab from '../components/advanced-tab';
+
 export default function Edit({ attributes, setAttributes }) {
 	const {
 		targetDate,
@@ -100,139 +103,153 @@ export default function Edit({ attributes, setAttributes }) {
 				/>
 			</BlockControls>
 
-			<InspectorControls>
-				<PanelBody title={__('Timer Settings', 'blockive-premium-addon-for-block')} initialOpen={true}>
-					<TextControl
-						label={__('Target Date & Time', 'blockive-premium-addon-for-block')}
-						type="datetime-local"
-						value={targetDate}
-						onChange={(val) => setAttributes({ targetDate: val })}
-						help={__('Select the date and time to count down to.', 'blockive-premium-addon-for-block')}
-					/>
+			<InspectorTabs
+				general={(
+					<>
+			<PanelBody title={__('Timer Settings', 'blockive-premium-addon-for-block')} initialOpen={true}>
+				<TextControl
+					label={__('Target Date & Time', 'blockive-premium-addon-for-block')}
+					type="datetime-local"
+					value={targetDate}
+					onChange={(val) => setAttributes({ targetDate: val })}
+					help={__('Select the date and time to count down to.', 'blockive-premium-addon-for-block')}
+				/>
 
-					<SelectControl
-						label={__('View Style', 'blockive-premium-addon-for-block')}
-						value={styleType}
-						options={[
-							{ label: 'Block (Boxes)', value: 'block' },
-							{ label: 'Inline', value: 'inline' },
-						]}
-						onChange={(val) => setAttributes({ styleType: val })}
-					/>
+				<SelectControl
+					label={__('View Style', 'blockive-premium-addon-for-block')}
+					value={styleType}
+					options={[
+						{ label: 'Block (Boxes)', value: 'block' },
+						{ label: 'Inline', value: 'inline' },
+					]}
+					onChange={(val) => setAttributes({ styleType: val })}
+				/>
 
-					<ToggleControl
-						label={__('Show Days', 'blockive-premium-addon-for-block')}
-						checked={showDays}
-						onChange={(val) => setAttributes({ showDays: val })}
-					/>
-					{showDays && (
-						<TextControl label={__('Days Label', 'blockive-premium-addon-for-block')} value={labelDays} onChange={(val) => setAttributes({ labelDays: val })} />
-					)}
+				<ToggleControl
+					label={__('Show Days', 'blockive-premium-addon-for-block')}
+					checked={showDays}
+					onChange={(val) => setAttributes({ showDays: val })}
+				/>
+				{showDays && (
+					<TextControl label={__('Days Label', 'blockive-premium-addon-for-block')} value={labelDays} onChange={(val) => setAttributes({ labelDays: val })} />
+				)}
 
-					<ToggleControl
-						label={__('Show Hours', 'blockive-premium-addon-for-block')}
-						checked={showHours}
-						onChange={(val) => setAttributes({ showHours: val })}
-					/>
-					{showHours && (
-						<TextControl label={__('Hours Label', 'blockive-premium-addon-for-block')} value={labelHours} onChange={(val) => setAttributes({ labelHours: val })} />
-					)}
+				<ToggleControl
+					label={__('Show Hours', 'blockive-premium-addon-for-block')}
+					checked={showHours}
+					onChange={(val) => setAttributes({ showHours: val })}
+				/>
+				{showHours && (
+					<TextControl label={__('Hours Label', 'blockive-premium-addon-for-block')} value={labelHours} onChange={(val) => setAttributes({ labelHours: val })} />
+				)}
 
-					<ToggleControl
-						label={__('Show Minutes', 'blockive-premium-addon-for-block')}
-						checked={showMinutes}
-						onChange={(val) => setAttributes({ showMinutes: val })}
-					/>
-					{showMinutes && (
-						<TextControl label={__('Minutes Label', 'blockive-premium-addon-for-block')} value={labelMinutes} onChange={(val) => setAttributes({ labelMinutes: val })} />
-					)}
+				<ToggleControl
+					label={__('Show Minutes', 'blockive-premium-addon-for-block')}
+					checked={showMinutes}
+					onChange={(val) => setAttributes({ showMinutes: val })}
+				/>
+				{showMinutes && (
+					<TextControl label={__('Minutes Label', 'blockive-premium-addon-for-block')} value={labelMinutes} onChange={(val) => setAttributes({ labelMinutes: val })} />
+				)}
 
-					<ToggleControl
-						label={__('Show Seconds', 'blockive-premium-addon-for-block')}
-						checked={showSeconds}
-						onChange={(val) => setAttributes({ showSeconds: val })}
-					/>
-					{showSeconds && (
-						<TextControl label={__('Seconds Label', 'blockive-premium-addon-for-block')} value={labelSeconds} onChange={(val) => setAttributes({ labelSeconds: val })} />
-					)}
-				</PanelBody>
+				<ToggleControl
+					label={__('Show Seconds', 'blockive-premium-addon-for-block')}
+					checked={showSeconds}
+					onChange={(val) => setAttributes({ showSeconds: val })}
+				/>
+				{showSeconds && (
+					<TextControl label={__('Seconds Label', 'blockive-premium-addon-for-block')} value={labelSeconds} onChange={(val) => setAttributes({ labelSeconds: val })} />
+				)}
+			</PanelBody>
+					</>
+				)}
+				style={(
+					<>
+			<PanelBody title={__('Styling', 'blockive-premium-addon-for-block')} initialOpen={false}>
+				<RangeControl
+					label={__('Space Between (Gap)', 'blockive-premium-addon-for-block')}
+					value={gap}
+					onChange={(val) => setAttributes({ gap: val })}
+					min={0}
+					max={100}
+				/>
 
-				<PanelBody title={__('Styling', 'blockive-premium-addon-for-block')} initialOpen={false}>
-					<RangeControl
-						label={__('Space Between (Gap)', 'blockive-premium-addon-for-block')}
-						value={gap}
-						onChange={(val) => setAttributes({ gap: val })}
-						min={0}
-						max={100}
-					/>
+				{styleType === 'block' && (
+					<>
+						<RangeControl
+							label={__('Border Width (px)', 'blockive-premium-addon-for-block')}
+							value={boxBorderWidth}
+							onChange={(val) => setAttributes({ boxBorderWidth: val })}
+							min={0}
+							max={20}
+						/>
+						<RangeControl
+							label={__('Border Radius (px)', 'blockive-premium-addon-for-block')}
+							value={boxBorderRadius}
+							onChange={(val) => setAttributes({ boxBorderRadius: val })}
+							min={0}
+							max={100}
+						/>
+						<BaseControl label={__('Box Background Color', 'blockive-premium-addon-for-block')}>
+							<ColorPalette value={boxBgColor} onChange={(val) => setAttributes({ boxBgColor: val })} />
+						</BaseControl>
+						<BaseControl label={__('Box Border Color', 'blockive-premium-addon-for-block')}>
+							<ColorPalette value={boxBorderColor} onChange={(val) => setAttributes({ boxBorderColor: val })} />
+						</BaseControl>
+					</>
+				)}
+				
+				<BaseControl label={__('Number Color', 'blockive-premium-addon-for-block')}>
+					<ColorPalette value={numberColor} onChange={(val) => setAttributes({ numberColor: val })} />
+				</BaseControl>
+				<BaseControl label={__('Label Color', 'blockive-premium-addon-for-block')}>
+					<ColorPalette value={labelColor} onChange={(val) => setAttributes({ labelColor: val })} />
+				</BaseControl>
+			</PanelBody>
 
-					{styleType === 'block' && (
-						<>
-							<RangeControl
-								label={__('Border Width (px)', 'blockive-premium-addon-for-block')}
-								value={boxBorderWidth}
-								onChange={(val) => setAttributes({ boxBorderWidth: val })}
-								min={0}
-								max={20}
-							/>
-							<RangeControl
-								label={__('Border Radius (px)', 'blockive-premium-addon-for-block')}
-								value={boxBorderRadius}
-								onChange={(val) => setAttributes({ boxBorderRadius: val })}
-								min={0}
-								max={100}
-							/>
-							<BaseControl label={__('Box Background Color', 'blockive-premium-addon-for-block')}>
-								<ColorPalette value={boxBgColor} onChange={(val) => setAttributes({ boxBgColor: val })} />
-							</BaseControl>
-							<BaseControl label={__('Box Border Color', 'blockive-premium-addon-for-block')}>
-								<ColorPalette value={boxBorderColor} onChange={(val) => setAttributes({ boxBorderColor: val })} />
-							</BaseControl>
-						</>
-					)}
-					
-					<BaseControl label={__('Number Color', 'blockive-premium-addon-for-block')}>
-						<ColorPalette value={numberColor} onChange={(val) => setAttributes({ numberColor: val })} />
-					</BaseControl>
-					<BaseControl label={__('Label Color', 'blockive-premium-addon-for-block')}>
-						<ColorPalette value={labelColor} onChange={(val) => setAttributes({ labelColor: val })} />
-					</BaseControl>
-				</PanelBody>
-
-				<PanelBody title={__('Motion Effects', 'blockive-premium-addon-for-block')} initialOpen={false}>
-					<SelectControl
-						label={__('Entrance Animation', 'blockive-premium-addon-for-block')}
-						value={animationType}
-						options={[
-							{ label: 'None', value: 'none' },
-							{ label: 'Fade In', value: 'fadeIn' },
-							{ label: 'Fade In Up', value: 'fadeInUp' },
-							{ label: 'Fade In Down', value: 'fadeInDown' },
-							{ label: 'Zoom In', value: 'zoomIn' },
-							{ label: 'Slide In Left', value: 'slideInLeft' },
-							{ label: 'Slide In Right', value: 'slideInRight' },
-						]}
-						onChange={(val) => setAttributes({ animationType: val })}
-					/>
-					{animationType !== 'none' && (
-						<>
-							<TextControl
-								label={__('Animation Duration', 'blockive-premium-addon-for-block')}
-								value={animationDuration}
-								onChange={(val) => setAttributes({ animationDuration: val })}
-							/>
-							<TextControl
-								label={__('Animation Delay', 'blockive-premium-addon-for-block')}
-								value={animationDelay}
-								onChange={(val) => setAttributes({ animationDelay: val })}
-							/>
-						</>
-					)}
-				</PanelBody>
-			</InspectorControls>
+			<PanelBody title={__('Motion Effects', 'blockive-premium-addon-for-block')} initialOpen={false}>
+				<SelectControl
+					label={__('Entrance Animation', 'blockive-premium-addon-for-block')}
+					value={animationType}
+					options={[
+						{ label: 'None', value: 'none' },
+						{ label: 'Fade In', value: 'fadeIn' },
+						{ label: 'Fade In Up', value: 'fadeInUp' },
+						{ label: 'Fade In Down', value: 'fadeInDown' },
+						{ label: 'Zoom In', value: 'zoomIn' },
+						{ label: 'Slide In Left', value: 'slideInLeft' },
+						{ label: 'Slide In Right', value: 'slideInRight' },
+					]}
+					onChange={(val) => setAttributes({ animationType: val })}
+				/>
+				{animationType !== 'none' && (
+					<>
+						<TextControl
+							label={__('Animation Duration', 'blockive-premium-addon-for-block')}
+							value={animationDuration}
+							onChange={(val) => setAttributes({ animationDuration: val })}
+						/>
+						<TextControl
+							label={__('Animation Delay', 'blockive-premium-addon-for-block')}
+							value={animationDelay}
+							onChange={(val) => setAttributes({ animationDelay: val })}
+						/>
+					</>
+				)}
+			</PanelBody>
+					</>
+				)}
+				advanced={<AdvancedTab attributes={attributes} setAttributes={setAttributes} />}
+			/>
 
 			<div {...blockProps}>
-				<div className="bpafb-countdown-wrapper" data-target-date={targetDate}>
+				<div
+					className="bpafb-countdown-wrapper"
+					data-target-date={targetDate}
+					role="timer"
+					aria-live="off"
+					aria-label={__('Countdown timer', 'blockive-premium-addon-for-block')}
+				>
 					{!targetDate && (
 						<div style={{ padding: '20px', border: '1px dashed #ccc', textAlign: 'center', width: '100%' }}>
 							{__('Please set a target date in the block settings.', 'blockive-premium-addon-for-block')}
