@@ -38,12 +38,6 @@ const TemplateSettingsPanel = () => {
 					onChange={ ( value ) => setMeta( { ...meta, _bpafb_template_type: value } ) }
 				/>
 			</PanelRow>
-			<p>
-				{ __(
-					'Additional template-level settings (assignment, priority) will live here.',
-					'blockive-premium-addon-for-block'
-				) }
-			</p>
 		</PluginDocumentSettingPanel>
 	);
 };

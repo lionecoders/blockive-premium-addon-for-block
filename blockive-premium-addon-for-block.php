@@ -34,6 +34,8 @@ require_once BPAFB_PATH . 'includes/class-bpafb-dynamic-field-output.php';
 require_once BPAFB_PATH . 'includes/class-bpafb-product-meta-items.php';
 require_once BPAFB_PATH . 'includes/class-bpafb-product-card-list.php';
 require_once BPAFB_PATH . 'includes/class-bpafb-product-template-render.php';
+require_once BPAFB_PATH . 'includes/class-bpafb-template-display-conditions.php';
+require_once BPAFB_PATH . 'includes/class-bpafb-template-frontend-render.php';
 
 /**
  * Main Class for Blockive Premium Addon For Block.
@@ -50,6 +52,8 @@ class Blockive_Premium_Addon_For_Block
 		new Bpafb_Template_Post_Type();
 		new Bpafb_Template_Builder();
 		new Bpafb_Template_Blocks();
+		new Bpafb_Template_Display_Conditions();
+		new Bpafb_Template_Frontend_Render();
 	}
 
 	/**

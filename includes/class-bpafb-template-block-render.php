@@ -29,9 +29,37 @@ class Bpafb_Template_Block_Render
 	public static function get_post_id($block)
 	{
 		if (!empty($block->context['postId'])) {
-			return (int) $block->context['postId'];
+			$context_id = (int) $block->context['postId'];
+			return self::is_real_post($context_id) ? $context_id : 0;
 		}
-		return get_the_ID() ?: 0;
+
+		$fallback_id = get_the_ID() ?: 0;
+		return self::is_real_post($fallback_id) ? $fallback_id : 0;
+	}
+
+	/**
+	 * Whether a post id is a "real", viewable piece of content (post, page,
+	 * product, event, ...) rather than internal WordPress bookkeeping such as
+	 * a `revision`/autosave or the `blockive_template` post itself (which is
+	 * deliberately not publicly viewable - see Bpafb_Template_Post_Type).
+	 *
+	 * A Template Block must never resolve to one of those: e.g. a revision of
+	 * a template being fetched by the block editor (for autosave preload)
+	 * carries the same content as the template it's a revision of, so letting
+	 * a Post Content block treat it as "the post" would render that content
+	 * again - which contains the very same block - causing infinite
+	 * recursion.
+	 *
+	 * @param int $post_id Post ID.
+	 * @return bool
+	 */
+	private static function is_real_post($post_id)
+	{
+		if (!$post_id) {
+			return false;
+		}
+		$post_type = get_post_type($post_id);
+		return $post_type && is_post_type_viewable($post_type);
 	}
 
 	/**
