@@ -23,8 +23,32 @@ class Bpafb_Template_Post_Type
 	{
 		add_action('init', [$this, 'register_post_type']);
 		add_action('init', [$this, 'register_meta']);
+		add_action('save_post_' . self::POST_TYPE, [$this, 'ensure_default_meta'], 10, 2);
 		add_filter('manage_' . self::POST_TYPE . '_posts_columns', [$this, 'add_admin_columns']);
 		add_action('manage_' . self::POST_TYPE . '_posts_custom_column', [$this, 'render_admin_column'], 10, 2);
+	}
+
+	/**
+	 * Ensures required template meta fields are populated with defaults on save.
+	 *
+	 * @param int     $post_id Post ID.
+	 * @param WP_Post $post    Post object.
+	 */
+	public function ensure_default_meta($post_id, $post)
+	{
+		if (wp_is_post_revision($post_id) || wp_is_post_autosave($post_id)) {
+			return;
+		}
+
+		$template_type = get_post_meta($post_id, '_bpafb_template_type', true);
+		if (empty($template_type)) {
+			update_post_meta($post_id, '_bpafb_template_type', 'post');
+		}
+
+		$scope = get_post_meta($post_id, Bpafb_Template_Display_Conditions::META_SCOPE, true);
+		if (empty($scope)) {
+			update_post_meta($post_id, Bpafb_Template_Display_Conditions::META_SCOPE, 'all');
+		}
 	}
 
 	/**

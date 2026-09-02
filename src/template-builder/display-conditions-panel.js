@@ -1,7 +1,7 @@
 import { __, sprintf } from '@wordpress/i18n';
 import { registerPlugin } from '@wordpress/plugins';
 import { PluginDocumentSettingPanel } from '@wordpress/editor';
-import { PanelRow, SelectControl, TextControl } from '@wordpress/components';
+import { PanelRow, SelectControl, TextControl, ToggleControl } from '@wordpress/components';
 import { Icon, lock } from '@wordpress/icons';
 import { useSelect, useDispatch } from '@wordpress/data';
 import { useEntityProp } from '@wordpress/core-data';
@@ -94,6 +94,54 @@ const DisplayConditionsPanel = () => {
 					) }
 					value={ priority }
 					onChange={ ( value ) => setMeta( { ...meta, _bpafb_template_priority: parseInt( value, 10 ) || 10 } ) }
+				/>
+			</PanelRow>
+
+			<PanelRow>
+				<ToggleControl
+					label={ __( 'Full width (no sidebar)', 'blockive-premium-addon-for-block' ) }
+					help={ __(
+						'Ask the active theme to drop its sidebar on posts/pages this template applies to. Supported on Astra, GeneratePress, OceanWP, Neve, Kadence, and Blocksy so far; has no effect on other themes.',
+						'blockive-premium-addon-for-block'
+					) }
+					checked={ !! meta?._bpafb_full_width }
+					onChange={ ( value ) => setMeta( { ...meta, _bpafb_full_width: value } ) }
+				/>
+			</PanelRow>
+
+			<PanelRow>
+				<ToggleControl
+					label={ __( "Hide theme's post title", 'blockive-premium-addon-for-block' ) }
+					help={ __(
+						"Keep off unless the template itself already shows its own title - otherwise the theme's title (and byline: author, date, categories) would render twice.",
+						'blockive-premium-addon-for-block'
+					) }
+					checked={ meta?._bpafb_hide_title !== false }
+					onChange={ ( value ) => setMeta( { ...meta, _bpafb_hide_title: value } ) }
+				/>
+			</PanelRow>
+
+			<PanelRow>
+				<ToggleControl
+					label={ __( "Hide theme's featured image", 'blockive-premium-addon-for-block' ) }
+					help={ __(
+						'Keep off unless the template itself already shows the featured image - otherwise it would render twice.',
+						'blockive-premium-addon-for-block'
+					) }
+					checked={ meta?._bpafb_hide_featured_image !== false }
+					onChange={ ( value ) => setMeta( { ...meta, _bpafb_hide_featured_image: value } ) }
+				/>
+			</PanelRow>
+
+			<PanelRow>
+				<ToggleControl
+					label={ __( 'Hide comments', 'blockive-premium-addon-for-block' ) }
+					help={ __(
+						"Hide the theme's comment list and form on posts/pages this template applies to.",
+						'blockive-premium-addon-for-block'
+					) }
+					checked={ !! meta?._bpafb_hide_comments }
+					onChange={ ( value ) => setMeta( { ...meta, _bpafb_hide_comments: value } ) }
 				/>
 			</PanelRow>
 		</PluginDocumentSettingPanel>

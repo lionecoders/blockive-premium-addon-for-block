@@ -1,7 +1,7 @@
 import { __, sprintf } from '@wordpress/i18n';
 import { registerPlugin } from '@wordpress/plugins';
 import { Modal, Button } from '@wordpress/components';
-import { useSelect, useDispatch } from '@wordpress/data';
+import { useSelect, useDispatch, select as selectData } from '@wordpress/data';
 import { useEntityProp } from '@wordpress/core-data';
 import { useEffect, useState } from '@wordpress/element';
 
@@ -62,8 +62,8 @@ const SaveConflictGuard = () => {
 			return (
 				records.find(
 					( record ) =>
-						record.meta?._bpafb_template_type === targetPostType &&
-						record.meta?._bpafb_display_condition_scope === 'all'
+						( record.meta?._bpafb_template_type || 'post' ) === targetPostType &&
+						( record.meta?._bpafb_display_condition_scope || 'all' ) === 'all'
 				) || null
 			);
 		},
@@ -101,14 +101,21 @@ const SaveConflictGuard = () => {
 	const handleConfirm = async () => {
 		setIsSaving( true );
 		try {
-			if ( conflictingTemplate ) {
+			// Save the current template first - only demote the previous one
+			// once we know this save actually succeeded, so a failed/blocked
+			// save (e.g. Gutenberg refuses to save an empty, untitled post)
+			// never leaves the post type with no active template at all.
+			await editPost( { status: 'publish' } );
+			await savePost();
+
+			const saveSucceeded = selectData( 'core/editor' ).didPostSaveRequestSucceed();
+
+			if ( saveSucceeded && conflictingTemplate ) {
 				await saveEntityRecord( 'postType', TEMPLATE_POST_TYPE, {
 					id: conflictingTemplate.id,
 					status: 'draft',
 				} );
 			}
-			await editPost( { status: 'publish' } );
-			await savePost();
 		} finally {
 			setIsSaving( false );
 			setIsConfirmOpen( false );

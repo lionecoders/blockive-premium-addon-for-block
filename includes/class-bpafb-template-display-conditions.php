@@ -17,9 +17,13 @@ if (!defined('ABSPATH')) {
  */
 class Bpafb_Template_Display_Conditions
 {
-	const META_SCOPE    = '_bpafb_display_condition_scope';
-	const META_IDS      = '_bpafb_display_condition_ids';
-	const META_PRIORITY = '_bpafb_template_priority';
+	const META_SCOPE          = '_bpafb_display_condition_scope';
+	const META_IDS            = '_bpafb_display_condition_ids';
+	const META_PRIORITY       = '_bpafb_template_priority';
+	const META_FULL_WIDTH     = '_bpafb_full_width';
+	const META_HIDE_TITLE     = '_bpafb_hide_title';
+	const META_HIDE_FEATURED  = '_bpafb_hide_featured_image';
+	const META_HIDE_COMMENTS  = '_bpafb_hide_comments';
 
 	/**
 	 * Constructor.
@@ -71,6 +75,41 @@ class Bpafb_Template_Display_Conditions
 			'show_in_rest'  => true,
 			'auth_callback' => $auth_callback,
 		]);
+
+		register_post_meta($post_type, self::META_FULL_WIDTH, [
+			'type'          => 'boolean',
+			'single'        => true,
+			'default'       => false,
+			'show_in_rest'  => true,
+			'auth_callback' => $auth_callback,
+		]);
+
+		// Title/featured-image suppression defaults to true (hidden) so
+		// existing templates keep behaving exactly as before this setting
+		// existed - it's opt-out, not opt-in.
+		register_post_meta($post_type, self::META_HIDE_TITLE, [
+			'type'          => 'boolean',
+			'single'        => true,
+			'default'       => true,
+			'show_in_rest'  => true,
+			'auth_callback' => $auth_callback,
+		]);
+
+		register_post_meta($post_type, self::META_HIDE_FEATURED, [
+			'type'          => 'boolean',
+			'single'        => true,
+			'default'       => true,
+			'show_in_rest'  => true,
+			'auth_callback' => $auth_callback,
+		]);
+
+		register_post_meta($post_type, self::META_HIDE_COMMENTS, [
+			'type'          => 'boolean',
+			'single'        => true,
+			'default'       => false,
+			'show_in_rest'  => true,
+			'auth_callback' => $auth_callback,
+		]);
 	}
 
 	/**
@@ -85,17 +124,35 @@ class Bpafb_Template_Display_Conditions
 	 */
 	public static function get_matching_template_id($post_type, $post_id)
 	{
+		$meta_query = ('post' === $post_type)
+			? [
+				'relation' => 'OR',
+				[
+					'key'   => '_bpafb_template_type',
+					'value' => 'post',
+				],
+				[
+					'key'     => '_bpafb_template_type',
+					'compare' => 'NOT EXISTS',
+				],
+				[
+					'key'   => '_bpafb_template_type',
+					'value' => '',
+				],
+			]
+			: [
+				[
+					'key'   => '_bpafb_template_type',
+					'value' => $post_type,
+				],
+			];
+
 		$templates = get_posts([
 			'post_type'      => Bpafb_Template_Post_Type::POST_TYPE,
 			'post_status'    => 'publish',
 			'posts_per_page' => -1,
 			'no_found_rows'  => true,
-			'meta_query'     => [ // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_query
-				[
-					'key'   => '_bpafb_template_type',
-					'value' => $post_type,
-				],
-			],
+			'meta_query'     => $meta_query, // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_query
 		]);
 
 		if (empty($templates)) {
@@ -107,6 +164,7 @@ class Bpafb_Template_Display_Conditions
 
 		foreach ($templates as $template) {
 			$scope    = get_post_meta($template->ID, self::META_SCOPE, true);
+			$scope    = empty($scope) ? 'all' : $scope;
 			$priority = get_post_meta($template->ID, self::META_PRIORITY, true);
 			$priority = ($priority === '' || $priority === false) ? 10 : (int) $priority;
 
