@@ -1,5 +1,5 @@
 === Blockive - Premium Addon For Block ===
-Contributors:      mveous, deep7197, lionecoders
+Contributors:      deep7197
 Tags:              block, blocks, gutenberg, blockive, widgets
 Requires at least: 6.8
 Requires PHP:      7.4
