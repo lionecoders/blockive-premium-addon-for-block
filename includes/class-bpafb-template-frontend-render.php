@@ -33,6 +33,16 @@ class Bpafb_Template_Frontend_Render
 	private static $matched_template_id = 0;
 
 	/**
+	 * Whether resolve_template_for_current_request() has already run for
+	 * this request - including when it found no match, so that outcome is
+	 * memoized too (0 is otherwise indistinguishable from "not resolved
+	 * yet", which would defeat the point of caching).
+	 *
+	 * @var bool
+	 */
+	private static $has_resolved_template = false;
+
+	/**
 	 * Guard against recursive the_content calls.
 	 *
 	 * @var bool
@@ -118,9 +128,14 @@ class Bpafb_Template_Frontend_Render
 	 * - never guessed or forced via CSS. A theme with no entry here just
 	 * leaves the setting inert.
 	 *
+	 * Exposed to other code via the `bpafb_sidebar_layout_adapters` filter
+	 * (see register_sidebar_layout_adapter()) rather than being a closed
+	 * list - a theme not covered here can add its own adapter without
+	 * editing this plugin.
+	 *
 	 * @var array<string, array{filter: string, value?: string, transform?: string}>
 	 */
-	private static $sidebar_layout_adapters = [
+	private static $default_sidebar_layout_adapters = [
 		'astra' => [
 			'filter' => 'astra_page_layout',
 			'value'  => 'no-sidebar',
@@ -158,7 +173,13 @@ class Bpafb_Template_Frontend_Render
 	public function __construct()
 	{
 		add_action('template_redirect', [$this, 'resolve_matched_template']);
-		add_filter('the_content', [$this, 'filter_the_content'], 1);
+		// Priority PHP_INT_MAX: page builders (Elementor, Divi, ...) hook
+		// `the_content` themselves and substitute their own stored builder
+		// output unconditionally, ignoring whatever earlier filters already
+		// produced. Running last - after any of them, not just Elementor
+		// specifically - means a matched template always has the final say,
+		// the same way those builders themselves expect to.
+		add_filter('the_content', [$this, 'filter_the_content'], PHP_INT_MAX);
 		add_filter('the_title', [$this, 'suppress_duplicate_title'], 10, 2);
 		add_filter('post_thumbnail_id', [$this, 'suppress_duplicate_featured_image_id'], 10, 2);
 		add_filter('post_thumbnail_html', [$this, 'suppress_duplicate_featured_image'], 10, 2);
@@ -166,6 +187,12 @@ class Bpafb_Template_Frontend_Render
 		add_filter('pre_render_block', [$this, 'track_loop_boundary_enter'], 1, 2);
 		add_filter('pre_render_block', [$this, 'suppress_duplicate_theme_blocks'], 10, 2);
 		add_filter('render_block', [$this, 'track_loop_boundary_exit'], 999, 2);
+		// No class_exists('WooCommerce') guard here: this plugin's own main
+		// file constructs this class directly at load time rather than on
+		// a hook, so whether the WooCommerce class already exists at that
+		// exact moment depends on plugin load order and isn't reliable.
+		// Registering unconditionally is safe regardless - `woocommerce_before_single_product`
+		// is a WooCommerce-only action that simply never fires when WooCommerce isn't active.
 		add_action('woocommerce_before_single_product', [$this, 'setup_woocommerce_template']);
 		$this->register_sidebar_layout_adapter();
 	}
@@ -175,23 +202,52 @@ class Bpafb_Template_Frontend_Render
 	 * so the "Full width (no sidebar)" template setting can ask the theme
 	 * to drop its sidebar for this request the same way the theme's own
 	 * page-builder integrations do.
+	 *
+	 * The adapter list is filterable (`bpafb_sidebar_layout_adapters`) so a
+	 * theme or site builder can register support for a theme not covered by
+	 * the built-in defaults, without editing this plugin's code.
 	 */
 	private function register_sidebar_layout_adapter()
 	{
 		$theme = get_template();
-		if (!isset(self::$sidebar_layout_adapters[$theme])) {
+
+		/**
+		 * Filters the per-theme "no sidebar" layout adapters backing the
+		 * "Full width (no sidebar)" template setting.
+		 *
+		 * @param array<string, array{filter: string, value?: string, transform?: string}> $adapters
+		 *     Map of theme template slug (get_template()) to an adapter
+		 *     describing the theme's own layout-override filter: `filter`
+		 *     (the filter name to hook), and either `value` (the value that
+		 *     means "no sidebar" to that theme) or `transform` (a callable
+		 *     receiving and returning the filtered value, for a theme whose
+		 *     filter carries a whole settings array rather than one scalar).
+		 */
+		$adapters = apply_filters('bpafb_sidebar_layout_adapters', self::$default_sidebar_layout_adapters);
+
+		if (!isset($adapters[$theme])) {
 			return;
 		}
 
-		$adapter = self::$sidebar_layout_adapters[$theme];
+		$adapter = $adapters[$theme];
 
 		add_filter($adapter['filter'], function ($layout) use ($adapter) {
 			if (!$this->matched_template_wants_full_width()) {
 				return $layout;
 			}
 
-			if (!empty($adapter['transform']) && method_exists($this, $adapter['transform'])) {
-				return $this->{$adapter['transform']}($layout);
+			if (!empty($adapter['transform'])) {
+				$transform = $adapter['transform'];
+				// A string naming one of this class's own transform methods
+				// (e.g. the built-in Kadence adapter) resolves against $this;
+				// an adapter added via the filter can supply any callable
+				// (closure, function name, [object, method]) instead.
+				if (is_string($transform) && method_exists($this, $transform)) {
+					$transform = [$this, $transform];
+				}
+				if (is_callable($transform)) {
+					return call_user_func($transform, $layout);
+				}
 			}
 
 			return isset($adapter['value']) ? $adapter['value'] : $layout;
@@ -548,13 +604,39 @@ class Bpafb_Template_Frontend_Render
 	}
 
 	/**
-	 * Resolves whether the current singular request matches a Blockive Template.
+	 * Resolves whether the current singular request matches a Blockive
+	 * Template. Also resets the loop-boundary depth counter for the new
+	 * request: it's static, request-scoped state that self-heals here on
+	 * every top-level page load rather than relying on every enter/exit
+	 * pair it's ever incremented by staying perfectly balanced (e.g. across
+	 * an uncaught error partway through some other block's render).
 	 */
 	public function resolve_matched_template()
 	{
+		self::$active_loop_depth = 0;
+
 		if (is_admin() || !is_singular()) {
 			return;
 		}
+
+		self::resolve_template_for_current_request();
+	}
+
+	/**
+	 * Resolves and memoizes the matched template ID for the current request,
+	 * including the "no template matched" outcome - so a singular request
+	 * with no matching template (the common case, since templates are
+	 * opt-in) doesn't re-run Bpafb_Template_Display_Conditions::get_matching_template_id()'s
+	 * get_posts() query from scratch on every single call to
+	 * get_matched_template_id(), which happens once per block on the page
+	 * via pre_render_block.
+	 */
+	private static function resolve_template_for_current_request()
+	{
+		if (self::$has_resolved_template) {
+			return;
+		}
+		self::$has_resolved_template = true;
 
 		$queried_id   = get_queried_object_id();
 		$queried_type = get_post_type($queried_id);
@@ -567,10 +649,7 @@ class Bpafb_Template_Frontend_Render
 			return;
 		}
 
-		$template_id = Bpafb_Template_Display_Conditions::get_matching_template_id($queried_type, $queried_id);
-		if ($template_id) {
-			self::$matched_template_id = $template_id;
-		}
+		self::$matched_template_id = Bpafb_Template_Display_Conditions::get_matching_template_id($queried_type, $queried_id);
 	}
 
 	/**
@@ -651,12 +730,8 @@ class Bpafb_Template_Frontend_Render
 	 */
 	public static function get_matched_template_id()
 	{
-		if (!self::$matched_template_id && is_singular()) {
-			$queried_id   = get_queried_object_id();
-			$queried_type = get_post_type($queried_id);
-			if ($queried_id && $queried_type && $queried_type !== Bpafb_Template_Post_Type::POST_TYPE) {
-				self::$matched_template_id = Bpafb_Template_Display_Conditions::get_matching_template_id($queried_type, $queried_id);
-			}
+		if (!self::$has_resolved_template && !is_admin() && is_singular()) {
+			self::resolve_template_for_current_request();
 		}
 		return self::$matched_template_id;
 	}

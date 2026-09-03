@@ -26,6 +26,50 @@ class Bpafb_Template_Post_Type
 		add_action('save_post_' . self::POST_TYPE, [$this, 'ensure_default_meta'], 10, 2);
 		add_filter('manage_' . self::POST_TYPE . '_posts_columns', [$this, 'add_admin_columns']);
 		add_action('manage_' . self::POST_TYPE . '_posts_custom_column', [$this, 'render_admin_column'], 10, 2);
+		add_filter('rest_pre_dispatch', [$this, 'restrict_rest_access'], 10, 3);
+	}
+
+	/**
+	 * Blockive Templates are registered `public => false` - they're internal
+	 * building blocks, not content meant to be browsed directly - but
+	 * `show_in_rest => true` (required for the block editor to load and
+	 * save them) makes WordPress's default REST posts controller allow
+	 * anonymous, unauthenticated reads of any published item regardless of
+	 * that `public` flag: WP_REST_Posts_Controller::get_items_permissions_check()
+	 * only checks capabilities for `context=edit` requests, not the default
+	 * `context=view` a plain GET uses. This closes that gap by requiring
+	 * the same `edit_posts` capability the admin UI already requires for
+	 * any REST route touching this post type - the block editor's own
+	 * requests are always sent by a logged-in user with that capability
+	 * (it's what got them into the Template Builder in the first place), so
+	 * they're unaffected.
+	 *
+	 * @param mixed           $result  Response to replace the request with, or null to proceed normally.
+	 * @param WP_REST_Server  $server  REST server instance.
+	 * @param WP_REST_Request $request Current REST request.
+	 * @return mixed
+	 */
+	public function restrict_rest_access($result, $server, $request)
+	{
+		if (null !== $result) {
+			return $result;
+		}
+
+		$route = $request->get_route();
+		if (!preg_match('#^/wp/v2/' . preg_quote(self::POST_TYPE, '#') . '(/|$)#', $route)) {
+			return $result;
+		}
+
+		$post_type_object = get_post_type_object(self::POST_TYPE);
+		if ($post_type_object && current_user_can($post_type_object->cap->edit_posts)) {
+			return $result;
+		}
+
+		return new WP_Error(
+			'bpafb_rest_forbidden',
+			__('Sorry, you are not allowed to access Blockive Templates.', 'blockive-premium-addon-for-block'),
+			['status' => rest_authorization_required_code()]
+		);
 	}
 
 	/**
