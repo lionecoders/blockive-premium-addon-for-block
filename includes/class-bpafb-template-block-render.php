@@ -115,4 +115,103 @@ class Bpafb_Template_Block_Render
 		}
 		return '<i class="' . esc_attr($icon_class) . '" aria-hidden="true"></i> ';
 	}
+
+	/**
+	 * Validates a color attribute value before it's interpolated directly
+	 * into a `<style>` tag's CSS text - a different output context from an
+	 * HTML attribute, where `esc_attr()` alone is the right tool. `esc_attr()`
+	 * stops the value from closing the `<style>` tag early, but does nothing
+	 * about CSS-syntax characters (`{`, `}`, `;`), so e.g. a value of
+	 * `red; } body { display:none` would still break out of the intended
+	 * rule and inject arbitrary CSS. This instead only accepts values that
+	 * look like an actual CSS color: a hex code, a named color, or an
+	 * `rgb()`/`rgba()`/`hsl()`/`hsla()`/`var()` function call - anything
+	 * else (including one containing `{`, `}`, or `;`) is rejected.
+	 *
+	 * @param string $color Color value from a block attribute.
+	 * @return string The color unchanged, or '' if it doesn't look like a safe CSS color.
+	 */
+	public static function sanitize_css_color($color)
+	{
+		$color = trim((string) $color);
+		if ($color === '') {
+			return '';
+		}
+		if (preg_match('/^(#[0-9a-fA-F]{3,8}|[a-zA-Z]+|(?:rgba?|hsla?|var)\([^{};]*\))$/', $color)) {
+			return $color;
+		}
+		return '';
+	}
+
+	/**
+	 * Renders a post/product/event "title" Template Block. Titles resolve
+	 * the same way for all three - products and events are both normal
+	 * WordPress post types - so the Post Title, Product Title, and Event
+	 * Title blocks share this one implementation, differing only in their
+	 * wrapper CSS class.
+	 *
+	 * @param WP_Block $block         Block instance (available as $block in render.php).
+	 * @param array    $attributes    Block attributes.
+	 * @param string   $wrapper_class Block-specific wrapper class, e.g. 'bpafb-tb-post-title'.
+	 */
+	public static function render_title_block($block, $attributes, $wrapper_class)
+	{
+		$post_id = self::get_post_id($block);
+
+		$allowed_tags = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'div', 'span'];
+		$tag = isset($attributes['tagName']) && in_array($attributes['tagName'], $allowed_tags, true)
+			? $attributes['tagName']
+			: 'h2';
+
+		$is_link = !empty($attributes['isLink']);
+		$link_target = isset($attributes['linkTarget']) ? $attributes['linkTarget'] : '_self';
+		$text_align = isset($attributes['textAlign']) ? $attributes['textAlign'] : '';
+		$text_color = isset($attributes['textColor']) ? $attributes['textColor'] : '';
+		$text_hover_color = self::sanitize_css_color(
+			isset($attributes['textHoverColor']) ? $attributes['textHoverColor'] : ''
+		);
+		$uid = !empty($attributes['bpafbUid']) ? sanitize_html_class($attributes['bpafbUid']) : '';
+
+		$title = $post_id ? get_the_title($post_id) : '';
+		if ($title === '') {
+			$title = __('(no title)', 'blockive-premium-addon-for-block');
+		}
+
+		$style = '';
+		if ($text_align) {
+			$style .= 'text-align:' . esc_attr($text_align) . ';';
+		}
+		if ($text_color) {
+			$style .= 'color:' . esc_attr($text_color) . ';';
+		}
+
+		$classes = [$wrapper_class];
+		if ($uid) {
+			$classes[] = 'bpafb-uid-' . $uid;
+		}
+
+		$wrapper_attributes = get_block_wrapper_attributes([
+			'class' => implode(' ', $classes),
+			'style' => $style,
+		]);
+
+		$inner = esc_html($title);
+		if ($is_link && $post_id) {
+			$rel = $link_target === '_blank' ? ' rel="noopener noreferrer"' : '';
+			$inner = '<a href="' . esc_url(get_permalink($post_id)) . '" target="' . esc_attr($link_target) . '"' . $rel . '>' . $inner . '</a>';
+		}
+
+		if ($text_hover_color && $uid) {
+			echo '<style>.bpafb-uid-' . esc_attr($uid) . ':hover, .bpafb-uid-' . esc_attr($uid) . ':hover a { color:' . esc_attr($text_hover_color) . ' !important; }</style>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		}
+
+		printf(
+			'<%1$s %2$s>%3$s</%1$s>',
+			tag_escape($tag),
+			// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			$wrapper_attributes,
+			// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			$inner
+		);
+	}
 }

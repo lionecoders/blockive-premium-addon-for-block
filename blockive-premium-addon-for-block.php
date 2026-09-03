@@ -626,11 +626,23 @@ class Blockive_Premium_Addon_For_Block
 	/**
 	 * Helper function to inject style, class, id and data-* attributes into the first tag of HTML content.
 	 *
+	 * Escaping boundary: $classes_to_add, $id, and every value in $data_attrs
+	 * are expected RAW (not yet esc_attr()'d) - this function is what
+	 * escapes them, via esc_attr() at each point they're written into the
+	 * attribute string below. This is the opposite convention from
+	 * $new_styles_str, whose individual values the caller
+	 * (bpafb_render_block_container()) already esc_attr()'d before building
+	 * the combined style string, to avoid double-encoding entities like `&`
+	 * (see the note further down in this function). Callers passing a new
+	 * Advanced-tab attribute through here must know which bucket it falls
+	 * into - raw values only ever belong in $classes_to_add/$id/$data_attrs,
+	 * never appended into $new_styles_str.
+	 *
 	 * @param string $html             The original HTML content.
-	 * @param string $new_styles_str   The new inline styles to inject.
-	 * @param string $classes_to_add   The custom classes to add to the wrapper.
-	 * @param string $id               Optional HTML id to set on the wrapper (does not overwrite an existing id).
-	 * @param array  $data_attrs       Optional map of data-* attribute name => value.
+	 * @param string $new_styles_str   The new inline styles to inject - pre-escaped by the caller.
+	 * @param string $classes_to_add   The custom classes to add to the wrapper - raw, escaped in here.
+	 * @param string $id               Optional HTML id to set on the wrapper (does not overwrite an existing id) - raw, escaped in here.
+	 * @param array  $data_attrs       Optional map of data-* attribute name => value - raw, escaped in here.
 	 * @return string
 	 */
 	private function bpafb_inject_styles($html, $new_styles_str, $classes_to_add = '', $id = '', $data_attrs = [])

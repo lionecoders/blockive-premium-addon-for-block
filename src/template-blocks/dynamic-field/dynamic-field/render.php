@@ -33,7 +33,9 @@ $bpafb_tag = isset($attributes['tagName']) && in_array($attributes['tagName'], $
 	: 'div';
 
 $bpafb_text_color = isset($attributes['textColor']) ? $attributes['textColor'] : '';
-$bpafb_text_hover_color = isset($attributes['textHoverColor']) ? $attributes['textHoverColor'] : '';
+$bpafb_text_hover_color = Bpafb_Template_Block_Render::sanitize_css_color(
+	isset($attributes['textHoverColor']) ? $attributes['textHoverColor'] : ''
+);
 $bpafb_uid = !empty($attributes['bpafbUid']) ? sanitize_html_class($attributes['bpafbUid']) : '';
 
 $bpafb_style = '';

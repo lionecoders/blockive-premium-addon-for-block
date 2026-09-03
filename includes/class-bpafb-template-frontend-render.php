@@ -298,11 +298,26 @@ class Bpafb_Template_Frontend_Render
 	 * some other post being shown in a "more posts"/related/comments loop
 	 * elsewhere on the page. Returns 0 when none of that holds.
 	 *
+	 * Also returns 0 while the matched template's own content is what's
+	 * currently rendering (self::$is_rendering): a Template Block within it
+	 * - e.g. a Post/Product/Event Title block, or a Featured Image block -
+	 * legitimately calls get_the_title()/get_the_post_thumbnail() for the
+	 * very same post to render itself, and those go through this exact same
+	 * the_title/post_thumbnail_html/post_thumbnail_id filter chain. Without
+	 * this check, a template with "Hide title" or "Hide featured image" on
+	 * (the default) would blank out its own Title/Featured Image Template
+	 * Block the moment it tried to use one - suppressing the theme's
+	 * duplicate must never suppress the template's own intentional one.
+	 *
 	 * @param int $post_id Post ID passed by the filter being checked.
 	 * @return int
 	 */
 	private function matched_template_id_for_post_in_loop($post_id)
 	{
+		if (self::$is_rendering) {
+			return 0;
+		}
+
 		if (is_admin() || is_feed() || !is_singular() || !in_the_loop() || !is_main_query()) {
 			return 0;
 		}

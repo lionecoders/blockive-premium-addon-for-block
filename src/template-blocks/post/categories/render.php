@@ -16,7 +16,9 @@ $bpafb_separator = isset($attributes['separator']) ? $attributes['separator'] : 
 $bpafb_badge_style = !empty($attributes['badgeStyle']);
 $bpafb_is_link = !isset($attributes['isLink']) || !empty($attributes['isLink']);
 $bpafb_text_color = isset($attributes['textColor']) ? $attributes['textColor'] : '';
-$bpafb_text_hover_color = isset($attributes['textHoverColor']) ? $attributes['textHoverColor'] : '';
+$bpafb_text_hover_color = Bpafb_Template_Block_Render::sanitize_css_color(
+	isset($attributes['textHoverColor']) ? $attributes['textHoverColor'] : ''
+);
 $bpafb_uid = !empty($attributes['bpafbUid']) ? sanitize_html_class($attributes['bpafbUid']) : '';
 
 $bpafb_categories = $bpafb_post_id ? get_the_category($bpafb_post_id) : [];

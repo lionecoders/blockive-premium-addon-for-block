@@ -82,26 +82,7 @@ if ($bpafb_product) {
 							echo '<p>' . esc_html__('No description available.', 'blockive-premium-addon-for-block') . '</p>';
 						}
 					elseif ($bpafb_key === 'attributes') :
-						$bpafb_rows = [];
-						$bpafb_product_attributes = $bpafb_product->get_attributes();
-						foreach ($bpafb_product_attributes as $bpafb_attribute) {
-							if (!$bpafb_attribute->get_visible()) {
-								continue;
-							}
-							if ($bpafb_attribute->is_taxonomy()) {
-								$bpafb_taxonomy = $bpafb_attribute->get_name();
-								$bpafb_attr_label = wc_attribute_label($bpafb_taxonomy);
-								$bpafb_terms = wc_get_product_terms($bpafb_product->get_id(), $bpafb_taxonomy, ['fields' => 'names']);
-								$bpafb_attr_value = is_wp_error($bpafb_terms) ? '' : implode(', ', $bpafb_terms);
-							} else {
-								$bpafb_attr_label = $bpafb_attribute->get_name();
-								$bpafb_attr_value = implode(', ', $bpafb_attribute->get_options());
-							}
-							if ($bpafb_attr_value === '') {
-								continue;
-							}
-							$bpafb_rows[] = [$bpafb_attr_label, $bpafb_attr_value];
-						}
+						$bpafb_rows = Bpafb_Product_Template_Render::get_visible_attribute_rows($bpafb_product);
 						if (empty($bpafb_rows)) :
 							?>
 							<p><?php esc_html_e('No additional information available.', 'blockive-premium-addon-for-block'); ?></p>
@@ -112,8 +93,8 @@ if ($bpafb_product) {
 								<tbody>
 									<?php foreach ($bpafb_rows as $bpafb_row) : ?>
 										<tr>
-											<th><?php echo esc_html($bpafb_row[0]); ?></th>
-											<td><?php echo esc_html($bpafb_row[1]); ?></td>
+											<th><?php echo esc_html($bpafb_row['label']); ?></th>
+											<td><?php echo esc_html($bpafb_row['value']); ?></td>
 										</tr>
 									<?php endforeach; ?>
 								</tbody>

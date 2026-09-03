@@ -98,6 +98,53 @@ class Bpafb_Product_Template_Render
 	}
 
 	/**
+	 * Resolves a product's visible attributes as label/value rows, resolving
+	 * taxonomy-backed attributes (e.g. a global "Color" attribute) to their
+	 * term names and custom attributes to their raw option list. Shared by
+	 * the Attributes Template Block and the "Additional Information" tab of
+	 * the Product Tabs Template Block, which otherwise duplicated this exact
+	 * loop.
+	 *
+	 * @param WC_Product|null $product Product.
+	 * @return array<int, array{label: string, value: string}>
+	 */
+	public static function get_visible_attribute_rows($product)
+	{
+		if (!$product) {
+			return [];
+		}
+
+		$rows = [];
+
+		foreach ($product->get_attributes() as $attribute) {
+			if (!$attribute->get_visible()) {
+				continue;
+			}
+
+			if ($attribute->is_taxonomy()) {
+				$taxonomy = $attribute->get_name();
+				$label = wc_attribute_label($taxonomy);
+				$terms = wc_get_product_terms($product->get_id(), $taxonomy, ['fields' => 'names']);
+				$value = is_wp_error($terms) ? '' : implode(', ', $terms);
+			} else {
+				$label = $attribute->get_name();
+				$value = implode(', ', $attribute->get_options());
+			}
+
+			if ($value === '') {
+				continue;
+			}
+
+			$rows[] = [
+				'label' => $label,
+				'value' => $value,
+			];
+		}
+
+		return $rows;
+	}
+
+	/**
 	 * Replaces the `{qty}` token in a Stock block text template with the
 	 * product's tracked stock quantity, when available.
 	 *
@@ -162,8 +209,11 @@ class Bpafb_Product_Template_Render
 
 		try {
 			woocommerce_template_single_add_to_cart();
-		} catch (Exception $e) {
-			// Swallow - a broken add-to-cart template should not fatal an entire template render.
+		} catch (\Throwable $e) {
+			// Swallow (including PHP Error/TypeError, not just Exception) -
+			// a broken add-to-cart template must not skip the $GLOBALS['product']
+			// restore below and leak corrupted state into later renders on
+			// the same request/worker.
 		}
 
 		$html = ob_get_clean();

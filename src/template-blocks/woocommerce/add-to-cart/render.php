@@ -22,10 +22,13 @@ if (!$bpafb_product) {
 }
 
 $bpafb_button_text = isset($attributes['buttonText']) ? trim($attributes['buttonText']) : '';
-$bpafb_bg_color = isset($attributes['btnBgColor']) ? $attributes['btnBgColor'] : '';
-$bpafb_text_color = isset($attributes['btnTextColor']) ? $attributes['btnTextColor'] : '';
-$bpafb_hover_bg_color = isset($attributes['btnHoverBgColor']) ? $attributes['btnHoverBgColor'] : '';
-$bpafb_hover_text_color = isset($attributes['btnHoverTextColor']) ? $attributes['btnHoverTextColor'] : '';
+// All four go straight into a <style> tag's CSS text below, not an HTML
+// attribute, so they need to look like actual CSS colors, not just be
+// esc_attr()-safe (see Bpafb_Template_Block_Render::sanitize_css_color()).
+$bpafb_bg_color = Bpafb_Template_Block_Render::sanitize_css_color(isset($attributes['btnBgColor']) ? $attributes['btnBgColor'] : '');
+$bpafb_text_color = Bpafb_Template_Block_Render::sanitize_css_color(isset($attributes['btnTextColor']) ? $attributes['btnTextColor'] : '');
+$bpafb_hover_bg_color = Bpafb_Template_Block_Render::sanitize_css_color(isset($attributes['btnHoverBgColor']) ? $attributes['btnHoverBgColor'] : '');
+$bpafb_hover_text_color = Bpafb_Template_Block_Render::sanitize_css_color(isset($attributes['btnHoverTextColor']) ? $attributes['btnHoverTextColor'] : '');
 $bpafb_uid = !empty($attributes['bpafbUid']) ? sanitize_html_class($attributes['bpafbUid']) : '';
 
 $bpafb_form_html = Bpafb_Product_Template_Render::render_add_to_cart_html($bpafb_product, $bpafb_button_text);

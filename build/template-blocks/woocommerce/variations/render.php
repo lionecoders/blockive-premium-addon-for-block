@@ -52,13 +52,23 @@ $bpafb_wrapper_attributes = get_block_wrapper_attributes([
 			setup_postdata($post);
 		}
 
-		woocommerce_template_single_add_to_cart();
-
-		wp_reset_postdata();
-		// phpcs:disable WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
-		$product = $bpafb_prev_product;
-		// phpcs:enable WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
-		$post = $bpafb_prev_post;
+		try {
+			woocommerce_template_single_add_to_cart();
+		} catch (\Throwable $e) {
+			// Swallow (including PHP Error/TypeError, not just Exception) -
+			// a broken add-to-cart/variation template must not fatal an
+			// entire template render, matching
+			// Bpafb_Product_Template_Render::render_add_to_cart_html().
+		} finally {
+			// A finally block (rather than repeating this after the try)
+			// guarantees the swapped $post/$product globals are restored
+			// exactly once whether or not the call above threw.
+			wp_reset_postdata();
+			// phpcs:disable WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
+			$product = $bpafb_prev_product;
+			// phpcs:enable WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
+			$post = $bpafb_prev_post;
+		}
 	}
 	?>
 </div>

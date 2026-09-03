@@ -23,9 +23,12 @@ $bpafb_manual_url = isset($attributes['url']) ? trim($attributes['url']) : '';
 $bpafb_use_meta = !isset($attributes['useEventRegistrationMeta']) || !empty($attributes['useEventRegistrationMeta']);
 $bpafb_open_new_tab = !empty($attributes['openInNewTab']);
 $bpafb_bg_color = isset($attributes['bgColor']) ? $attributes['bgColor'] : '';
-$bpafb_bg_hover_color = isset($attributes['bgHoverColor']) ? $attributes['bgHoverColor'] : '';
+// These two go into a <style> tag's CSS text below, not an HTML attribute,
+// so they need to look like actual CSS colors (see
+// Bpafb_Template_Block_Render::sanitize_css_color()).
+$bpafb_bg_hover_color = Bpafb_Template_Block_Render::sanitize_css_color(isset($attributes['bgHoverColor']) ? $attributes['bgHoverColor'] : '');
 $bpafb_text_color = isset($attributes['textColor']) ? $attributes['textColor'] : '';
-$bpafb_text_hover_color = isset($attributes['textHoverColor']) ? $attributes['textHoverColor'] : '';
+$bpafb_text_hover_color = Bpafb_Template_Block_Render::sanitize_css_color(isset($attributes['textHoverColor']) ? $attributes['textHoverColor'] : '');
 $bpafb_uid = !empty($attributes['bpafbUid']) ? sanitize_html_class($attributes['bpafbUid']) : '';
 
 $bpafb_href = '';
