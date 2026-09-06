@@ -15,6 +15,11 @@ if (!defined('ABSPATH')) {
  */
 
 $bpafb_post_id = Bpafb_Template_Block_Render::get_post_id($block);
+$bpafb_author_id = $bpafb_post_id ? (int) get_post_field('post_author', $bpafb_post_id) : 0;
+
+if (!$bpafb_author_id) {
+	return;
+}
 
 $bpafb_size = isset($attributes['size']) ? (int) $attributes['size'] : 96;
 $bpafb_radius = isset($attributes['borderRadius']) ? (int) $attributes['borderRadius'] : 9999;
@@ -51,14 +56,8 @@ $bpafb_wrapper_attributes = get_block_wrapper_attributes([
 	'style' => implode(';', $bpafb_style_vars) . ';',
 ]);
 
-$bpafb_author_id = $bpafb_post_id ? (int) get_post_field('post_author', $bpafb_post_id) : 0;
-
 printf('<div %s>', $bpafb_wrapper_attributes); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 
-if ($bpafb_author_id) {
-	echo get_avatar($bpafb_author_id, $bpafb_size, '', '', ['class' => 'bpafb-tb-author-avatar-img']); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-} else {
-	echo '<div class="bpafb-tb-author-avatar-placeholder" aria-hidden="true"></div>';
-}
+echo get_avatar($bpafb_author_id, $bpafb_size, '', '', ['class' => 'bpafb-tb-author-avatar-img']); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 
 echo '</div>';

@@ -69,17 +69,23 @@ class Bpafb_Template_Blocks
 			return;
 		}
 
-		$style_path = BPAFB_PATH . 'build/template-blocks/style-index.css';
-		if (!file_exists($style_path)) {
-			return;
+		if (file_exists(BPAFB_PATH . 'build/template-blocks/index.css')) {
+			wp_enqueue_style(
+				'bpafb-template-blocks-frontend',
+				BPAFB_URL . 'build/template-blocks/index.css',
+				[],
+				BPAFB_VERSION
+			);
 		}
 
-		wp_enqueue_style(
-			'bpafb-template-blocks-frontend',
-			BPAFB_URL . 'build/template-blocks/style-index.css',
-			[],
-			BPAFB_VERSION
-		);
+		if (file_exists(BPAFB_PATH . 'build/template-blocks/style-index.css')) {
+			wp_enqueue_style(
+				'bpafb-template-blocks-frontend-style',
+				BPAFB_URL . 'build/template-blocks/style-index.css',
+				[],
+				BPAFB_VERSION
+			);
+		}
 	}
 
 	/**
@@ -183,9 +189,18 @@ class Bpafb_Template_Blocks
 			true
 		);
 
+		if (file_exists(BPAFB_PATH . 'build/template-blocks/index.css')) {
+			wp_enqueue_style(
+				'bpafb-template-blocks-editor',
+				BPAFB_URL . 'build/template-blocks/index.css',
+				['wp-components'],
+				$asset['version']
+			);
+		}
+
 		if (file_exists(BPAFB_PATH . 'build/template-blocks/style-index.css')) {
 			wp_enqueue_style(
-				'bpafb-template-blocks',
+				'bpafb-template-blocks-style',
 				BPAFB_URL . 'build/template-blocks/style-index.css',
 				['wp-components'],
 				$asset['version']

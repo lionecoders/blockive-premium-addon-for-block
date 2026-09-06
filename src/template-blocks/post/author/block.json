@@ -29,6 +29,10 @@
 			"type": "string",
 			"default": ""
 		},
+		"textHoverColor": {
+			"type": "string",
+			"default": ""
+		},
 		"bpafbUid": {
 			"type": "string",
 			"default": ""

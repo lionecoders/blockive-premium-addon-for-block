@@ -1,6 +1,6 @@
 import { __ } from '@wordpress/i18n';
 import { useBlockProps, InspectorControls } from '@wordpress/block-editor';
-import { PanelBody, ToggleControl, TextControl } from '@wordpress/components';
+import { PanelBody, ToggleControl, TextControl, BaseControl, ColorPalette } from '@wordpress/components';
 import { useState } from '@wordpress/element';
 
 import InspectorTabs from '../../../components/inspector-tabs';
@@ -77,7 +77,7 @@ function ReorderableItemsList( { items, onChange } ) {
 }
 
 export default function Edit( { attributes, setAttributes } ) {
-	const { items, separator, showIcons } = attributes;
+	const { items, separator, showIcons, linkHoverColor } = attributes;
 	const { record } = usePreviewContext();
 
 	const blockProps = useBlockProps( { className: 'bpafb-tb-post-meta' } );
@@ -119,6 +119,15 @@ export default function Edit( { attributes, setAttributes } ) {
 							checked={ !! showIcons }
 							onChange={ ( value ) => setAttributes( { showIcons: value } ) }
 						/>
+						<BaseControl label={ __( 'Link Hover Color', 'blockive-premium-addon-for-block' ) }>
+							<ColorPalette
+								value={ linkHoverColor }
+								onChange={ ( value ) => setAttributes( { linkHoverColor: value } ) }
+							/>
+						</BaseControl>
+						<p className="bpafb-help-text">
+							{ __( 'Applies to any linked items (Categories, Tags) within this block.', 'blockive-premium-addon-for-block' ) }
+						</p>
 					</PanelBody>
 				}
 				advanced={ <AdvancedTab attributes={ attributes } setAttributes={ setAttributes } /> }

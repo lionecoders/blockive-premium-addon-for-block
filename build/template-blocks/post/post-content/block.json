@@ -6,24 +6,16 @@
   "title": "Post Content",
   "category": "blockive-template",
   "icon": "editor-paragraph",
-  "description": "Displays the current post's full content dynamically, with optional truncation, drop cap and max width. Blockive Template Builder only.",
+  "description": "Displays the current post's full content or excerpt dynamically, with optional drop cap and max width. Blockive Template Builder only.",
   "usesContext": [
     "postId",
     "postType"
   ],
   "textdomain": "blockive-premium-addon-for-block",
   "attributes": {
-    "wordLimit": {
-      "type": "number",
-      "default": 0
-    },
-    "showReadMore": {
-      "type": "boolean",
-      "default": true
-    },
-    "readMoreText": {
+    "displayMode": {
       "type": "string",
-      "default": "Read More"
+      "default": "full"
     },
     "maxWidth": {
       "type": "number",
@@ -34,6 +26,10 @@
       "default": false
     },
     "textAlign": {
+      "type": "string",
+      "default": ""
+    },
+    "linkHoverColor": {
       "type": "string",
       "default": ""
     },

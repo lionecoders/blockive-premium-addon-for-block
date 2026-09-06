@@ -17,7 +17,6 @@ if (!defined('ABSPATH')) {
 
 $bpafb_post_id = Bpafb_Template_Block_Render::get_post_id($block);
 $bpafb_items = isset($attributes['items']) && is_array($attributes['items']) ? $attributes['items'] : [];
-$bpafb_separator = isset($attributes['separator']) ? $attributes['separator'] : '•';
 $bpafb_show_icons = !isset($attributes['showIcons']) || !empty($attributes['showIcons']);
 
 $bpafb_rendered_items = [];
@@ -31,9 +30,28 @@ foreach ($bpafb_items as $bpafb_item) {
 	}
 }
 
+if (empty($bpafb_rendered_items)) {
+	return;
+}
+
+$bpafb_separator = isset($attributes['separator']) ? $attributes['separator'] : '•';
+$bpafb_link_hover_color = Bpafb_Template_Block_Render::sanitize_css_color(
+	isset($attributes['linkHoverColor']) ? $attributes['linkHoverColor'] : ''
+);
+$bpafb_uid = !empty($attributes['bpafbUid']) ? sanitize_html_class($attributes['bpafbUid']) : '';
+
+$bpafb_classes = ['bpafb-tb-post-meta'];
+if ($bpafb_uid) {
+	$bpafb_classes[] = 'bpafb-uid-' . $bpafb_uid;
+}
+
 $bpafb_wrapper_attributes = get_block_wrapper_attributes([
-	'class' => 'bpafb-tb-post-meta',
+	'class' => implode(' ', $bpafb_classes),
 ]);
+
+if ($bpafb_link_hover_color && $bpafb_uid) {
+	echo '<style>.bpafb-uid-' . esc_attr($bpafb_uid) . ' a:hover { color:' . esc_attr($bpafb_link_hover_color) . ' !important; }</style>';
+}
 
 ?>
 <div <?php echo $bpafb_wrapper_attributes; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>

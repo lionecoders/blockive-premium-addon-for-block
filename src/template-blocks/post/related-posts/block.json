@@ -25,6 +25,38 @@
 			"type": "number",
 			"default": 3
 		},
+		"gridGap": {
+			"type": "number",
+			"default": 20
+		},
+		"sliderColumns": {
+			"type": "number",
+			"default": 3
+		},
+		"sliderAutoplay": {
+			"type": "boolean",
+			"default": false
+		},
+		"sliderAutoplaySpeed": {
+			"type": "number",
+			"default": 3000
+		},
+		"sliderLoop": {
+			"type": "boolean",
+			"default": false
+		},
+		"sliderShowArrows": {
+			"type": "boolean",
+			"default": true
+		},
+		"sliderShowDots": {
+			"type": "boolean",
+			"default": true
+		},
+		"sliderSpaceBetween": {
+			"type": "number",
+			"default": 20
+		},
 		"orderBy": {
 			"type": "string",
 			"default": "date"
@@ -47,7 +79,59 @@
 		},
 		"showExcerpt": {
 			"type": "boolean",
-			"default": false
+			"default": true
+		},
+		"contentType": {
+			"type": "string",
+			"default": "limited"
+		},
+		"excerptLength": {
+			"type": "number",
+			"default": 20
+		},
+		"cardStyle": {
+			"type": "string",
+			"default": "modern"
+		},
+		"cardBgColor": {
+			"type": "string",
+			"default": ""
+		},
+		"cardBorderRadius": {
+			"type": "number",
+			"default": 16
+		},
+		"cardPadding": {
+			"type": "number",
+			"default": 18
+		},
+		"cardHoverElevation": {
+			"type": "boolean",
+			"default": true
+		},
+		"imageZoom": {
+			"type": "boolean",
+			"default": true
+		},
+		"imageBorderRadius": {
+			"type": "number",
+			"default": 12
+		},
+		"titleColor": {
+			"type": "string",
+			"default": ""
+		},
+		"titleHoverColor": {
+			"type": "string",
+			"default": ""
+		},
+		"dateColor": {
+			"type": "string",
+			"default": ""
+		},
+		"excerptColor": {
+			"type": "string",
+			"default": ""
 		},
 		"bpafbUid": {
 			"type": "string",

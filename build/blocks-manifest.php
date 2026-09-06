@@ -9013,6 +9013,10 @@ return array(
 				'type' => 'string',
 				'default' => ''
 			),
+			'textHoverColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
 			'bpafbUid' => array(
 				'type' => 'string',
 				'default' => ''
@@ -10212,6 +10216,10 @@ return array(
 				'type' => 'string',
 				'default' => '{count} Comments'
 			),
+			'textHoverColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
 			'isLink' => array(
 				'type' => 'boolean',
 				'default' => true
@@ -10530,6 +10538,33 @@ return array(
 				'type' => 'string',
 				'default' => 'none'
 			),
+			'borderType' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'borderWidth' => array(
+				'type' => 'number'
+			),
+			'borderColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'shadowEnabled' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'shadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'shadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'shadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
+			),
 			'bpafbUid' => array(
 				'type' => 'string',
 				'default' => ''
@@ -10817,6 +10852,37 @@ return array(
 			'aspectRatio' => array(
 				'type' => 'string',
 				'default' => '16/9'
+			),
+			'borderRadius' => array(
+				'type' => 'number',
+				'default' => 0
+			),
+			'borderType' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'borderWidth' => array(
+				'type' => 'number'
+			),
+			'borderColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'shadowEnabled' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'shadowColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0,0,0,0.15)'
+			),
+			'shadowBlur' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'shadowSpread' => array(
+				'type' => 'number',
+				'default' => 0
 			),
 			'bpafbUid' => array(
 				'type' => 'string',
@@ -11368,24 +11434,16 @@ return array(
 		'title' => 'Post Content',
 		'category' => 'blockive-template',
 		'icon' => 'editor-paragraph',
-		'description' => 'Displays the current post\'s full content dynamically, with optional truncation, drop cap and max width. Blockive Template Builder only.',
+		'description' => 'Displays the current post\'s full content or excerpt dynamically, with optional drop cap and max width. Blockive Template Builder only.',
 		'usesContext' => array(
 			'postId',
 			'postType'
 		),
 		'textdomain' => 'blockive-premium-addon-for-block',
 		'attributes' => array(
-			'wordLimit' => array(
-				'type' => 'number',
-				'default' => 0
-			),
-			'showReadMore' => array(
-				'type' => 'boolean',
-				'default' => true
-			),
-			'readMoreText' => array(
+			'displayMode' => array(
 				'type' => 'string',
-				'default' => 'Read More'
+				'default' => 'full'
 			),
 			'maxWidth' => array(
 				'type' => 'number',
@@ -11396,6 +11454,10 @@ return array(
 				'default' => false
 			),
 			'textAlign' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'linkHoverColor' => array(
 				'type' => 'string',
 				'default' => ''
 			),
@@ -11675,306 +11737,6 @@ return array(
 		),
 		'render' => 'file:./render.php'
 	),
-	'post-excerpt' => array(
-		'$schema' => 'https://schemas.wp.org/trunk/block.json',
-		'apiVersion' => 3,
-		'name' => 'blockive-premium-addon-for-block/tb-post-excerpt',
-		'version' => '0.1.0',
-		'title' => 'Post Excerpt',
-		'category' => 'blockive-template',
-		'icon' => 'excerpt-view',
-		'description' => 'Displays the current post\'s excerpt dynamically, with a configurable character limit and Read More link. Blockive Template Builder only.',
-		'usesContext' => array(
-			'postId',
-			'postType'
-		),
-		'textdomain' => 'blockive-premium-addon-for-block',
-		'attributes' => array(
-			'excerptLength' => array(
-				'type' => 'number',
-				'default' => 150
-			),
-			'showReadMore' => array(
-				'type' => 'boolean',
-				'default' => true
-			),
-			'readMoreText' => array(
-				'type' => 'string',
-				'default' => 'Read More'
-			),
-			'textAlign' => array(
-				'type' => 'string',
-				'default' => ''
-			),
-			'bpafbUid' => array(
-				'type' => 'string',
-				'default' => ''
-			),
-			'bpafbDisplay' => array(
-				'type' => 'string',
-				'default' => ''
-			),
-			'bpafbOverflow' => array(
-				'type' => 'string',
-				'default' => ''
-			),
-			'bpafbPosition' => array(
-				'type' => 'string',
-				'default' => ''
-			),
-			'bpafbContainerWidth' => array(
-				'type' => 'number'
-			),
-			'bpafbContainerWidthUnit' => array(
-				'type' => 'string',
-				'default' => 'px'
-			),
-			'bpafbContainerMinHeight' => array(
-				'type' => 'number'
-			),
-			'bpafbContainerMaxHeight' => array(
-				'type' => 'number'
-			),
-			'bpafbContainerBgType' => array(
-				'type' => 'string',
-				'default' => 'color'
-			),
-			'bpafbContainerBgColor' => array(
-				'type' => 'string',
-				'default' => ''
-			),
-			'bpafbContainerBgGradient' => array(
-				'type' => 'string',
-				'default' => ''
-			),
-			'bpafbContainerBgImageUrl' => array(
-				'type' => 'string',
-				'default' => ''
-			),
-			'bpafbContainerBgImageId' => array(
-				'type' => 'number',
-				'default' => 0
-			),
-			'bpafbContainerBgImageSize' => array(
-				'type' => 'string',
-				'default' => 'cover'
-			),
-			'bpafbContainerOverlayColor' => array(
-				'type' => 'string',
-				'default' => ''
-			),
-			'bpafbContainerBorderStyle' => array(
-				'type' => 'string',
-				'default' => 'none'
-			),
-			'bpafbContainerBorderWidth' => array(
-				'type' => 'number'
-			),
-			'bpafbContainerBorderRadius' => array(
-				'type' => 'number'
-			),
-			'bpafbContainerBorderColor' => array(
-				'type' => 'string',
-				'default' => ''
-			),
-			'bpafbContainerBoxShadow' => array(
-				'type' => 'boolean',
-				'default' => false
-			),
-			'bpafbContainerShadowColor' => array(
-				'type' => 'string',
-				'default' => 'rgba(0,0,0,0.15)'
-			),
-			'bpafbContainerShadowBlur' => array(
-				'type' => 'number',
-				'default' => 15
-			),
-			'bpafbContainerShadowSpread' => array(
-				'type' => 'number',
-				'default' => 0
-			),
-			'bpafbContainerHoverBoxShadow' => array(
-				'type' => 'boolean',
-				'default' => false
-			),
-			'bpafbContainerHoverShadowColor' => array(
-				'type' => 'string',
-				'default' => 'rgba(0,0,0,0.15)'
-			),
-			'bpafbContainerHoverShadowBlur' => array(
-				'type' => 'number',
-				'default' => 15
-			),
-			'bpafbContainerHoverShadowSpread' => array(
-				'type' => 'number',
-				'default' => 0
-			),
-			'bpafbHideDesktop' => array(
-				'type' => 'boolean',
-				'default' => false
-			),
-			'bpafbHideTablet' => array(
-				'type' => 'boolean',
-				'default' => false
-			),
-			'bpafbHideMobile' => array(
-				'type' => 'boolean',
-				'default' => false
-			),
-			'bpafbAnimationType' => array(
-				'type' => 'string',
-				'default' => 'none'
-			),
-			'bpafbAnimationDuration' => array(
-				'type' => 'number',
-				'default' => 800
-			),
-			'bpafbAnimationDelay' => array(
-				'type' => 'number',
-				'default' => 0
-			),
-			'bpafbAnimationEasing' => array(
-				'type' => 'string',
-				'default' => 'ease'
-			),
-			'bpafbTransformRotate' => array(
-				'type' => 'number',
-				'default' => 0
-			),
-			'bpafbTransformScale' => array(
-				'type' => 'number',
-				'default' => 100
-			),
-			'bpafbTransformTranslateX' => array(
-				'type' => 'number',
-				'default' => 0
-			),
-			'bpafbTransformTranslateY' => array(
-				'type' => 'number',
-				'default' => 0
-			),
-			'bpafbHoverAnimation' => array(
-				'type' => 'string',
-				'default' => 'none'
-			),
-			'bpafbFloatingEffect' => array(
-				'type' => 'boolean',
-				'default' => false
-			),
-			'bpafbZIndex' => array(
-				'type' => 'number'
-			),
-			'bpafbHtmlId' => array(
-				'type' => 'string',
-				'default' => ''
-			),
-			'bpafbHtmlClasses' => array(
-				'type' => 'string',
-				'default' => ''
-			),
-			'bpafbCustomCss' => array(
-				'type' => 'string',
-				'default' => ''
-			),
-			'bpafbContainerAlign' => array(
-				'type' => 'string',
-				'default' => ''
-			),
-			'bpafbContainerPaddingTop' => array(
-				'type' => 'number'
-			),
-			'bpafbContainerMarginTop' => array(
-				'type' => 'number'
-			),
-			'bpafbContainerPaddingRight' => array(
-				'type' => 'number'
-			),
-			'bpafbContainerMarginRight' => array(
-				'type' => 'number'
-			),
-			'bpafbContainerPaddingBottom' => array(
-				'type' => 'number'
-			),
-			'bpafbContainerMarginBottom' => array(
-				'type' => 'number'
-			),
-			'bpafbContainerPaddingLeft' => array(
-				'type' => 'number'
-			),
-			'bpafbContainerMarginLeft' => array(
-				'type' => 'number'
-			),
-			'bpafbContainerPaddingTopTablet' => array(
-				'type' => 'number'
-			),
-			'bpafbContainerMarginTopTablet' => array(
-				'type' => 'number'
-			),
-			'bpafbContainerPaddingRightTablet' => array(
-				'type' => 'number'
-			),
-			'bpafbContainerMarginRightTablet' => array(
-				'type' => 'number'
-			),
-			'bpafbContainerPaddingBottomTablet' => array(
-				'type' => 'number'
-			),
-			'bpafbContainerMarginBottomTablet' => array(
-				'type' => 'number'
-			),
-			'bpafbContainerPaddingLeftTablet' => array(
-				'type' => 'number'
-			),
-			'bpafbContainerMarginLeftTablet' => array(
-				'type' => 'number'
-			),
-			'bpafbContainerPaddingTopMobile' => array(
-				'type' => 'number'
-			),
-			'bpafbContainerMarginTopMobile' => array(
-				'type' => 'number'
-			),
-			'bpafbContainerPaddingRightMobile' => array(
-				'type' => 'number'
-			),
-			'bpafbContainerMarginRightMobile' => array(
-				'type' => 'number'
-			),
-			'bpafbContainerPaddingBottomMobile' => array(
-				'type' => 'number'
-			),
-			'bpafbContainerMarginBottomMobile' => array(
-				'type' => 'number'
-			),
-			'bpafbContainerPaddingLeftMobile' => array(
-				'type' => 'number'
-			),
-			'bpafbContainerMarginLeftMobile' => array(
-				'type' => 'number'
-			)
-		),
-		'supports' => array(
-			'html' => false,
-			'color' => array(
-				'text' => true
-			),
-			'typography' => array(
-				'fontSize' => true,
-				'lineHeight' => true,
-				'__experimentalFontFamily' => true,
-				'__experimentalFontWeight' => true,
-				'__experimentalFontStyle' => true,
-				'__experimentalTextTransform' => true,
-				'__experimentalTextDecoration' => true,
-				'__experimentalLetterSpacing' => true,
-				'__experimentalDefaultControls' => array(
-					'fontSize' => true
-				)
-			),
-			'anchor' => true
-		),
-		'render' => 'file:./render.php'
-	),
 	'post-meta' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
@@ -12026,6 +11788,10 @@ return array(
 			'showIcons' => array(
 				'type' => 'boolean',
 				'default' => true
+			),
+			'linkHoverColor' => array(
+				'type' => 'string',
+				'default' => ''
 			),
 			'bpafbUid' => array(
 				'type' => 'string',
@@ -12639,6 +12405,10 @@ return array(
 			'inSameTerm' => array(
 				'type' => 'boolean',
 				'default' => false
+			),
+			'linkHoverColor' => array(
+				'type' => 'string',
+				'default' => ''
 			),
 			'bpafbUid' => array(
 				'type' => 'string',
@@ -13528,6 +13298,38 @@ return array(
 				'type' => 'number',
 				'default' => 3
 			),
+			'gridGap' => array(
+				'type' => 'number',
+				'default' => 20
+			),
+			'sliderColumns' => array(
+				'type' => 'number',
+				'default' => 3
+			),
+			'sliderAutoplay' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'sliderAutoplaySpeed' => array(
+				'type' => 'number',
+				'default' => 3000
+			),
+			'sliderLoop' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'sliderShowArrows' => array(
+				'type' => 'boolean',
+				'default' => true
+			),
+			'sliderShowDots' => array(
+				'type' => 'boolean',
+				'default' => true
+			),
+			'sliderSpaceBetween' => array(
+				'type' => 'number',
+				'default' => 20
+			),
 			'orderBy' => array(
 				'type' => 'string',
 				'default' => 'date'
@@ -13550,7 +13352,59 @@ return array(
 			),
 			'showExcerpt' => array(
 				'type' => 'boolean',
-				'default' => false
+				'default' => true
+			),
+			'contentType' => array(
+				'type' => 'string',
+				'default' => 'limited'
+			),
+			'excerptLength' => array(
+				'type' => 'number',
+				'default' => 20
+			),
+			'cardStyle' => array(
+				'type' => 'string',
+				'default' => 'modern'
+			),
+			'cardBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'cardBorderRadius' => array(
+				'type' => 'number',
+				'default' => 16
+			),
+			'cardPadding' => array(
+				'type' => 'number',
+				'default' => 18
+			),
+			'cardHoverElevation' => array(
+				'type' => 'boolean',
+				'default' => true
+			),
+			'imageZoom' => array(
+				'type' => 'boolean',
+				'default' => true
+			),
+			'imageBorderRadius' => array(
+				'type' => 'number',
+				'default' => 12
+			),
+			'titleColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'titleHoverColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'dateColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'excerptColor' => array(
+				'type' => 'string',
+				'default' => ''
 			),
 			'bpafbUid' => array(
 				'type' => 'string',
@@ -13832,6 +13686,10 @@ return array(
 			'badgeStyle' => array(
 				'type' => 'boolean',
 				'default' => false
+			),
+			'linkHoverColor' => array(
+				'type' => 'string',
+				'default' => ''
 			),
 			'bpafbUid' => array(
 				'type' => 'string',

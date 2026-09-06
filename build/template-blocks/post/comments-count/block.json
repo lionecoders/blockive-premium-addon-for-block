@@ -21,6 +21,10 @@
       "type": "string",
       "default": "{count} Comments"
     },
+    "textHoverColor": {
+      "type": "string",
+      "default": ""
+    },
     "isLink": {
       "type": "boolean",
       "default": true

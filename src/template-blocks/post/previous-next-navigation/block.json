@@ -37,6 +37,10 @@
 			"type": "boolean",
 			"default": false
 		},
+		"linkHoverColor": {
+			"type": "string",
+			"default": ""
+		},
 		"bpafbUid": {
 			"type": "string",
 			"default": ""

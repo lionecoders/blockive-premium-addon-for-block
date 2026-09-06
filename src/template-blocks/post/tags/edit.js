@@ -1,6 +1,6 @@
 import { __ } from '@wordpress/i18n';
 import { useBlockProps, InspectorControls } from '@wordpress/block-editor';
-import { PanelBody, TextControl, ToggleControl } from '@wordpress/components';
+import { PanelBody, TextControl, ToggleControl, BaseControl, ColorPalette } from '@wordpress/components';
 
 import InspectorTabs from '../../../components/inspector-tabs';
 import AdvancedTab from '../../../components/advanced-tab';
@@ -13,7 +13,7 @@ const SAMPLE_TAGS = [
 ];
 
 export default function Edit( { attributes, setAttributes } ) {
-	const { separator, badgeStyle } = attributes;
+	const { separator, badgeStyle, linkHoverColor } = attributes;
 
 	const { record, isResolving } = usePreviewContext();
 
@@ -49,6 +49,12 @@ export default function Edit( { attributes, setAttributes } ) {
 				}
 				style={
 					<PanelBody title={ __( 'Colors', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
+						<BaseControl label={ __( 'Link Hover Color', 'blockive-premium-addon-for-block' ) }>
+							<ColorPalette
+								value={ linkHoverColor }
+								onChange={ ( value ) => setAttributes( { linkHoverColor: value } ) }
+							/>
+						</BaseControl>
 						<p className="bpafb-help-text">
 							{ __( 'Text, background and typography options are available in the native Styles panel above.', 'blockive-premium-addon-for-block' ) }
 						</p>

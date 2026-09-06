@@ -4,6 +4,8 @@ import { PanelBody, SelectControl, RangeControl, ToggleControl, BaseControl, Col
 
 import InspectorTabs from '../../../components/inspector-tabs';
 import AdvancedTab from '../../../components/advanced-tab';
+import BorderControls, { getBorderStyles } from '../../../components/border-controls';
+import ShadowControls, { getShadowStyle } from '../../../components/shadow-controls';
 import usePreviewContext, { getEmbeddedFeaturedImageUrl } from '../../shared/use-preview-context';
 
 const SIZE_OPTIONS = [
@@ -45,6 +47,13 @@ export default function Edit( { attributes, setAttributes } ) {
 		isLink,
 		overlayColor,
 		hoverEffect,
+		borderType,
+		borderWidth,
+		borderColor,
+		shadowEnabled,
+		shadowColor,
+		shadowBlur,
+		shadowSpread,
 	} = attributes;
 
 	const { record, isResolving } = usePreviewContext();
@@ -57,6 +66,8 @@ export default function Edit( { attributes, setAttributes } ) {
 			borderRadius: borderRadius ? `${ borderRadius }px` : undefined,
 			overflow: borderRadius ? 'hidden' : undefined,
 			'--bpafb-fi-overlay-color': overlayColor || undefined,
+			'--bpafb-fi-shadow': getShadowStyle( { enabled: shadowEnabled, color: shadowColor, blur: shadowBlur, spread: shadowSpread } ),
+			...getBorderStyles( { borderType, borderWidth, borderColor }, '--bpafb-fi' ),
 		},
 	} );
 
@@ -96,24 +107,43 @@ export default function Edit( { attributes, setAttributes } ) {
 					</PanelBody>
 				}
 				style={
-					<PanelBody title={ __( 'Style', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
-						<RangeControl
-							label={ __( 'Border Radius (px)', 'blockive-premium-addon-for-block' ) }
-							value={ borderRadius }
-							onChange={ ( value ) => setAttributes( { borderRadius: value } ) }
-							min={ 0 }
-							max={ 100 }
-						/>
-						<SelectControl
-							label={ __( 'Hover Effect', 'blockive-premium-addon-for-block' ) }
-							value={ hoverEffect }
-							options={ HOVER_EFFECT_OPTIONS }
-							onChange={ ( value ) => setAttributes( { hoverEffect: value } ) }
-						/>
-						<BaseControl label={ __( 'Overlay Color', 'blockive-premium-addon-for-block' ) }>
-							<ColorPalette value={ overlayColor } onChange={ ( value ) => setAttributes( { overlayColor: value } ) } />
-						</BaseControl>
-					</PanelBody>
+					<>
+						<PanelBody title={ __( 'Style', 'blockive-premium-addon-for-block' ) } initialOpen={ true }>
+							<RangeControl
+								label={ __( 'Border Radius (px)', 'blockive-premium-addon-for-block' ) }
+								value={ borderRadius }
+								onChange={ ( value ) => setAttributes( { borderRadius: value } ) }
+								min={ 0 }
+								max={ 100 }
+							/>
+							<SelectControl
+								label={ __( 'Hover Effect', 'blockive-premium-addon-for-block' ) }
+								value={ hoverEffect }
+								options={ HOVER_EFFECT_OPTIONS }
+								onChange={ ( value ) => setAttributes( { hoverEffect: value } ) }
+							/>
+							<BaseControl label={ __( 'Overlay Color', 'blockive-premium-addon-for-block' ) }>
+								<ColorPalette value={ overlayColor } onChange={ ( value ) => setAttributes( { overlayColor: value } ) } />
+							</BaseControl>
+						</PanelBody>
+						<PanelBody title={ __( 'Border', 'blockive-premium-addon-for-block' ) } initialOpen={ false }>
+							<BorderControls
+								values={ { borderType, borderWidth, borderColor } }
+								onChange={ ( key, value ) => setAttributes( { [ key ]: value } ) }
+								showRadius={ false }
+							/>
+						</PanelBody>
+						<PanelBody title={ __( 'Shadow', 'blockive-premium-addon-for-block' ) } initialOpen={ false }>
+							<ShadowControls
+								hasHover={ false }
+								normalValues={ { enabled: shadowEnabled, color: shadowColor, blur: shadowBlur, spread: shadowSpread } }
+								onNormalChange={ ( key, value ) => {
+									const map = { enabled: 'shadowEnabled', color: 'shadowColor', blur: 'shadowBlur', spread: 'shadowSpread' };
+									setAttributes( { [ map[ key ] ]: value } );
+								} }
+							/>
+						</PanelBody>
+					</>
 				}
 				advanced={ <AdvancedTab attributes={ attributes } setAttributes={ setAttributes } /> }
 			/>

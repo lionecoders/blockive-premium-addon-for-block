@@ -19,6 +19,16 @@ $bpafb_video_url_attr = isset($attributes['videoUrl']) ? trim($attributes['video
 $bpafb_meta_key = isset($attributes['metaKey']) && $attributes['metaKey'] !== '' ? $attributes['metaKey'] : 'featured_video_url';
 $bpafb_auto_detect = !isset($attributes['autoDetect']) || !empty($attributes['autoDetect']);
 $bpafb_aspect_ratio = isset($attributes['aspectRatio']) ? $attributes['aspectRatio'] : '16/9';
+$bpafb_border_radius = isset($attributes['borderRadius']) ? (int) $attributes['borderRadius'] : 0;
+$bpafb_border_type = isset($attributes['borderType']) ? $attributes['borderType'] : 'none';
+$bpafb_border_width = isset($attributes['borderWidth']) ? (int) $attributes['borderWidth'] : 0;
+$bpafb_border_color = isset($attributes['borderColor']) ? $attributes['borderColor'] : '';
+$bpafb_shadow_enabled = !empty($attributes['shadowEnabled']);
+$bpafb_shadow_color = isset($attributes['shadowColor']) && $attributes['shadowColor'] !== ''
+	? $attributes['shadowColor']
+	: 'rgba(0,0,0,0.15)';
+$bpafb_shadow_blur = isset($attributes['shadowBlur']) ? (int) $attributes['shadowBlur'] : 15;
+$bpafb_shadow_spread = isset($attributes['shadowSpread']) ? (int) $attributes['shadowSpread'] : 0;
 
 $bpafb_video_url = '';
 
@@ -55,16 +65,38 @@ if ($bpafb_video_url === '' && $bpafb_video_url_attr !== '') {
 	$bpafb_video_url = $bpafb_video_url_attr;
 }
 
+if ($bpafb_video_url === '') {
+	return;
+}
+
+$bpafb_style_vars = [];
+if ($bpafb_aspect_ratio) {
+	$bpafb_style_vars[] = 'aspect-ratio:' . esc_attr($bpafb_aspect_ratio);
+}
+if ($bpafb_border_radius) {
+	$bpafb_style_vars[] = '--bpafb-fv-border-radius:' . $bpafb_border_radius . 'px';
+}
+if ($bpafb_border_type && $bpafb_border_type !== 'none') {
+	$bpafb_style_vars[] = '--bpafb-fv-border-style:' . esc_attr($bpafb_border_type);
+	$bpafb_style_vars[] = '--bpafb-fv-border-width:' . $bpafb_border_width . 'px';
+	if ($bpafb_border_color) {
+		$bpafb_style_vars[] = '--bpafb-fv-border-color:' . esc_attr($bpafb_border_color);
+	}
+} else {
+	$bpafb_style_vars[] = '--bpafb-fv-border-style:none';
+}
+$bpafb_style_vars[] = '--bpafb-fv-shadow:' . ($bpafb_shadow_enabled
+	? sprintf('0 4px %dpx %dpx %s', $bpafb_shadow_blur, $bpafb_shadow_spread, esc_attr($bpafb_shadow_color))
+	: 'none');
+
 $bpafb_wrapper_attributes = get_block_wrapper_attributes([
 	'class' => 'bpafb-tb-featured-video',
-	'style' => $bpafb_aspect_ratio ? 'aspect-ratio:' . esc_attr($bpafb_aspect_ratio) . ';' : '',
+	'style' => implode(';', $bpafb_style_vars) . ';',
 ]);
 
 echo '<div ' . $bpafb_wrapper_attributes . '>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 
-if ($bpafb_video_url === '') {
-	echo '<div class="bpafb-tb-featured-video-placeholder" aria-hidden="true"></div>';
-} elseif (preg_match('/\.(mp4|webm|ogg)(\?.*)?$/i', $bpafb_video_url)) {
+if (preg_match('/\.(mp4|webm|ogg)(\?.*)?$/i', $bpafb_video_url)) {
 	printf(
 		'<video src="%s" controls preload="metadata" style="width:100%%;height:100%%;"></video>',
 		esc_url($bpafb_video_url)

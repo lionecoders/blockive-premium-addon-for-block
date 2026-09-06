@@ -45,6 +45,33 @@
 			"type": "string",
 			"default": "none"
 		},
+		"borderType": {
+			"type": "string",
+			"default": "none"
+		},
+		"borderWidth": {
+			"type": "number"
+		},
+		"borderColor": {
+			"type": "string",
+			"default": ""
+		},
+		"shadowEnabled": {
+			"type": "boolean",
+			"default": false
+		},
+		"shadowColor": {
+			"type": "string",
+			"default": "rgba(0,0,0,0.15)"
+		},
+		"shadowBlur": {
+			"type": "number",
+			"default": 15
+		},
+		"shadowSpread": {
+			"type": "number",
+			"default": 0
+		},
 		"bpafbUid": {
 			"type": "string",
 			"default": ""
