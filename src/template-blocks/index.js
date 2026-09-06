@@ -15,11 +15,6 @@ import './style.css';
 // Post / Core Template Blocks.
 import './post';
 
-// WooCommerce Template Blocks.
-import './woocommerce';
-
-// Event Template Blocks.
-import './events';
-
-// Universal Dynamic Field Template Block.
-import './dynamic-field';
+// Pro-only Template Blocks (WooCommerce, Events, Dynamic Field): teaser
+// placeholders only, advertising the "(Pro)" feature in the inserter.
+import './pro-teasers';

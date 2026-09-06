@@ -191,10 +191,6 @@ class Bpafb_Template_Blocks
 				$asset['version']
 			);
 		}
-
-		wp_localize_script('bpafb-template-blocks', 'bpafbTemplateBlocks', [
-			'dynamicProviders' => Bpafb_Dynamic_Field_Providers::get_all_for_js(),
-		]);
 	}
 
 	/**

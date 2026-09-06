@@ -45,7 +45,7 @@ Built with performance in mind, our blocks are lightweight and load only the nec
 25. **Blockive Video**: A styled video embed block with a custom cover image, play button design, and lightbox playback.
 
 ### Template Builder Blocks
-Includes over 50+ dynamic blocks specifically designed for the Blockive Template Builder. Easily create custom templates for single posts, archives, events, and full WooCommerce product pages.
+Includes dynamic blocks specifically designed for the Blockive Template Builder. Easily create custom templates for single posts and pages. Archive, Events, and WooCommerce product template blocks are coming in a future Pro release.
 
 == Installation ==
 
