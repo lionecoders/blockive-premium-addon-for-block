@@ -133,7 +133,7 @@ class Blockive_Premium_Addon_For_Block
 	 */
 	public function bpafb_enqueue_global_assets()
 	{
-		wp_enqueue_style('bpafb-font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css', [], '6.5.1'); // phpcs:ignore PluginCheck.CodeAnalysis.EnqueuedResourceOffloading.OffloadedContent
+		wp_enqueue_style('bpafb-font-awesome', BPAFB_URL . 'assets/vendor/fontawesome/css/all.min.css', [], '6.5.1');
 		wp_enqueue_style('bpafb-container-settings', BPAFB_URL . 'assets/css/container-settings.css', [], BPAFB_VERSION);
 		wp_enqueue_script(
 			'bpafb-frontend-animations',
