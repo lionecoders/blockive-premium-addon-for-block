@@ -1,24 +1,33 @@
-import { __ } from '@wordpress/i18n';
+import { __, sprintf } from '@wordpress/i18n';
 import { registerPlugin } from '@wordpress/plugins';
 import { PluginDocumentSettingPanel } from '@wordpress/editor';
 import { PanelRow, SelectControl } from '@wordpress/components';
-import { useSelect } from '@wordpress/data';
 import { useEntityProp } from '@wordpress/core-data';
 
 const TEMPLATE_POST_TYPE = window.bpafbTemplateBuilder?.postType || 'blockive_template';
 
+const FREE_POST_TYPES = [ 'post', 'page' ];
+
+const isFreePostType = ( slug ) => FREE_POST_TYPES.includes( slug );
+
+const postTypeOptions = [
+	{ label: __( 'Post', 'blockive-premium-addon-for-block' ), value: 'post' },
+	{ label: __( 'Page', 'blockive-premium-addon-for-block' ), value: 'page' },
+	{
+		label: sprintf(
+			/* translators: %s: "(Pro)" suffix marking this option as a Pro-only feature. */
+			__( 'Custom Post Type %s', 'blockive-premium-addon-for-block' ),
+			__( '(Pro)', 'blockive-premium-addon-for-block' )
+		),
+		value: 'custom',
+		disabled: true,
+	},
+];
+
 const TemplateSettingsPanel = () => {
 	const [ meta, setMeta ] = useEntityProp( 'postType', TEMPLATE_POST_TYPE, 'meta' );
 
-	const postTypeOptions = useSelect( ( select ) => {
-		const types = select( 'core' ).getPostTypes( { per_page: -1 } );
-		if ( ! types ) {
-			return [ { label: __( 'Post', 'blockive-premium-addon-for-block' ), value: 'post' } ];
-		}
-		return types
-			.filter( ( type ) => type.viewable && type.slug !== TEMPLATE_POST_TYPE && type.slug !== 'attachment' )
-			.map( ( type ) => ( { label: type.labels.singular_name, value: type.slug } ) );
-	}, [] );
+	const templateType = meta?._bpafb_template_type || 'post';
 
 	return (
 		<PluginDocumentSettingPanel
@@ -30,12 +39,17 @@ const TemplateSettingsPanel = () => {
 				<SelectControl
 					label={ __( 'Template Type', 'blockive-premium-addon-for-block' ) }
 					help={ __(
-						'The post type this template is designed for. Template Blocks use it to source live preview data and to know which dynamic fields (e.g. WooCommerce, Events) apply.',
+						'The post type this template is designed for. Template Blocks use it to source live preview data and to know which dynamic fields apply. The free version supports Post and Page templates.',
 						'blockive-premium-addon-for-block'
 					) }
-					value={ meta?._bpafb_template_type || 'post' }
+					value={ templateType }
 					options={ postTypeOptions }
-					onChange={ ( value ) => setMeta( { ...meta, _bpafb_template_type: value } ) }
+					onChange={ ( value ) => {
+						if ( ! isFreePostType( value ) ) {
+							return;
+						}
+						setMeta( { ...meta, _bpafb_template_type: value } );
+					} }
 				/>
 			</PanelRow>
 		</PluginDocumentSettingPanel>
@@ -47,3 +61,4 @@ export default function registerTemplateSettingsPanel() {
 		render: TemplateSettingsPanel,
 	} );
 }
+

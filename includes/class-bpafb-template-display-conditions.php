@@ -26,6 +26,20 @@ class Bpafb_Template_Display_Conditions
 	const META_HIDE_COMMENTS  = '_bpafb_hide_comments';
 
 	/**
+	 * Whether the "specific posts/pages" display condition scope is
+	 * available in this build. Free version templates can only apply to
+	 * "All" of their target post type; a Pro build flips this on via the
+	 * `bpafb_specific_display_condition_enabled` filter - the single source
+	 * of truth shared by the editor UI and the frontend matcher.
+	 *
+	 * @return bool
+	 */
+	public static function is_specific_scope_enabled()
+	{
+		return (bool) apply_filters('bpafb_specific_display_condition_enabled', false);
+	}
+
+	/**
 	 * Constructor.
 	 */
 	public function __construct()
@@ -124,6 +138,14 @@ class Bpafb_Template_Display_Conditions
 	 */
 	public static function get_matching_template_id($post_type, $post_id)
 	{
+		// Templates for anything beyond the free post types are a Pro
+		// feature. Existing templates keep their saved Template Type (the
+		// data is never rewritten) - they simply don't take over the
+		// frontend until Pro unlocks the type.
+		if (!Bpafb_Template_Post_Type::is_free_template_type($post_type)) {
+			return 0;
+		}
+
 		$meta_query = ('post' === $post_type)
 			? [
 				'relation' => 'OR',
@@ -167,6 +189,14 @@ class Bpafb_Template_Display_Conditions
 			$scope    = empty($scope) ? 'all' : $scope;
 			$priority = get_post_meta($template->ID, self::META_PRIORITY, true);
 			$priority = ($priority === '' || $priority === false) ? 10 : (int) $priority;
+
+			// A saved "specific" scope (e.g. from a prior Pro install) never
+			// takes effect in the free version - falls through to "all"
+			// matching instead of being skipped outright, same as any other
+			// template with scope "all".
+			if ($scope === 'specific' && !self::is_specific_scope_enabled()) {
+				$scope = 'all';
+			}
 
 			if ($scope === 'all') {
 				if (!$best_all || $priority < $best_all['priority']) {

@@ -17,6 +17,49 @@ class Bpafb_Template_Post_Type
 	const POST_TYPE = 'blockive_template';
 
 	/**
+	 * Post types a template may target in the free version. Every other
+	 * viewable post type (WooCommerce products, event CPTs, any custom post
+	 * type a site registers, ...) is a Pro feature: the Template Type
+	 * control lists those options with a "(Pro)" suffix but disables them,
+	 * and get_matching_template_id() won't apply a template to them on the
+	 * frontend.
+	 *
+	 * @var string[]
+	 */
+	const FREE_TEMPLATE_TYPES = ['post', 'page'];
+
+	/**
+	 * Returns the post types a template may target in this build. A Pro
+	 * build unlocks the rest by returning every viewable post type from the
+	 * `bpafb_free_template_types` filter - this is the single source of
+	 * truth shared by the editor UI, the list table, and the frontend
+	 * renderer, so unlocking happens in exactly one place.
+	 *
+	 * @return string[] Post type slugs.
+	 */
+	public static function get_free_template_types()
+	{
+		$types = apply_filters('bpafb_free_template_types', self::FREE_TEMPLATE_TYPES);
+
+		if (!is_array($types)) {
+			return self::FREE_TEMPLATE_TYPES;
+		}
+
+		return array_values(array_filter(array_map('strval', $types)));
+	}
+
+	/**
+	 * Whether a template targeting the given post type is available without Pro.
+	 *
+	 * @param string $post_type Post type slug.
+	 * @return bool
+	 */
+	public static function is_free_template_type($post_type)
+	{
+		return in_array((string) $post_type, self::get_free_template_types(), true);
+	}
+
+	/**
 	 * Constructor.
 	 */
 	public function __construct()
@@ -133,7 +176,17 @@ class Bpafb_Template_Post_Type
 		$post_type_obj  = get_post_type_object($post_type_slug);
 
 		if ('bpafb_template_type' === $column) {
-			echo esc_html($post_type_obj ? $post_type_obj->labels->singular_name : $post_type_slug);
+			$type_label = $post_type_obj ? $post_type_obj->labels->singular_name : $post_type_slug;
+
+			if (!self::is_free_template_type($post_type_slug)) {
+				$type_label = sprintf(
+					/* translators: %s: post type name, e.g. "Product". */
+					__('%s (Pro)', 'blockive-premium-addon-for-block'),
+					$type_label
+				);
+			}
+
+			echo esc_html($type_label);
 			return;
 		}
 

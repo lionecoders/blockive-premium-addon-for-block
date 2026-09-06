@@ -60,7 +60,9 @@ class Bpafb_Template_Builder
 		}
 
 		wp_localize_script('bpafb-template-builder', 'bpafbTemplateBuilder', [
-			'postType' => Bpafb_Template_Post_Type::POST_TYPE,
+			'postType'             => Bpafb_Template_Post_Type::POST_TYPE,
+			'freePostTypes'        => Bpafb_Template_Post_Type::get_free_template_types(),
+			'specificScopeEnabled' => Bpafb_Template_Display_Conditions::is_specific_scope_enabled(),
 		]);
 	}
 }

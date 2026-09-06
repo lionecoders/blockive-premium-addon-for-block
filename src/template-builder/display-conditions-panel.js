@@ -2,33 +2,22 @@ import { __, sprintf } from '@wordpress/i18n';
 import { registerPlugin } from '@wordpress/plugins';
 import { PluginDocumentSettingPanel } from '@wordpress/editor';
 import { PanelRow, SelectControl, TextControl, ToggleControl } from '@wordpress/components';
-import { Icon, lock } from '@wordpress/icons';
-import { useSelect, useDispatch } from '@wordpress/data';
+import { useSelect } from '@wordpress/data';
 import { useEntityProp } from '@wordpress/core-data';
-import { useEffect } from '@wordpress/element';
 
 const TEMPLATE_POST_TYPE = window.bpafbTemplateBuilder?.postType || 'blockive_template';
-const PRO_DISPLAY_CONDITION_LOCK = 'bpafb_pro_display_condition_lock';
+
+// Mirrors Bpafb_Template_Display_Conditions::is_specific_scope_enabled() -
+// the PHP side stays the single source of truth, this is only its
+// localized copy.
+const SPECIFIC_SCOPE_ENABLED = !! window.bpafbTemplateBuilder?.specificScopeEnabled;
 
 const DisplayConditionsPanel = () => {
 	const [ meta, setMeta ] = useEntityProp( 'postType', TEMPLATE_POST_TYPE, 'meta' );
-	const { lockPostSaving, unlockPostSaving } = useDispatch( 'core/editor' );
 
 	const targetPostType = meta?._bpafb_template_type || 'post';
 	const scope = meta?._bpafb_display_condition_scope || 'all';
 	const priority = Number.isFinite( meta?._bpafb_template_priority ) ? meta._bpafb_template_priority : 10;
-
-	useEffect( () => {
-		if ( scope === 'specific' ) {
-			lockPostSaving( PRO_DISPLAY_CONDITION_LOCK );
-		} else {
-			unlockPostSaving( PRO_DISPLAY_CONDITION_LOCK );
-		}
-
-		return () => {
-			unlockPostSaving( PRO_DISPLAY_CONDITION_LOCK );
-		};
-	}, [ scope, lockPostSaving, unlockPostSaving ] );
 
 	const targetPostTypeLabel = useSelect(
 		( select ) => select( 'core' ).getPostType( targetPostType )?.labels?.name || targetPostType,
@@ -55,34 +44,27 @@ const DisplayConditionsPanel = () => {
 							value: 'all',
 						},
 						{
-							label: sprintf(
-								/* translators: %s: "(Pro)" suffix marking this option as a Pro-only feature. */
-								__( 'Specific posts %s', 'blockive-premium-addon-for-block' ),
-								__( '(Pro)', 'blockive-premium-addon-for-block' )
-							),
+							label: SPECIFIC_SCOPE_ENABLED
+								? __( 'Specific posts', 'blockive-premium-addon-for-block' )
+								: sprintf(
+									/* translators: %s: "(Pro)" suffix marking this option as a Pro-only feature. */
+									__( 'Specific posts %s', 'blockive-premium-addon-for-block' ),
+									__( '(Pro)', 'blockive-premium-addon-for-block' )
+								),
 							value: 'specific',
+							disabled: ! SPECIFIC_SCOPE_ENABLED,
 						},
 					] }
-					onChange={ ( value ) => setMeta( { ...meta, _bpafb_display_condition_scope: value } ) }
+					onChange={ ( value ) => {
+						// Disabled options can't be picked, but guard anyway so
+						// the meta can never be set to "specific" from here.
+						if ( 'specific' === value && ! SPECIFIC_SCOPE_ENABLED ) {
+							return;
+						}
+						setMeta( { ...meta, _bpafb_display_condition_scope: value } );
+					} }
 				/>
 			</PanelRow>
-
-			{ scope === 'specific' && (
-				<PanelRow>
-					<div className="bpafb-pro-notice">
-						<Icon icon={ lock } className="bpafb-pro-notice__icon" />
-						<div className="bpafb-pro-notice__body">
-							<span className="bpafb-pro-notice__badge">{ __( 'PRO', 'blockive-premium-addon-for-block' ) }</span>
-							<p className="bpafb-pro-notice__text">
-								{ __(
-									'Applying a template to specific posts or pages is available in the Pro version.',
-									'blockive-premium-addon-for-block'
-								) }
-							</p>
-						</div>
-					</div>
-				</PanelRow>
-			) }
 
 			<PanelRow>
 				<TextControl
