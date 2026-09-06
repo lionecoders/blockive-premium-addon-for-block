@@ -26,6 +26,18 @@ const SAMPLE_VALUES = {
 	readingTime: __( '4 min read', 'blockive-premium-addon-for-block' ),
 };
 
+// Mirrors the icon assigned to each item key in Bpafb_Post_Meta_Items::get_html()
+// (includes/class-bpafb-post-meta-items.php) so the editor preview matches the
+// frontend exactly instead of falling back to a generic icon.
+const ICONS = {
+	date: 'fa-regular fa-calendar',
+	author: 'fa-regular fa-user',
+	categories: 'fa-regular fa-folder',
+	tags: 'fa-solid fa-tags',
+	comments: 'fa-regular fa-comment',
+	readingTime: 'fa-regular fa-clock',
+};
+
 /**
  * Minimal HTML5 drag-and-drop reorderable list. @wordpress/components has no
  * built-in sortable list, so this implements just enough drag-and-drop to
@@ -137,7 +149,7 @@ export default function Edit( { attributes, setAttributes } ) {
 				{ enabledItems.map( ( item, index ) => (
 					<span className="bpafb-tb-post-meta-item" key={ item.key }>
 						{ index > 0 && separator && <span className="bpafb-tb-post-meta-sep">{ separator }</span> }
-						{ showIcons && <i className={ `fa-regular fa-${ item.key === 'date' ? 'calendar' : 'circle' }` } /> }
+						{ showIcons && <i className={ ICONS[ item.key ] || 'fa-regular fa-circle' } /> }
 						{ ' ' }
 						{ previewValue( item.key ) }
 					</span>

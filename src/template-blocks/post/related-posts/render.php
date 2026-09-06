@@ -51,6 +51,13 @@ $bpafb_title_color           = isset($attributes['titleColor']) ? $attributes['t
 $bpafb_title_hover_color     = Bpafb_Template_Block_Render::sanitize_css_color(
 	isset($attributes['titleHoverColor']) ? $attributes['titleHoverColor'] : ''
 );
+$bpafb_title_font_family     = isset($attributes['titleFontFamily']) ? $attributes['titleFontFamily'] : '';
+$bpafb_title_font_size       = isset($attributes['titleFontSize']) ? $attributes['titleFontSize'] : null;
+$bpafb_title_font_weight     = isset($attributes['titleFontWeight']) ? $attributes['titleFontWeight'] : '';
+$bpafb_title_line_height     = isset($attributes['titleLineHeight']) ? $attributes['titleLineHeight'] : null;
+$bpafb_title_letter_spacing  = isset($attributes['titleLetterSpacing']) ? $attributes['titleLetterSpacing'] : null;
+$bpafb_title_text_transform  = isset($attributes['titleTextTransform']) ? $attributes['titleTextTransform'] : '';
+$bpafb_title_text_decoration = isset($attributes['titleTextDecoration']) ? $attributes['titleTextDecoration'] : '';
 $bpafb_date_color            = isset($attributes['dateColor']) ? $attributes['dateColor'] : '';
 $bpafb_excerpt_color         = isset($attributes['excerptColor']) ? $attributes['excerptColor'] : '';
 $bpafb_uid                   = !empty($attributes['bpafbUid']) ? sanitize_html_class($attributes['bpafbUid']) : '';
@@ -191,6 +198,27 @@ if ($bpafb_title_color) {
 }
 if ($bpafb_title_hover_color) {
 	$bpafb_styles[] = '--bpafb-rp-title-hover-color:' . esc_attr($bpafb_title_hover_color) . ';';
+}
+if ($bpafb_title_font_family) {
+	$bpafb_styles[] = '--bpafb-rp-title-font-family:' . esc_attr($bpafb_title_font_family) . ';';
+}
+if ($bpafb_title_font_size !== null) {
+	$bpafb_styles[] = '--bpafb-rp-title-font-size:' . (float) $bpafb_title_font_size . 'px;';
+}
+if ($bpafb_title_font_weight) {
+	$bpafb_styles[] = '--bpafb-rp-title-font-weight:' . esc_attr($bpafb_title_font_weight) . ';';
+}
+if ($bpafb_title_line_height !== null) {
+	$bpafb_styles[] = '--bpafb-rp-title-line-height:' . (float) $bpafb_title_line_height . ';';
+}
+if ($bpafb_title_letter_spacing !== null) {
+	$bpafb_styles[] = '--bpafb-rp-title-letter-spacing:' . (float) $bpafb_title_letter_spacing . 'px;';
+}
+if ($bpafb_title_text_transform) {
+	$bpafb_styles[] = '--bpafb-rp-title-text-transform:' . esc_attr($bpafb_title_text_transform) . ';';
+}
+if ($bpafb_title_text_decoration) {
+	$bpafb_styles[] = '--bpafb-rp-title-text-decoration:' . esc_attr($bpafb_title_text_decoration) . ';';
 }
 if ($bpafb_date_color) {
 	$bpafb_styles[] = '--bpafb-rp-date-color:' . esc_attr($bpafb_date_color) . ';';

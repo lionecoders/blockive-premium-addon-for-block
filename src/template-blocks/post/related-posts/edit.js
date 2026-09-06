@@ -5,6 +5,7 @@ import { PanelBody, RangeControl, SelectControl, ToggleControl } from '@wordpres
 import InspectorTabs from '../../../components/inspector-tabs';
 import AdvancedTab from '../../../components/advanced-tab';
 import ColorStateControls from '../../../components/color-state-controls';
+import TypographyControls, { getTypographyStyles } from '../../../components/typography-controls';
 
 const LAYOUT_OPTIONS = [
 	{ label: __( 'Grid', 'blockive-premium-addon-for-block' ), value: 'grid' },
@@ -64,6 +65,13 @@ export default function Edit( { attributes, setAttributes } ) {
 		imageBorderRadius = 12,
 		titleColor,
 		titleHoverColor,
+		titleFontFamily,
+		titleFontSize,
+		titleFontWeight,
+		titleLineHeight,
+		titleLetterSpacing,
+		titleTextTransform,
+		titleTextDecoration,
 		dateColor,
 		excerptColor,
 	} = attributes;
@@ -90,6 +98,18 @@ export default function Edit( { attributes, setAttributes } ) {
 		'--bpafb-rp-title-hover-color': titleHoverColor || undefined,
 		'--bpafb-rp-date-color': dateColor || undefined,
 		'--bpafb-rp-excerpt-color': excerptColor || undefined,
+		...getTypographyStyles(
+			{
+				fontFamily: titleFontFamily,
+				fontSize: titleFontSize,
+				fontWeight: titleFontWeight,
+				lineHeight: titleLineHeight,
+				letterSpacing: titleLetterSpacing,
+				textTransform: titleTextTransform,
+				textDecoration: titleTextDecoration,
+			},
+			'--bpafb-rp-title'
+		),
 	};
 
 	const blockProps = useBlockProps( {
@@ -318,6 +338,18 @@ export default function Edit( { attributes, setAttributes } ) {
 							/>
 						</PanelBody>
 						<PanelBody title={ __( 'Typography & Colors', 'blockive-premium-addon-for-block' ) } initialOpen={ false }>
+							<TypographyControls
+								values={ {
+									fontFamily: titleFontFamily,
+									fontSize: titleFontSize,
+									fontWeight: titleFontWeight,
+									lineHeight: titleLineHeight,
+									letterSpacing: titleLetterSpacing,
+									textTransform: titleTextTransform,
+									textDecoration: titleTextDecoration,
+								} }
+								onChange={ ( key, value ) => setAttributes( { [ `title${ key.charAt( 0 ).toUpperCase() }${ key.slice( 1 ) }` ]: value } ) }
+							/>
 							<ColorStateControls
 								normal={ [
 									{

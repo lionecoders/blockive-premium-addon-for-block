@@ -9,6 +9,11 @@
 	margin-right: 0.35em;
 }
 
+.bpafb-tb-post-meta a {
+	color: inherit !important;
+	text-decoration: none !important;
+}
+
 .bpafb-tb-post-meta-sep {
 	opacity: 0.5;
 	margin-right: 0.35em;

@@ -151,16 +151,19 @@
 
 .bpafb-tb-related-post-title {
 	margin: 0 0 8px;
-	font-size: 1.125rem;
-	font-weight: 700;
-	line-height: 1.4;
+	font-family: var( --bpafb-rp-title-font-family, inherit );
+	font-size: var( --bpafb-rp-title-font-size, 1.125rem );
+	font-weight: var( --bpafb-rp-title-font-weight, 700 );
+	line-height: var( --bpafb-rp-title-line-height, 1.4 );
+	letter-spacing: var( --bpafb-rp-title-letter-spacing, normal );
+	text-transform: var( --bpafb-rp-title-text-transform, none );
 	word-break: break-word;
 	overflow-wrap: break-word;
 }
 
 .bpafb-tb-related-post-title a {
-	color: var( --bpafb-rp-title-color, #0f172a );
-	text-decoration: none;
+	color: var( --bpafb-rp-title-color, #0f172a ) !important;
+	text-decoration: var( --bpafb-rp-title-text-decoration, none ) !important;
 	transition: color 0.2s ease;
 }
 

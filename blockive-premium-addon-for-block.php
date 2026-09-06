@@ -59,6 +59,7 @@ class Blockive_Premium_Addon_For_Block
 		add_action('init', [$this, 'bpafb_register_blocks']);
 		add_action('enqueue_block_assets', [$this, 'bpafb_enqueue_global_assets']);
 		add_action('enqueue_block_editor_assets', [$this, 'bpafb_enqueue_editor_assets']);
+		add_action('wp_enqueue_scripts', [$this, 'bpafb_enqueue_frontend_block_spacing']);
 		add_filter('render_block', [$this, 'bpafb_render_block_container'], 10, 2);
 		add_filter('render_block', [$this, 'bpafb_inject_faq_schema'], 10, 3);
 		add_filter('content_save_pre', [$this, 'bpafb_strip_unauthorized_custom_css']);
@@ -141,6 +142,53 @@ class Blockive_Premium_Addon_For_Block
 			[],
 			BPAFB_VERSION,
 			true
+		);
+	}
+
+	/**
+	 * Gives every Blockive block a default top margin on the frontend,
+	 * matching the ~24px gap the block editor already shows between blocks
+	 * via Gutenberg's own "block gap" layout support.
+	 *
+	 * That editor spacing comes from a mechanism
+	 * (`.is-layout-flow > * + * { margin-block-start: ... }`) that never
+	 * reaches the frontend on a classic theme, and none of this plugin's
+	 * blocks are semantic elements (they're all plain `<div>`s), so - unlike
+	 * a paragraph or heading, which gets a real margin from the browser's
+	 * own default stylesheet - two Blockive blocks placed directly next to
+	 * each other rendered with zero space between them, even though the
+	 * editor always showed a normal-looking gap.
+	 *
+	 * Mirrors Gutenberg's own selector shape - `previous + current`, adding
+	 * margin-top to the second block rather than margin-bottom to the
+	 * first - deliberately, not `margin-bottom` on every block: adjacent
+	 * vertical margins collapse to whichever is larger, not their sum, so a
+	 * block that deliberately zeroes its own margin (Post Title, Featured
+	 * Image both use `margin: 0`) would otherwise cancel out a
+	 * margin-bottom contributed by the block above it, leaving the block
+	 * that actually wants the gap (e.g. Related Posts, which sets no margin
+	 * of its own) stuck flush against it. Putting the margin on the
+	 * following block's own margin-top instead means it collapses against
+	 * whatever the previous block contributes and still wins (24 > 0)
+	 * regardless of which side of the pair had the explicit override.
+	 * `:where()` carries zero specificity, so a block that sets its own
+	 * margin-top still overrides this either way, on both sides of the
+	 * pair.
+	 *
+	 * Hooked to `wp_enqueue_scripts`, which - unlike `enqueue_block_assets`
+	 * - never fires in wp-admin and is never mirrored into the block
+	 * editor's iframed canvas, so this can't double up with the editor's
+	 * own block-gap spacing.
+	 */
+	public function bpafb_enqueue_frontend_block_spacing()
+	{
+		wp_register_style('bpafb-frontend-block-spacing', false, [], BPAFB_VERSION);
+		wp_enqueue_style('bpafb-frontend-block-spacing');
+		wp_add_inline_style(
+			'bpafb-frontend-block-spacing',
+			':where([class*="wp-block-blockive-premium-addon-for-block-"])'
+				. ' + :where([class*="wp-block-blockive-premium-addon-for-block-"])'
+				. ' { margin-top: 24px; }'
 		);
 	}
 

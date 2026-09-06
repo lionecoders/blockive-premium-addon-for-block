@@ -13398,6 +13398,31 @@ return array(
 				'type' => 'string',
 				'default' => ''
 			),
+			'titleFontFamily' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'titleFontSize' => array(
+				'type' => 'number'
+			),
+			'titleFontWeight' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'titleLineHeight' => array(
+				'type' => 'number'
+			),
+			'titleLetterSpacing' => array(
+				'type' => 'number'
+			),
+			'titleTextTransform' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'titleTextDecoration' => array(
+				'type' => 'string',
+				'default' => ''
+			),
 			'dateColor' => array(
 				'type' => 'string',
 				'default' => ''

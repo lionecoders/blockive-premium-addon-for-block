@@ -53,7 +53,22 @@ class Bpafb_Template_Blocks
 	}
 
 	/**
-	 * Enqueues the Template Blocks' combined frontend stylesheet.
+	 * Enqueues the Template Blocks' combined stylesheet - on the frontend,
+	 * and also on the Template Builder screen despite it being an admin
+	 * screen.
+	 *
+	 * That second part matters: the block editor renders block content
+	 * inside a separate iframe (`editor-canvas`) for style isolation, and
+	 * WordPress only mirrors styles into that iframe when they're enqueued
+	 * via `enqueue_block_assets` (this method's hook) - NOT via
+	 * `enqueue_block_editor_assets` (see enqueue_editor_assets() below,
+	 * which is correct for the JS bundle but was previously also loading
+	 * these same stylesheets there, where they only ever reached the outer
+	 * admin document and never the iframe actually rendering block preview
+	 * markup). So this method has to run on the Template Builder screen
+	 * too, not skip it via a blanket is_admin() check, or every block's
+	 * appearance in the editor silently falls back to unstyled HTML while
+	 * the frontend renders correctly.
 	 *
 	 * Every Template Block shares one JS bundle (see enqueue_editor_assets())
 	 * so its styles are bundled together too, rather than one CSS file per
@@ -65,7 +80,7 @@ class Bpafb_Template_Blocks
 	 */
 	public function enqueue_frontend_style()
 	{
-		if (is_admin()) {
+		if (is_admin() && !Bpafb_Screen_Helper::is_template_editor()) {
 			return;
 		}
 
@@ -189,23 +204,10 @@ class Bpafb_Template_Blocks
 			true
 		);
 
-		if (file_exists(BPAFB_PATH . 'build/template-blocks/index.css')) {
-			wp_enqueue_style(
-				'bpafb-template-blocks-editor',
-				BPAFB_URL . 'build/template-blocks/index.css',
-				['wp-components'],
-				$asset['version']
-			);
-		}
-
-		if (file_exists(BPAFB_PATH . 'build/template-blocks/style-index.css')) {
-			wp_enqueue_style(
-				'bpafb-template-blocks-style',
-				BPAFB_URL . 'build/template-blocks/style-index.css',
-				['wp-components'],
-				$asset['version']
-			);
-		}
+		// Block appearance CSS is handled by enqueue_frontend_style() (hooked
+		// to enqueue_block_assets), not here - see that method's docblock for
+		// why: only that hook gets its styles mirrored into the block
+		// editor's iframed canvas, where these blocks actually render.
 	}
 
 	/**

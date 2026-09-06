@@ -125,6 +125,31 @@
 			"type": "string",
 			"default": ""
 		},
+		"titleFontFamily": {
+			"type": "string",
+			"default": ""
+		},
+		"titleFontSize": {
+			"type": "number"
+		},
+		"titleFontWeight": {
+			"type": "string",
+			"default": ""
+		},
+		"titleLineHeight": {
+			"type": "number"
+		},
+		"titleLetterSpacing": {
+			"type": "number"
+		},
+		"titleTextTransform": {
+			"type": "string",
+			"default": ""
+		},
+		"titleTextDecoration": {
+			"type": "string",
+			"default": ""
+		},
 		"dateColor": {
 			"type": "string",
 			"default": ""
