@@ -20,11 +20,17 @@ export function getSafeUrl( url, { allowedProtocols = DEFAULT_ALLOWED_PROTOCOLS,
 
 	const trimmed = url.trim();
 
-	if ( trimmed.startsWith( '/' ) || ( allowAnchor && trimmed.startsWith( '#' ) ) ) {
+	// Browsers strip tab/newline/CR from a URL anywhere in the string before
+	// parsing it (per the WHATWG URL spec), so "java\tscript:" is navigated
+	// to as "javascript:" even though it doesn't match the scheme regex
+	// below as-is. Stripping them first closes that evasion.
+	const stripped = trimmed.replace( /[\t\n\r]/g, '' );
+
+	if ( stripped.startsWith( '/' ) || ( allowAnchor && stripped.startsWith( '#' ) ) ) {
 		return url;
 	}
 
-	const schemeMatch = trimmed.match( /^([a-zA-Z][a-zA-Z0-9+.-]*:)/ );
+	const schemeMatch = stripped.match( /^([a-zA-Z][a-zA-Z0-9+.-]*:)/ );
 
 	if ( ! schemeMatch ) {
 		return url;
