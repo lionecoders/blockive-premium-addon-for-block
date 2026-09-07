@@ -62,17 +62,16 @@ export default function Edit({ attributes, setAttributes }) {
 	// Handle Repeater Item Update
 	const updateItem = (index, key, value) => {
 		const newItems = [...items];
-		newItems[index][key] = value;
-		
+		newItems[index] = { ...newItems[index], [key]: value };
+
 		// Auto-update icon and color if network changes
 		if (key === 'network') {
 			const preset = PREDEFINED_NETWORKS.find(n => n.value === value);
 			if (preset) {
-				newItems[index].icon = preset.icon;
-				newItems[index].color = preset.color;
+				newItems[index] = { ...newItems[index], icon: preset.icon, color: preset.color };
 			}
 		}
-		
+
 		setAttributes({ items: newItems });
 	};
 

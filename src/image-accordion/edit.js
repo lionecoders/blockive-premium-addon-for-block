@@ -21,6 +21,7 @@ import { useState } from '@wordpress/element';
 
 import InspectorTabs from '../components/inspector-tabs';
 import AdvancedTab from '../components/advanced-tab';
+import { getSafeUrl } from '../utils/safe-url';
 
 export default function Edit({ attributes, setAttributes }) {
 	const {
@@ -222,7 +223,7 @@ export default function Edit({ attributes, setAttributes }) {
 								}
 							}}
 							style={{
-								backgroundImage: item.imageUrl ? `url(${item.imageUrl})` : 'none',
+								backgroundImage: item.imageUrl ? `url(${getSafeUrl(item.imageUrl, { allowAnchor: false })})` : 'none',
 							}}
 						>
 							<div className="bpafb-image-accordion-content">

@@ -3,11 +3,11 @@ import {
 	useBlockProps,
 	MediaUpload,
 	MediaUploadCheck,
-	RichText,
 } from '@wordpress/block-editor';
 import {
 	PanelBody,
 	TextControl,
+	TextareaControl,
 	Button,
 	SelectControl,
 	ToggleControl,
@@ -100,6 +100,7 @@ export default function Edit({ attributes, setAttributes }) {
 	};
 
 	const removeTestimonial = (index) => {
+		if (testimonials.length <= 1) return;
 		const newTestimonials = testimonials.filter((_, i) => i !== index);
 		setAttributes({ testimonials: newTestimonials });
 		setActiveIndex(0);
@@ -122,6 +123,11 @@ export default function Edit({ attributes, setAttributes }) {
 							label={__('Designation', 'blockive-premium-addon-for-block')}
 							value={testimonial.designation}
 							onChange={(val) => updateTestimonial(index, 'designation', val)}
+						/>
+						<TextareaControl
+							label={__('Testimonial Content', 'blockive-premium-addon-for-block')}
+							value={testimonial.content}
+							onChange={(val) => updateTestimonial(index, 'content', val)}
 						/>
 						<div style={{ marginBottom: '10px' }}>
 							<MediaUploadCheck>
@@ -151,7 +157,7 @@ export default function Edit({ attributes, setAttributes }) {
 							min={1}
 							max={5}
 						/>
-						<Button isDestructive onClick={() => removeTestimonial(index)} size="small">
+						<Button isDestructive onClick={() => removeTestimonial(index)} size="small" disabled={testimonials.length <= 1}>
 							{__('Remove', 'blockive-premium-addon-for-block')}
 						</Button>
 					</div>

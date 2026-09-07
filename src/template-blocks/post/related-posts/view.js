@@ -5,7 +5,11 @@ import { Navigation, Pagination, Autoplay } from 'swiper/modules';
  * Frontend hydration for the Related Posts block's Slider layout.
  */
 function initRelatedPostsSliders() {
-	const sliders = document.querySelectorAll( '.bpafb-tb-related-posts-slider' );
+	// The block's own wrapper also carries a "bpafb-tb-related-posts-slider"
+	// class (added for the slider layout alongside the "-grid" variant used
+	// for the grid layout) - .swiper narrows this to the actual Swiper
+	// container nested inside it, not that outer wrapper.
+	const sliders = document.querySelectorAll( '.bpafb-tb-related-posts-slider.swiper' );
 
 	sliders.forEach( ( sliderEl ) => {
 		if ( sliderEl.dataset.bpafbSwiperInitialized ) {
@@ -31,7 +35,7 @@ function initRelatedPostsSliders() {
 		const swiperInstance = new Swiper( sliderEl, {
 			modules,
 			slidesPerView: 1,
-			spaceBetween: Math.min( spaceBetween, 15 ),
+			spaceBetween,
 			loop: isLoop,
 			autoplay: isAutoplay
 				? {
@@ -55,7 +59,7 @@ function initRelatedPostsSliders() {
 			breakpoints: {
 				640: {
 					slidesPerView: Math.min( 2, slidesPerView ),
-					spaceBetween: Math.min( spaceBetween, 15 ),
+					spaceBetween,
 				},
 				1024: {
 					slidesPerView: slidesPerView,

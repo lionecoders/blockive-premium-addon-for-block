@@ -49,29 +49,35 @@ export default function Edit({ attributes, setAttributes }) {
 	useEffect(() => {
 		if (!targetDate) return;
 		const target = new Date(targetDate).getTime();
-		
+
 		if (isNaN(target)) return;
 
-		const now = new Date().getTime();
-		const distance = target - now;
+		const updateTimeLeft = () => {
+			const now = new Date().getTime();
+			const distance = target - now;
 
-		if (distance <= 0) {
-			setTimeLeft({ days: '00', hours: '00', minutes: '00', seconds: '00' });
-			return;
-		}
+			if (distance <= 0) {
+				setTimeLeft({ days: '00', hours: '00', minutes: '00', seconds: '00' });
+				return;
+			}
 
-		const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-		const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-		const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-		const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+			const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+			const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+			const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+			const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-		setTimeLeft({
-			days: days < 10 ? '0' + days : days,
-			hours: hours < 10 ? '0' + hours : hours,
-			minutes: minutes < 10 ? '0' + minutes : minutes,
-			seconds: seconds < 10 ? '0' + seconds : seconds,
-		});
+			setTimeLeft({
+				days: days < 10 ? '0' + days : days,
+				hours: hours < 10 ? '0' + hours : hours,
+				minutes: minutes < 10 ? '0' + minutes : minutes,
+				seconds: seconds < 10 ? '0' + seconds : seconds,
+			});
+		};
 
+		updateTimeLeft();
+		const interval = setInterval(updateTimeLeft, 1000);
+
+		return () => clearInterval(interval);
 	}, [targetDate]);
 
 	const customStyles = {

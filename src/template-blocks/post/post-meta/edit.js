@@ -1,6 +1,6 @@
 import { __ } from '@wordpress/i18n';
 import { useBlockProps, InspectorControls } from '@wordpress/block-editor';
-import { PanelBody, ToggleControl, TextControl, BaseControl, ColorPalette } from '@wordpress/components';
+import { PanelBody, ToggleControl, TextControl, BaseControl, ColorPalette, Button } from '@wordpress/components';
 import { useState } from '@wordpress/element';
 
 import InspectorTabs from '../../../components/inspector-tabs';
@@ -81,6 +81,20 @@ function ReorderableItemsList( { items, onChange } ) {
 							const next = items.map( ( it, i ) => ( i === index ? { ...it, enabled: checked } : it ) );
 							onChange( next );
 						} }
+					/>
+					<Button
+						icon="arrow-up-alt2"
+						label={ __( 'Move up', 'blockive-premium-addon-for-block' ) }
+						onClick={ () => moveItem( index, index - 1 ) }
+						disabled={ index === 0 }
+						size="small"
+					/>
+					<Button
+						icon="arrow-down-alt2"
+						label={ __( 'Move down', 'blockive-premium-addon-for-block' ) }
+						onClick={ () => moveItem( index, index + 1 ) }
+						disabled={ index === items.length - 1 }
+						size="small"
 					/>
 				</li>
 			) ) }

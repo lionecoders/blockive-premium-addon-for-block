@@ -75,7 +75,10 @@ const DisplayConditionsPanel = () => {
 						'blockive-premium-addon-for-block'
 					) }
 					value={ priority }
-					onChange={ ( value ) => setMeta( { ...meta, _bpafb_template_priority: parseInt( value, 10 ) || 10 } ) }
+					onChange={ ( value ) => {
+						const parsed = parseInt( value, 10 );
+						setMeta( { ...meta, _bpafb_template_priority: Number.isNaN( parsed ) ? 10 : parsed } );
+					} }
 				/>
 			</PanelRow>
 

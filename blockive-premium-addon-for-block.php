@@ -116,6 +116,44 @@ class Blockive_Premium_Addon_For_Block
 			if ($registry->is_registered($bpafb_tb_data['name'])) {
 				unregister_block_type($bpafb_tb_data['name']);
 			}
+			// The same mis-resolved nested path also breaks any script/style
+			// the block declares (e.g. Related Posts' viewScript): the wrong
+			// first pass above already registered its handle - with an
+			// empty/incorrect URL, since asset resolution fails there too -
+			// and register_block_script_handle()/register_block_style_handle()
+			// silently skip re-registering a handle that already exists. Left
+			// alone, register_block_type() below fixes the block's render
+			// callback but the broken, empty-URL handle is still what ends up
+			// enqueued on the frontend. Deregister first so the correctly
+			// resolved registration below can actually take effect.
+			$bpafb_tb_asset_fields = [
+				'editorScript' => 'script',
+				'script'       => 'script',
+				'viewScript'   => 'script',
+				'editorStyle'  => 'style',
+				'style'        => 'style',
+				'viewStyle'    => 'style',
+			];
+			foreach ($bpafb_tb_asset_fields as $bpafb_tb_field => $bpafb_tb_kind) {
+				if (empty($bpafb_tb_data[$bpafb_tb_field])) {
+					continue;
+				}
+				$bpafb_tb_values = is_array($bpafb_tb_data[$bpafb_tb_field]) ? $bpafb_tb_data[$bpafb_tb_field] : [$bpafb_tb_data[$bpafb_tb_field]];
+				foreach ($bpafb_tb_values as $bpafb_tb_index => $bpafb_tb_value) {
+					// Anything not using the "file:" convention is already a
+					// handle name, not a path - nothing this plugin registered.
+					if (!is_string($bpafb_tb_value) || strpos($bpafb_tb_value, 'file:') !== 0) {
+						continue;
+					}
+					$bpafb_tb_handle = generate_block_asset_handle($bpafb_tb_data['name'], $bpafb_tb_field, $bpafb_tb_index);
+					if ('script' === $bpafb_tb_kind) {
+						wp_deregister_script($bpafb_tb_handle);
+					} else {
+						wp_deregister_style($bpafb_tb_handle);
+					}
+				}
+			}
+
 			register_block_type(dirname($bpafb_tb_json));
 		}
 
