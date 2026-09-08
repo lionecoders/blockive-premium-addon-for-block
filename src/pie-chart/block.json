@@ -3,7 +3,7 @@
 	"apiVersion": 3,
 	"name": "blockive-premium-addon-for-block/pie-chart",
 	"version": "0.1.0",
-	"title": "Blockive Pie Chart",
+	"title": "Pie Chart",
 	"category": "bpafb-widgets",
 	"icon": "chart-pie",
 	"description": "A dynamic pie and donut chart block using Chart.js.",

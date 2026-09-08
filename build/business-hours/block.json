@@ -3,7 +3,7 @@
   "apiVersion": 3,
   "name": "blockive-premium-addon-for-block/business-hours",
   "version": "0.1.0",
-  "title": "Blockive Business Hours",
+  "title": "Business Hours",
   "category": "bpafb-widgets",
   "icon": "clock",
   "description": "Business Hours block to display opening and closing times.",

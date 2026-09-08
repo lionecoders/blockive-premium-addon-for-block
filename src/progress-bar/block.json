@@ -3,7 +3,7 @@
 	"apiVersion": 3,
 	"name": "blockive-premium-addon-for-block/progress-bar",
 	"version": "0.1.0",
-	"title": "Blockive Progress Bar",
+	"title": "Progress Bar",
 	"category": "bpafb-widgets",
 	"icon": "performance",
 	"description": "A premium animated progress bar widget.",

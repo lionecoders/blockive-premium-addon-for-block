@@ -3,7 +3,7 @@
 	"apiVersion": 3,
 	"name": "blockive-premium-addon-for-block/social-icons",
 	"version": "0.1.0",
-	"title": "Blockive Social Icons",
+	"title": "Social Icons",
 	"category": "bpafb-widgets",
 	"icon": "share",
 	"description": "A premium social icons block with customizable controls.",

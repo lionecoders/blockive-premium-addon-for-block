@@ -3,7 +3,7 @@
   "apiVersion": 3,
   "name": "blockive-premium-addon-for-block/pricing-table",
   "version": "0.1.0",
-  "title": "Blockive Pricing Table",
+  "title": "Pricing Table",
   "category": "bpafb-widgets",
   "icon": "money-alt",
   "description": "A fully customizable pricing table block with features list and button.",

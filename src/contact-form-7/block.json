@@ -3,7 +3,7 @@
 	"apiVersion": 3,
 	"name": "blockive-premium-addon-for-block/contact-form-7",
 	"version": "0.1.0",
-	"title": "Blockive Contact Form 7",
+	"title": "Contact Form 7",
 	"category": "bpafb-widgets",
 	"icon": "email-alt",
 	"description": "Contact Form 7 integration block.",

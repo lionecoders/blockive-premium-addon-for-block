@@ -3,7 +3,7 @@
 	"apiVersion": 3,
 	"name": "blockive-premium-addon-for-block/lottie",
 	"version": "0.1.0",
-	"title": "Blockive Lottie",
+	"title": "Lottie",
 	"category": "bpafb-widgets",
 	"icon": "format-image",
 	"description": "Lottie animation player block.",

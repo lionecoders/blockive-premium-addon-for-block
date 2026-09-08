@@ -3,7 +3,7 @@
 	"apiVersion": 3,
 	"name": "blockive-premium-addon-for-block/accordion",
 	"version": "0.1.0",
-	"title": "Blockive Accordion",
+	"title": "Accordion",
 	"category": "bpafb-widgets",
 	"icon": "list-view",
 	"description": "Accordion block with advanced layout and style settings.",

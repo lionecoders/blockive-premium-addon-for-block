@@ -3,7 +3,7 @@
 	"apiVersion": 3,
 	"name": "blockive-premium-addon-for-block/button",
 	"version": "0.1.0",
-	"title": "Blockive Button",
+	"title": "Button",
 	"category": "bpafb-widgets",
 	"icon": "button",
 	"description": "A highly customizable button with icon and badge support.",

@@ -3,7 +3,7 @@
   "apiVersion": 3,
   "name": "blockive-premium-addon-for-block/post-grid",
   "version": "0.1.0",
-  "title": "Blockive Post Grid",
+  "title": "Post Grid",
   "category": "bpafb-widgets",
   "icon": "grid-view",
   "description": "Dynamic post grid/listing block.",

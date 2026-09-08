@@ -3,7 +3,7 @@
 	"apiVersion": 3,
 	"name": "blockive-premium-addon-for-block/drop-caps",
 	"version": "0.1.0",
-	"title": "Blockive Drop Caps",
+	"title": "Drop Caps",
 	"category": "bpafb-widgets",
 	"icon": "editor-textcolor",
 	"description": "Advanced drop caps block with customizable view, shape, and styling.",

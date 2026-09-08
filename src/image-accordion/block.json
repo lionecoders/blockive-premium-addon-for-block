@@ -3,7 +3,7 @@
 	"apiVersion": 3,
 	"name": "blockive-premium-addon-for-block/image-accordion",
 	"version": "0.1.0",
-	"title": "Blockive Image Accordion",
+	"title": "Image Accordion",
 	"category": "bpafb-widgets",
 	"icon": "format-image",
 	"description": "Image accordion block with advanced styling options.",

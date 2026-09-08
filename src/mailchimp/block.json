@@ -3,7 +3,7 @@
 	"apiVersion": 3,
 	"name": "blockive-premium-addon-for-block/mailchimp",
 	"version": "0.1.0",
-	"title": "Blockive MailChimp",
+	"title": "MailChimp",
 	"category": "bpafb-widgets",
 	"icon": "email",
 	"description": "MailChimp newsletter subscription block.",

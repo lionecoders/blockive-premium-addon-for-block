@@ -3,7 +3,7 @@
 	"apiVersion": 3,
 	"name": "blockive-premium-addon-for-block/image-comparison",
 	"version": "0.1.0",
-	"title": "Blockive Image Comparison",
+	"title": "Image Comparison",
 	"category": "bpafb-widgets",
 	"icon": "format-image",
 	"description": "Before/after image comparison slider block.",

@@ -3,7 +3,7 @@
 	"apiVersion": 3,
 	"name": "blockive-premium-addon-for-block/icon-box",
 	"version": "0.1.0",
-	"title": "Blockive Icon Box",
+	"title": "Icon Box",
 	"category": "bpafb-widgets",
 	"icon": "info",
 	"description": "An icon box that displays an icon, title, description, and link.",

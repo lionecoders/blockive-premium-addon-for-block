@@ -3,7 +3,7 @@
 	"apiVersion": 3,
 	"name": "blockive-premium-addon-for-block/team",
 	"version": "0.1.0",
-	"title": "Blockive Team",
+	"title": "Team",
 	"category": "bpafb-widgets",
 	"icon": "groups",
 	"description": "Team members showcase block.",

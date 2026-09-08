@@ -3,7 +3,7 @@
   "apiVersion": 3,
   "name": "blockive-premium-addon-for-block/image-box",
   "version": "0.1.0",
-  "title": "Blockive Image Box",
+  "title": "Image Box",
   "category": "bpafb-widgets",
   "icon": "format-image",
   "description": "An image box that displays an image, title, description, and link.",

@@ -3,7 +3,7 @@
 	"apiVersion": 3,
 	"name": "blockive-premium-addon-for-block/video",
 	"version": "0.1.0",
-	"title": "Blockive Video",
+	"title": "Video",
 	"category": "bpafb-widgets",
 	"icon": "video-alt",
 	"description": "Video embedding block with customization options.",

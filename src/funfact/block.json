@@ -3,7 +3,7 @@
 	"apiVersion": 3,
 	"name": "blockive-premium-addon-for-block/funfact",
 	"version": "0.1.0",
-	"title": "Blockive Fun Fact",
+	"title": "Fun Fact",
 	"category": "bpafb-widgets",
 	"icon": "chart-bar",
 	"description": "Animated statistics/counter block.",

@@ -3,7 +3,7 @@
 	"apiVersion": 3,
 	"name": "blockive-premium-addon-for-block/faq",
 	"version": "0.1.0",
-	"title": "Blockive FAQ",
+	"title": "FAQ",
 	"category": "bpafb-widgets",
 	"icon": "editor-help",
 	"description": "FAQ block with rich schema.org markup for SEO, based on accordion behavior.",
