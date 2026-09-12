@@ -24,6 +24,7 @@ class Bpafb_Template_Display_Conditions
 	const META_HIDE_TITLE     = '_bpafb_hide_title';
 	const META_HIDE_FEATURED  = '_bpafb_hide_featured_image';
 	const META_HIDE_COMMENTS  = '_bpafb_hide_comments';
+	const META_HIDE_POST_NAV  = '_bpafb_hide_post_nav';
 
 	/**
 	 * Whether the "specific posts/pages" display condition scope is
@@ -118,6 +119,14 @@ class Bpafb_Template_Display_Conditions
 		]);
 
 		register_post_meta($post_type, self::META_HIDE_COMMENTS, [
+			'type'          => 'boolean',
+			'single'        => true,
+			'default'       => false,
+			'show_in_rest'  => true,
+			'auth_callback' => $auth_callback,
+		]);
+
+		register_post_meta($post_type, self::META_HIDE_POST_NAV, [
 			'type'          => 'boolean',
 			'single'        => true,
 			'default'       => false,

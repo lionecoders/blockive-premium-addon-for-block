@@ -129,6 +129,18 @@ const DisplayConditionsPanel = () => {
 					onChange={ ( value ) => setMeta( { ...meta, _bpafb_hide_comments: value } ) }
 				/>
 			</PanelRow>
+
+			<PanelRow>
+				<ToggleControl
+					label={ __( 'Hide post navigation (previous/next)', 'blockive-premium-addon-for-block' ) }
+					help={ __(
+						"Ask the active theme not to render its own previous/next post links on posts/pages this template applies to. Supported on Astra so far; has no effect on other themes.",
+						'blockive-premium-addon-for-block'
+					) }
+					checked={ !! meta?._bpafb_hide_post_nav }
+					onChange={ ( value ) => setMeta( { ...meta, _bpafb_hide_post_nav: value } ) }
+				/>
+			</PanelRow>
 		</PluginDocumentSettingPanel>
 	);
 };

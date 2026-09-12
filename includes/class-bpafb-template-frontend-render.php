@@ -139,6 +139,26 @@ class Bpafb_Template_Frontend_Render
 		'astra' => [
 			'filter' => 'astra_page_layout',
 			'value'  => 'no-sidebar',
+			// Astra's "Content Width" Customizer setting renders as a
+			// separate `.ast-container{max-width:...}` wrapper several
+			// ancestors above the post content - independent of the
+			// sidebar, so dropping the sidebar alone doesn't reach it.
+			// See print_full_width_container_css().
+			'container_selector' => '.ast-container',
+			// Astra adds `ast-no-title` to `.entry-header` itself whenever
+			// the post title is empty (which is exactly what
+			// suppress_duplicate_title() causes via the "Hide title"
+			// setting) but still renders its byline (author/date/category)
+			// in the same header regardless - so this only ever hides the
+			// byline in precisely the case Astra itself already flags as
+			// "no title here". See print_hide_title_meta_css().
+			'classic_meta_selector' => '.entry-header.ast-no-title .entry-meta',
+			// Astra's own boolean filter gating whether it prints its
+			// previous/next post-navigation links after the entry content -
+			// the same mechanism Astra's own page-builder compatibility code
+			// (Beaver Themer, Elementor Pro, LifterLMS, SureCart) already
+			// uses to suppress it. See register_post_nav_adapter().
+			'post_nav_filter' => 'astra_single_post_navigation_enabled',
 		],
 		'generatepress' => [
 			'filter' => 'generate_sidebar_layout',
@@ -194,7 +214,10 @@ class Bpafb_Template_Frontend_Render
 		// Registering unconditionally is safe regardless - `woocommerce_before_single_product`
 		// is a WooCommerce-only action that simply never fires when WooCommerce isn't active.
 		add_action('woocommerce_before_single_product', [$this, 'setup_woocommerce_template']);
+		add_action('wp_head', [$this, 'print_full_width_container_css']);
+		add_action('wp_head', [$this, 'print_hide_title_meta_css']);
 		$this->register_sidebar_layout_adapter();
+		$this->register_post_nav_adapter();
 	}
 
 	/**
@@ -255,6 +278,49 @@ class Bpafb_Template_Frontend_Render
 	}
 
 	/**
+	 * Hooks the active theme's own "should post navigation render" filter,
+	 * if one is known, so the "Hide post navigation" template setting can
+	 * ask the theme not to print its previous/next links at all - the same
+	 * mechanism the theme's own page-builder compatibility code already
+	 * uses (Astra's Beaver Themer/Elementor Pro/LifterLMS/SureCart
+	 * integrations all `remove_action('astra_entry_after', 'astra_single_post_navigation_markup')`
+	 * or filter `astra_single_post_navigation_enabled` the same way) rather
+	 * than hiding already-rendered markup with CSS.
+	 *
+	 * Shares the same filterable adapter map as register_sidebar_layout_adapter()
+	 * - a theme not covered here can add its own `post_nav_filter` via the
+	 * `bpafb_sidebar_layout_adapters` filter without editing this plugin.
+	 */
+	private function register_post_nav_adapter()
+	{
+		$theme = get_template();
+
+		/** This filter is documented in register_sidebar_layout_adapter(). */
+		$adapters = apply_filters('bpafb_sidebar_layout_adapters', self::$default_sidebar_layout_adapters);
+
+		if (empty($adapters[$theme]['post_nav_filter'])) {
+			return;
+		}
+
+		add_filter($adapters[$theme]['post_nav_filter'], function ($enabled) {
+			if (is_admin() || !is_singular()) {
+				return $enabled;
+			}
+
+			$template_id = self::get_matched_template_id();
+			if (!$template_id) {
+				return $enabled;
+			}
+
+			if (get_post_meta($template_id, Bpafb_Template_Display_Conditions::META_HIDE_POST_NAV, true)) {
+				return false;
+			}
+
+			return $enabled;
+		});
+	}
+
+	/**
 	 * Kadence's `kadence_post_layout` filter carries the theme's whole
 	 * layout-settings array; only the 'sidebar' key needs changing to drop
 	 * the sidebar, everything else the theme decided stays as-is.
@@ -288,6 +354,126 @@ class Bpafb_Template_Frontend_Render
 		}
 
 		return (bool) get_post_meta($template_id, Bpafb_Template_Display_Conditions::META_FULL_WIDTH, true);
+	}
+
+	/**
+	 * Neutralizes the active theme's own page-wide "boxed container" width
+	 * (e.g. Astra's "Content Width" Customizer option, rendered via a
+	 * `.ast-container{max-width:...}` wrapper several ancestors above the
+	 * post content) for the current request, when the matched template has
+	 * "Full width (no sidebar)" enabled.
+	 *
+	 * This is a distinct concern from the sidebar itself: dropping the
+	 * sidebar (via the theme's own layout filter, see
+	 * register_sidebar_layout_adapter()) widens the content column up to
+	 * the theme's boxed container, but doesn't touch that container's own
+	 * width - a theme can have both a sidebar-less layout and a boxed
+	 * container at the same time. `:has()` scopes the override to only the
+	 * specific container actually wrapping the matched template's own
+	 * output, so any other instance of the same theme class elsewhere on
+	 * the page (header, footer, other sections) is left untouched.
+	 *
+	 * Only defined for themes whose adapter entry declares a
+	 * `container_selector` (currently Astra); themes without one are
+	 * unaffected, the same graceful no-op as the sidebar adapters above.
+	 */
+	public function print_full_width_container_css()
+	{
+		if (!$this->matched_template_wants_full_width()) {
+			return;
+		}
+
+		$theme = get_template();
+
+		/** This filter is documented in register_sidebar_layout_adapter(). */
+		$adapters = apply_filters('bpafb_sidebar_layout_adapters', self::$default_sidebar_layout_adapters);
+
+		if (empty($adapters[$theme]['container_selector'])) {
+			return;
+		}
+
+		$selector = $this->sanitize_css_selector($adapters[$theme]['container_selector']);
+		if ($selector === '') {
+			return;
+		}
+
+		printf(
+			'<style>%1$s:has(.bpafb-template-render){max-width:none!important;margin-left:auto!important;margin-right:auto!important;}</style>',
+			esc_html($selector)
+		);
+	}
+
+	/**
+	 * Hides the active theme's own classic (non-block) post-meta byline -
+	 * author/date/category - when the matched template's "Hide title"
+	 * setting is on, matching what that setting's own description already
+	 * promises ("otherwise the theme's title (and byline: author, date,
+	 * categories) would render twice"). suppress_duplicate_title() already
+	 * blanks the theme's title text via the `the_title` filter, which for
+	 * some themes (Astra included) also self-triggers a "no title" marker
+	 * class on the surrounding header - but the byline itself is separate
+	 * markup those themes render unconditionally, so it needs its own
+	 * override. Block-theme output doesn't need this: it's already covered
+	 * by suppress_duplicate_theme_blocks() via $title_block_names.
+	 *
+	 * Only defined for themes whose adapter entry declares a
+	 * `classic_meta_selector` (currently Astra); themes without one are
+	 * unaffected.
+	 */
+	public function print_hide_title_meta_css()
+	{
+		if (is_admin() || !is_singular()) {
+			return;
+		}
+
+		$template_id = self::get_matched_template_id();
+		if (!$template_id) {
+			return;
+		}
+
+		if (!get_post_meta($template_id, Bpafb_Template_Display_Conditions::META_HIDE_TITLE, true)) {
+			return;
+		}
+
+		$theme = get_template();
+
+		/** This filter is documented in register_sidebar_layout_adapter(). */
+		$adapters = apply_filters('bpafb_sidebar_layout_adapters', self::$default_sidebar_layout_adapters);
+
+		if (empty($adapters[$theme]['classic_meta_selector'])) {
+			return;
+		}
+
+		$selector = $this->sanitize_css_selector($adapters[$theme]['classic_meta_selector']);
+		if ($selector === '') {
+			return;
+		}
+
+		printf(
+			'<style>%1$s{display:none!important;}</style>',
+			esc_html($selector)
+		);
+	}
+
+	/**
+	 * Validates a CSS selector from an adapter's `container_selector` before
+	 * it's interpolated directly into a `<style>` tag's CSS text - a
+	 * different output context from an HTML attribute, where `esc_attr()`
+	 * alone is the right tool. `esc_html()` stops the value from closing the
+	 * `<style>` tag early, but does nothing about CSS-syntax characters
+	 * (`{`, `}`, `;`), so this only accepts values that look like a plain
+	 * class/id/tag selector chain - anything else is rejected.
+	 *
+	 * @param string $selector Selector from an adapter's `container_selector`.
+	 * @return string The selector unchanged, or '' if it doesn't look safe.
+	 */
+	private function sanitize_css_selector($selector)
+	{
+		$selector = trim((string) $selector);
+		if ($selector !== '' && preg_match('/^[a-zA-Z0-9_\-.#> ]+$/', $selector)) {
+			return $selector;
+		}
+		return '';
 	}
 
 	/**
